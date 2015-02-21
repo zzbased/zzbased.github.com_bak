@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>文本上的算法阅读笔记</title>
+  <meta name="description" content="文本上的算法 阅读笔记">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2014/02/09/%E6%96%87%E6%9C%AC%E4%B8%8A%E7%9A%84%E7%AE%97%E6%B3%95%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">文本上的算法阅读笔记</h1>
+    <p class="post-meta">Feb 9, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <h2>文本上的算法 阅读笔记</h2>
+
+<p>看到一篇文章，<a href="http://hi.baidu.com/yanxionglu/item/2166a8df35d6d2392b35c70e">文本上的算法</a>，<a href="https://github.com/yanxionglu/text_pdf">github地址</a> 浏览了一遍，文章虽说并无新的思想，但胜在总结全面，读来收获仍有很多，把一些细节点重新回顾了一遍。下面把一些阅读笔记记录下来。</p>
+
+<h3>概率分布</h3>
+
+<p><a href="http://zh.wikipedia.org/zh-cn/%E6%B3%8A%E6%9D%BE%E5%88%86%E4%BD%88">Poisson distribution</a>
+泊松分布适合于描述单位时间内随机事件发生的次数的概率分布。如某一服务设施在一定时间内受到的服务请求的次数，电话交换机接到呼叫的次数、汽车站台的候客人数、机器出现的故障数、自然灾害发生的次数、DNA序列的变异数、放射性原子核的衰变数等等。</p>
+
+<p><a href="http://zh.wikipedia.org/wiki/%E4%BC%BD%E7%8E%9B%E5%88%86%E5%B8%83">gamma distribution</a>  可以参考rick的这篇文章<a href="http://cos.name/2013/01/lda-math-gamma-function/">LDA-math-神奇的Gamma函数</a></p>
+
+<p><a href="http://zh.wikipedia.org/wiki/%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83">Exponential distribution</a> 指数分布可以用来表示独立随机事件发生的时间间隔，比如旅客进机场的时间间隔、中文维基百科新条目出现的时间间隔等等。</p>
+
+<p><a href="http://zh.wikipedia.org/wiki/%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83">binomial distribution</a></p>
+
+<h3>信息论</h3>
+
+<p>信息熵表示的是不确定性的度量。信息熵越大,不确定性越大。</p>
+
+<blockquote>
+<p>联合熵；条件熵；互信息：衡量两个随机变量(事件)的相关程度,当X和Y完全相关时,它们的互信息就是1；相对熵：衡量相同事件空间里两个概率分布(函数)的差异程度。</p>
+</blockquote>
+
+<h3>最优化基础</h3>
+
+<ul>
+<li><p>风险：
+期望风险
+经验风险
+结构风险
+这三个风险好好理解一下。期望风险是针对真实模型的，一般没法计算。经验风险是针对样本数据的，一般用经验风险最小化来估计期望风险。为了尽可能避免过拟合现象的出现,就要对模型的复杂度进行惩罚,这就是正则化, 一般正则化,就是对模型的参数进行惩罚，此时是结构风险。</p></li>
+<li><p>偏差和方差的区别
+文中的理解我觉得不够透彻，这篇文章我认为讲得更好。
+<a href="http://blog.sina.com.cn/s/blog_593af2a7010181pr.html">bias和variance</a>
+总之结论就是：一个模型越复杂,偏差就越小,方差就越大;相 反,一个模型越简单,偏差就越大,方差就越小。最好的模型就是偏差和方差之和最优的模型。</p></li>
+<li><p>估计方法：
+最大似然估计
+最大后验估计
+最小二乘估计
+矩估计。</p>
+
+<blockquote>
+<p>最大后验估计相比最大似然估计,只是多了一项先验概率,它正好体现了贝叶斯认为参数也是随机变量的观点,在实际运算中通常通过超参数给出先验分布。最大似然估计其实是经验风险最小化的一个例子,而最大后验估计是结构风险最小化的一个例子。</p>
+</blockquote></li>
+<li><p>最大似然估计其实是经验风险最小化的一个 例子,而最大后验估计是结构风险最小化的一个例子。
+从广义线性模型看，只有因变量正态的时候极大似然的结果与最小二乘相同。</p></li>
+<li><p>求解方法：
+梯度下降法 随机梯度下降法 共轭梯度法 牛顿法 拟牛顿法 坐标下降法</p></li>
+<li><p>对偶问题，kkt条件</p></li>
+</ul>
+
+<h3>机器学习</h3>
+
+<p>监督学习通常分为两个模型:生成模型和判别模型。</p>
+
+<p>判别模型(它的概率图是无向图)是求解条件概率的p(y|x),然后直接进行预测,比如:逻辑回归,SVM,神经网络,CRF 都是判别模型,所以判别模型求解的是条件概率。</p>
+
+<p>生成模型(它的概率图是有向图)是首先求解两个概率p(x|y)和 p(y),然后根据贝叶斯法则求出后验概率p(y|x),再进行预测,比如: 朴素贝叶斯,HMM,贝叶斯网络,LDA 都是生成模型,又因为p(x,y) = p(x|y)∗ p(y),所以生成模型求解的是联合概率。</p>
+
+<h3>逻辑回归</h3>
+
+<p>关于逻辑回归，请参考这篇文章《逻辑回归，从入门到精通》
+我的网盘里有这篇文章，稍后把链接发出来。</p>
+
+<h3>最大熵</h3>
+
+<p>最大熵模型：目标是要使条件熵最大；约束条件是&quot;模型期望=样本期望&quot;。
+CRF 利用了上下文信息,而且最后的条件概率也是全局最优(无标记偏置问题)。</p>
+
+<p><a href="http://www.inference.phy.cam.ac.uk/hmw26/papers/crf_intro.pdf">Conditional Random Fields</a>
+这里有专门的<a href="http://zzbased.github.io/2014/03/14/hmm_and_crf/">本站文章</a>来介绍。</p>
+
+<h3>主题模型</h3>
+
+<p><a href="http://zzbased.github.io/2015/01/01/topic-model/">本站文章</a></p>
+
+<h3>深度学习</h3>
+
+<p><a href="http://licstar.net/archives/328">deep learning in nlp</a></p>
+
+<p><a href="https://code.google.com/p/word2vec/">word2vec</a></p>
+
+<p>目前词向量一般也有两种用法:(1)直接把词向量作为神经网络的输入完成一些 NLP 任务,例如,Natural Language Processing (Almost) from Scratch 这篇文章的工作;(2)把词向量当做一个特征,加入到现有的NLP任务中。</p>
+
+<p>有<a href="http://zzbased.github.io/2014/12/28/semantic-analysis-new-method/">本站文章</a>做详细介绍。</p>
+
+<h3>分布式计算</h3>
+
+<p>NoSQL 数据库,它主要包括:(1)key-value 数据库,代表有:Redis,LevelDB,Dynamo 等;(2)列式数据库,代 表有:BigTable,Hypertable,Cassandra 等;(3)文档数据库,代表有: CouchDB,MongoDB 等;(4)图形数据库,代表有:OrientDB,GraphDB 等。</p>
+
+<p>分布式计算模型大概有这几种:(1)多线程,最基本的方法;(2) Graphics Processing Units,利用图形处理器的高度并行结构来提高速度; (3)Message Passing Interface,一种消息传递编程模型;(4)MapReduce。</p>
+
+<h3>未完待续</h3>
+
+<ul>
+<li><p>DT/Boosting/GBDT
+<a href="http://zzbased.github.io/2015/01/03/decision_tree/">本站文章</a></p></li>
+<li><p>SVM</p></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svm1.png" alt="Image"></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svm2.png" alt="Image"></p>
+
+<ul>
+<li><p>PageRank：<a href="http://www.kreny.com/pagerank_cn.htm">Google的秘密- PageRank彻底解说 中文版</a></p></li>
+<li><p>相似度计算：bool模型，tf-idf模型(增加了词权重特征)，BM25 模型(增加了长度特征)，Proximity 模型(增加了位置特征)，语义特征模型(增加了语义特征)
+，句法特征模型(增加了句法特征)</p></li>
+</ul>
+
+<h4>搜索引擎是怎么回事？</h4>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/search_engine1.png" alt="search_engine1"></p>
+
+<p>P(𝐷i)：第i个网页的重要程度，譬如PageRank</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/search_engine2.png" alt="search_engine2"></p>
+
+<p>索引生成：
+索引库分库分为两个维度:横向和纵向。</p>
+
+<ul>
+<li>纵向就是指先在高质量库中检索,如果满足需求就返回,否则再去低质量库中检索;</li>
+<li>横向就是去检索高质量库或者低质量库的时候,会去同时检索每台机器的小库,然后汇总归并。</li>
+<li>一个索引结构其实可以简单看作就是 key-list 结构。索引归并主要有两种方法：Term-At-A-Time和Document-At-A-Time。</li>
+<li>DAAT每个文档都遍历，性能不高。此时可利用skip list。<a href="">Skip Lists: a Probabilistic Alternative to Balanced Trees</a>。跳表的优化只对 AND 查询有用，对 OR 查询不起作用。</li>
+<li>对于搜索一般有三个常用的查询表达式:AND、OR 和 NOT。在 DAAT 查询处理方式中,有两个经典的动态索引剪枝算法:MaxScore 和 Weak-AND(WAND,是 AND 查询和 OR 查询的扩展)。</li>
+<li>较简单的比如会构建四个不同的数据结构,分别是词典库(存放term及其在索引库的位 置偏移,一般常驻内存),位置库(存放 term 在文档中的位置信息, 根据数据规模决定存放磁盘还是内存),属性库(存放 term 的其他属 性,词频,权重等等,也是根据数据规模决定存放磁盘还是内存),跳表库(存放跳表指针,一般常驻内存);</li>
+<li><strong>注意：以后有时间总结一下广点通的索引模型</strong></li>
+</ul>
+
+<p>query分析：</p>
+
+<ul>
+<li>term级别分析：分词/专名识别，term重要性，term紧密度</li>
+<li>query级别分析：query需求识别，时效性判断，地域信息</li>
+<li>query变换：同义改写，纠错改写，关联扩展</li>
+</ul>
+
+<p>rerank：</p>
+
+<ul>
+<li>页面质量调权，query需求调权，时效性调权，多样性调权，点击调权。</li>
+<li><a href="http://www2009.org/proceedings/pdf/p1.pdf">A Dynamic Bayesian Network Click Model for Web Search Ranking</a></li>
+</ul>
+
+<p>learning to rank：</p>
+
+<ul>
+<li>Pointwise,Pairwise 和 Listwise。</li>
+<li>搜索引擎并不是直接用 Learning to Rank 排序,而是用它来计算一些高级特征供上层排 序使用。</li>
+</ul>
+
+<p>query log 和点击数据 算是搜索引擎特有的优质资源</p>
+
+<h4>搜索广告</h4>
+
+<p>这里我应该是最熟悉的，之后抽空把这块内容好好总结一下。主要想把整个架构理清楚，&quot;投放-数据库-审核-发布-query分析-检索-粗选-pctr-精选-展示-日志-反作弊-计费-报表&quot;</p>
+
+<h4>推荐</h4>
+
+<p><a href="http://zzbased.github.io/2015/01/03/recommendation_algorithms/">本站文章</a></p>
+
+<h3>补充</h3>
+
+<p>除了文章中谈到的，根据我个人的积累，对于文本上的算法，有如下补充：</p>
+
+<ol>
+<li><p>文本上基本的算法以及功能点，我做过的还有：
+hmm (pos tagging)
+maxent (classification) <a href="http://www.logos.ic.i.u-tokyo.ac.jp/%7Etsuruoka/maxent/">maxent</a> 我用到的最大熵库。
+query expand：做过三种方法：基于session，相关搜索，query互点击
+query - bidword mapping：主要策略有，高频query词表，高频query索引，二级映射词表，bidword聚类，combination，query-ad直接match，高级短语匹配。
+query成分分析：
+term重要性分析：训练数据自动提取，LR模型训练
+同义词挖掘 -- 基于共现
+实体词/新词挖掘 <a href="http://www.matrix67.com/blog/archives/5044">基于熵的办法</a>，基于模版的方法，基于crf的方法。
+机器翻译 <a href="https://code.google.com/p/giza-pp/">giza-pp</a> <a href="http://www.statmt.org/moses/">moses</a>
+<a href="http://tapd.oa.com/v3/cocktail/wikis/view/%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%9B%B8%E5%85%B3">guide</a> 把它记下来。
+基于mpi的nmf,plsa。
+keyword extraction.  keyword recommender. 自动摘要
+短串语义相关性计算。
+并行版的collaborative filter，基于minhash，lsh和hadopp。基于cf做query扩展。
+基于wand的语义索引。</p></li>
+<li><p>对于文本上的应用，我接触到的主要在做搜索和广告。譬如微博广告，涉及到keyword提取。又譬如广告的相关性，广告的扩展匹配和触发。这里面涉及的门门道道还挺多的。以后抽空详细总结一下。现在先到此为止。</p></li>
+</ol>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的情怀 - 技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

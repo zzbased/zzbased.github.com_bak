@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
-">
+  <title>wand</title>
+  <meta name="description" content="wand算法">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/about/">
+  <link rel="canonical" href="http://yourdomain.com/2014/12/28/wand.html">
   <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -58,17 +57,41 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">wand</h1>
+    <p class="post-meta">Dec 28, 2014</p>
   </header>
 
   <article class="post-content">
-    <p>Hello，此博客采用了&quot;base Jekyll theme&quot;。我的电子邮箱是: zero_based@foxmail.com。</p>
+    <h2>wand算法</h2>
 
-<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+<h4>wand的思路</h4>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<ol>
+<li>对每一个doc,抽取term list；对其中每个term，计算term表征doc的weight。</li>
+<li>建立term-doc倒排。doc id递增排序。每个term-doc索引都有一个upper bound value,这个值是该条索引的doc list中最大的term weight。</li>
+<li>在检索的时候，对于每个query，可以设置一个准入阈值thres，每次检索分两步：
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<ul>
+<li>按照doclist最前面的docid对query terms排序。</li>
+<li>迭代terms,并累加UB直至大于thres，则按照下面图示选出一个doc。</li>
+</ul></li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/wand_algorithm.jpg" alt="wand"></p>
+
+<h4>优化的思路</h4>
+
+<ol>
+<li>每个term-doc倒排的upper bound，并不一定是最大值。设置为最大值，可以保证召回，但是会使检索次数更多(可以想象，up之和大于thres的次数会更多)。譬如我们曾经试过将其设置为平均值，这时要满足up之和大于thres，term的个数将会增多，可以加快检索。</li>
+<li>前n个term中挑选一个skip，这个挑选有一定的策略。譬如可以挑选list最短的。</li>
+</ol>
+
+<h4>论文以及其他参考资料</h4>
+
+<ul>
+<li>论文：Efficient Query Evaluation using a Two-Level Retrieval Process</li>
+<li><a href="http://yangpengg.github.io/blog/2012/12/29/wand-operator-to-calculate-similarity/">WAND Operator to Calculate Similarity</a></li>
+</ul>
 
   </article>
 

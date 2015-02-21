@@ -2,10 +2,9 @@
 layout: post
 title: "语义分析的一些方法"
 description: ""
-categories:
+category:
 tags: [machine learning, nlp]
 ---
-
 
 author: vincentyao@tencent.com
 
@@ -30,7 +29,7 @@ author: vincentyao@tencent.com
 
 - 全切分方法。它首先切分出与词库匹配的所有可能的词，再运用统计语言模型决定最优的切分结果。它的优点在于可以解决分词中的歧义问题。下图是一个示例，对于文本串"南京市长江大桥"，首先进行词条检索(一般用Trie存储)，找到匹配的所有词条（南京，市，长江，大桥，南京市，长江大桥，市长，江大桥，江大，桥），以词网格(word lattices)形式表示，接着做路径搜索，基于统计语言模型(例如n-gram)[18]找到最优路径，最后可能还需要命名实体识别。下图中"南京市 长江 大桥"的语言模型得分，即P(南京市，长江，大桥)最高，则为最优切分。
 
-	![](../images/rnnlm1.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/rnnlm1.png)
 
 	图1. "南京市长江大桥"语言模型得分
 

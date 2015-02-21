@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>推荐算法实战</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2015/01/03/recommendation_algorithms.html">
+  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">推荐算法实战</h1>
+    <p class="post-meta">Jan 3, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1>推荐算法实战</h1>
+
+<h4>author: vincentyao@tencent.com</h4>
+
+<p>推荐在计算广告上有很多的运用，这里计划把推荐算法总结一下。</p>
+
+<p><img src="value_of_recommender.png" alt=""></p>
+
+<h2>推荐算法介绍</h2>
+
+<h3>推荐问题定义</h3>
+
+<p>Estimate a utility function that automatically predicts how a user will like an item。</p>
+
+<h3>Memory-based Collaborative Filtering</h3>
+
+<ul>
+<li>协同（collaborating）是群体行为，过滤（filtering）则是针对个人的行为。</li>
+<li>假设有m个user，n个item。每个用户都有一个关联的item list，并且通过显式或隐式的反馈，对每个item都有一个rating \(v_{i,j}\)。</li>
+<li>显式评分指用户使用系统提供的方式进行评分或者评价; 隐式评分则根据使用者的行为模式由系统代替使用者完成评价，行为模式包括用户的浏览行为、购买行为等等。</li>
+<li><p>基本步骤为：(1)收集用户评分；(2)最近邻搜索；(3)产生推荐结果。第3步中，较常见的推荐算法有Top-N推荐和关联推荐。Top-N推荐比较熟悉，关联推荐是对最近邻使用者的记录进行关联规则(association rules)挖掘。</p></li>
+<li><p>长处：</p>
+
+<ul>
+<li>minimal knowledge，content-agnostic，可以在不理解item和user的情况下，做任何类型的推荐。</li>
+</ul></li>
+<li><p>短处：</p>
+
+<ul>
+<li>需要大量可信的用户反馈数据</li>
+<li>不考虑上下文信息</li>
+<li>商品都是标准化的(Users should have bought exactly the same product)</li>
+<li>content-agnostic（与内容无关的），容易推荐popular items，即Popularity Bias。</li>
+<li>new and unpopular items cannot be recommended，即cold-start problem。</li>
+</ul></li>
+</ul>
+
+<h4>User-based</h4>
+
+<p>先找最近邻user，再基于最近邻user预测。</p>
+
+<ul>
+<li><p>User之间相似度计算
+<img src="user_based_similarity.png" alt=""></p></li>
+<li><p>Prediction for user i and items j：
+<img src="user_based_prediction.png" alt=""></p></li>
+</ul>
+
+<h4>Item-based</h4>
+
+<p>先计算item similarity，再基于user rated items预测。</p>
+
+<ul>
+<li><p>Normalization/Bias，rate bias：\(b<em>{ui} = μ(global) + b</em>u(user bias) + b<em>i(item bias)\)，\(s</em>k(i,u)\) is k-nearest neighbors to i that were rated by user u
+<img src="cf_formula.png" alt="">
+<img src="user_item_bias.png" alt=""></p></li>
+<li><p>item-based计算流程：
+<img src="./item_similarity.png" alt=""></p></li>
+</ul>
+
+<h4>Association rules(关联规则)</h4>
+
+<ul>
+<li><p>关联规则分析 (Association Rules，又称 Basket Analysis) 用于从大量数据中挖掘出有价值的数据项之间的相关关系。经典论文<a href="">Mining Association Rules between Sets of Items in Large Databases</a>。关联规则解决的常见问题如：“如果一个消费者购买了产品A，那么他有多大机会购买产品B?”以及“如果他购买了产品C和D，那么他还将购买什么产品？”</p></li>
+<li><p>常见算法有：Apriori算法和FP-growth算法。请参考<a href="http://zh.wikipedia.org/wiki/%E5%85%88%E9%AA%8C%E7%AE%97%E6%B3%95">wiki</a>。</p></li>
+<li><p>关联规则面向的是transaction，而User-based or Item based面向的是用户偏好（评分），协同过滤在计算相似商品的过程中可以使用关联规则分析。具体请参考<a href="http://www.zhihu.com/question/22404652">协同过滤和关联规则分析的区别是什么</a></p></li>
+</ul>
+
+<h4>总结</h4>
+
+<ul>
+<li><p>Problem: sparsity，scalability</p>
+
+<ul>
+<li>利用latent models做降维。Methods of dimensionality reduction: Matrix Factorization, Clustering，Projection(PCA) ...</li>
+<li>瓶颈点：相关性计算。将最近邻产生与预测分为两个步骤，其中相关性计算时间复杂度很高。</li>
+</ul></li>
+<li><p>个人总结，一般来讲，item-based方法更好用，因为item之间的similarity是相对静态，但user之间的similarity相对动态。当item base is smaller than user or changes rapidly时，采用user-based方法更合适；相反，当user base is small时，Item-based方法更合适；</p></li>
+</ul>
+
+<h3>Model-based Collaborative Filtering</h3>
+
+<h4>SVD/MF</h4>
+
+<ul>
+<li><p>SVD</p>
+
+<ul>
+<li>U是user-factor矩阵，V是item-factor矩阵。
+<img src="model_based_svd.png" alt=""></li>
+<li>基于svd的rating过程：
+<img src="svd_rating.png" alt=""></li>
+<li><p>先写出loss function，再利用SGD or Alternating least squares求解
+<img src="svd_object_function.png" alt=""></p>
+
+<p>增加bias后：
+<img src="svd_object_function_bias.png" alt=""></p>
+
+<p>关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。</p>
+
+<p>关于求解算法，Alternating least squares方法的原理是：首先固定item vectors，最优化user vectors，再固定user vectors，最优化item vectors。SGD就是梯度下降法，相对更快。</p></li>
+<li><p>算法优点：(1)将用户和物品用隐特征(latentfeature)连接在一起；(2)MatrixFactorization有明确的数学理论基础(singularvalue)和优 化目标,容易逼近最优解；(3)对数据稀疏性(datasparsity)和抗噪音干扰的处理效果较好; (4)延展性(scalability)很好;</p></li>
+<li><p>算法缺点：(1)可解释性弱；(2)难以实时更新(适用于离线计算)；(3)Overfitting without regularization，特别是fewer reviews than dimensions。</p></li>
+</ul></li>
+<li><p>SVD++</p>
+
+<p>SVD++ 是SVD模型的加强版，除了打分关系，SVD++还可以对隐含的回馈(implicit feedback) 进行建模。
+除了在SVD中定义的向量外，每个item对应一个向量yi，来通过user隐含回馈过的item的集合来刻画用户的偏好。</p>
+
+<p>$$\hat{r}<em>{ui} = \mu + b</em>i + b<em>u + q</em>i^T (p<em>u + |R(u)|^{-\frac{1}{2}} \sum</em>{j\in R(u)} y<em>i)$$
+其中， R(u) 代表user隐含回馈（打分过的）过的item的集合。
+可以看到，现在user被建模为\( p</em>u + |R(u)|^{-\frac{1}{2}} \sum<em>{j\in R(u)} y</em>i \)，
+具体请参考<a href="http://www.superchun.com/machine-learning/svd1.html">文章SVD/SVD++</a>，<a href="http://research.yahoo.com/files/kdd08koren.pdf">论文Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model</a></p></li>
+<li><p>SVDfeature</p>
+
+<p><a href="http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf">SVDFeature: A Toolkit for Feature-based Collaborative Filtering</a></p>
+
+<p><img src="svdfeature.png" alt=""></p>
+
+<p><img src="svdfeature2.png" alt=""></p></li>
+<li><p>开源库，请参考<a href="http://blog.csdn.net/cserchen/article/details/14231153">推荐系统开源软件列表汇总和点评</a></p>
+
+<ul>
+<li><a href="http://www.libfm.org">libFM</a>，by Steffen Rendle。特点是实现了MCMC（Markov Chain Monte Carlo）优化算法，比常见的SGD（随即梯度下降）优化方法精度要高（当然也会慢一些）。</li>
+<li><a href="http://svdfeature.apexlab.org/wiki/Main_Page">svdfeature</a>，by 上海交大。</li>
+<li><a href="http://www.csie.ntu.edu.tw/%7Ecjlin/libmf/">libMF</a>，by国立台湾大学。参考论文<a href="http://www.csie.ntu.edu.tw/%7Ecjlin/papers/libmf/libmf_journal.pdf">Y. Zhuang, W.-S. Chin, Y.-C. Juan, and C.-J. Lin. A Fast Parallel SGD for Matrix Factorization in Shared Memory Systems</a>。</li>
+<li><a href="http://www.csie.ntu.edu.tw/%7Ecjlin/nmf/">NMF</a></li>
+</ul></li>
+</ul>
+
+<h4>RBM</h4>
+
+<p><a href="">论文 Restricted Boltzmann Machines for Collaborative Filtering</a></p>
+
+<h4>Clustering</h4>
+
+<p>将用户聚类后，再基于传统CF的方法(此时user不是单独的用户，而是cluster)</p>
+
+<h4>Locality-sensitive hashing</h4>
+
+<ul>
+<li>Method for grouping similar items in highly dimensional spaces；</li>
+<li>Find a hashing function s.t. similar items are grouped in the same buckets;</li>
+</ul>
+
+<h4>Classifiers</h4>
+
+<p>Classifiers can be used in CF and CB Recommenders。优点：可以和其他方法结合使用。缺点是：需要一份训练集。</p>
+
+<h3>Content-based Recommenders</h3>
+
+<p>item/user profiles, category, tag/keyword</p>
+
+<p><img src="content_based.png" alt=""></p>
+
+<h3>New approaches</h3>
+
+<h4>Learning to Rank</h4>
+
+<ul>
+<li>一个机器学习问题，目标是从训练数据里构建一个ranking model。排序学习指在排序生成 (ranking creation) 和排序整合 (ranking aggregation) 中用于构建排序模型的机器学习方法。<a href="http://www.icst.pku.edu.cn/lcwm/course/WebDataMining/slides2012/8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%8E%92%E5%BA%8F%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80.pdf">slice</a>，<a href="http://www.cnblogs.com/kemaswill/archive/2013/06/01/3109497.html">Learning to Rank简介</a></li>
+<li>Learning to rank is a key element for personalization</li>
+<li>Treat the problem as a standard supervised classification problem</li>
+<li><a href="http://people.cs.umass.edu/%7Evdang/ranklib.html">Ranklib code</a>，<a href="http://svmlight.joachims.org">svmlight</a></li>
+<li>Pointwise
+
+<ul>
+<li>Ranking score based on regression or classification</li>
+<li>LR, SVM, GBDT, McRank ...</li>
+</ul></li>
+<li>Pairwise
+
+<ul>
+<li>Randing problem是二分类问题，pair-wise的比较，将排序问题转换为分类问题</li>
+<li>RankSVM, RankBoost, RankNet, FRank ...</li>
+</ul></li>
+<li><p>Listwise</p>
+
+<ul>
+<li>ListNet: KL-divergence as loss function by define a probability distribution</li>
+<li>RankCosine: similarity between ranking list and ground truth as loss function</li>
+<li>Lambda Rank，ListNet，ListMLE，AdaRank，SVMap ...</li>
+</ul>
+
+<p><img src="learning_to_rank_compare.png" alt=""></p></li>
+</ul>
+
+<h4>Context-aware Recommendations</h4>
+
+<ul>
+<li><p><a href="http://ids.csom.umn.edu/faculty/gedas/NSFCareer/CARS-chapter-2010.pdf">论文Context-Aware Recommender Systems</a></p></li>
+<li><p>R: User * Item -&gt; Rating    比较  R: User * Item * Context -&gt; Rating</p></li>
+<li><p>传统推荐过程框图
+<img src="general-recommender.png" alt=""></p></li>
+<li><p>将context纳入推荐系统后
+<img src="context-recommender1.png" alt="">
+<img src="context-recommender2.png" alt=""></p></li>
+<li><p>两种方法：</p>
+
+<ul>
+<li>Tensor Factorization
+<img src="hosvd.png" alt=""></li>
+<li>Factorization Machines</li>
+</ul></li>
+</ul>
+
+<h4>Deep learning: ANN training, Recurrent Networks</h4>
+
+<ul>
+<li><p><a href="http://erikbern.com/?p=589">Recurrent Neural Networks for Collaborative Filtering</a>，<a href="http://www.slideshare.net/erikbern/collaborative-filtering-at-spotify-16182818?related=1">Collaborative Filtering at Spotify</a>
+Recurrent neural networks have a simple model that tries to predict the next item given all previous ones。</p>
+
+<p><img src="cf-RNN-1.png" alt=""></p></li>
+<li><p><a href="http://benanne.github.io/2014/08/05/spotify-cnns.html">Recommending music on Spotify with deep learning</a></p></li>
+</ul>
+
+<h4>Similarity: graph-based similarity(simrank)</h4>
+
+<ul>
+<li>Graph-based similarities
+
+<ul>
+<li>SimRank: two objects are similar if they are referenced by similar objects</li>
+<li><a href="http://www-cs-students.stanford.edu/%7Eglenj/simrank.pdf">论文 SimRank</a></li>
+<li><a href="http://www.spiral.pro/big_data/simrank-intro.html">SimRank原理</a></li>
+</ul></li>
+</ul>
+
+<h4>Social Recommendations</h4>
+
+<ul>
+<li><p>Social and Trust-based recommenders
+<img src="trust_based_recommenders.png" alt=""></p></li>
+<li><p>关系链 Friendship Demographic methods</p></li>
+</ul>
+
+<h4>Ranking and Session Modeling</h4>
+
+<ul>
+<li>Independent click model</li>
+<li>Logistic click model。Exponential family model for click; user looks at all</li>
+<li>Sequential click model; User traverses list</li>
+<li>Skip click model</li>
+<li>Context skip click model</li>
+</ul>
+
+<h3>Hybrid Approaches</h3>
+
+<ul>
+<li>Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制</li>
+<li><a href="http://www.52ml.net/318.html">推荐系统中所使用的混合技术介绍</a>
+<img src="./hybridization.png" alt=""></li>
+</ul>
+
+<h3>推荐算法对比</h3>
+
+<ul>
+<li><a href="http://dataunion.org/bbs/forum.php?mod=viewthread&amp;tid=835&amp;extra=">推荐系统的常用算法对比</a></li>
+<li><a href="http://blog.csdn.net/oopsoom/article/details/33740799">推荐算法总结</a></li>
+</ul>
+
+<p>常用推荐算法点评(by 陈运文)
+- Item-based collaborative filtering
+    - 应用最为广泛的方法
+    - 存在各种计算方法的改进;但Similarity计算随意性大
+- Content-based algorithm
+    - 实现简单、直观,常用于处理冷启动问题
+    - 推荐精度低
+- Latent Factor Model
+    - 单一模型效果最好的方法;但难以实时更新模型
+    - KDD-Cup,Netflix Prize ...
+- Statistics-based
+    - 简陋,直观,非个性化,被大量使用
+    - 可用于补足策略</p>
+
+<h3>效果评估</h3>
+
+<ul>
+<li>MAP/nDCG: top-N推荐</li>
+<li>RMSE/MAE: 评分预测问题</li>
+<li>A/B Testing: 点击率、转化率</li>
+</ul>
+
+<h2>推荐系统实战Case</h2>
+
+<h3>Netflix</h3>
+
+<ul>
+<li>top-2 algorithms：SVD，RBM</li>
+<li>具体请参考<a href="http://buzzard.ups.edu/courses/2014spring/420projects/math420-UPS-spring-2014-gower-netflix-SVD.pdf">Netflix Prize and SVD</a>，<a href="http://www.netflixprize.com/assets/GrandPrize2009_BPC_BellKor.pdf">The BellKor Solution to the Netflix Grand Prize</a></li>
+</ul>
+
+<h3><a href="https://breezedeus.github.io/2012/11/01/breezedeus-yuanquan-etao.html">个性化推荐技术#总结-袁全</a></h3>
+
+<ul>
+<li>相关性推荐，点击数据更有用；补充性推荐，购买数据更有用；要根据用户行为意图选择不同的推荐方法。</li>
+<li>对于不同种类的产品，当用户处在同一购物流程时，其理想的相关性推荐/补充性推荐的概率也差别很大。</li>
+<li>Mixture Logistic Regression</li>
+</ul>
+
+<h3><a href="https://breezedeus.github.io/2012/11/10/breezedeus-jiangshen.html">面向广告主的推荐，江申@百度</a></h3>
+
+<ul>
+<li>技术目标要正确；譬如对于拍卖词推荐，其数学目标的烟花过程为：推荐最相关的词-&gt;推荐广告主采用率最高的词-&gt;推荐采用率最高且产生推广效果最佳的词。</li>
+<li>在拍卖词推荐中主要涉及到三种模型：相关性模型、采用率模型和推广效果模型。</li>
+<li>负反馈：按照item已经对user展示的次数指数级降低其权重，避免同一个item多次重复被展示给一个用户。</li>
+</ul>
+
+<h3><a href="https://breezedeus.github.io/2012/11/12/breezedeus-wenguozhu.html">个性化推荐技术#总结 稳国柱@豆瓣</a></h3>
+
+<ul>
+<li>电影推荐：首先把电影按照电影标签进行分组（比如分成动作片，剧情片等）；然后在每个组里面使用CF算法产生推荐结果；最后把每组中获得的推荐按照加权组合的方式组合在一块。</li>
+<li>图书推荐：图书有一定的阶梯性，在大部分的场合，我们需要的并不是与自己相似的用户的推荐，而是与自己相似的专家的推荐。</li>
+<li>电台的音乐推荐：必须使用一个算法系统（其中包含多个算法）来针对不同的用户进行不同的算法调度</li>
+</ul>
+
+<h3><a href="http://www.douban.com/note/472267231/">年终总结 &amp; 算法数据的思考 by 飞林沙</a></h3>
+
+<h3><a href="https://breezedeus.github.io/2015/01/31/breezedeus-review-for-year-2014-tech.html">世纪佳缘用户推荐系统的发展历史</a></h3>
+
+<ul>
+<li>&quot;总结、温习，这两点让人成长。而不是你走得有多快！&quot;</li>
+<li>天真的算法年：item-based kNN。推荐以前看过的item的相似item。可逆（Reciprocal）推荐算法，是什么东西？<a href="http://search.aol.com/aol/search?s_it=topsearchbox.search&amp;v_t=opensearch&amp;q=Reciprocal+recommendation">Reciprocal recommendation</a></li>
+<li>技术为产品服务，而不是直接面向用户；数据质量是地基，保证好的质量很不容易；如何制定正确的优化指标真的很难；业务理解 &gt; 工程实现；数据 &gt; 系统 &gt; 算法；快速试错；</li>
+<li>Dirichlet Process 和 Dirichlet Process Mixture</li>
+<li>Alternating Direction Method of Multipliers(ADMM)</li>
+<li><a href="https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html">利用GBDT模型构造新特征</a></li>
+<li><a href="https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html">特征哈希（Feature Hashing）</a></li>
+<li>不平衡数据的抽样方法。参考文献：William Fithian, Trevor Hastie, Local Case-Control Sampling Efficient Subsampling in Imbalanced Data Sets, 2014.</li>
+<li><a href="http://www.douban.com/note/484853135/">世纪佳缘推荐系统之我见</a>
+
+<ul>
+<li>明确推荐评价指标：对于婚恋推荐系统来说，最核心的指标无外乎付费的转换率 - 我们倒着来推，把问题转换为识别出最愿意付费的那些用户，然后找到这些用户感兴趣的用户，通过产品引导让这些用户发信</li>
+<li>能不能从数据跳出来对产品提出一些创意性改进从而产生的产品模式和收费模式的变革。</li>
+</ul></li>
+</ul>
+
+<h3><a href="http://www.wsdm-conference.org/2015/wp-content/uploads/2015/02/WSDM-2015-PE-Leskovec.pdf">New Directions in Recommender Systems</a></h3>
+
+<ul>
+<li><a href="http://www.douban.com/note/484692347/">飞林沙-读后总结</a></li>
+<li>需要理解 可替换 和 可补充，这两种推荐形式。</li>
+<li>怎样生成替代品的推荐理由，应该是更好，而不是他们包含同一关键词</li>
+<li>推荐一整套装备</li>
+<li>Inferring Networks from Opinions阅读总结：
+
+<ul>
+<li>Product Graph：Building networks from product text       - Understand the notions of substitute and complement goods     - Generate explanations of why certain products are preferred
+
+<ul>
+<li>Recommends baskets of related items</li>
+</ul></li>
+<li>learn x and y are related?
+
+<ul>
+<li>Attempt 1: Text features；缺点：High-dimensional，Prone to overfitting，Too fine-grained</li>
+<li>Attempt 2: Features from Topics。也就是把第一种方法，用topic vector替换，相当于降维了。</li>
+<li>Attempt 3: Learn ‘good’ topics。Learn to discover topics that explain the graph structure；
+
+<ul>
+<li>Idea: Learn both simultaneously；we want to learn to project documents (reviews) into topic space such that related products are nearby；</li>
+<li>Combining topic models with link prediction；topic和link利用一个目标函数，一起训练。</li>
+<li>Issue 1: Relationships we want to learn are not symmetric；Solution: We solve this issue by learning “relatedness” in addition to “directedness”</li>
+<li>Issue 3: The model has a too many parameters；Solution: Product hierarchy；Associate each node in the category tree with a small number of topics</li>
+<li>整个模型用EM算法来求解，类似于PLSA的EM算法。</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3><a href="http://tech.meituan.com/machinelearning-data-feature-process.html">美团推荐团队-机器学习中的数据清洗与特征处理综述</a></h3>
+
+<h3><a href="http://www.csdn.net/article/2015-01-30/2823783">美团推荐算法实践：机器学习重排序模型成亮点</a></h3>
+
+<ul>
+<li><a href="http://tech.meituan.com/mt-recommend-practice.html">美团推荐算法实践</a></li>
+<li>本文介绍了美团网推荐系统的构建和优化过程中的一些做法，包括数据层、触发层、融合过滤层和排序层五个层次，采用了HBase、Hive、storm、Spark和机器学习等技术。两个优化亮点是将候选集进行融合与引入重排序模型。</li>
+</ul>
+
+<h3><a href="http://benanne.github.io/2014/08/05/spotify-cnns.html">文章-Recommending music on Spotify with deep learning</a></h3>
+
+<p>基于作者的实习经历讲Spotify的音乐推荐，内容涉及：协同过滤、基于内容的推荐、基于深度学习的品味预测、convnets规模扩展、convnets的学习内容、推荐的具体应用等</p>
+
+<ul>
+<li>Collaborative filtering：content-agnostic（与内容无关的），容易推荐popular items。另外，new and unpopular songs cannot be recommended，即cold-start problem。</li>
+<li>Content-based：tags, artist and album information, lyrics, text mined from the web (reviews, interviews, …), and the audio signal itself（e.g. the mood of the music）。</li>
+<li>Predicting listening preferences with deep learning。</li>
+</ul>
+
+<h3><a href="http://www.aszxqw.com/work/2014/06/01/tuijian-xitong-de-nadianshi.html">推荐系统的那点事</a></h3>
+
+<p>分析了推荐系统中使用算法的误区，确实规则带来的好处简单有效。 当一个做推荐系统的部门开始重视【数据清理，数据标柱，效果评测，数据统计，数据分析】这些所谓的脏活累活，这样的推荐系统才会有救。</p>
+
+<h3><a href="http://data-artisans.com/computing-recommendations-with-flink.html">文章 Computing Recommendations at Extreme Scale with Apache Flink and Google Compute Engine</a></h3>
+
+<p>Flink实例！用Flink和GAE做面向大规模数据集的协同推荐，从中可看出Flink的巨大应用潜力，文中引用的材料值得一读（作者说了，细节文章即将推出敬请期待，感兴趣请持续关注）</p>
+
+<h3><a href="http://www.52ml.net/318.html">推荐系统中所使用的混合技术介绍</a></h3>
+
+<p>系统架构层面一般使用多段组合混合推荐框架，算法层面则使用加权型混合推荐技术，包括LR、RBM、GBDT系列。此外还介绍分级型混合推荐技术，交叉调和技术，瀑布型混合方法，推荐基础特征混合技术，推荐模型混合技术，整体式混合推荐框架等。</p>
+
+<h3><a href="http://www.52nlp.cn/cikm-competition-topdata">CIKM Competition数据挖掘竞赛夺冠算法陈运文</a></h3>
+
+<p>该文讲述的不是推荐算法，而是一个分类问题，不过也有一些对我个人有启发的地方：</p>
+
+<ul>
+<li>考虑到样本分布不均匀，在计算Macro Precision和Recall时，由于分母是该category的Query number，所以越是稀少的类别，其每个Query的预测精度对最终F1值的影响越大。换句话说冷门类别对结果的影响更大，需要格外关注。</li>
+<li>多分类问题的处理方式，没有将跨类的样本进行拆分，而是将多类的训练样本单独作为一个类别，实践验证效果更好。</li>
+<li>社交网络中的智能推荐的思想也可以在这里运用。类似推荐系统中的<User, Item>关系对，这里<Query, Title>的关系可以使用协同过滤（Collaborative Filtering）的思想，当两个Query所点击的Title列表相似时，则另外Query的category可以被“推荐”给当前Query。</li>
+<li><p>在Ensemble框架下，分类器分为两个Level: L1层和L2层。L1层是基础分类器，前面所提到的方法均可以作为L1层分类器来使用；L2层基于L1层，将L1层的分类结果形成特征向量，再组合一些其他的特征后，形成L2层分类器（如SVM）的输入。这里需要特别留意的是用于L2层的训练的样本必须没有在训练L1层时使用过。</p>
+
+<p>在设计Ensemble L1层算法的过程中，有很多种设计思路，我们选择了不同的分类算法训练多个分类模型，而另外有队伍则为每一个类别设计了专用的二分分类器，每个分类器关注其中一个category的分类(one-vs-all)；也可以选择同一种分类算法，但是用不同的特征训练出多个L1层分类器；另外设置不同的参数也能形成多个L1层分类器等</p></li>
+</ul>
+
+<h3><a href="http://www.csdn.net/article/2014-08-27/2821403-the-top-9-of-ali-bigdata-competition/9">学生强则国强，访天猫推荐算法大赛Top 9团队</a></h3>
+
+<p>根据用户4个月在天猫的行为日志，预测用户u在将来一个月是否会购买某个品牌b</p>
+
+<p>模型的训练思想：</p>
+
+<p>由于这个问题中正负样本比例悬殊，我们使用了级联的思想过滤掉大量的样本来提升训练速度，同时也提升了模型准确率。在第一级选用训练和预测速度都较快的逻辑回归模型，过滤掉&gt;80%的样本。在第二级选用拟合能力更强的GBRT、RF、神经网络等非线性模型。最后选用神经网络将第二级的非线性模型融合起来。</p>
+
+<h3><a href="http://www.slideshare.net/scmyyan/large-scale-recommendation-in-ecommerce-qiang-yan">Large scale recommendation in e-commerce -- qiang yan</a></h3>
+
+<p>Justin:online match + online learning works very well
+赞processing stack。我们最近在豆瓣fm上也做了online learning，improve10个点左右</p>
+
+<h2>推荐系统总结</h2>
+
+<h3>实践中的关键点</h3>
+
+<h4>数据预处理</h4>
+
+<ul>
+<li>更多的有效数据，更好的推荐效果</li>
+</ul>
+
+<h4>隐式反馈的使用</h4>
+
+<ul>
+<li>显式反馈(explicit feedbacks):
+
+<ul>
+<li>购买、评分、接受推荐、点击喜欢。。。</li>
+<li>数量稀疏(用户是最懒的人)</li>
+</ul></li>
+<li>隐式反馈(implicit Feedbacks):
+
+<ul>
+<li>浏览、收听、点击、下载。。。</li>
+<li>User/item相关的profile、keyword、tags</li>
+<li>反馈中占大多数(往往被忽略)</li>
+</ul></li>
+<li>如何利用好隐式反馈?
+
+<ul>
+<li>对提高推荐精度有良好效果(SVD-&gt;SVD++)</li>
+</ul></li>
+</ul>
+
+<h4>SNS关系的使用</h4>
+
+<ul>
+<li>SNS关系包括：
+
+<ul>
+<li>follower/followee，好友，群关系</li>
+<li>user-user actions，e.g. &quot;retweet/at/comment...&quot;</li>
+</ul></li>
+<li>SNS关系的使用
+
+<ul>
+<li>用于user之间的关系计算(graph-based)</li>
+<li>作为隐式反馈，用于SVD++</li>
+</ul></li>
+</ul>
+
+<h4>时间因素的使用</h4>
+
+<ul>
+<li>user的行为受时间影响</li>
+<li>Item的状态也受时间影响</li>
+</ul>
+
+<h4>利用地域信息</h4>
+
+<ul>
+<li>特定的应用场景</li>
+<li>基于规则</li>
+<li>基于地域信息的关联规则挖掘</li>
+<li>Item-based协同过滤，item similarity计算时加入距离属性</li>
+<li>Latent factor，user-location作为隐式反馈使用</li>
+</ul>
+
+<h4>User冷启动的处理</h4>
+
+<ul>
+<li>热门推荐(排行榜)永远都是一个可用的方案
+
+<ul>
+<li>点击总量最多</li>
+<li>最近点击最多</li>
+<li>评分最高</li>
+</ul></li>
+<li>充分利用任何用户信息
+
+<ul>
+<li>性别、年龄</li>
+<li>来自其他应用的数据</li>
+</ul></li>
+<li>口味测试
+
+<ul>
+<li>有代表性的选项</li>
+<li>热门/大部分用户熟知的选项</li>
+<li>有区分度的选项</li>
+</ul></li>
+</ul>
+
+<h4>Item冷启动的处理</h4>
+
+<ul>
+<li>Content-basedmethods永远都是一个可用方案
+
+<ul>
+<li>Category</li>
+<li>Tags</li>
+<li>Topic</li>
+</ul></li>
+<li>相关技术(NLP、ML)
+
+<ul>
+<li>自动分类</li>
+<li>自动标签提取</li>
+</ul></li>
+<li>倒排索引的使用
+
+<ul>
+<li>适用于item数量庞大</li>
+<li>索引的查询与合并</li>
+</ul></li>
+</ul>
+
+<h3>个人总结</h3>
+
+<ul>
+<li>技术目标要正确。</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">1. 首先要定义好什么叫”好的推荐“，这是解决任何一个技术问题的前提。
+2. 在有了明确的定义之后，实际问题一般会蜕变为一个优化问题，用数学工具给出它最好的解答。
+3. 数学上的解答可能在技术上无法实现，或者说有可能复杂度太高，那么需要一个比较好的近似解。不要小看这一步，大部分问题出在这里。
+4. 迭代改进。算法实现以后可能实际表现与预想的不同，需要重新定义”好的推荐“。这样一个周期下来，推荐效果应当有肉眼可见的改进。
+</code></pre></div>
+<ul>
+<li><p>推荐算法选择</p>
+
+<ul>
+<li>各取所长，互相补充</li>
+<li>算法无好坏之分，只有是否合适</li>
+</ul></li>
+<li><p><a href="http://www.quora.com/Recommendation-Systems/What-developments-have-occurred-in-recommender-systems-after-the-Netflix-Prize/answer/Xavier-Amatriain?srid=z0Q5&amp;share=1">Recommendation Systems: What developments have occurred in recommender systems after the Netflix Prize?</a></p>
+
+<p>在 Quora 上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入，评分预测已经不是主流，LTR的应用会更符合推荐的初衷等</p>
+
+<ul>
+<li>Implicit feedback from usage has proven to be a better and more reliable way to capture user preference.</li>
+<li>Rating prediction is not the best formalization of the &quot;recommender problem&quot;. Other approaches, and in particular personalized Learning to Rank, are much more aligned with the idea of recommending the best item for a user.</li>
+<li>It is important to find ways to balance the trade-off between exploration and exploitation. Approaches such as Multi-Armed Bandit Algorithms offer an informed way to address this issue.</li>
+<li>Issues such as diversity, and novelty can be as important as relevance.</li>
+<li>It is important to address the presentation bias caused by users only being able to give feedback to those items previously decided where good for them.</li>
+<li>The recommendation problem is not only a two dimensional problem of users and items but rather a multi-dimensional problem that includes many contextual dimensions such as time of the day or day of the week. Algorithms such as Tensor Factorization or Factorization Machines come in very handy for this.</li>
+<li>Users decide to select items not only based on how good they think they are, but also based on the possible impact on their social network. Therefore, social connections can be a good source of data to add to the recommendation system.</li>
+<li>It is not good enough to design algorithms that select the best items for users, these items need to be presented with the right form of explanations for users to be attracted to them.</li>
+</ul></li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li><a href="http://wenku.baidu.com/view/0607e780d0d233d4b14e699e.html">数据挖掘技术在推荐系统的应用，陈运文</a></li>
+<li><a href="http://www2007.org/papers/paper570.pdf">Google News Personalization: Scalable Online Collaborative Filtering</a></li>
+<li><a href="http://ijcai13.org/files/tutorial_slides/td3.pdf">Tutorial: Recommender Systems; Dietmar Jannach</a></li>
+<li><a href="http://ai.stanford.edu/%7Eronnyk/WEBKDD2000/papers/sarwar.pdf">Application of Dimensionality Reduction in Recommender System -- A Case Study</a></li>
+<li><a href="http://vdisk.weibo.com/s/DaKXoKQC5TSH">Up Next: Retrieval Methods for Large Scale Related Video Suggestion</a></li>
+<li><a href="http://alex.smola.org/teaching/berkeley2012/slides/8_Recommender.pdf">Alex-recommendation</a></li>
+<li><a href="http://www.slideshare.net/scmyyan/large-scale-recommendation-in-ecommerce-qiang-yan">Large scale recommendation in e-commerce -- qiang yan</a></li>
+<li><a href="http://www.slideshare.net/xamat/recommender-systems-machine-learning-summer-school-2014-cmu">Recommender System slices. MLSS14</a></li>
+<li><a href="http://videolectures.net/kdd2014_amatriain_mobasher_recommender_problem/">Recommender System video. MLSS14</a></li>
+<li><a href="http://www.kdd.org/kdd2014/tutorials/KDD-%20The%20RecommenderProblemRevisited-Part2.pdf">Context Aware Recommendation. Bamshad Mobasher</a></li>
+<li><a href="http://www.kdd.org/kdd2014/tutorials/KDD%20-%20The%20Recommender%20Problem%20Revisited.pdf">KDD - The Recommender Problem Revisited</a></li>
+</ol>
+
+<h3>其他参考文献</h3>
+
+<p><a href="http://blog.sina.com.cn/s/blog_804abfa70101btrv.html">link</a></p>
+
+<p>这个资料分享主要分享的都是非学术的Paper，都来自商业公司，Google, YouTube, Amazon, LinkedIn等等。
+我个人非常喜欢这些文章，基本上，这些文章描述的都是在系统中的实际能工作的东西。</p>
+
+<p>这个是Google的一篇论文http://t.cn/zl0zxPZ这个里面有很多有意思的想法。
+推荐的结果是三个算法的融合，即MinHash, PLSI, covisitation.
+融合的方式是分数线性加权
+一个主要的思想是“online”的进行更新，所以这个地方一定要减少规模，索引使用了User Clustering的算法，包括Min Hash和PLSI。
+在新数据来的时候，关键是不要去更新User Cluster，而是直接更新所属的Cluster对于URL的点击数据
+对于新用户，使用covisitation的方法进行推荐</p>
+
+<p>这个是上一篇Paper的进阶paper。 http://t.cn/zl0zqDO
+这篇Paper在上一篇的基础上增加了一些内容，主要包括Topic部分的内容，Google News是有Topic信息的。
+这篇Paper通过用户喜欢的Topic这个信息以及Topic Trend这个信息一起进行分析。
+热门的topic会被更多的展现给用户，其中用户只会看到他喜欢的Topic
+这个方法和上面的方法相比，可能对于解决热门News的问题，有更大的帮助</p>
+
+<p>这个是Youtube的文章 vdisk.weibo.com/s/fcbuu
+这篇Paper的的方法更直观，它只使用了covisitation的信息，但是对于covisitation的方法做了N次扩展，即找一个Seed的多次邻居。
+在这个的基础上，做了一些后处理的工作，尤其是Diversity的工作</p>
+
+<p>这个是对于Amazon商品推荐算法的一个Paper的翻译版
+http://blog.sina.com.cn/s/blog<em>586631940100pduh.html
+  这个Paper比较老了，但是是item-Based推荐的经典文章了。
+这个是IBM的两位同学对于推荐的一个综述，属于入门级的，看看也不错。
+  http://www.ibm.com/developerworks/cn/web/1103</em>zhaoct_recommstudy1/index.html
+这个比较有营养，是高级货，是LinkedIn的兄弟们在KDD2012上发布的，有用！进阶以后值得看看，尤其是搞真系统的。http://t.cn/zl0ZTN1
+这个更是高级货了，Recommendations as a Conversation with the User
+这个的角度更多的是推荐系统的HCI设计，前面是一堆哲学，看不懂可以跳过，后面的例子还是比较给力的。有几个数字很给力：
+Amazon: 35% of sales result from recommendations
+75% of Netflix views result from recommendations</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的情怀 - 技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

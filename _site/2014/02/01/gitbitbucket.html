@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
-">
+  <title>git+bitbucket</title>
+  <meta name="description" content="git + bitbucket 配置">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/about/">
+  <link rel="canonical" href="http://yourdomain.com/2014/02/01/gitbitbucket.html">
   <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -58,17 +57,57 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">git+bitbucket</h1>
+    <p class="post-meta">Feb 1, 2014</p>
   </header>
 
   <article class="post-content">
-    <p>Hello，此博客采用了&quot;base Jekyll theme&quot;。我的电子邮箱是: zero_based@foxmail.com。</p>
+    <h2>git + bitbucket 配置</h2>
 
-<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+<p>bitbuckte 相比于时下最流行的 github, 其最牛之处在于可以免费创建私人项目。这点相当吸引人。我打算把一些杂乱的项目放上去，一方面为个备份，另一方面也为跟踪开发过程。</p>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<h3>Mac 配置</h3>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<p>mac电脑上默认有安装git, 需要做的只是一些简单的配置。</p>
+
+<ol>
+<li>首先申请一个bitbucket账号。创建一个repository。</li>
+<li>接着参考<a href="https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git">这篇文章</a></li>
+<li>ssh-keygen 生成rsa的私钥和公钥。</li>
+<li>创建ssh config.
+vi ~/.ssh/config。在里面输入下面内容：
+Host bitbucket.org
+IdentityFile ~/.ssh/id_rsa</li>
+<li>然后把public key设置到bitbucket里。
+设置成功后，执行“ssh -T git@bitbucket.org”测试是否OK。</li>
+<li><p>根据bitbucket的提示，在本地command shell里输入：
+mkdir /path/to/your/project
+cd /path/to/your/project
+git init
+git remote add origin ssh://git@bitbucket.org/zzbased/medcare.git
+echo &quot;# This is my README&quot; &gt;&gt; README.md
+git add README.md
+git commit -m &quot;First commit. Adding a README.&quot;
+git push -u origin master</p></li>
+<li><p>over!</p></li>
+</ol>
+
+<h3>Windows7 配置</h3>
+
+<ol>
+<li>安装<a href="http://code.google.com/p/msysgit/">msysgit</a>。它包括一个git gui和一个git bash。</li>
+<li>参考<a href="http://guganeshan.com/blog/setting-up-git-and-tortoisegit-with-bitbucket-step-by-step.html">这篇文章</a>设置ssh key。
+经过mac和windows7两个设置后，我的bitbucket ssh key是这样的：</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bitbucket_ssh.png" alt="bitbucket_ssh.png"></p>
+
+<ol>
+<li>选定一个目录，在该目录下右键打开git bash。直接git clone bitbucket上创建的repository。</li>
+<li>更新代码后，右键git add all files now(or in git bash, execute &#39;git add -u .&#39;)。利用git gui commit代码(当然用git bash也可以，用git gui是方便查看diff)。最后在git bash里git push -u origin master代码即可。</li>
+</ol>
+
+<p>OK，以后我的私人工程代码都将用bitbucket来管理。</p>
 
   </article>
 

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>有价值的参考文献和业界分享整理</title>
+  <meta name="description" content="把自己的论文库浏览了一遍，将一些我自己认为有价值的论文整理一下，做一点读书笔记，权作备忘。">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2014/02/09/thesis_recall.html">
+  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">有价值的参考文献和业界分享整理</h1>
+    <p class="post-meta">Feb 9, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <p>把自己的论文库浏览了一遍，将一些我自己认为有价值的论文整理一下，做一点读书笔记，权作备忘。</p>
+
+<h3>types of machine learning</h3>
+
+<p>Types of Machine Learning Algorithms; Taiwo Oladipupo Ayodele</p>
+
+<h3>最优化</h3>
+
+<p><a href="http://www.chokkan.org/software/liblbfgs/">lbfgs</a>
+一种拟牛顿法，经常用来做凸优化。任何凸函数优化，将cost fuction和gradient function写好了，输入进去，就可以求得最优值。
+譬如对于svm模型，求svm的squared hinge loss:
+    yp=x*w; idx=find(yp.*y &quot;&lt;&quot; 1); e=yp(idx)-y(idx); f=e&#39;*e+c*w*w; df=2(x(idx,:)&#39;*e+c*w);
+计算完cost function: f和gradient function: df, 输入到lbfgs即可。
+余凯：说hinge loss, 当年主要卖点是得到稀疏解，也即所谓支撑向量 (SV). 今天看来，这个性质已不重要：1 这是一个特殊凸优化算法的结果，而非统计学习的本质问题； 2 实践中，当年kernel系统得到稀疏解带来计算上的便捷，但现在我们已不用kernel; 3 甚至稀疏性这个结论已被推翻，已证明SV是线性增长。</p>
+
+<p><a href="http://research.microsoft.com/en-us/downloads/b1eb1016-1738-4bd5-83a9-370c9d498a03/">owl-qn</a>  lbfgs+L1正则化。到目前为止，简单的lr用的还是这个库。</p>
+
+<p><a href="https://github.com/zzbased/zzbased.github.com/blob/master/_posts/doc/LR%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.pdf">逻辑回归-从入门到精通</a>  这是目前看到对逻辑回归讲得最好的文章。
+这是另一篇<a href="http://www.csdn.net/article/2014-02-13/2818400-2014-02-13">文章</a>，主要讲述怎么并行化逻辑回归。</p>
+
+<p><img src="https://raw.github.com/zzbased/zzbased.github.com/master/_posts/images/lr_parallel.png" alt="lr parallel"></p>
+
+<p>一些有趣的机器学习库 <a href="https://github.com/JohnLangford/vowpal_wabbit/wiki">vowpal_wabbit</a>  <a href="http://blog.sina.com.cn/s/blog_569d6df801014x4x.html#bsh-24-170411859">c++ library</a>  <a href="http://scikit-learn.org/stable/">scikit</a></p>
+
+<h3>classification</h3>
+
+<p>Supervised Machine Learning: A Review of Classification Techniques; S. B. Kotsiantis</p>
+
+<h3>crf</h3>
+
+<p>An Introduction to Conditional Random Fields;Charles Sutton。 crf相关的文章有很多，我是看这篇入门的。其实想深入学习，还是推荐看代码。<a href="http://www.chokkan.org/software/crfsuite/">crtsuite</a>是一份不错的代码。</p>
+
+<h3>SVM</h3>
+
+<p>A Gentle Introduction to Support Vector Machines in Biomedicine;Alexander Statnikov。 这个介绍很全面。</p>
+
+<p>july的这篇文章写得也不错。<a href="http://blog.csdn.net/v_july_v/article/details/7624837">支持向量机通俗导论（理解SVM的三层境界）</a></p>
+
+<h3>topic model</h3>
+
+<p>Parameter estimation for text analysis; Gregor Heinrich。最佳入门材料。</p>
+
+<p>A Note on the Expectation-Maximization (EM) Algorithm; ChengXiang Zhai。em算法最佳入门材料。</p>
+
+<p><a href="http://blog.csdn.net/yangliuy/article/details/8330640">概率语言模型及其变形系列</a>  一个博客文章，写的挺不错的。</p>
+
+<p>TOPIC MODELS;  DAVID M. BLEI , JOHN D. LAFFERTY</p>
+
+<p>GIBBS SAMPLING FOR THE UNINITIATED; Philip Resnik。gibbs sampling最佳入门材料。</p>
+
+<p>YahooLDA:An Architecture for Parallel Topic Models;Alexander Smola。开源实现yahoo_lda的论文。看完论文，还是建议看代码，跑demo。<a href="https://github.com/sudar/Yahoo_LDA">code</a></p>
+
+<p>PLDA: Parallel Latent Dirichlet Allocation for Large-scale Applications; Yiwang。yiwang基于mpi和mapreduce的一个lda实现。后来yiwang又实现了一个更牛逼的系统:peacock。</p>
+
+<h3>boosting</h3>
+
+<p>A Short Introduction to Boosting; Yoav Freund</p>
+
+<p>The Boosting Approach to Machine Learning An Overview; Robert E. Schapire</p>
+
+<h3>sas</h3>
+
+<p>A Web-based Kernel Function for Measuring the Similarity
+of Short Text Snippets; Mehran Sahami , Timothy D. Heilman。搜索广告sas的参考文献。</p>
+
+<h3>deep learning</h3>
+
+<p><a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B">UFLDL</a></p>
+
+<p><a href="http://blog.csdn.net/zouxy09/article/details/8775360">Deep Learning（深度学习）学习笔记整理系列</a></p>
+
+<p>Learning Deep Architectures for AI; Yoshua Bengio。综述文章。</p>
+
+<p>Deep Learning for NLP(without Magic) ; Richard Socher, Yoshua bengio。nlp综述文章。</p>
+
+<p>Representation Learning: A Review and New Perspectives; Yoshua Bengio。综述文章。
+  
+Hierarchical Convolutional Deep Learning in Computer Vision; Matthew D. Zeiler。zeiler是imagenet 2013 image classification的第一名，这是他的博士论文，挺有阅读价值的。</p>
+
+<h3>recommender</h3>
+
+<p><a href="http://zzbased.github.io/2015/01/03/recommendation_algorithms/">本站文章</a></p>
+
+<h3>Online learning</h3>
+
+<p>Online Learning and Online Convex Optimization; By Shai Shalev-Shwartz</p>
+
+<h3>DSP</h3>
+
+<p>DSP中的算法初探; 江申</p>
+
+<p>实时定向广告技术-DSP框架及算法;则成</p>
+
+<h3>ctr</h3>
+
+<p>Ad Click Prediction: a View from the Trenches;H. Brendan McMahan</p>
+
+<hr>
+
+<p>add on 20140214</p>
+
+<p><a href="http://pages.cs.wisc.edu/%7Ejerryzhu/pub/ZhuCCFADL46.pdf">statistical machine learning for nlp; by xiaojin zhu</a></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的情怀 - 技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

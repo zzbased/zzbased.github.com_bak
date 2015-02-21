@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>anaconda+theano+cuda+vs2012编程环境搭建</title>
+  <meta name="description" content="anaconda+theano+cuda+vs2012编程环境搭建">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2014/02/01/anacondatheanocudavs2012.html">
+  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">anaconda+theano+cuda+vs2012编程环境搭建</h1>
+    <p class="post-meta">Feb 1, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <h2>anaconda+theano+cuda+vs2012编程环境搭建</h2>
+
+<h3>一 基本概念介绍</h3>
+
+<h4>1.1. anaconda：</h4>
+
+<p>一个python科学计算发行版，具体可以参考下面的网页：
+  <a href="http://blog.csdn.net/rumswell/article/details/8927603">目前比较流行的python科学计算发行包</a>。其中比较了python(x,y),winpython, anaconda, canopy, sage。</p>
+
+<h4>1.2. theana：</h4>
+
+<p>深度学习python包。
+  - <a href="https://github.com/Theano/Theano">theano github地址</a>
+  - <a href="http://deeplearning.net/software/theano/">theano 官方首页</a>
+  - <a href="http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html">theano 学习指南翻译</a></p>
+
+<h4>1.3. cuda:</h4>
+
+<p>nvidia gpu编程库</p>
+
+<h3>二 安装流程</h3>
+
+<h4>2.1 我的安装环境</h4>
+
+<p>windows7 64bit. gpu是geforce gtx 660.</p>
+
+<h4>2.2 cuda安装</h4>
+
+<p>先安装cuda. 目前cuda的最新版是5.5，直接到官方网站下站即可。
+  - <a href="https://developer.nvidia.com/cuda-downloads">cuda 下载地址</a>
+  - <a href="http://blog.csdn.net/yeyang911/article/details/17450963">手把手教你cuda5.5与VS2010的编译环境搭建</a></p>
+
+<p>下载完后直接傻瓜安装。在我的机器上，我将其安装到&quot;D:\NVIDIA\CUDA&quot;目录。
+安装完后，还要设置一些环境变量：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">CUDA_PATH   D:\NVIDIA\CUDA\CUDAToolkit
+CUDA_BIN_PATH　　%CUDA_PATH%\bin
+CUDA_LIB_PATH　　%CUDA_PATH%\lib\x64
+CUDA_SDK_PATH　　D:\NVIDIA\CUDA\CUDASamples
+CUDA_SDK_BIN　　%CUDA_SDK_PATH%\Bin\win64
+CUDA_SDK_LIB　　%CUDA_SDK_PATH%\common\lib\x64
+PATH   %CUDA_BIN_PATH%
+</code></pre></div>
+<p>安装结束后，可以验证一下cuda是否成功
+cd %CUDA<em>SDK</em>PATH%\Bin\win64\Release</p>
+
+<p>执行deviceQuery.exe 和 bandwithTest.exe</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ%E6%88%AA%E5%9B%BE20140128135238.png" alt="Image"></p>
+
+<p>ok, cuda安装成功</p>
+
+<h4>2.3 cuda+vs</h4>
+
+<p>再接着按照上面教程所说，继续安装vs2010.
+cuda官网上有一篇安装教程：
+<a href="http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-microsoft-windows/">cuda+vs官网安装</a></p>
+
+<p>安装完后，根据下面文章的提示，还要设置一下nvcc.profile.
+<a href="http://stackoverflow.com/questions/2760374/why-cant-nvcc-find-my-visual-c-installation">Why can&#39;t nvcc find my Visual C++ installation?</a></p>
+
+<p>Include this line
+    compiler-bindir = C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin
+in
+    %CUDA<em>BIN</em>PATH%\nvcc.profile</p>
+
+<p>一开始，我安装是vs2010 express版本。
+但是在编译cuda sample时，
+例如这个例子： %CUDA<em>SDK</em>PATH%\1_Utilities\bandwidthTest
+用win32平台编译没有问题，可以正确执行，但是在clean操作时，会出现下面的错误。
+会出现错误： nvcc : fatal error : nvcc cannot find a supported version of Microsoft Visual Studio. Only the versions 2008, 2010, and 2012 are supported</p>
+
+<p>经查，据网上说，是因为vs2010 express默认是不支持64bit编译的，所以可以参考下面两篇文章的介绍进行修复:
+https://devtalk.nvidia.com/default/topic/570348/windows-7-64bit-installation-weird-problems-/
+http://msdn.microsoft.com/en-us/library/vstudio/9yb4317s%28v=vs.110%29.aspx
+我这样做了，但是仍然没有弄好。可能是哪里有疏漏。直接的做法是：那就不装express版本，直接改装ultimate版吧。</p>
+
+<p>下载vs2012 ultimate版，无需激活。
+<a href="http://www.edencx.com/visualstudio2012.html">vs2012下载地址</a></p>
+
+<p>vs2012安装完成后，打开bandwidthTest，还有一点错误：
+说在这个目录下&quot;C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\BuildCustomizations&quot;找不到CUDA 5.5.props
+经过搜索，发现在D:\NVIDIA\CUDA\CUDAToolkit\extras\visual<em>studio</em>integration\MSBuildExtensions目录下有这个文件，于是把这个目录下的所有文件都拷到VS的BuildCustomizations目录下。</p>
+
+<p>这样总算可以完整编译bandwidthTest工程，x64和win32平台都是ok的。</p>
+
+<h4>2.4 anaconda</h4>
+
+<p>搞好cuda的环境后，再来安装anaconda。
+   anaconda的安装相对简单。</p>
+
+<h4>2.5 theana</h4>
+
+<p>安装完anaconda后，再按照下面文章所述安装theano.
+  <a href="http://blog.csdn.net/yeyang911/article/details/16357133">64位WIN7上成功安装theano,并运行了g++, GPU</a>
+  <a href="http://deeplearning.net/software/theano/install.html#windows-anaconda">官网上利用anaconda安装theano的介绍</a>
+安装完theano后，还要设置环境变量：PYTHONPATH = D:\Anaconda\Lib\site-packages\theano
+PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路径。</p>
+
+<p>在使用theano之前，还需要配置theano。
+   在home目录[打开cmd时所显示的目录]下编辑.theanorc.txt。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[blas]
+ldflags =
+[gcc]
+cxxflags = -ID:\Anaconda\MinGW
+[nvcc]
+fastmath = True
+flags=-LD:\Anaconda\libs
+compiler-bindir=C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin
+base_compiledir=path_to_a_directory_without_such_characters
+[global]
+floatX = float32
+device = gpu
+</code></pre></div>
+<h3>三. 使用theano</h3>
+
+<h4>3.1 theano using the GPU</h4>
+
+<p><a href="http://deeplearning.net/software/theano/tutorial/using_gpu.html#using-gpu">官方using the gpu文档</a></p>
+
+<p>下面是一个测试程序：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">from theano import function, config, shared, sandbox
+import theano.tensor as T
+import numpy
+import time
+
+vlen = 10 * 30 * 768  # 10 x #cores x # threads per core
+iters = 1000
+
+rng = numpy.random.RandomState(22)
+x = shared(numpy.asarray(rng.rand(vlen), config.floatX))
+f = function([], T.exp(x))
+print f.maker.fgraph.toposort()
+t0 = time.time()
+for i in xrange(iters):
+    r = f()
+t1 = time.time()
+print &#39;Looping %d times took&#39; % iters, t1 - t0, &#39;seconds&#39;
+print &#39;Result is&#39;, r
+if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):
+    print &#39;Used the cpu&#39;
+else:
+    print &#39;Used the gpu&#39;
+</code></pre></div>
+<p>The program just computes the exp() of a bunch of random numbers. Note that we use the shared function to make sure that the input x is stored on the graphics device.</p>
+
+<p>在我的机器上，使用cpu执行是10多s. 而使用gpu则是0.5s左右。快了20多倍。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">from theano import function, config, shared, sandbox, Out
+import theano.tensor as T
+import numpy
+import time
+
+vlen = 10 * 30 * 768  # 10 x # cores x # threads per core
+iters = 1000
+
+rng = numpy.random.RandomState(22)
+x = shared(numpy.asarray(rng.rand(vlen), config.floatX))
+f = function([],
+Out(sandbox.cuda.basic_ops.gpu_from_host(T.exp(x)),
+borrow=True))
+print f.maker.fgraph.toposort()
+t0 = time.time()
+for i in xrange(iters):
+    r = f()
+t1 = time.time()
+print &#39;Looping %d times took&#39; % iters, t1 - t0, &#39;seconds&#39;
+print &#39;Result is&#39;, r
+print &#39;Numpy result is&#39;, numpy.asarray(r)
+if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):
+    print &#39;Used the cpu&#39;
+else:
+    print &#39;Used the gpu&#39;
+</code></pre></div>
+<p>用上面这个程序，GPU执行，只需要0.01s。</p>
+
+<h4>3.2 DeepLearningTutorials</h4>
+
+<p>下载DeepLearningTutorials</p>
+
+<p><a href="https://github.com/lisa-lab/DeepLearningTutorials">DeepLearningTutorials</a></p>
+
+<p>仔细研读里面的文件，开始学习deep learning！</p>
+
+<p>logistic_sgd.py
+   执行结果：
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ%E6%88%AA%E5%9B%BE20140128152208.png" alt="Image"></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的情怀 - 技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

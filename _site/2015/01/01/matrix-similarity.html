@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>matrix similarity</title>
+  <meta name="description" content="矩阵相似度计算">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2015/01/01/matrix-similarity.html">
+  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">matrix similarity</h1>
+    <p class="post-meta">Jan 1, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <h2>矩阵相似度计算</h2>
+
+<ul>
+<li>在机器学习任务中，矩阵是一个很重要的表述形式。文档与词，用户与其购买的商品，用户与好友关系等都可以描述成一个矩阵。为了描述方便，下文中矩阵都以U*I代替，U代表user，I代表item，矩阵维数为m*n。
+对这个矩阵，一个最基础的任务就是找到最相似的用户或最相似的文档，也就是<a href="http://zh.wikipedia.org/wiki/%E6%9C%80%E8%BF%91%E9%84%B0%E5%B1%85%E6%B3%95">k最近邻问题</a>(数据挖掘十大经典算法之一)。</li>
+</ul>
+
+<h4>相似度计算方法</h4>
+
+<ul>
+<li>相似度计算方法：cosine距离，jaccard距离，bm25模型，proximity模型。具体请参考<a href="http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html">机器学习中的相似性度量</a></li>
+</ul>
+
+<h4>降维方法</h4>
+
+<ul>
+<li><p>计算任意两个user之间的相似度，需要O(m*n)的复杂度。当n很大的时候，首先想到的办法是能否降维，将原矩阵变为m*k维(k&lt;&lt;n)。</p></li>
+<li><p>降维的方法有：svd，nmf，lsa，lda等。将一个大矩阵分解为两个小矩阵(m*n分解为两个矩阵m*k，k*n)，或者分解为三个小矩阵(m*n分解为两个矩阵m*k，k*k，k*n)</p></li>
+</ul>
+
+<h4>minhash+lsh</h4>
+
+<ul>
+<li><p>除此之外，还有一种降维+局部敏感hash的算法。
+也就是minhash + lsh。参考<a href="http://en.wikipedia.org/wiki/MinHash">MinHash wiki</a>，<a href="http://blog.csdn.net/sunlylorn/article/details/7835411">文本去重之MinHash算法</a>，<a href="http://www.cnblogs.com/bourneli/archive/2013/04/04/2999767.html">利用Minhash和LSH寻找相似的集合</a></p>
+
+<ul>
+<li>我们可以根据MinHash来计算两个集合的相似度了。一般有两种方法：</li>
+<li>第一种：使用多个hash函数。
+为了计算集合A、B具有最小哈希值的概率，我们可以选择一定数量的hash函数，比如K个。然后用这K个hash函数分别对集合A、B求哈希值，对
+每个集合都得到K个最小值。比如Min(A)k={a1,a2,...,ak}，Min(B)k={b1,b2,...,bk}。
+那么，集合A、B的相似度为|Min(A)k ∩ Min(B)k| / |Min(A)k  ∪  Min(B)k|，及Min(A)k和Min(B)k中相同元素个数与总的元素个数的比例。</li>
+<li>第二种：使用单个hash函数。
+第一种方法有一个很明显的缺陷，那就是计算复杂度高。使用单个hash函数是怎么解决这个问题的呢？请看：
+前面我们定义过 hmin(S)为集合S中具有最小哈希值的一个元素，那么我们也可以定义hmink(S)为集合S中具有最小哈希值的K个元素。这样一来，
+我们就只需要对每个集合求一次哈希，然后取最小的K个元素。计算两个集合A、B的相似度，就是集合A中最小的K个元素与集合B中最小的K个元素
+的交集个数与并集个数的比例。</li>
+<li>对于每个user，利用minhash计算后，则将其从n维降维至K维向量。然后就该LSH出场了。</li>
+<li>LSH:local sensitive hash。将上面K维向量划分到n个桶，每个桶有K/n维。两个user，只要有一个桶的元素是一样的，那么就认为他们是相似候选。这里有一个公式来衡量n的选值。请参考论文<a href="http://infolab.stanford.edu/%7Eullman/mmds/ch3.pdf">find similar items</a>，<a href="http://1.guzili.sinaapp.com/?p=190#more-190">局部敏感哈希LSH科普</a></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lsh.png" alt="lsh"></p></li>
+</ul>
+
+<h4>直接利用map-reduce</h4>
+
+<ul>
+<li><p>另外一种方法是不降维，直接通过map-reduce直接计算user之间的相似性。</p>
+
+<ul>
+<li>假设矩阵U*I，计算两两U之间的相关性，时间复杂度是O(N^3)</li>
+<li>但是我们可以换个思路，将矩阵转置，以item为key。第一轮map-reduce过程，将U*I矩阵转置为I*U矩阵，输出每个item下，与该item有关联的所有user list。第二轮map，将同一个item下user两两组合成pair后输出，第二轮reduce，累加相同user pair的weight，得到任意两个user之间的相似度。</li>
+<li>具体请参考链接<a href="http://wbj0110.iteye.com/blog/2043700">大规模矩阵相似度计算</a>。解决该问题就由两个Map-Reduce过程完成。第一个MR过程称为倒排索引，对每个文档，对其中的每个词语，以词语为键，文档标号与词语在该文档中的权重为值输出，这样，我们就得到如(F4,[(U1,0.1),(U2,0.9),(U7,0.5)])格式的输出。第二个MR过程计算文本相似度，以上一个MR过程的输出为输入，在Map过程中以文本对为键，以权重值的乘积为输出，比如上面的F4输出，map后变为[((U1,U2),0.09),((U1,U7),0.05),((U2,U7),0.45)]，这样，就得到了在所有的在两个文本中共同出现的词语针对该两个文本的权重乘积；然后在reduce过程中将相同键的值相加，就得到了所有的二元文本对的文本相似度。</li>
+<li>文中后面还讲了一些优化手段。</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/matrix_similairity.png" alt="matrix_similairity"></p></li>
+</ul>
+
+<h4>矩阵的乘法</h4>
+
+<ul>
+<li><p>额外再讲一点内容，矩阵的乘法,一个m*k的矩阵A乘上一个k*n的矩阵B，结果是一个m*n的矩阵C。有两种分解方法：</p>
+
+<ul>
+<li>其一，把A矩阵按行分，把B矩阵按列分的观点来看矩阵乘法。C矩阵的一个子矩阵块可以看做是A对应多行和B对应多列的矩阵相乘得到的结果；</li>
+<li>其二，把矩阵A按列分块，矩阵B按行分块，A乘B可以等价于A的分块子矩阵乘上B中对应的分块子矩阵的加和。最特殊的情况是把A按列分为k个列向量，B按行分为k个行向量，然后对应的列向量于行向量相乘，得到k个矩阵，他们的和就是A和B的乘积。</li>
+</ul></li>
+<li><p>矩阵乘法的并行方法</p>
+
+<ul>
+<li> 第一种方法，按照A行B列的分解，我们将C矩阵分成m*n个子矩阵，每个子矩阵由一个进程来计算。不考虑进程通讯问题，时间减少到单机版本的m*n分之一。</li>
+<li> 第二种方法，按照A列B行的分解，把C矩阵分解成k个同样大小的矩阵之和，分发到k个进程来计算，时间减少到单机版本的k分之一。</li>
+<li> 哪一种方法更快，取决于k和m*n哪个更大。不过方法二要通信的数据量要明显大于方法一。</li>
+<li> 哪一种方法需要存储更少，取决于(k+1)mn和(m+n)k的大小。</li>
+</ul></li>
+<li><p>更多矩阵乘法，请参考文章<a href="http://en.wikipedia.org/wiki/Cannon&#x27;s_algorithm">Cannon算法</a>，<a href="http://www.netlib.org/lapack/lawnspdf/lawn96.pdf">Scalable Universal Matrix Multiplication Algorithm</a></p></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的情怀 - 技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

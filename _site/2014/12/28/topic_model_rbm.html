@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
-">
+  <title>topic_model_rbm</title>
+  <meta name="description" content="Modeling Documents with a Deep Boltzmann Machine. Thesis learning.">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/about/">
+  <link rel="canonical" href="http://yourdomain.com/2014/12/28/topic_model_rbm.html">
   <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -58,17 +57,30 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">topic_model_rbm</h1>
+    <p class="post-meta">Dec 28, 2014</p>
   </header>
 
   <article class="post-content">
-    <p>Hello，此博客采用了&quot;base Jekyll theme&quot;。我的电子邮箱是: zero_based@foxmail.com。</p>
+    <h2>Modeling Documents with a Deep Boltzmann Machine. Thesis learning.</h2>
 
-<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+<p>topic model:
+<a href="http://books.nips.cc/papers/files/nips22/NIPS2009_0817.pdf">Replicated Softmax</a>
+<a href="http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">LDA</a>
+<a href="http://books.nips.cc/papers/files/nips25/NIPS2012_1253.pdf">DocNADE</a></p>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<p>文章称从rbm model里提取出来的文本特征在文本分类和检索的效果比lda, DocNADE，Replicated Softmax都好。</p>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<p>lda这些模型，精确inference是比较困难的，所以一般采用近似inference，例如stochastic variational inference, online inference, collapsed gibbs。
+不过在replicated softmax模型中，inferring latent topic representations is exact and efficient。</p>
+
+<p>The Replicated Softmax model is a family of Re- stricted Boltzmann Machines (RBMs) with shared pa- rameters.</p>
+
+<p>Therefore, we have the following two extremes: On one hand, RBMs can be efficiently trained (e.g. us- ing Contrastive Divergence), inferring the state of the hidden units is exact, but the model defines a rigid, implicit prior. On the other hand, a two hidden layer DBM defines a more flexible prior over the hidden rep- resentations, but training and performing inference in a DBM model is considerably harder.</p>
+
+<p>We introduce a two hidden layer DBM W1 model, which we call the Over-Replicated Softmax W1 model. This model is easy to train, has fast approxi-
+mate inference and still retains some degree of flexibil-
+ity towards manipulating the prior.</p>
 
   </article>
 

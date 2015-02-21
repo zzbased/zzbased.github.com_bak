@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
-">
+  <title>开发我的第一个ios程序</title>
+  <meta name="description" content="开发我的第一个ios程序">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/about/">
+  <link rel="canonical" href="http://yourdomain.com/2014/02/02/first_ios_program_guide.html">
   <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -58,17 +57,64 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">开发我的第一个ios程序</h1>
+    <p class="post-meta">Feb 2, 2014</p>
   </header>
 
   <article class="post-content">
-    <p>Hello，此博客采用了&quot;base Jekyll theme&quot;。我的电子邮箱是: zero_based@foxmail.com。</p>
+    <h2>开发我的第一个ios程序</h2>
 
-<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+<p>参考<a href="http://www.raywenderlich.com/55384/ios-7-best-practices-part-1">这篇文章 a weather app case study part1</a>，<a href="http://www.raywenderlich.com/55386/ios-7-best-practices-part-2">a weather app case study part2</a>，开发我的第一个iOS程序。</p>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<h3>cocoapods</h3>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<p>根据这篇文章的指南，我们首先需要安装<a href="http://cocoapods.org">cocoapods</a>。cocoapods是一个针对objective-c工程的依赖管理器(dependency manager for Objective-C projects)，类似于pig/eggs之于python，gems之于ruby，maven之于java，cpan之于perl。</p>
+
+<p>题外话，为什么c++没有类似cocoapods的库，这里有一篇<a href="http://programmers.stackexchange.com/questions/170679/why-are-there-no-package-management-systems-for-c-and-c">讨论</a>，可以看看。</p>
+
+<p>回到cocoapods的安装，直接执行下面这条命令即可，sudo gem install cocoapods (之前文章里，刚使用gem安装了jekyll)。安装完成后，执行which pod，会出现&quot;/usr/bin/pod&quot;的字样。</p>
+
+<p>再接着，利用xcode5创建一个空的ios工程:SimpleWeather。在teminal里，cd到SimpleWeather目录，利用pico编辑器编写podfiles。</p>
+
+<p>platform :ios, &#39;7.0&#39;
+pod &#39;Mantle&#39;
+pod &#39;LBBlurredImage&#39;
+pod &#39;TSMessages&#39;
+pod &#39;ReactiveCocoa&#39;</p>
+
+<p>目的是利用pod来安装 Mantle, LBBlurredImage, TSMessages, ReactiveCocoa这几个库。执行pod install即可安装。安装完成后如下所示：
+<img src="http://d.pr/i/aTyV+" alt="pod install over"></p>
+
+<h3>main view controller</h3>
+
+<p>打开SimpleWeather.xcworkspace。新建一个UIViewController的子类。相当于是mvc模型中的控制器。
+<a href="https://developer.apple.com/library/ios/Documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html">UIViewController</a>：A view controller manages a set of views that make up a portion of your app’s user interface.
+As part of the controller layer of your app, a view controller coordinates its efforts with model objects and other controller objects — including other view controllers — so your app presents a single coherent user interface.</p>
+
+<p>Where necessary, a view controller:
+1.resizes and lays out its views
+2.adjusts the contents of the views
+3.acts on behalf of the views when the user interacts with them</p>
+
+<p><img src="http://d.pr/i/qEs+" alt="mvc模型"></p>
+
+<p>接下去就按照文章的演示继续往下做。Setting Up Your App’s Views。</p>
+
+<h3>retrieve data &amp; model</h3>
+
+<p>to be continue;</p>
+
+<h3>reference:</h3>
+
+<p><a href="https://leanpub.com/ios7daybyday">免费的ios7教程</a></p>
+
+<p><a href="http://www.ios-wiki.com">ios wiki</a></p>
+
+<p><a href="http://www.cocoachina.com/newbie/basic/2013/1225/7607.html">iOS设计新手指导</a></p>
+
+<p><a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOSCh/chapters/RM_YourFirstApp_iOS/Articles/01_CreatingProject.html">马上着手开发 iOS 应用程序</a></p>
+
+<p><a href="http://coolshell.cn/articles/10910.html">分布式系统的事务处理</a></p>
 
   </article>
 
