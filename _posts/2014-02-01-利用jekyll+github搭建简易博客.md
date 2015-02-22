@@ -36,7 +36,7 @@ tags: [blog, git]
 - Java
 	- Maven: a package manager and build tool for Java
 
-### Jekyll
+### Jekyll步骤
 
 [Jekyll theme](http://jekyllthemes.org)
 

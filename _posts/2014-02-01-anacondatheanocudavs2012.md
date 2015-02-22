@@ -10,22 +10,23 @@ tags: [cuda, deep learning]
 
 ### 一 基本概念介绍 ###
 
-#### 1.1. anaconda： ####
+#### 1.1. anaconda
   一个python科学计算发行版，具体可以参考下面的网页：
   [目前比较流行的python科学计算发行包](http://blog.csdn.net/rumswell/article/details/8927603)。其中比较了python(x,y),winpython, anaconda, canopy, sage。
-#### 1.2. theana：####
+
+#### 1.2. theano
 深度学习python包。
   - [theano github地址](https://github.com/Theano/Theano)
   - [theano 官方首页](http://deeplearning.net/software/theano/)
   - [theano 学习指南翻译](http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html)
 
-#### 1.3. cuda: ####
+#### 1.3. cuda
 
 nvidia gpu编程库
 
+### 二 安装流程
 
-### 二 安装流程 ###
-####2.1	我的安装环境
+#### 2.1 我的安装环境
 windows7 64bit. gpu是geforce gtx 660.
 
 #### 2.2 cuda安装 ####
@@ -44,16 +45,17 @@ windows7 64bit. gpu是geforce gtx 660.
     CUDA_SDK_LIB　　%CUDA_SDK_PATH%\common\lib\x64
     PATH   %CUDA_BIN_PATH%
 
-   安装结束后，可以验证一下cuda是否成功
+安装结束后，可以验证一下cuda是否成功。
 cd %CUDA_SDK_PATH%\Bin\win64\Release
 
 执行deviceQuery.exe 和 bandwithTest.exe
 
-![Image](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ截图20140128135238.png)
+![Image](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cuda_installed_result.png)
 
 ok, cuda安装成功
 
 #### 2.3 cuda+vs ###
+
 再接着按照上面教程所说，继续安装vs2010.
 cuda官网上有一篇安装教程：
 [cuda+vs官网安装](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-microsoft-windows/)
@@ -62,9 +64,9 @@ cuda官网上有一篇安装教程：
 [Why can't nvcc find my Visual C++ installation?](http://stackoverflow.com/questions/2760374/why-cant-nvcc-find-my-visual-c-installation)
 
 Include this line
-    compiler-bindir = C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin
+  "compiler-bindir = C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin"
 in
-    %CUDA_BIN_PATH%\nvcc.profile
+  "%CUDA_BIN_PATH%\nvcc.profile"
 
 一开始，我安装是vs2010 express版本。
 但是在编译cuda sample时，
@@ -86,21 +88,18 @@ vs2012安装完成后，打开bandwidthTest，还有一点错误：
 
 这样总算可以完整编译bandwidthTest工程，x64和win32平台都是ok的。
 
-
 #### 2.4 anaconda ####
-搞好cuda的环境后，再来安装anaconda。
-   anaconda的安装相对简单。
+搞好cuda的环境后，再来安装anaconda。anaconda的安装相对简单。
 
 #### 2.5 theana ####
 安装完anaconda后，再按照下面文章所述安装theano.
-  [64位WIN7上成功安装theano,并运行了g++, GPU](http://blog.csdn.net/yeyang911/article/details/16357133)
-  [官网上利用anaconda安装theano的介绍](http://deeplearning.net/software/theano/install.html#windows-anaconda)
-安装完theano后，还要设置环境变量：PYTHONPATH = D:\Anaconda\Lib\site-packages\theano
-PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路径。
 
+- [64位WIN7上成功安装theano,并运行了g++, GPU](http://blog.csdn.net/yeyang911/article/details/16357133)
+- [官网上利用anaconda安装theano的介绍](http://deeplearning.net/software/theano/install.html#windows-anaconda)
 
-在使用theano之前，还需要配置theano。
-   在home目录[打开cmd时所显示的目录]下编辑.theanorc.txt。
+安装完theano后，还要设置环境变量：PYTHONPATH = D:\Anaconda\Lib\site-packages\theano。PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路径。
+
+在使用theano之前，还需要配置theano。在home目录[打开cmd时所显示的目录]下编辑.theanorc.txt。
 
 	[blas]
 	ldflags =
@@ -116,7 +115,9 @@ PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路�
 	device = gpu
 
 ### 三. 使用theano ###
-#### 3.1 theano using the GPU ####
+
+#### 3.1 theano using the GPU
+
 [官方using the gpu文档](http://deeplearning.net/software/theano/tutorial/using_gpu.html#using-gpu)
 
 下面是一个测试程序：
@@ -149,7 +150,6 @@ The program just computes the exp() of a bunch of random numbers. Note that we u
 
 在我的机器上，使用cpu执行是10多s. 而使用gpu则是0.5s左右。快了20多倍。
 
-
     from theano import function, config, shared, sandbox, Out
     import theano.tensor as T
     import numpy
@@ -176,16 +176,14 @@ The program just computes the exp() of a bunch of random numbers. Note that we u
     else:
         print 'Used the gpu'
 
-
 用上面这个程序，GPU执行，只需要0.01s。
 
 #### 3.2 DeepLearningTutorials ####
-   下载DeepLearningTutorials
 
-   [DeepLearningTutorials](https://github.com/lisa-lab/DeepLearningTutorials)
+下载[DeepLearningTutorials](https://github.com/lisa-lab/DeepLearningTutorials)
 
-   仔细研读里面的文件，开始学习deep learning！
+仔细研读里面的文件，开始学习deep learning。
 
-   logistic_sgd.py
-   执行结果：
-  ![Image](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ截图20140128152208.png)
+logistic_sgd.py 执行结果：
+
+![Image](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/theano_lr_result.png)
