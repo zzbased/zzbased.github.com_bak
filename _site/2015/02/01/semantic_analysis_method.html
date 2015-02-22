@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2015/02/01/semantic_analysis_method.html">
-  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
 
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+    <a class="site-title" href="/">100的技术博客</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -116,13 +116,14 @@
 
 <p>语言模型是用来计算一个句子产生概率的概率模型，即\(P(w_1,w_2,w_3…w_m)\)，m表示词的总个数。根据贝叶斯公式：\(P(w_1,w_2,w_3 … w_m) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) … P(w_m|w_1,w_2 … w_{m-1})\)。</p>
 
-<p>最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 \(P(w_m |w_1,w_2…w<em>{m-1}) = P(w_m |w</em>{m-n+1},w<em>{m-n+2} … w</em>{m-1})\)。</p>
+<p>最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有
+<script type="math/tex">P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})</script>。</p>
 
 <p>其中n越大，模型可区别性越强，n越小，模型可靠性越高。</p>
 
 <p>N-Gram语言模型简单有效，但是它只考虑了词的位置关系，没有考虑词之间的相似度，词法和词语义，并且还存在数据稀疏的问题，所以后来，又逐渐提出更多的语言模型，例如Class-based ngram model，topic-based ngram model，cache-based ngram model，skipping ngram model，指数语言模型（最大熵模型，条件随机域模型）等。若想了解更多请参考文章[18]。</p>
 
-<p>最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 \(w<em>{m-n+1},w</em>{m-n+2} … w_{m-1}\) 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\(P(w_m)\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。</p>
+<p>最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 <script type="math/tex">w_{m-n+1},w_{m-n+2} ... w_{m-1}</script> 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\(P(w_m)\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ffnnlm.png" alt="" /></p>
 
@@ -160,7 +161,7 @@
 <ul>
   <li>
     <p>Term weighting的打分公式一般由三部分组成：local，global和normalization [1,2]。即
-\(TermWeight=L<em>{i,j} G_i N_j\)。\(L</em>{i,j}\)是term i在document j中的local weight，\(G_i\)是term i的global weight，\(N_j\)是document j的归一化因子。
+<script type="math/tex">TermWeight=L_{i,j} G_i N_j</script>。\(L_{i,j}\)是term i在document j中的local weight，\(G_i\)是term i的global weight，\(N_j\)是document j的归一化因子。
 常见的local，global，normalization weight公式[2]有：</p>
 
     <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/local_weight.png" alt="" /></p>
@@ -309,8 +310,9 @@
 <p>图12. LightLda并行结构图</p>
 
 <h4 id="section-8">2.2 词向量，句向量</h4>
-<p>##### 词向量是什么
-在文本分析的vector space model中，是用向量来描述一个词的，譬如最常见的One-hot representation。One-hot representation方法的一个明显的缺点是，词与词之间没有建立关联。在深度学习中，一般用Distributed Representation来描述一个词，常被称为”Word Representation”或”Word Embedding”，也就是我们俗称的”词向量”。</p>
+
+<h5 id="section-9">词向量是什么</h5>
+<p>在文本分析的vector space model中，是用向量来描述一个词的，譬如最常见的One-hot representation。One-hot representation方法的一个明显的缺点是，词与词之间没有建立关联。在深度学习中，一般用Distributed Representation来描述一个词，常被称为”Word Representation”或”Word Embedding”，也就是我们俗称的”词向量”。</p>
 
 <p>词向量起源于hinton在1986年的论文[11]，后来在Bengio的ffnnlm论文[3]中，被发扬光大，但它真正被我们所熟知，应该是word2vec[14]的开源。在ffnnlm中，词向量是训练语言模型的一个副产品，不过在word2vec里，是专门来训练词向量，所以word2vec相比于ffnnlm的区别主要体现在：</p>
 
@@ -327,7 +329,7 @@
 
 <p>关于word2vec，在算法上还有较多可以学习的地方，例如利用huffman编码做层次softmax，negative sampling，工程上也有很多trick，具体请参考文章[16][17]。</p>
 
-<h5 id="section-9">词向量的应用</h5>
+<h5 id="section-10">词向量的应用</h5>
 <p>词向量的应用点：</p>
 
 <ul>
@@ -347,7 +349,7 @@
   <li>假设我们将一个个query session作为doc，将query作为word，我们则可以训练query distributed representation，挖掘相似query。</li>
 </ul>
 
-<h5 id="section-10">句向量</h5>
+<h5 id="section-11">句向量</h5>
 
 <p>分析完word distributed representation，我们也许会问，phrase，sentence是否也有其distributed representation。最直观的思路，对于phrase和sentence，我们将组成它们的所有word对应的词向量加起来，作为短语向量，句向量。在参考文献[34]中，验证了将词向量加起来的确是一个有效的方法，但事实上还有更好的做法。</p>
 
@@ -381,7 +383,7 @@
 
 <p>图16. sentence2vec 结果示例</p>
 
-<h5 id="section-11">词向量的改进</h5>
+<h5 id="section-12">词向量的改进</h5>
 <ul>
   <li>
     <p>学习词向量的方法主要分为：Global matrix factorization和Shallow Window-Based。Global matrix factorization方法主要利用了全局词共现，例如LSA；Shallow Window-Based方法则主要基于local context window，即局部词共现，word2vec是其中的代表；Jeffrey Pennington在word2vec之后提出了<a href="http://nlp.stanford.edu/projects/glove/">GloVe</a>，它声称结合了上述两种方法，提升了词向量的学习效果。它与word2vec的更多对比请点击<a href="http://www.quora.com/How-is-GloVe-different-from-word2vec">GloVe vs word2vec</a>，<a href="http://radimrehurek.com/2014/12/making-sense-of-word2vec/">GloVe &amp; word2vec评测</a>。</p>
@@ -391,9 +393,9 @@
   </li>
 </ul>
 
-<h4 id="section-12">2.3 卷积神经网络</h4>
+<h4 id="section-13">2.3 卷积神经网络</h4>
 
-<h5 id="section-13">卷积</h5>
+<h5 id="section-14">卷积</h5>
 
 <p>介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。</p>
 
@@ -408,7 +410,7 @@
 
 <p>图17. 卷积操作示例</p>
 
-<h5 id="section-14">什么是卷积神经网络</h5>
+<h5 id="section-15">什么是卷积神经网络</h5>
 <p>卷积神经网络是一种特殊的、简化的深层神经网络模型，它的每个卷积层都是由多个卷积滤波器组成。它最先由lecun在LeNet[40]中提出，网络结构如下图所示。在cnn中，图像的一小部分（局部感受区域）作为层级结构的最低层的输入，信息再依次传输到不同的层，每层通过多个卷积滤波器去获得观测数据的最显著的特征。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lenet5.png" alt="" /></p>
@@ -423,7 +425,7 @@
 
 <p>它的特殊性体现在两点：(1)局部感受野(receptive field)，cnn的神经元间的连接是非全连接的；(2)同一层中同一个卷积滤波器的权重是共享的（即相同的）。局部感受野和权重共享这两个特点，使cnn网络结构更类似于生物神经网络，降低了网络模型的复杂度，减少了神经网络需要训练的参数的个数。</p>
 
-<h5 id="section-15">卷积神经网络的一些细节</h5>
+<h5 id="section-16">卷积神经网络的一些细节</h5>
 
 <p>接下来结合文献[25]，再讲讲卷积神经网络的一些注意点和问题。</p>
 
@@ -443,7 +445,7 @@
   <li>模型不work，怎么办？结合我自身的经验，learning rate初始值设置得太大，开始设置为0.01，以为很小了，但实际上0.001更合适。</li>
 </ul>
 
-<h5 id="section-16">卷积神经网络在文本上的应用</h5>
+<h5 id="section-17">卷积神经网络在文本上的应用</h5>
 <p>卷积神经网络在image classify和image detect上得到诸多成功的应用，后文将再详细阐述。但除了图片外，它在文本分析上也取得一些成功的应用。</p>
 
 <p>基于CNN，可以用来做文本分类，情感分析，本体分类等[36,41,84]。传统文本分类等任务，一般基于bag of words或者基于word的特征提取，此类方法一般需要领域知识和人工特征。利用CNN做，方法也类似，但一般都是基于raw text，CNN模型的输入可以是word series，可以是word vector，还可以是单纯的字符。比起传统方法，CNN不需要过多的人工特征。</p>
@@ -463,7 +465,7 @@
   </li>
 </ul>
 
-<h4 id="section-17">2.4 文本分类</h4>
+<h4 id="section-18">2.4 文本分类</h4>
 <p>文本分类应该是最常见的文本语义分析任务了。首先它是简单的，几乎每一个接触过nlp的同学都做过文本分类，但它又是复杂的，对一个类目标签达几百个的文本分类任务，90%以上的准确率召回率依旧是一个很困难的事情。这里说的文本分类，指的是泛文本分类，包括query分类，广告分类，page分类，用户分类等，因为即使是用户分类，实际上也是对用户所属的文本标签，用户访问的文本网页做分类。</p>
 
 <p>几乎所有的机器学习方法都可以用来做文本分类，常用的主要有：lr，maxent，svm等，下面介绍一下文本分类的pipeline以及注意点。</p>
@@ -563,12 +565,12 @@
   </li>
 </ul>
 
-<h3 id="section-18">3 图片语义分析</h3>
+<h3 id="section-19">3 图片语义分析</h3>
 
-<h4 id="section-19">3.1 图片分类</h4>
+<h4 id="section-20">3.1 图片分类</h4>
 <p>图片分类是一个最基本的图片语义分析方法。</p>
 
-<h5 id="section-20">基于深度学习的图片分类</h5>
+<h5 id="section-21">基于深度学习的图片分类</h5>
 <p>传统的图片分类如下图所示，首先需要先手工提取图片特征，譬如SIFT, GIST，再经由VQ coding和Spatial pooling，最后送入传统的分类模型(例如SVM等)。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/tranditional-imageclassify.png" alt="" /></p>
@@ -604,7 +606,7 @@
 
 <p>图27. 图片检索示例图</p>
 
-<h5 id="section-21">图片分类上的最新进展</h5>
+<h5 id="section-22">图片分类上的最新进展</h5>
 
 <p>在ILSVRC 2012中，Krizhevsky基于GPU实现了上述介绍的，这个有60million参数的模型，赢得了第一名。这个工作是开创性的，它引领了接下来ILSVRC的风潮。2013年，Clarifai通过cnn模型可视化技术调整网络架构，赢得了ILSVRC。2014年，google也加入进来，它通过增加模型的层数（总共22层），让深度更深[48]，并且利用multi-scale data training，取得第一名。baidu最近通过更加”粗暴”的模型[44]，在GooLeNet的基础上，又提升了10%，top-5错误率降低至6%以下。具体结果如下图所示。</p>
 
@@ -744,9 +746,9 @@
   <li>Ensembling。训练多个神经网络，最后计算它们的预测值的平均值。</li>
 </ul>
 
-<h3 id="section-22">4 总结</h3>
+<h3 id="section-23">4 总结</h3>
 
-<h4 id="section-23">4.1 语义分析方法在实际业务中的使用</h4>
+<h4 id="section-24">4.1 语义分析方法在实际业务中的使用</h4>
 <p>前面讲述了很多语义分析方法，接下来我们看看如何利用这些方法帮忙我们的实际业务，这里举一个例子，用户广告的语义匹配。</p>
 
 <p>在广点通系统中，用户与广告的关联是通过定向条件来匹配的，譬如某些广告定向到”北京+男性”，那么当”北京+男性”的用户来到时，所有符合定向的广告就将被检索出，再按照”ecpm*quality”排序，将得分最高的展示给用户。但是凭借一些人口属性，用户与广告之间的匹配并不精确，做不到”广告就是想用户所想”，所以用户和广告的语义分析就将派上用场了，可以从这样两方面来说明：</p>
@@ -776,13 +778,13 @@
   <li>Deep Learning + Structured Prediction，用于syntactic representation。</li>
 </ul>
 
-<h4 id="section-24">4.3 总结</h4>
+<h4 id="section-25">4.3 总结</h4>
 
 <p>上文主要从文本、图片这两方面讲述了语义分析的一些方法，并结合个人经验做了一点总结。</p>
 
 <p>原本想写得更全面一些，但写的时候才发现上面所述的只是沧海一粟，后面还有更多语义分析的内容之后再更新。另外为避免看到大篇理论就头痛，文中尽可能不出现复杂的公式和理论推导。如果有兴趣，可以进一步阅读参考文献，获得更深的理解。谢谢。</p>
 
-<h3 id="section-25">5 参考文献</h3>
+<h3 id="section-26">5 参考文献</h3>
 
 <ol>
   <li><a href="http://comminfo.rutgers.edu/~muresan/IR/Docs/Articles/ipmSalton1988.pdf">Term-weighting approaches in automatic text retrieval，Gerard Salton et.</a></li>
@@ -883,12 +885,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+    <h2 class="footer-heading">100的技术博客</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>100的情怀 - 技术博客</li>
+          <li>100的技术博客</li>
           <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
         </ul>
       </div>

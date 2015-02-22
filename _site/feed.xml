@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>100的情怀 - 技术博客</title>
+    <title>100的技术博客</title>
     <description>机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Feb 2015 13:30:16 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 13:30:16 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2015 14:02:06 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2015 14:02:06 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -22,11 +22,15 @@
 
 &lt;h3 id=&quot;myapp&quot;&gt;myapp&lt;/h3&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;搜索广告系统&lt;/h2&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;说说情怀&lt;/h3&gt;
+&lt;p&gt;张小龙说：微信就像一颗人的大脑，我也不知道它在想什么？
+这就是程序员的情怀。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;系统介绍&lt;/h3&gt;
+&lt;h2 id=&quot;section-2&quot;&gt;搜索广告系统&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;算法模块&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;系统介绍&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;算法模块&lt;/h3&gt;
 
 &lt;h4 id=&quot;query&quot;&gt;query分析&lt;/h4&gt;
 
@@ -36,11 +40,11 @@
 
 &lt;h4 id=&quot;query-bidwordad&quot;&gt;query-bidword/ad相关性&lt;/h4&gt;
 
-&lt;h4 id=&quot;section-4&quot;&gt;广告粗选&lt;/h4&gt;
+&lt;h4 id=&quot;section-5&quot;&gt;广告粗选&lt;/h4&gt;
 
 &lt;h4 id=&quot;pctr&quot;&gt;精选/pCtr&lt;/h4&gt;
 
-&lt;h4 id=&quot;section-5&quot;&gt;竞价&lt;/h4&gt;
+&lt;h4 id=&quot;section-6&quot;&gt;竞价&lt;/h4&gt;
 
 </description>
         <pubDate>Sun, 22 Feb 2015 00:00:00 +0800</pubDate>
@@ -67,9 +71,11 @@
 
 &lt;h2 id=&quot;section-1&quot;&gt;蒙特卡洛数值积分&lt;/h2&gt;
 
-&lt;p&gt;求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。
-&lt;script type=&quot;math/tex&quot;&gt;\int_a^b{\frac{f(x)}{q(x)}q(x)dx}&lt;/script&gt;
-这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。&lt;/p&gt;
+&lt;p&gt;求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_a^b{\frac{f(x)}{q(x)}q(x)dx}&lt;/script&gt;
+
+&lt;p&gt;这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。&lt;/p&gt;
 
 &lt;p&gt;随机模拟方法的核心就是如何对一个概率分布得到样本，即抽样(sampling)。&lt;/p&gt;
 
@@ -77,10 +83,12 @@
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;x_{n+1}=(ax_n+c)\mod m&lt;/script&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;box-muller-&quot;&gt;Box-Muller 变换&lt;/h2&gt;
-&lt;p&gt;如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]
-&lt;script type=&quot;math/tex&quot;&gt;Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}&lt;/script&gt;
-则\(Z_0，Z_1\)独立且服从标准正态分布。&lt;/p&gt;
+&lt;p&gt;如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;则\(Z_0，Z_1\)独立且服从标准正态分布。&lt;/p&gt;
 
 &lt;h2 id=&quot;acceptance-rejection-sampling&quot;&gt;接受-拒绝抽样(Acceptance-Rejection sampling)&lt;/h2&gt;
 
@@ -154,13 +162,14 @@
 
 &lt;p&gt;语言模型是用来计算一个句子产生概率的概率模型，即\(P(w_1,w_2,w_3…w_m)\)，m表示词的总个数。根据贝叶斯公式：\(P(w_1,w_2,w_3 … w_m) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) … P(w_m|w_1,w_2 … w_{m-1})\)。&lt;/p&gt;
 
-&lt;p&gt;最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 \(P(w_m |w_1,w_2…w&lt;em&gt;{m-1}) = P(w_m |w&lt;/em&gt;{m-n+1},w&lt;em&gt;{m-n+2} … w&lt;/em&gt;{m-1})\)。&lt;/p&gt;
+&lt;p&gt;最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有
+&lt;script type=&quot;math/tex&quot;&gt;P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})&lt;/script&gt;。&lt;/p&gt;
 
 &lt;p&gt;其中n越大，模型可区别性越强，n越小，模型可靠性越高。&lt;/p&gt;
 
 &lt;p&gt;N-Gram语言模型简单有效，但是它只考虑了词的位置关系，没有考虑词之间的相似度，词法和词语义，并且还存在数据稀疏的问题，所以后来，又逐渐提出更多的语言模型，例如Class-based ngram model，topic-based ngram model，cache-based ngram model，skipping ngram model，指数语言模型（最大熵模型，条件随机域模型）等。若想了解更多请参考文章[18]。&lt;/p&gt;
 
-&lt;p&gt;最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 \(w&lt;em&gt;{m-n+1},w&lt;/em&gt;{m-n+2} … w_{m-1}\) 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\(P(w_m)\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。&lt;/p&gt;
+&lt;p&gt;最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 &lt;script type=&quot;math/tex&quot;&gt;w_{m-n+1},w_{m-n+2} ... w_{m-1}&lt;/script&gt; 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\(P(w_m)\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ffnnlm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -198,7 +207,7 @@
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Term weighting的打分公式一般由三部分组成：local，global和normalization [1,2]。即
-\(TermWeight=L&lt;em&gt;{i,j} G_i N_j\)。\(L&lt;/em&gt;{i,j}\)是term i在document j中的local weight，\(G_i\)是term i的global weight，\(N_j\)是document j的归一化因子。
+&lt;script type=&quot;math/tex&quot;&gt;TermWeight=L_{i,j} G_i N_j&lt;/script&gt;。\(L_{i,j}\)是term i在document j中的local weight，\(G_i\)是term i的global weight，\(N_j\)是document j的归一化因子。
 常见的local，global，normalization weight公式[2]有：&lt;/p&gt;
 
     &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/local_weight.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -347,8 +356,9 @@
 &lt;p&gt;图12. LightLda并行结构图&lt;/p&gt;
 
 &lt;h4 id=&quot;section-8&quot;&gt;2.2 词向量，句向量&lt;/h4&gt;
-&lt;p&gt;##### 词向量是什么
-在文本分析的vector space model中，是用向量来描述一个词的，譬如最常见的One-hot representation。One-hot representation方法的一个明显的缺点是，词与词之间没有建立关联。在深度学习中，一般用Distributed Representation来描述一个词，常被称为”Word Representation”或”Word Embedding”，也就是我们俗称的”词向量”。&lt;/p&gt;
+
+&lt;h5 id=&quot;section-9&quot;&gt;词向量是什么&lt;/h5&gt;
+&lt;p&gt;在文本分析的vector space model中，是用向量来描述一个词的，譬如最常见的One-hot representation。One-hot representation方法的一个明显的缺点是，词与词之间没有建立关联。在深度学习中，一般用Distributed Representation来描述一个词，常被称为”Word Representation”或”Word Embedding”，也就是我们俗称的”词向量”。&lt;/p&gt;
 
 &lt;p&gt;词向量起源于hinton在1986年的论文[11]，后来在Bengio的ffnnlm论文[3]中，被发扬光大，但它真正被我们所熟知，应该是word2vec[14]的开源。在ffnnlm中，词向量是训练语言模型的一个副产品，不过在word2vec里，是专门来训练词向量，所以word2vec相比于ffnnlm的区别主要体现在：&lt;/p&gt;
 
@@ -365,7 +375,7 @@
 
 &lt;p&gt;关于word2vec，在算法上还有较多可以学习的地方，例如利用huffman编码做层次softmax，negative sampling，工程上也有很多trick，具体请参考文章[16][17]。&lt;/p&gt;
 
-&lt;h5 id=&quot;section-9&quot;&gt;词向量的应用&lt;/h5&gt;
+&lt;h5 id=&quot;section-10&quot;&gt;词向量的应用&lt;/h5&gt;
 &lt;p&gt;词向量的应用点：&lt;/p&gt;
 
 &lt;ul&gt;
@@ -385,7 +395,7 @@
   &lt;li&gt;假设我们将一个个query session作为doc，将query作为word，我们则可以训练query distributed representation，挖掘相似query。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;section-10&quot;&gt;句向量&lt;/h5&gt;
+&lt;h5 id=&quot;section-11&quot;&gt;句向量&lt;/h5&gt;
 
 &lt;p&gt;分析完word distributed representation，我们也许会问，phrase，sentence是否也有其distributed representation。最直观的思路，对于phrase和sentence，我们将组成它们的所有word对应的词向量加起来，作为短语向量，句向量。在参考文献[34]中，验证了将词向量加起来的确是一个有效的方法，但事实上还有更好的做法。&lt;/p&gt;
 
@@ -419,7 +429,7 @@
 
 &lt;p&gt;图16. sentence2vec 结果示例&lt;/p&gt;
 
-&lt;h5 id=&quot;section-11&quot;&gt;词向量的改进&lt;/h5&gt;
+&lt;h5 id=&quot;section-12&quot;&gt;词向量的改进&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;学习词向量的方法主要分为：Global matrix factorization和Shallow Window-Based。Global matrix factorization方法主要利用了全局词共现，例如LSA；Shallow Window-Based方法则主要基于local context window，即局部词共现，word2vec是其中的代表；Jeffrey Pennington在word2vec之后提出了&lt;a href=&quot;http://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;，它声称结合了上述两种方法，提升了词向量的学习效果。它与word2vec的更多对比请点击&lt;a href=&quot;http://www.quora.com/How-is-GloVe-different-from-word2vec&quot;&gt;GloVe vs word2vec&lt;/a&gt;，&lt;a href=&quot;http://radimrehurek.com/2014/12/making-sense-of-word2vec/&quot;&gt;GloVe &amp;amp; word2vec评测&lt;/a&gt;。&lt;/p&gt;
@@ -429,9 +439,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-12&quot;&gt;2.3 卷积神经网络&lt;/h4&gt;
+&lt;h4 id=&quot;section-13&quot;&gt;2.3 卷积神经网络&lt;/h4&gt;
 
-&lt;h5 id=&quot;section-13&quot;&gt;卷积&lt;/h5&gt;
+&lt;h5 id=&quot;section-14&quot;&gt;卷积&lt;/h5&gt;
 
 &lt;p&gt;介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。&lt;/p&gt;
 
@@ -446,7 +456,7 @@
 
 &lt;p&gt;图17. 卷积操作示例&lt;/p&gt;
 
-&lt;h5 id=&quot;section-14&quot;&gt;什么是卷积神经网络&lt;/h5&gt;
+&lt;h5 id=&quot;section-15&quot;&gt;什么是卷积神经网络&lt;/h5&gt;
 &lt;p&gt;卷积神经网络是一种特殊的、简化的深层神经网络模型，它的每个卷积层都是由多个卷积滤波器组成。它最先由lecun在LeNet[40]中提出，网络结构如下图所示。在cnn中，图像的一小部分（局部感受区域）作为层级结构的最低层的输入，信息再依次传输到不同的层，每层通过多个卷积滤波器去获得观测数据的最显著的特征。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lenet5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -461,7 +471,7 @@
 
 &lt;p&gt;它的特殊性体现在两点：(1)局部感受野(receptive field)，cnn的神经元间的连接是非全连接的；(2)同一层中同一个卷积滤波器的权重是共享的（即相同的）。局部感受野和权重共享这两个特点，使cnn网络结构更类似于生物神经网络，降低了网络模型的复杂度，减少了神经网络需要训练的参数的个数。&lt;/p&gt;
 
-&lt;h5 id=&quot;section-15&quot;&gt;卷积神经网络的一些细节&lt;/h5&gt;
+&lt;h5 id=&quot;section-16&quot;&gt;卷积神经网络的一些细节&lt;/h5&gt;
 
 &lt;p&gt;接下来结合文献[25]，再讲讲卷积神经网络的一些注意点和问题。&lt;/p&gt;
 
@@ -481,7 +491,7 @@
   &lt;li&gt;模型不work，怎么办？结合我自身的经验，learning rate初始值设置得太大，开始设置为0.01，以为很小了，但实际上0.001更合适。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;section-16&quot;&gt;卷积神经网络在文本上的应用&lt;/h5&gt;
+&lt;h5 id=&quot;section-17&quot;&gt;卷积神经网络在文本上的应用&lt;/h5&gt;
 &lt;p&gt;卷积神经网络在image classify和image detect上得到诸多成功的应用，后文将再详细阐述。但除了图片外，它在文本分析上也取得一些成功的应用。&lt;/p&gt;
 
 &lt;p&gt;基于CNN，可以用来做文本分类，情感分析，本体分类等[36,41,84]。传统文本分类等任务，一般基于bag of words或者基于word的特征提取，此类方法一般需要领域知识和人工特征。利用CNN做，方法也类似，但一般都是基于raw text，CNN模型的输入可以是word series，可以是word vector，还可以是单纯的字符。比起传统方法，CNN不需要过多的人工特征。&lt;/p&gt;
@@ -501,7 +511,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-17&quot;&gt;2.4 文本分类&lt;/h4&gt;
+&lt;h4 id=&quot;section-18&quot;&gt;2.4 文本分类&lt;/h4&gt;
 &lt;p&gt;文本分类应该是最常见的文本语义分析任务了。首先它是简单的，几乎每一个接触过nlp的同学都做过文本分类，但它又是复杂的，对一个类目标签达几百个的文本分类任务，90%以上的准确率召回率依旧是一个很困难的事情。这里说的文本分类，指的是泛文本分类，包括query分类，广告分类，page分类，用户分类等，因为即使是用户分类，实际上也是对用户所属的文本标签，用户访问的文本网页做分类。&lt;/p&gt;
 
 &lt;p&gt;几乎所有的机器学习方法都可以用来做文本分类，常用的主要有：lr，maxent，svm等，下面介绍一下文本分类的pipeline以及注意点。&lt;/p&gt;
@@ -601,12 +611,12 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-18&quot;&gt;3 图片语义分析&lt;/h3&gt;
+&lt;h3 id=&quot;section-19&quot;&gt;3 图片语义分析&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-19&quot;&gt;3.1 图片分类&lt;/h4&gt;
+&lt;h4 id=&quot;section-20&quot;&gt;3.1 图片分类&lt;/h4&gt;
 &lt;p&gt;图片分类是一个最基本的图片语义分析方法。&lt;/p&gt;
 
-&lt;h5 id=&quot;section-20&quot;&gt;基于深度学习的图片分类&lt;/h5&gt;
+&lt;h5 id=&quot;section-21&quot;&gt;基于深度学习的图片分类&lt;/h5&gt;
 &lt;p&gt;传统的图片分类如下图所示，首先需要先手工提取图片特征，譬如SIFT, GIST，再经由VQ coding和Spatial pooling，最后送入传统的分类模型(例如SVM等)。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/tranditional-imageclassify.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -642,7 +652,7 @@
 
 &lt;p&gt;图27. 图片检索示例图&lt;/p&gt;
 
-&lt;h5 id=&quot;section-21&quot;&gt;图片分类上的最新进展&lt;/h5&gt;
+&lt;h5 id=&quot;section-22&quot;&gt;图片分类上的最新进展&lt;/h5&gt;
 
 &lt;p&gt;在ILSVRC 2012中，Krizhevsky基于GPU实现了上述介绍的，这个有60million参数的模型，赢得了第一名。这个工作是开创性的，它引领了接下来ILSVRC的风潮。2013年，Clarifai通过cnn模型可视化技术调整网络架构，赢得了ILSVRC。2014年，google也加入进来，它通过增加模型的层数（总共22层），让深度更深[48]，并且利用multi-scale data training，取得第一名。baidu最近通过更加”粗暴”的模型[44]，在GooLeNet的基础上，又提升了10%，top-5错误率降低至6%以下。具体结果如下图所示。&lt;/p&gt;
 
@@ -782,9 +792,9 @@
   &lt;li&gt;Ensembling。训练多个神经网络，最后计算它们的预测值的平均值。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-22&quot;&gt;4 总结&lt;/h3&gt;
+&lt;h3 id=&quot;section-23&quot;&gt;4 总结&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-23&quot;&gt;4.1 语义分析方法在实际业务中的使用&lt;/h4&gt;
+&lt;h4 id=&quot;section-24&quot;&gt;4.1 语义分析方法在实际业务中的使用&lt;/h4&gt;
 &lt;p&gt;前面讲述了很多语义分析方法，接下来我们看看如何利用这些方法帮忙我们的实际业务，这里举一个例子，用户广告的语义匹配。&lt;/p&gt;
 
 &lt;p&gt;在广点通系统中，用户与广告的关联是通过定向条件来匹配的，譬如某些广告定向到”北京+男性”，那么当”北京+男性”的用户来到时，所有符合定向的广告就将被检索出，再按照”ecpm*quality”排序，将得分最高的展示给用户。但是凭借一些人口属性，用户与广告之间的匹配并不精确，做不到”广告就是想用户所想”，所以用户和广告的语义分析就将派上用场了，可以从这样两方面来说明：&lt;/p&gt;
@@ -814,13 +824,13 @@
   &lt;li&gt;Deep Learning + Structured Prediction，用于syntactic representation。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-24&quot;&gt;4.3 总结&lt;/h4&gt;
+&lt;h4 id=&quot;section-25&quot;&gt;4.3 总结&lt;/h4&gt;
 
 &lt;p&gt;上文主要从文本、图片这两方面讲述了语义分析的一些方法，并结合个人经验做了一点总结。&lt;/p&gt;
 
 &lt;p&gt;原本想写得更全面一些，但写的时候才发现上面所述的只是沧海一粟，后面还有更多语义分析的内容之后再更新。另外为避免看到大篇理论就头痛，文中尽可能不出现复杂的公式和理论推导。如果有兴趣，可以进一步阅读参考文献，获得更深的理解。谢谢。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-25&quot;&gt;5 参考文献&lt;/h3&gt;
+&lt;h3 id=&quot;section-26&quot;&gt;5 参考文献&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://comminfo.rutgers.edu/~muresan/IR/Docs/Articles/ipmSalton1988.pdf&quot;&gt;Term-weighting approaches in automatic text retrieval，Gerard Salton et.&lt;/a&gt;&lt;/li&gt;

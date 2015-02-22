@@ -53,13 +53,14 @@ author: vincentyao@tencent.com
 
 语言模型是用来计算一个句子产生概率的概率模型，即\\(P(w_1,w_2,w_3...w_m)\\)，m表示词的总个数。根据贝叶斯公式：\\(P(w_1,w_2,w_3 ... w_m) = P(w_1)P(w_2\|w_1)P(w_3\|w_1,w_2) ... P(w_m\|w_1,w_2 ... w_{m-1})\\)。
 
-最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 \\(P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})\\)。
+最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有
+$$P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})$$。
 
 其中n越大，模型可区别性越强，n越小，模型可靠性越高。
 
 N-Gram语言模型简单有效，但是它只考虑了词的位置关系，没有考虑词之间的相似度，词法和词语义，并且还存在数据稀疏的问题，所以后来，又逐渐提出更多的语言模型，例如Class-based ngram model，topic-based ngram model，cache-based ngram model，skipping ngram model，指数语言模型（最大熵模型，条件随机域模型）等。若想了解更多请参考文章[18]。
 
-最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 \\(w_{m-n+1},w_{m-n+2} ... w_{m-1}\\) 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\\(P(w_m)\\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。
+最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 $$w_{m-n+1},w_{m-n+2} ... w_{m-1}$$ 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\\(P(w_m)\\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ffnnlm.png)
 
@@ -93,7 +94,7 @@ N-Gram语言模型简单有效，但是它只考虑了词的位置关系，没�
 对文本分词后，接下来需要对分词后的每个term计算一个权重，重要的term应该给与更高的权重。举例来说，"什么产品对减肥帮助最大？"的term weighting结果可能是: "什么 0.1，产品 0.5，对 0.1，减肥 0.8，帮助 0.3，最大 0.2"。Term weighting在文本检索，文本相关性，核心词提取等任务中都有重要作用。
 
 - Term weighting的打分公式一般由三部分组成：local，global和normalization [1,2]。即
-\\(TermWeight=L_{i,j} G_i N_j\\)。\\(L_{i,j}\\)是term i在document j中的local weight，\\(G_i\\)是term i的global weight，\\(N_j\\)是document j的归一化因子。
+$$TermWeight=L_{i,j} G_i N_j$$。\\(L_{i,j}\\)是term i在document j中的local weight，\\(G_i\\)是term i的global weight，\\(N_j\\)是document j的归一化因子。
 常见的local，global，normalization weight公式[2]有：
 
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/local_weight.png)
@@ -213,6 +214,7 @@ LDA的推导这里略过不讲，具体请参考文献[64]。下面我们主要�
 图12. LightLda并行结构图
 
 #### 2.2 词向量，句向量
+
 ##### 词向量是什么
 在文本分析的vector space model中，是用向量来描述一个词的，譬如最常见的One-hot representation。One-hot representation方法的一个明显的缺点是，词与词之间没有建立关联。在深度学习中，一般用Distributed Representation来描述一个词，常被称为"Word Representation"或"Word Embedding"，也就是我们俗称的"词向量"。
 

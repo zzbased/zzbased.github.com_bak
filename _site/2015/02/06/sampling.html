@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2015/02/06/sampling.html">
-  <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
 
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">100的情怀 - 技术博客</a>
+    <a class="site-title" href="/">100的技术博客</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -77,9 +77,11 @@
 
 <h2 id="section-1">蒙特卡洛数值积分</h2>
 
-<p>求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。
-<script type="math/tex">\int_a^b{\frac{f(x)}{q(x)}q(x)dx}</script>
-这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。</p>
+<p>求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。</p>
+
+<script type="math/tex; mode=display">\int_a^b{\frac{f(x)}{q(x)}q(x)dx}</script>
+
+<p>这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。</p>
 
 <p>随机模拟方法的核心就是如何对一个概率分布得到样本，即抽样(sampling)。</p>
 
@@ -87,10 +89,12 @@
 <p><script type="math/tex">x_{n+1}=(ax_n+c)\mod m</script></p>
 
 <h2 id="box-muller-">Box-Muller 变换</h2>
-<p>如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]
-<script type="math/tex">Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}</script>
-<script type="math/tex">Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}</script>
-则\(Z_0，Z_1\)独立且服从标准正态分布。</p>
+<p>如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]</p>
+
+<p><script type="math/tex">Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}</script>
+<script type="math/tex">Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}</script></p>
+
+<p>则\(Z_0，Z_1\)独立且服从标准正态分布。</p>
 
 <h2 id="acceptance-rejection-sampling">接受-拒绝抽样(Acceptance-Rejection sampling)</h2>
 
@@ -112,12 +116,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">100的情怀 - 技术博客</h2>
+    <h2 class="footer-heading">100的技术博客</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>100的情怀 - 技术博客</li>
+          <li>100的技术博客</li>
           <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
         </ul>
       </div>
