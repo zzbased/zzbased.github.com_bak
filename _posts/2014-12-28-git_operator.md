@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "git_operator"
+title: "git相关操作指南"
 description: ""
 category:
 tags: [git]

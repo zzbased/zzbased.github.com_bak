@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "topic model"
+title: "主题模型"
 description: ""
 category:
 tags: [machine learning, topic model]

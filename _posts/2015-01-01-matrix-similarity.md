@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "matrix similarity"
+title: "矩阵相似度计算"
 description: ""
 category:
 tags: []

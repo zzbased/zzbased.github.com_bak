@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "decision_tree"
+title: "决策树"
 description: ""
 category:
 tags: []

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "git+bitbucket"
+title: "git & bitbucket"
 description: ""
 category:
 tags: [git]
