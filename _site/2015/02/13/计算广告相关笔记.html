@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>计算广告相关笔记</title>
-  <meta name="description" content="RTB  Real-Time Bidding">
+  <meta name="description" content="RTB">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html">
@@ -33,10 +33,6 @@
       </a>
 
       <div class="trigger">
-        
-          
-          <a class="page-link" href="/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">系统知识总结</a>
-          
         
           
           <a class="page-link" href="/about/">About</a>
@@ -67,6 +63,7 @@
 
   <article class="post-content">
     <h3 id="rtb">RTB</h3>
+
 <ul>
   <li>
     <p><a href="http://tutorial.computational-advertising.org/images/WSDM2015.pdf">Real-Time Bidding</a></p>
@@ -104,16 +101,10 @@
       <li><a href="http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/">特征选择 by ubiwang</a></li>
     </ul>
   </li>
-  <li>
-    <p><a href="https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html">特征hash法</a></p>
-
+  <li><a href="https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html">特征hash法</a>
     <ul>
-      <li>
-        <p>特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。</p>
-      </li>
-      <li>
-        <p>特征降维方法：聚类，PCA，hashing</p>
-      </li>
+      <li>特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。</li>
+      <li>特征降维方法：聚类，PCA，hashing</li>
       <li>参考文献：
         <ul>
           <li>Kilian Weinberger et al. Feature Hashing for Large Scale Multitask Learning,2010.  or Feature hashing for large scale multitask learning</li>
@@ -122,9 +113,7 @@
           <li><a href="">Large-scale L-BFGS using MapReduce</a> 该论文讲述了运用了hashing技术后，AUC的变化。</li>
         </ul>
       </li>
-      <li>
-        <p>特征hash法用于 多任务学习(multitask learning)</p>
-      </li>
+      <li>特征hash法用于 多任务学习(multitask learning)</li>
       <li>大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。</li>
     </ul>
   </li>
@@ -150,9 +139,7 @@
     <p><a href="http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data">广告数据上的大规模机器学习 夏粉</a>
 以广告点击率预估问题为例，介绍如何利用大规模机器学习技术搭建一个容纳万亿特征数据的、分钟级别模型更新的、自动高效深度学习</p>
   </li>
-  <li>
-    <p>在线实验效果检验</p>
-
+  <li>在线实验效果检验
     <ul>
       <li><a href="http://facebook.github.io/planout/docs/about-planout.html">PlanOut facebook实验框架</a></li>
     </ul>

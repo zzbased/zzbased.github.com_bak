@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>深度学习相关笔记</title>
-  <meta name="description" content="深度学习  深度学习整体教程">
+  <meta name="description" content="深度学习综述">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html">
@@ -33,10 +33,6 @@
       </a>
 
       <div class="trigger">
-        
-          
-          <a class="page-link" href="/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">系统知识总结</a>
-          
         
           
           <a class="page-link" href="/about/">About</a>
@@ -66,96 +62,62 @@
   </header>
 
   <article class="post-content">
-    <h3 id="section">深度学习</h3>
+    <h2 id="section">深度学习综述</h2>
+
 <ul>
   <li>
-    <p>深度学习整体教程</p>
-
-    <ul>
-      <li><a href="http://dataunion.org/?p=5395">深度学习：CNN的反向求导及练习</a></li>
-      <li><a href="http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html">From feature descriptors to deep learning</a></li>
-      <li><a href="http://simonwinder.com/2015/01/what-is-deep-learning/">What is Deep Learning?</a></li>
-      <li><a href="http://markus.com/deep-learning-101/">Deep Learning 101</a></li>
-      <li><a href="http://www.toptal.com/machine-learning/an-introduction-to-deep-learning-from-perceptrons-to-deep-networks">A Deep Learning Tutorial: From Perceptrons to Deep Networks</a></li>
-      <li><a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">deep learning book. by Yoshua Bengio</a></li>
-      <li>
-        <p><a href="http://deeplearning.net/tutorial/deeplearning.pdf">Deep Learning Tutorial. LISA lab, University of Montreal</a>  <a href="http://deeplearning.net/software_links/">software</a>
-  基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。</p>
-      </li>
-      <li><a href="http://www.cs.toronto.edu/~tijmen/csc321/">Introduction to Neural Networks and Machine Learning by hinton</a> <a href="http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml">Lecture notes</a></li>
-      <li>
-        <p><a href="http://blog.csdn.net/zouxy09/article/details/8775360">深度学习-笔记整理系列1-8</a>，<a href="http://blog.csdn.net/zouxy09/article/details/9993371">link2</a> 使用自下向上非监督学习（就是从底层开始，一层一层的往顶层训练）；自顶向下的监督学习（就是通过带标签的数据去训练，误差自顶向下传输，对网络进行微调）。还介绍了Autoencoder，SparseCoding，Restricted Boltzmann Machine，Deep BeliefNetworks，CNN等模型。</p>
-      </li>
-      <li><a href="http://weibo.com/p/1001603799166017998138">谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议</a> 比较喜欢其中关于tricks的建议：包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。</li>
-      <li>
-        <p><a href="http://www.ee.ucl.ac.uk/sahd2014/resources/LeCun.pdf">LeCun：The Unreasonable Effectiveness of Deep Learning</a> LeCun做的300+页的深度学习slides，太棒了！毋需多做介绍，单看标题、作者应该就能作出判断——看看看，必须的！</p>
-      </li>
-      <li>
-        <p><a href="http://colah.github.io/posts/2015-01-Visualizing-Representations/">Visualizing Representations: Deep Learning and Human Beings</a> 利用深度学习和维数约减，可以对整个Wikipedia进行可视化，文中结合Wikipedia训练得出的例子，全面介绍了深度学习、词向量、段落向量、翻译模型以及深度学习可视化方面的知识，理论结合实践，实属不可多得的好文。</p>
-      </li>
-      <li>
-        <p><a href="http://www.bammf.org">Bay Area Multimedia Forum</a> 邓力，贾扬清，Ronan Collobert, Richard Socher 讲用深度学习处理语音、文本和图像。有slides有视频。</p>
-      </li>
-      <li><a href="http://t.cn/RZ8Sqe6">博文“A Brief Overview of Deep Learning”</a> 有见解有福利。一些技术总结得不错，例如Practice Advice，有很多干货，谁用谁知道…… 文后还有Bengio的点评及与网友的互动讨论。</li>
-      <li><a href="">Neural network with numpy</a> Python下(只)用numpy写神经网络，不错的开始 <a href="https://github.com/FlorianMuellerklein/Machine-Learning/blob/master/BackPropagationNN.py">github code</a></li>
-      <li><a href="http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/">Google’s Large Scale Deep Neural Networks Project, Greg Corrado</a> Google的大规模分布式DNN介绍 <a href="http://pan.baidu.com/s/1kTl76AV">slide</a> <a href="http://pan.baidu.com/s/1qWmJrSo">视频</a></li>
-    </ul>
+    <p><a href="http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html">From feature descriptors to deep learning</a></p>
   </li>
   <li>
-    <p>ImageNet classification</p>
+    <p><a href="http://simonwinder.com/2015/01/what-is-deep-learning/">What is Deep Learning?</a></p>
+  </li>
+  <li>
+    <p><a href="http://markus.com/deep-learning-101/">Deep Learning 101</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.toptal.com/machine-learning/an-introduction-to-deep-learning-from-perceptrons-to-deep-networks">A Deep Learning Tutorial: From Perceptrons to Deep Networks</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">deep learning book. by Yoshua Bengio</a></p>
+  </li>
+  <li>
+    <p><a href="http://deeplearning.net/tutorial/deeplearning.pdf">Deep Learning Tutorial. LISA lab, University of Montreal</a>  <a href="http://deeplearning.net/software_links/">software</a>
+基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cs.toronto.edu/~tijmen/csc321/">Introduction to Neural Networks and Machine Learning by hinton</a> <a href="http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml">Lecture notes</a></p>
+  </li>
+  <li>
+    <p><a href="http://weibo.com/p/1001603799166017998138">谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议</a> 比较喜欢其中关于tricks的建议：包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。</p>
+  </li>
+  <li>
+    <p><a href="http://www.ee.ucl.ac.uk/sahd2014/resources/LeCun.pdf">LeCun：The Unreasonable Effectiveness of Deep Learning</a> LeCun做的300+页的深度学习slides，太棒了！毋需多做介绍，单看标题、作者应该就能作出判断——看看看，必须的！</p>
+  </li>
+  <li>
+    <p><a href="http://colah.github.io/posts/2015-01-Visualizing-Representations/">Visualizing Representations: Deep Learning and Human Beings</a> 利用深度学习和维数约减，可以对整个Wikipedia进行可视化，文中结合Wikipedia训练得出的例子，全面介绍了深度学习、词向量、段落向量、翻译模型以及深度学习可视化方面的知识，理论结合实践，实属不可多得的好文。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/zouxy09/article/details/8775360">深度学习-笔记整理系列1-8</a>，<a href="http://blog.csdn.net/zouxy09/article/details/9993371">link2</a> 使用自下向上非监督学习（就是从底层开始，一层一层的往顶层训练）；自顶向下的监督学习（就是通过带标签的数据去训练，误差自顶向下传输，对网络进行微调）。还介绍了Autoencoder，SparseCoding，Restricted Boltzmann Machine，Deep BeliefNetworks，CNN等模型。</p>
+  </li>
+  <li>
+    <p><a href="http://t.cn/RZ8Sqe6">博文“A Brief Overview of Deep Learning”</a> 有见解有福利。一些技术总结得不错，例如Practice Advice，有很多干货，谁用谁知道…… 文后还有Bengio的点评及与网友的互动讨论。</p>
+  </li>
+  <li>
+    <p><a href="http://www.bammf.org">Bay Area Multimedia Forum</a> 邓力，贾扬清，Ronan Collobert, Richard Socher 讲用深度学习处理语音、文本和图像。有slides有视频。</p>
+  </li>
+  <li>
+    <p><a href="">Neural network with numpy</a> Python下(只)用numpy写神经网络，不错的开始 <a href="https://github.com/FlorianMuellerklein/Machine-Learning/blob/master/BackPropagationNN.py">github code</a></p>
+  </li>
+  <li>
+    <p><a href="http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/">Google’s Large Scale Deep Neural Networks Project, Greg Corrado</a> Google的大规模分布式DNN介绍 <a href="http://pan.baidu.com/s/1kTl76AV">slide</a> <a href="http://pan.baidu.com/s/1qWmJrSo">视频</a></p>
+  </li>
+</ul>
 
-    <ul>
-      <li><a href="http://arxiv.org/pdf/1502.03167v1.pdf">Googles breakthrough paper shows 10*faster neural nets, and beats a human</a> Google的最新论文，用”batch normalization”在ImageNet上得到4.82%( top-5 error)，训练速度也大大加快。</li>
-      <li><a href="http://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a> 微软所创建的基于深度卷积神经网络系统首次在ImageNet图像分类上超越人类，实现4.94% top-5 test error。</li>
-    </ul>
-  </li>
-  <li>Image Caption Generation
-    <ul>
-      <li>
-        <p><a href="http://arxiv.org/abs/1502.03044">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a> 基于视觉焦点用LSTM自动生成图像内容描述。
-  来自Yoshua Bengio教授团队（22 pages，8页正文+n多附图），文中报道的结果比之前Microsoft、Google的结果更好。</p>
-      </li>
-      <li>
-        <p><a href="https://pdollar.wordpress.com/2015/01/21/image-captioning/">Image Captioning</a>  来自于微软的一篇博文，介绍了image caption的最近进展。图像标题生成小综述，文中引用了另一篇进展综述性文章《Rapid Progress in Automatic Image Captioning》http://t.cn/Rzzk2H3 ，列举出最有影响和代表性的进展和成果(论文)，并从数据集、验证(评价)和下一步怎么走三方面进行了讨论，观点很有代表性</p>
+<h2 id="deeplearing-in-nlp">Deeplearing in NLP综述</h2>
 
-        <p><a href="http://t.cn/RZdBZEe">Top Microsoft Machine Learning Posts of 2014</a> 微软14年最佳博文：图像自动描述生成的飞速进展、机器学习欢乐多、Azule ML为用户带来变革、机器学习与文本分析、微软机器学习20年、Vowpal Wabbit快速学习、什么是机器学习、NIPS14机器学习趋势、机器学习与机器视觉等</p>
-      </li>
-    </ul>
-  </li>
-  <li>RNN&amp; LSTM
+<ul>
+  <li><a href="http://blog.jobbole.com/77709/">深度学习、自然语言处理和表征方法</a> <a href="https://github.com/colah/NLP-RNNs-Representations-Post/blob/master/index.md">English version</a>
     <ul>
-      <li><a href="http://xxx.tau.ac.il/abs/1502.02367">Gated Feedback Recurrent Neural Networks</a>  又有人设计新的RNN了，这回Cho和Bengio都在．这回介绍的GF-RNN说是能比以前Deep RNN的都好。明摆着说LSTM嘛。</li>
-      <li><a href="http://t.cn/Rww4fbV">论文 Scaling Recurrent Neural Network Language Models》(2015) W Williams, N Prasad, D Mrva</a> 讨论如何使用GPU训练大型RNN，以及#RNN##语言模型#(RNNLM)在进行扩展时模型大小、训练集规模和运算开销方面的问题；使用维基和新闻语料训练的大规模RNNLM效果明显。</li>
-      <li><a href="http://t.cn/RZNfoLt">Passage：用RNN做文本分析的python库</a></li>
-      <li><a href="http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/">深入讨论RNN</a>  <a href="http://www.csdn.net/article/2015-01-28/2823747">译文</a>非常好的讨论递归神经网络的文章，覆盖了RNN的概念、原理、训练及优化等各个方面内容，强烈推荐！本文作者Nikhil Buduma，也是《Deep Learning in a Nutshell》的作者。</li>
-      <li>深度RNN/LSTM用于结构化学习 0)序列标注<a href="http://t.cn/RZZs9Io">Connectionist Temporal Classification ICML06</a> 1)机器翻译<a href="http://t.cn/RZZs9Jk">Sequence to Sequence NIPS14</a> 2)成分句法<a href="http://t.cn/RZZs9Ia">GRAMMAR AS FOREIGN LANGUAGE</a> 再次用到窃取果实distilling</li>
-      <li>[视频]《General Sequence Learning using Recurrent Neural Networks》http://t.cn/RwiEI9d Alec Radford讲的用RNN做文本序列分析(学习) 云:http://t.cn/RwinOCb Alec Radford的Passage:http://weibo.com/1402400261/BFVLkxtfw</li>
-      <li><a href="http://people.idsia.ch/~juergen/lstm/index.htm">幻灯 Long Short-Term Memory: Tutorial on LSTM Recurrent Networks</a>  J. Schmidhuber的LSTM递归网络教程</li>
-    </ul>
-  </li>
-  <li>CNN
-    <ul>
-      <li>
-        <p>Character-based CNN。<a href="http://arxiv.org/abs/1502.01710">论文 Text Understanding from Scratch 2015 Xiang Zhang, Yann LeCun</a>  深度学习在NLP领域最新进展！使用temporal ConvNets对大规模文本语料进行学习，在本体分类、情感分析、文本分类任务中取得了“astonishing performance”，不依赖任何语言知识，中英文均适用。必读！</p>
-      </li>
-      <li>
-        <p><a href="http://arxiv.org/abs/1404.2188">论文 A Convolutional Neural Network for Modelling Sentences. Nal Kalchbrenner等</a> 用动态卷积神经网络(DCNN)对句子进行语义建模，该方法不依赖解析树也不受语种限制，效果也很明显，推荐学习。其项目主页上http://t.cn/RZd9HOE 提供了源码(Matlab) 云:http://t.cn/RZdCx1o</p>
-      </li>
-    </ul>
-  </li>
-  <li>Word2vec
-    <ul>
-      <li>[问答]《What are some interesting Word2Vec results?》http://t.cn/RZrOfYp Quora上的主题，讨论Word2Vec的有趣应用，Omer Levy提到了他在CoNLL2014最佳论文里的分析结果和新方法（稍后单独推荐），Daniel Hammack给出了找特异词的小应用并提供了(Python)代码http://t.cn/zQgLQ20</li>
-      <li>Ensemble of Generative and Discriminative Techniques for Sentiment Analysis of Movie Reviews。<a href="https://github.com/mesnilgr/iclr15">code</a></li>
-      <li>隐含主题模型LDA的学习过程可为文档每个词分配隐含主题，我组本科生刘扬同学利用LDA为词汇提供的补充信息，提出topical word embeddings，在词汇相似度计算和文本分类上得到一些有趣的结果。<a href="https://github.com/largelymfs/topical_word_embeddings">github code</a>，<a href="http://nlp.csai.tsinghua.edu.cn/~lzy/publications/aaai2015_twe.pdf">论文Topical Word Embeddings</a></li>
-      <li><a href="https://github.com/idio/wiki2vec">Wiki2Vec: Generating Vectors for DBpedia Entities via Word2Vec and Wikipedia Dumps</a> 从维基百科Dumps生成Word2Vec向量的工具，包括词向量和主题向量</li>
-      <li><a href="http://andyljones.tumblr.com/post/111299309808/why-word2vec-works">Why word2vec works</a> word2vec的工作原理</li>
-      <li><a href="http://www-personal.umich.edu/~ronxin/pdf/w2vexp.pdf">word2vec Parameter Learning Explained</a> word2vec梯度推导详解</li>
-    </ul>
-  </li>
-  <li>NLP
-    <ul>
-      <li><a href="http://blog.jobbole.com/77709/">深度学习、自然语言处理和表征方法</a> <a href="https://github.com/colah/NLP-RNNs-Representations-Post/blob/master/index.md">English version</a></li>
       <li>单隐层神经网络有一个普适性（universality）：给予足够的隐结点，它可以估算任何函数。普适性的真正意义是：一个网络能适应任何你给它的训练数据。这并不代表插入新的数据点的时候它能表现地很理想。</li>
       <li>在深度学习工具箱里，把从任务A中学到的好表征方法用在任务B上是一个很主要的技巧。根据细节不同，这个普遍的技巧的名称也不同，如：预训练（pretraining），迁移学习(transfer learning)，多任务学习(multi-task learning)等。这种方法的好处之一是可以从多种不同数据中学习特征表示。</li>
       <li>共享嵌入是一个非常让人兴奋的研究领域，它暗示着为何深度学习中这个注重表征方法的角度是如此的引人入胜。它目前被应用在机器翻译，ImageCaptioning。</li>
@@ -163,6 +125,93 @@
   </li>
 </ul>
 
+<h2 id="imagenet-classification">ImageNet classification</h2>
+
+<ul>
+  <li>
+    <p><a href="http://arxiv.org/pdf/1502.03167v1.pdf">Googles breakthrough paper shows 10*faster neural nets, and beats a human</a> Google的最新论文，用”batch normalization”在ImageNet上得到4.82%( top-5 error)，训练速度也大大加快。</p>
+  </li>
+  <li>
+    <p><a href="http://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a> 微软所创建的基于深度卷积神经网络系统首次在ImageNet图像分类上超越人类，实现4.94% top-5 test error。</p>
+  </li>
+</ul>
+
+<h2 id="image-caption-generation">Image Caption Generation</h2>
+
+<ul>
+  <li>
+    <p><a href="http://arxiv.org/abs/1502.03044">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a> 基于视觉焦点用LSTM自动生成图像内容描述。
+来自Yoshua Bengio教授团队（22 pages，8页正文+n多附图），文中报道的结果比之前Microsoft、Google的结果更好。</p>
+  </li>
+  <li>
+    <p><a href="https://pdollar.wordpress.com/2015/01/21/image-captioning/">Image Captioning</a>  来自于微软的一篇博文，介绍了image caption的最近进展。图像标题生成小综述，文中引用了另一篇进展综述性文章《Rapid Progress in Automatic Image Captioning》http://t.cn/Rzzk2H3 ，列举出最有影响和代表性的进展和成果(论文)，并从数据集、验证(评价)和下一步怎么走三方面进行了讨论，观点很有代表性</p>
+
+    <p><a href="http://t.cn/RZdBZEe">Top Microsoft Machine Learning Posts of 2014</a> 微软14年最佳博文：图像自动描述生成的飞速进展、机器学习欢乐多、Azule ML为用户带来变革、机器学习与文本分析、微软机器学习20年、Vowpal Wabbit快速学习、什么是机器学习、NIPS14机器学习趋势、机器学习与机器视觉等</p>
+  </li>
+</ul>
+
+<h2 id="rnn-lstm">RNN&amp; LSTM</h2>
+
+<ul>
+  <li>
+    <p><a href="http://xxx.tau.ac.il/abs/1502.02367">Gated Feedback Recurrent Neural Networks</a>  又有人设计新的RNN了，这回Cho和Bengio都在．这回介绍的GF-RNN说是能比以前Deep RNN的都好。明摆着说LSTM嘛。</p>
+  </li>
+  <li>
+    <p><a href="http://t.cn/Rww4fbV">论文 Scaling Recurrent Neural Network Language Models》(2015) W Williams, N Prasad, D Mrva</a> 讨论如何使用GPU训练大型RNN，以及#RNN##语言模型#(RNNLM)在进行扩展时模型大小、训练集规模和运算开销方面的问题；使用维基和新闻语料训练的大规模RNNLM效果明显。</p>
+  </li>
+  <li>
+    <p><a href="http://t.cn/RZNfoLt">Passage：用RNN做文本分析的python库</a></p>
+  </li>
+  <li>
+    <p><a href="http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/">深入讨论RNN</a>  <a href="http://www.csdn.net/article/2015-01-28/2823747">译文</a>非常好的讨论递归神经网络的文章，覆盖了RNN的概念、原理、训练及优化等各个方面内容，强烈推荐！本文作者Nikhil Buduma，也是《Deep Learning in a Nutshell》的作者。</p>
+  </li>
+  <li>
+    <p>深度RNN/LSTM用于结构化学习 0)序列标注<a href="http://t.cn/RZZs9Io">Connectionist Temporal Classification ICML06</a> 1)机器翻译<a href="http://t.cn/RZZs9Jk">Sequence to Sequence NIPS14</a> 2)成分句法<a href="http://t.cn/RZZs9Ia">GRAMMAR AS FOREIGN LANGUAGE</a> 再次用到窃取果实distilling</p>
+  </li>
+  <li>
+    <p>[视频]《General Sequence Learning using Recurrent Neural Networks》http://t.cn/RwiEI9d Alec Radford讲的用RNN做文本序列分析(学习) 云:http://t.cn/RwinOCb Alec Radford的Passage:http://weibo.com/1402400261/BFVLkxtfw</p>
+  </li>
+  <li>
+    <p><a href="http://people.idsia.ch/~juergen/lstm/index.htm">幻灯 Long Short-Term Memory: Tutorial on LSTM Recurrent Networks</a>  J. Schmidhuber的LSTM递归网络教程</p>
+  </li>
+</ul>
+
+<h2 id="cnn">CNN</h2>
+
+<ul>
+  <li>
+    <p><a href="http://dataunion.org/?p=5395">深度学习：CNN的反向求导及练习</a></p>
+  </li>
+  <li>
+    <p>Character-based CNN。<a href="http://arxiv.org/abs/1502.01710">论文 Text Understanding from Scratch 2015 Xiang Zhang, Yann LeCun</a>  深度学习在NLP领域最新进展！使用temporal ConvNets对大规模文本语料进行学习，在本体分类、情感分析、文本分类任务中取得了“astonishing performance”，不依赖任何语言知识，中英文均适用。必读！</p>
+  </li>
+  <li>
+    <p><a href="http://arxiv.org/abs/1404.2188">论文 A Convolutional Neural Network for Modelling Sentences. Nal Kalchbrenner等</a> 用动态卷积神经网络(DCNN)对句子进行语义建模，该方法不依赖解析树也不受语种限制，效果也很明显，推荐学习。其项目主页上http://t.cn/RZd9HOE 提供了源码(Matlab) 云:http://t.cn/RZdCx1o</p>
+  </li>
+</ul>
+
+<h2 id="word2vec">Word2vec</h2>
+
+<ul>
+  <li>
+    <p>[问答]《What are some interesting Word2Vec results?》http://t.cn/RZrOfYp Quora上的主题，讨论Word2Vec的有趣应用，Omer Levy提到了他在CoNLL2014最佳论文里的分析结果和新方法（稍后单独推荐），Daniel Hammack给出了找特异词的小应用并提供了(Python)代码http://t.cn/zQgLQ20</p>
+  </li>
+  <li>
+    <p>Ensemble of Generative and Discriminative Techniques for Sentiment Analysis of Movie Reviews。<a href="https://github.com/mesnilgr/iclr15">code，include sentence2vec</a></p>
+  </li>
+  <li>
+    <p>隐含主题模型LDA的学习过程可为文档每个词分配隐含主题，我组本科生刘扬同学利用LDA为词汇提供的补充信息，提出topical word embeddings，在词汇相似度计算和文本分类上得到一些有趣的结果。<a href="https://github.com/largelymfs/topical_word_embeddings">github code</a>，<a href="http://nlp.csai.tsinghua.edu.cn/~lzy/publications/aaai2015_twe.pdf">论文Topical Word Embeddings</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/idio/wiki2vec">Wiki2Vec: Generating Vectors for DBpedia Entities via Word2Vec and Wikipedia Dumps</a> 从维基百科Dumps生成Word2Vec向量的工具，包括词向量和主题向量</p>
+  </li>
+  <li>
+    <p><a href="http://andyljones.tumblr.com/post/111299309808/why-word2vec-works">Why word2vec works</a> word2vec的工作原理</p>
+  </li>
+  <li>
+    <p><a href="http://www-personal.umich.edu/~ronxin/pdf/w2vexp.pdf">word2vec Parameter Learning Explained</a> word2vec梯度推导详解</p>
+  </li>
+</ul>
 
   </article>
 

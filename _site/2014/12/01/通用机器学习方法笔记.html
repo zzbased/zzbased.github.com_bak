@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>通用机器学习方法笔记</title>
-  <meta name="description" content="机器学习框架">
+  <meta name="description" content="机器学习通用问题">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2014/12/01/%E9%80%9A%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%AC%94%E8%AE%B0.html">
@@ -33,10 +33,6 @@
       </a>
 
       <div class="trigger">
-        
-          
-          <a class="page-link" href="/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">系统知识总结</a>
-          
         
           
           <a class="page-link" href="/about/">About</a>
@@ -66,50 +62,7 @@
   </header>
 
   <article class="post-content">
-    <h3 id="section">机器学习框架</h3>
-
-<ul>
-  <li>
-    <p><a href="http://petuum.github.io">Petuum</a> Petuum涵盖的模型更多（CNN、DNN、K-Mean、Regression、Sparse Coding、Matrix Factorization，LDA、 RF等。例如基于Petuum训练CNN，用CPU集群能达到比用GPU的Caffe高的效率。</p>
-  </li>
-  <li>
-    <p><a href="http://fastml.com/torch-vs-theano/">Torch vs Theano</a>  还可以比较下Caffe。</p>
-  </li>
-  <li>
-    <p>《Caffe-LSTM》GitHub:http://t.cn/Rw4pf3G 基于Caffe实现的LSTM，应用例子的ipn:http://t.cn/Rw4pCPX</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/srendle/libfm">开源libFM</a> —— 开源Factorization Machines(FM)工具 GitHub:http://t.cn/Rh0QKfr FM可对任意实值向量进行预测，可看作自动的特征选择/组合方法。参考文献：中文简介http://t.cn/8DkCnjI 开山之作http://t.cn/Rw4eWfP KDD2012的Toturialhttp://t.cn/Rw4DwFe 最新例子文章http://t.cn/Rw4e5nT</p>
-  </li>
-  <li>
-    <p>Facebook开源了一组深度学习扩展fbcunn：http://t.cn/RZN9gAM @极客头条 是Torch框架的插件，基于NVidia的GPU，大大提升了原来nn神经网络包的性能，可以用于计算机视觉和自然语言处理等场景</p>
-  </li>
-  <li>
-    <p>Caffe自推出以来便成为了被广泛使用深度学习研究工具，借助Caffe可以轻松训练用于识别、检测等不同人物的深度网络。ECCV‘14 Tutorial《DIY Deep Learning for Vision: a Hands-On Tutorial with Caffe》简要介绍了如何使用Caffe实现不同网络训练任务</p>
-
-    <p><a href="http://www.csdn.net/article/2015-01-22/2823663">Caffe 深度学习框架上手教程</a> Caffe是一个清晰而高效的深度学习框架，其作者是博士毕业于UC Berkeley的 贾扬清，目前在谷歌工作。本文详细介绍了它的优势、架构，网络定义、各层定义、安装与配置，解读了它实现的图像分类模型AlexNet，并演示了CIFAR-10在caffe上进行训练与学习</p>
-  </li>
-  <li>
-    <p>[开源] Vowpal Wabbit http://t.cn/h40wlI GitHub:http://t.cn/zlzvCpS MS家的开源#机器学习#系统，特色是高性能在线学习，简介:http://t.cn/RwLq6VF 性能比较可参考FastML的《Vowpal Wabbit, Liblinear/SBM and StreamSVM compared》http://t.cn/R742J6H</p>
-  </li>
-  <li>
-    <p>【mlpack：可伸缩C++机器学习库】mlpack是一个直观、快速、可伸缩的C++机器学习库，旨在为机器学习研究者提供更广泛的机器学习方法和函数。它的目的是让新用户通过简单、一致的API使用机器学习，同时为专业用户提供C++的高性能和最大灵活性。http://t.cn/RzeNyXi</p>
-  </li>
-  <li>
-    <p>Minerva V2 Release: http://t.cn/RzubWsd 用NDArray来写machine learning程序，支持多CPU/GPU。目前GPU跑ImageNet 213张/秒，2GPU跑到403张。parameter server下周开始整合。doc还在完善中</p>
-  </li>
-  <li>
-    <p>cxxnet http://t.cn/Rzuv17w 卷积神经网络的一个C++实现。写了个Guide，用deep conv net在kaggle那个17万的比赛里5分钟得到前十的结果（当然马上就会变成zero benchmark）。http://t.cn/RzuPYIR 欢迎转发 @陈天奇怪 @phunter_lau @我爱机器学习 @好东西传送门</p>
-  </li>
-  <li>
-    <p><a href="http://www.librec.net">LibRec</a> ——JAVA下的先进推荐算法库，刚刚推出1.2新版本，目前支持的推荐算法包括UserKNN, ItemKNN, RegSVD, PMF, SVD++, BiasedMF, BPMF, SocialMF, TrustMF, SoRec, SoReg, RSTE, TrustSVD等。</p>
-  </li>
-  <li>
-    <p>Parameter server. <a href="http://www.cs.cmu.edu/~muli/file/osdi14_talk.pdf">slides</a></p>
-  </li>
-</ul>
-
-<h3 id="section-1">机器学习通用问题</h3>
+    <h3 id="section">机器学习通用问题</h3>
 
 <ul>
   <li>
@@ -234,7 +187,7 @@
   <li>Andrew Ng的《机器学习应用建议》：http://t.cn/h4b8MK 以及不莱梅博士Jan Hendrik Metzen与其意见相对应的一些Python交互式范例：http://t.cn/RZreqPu</li>
 </ul>
 
-<h3 id="section-2">机器学习基本算法</h3>
+<h3 id="section-1">机器学习基本算法</h3>
 
 <ul>
   <li>Classifier
