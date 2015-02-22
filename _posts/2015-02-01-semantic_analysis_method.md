@@ -53,7 +53,7 @@ author: vincentyao@tencent.com
 
 语言模型是用来计算一个句子产生概率的概率模型，即\\(P(w_1,w_2,w_3...w_m)\\)，m表示词的总个数。根据贝叶斯公式：\\(P(w_1,w_2,w_3 ... w_m) = P(w_1)P(w_2\|w_1)P(w_3\|w_1,w_2) ... P(w_m\|w_1,w_2 ... w_{m-1})\\)。
 
-最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 `\(P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})\)`。
+最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 \\(P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})\\)。
 
 其中n越大，模型可区别性越强，n越小，模型可靠性越高。
 
@@ -278,7 +278,9 @@ Le和Mikolov在文章《Distributed Representations of Sentences and Documents�
 - 目前通过词向量可以充分发掘出"一义多词"的情况，譬如"快递"与"速递"；但对于"一词多义"，束手无策，譬如"苹果"(既可以表示苹果手机、电脑，又可以表示水果)，此时我们需要用多个词向量来表示多义词。
 
 #### 2.3 卷积神经网络
+
 ##### 卷积
+
 介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。
 
 在一维信号中，卷积的运算，请参考[wiki](http://zh.wikipedia.org/wiki/卷积)，其中的图示很清楚。在图像处理中，对图像用一个卷积核进行卷积运算，实际上是一个滤波的过程。下面是卷积的数学表示：
@@ -476,7 +478,7 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 #### 3.2 Image2text，Image2sentence
 上面讲述的图片分类对图片语义的理解比较粗粒度，那么我们会想，是否可以将图片直接转化为一堆词语或者一段文本来描述。转化到文本后，我们积累相对深的文本处理技术就都可以被利用起来。
 
-##### Image2text
+**Image2text**
 
 首先介绍一种朴素的基于卷积神经网络的image to text方法。
 
@@ -493,7 +495,7 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 
 另一个直观的想法，是否可以通过word embedding建立image与text的联系[26]。例如，可以先利用CNN训练一个图片分类器。每个类目label可以通过word2vec映射到一个embedding表示。对于一个新图片，先进行分类，然后对top-n类目label所对应的embedding按照权重(这里指这个类目所属的概率)相加，得到这个图片的embedding描述，然后再在word embedding空间里寻找与图片embedding最相关的words。
 
-##### Image detection
+**Image detection**
 
 接下来再介绍下image detection。下图是一个image detection的示例，相比于图片分类，提取到信息将更加丰富。
 
@@ -513,7 +515,7 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 
 这里有R-CNN的实现，请点击[rcnn code](https://github.com/rbgirshick/rcnn)
 
-##### Image2sentence
+**Image2sentence**
 
 那能否通过深度学习方法，直接根据image产生sentence呢？我们先看一组实际效果，如下图所示(copy from 文献[43])。
 

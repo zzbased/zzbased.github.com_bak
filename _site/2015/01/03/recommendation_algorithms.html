@@ -18,7 +18,6 @@
   <body>
 
     <header class="site-header">
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
   <div class="wrapper">
 
@@ -71,7 +70,7 @@
 
 <p>推荐在计算广告上有很多的运用，这里计划把推荐算法总结一下。</p>
 
-<p><img src="value_of_recommender.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png" alt="" /></p>
 
 <h2 id="section-1">推荐算法介绍</h2>
 
@@ -108,11 +107,11 @@
 <ul>
   <li>
     <p>User之间相似度计算
-  <img src="user_based_similarity.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_similarity.png" alt="" /></p>
   </li>
   <li>
     <p>Prediction for user i and items j：
-  <img src="user_based_prediction.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_prediction.png" alt="" /></p>
   </li>
 </ul>
 
@@ -122,12 +121,12 @@
 <ul>
   <li>
     <p>Normalization/Bias，rate bias：\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\)，\(s_k(i,u)\) is k-nearest neighbors to i that were rated by user u
-  <img src="cf_formula.png" alt="" />
-  <img src="user_item_bias.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png" alt="" />
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_item_bias.png" alt="" /></p>
   </li>
   <li>
     <p>item-based计算流程：
-  <img src="./item_similarity.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png" alt="" /></p>
   </li>
 </ul>
 
@@ -163,18 +162,18 @@
     <ul>
       <li>
         <p>U是user-factor矩阵，V是item-factor矩阵。
-  <img src="model_based_svd.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/model_based_svd.png" alt="" /></p>
       </li>
       <li>
         <p>基于svd的rating过程：
-  <img src="svd_rating.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_rating.png" alt="" /></p>
       </li>
       <li>
         <p>先写出loss function，再利用SGD or Alternating least squares求解
-  <img src="svd_object_function.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function.png" alt="" /></p>
 
         <p>增加bias后：
-  <img src="svd_object_function_bias.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function_bias.png" alt="" /></p>
 
         <p>关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。</p>
 
@@ -200,9 +199,9 @@
 
     <p><a href="http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf">SVDFeature: A Toolkit for Feature-based Collaborative Filtering</a></p>
 
-    <p><img src="svdfeature.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature.png" alt="" /></p>
 
-    <p><img src="svdfeature2.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature2.png" alt="" /></p>
   </li>
   <li>开源库，请参考<a href="http://blog.csdn.net/cserchen/article/details/14231153">推荐系统开源软件列表汇总和点评</a>
     <ul>
@@ -232,7 +231,7 @@
 <h3 id="content-based-recommenders">Content-based Recommenders</h3>
 <p>item/user profiles, category, tag/keyword</p>
 
-<p><img src="content_based.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/content_based.png" alt="" /></p>
 
 <h3 id="new-approaches">New approaches</h3>
 
@@ -261,7 +260,7 @@
       <li>Lambda Rank，ListNet，ListMLE，AdaRank，SVMap …</li>
     </ul>
 
-    <p><img src="learning_to_rank_compare.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/learning_to_rank_compare.png" alt="" /></p>
   </li>
 </ul>
 
@@ -275,18 +274,18 @@
   </li>
   <li>
     <p>传统推荐过程框图
-  <img src="general-recommender.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/general-recommender.png" alt="" /></p>
   </li>
   <li>
     <p>将context纳入推荐系统后
-  <img src="context-recommender1.png" alt="" />
-  <img src="context-recommender2.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender1.png" alt="" />
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender2.png" alt="" /></p>
   </li>
   <li>
     <p>两种方法：</p>
     <ul>
       <li>Tensor Factorization
-  <img src="hosvd.png" alt="" /></li>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hosvd.png" alt="" /></li>
       <li>Factorization Machines</li>
     </ul>
   </li>
@@ -298,7 +297,7 @@
     <p><a href="http://erikbern.com/?p=589">Recurrent Neural Networks for Collaborative Filtering</a>，<a href="http://www.slideshare.net/erikbern/collaborative-filtering-at-spotify-16182818?related=1">Collaborative Filtering at Spotify</a>
 Recurrent neural networks have a simple model that tries to predict the next item given all previous ones。</p>
 
-    <p><img src="cf-RNN-1.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf-RNN-1.png" alt="" /></p>
   </li>
   <li>
     <p><a href="http://benanne.github.io/2014/08/05/spotify-cnns.html">Recommending music on Spotify with deep learning</a></p>
@@ -320,7 +319,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 <ul>
   <li>
     <p>Social and Trust-based recommenders
-  <img src="trust_based_recommenders.png" alt="" /></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/trust_based_recommenders.png" alt="" /></p>
   </li>
   <li>
     <p>关系链 Friendship Demographic methods</p>
@@ -340,7 +339,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 <ul>
   <li>Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制</li>
   <li><a href="http://www.52ml.net/318.html">推荐系统中所使用的混合技术介绍</a>
-  <img src="./hybridization.png" alt="" /></li>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png" alt="" /></li>
 </ul>
 
 <h3 id="section-4">推荐算法对比</h3>

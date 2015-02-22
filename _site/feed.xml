@@ -6,40 +6,52 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Feb 2015 10:53:55 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 10:53:55 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2015 11:39:50 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2015 11:39:50 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>搜索广告的情怀</title>
+        <description>&lt;p&gt;工作这些年，搜索广告是自己第一个接触的工作内容。从搜索广告一路走来，蓦然回首，有好些经历都值得总结。&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;section&quot;&gt;搜索广告历程&lt;/h2&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h3 id=&quot;soso&quot;&gt;soso&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;paipai&quot;&gt;paipai&lt;/h3&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;myapp&quot;&gt;myapp&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;搜索广告系统&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;系统介绍&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;算法模块&lt;/h3&gt;
+
+&lt;h4 id=&quot;query&quot;&gt;query分析&lt;/h4&gt;
+
+&lt;h4 id=&quot;query-1&quot;&gt;query扩展&lt;/h4&gt;
+
+&lt;h4 id=&quot;query-bidword&quot;&gt;query-bidword匹配&lt;/h4&gt;
+
+&lt;h4 id=&quot;query-bidwordad&quot;&gt;query-bidword/ad相关性&lt;/h4&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;广告粗选&lt;/h4&gt;
+
+&lt;h4 id=&quot;pctr&quot;&gt;精选/pCtr&lt;/h4&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;竞价&lt;/h4&gt;
 
 </description>
-        <pubDate>Sun, 22 Feb 2015 02:53:25 +0800</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/02/22/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/02/22/welcome-to-jekyll.html</guid>
+        <pubDate>Sun, 22 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/02/22/%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E7%9A%84%E6%83%85%E6%80%80.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/22/%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E7%9A%84%E6%83%85%E6%80%80.html</guid>
         
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
       <item>
-        <title>sampling</title>
+        <title>抽样方法</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;参考资料&lt;/h2&gt;
@@ -88,7 +100,9 @@
     
       <item>
         <title>语义分析的一些方法</title>
-        <description>&lt;p&gt;author: vincentyao@tencent.com&lt;/p&gt;
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;author: vincentyao@tencent.com&lt;/p&gt;
 
 &lt;p&gt;语义分析，本文指运用各种机器学习方法，挖掘与学习文本、图片等的深层次概念。wikipedia上的解释：In machine learning, semantic analysis of a corpus is the task of building structures that approximate concepts from a large set of documents(or images)。&lt;/p&gt;
 
@@ -140,7 +154,7 @@
 
 &lt;p&gt;语言模型是用来计算一个句子产生概率的概率模型，即\(P(w_1,w_2,w_3…w_m)\)，m表示词的总个数。根据贝叶斯公式：\(P(w_1,w_2,w_3 … w_m) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) … P(w_m|w_1,w_2 … w_{m-1})\)。&lt;/p&gt;
 
-&lt;p&gt;最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 &lt;code&gt;\(P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})\)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 \(P(w_m |w_1,w_2…w&lt;em&gt;{m-1}) = P(w_m |w&lt;/em&gt;{m-n+1},w&lt;em&gt;{m-n+2} … w&lt;/em&gt;{m-1})\)。&lt;/p&gt;
 
 &lt;p&gt;其中n越大，模型可区别性越强，n越小，模型可靠性越高。&lt;/p&gt;
 
@@ -416,8 +430,10 @@
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;section-12&quot;&gt;2.3 卷积神经网络&lt;/h4&gt;
-&lt;p&gt;##### 卷积
-介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。&lt;/p&gt;
+
+&lt;h5 id=&quot;section-13&quot;&gt;卷积&lt;/h5&gt;
+
+&lt;p&gt;介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。&lt;/p&gt;
 
 &lt;p&gt;在一维信号中，卷积的运算，请参考&lt;a href=&quot;http://zh.wikipedia.org/wiki/卷积&quot;&gt;wiki&lt;/a&gt;，其中的图示很清楚。在图像处理中，对图像用一个卷积核进行卷积运算，实际上是一个滤波的过程。下面是卷积的数学表示：&lt;/p&gt;
 
@@ -430,7 +446,7 @@
 
 &lt;p&gt;图17. 卷积操作示例&lt;/p&gt;
 
-&lt;h5 id=&quot;section-13&quot;&gt;什么是卷积神经网络&lt;/h5&gt;
+&lt;h5 id=&quot;section-14&quot;&gt;什么是卷积神经网络&lt;/h5&gt;
 &lt;p&gt;卷积神经网络是一种特殊的、简化的深层神经网络模型，它的每个卷积层都是由多个卷积滤波器组成。它最先由lecun在LeNet[40]中提出，网络结构如下图所示。在cnn中，图像的一小部分（局部感受区域）作为层级结构的最低层的输入，信息再依次传输到不同的层，每层通过多个卷积滤波器去获得观测数据的最显著的特征。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lenet5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -445,7 +461,7 @@
 
 &lt;p&gt;它的特殊性体现在两点：(1)局部感受野(receptive field)，cnn的神经元间的连接是非全连接的；(2)同一层中同一个卷积滤波器的权重是共享的（即相同的）。局部感受野和权重共享这两个特点，使cnn网络结构更类似于生物神经网络，降低了网络模型的复杂度，减少了神经网络需要训练的参数的个数。&lt;/p&gt;
 
-&lt;h5 id=&quot;section-14&quot;&gt;卷积神经网络的一些细节&lt;/h5&gt;
+&lt;h5 id=&quot;section-15&quot;&gt;卷积神经网络的一些细节&lt;/h5&gt;
 
 &lt;p&gt;接下来结合文献[25]，再讲讲卷积神经网络的一些注意点和问题。&lt;/p&gt;
 
@@ -465,7 +481,7 @@
   &lt;li&gt;模型不work，怎么办？结合我自身的经验，learning rate初始值设置得太大，开始设置为0.01，以为很小了，但实际上0.001更合适。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;section-15&quot;&gt;卷积神经网络在文本上的应用&lt;/h5&gt;
+&lt;h5 id=&quot;section-16&quot;&gt;卷积神经网络在文本上的应用&lt;/h5&gt;
 &lt;p&gt;卷积神经网络在image classify和image detect上得到诸多成功的应用，后文将再详细阐述。但除了图片外，它在文本分析上也取得一些成功的应用。&lt;/p&gt;
 
 &lt;p&gt;基于CNN，可以用来做文本分类，情感分析，本体分类等[36,41,84]。传统文本分类等任务，一般基于bag of words或者基于word的特征提取，此类方法一般需要领域知识和人工特征。利用CNN做，方法也类似，但一般都是基于raw text，CNN模型的输入可以是word series，可以是word vector，还可以是单纯的字符。比起传统方法，CNN不需要过多的人工特征。&lt;/p&gt;
@@ -485,7 +501,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-16&quot;&gt;2.4 文本分类&lt;/h4&gt;
+&lt;h4 id=&quot;section-17&quot;&gt;2.4 文本分类&lt;/h4&gt;
 &lt;p&gt;文本分类应该是最常见的文本语义分析任务了。首先它是简单的，几乎每一个接触过nlp的同学都做过文本分类，但它又是复杂的，对一个类目标签达几百个的文本分类任务，90%以上的准确率召回率依旧是一个很困难的事情。这里说的文本分类，指的是泛文本分类，包括query分类，广告分类，page分类，用户分类等，因为即使是用户分类，实际上也是对用户所属的文本标签，用户访问的文本网页做分类。&lt;/p&gt;
 
 &lt;p&gt;几乎所有的机器学习方法都可以用来做文本分类，常用的主要有：lr，maxent，svm等，下面介绍一下文本分类的pipeline以及注意点。&lt;/p&gt;
@@ -585,12 +601,12 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-17&quot;&gt;3 图片语义分析&lt;/h3&gt;
+&lt;h3 id=&quot;section-18&quot;&gt;3 图片语义分析&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-18&quot;&gt;3.1 图片分类&lt;/h4&gt;
+&lt;h4 id=&quot;section-19&quot;&gt;3.1 图片分类&lt;/h4&gt;
 &lt;p&gt;图片分类是一个最基本的图片语义分析方法。&lt;/p&gt;
 
-&lt;h5 id=&quot;section-19&quot;&gt;基于深度学习的图片分类&lt;/h5&gt;
+&lt;h5 id=&quot;section-20&quot;&gt;基于深度学习的图片分类&lt;/h5&gt;
 &lt;p&gt;传统的图片分类如下图所示，首先需要先手工提取图片特征，譬如SIFT, GIST，再经由VQ coding和Spatial pooling，最后送入传统的分类模型(例如SVM等)。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/tranditional-imageclassify.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -626,7 +642,7 @@
 
 &lt;p&gt;图27. 图片检索示例图&lt;/p&gt;
 
-&lt;h5 id=&quot;section-20&quot;&gt;图片分类上的最新进展&lt;/h5&gt;
+&lt;h5 id=&quot;section-21&quot;&gt;图片分类上的最新进展&lt;/h5&gt;
 
 &lt;p&gt;在ILSVRC 2012中，Krizhevsky基于GPU实现了上述介绍的，这个有60million参数的模型，赢得了第一名。这个工作是开创性的，它引领了接下来ILSVRC的风潮。2013年，Clarifai通过cnn模型可视化技术调整网络架构，赢得了ILSVRC。2014年，google也加入进来，它通过增加模型的层数（总共22层），让深度更深[48]，并且利用multi-scale data training，取得第一名。baidu最近通过更加”粗暴”的模型[44]，在GooLeNet的基础上，又提升了10%，top-5错误率降低至6%以下。具体结果如下图所示。&lt;/p&gt;
 
@@ -666,7 +682,7 @@
 &lt;h4 id=&quot;image2textimage2sentence&quot;&gt;3.2 Image2text，Image2sentence&lt;/h4&gt;
 &lt;p&gt;上面讲述的图片分类对图片语义的理解比较粗粒度，那么我们会想，是否可以将图片直接转化为一堆词语或者一段文本来描述。转化到文本后，我们积累相对深的文本处理技术就都可以被利用起来。&lt;/p&gt;
 
-&lt;h5 id=&quot;image2text&quot;&gt;Image2text&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Image2text&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;首先介绍一种朴素的基于卷积神经网络的image to text方法。&lt;/p&gt;
 
@@ -685,7 +701,7 @@
 
 &lt;p&gt;另一个直观的想法，是否可以通过word embedding建立image与text的联系[26]。例如，可以先利用CNN训练一个图片分类器。每个类目label可以通过word2vec映射到一个embedding表示。对于一个新图片，先进行分类，然后对top-n类目label所对应的embedding按照权重(这里指这个类目所属的概率)相加，得到这个图片的embedding描述，然后再在word embedding空间里寻找与图片embedding最相关的words。&lt;/p&gt;
 
-&lt;h5 id=&quot;image-detection&quot;&gt;Image detection&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Image detection&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;接下来再介绍下image detection。下图是一个image detection的示例，相比于图片分类，提取到信息将更加丰富。&lt;/p&gt;
 
@@ -707,7 +723,7 @@
 
 &lt;p&gt;这里有R-CNN的实现，请点击&lt;a href=&quot;https://github.com/rbgirshick/rcnn&quot;&gt;rcnn code&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;image2sentence&quot;&gt;Image2sentence&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Image2sentence&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;那能否通过深度学习方法，直接根据image产生sentence呢？我们先看一组实际效果，如下图所示(copy from 文献[43])。&lt;/p&gt;
 
@@ -766,9 +782,9 @@
   &lt;li&gt;Ensembling。训练多个神经网络，最后计算它们的预测值的平均值。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-21&quot;&gt;4 总结&lt;/h3&gt;
+&lt;h3 id=&quot;section-22&quot;&gt;4 总结&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-22&quot;&gt;4.1 语义分析方法在实际业务中的使用&lt;/h4&gt;
+&lt;h4 id=&quot;section-23&quot;&gt;4.1 语义分析方法在实际业务中的使用&lt;/h4&gt;
 &lt;p&gt;前面讲述了很多语义分析方法，接下来我们看看如何利用这些方法帮忙我们的实际业务，这里举一个例子，用户广告的语义匹配。&lt;/p&gt;
 
 &lt;p&gt;在广点通系统中，用户与广告的关联是通过定向条件来匹配的，譬如某些广告定向到”北京+男性”，那么当”北京+男性”的用户来到时，所有符合定向的广告就将被检索出，再按照”ecpm*quality”排序，将得分最高的展示给用户。但是凭借一些人口属性，用户与广告之间的匹配并不精确，做不到”广告就是想用户所想”，所以用户和广告的语义分析就将派上用场了，可以从这样两方面来说明：&lt;/p&gt;
@@ -798,13 +814,13 @@
   &lt;li&gt;Deep Learning + Structured Prediction，用于syntactic representation。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-23&quot;&gt;4.3 总结&lt;/h4&gt;
+&lt;h4 id=&quot;section-24&quot;&gt;4.3 总结&lt;/h4&gt;
 
 &lt;p&gt;上文主要从文本、图片这两方面讲述了语义分析的一些方法，并结合个人经验做了一点总结。&lt;/p&gt;
 
 &lt;p&gt;原本想写得更全面一些，但写的时候才发现上面所述的只是沧海一粟，后面还有更多语义分析的内容之后再更新。另外为避免看到大篇理论就头痛，文中尽可能不出现复杂的公式和理论推导。如果有兴趣，可以进一步阅读参考文献，获得更深的理解。谢谢。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-24&quot;&gt;5 参考文献&lt;/h3&gt;
+&lt;h3 id=&quot;section-25&quot;&gt;5 参考文献&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://comminfo.rutgers.edu/~muresan/IR/Docs/Articles/ipmSalton1988.pdf&quot;&gt;Term-weighting approaches in automatic text retrieval，Gerard Salton et.&lt;/a&gt;&lt;/li&gt;
@@ -895,8 +911,8 @@
 
 </description>
         <pubDate>Sun, 01 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/01/semantic_analysis_detail.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/01/semantic_analysis_detail.html</guid>
+        <link>http://yourdomain.com/2015/02/01/semantic_analysis_method.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/01/semantic_analysis_method.html</guid>
         
         <category>machine learning</category>
         
@@ -1126,7 +1142,7 @@
 
 &lt;p&gt;推荐在计算广告上有很多的运用，这里计划把推荐算法总结一下。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;value_of_recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;推荐算法介绍&lt;/h2&gt;
 
@@ -1163,11 +1179,11 @@
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;User之间相似度计算
-  &lt;img src=&quot;user_based_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Prediction for user i and items j：
-  &lt;img src=&quot;user_based_prediction.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_prediction.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1177,12 +1193,12 @@
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Normalization/Bias，rate bias：\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\)，\(s_k(i,u)\) is k-nearest neighbors to i that were rated by user u
-  &lt;img src=&quot;cf_formula.png&quot; alt=&quot;&quot; /&gt;
-  &lt;img src=&quot;user_item_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_item_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;item-based计算流程：
-  &lt;img src=&quot;./item_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1218,18 +1234,18 @@
     &lt;ul&gt;
       &lt;li&gt;
         &lt;p&gt;U是user-factor矩阵，V是item-factor矩阵。
-  &lt;img src=&quot;model_based_svd.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/model_based_svd.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;基于svd的rating过程：
-  &lt;img src=&quot;svd_rating.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_rating.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;先写出loss function，再利用SGD or Alternating least squares求解
-  &lt;img src=&quot;svd_object_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
         &lt;p&gt;增加bias后：
-  &lt;img src=&quot;svd_object_function_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
         &lt;p&gt;关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。&lt;/p&gt;
 
@@ -1255,9 +1271,9 @@
 
     &lt;p&gt;&lt;a href=&quot;http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf&quot;&gt;SVDFeature: A Toolkit for Feature-based Collaborative Filtering&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;svdfeature.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;svdfeature2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;开源库，请参考&lt;a href=&quot;http://blog.csdn.net/cserchen/article/details/14231153&quot;&gt;推荐系统开源软件列表汇总和点评&lt;/a&gt;
     &lt;ul&gt;
@@ -1287,7 +1303,7 @@
 &lt;h3 id=&quot;content-based-recommenders&quot;&gt;Content-based Recommenders&lt;/h3&gt;
 &lt;p&gt;item/user profiles, category, tag/keyword&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;content_based.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/content_based.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;new-approaches&quot;&gt;New approaches&lt;/h3&gt;
 
@@ -1316,7 +1332,7 @@
       &lt;li&gt;Lambda Rank，ListNet，ListMLE，AdaRank，SVMap …&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;img src=&quot;learning_to_rank_compare.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/learning_to_rank_compare.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1330,18 +1346,18 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;传统推荐过程框图
-  &lt;img src=&quot;general-recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/general-recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;将context纳入推荐系统后
-  &lt;img src=&quot;context-recommender1.png&quot; alt=&quot;&quot; /&gt;
-  &lt;img src=&quot;context-recommender2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender1.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;两种方法：&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;Tensor Factorization
-  &lt;img src=&quot;hosvd.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hosvd.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;Factorization Machines&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1353,7 +1369,7 @@
     &lt;p&gt;&lt;a href=&quot;http://erikbern.com/?p=589&quot;&gt;Recurrent Neural Networks for Collaborative Filtering&lt;/a&gt;，&lt;a href=&quot;http://www.slideshare.net/erikbern/collaborative-filtering-at-spotify-16182818?related=1&quot;&gt;Collaborative Filtering at Spotify&lt;/a&gt;
 Recurrent neural networks have a simple model that tries to predict the next item given all previous ones。&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;cf-RNN-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf-RNN-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://benanne.github.io/2014/08/05/spotify-cnns.html&quot;&gt;Recommending music on Spotify with deep learning&lt;/a&gt;&lt;/p&gt;
@@ -1375,7 +1391,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Social and Trust-based recommenders
-  &lt;img src=&quot;trust_based_recommenders.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/trust_based_recommenders.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;关系链 Friendship Demographic methods&lt;/p&gt;
@@ -1395,7 +1411,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 &lt;ul&gt;
   &lt;li&gt;Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.52ml.net/318.html&quot;&gt;推荐系统中所使用的混合技术介绍&lt;/a&gt;
-  &lt;img src=&quot;./hybridization.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;section-4&quot;&gt;推荐算法对比&lt;/h3&gt;
@@ -1763,7 +1779,7 @@ Amazon: 35% of sales result from recommendations
       </item>
     
       <item>
-        <title>decision_tree</title>
+        <title>决策树</title>
         <description>&lt;h2 id=&quot;gbdt&quot;&gt;决策树与GBDT&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://cvchina.net/post/107.html&quot;&gt;决策树模型组合之随机森林与GBDT&lt;/a&gt;
@@ -1780,7 +1796,7 @@ Amazon: 35% of sales result from recommendations
       </item>
     
       <item>
-        <title>topic model</title>
+        <title>主题模型</title>
         <description>&lt;h2 id=&quot;topic-model-&quot;&gt;topic model 思考&lt;/h2&gt;
 &lt;p&gt;topic model通常指的是lda, plsa等模型，但从广义上将，类目也是一种topic。本文主要把以前接触到的plsa, lda等知识回顾一下，顺便把类目型的topic model也做一个总结。&lt;/p&gt;
 
@@ -1873,7 +1889,7 @@ twitter利用了三种方法，user-level priors（发布tweet的用户属于的
       </item>
     
       <item>
-        <title>matrix similarity</title>
+        <title>矩阵相似度计算</title>
         <description>&lt;h2 id=&quot;section&quot;&gt;矩阵相似度计算&lt;/h2&gt;
 
 &lt;ul&gt;

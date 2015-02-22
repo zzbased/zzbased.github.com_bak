@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>语义分析的一些方法</title>
-  <meta name="description" content="author: vincentyao@tencent.com">
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/02/01/semantic_analysis_detail.html">
+  <link rel="canonical" href="http://yourdomain.com/2015/02/01/semantic_analysis_method.html">
   <link rel="alternate" type="application/rss+xml" title="100的情怀 - 技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -18,7 +18,6 @@
   <body>
 
     <header class="site-header">
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
   <div class="wrapper">
 
@@ -63,7 +62,9 @@
   </header>
 
   <article class="post-content">
-    <p>author: vincentyao@tencent.com</p>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p>author: vincentyao@tencent.com</p>
 
 <p>语义分析，本文指运用各种机器学习方法，挖掘与学习文本、图片等的深层次概念。wikipedia上的解释：In machine learning, semantic analysis of a corpus is the task of building structures that approximate concepts from a large set of documents(or images)。</p>
 
@@ -115,7 +116,7 @@
 
 <p>语言模型是用来计算一个句子产生概率的概率模型，即\(P(w_1,w_2,w_3…w_m)\)，m表示词的总个数。根据贝叶斯公式：\(P(w_1,w_2,w_3 … w_m) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) … P(w_m|w_1,w_2 … w_{m-1})\)。</p>
 
-<p>最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 <code>\(P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})\)</code>。</p>
+<p>最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 \(P(w_m |w_1,w_2…w<em>{m-1}) = P(w_m |w</em>{m-n+1},w<em>{m-n+2} … w</em>{m-1})\)。</p>
 
 <p>其中n越大，模型可区别性越强，n越小，模型可靠性越高。</p>
 
@@ -391,8 +392,10 @@
 </ul>
 
 <h4 id="section-12">2.3 卷积神经网络</h4>
-<p>##### 卷积
-介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。</p>
+
+<h5 id="section-13">卷积</h5>
+
+<p>介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。</p>
 
 <p>在一维信号中，卷积的运算，请参考<a href="http://zh.wikipedia.org/wiki/卷积">wiki</a>，其中的图示很清楚。在图像处理中，对图像用一个卷积核进行卷积运算，实际上是一个滤波的过程。下面是卷积的数学表示：</p>
 
@@ -405,7 +408,7 @@
 
 <p>图17. 卷积操作示例</p>
 
-<h5 id="section-13">什么是卷积神经网络</h5>
+<h5 id="section-14">什么是卷积神经网络</h5>
 <p>卷积神经网络是一种特殊的、简化的深层神经网络模型，它的每个卷积层都是由多个卷积滤波器组成。它最先由lecun在LeNet[40]中提出，网络结构如下图所示。在cnn中，图像的一小部分（局部感受区域）作为层级结构的最低层的输入，信息再依次传输到不同的层，每层通过多个卷积滤波器去获得观测数据的最显著的特征。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lenet5.png" alt="" /></p>
@@ -420,7 +423,7 @@
 
 <p>它的特殊性体现在两点：(1)局部感受野(receptive field)，cnn的神经元间的连接是非全连接的；(2)同一层中同一个卷积滤波器的权重是共享的（即相同的）。局部感受野和权重共享这两个特点，使cnn网络结构更类似于生物神经网络，降低了网络模型的复杂度，减少了神经网络需要训练的参数的个数。</p>
 
-<h5 id="section-14">卷积神经网络的一些细节</h5>
+<h5 id="section-15">卷积神经网络的一些细节</h5>
 
 <p>接下来结合文献[25]，再讲讲卷积神经网络的一些注意点和问题。</p>
 
@@ -440,7 +443,7 @@
   <li>模型不work，怎么办？结合我自身的经验，learning rate初始值设置得太大，开始设置为0.01，以为很小了，但实际上0.001更合适。</li>
 </ul>
 
-<h5 id="section-15">卷积神经网络在文本上的应用</h5>
+<h5 id="section-16">卷积神经网络在文本上的应用</h5>
 <p>卷积神经网络在image classify和image detect上得到诸多成功的应用，后文将再详细阐述。但除了图片外，它在文本分析上也取得一些成功的应用。</p>
 
 <p>基于CNN，可以用来做文本分类，情感分析，本体分类等[36,41,84]。传统文本分类等任务，一般基于bag of words或者基于word的特征提取，此类方法一般需要领域知识和人工特征。利用CNN做，方法也类似，但一般都是基于raw text，CNN模型的输入可以是word series，可以是word vector，还可以是单纯的字符。比起传统方法，CNN不需要过多的人工特征。</p>
@@ -460,7 +463,7 @@
   </li>
 </ul>
 
-<h4 id="section-16">2.4 文本分类</h4>
+<h4 id="section-17">2.4 文本分类</h4>
 <p>文本分类应该是最常见的文本语义分析任务了。首先它是简单的，几乎每一个接触过nlp的同学都做过文本分类，但它又是复杂的，对一个类目标签达几百个的文本分类任务，90%以上的准确率召回率依旧是一个很困难的事情。这里说的文本分类，指的是泛文本分类，包括query分类，广告分类，page分类，用户分类等，因为即使是用户分类，实际上也是对用户所属的文本标签，用户访问的文本网页做分类。</p>
 
 <p>几乎所有的机器学习方法都可以用来做文本分类，常用的主要有：lr，maxent，svm等，下面介绍一下文本分类的pipeline以及注意点。</p>
@@ -560,12 +563,12 @@
   </li>
 </ul>
 
-<h3 id="section-17">3 图片语义分析</h3>
+<h3 id="section-18">3 图片语义分析</h3>
 
-<h4 id="section-18">3.1 图片分类</h4>
+<h4 id="section-19">3.1 图片分类</h4>
 <p>图片分类是一个最基本的图片语义分析方法。</p>
 
-<h5 id="section-19">基于深度学习的图片分类</h5>
+<h5 id="section-20">基于深度学习的图片分类</h5>
 <p>传统的图片分类如下图所示，首先需要先手工提取图片特征，譬如SIFT, GIST，再经由VQ coding和Spatial pooling，最后送入传统的分类模型(例如SVM等)。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/tranditional-imageclassify.png" alt="" /></p>
@@ -601,7 +604,7 @@
 
 <p>图27. 图片检索示例图</p>
 
-<h5 id="section-20">图片分类上的最新进展</h5>
+<h5 id="section-21">图片分类上的最新进展</h5>
 
 <p>在ILSVRC 2012中，Krizhevsky基于GPU实现了上述介绍的，这个有60million参数的模型，赢得了第一名。这个工作是开创性的，它引领了接下来ILSVRC的风潮。2013年，Clarifai通过cnn模型可视化技术调整网络架构，赢得了ILSVRC。2014年，google也加入进来，它通过增加模型的层数（总共22层），让深度更深[48]，并且利用multi-scale data training，取得第一名。baidu最近通过更加”粗暴”的模型[44]，在GooLeNet的基础上，又提升了10%，top-5错误率降低至6%以下。具体结果如下图所示。</p>
 
@@ -641,7 +644,7 @@
 <h4 id="image2textimage2sentence">3.2 Image2text，Image2sentence</h4>
 <p>上面讲述的图片分类对图片语义的理解比较粗粒度，那么我们会想，是否可以将图片直接转化为一堆词语或者一段文本来描述。转化到文本后，我们积累相对深的文本处理技术就都可以被利用起来。</p>
 
-<h5 id="image2text">Image2text</h5>
+<p><strong>Image2text</strong></p>
 
 <p>首先介绍一种朴素的基于卷积神经网络的image to text方法。</p>
 
@@ -660,7 +663,7 @@
 
 <p>另一个直观的想法，是否可以通过word embedding建立image与text的联系[26]。例如，可以先利用CNN训练一个图片分类器。每个类目label可以通过word2vec映射到一个embedding表示。对于一个新图片，先进行分类，然后对top-n类目label所对应的embedding按照权重(这里指这个类目所属的概率)相加，得到这个图片的embedding描述，然后再在word embedding空间里寻找与图片embedding最相关的words。</p>
 
-<h5 id="image-detection">Image detection</h5>
+<p><strong>Image detection</strong></p>
 
 <p>接下来再介绍下image detection。下图是一个image detection的示例，相比于图片分类，提取到信息将更加丰富。</p>
 
@@ -682,7 +685,7 @@
 
 <p>这里有R-CNN的实现，请点击<a href="https://github.com/rbgirshick/rcnn">rcnn code</a></p>
 
-<h5 id="image2sentence">Image2sentence</h5>
+<p><strong>Image2sentence</strong></p>
 
 <p>那能否通过深度学习方法，直接根据image产生sentence呢？我们先看一组实际效果，如下图所示(copy from 文献[43])。</p>
 
@@ -741,9 +744,9 @@
   <li>Ensembling。训练多个神经网络，最后计算它们的预测值的平均值。</li>
 </ul>
 
-<h3 id="section-21">4 总结</h3>
+<h3 id="section-22">4 总结</h3>
 
-<h4 id="section-22">4.1 语义分析方法在实际业务中的使用</h4>
+<h4 id="section-23">4.1 语义分析方法在实际业务中的使用</h4>
 <p>前面讲述了很多语义分析方法，接下来我们看看如何利用这些方法帮忙我们的实际业务，这里举一个例子，用户广告的语义匹配。</p>
 
 <p>在广点通系统中，用户与广告的关联是通过定向条件来匹配的，譬如某些广告定向到”北京+男性”，那么当”北京+男性”的用户来到时，所有符合定向的广告就将被检索出，再按照”ecpm*quality”排序，将得分最高的展示给用户。但是凭借一些人口属性，用户与广告之间的匹配并不精确，做不到”广告就是想用户所想”，所以用户和广告的语义分析就将派上用场了，可以从这样两方面来说明：</p>
@@ -773,13 +776,13 @@
   <li>Deep Learning + Structured Prediction，用于syntactic representation。</li>
 </ul>
 
-<h4 id="section-23">4.3 总结</h4>
+<h4 id="section-24">4.3 总结</h4>
 
 <p>上文主要从文本、图片这两方面讲述了语义分析的一些方法，并结合个人经验做了一点总结。</p>
 
 <p>原本想写得更全面一些，但写的时候才发现上面所述的只是沧海一粟，后面还有更多语义分析的内容之后再更新。另外为避免看到大篇理论就头痛，文中尽可能不出现复杂的公式和理论推导。如果有兴趣，可以进一步阅读参考文献，获得更深的理解。谢谢。</p>
 
-<h3 id="section-24">5 参考文献</h3>
+<h3 id="section-25">5 参考文献</h3>
 
 <ol>
   <li><a href="http://comminfo.rutgers.edu/~muresan/IR/Docs/Articles/ipmSalton1988.pdf">Term-weighting approaches in automatic text retrieval，Gerard Salton et.</a></li>
