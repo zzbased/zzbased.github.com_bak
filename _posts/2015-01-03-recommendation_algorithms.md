@@ -1,19 +1,24 @@
 ---
 layout: post
-title: "推荐算法实战"
+title: "推荐算法总结"
 description: ""
 category:
 tags: [machine learning]
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-# 推荐算法实战
+
+# 推荐算法总结
 
 #### author: vincentyao@tencent.com
 
-推荐在计算广告上有很多的运用，这里计划把推荐算法总结一下。
+互联网的发展经历了这样几个阶段，首先是信息产生阶段，接着由于信息越来越多，用户需要查询相关信息，就有了搜索引擎，再接着，信息过载更加严重，用户需求不明确时，就需要推荐引擎了。
+
+推荐在计算广告上有很多的运用，如下图所示，Netflix有2/3的电影观看都是经由推荐的。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png)
+
+这里计划按照自己的理解对推荐算法做一个总结。下面内容主要分为三节，第一节介绍各种推荐算法，包括传统算法(CF)，新算法(Deeplearning)等；第二节精选了业界的一些成熟推荐系统，做一下简要的学习与总结；第三节则是自己对推荐系统的理解与总结。
 
 ## 推荐算法介绍
 
@@ -47,11 +52,13 @@ Estimate a utility function that automatically predicts how a user will like an 
 #### Item-based
 先计算item similarity，再基于user rated items预测。
 
-- Normalization/Bias，rate bias：\\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\\)，\\(s_k(i,u)\\) is k-nearest neighbors to i that were rated by user u
+- 考虑到不同的用户，对于不同的物品，都有不同的打分偏置；所以需要做归一化与偏置矫正。rate bias：\\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\\)，\\(s_k(i,u)\\) is k-nearest neighbors to i that were rated by user u。
+
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png)
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_item_bias.png)
 
 - item-based计算流程：
+
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png)
 
 #### Association rules(关联规则)
@@ -61,10 +68,10 @@ Estimate a utility function that automatically predicts how a user will like an 
 
 - 关联规则面向的是transaction，而User-based or Item based面向的是用户偏好（评分），协同过滤在计算相似商品的过程中可以使用关联规则分析。具体请参考[协同过滤和关联规则分析的区别是什么](http://www.zhihu.com/question/22404652)
 
-#### 总结
+#### Memory-based CF总结
 - Problem: sparsity，scalability
-	- 利用latent models做降维。Methods of dimensionality reduction: Matrix Factorization, Clustering，Projection(PCA) ...
-	- 瓶颈点：相关性计算。将最近邻产生与预测分为两个步骤，其中相关性计算时间复杂度很高。
+	- 针对sparsity，可以利用latent models做降维。Methods of dimensionality reduction: Matrix Factorization, Clustering，Projection(PCA) ...
+	- scalability瓶颈点：相关性计算。将最近邻产生与预测分为两个步骤，其中相关性计算时间复杂度很高。
 
 - 个人总结，一般来讲，item-based方法更好用，因为item之间的similarity是相对静态，但user之间的similarity相对动态。当item base is smaller than user or changes rapidly时，采用user-based方法更合适；相反，当user base is small时，Item-based方法更合适；
 
@@ -81,7 +88,7 @@ Estimate a utility function that automatically predicts how a user will like an 
 	- 先写出loss function，再利用SGD or Alternating least squares求解
 		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function.png)
 
-		增加bias后：
+		增加bias后的目标优化函数(loss function)：
 		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function_bias.png)
 
 		关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。
@@ -97,9 +104,12 @@ Estimate a utility function that automatically predicts how a user will like an 
 	除了在SVD中定义的向量外，每个item对应一个向量yi，来通过user隐含回馈过的item的集合来刻画用户的偏好。
 
 	$$\hat{r}_{ui} = \mu + b_i + b_u + q_i^T (p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i)$$
+
 	其中， R(u) 代表user隐含回馈（打分过的）过的item的集合。
 	可以看到，现在user被建模为\\( p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i \\)，
+
 	具体请参考[文章SVD/SVD++](http://www.superchun.com/machine-learning/svd1.html)，[论文Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model](http://research.yahoo.com/files/kdd08koren.pdf)
+
 - SVDfeature
 
 	[SVDFeature: A Toolkit for Feature-based Collaborative Filtering](http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf)
@@ -115,20 +125,26 @@ Estimate a utility function that automatically predicts how a user will like an 
 	- [NMF](http://www.csie.ntu.edu.tw/~cjlin/nmf/)
 
 #### RBM
+
 [论文 Restricted Boltzmann Machines for Collaborative Filtering]()
 
 #### Clustering
+
 将用户聚类后，再基于传统CF的方法(此时user不是单独的用户，而是cluster)
 
 #### Locality-sensitive hashing
+
 - Method for grouping similar items in highly dimensional spaces；
 - Find a hashing function s.t. similar items are grouped in the same buckets;
+- 可以参考站内文章[矩阵相似度计算](http://zzbased.github.io/2015/01/01/matrix-similarity.html)
 
 #### Classifiers
-Classifiers can be used in CF and CB Recommenders。优点：可以和其他方法结合使用。缺点是：需要一份训练集。
+Classifiers can be used in CF and CB Recommenders。
+优点：可以和其他方法结合使用。缺点是：需要一份训练集。
 
 ### Content-based Recommenders
-item/user profiles, category, tag/keyword
+
+这里可以利用众多自然语言处理技术，分别建立用户/Item画像(category, tag/keyword，topic等)，然后基于两者画像做相关性计算。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/content_based.png)
 
@@ -139,6 +155,7 @@ item/user profiles, category, tag/keyword
 - Learning to rank is a key element for personalization
 - Treat the problem as a standard supervised classification problem
 - [Ranklib code](http://people.cs.umass.edu/~vdang/ranklib.html)，[svmlight](http://svmlight.joachims.org)
+
 - Pointwise
 	- Ranking score based on regression or classification
 	- LR, SVM, GBDT, McRank ...
@@ -155,7 +172,7 @@ item/user profiles, category, tag/keyword
 #### Context-aware Recommendations
 - [论文Context-Aware Recommender Systems](http://ids.csom.umn.edu/faculty/gedas/NSFCareer/CARS-chapter-2010.pdf)
 
-- R: User * Item -> Rating    比较  R: User * Item * Context -> Rating
+- 从[R: User * Item -> Rating] 到 [R: User * Item * Context -> Rating]
 
 - 传统推荐过程框图
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/general-recommender.png)
@@ -178,6 +195,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 - [Recommending music on Spotify with deep learning](http://benanne.github.io/2014/08/05/spotify-cnns.html)
 
 #### Similarity: graph-based similarity(simrank)
+
 - Graph-based similarities
 	- SimRank: two objects are similar if they are referenced by similar objects
 	- [论文 SimRank](http://www-cs-students.stanford.edu/~glenj/simrank.pdf)
@@ -207,6 +225,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 - [推荐算法总结](http://blog.csdn.net/oopsoom/article/details/33740799)
 
 常用推荐算法点评(by 陈运文)
+
 - Item-based collaborative filtering
 	- 应用最为广泛的方法
 	- 存在各种计算方法的改进;但Similarity计算随意性大
@@ -219,6 +238,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 - Statistics-based
 	- 简陋,直观,非个性化,被大量使用
 	- 可用于补足策略
+
 ### 效果评估
 - MAP/nDCG: top-N推荐
 - RMSE/MAE: 评分预测问题
@@ -246,7 +266,6 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 - 电台的音乐推荐：必须使用一个算法系统（其中包含多个算法）来针对不同的用户进行不同的算法调度
 
 ### [年终总结 & 算法数据的思考 by 飞林沙](http://www.douban.com/note/472267231/)
-
 
 ### [世纪佳缘用户推荐系统的发展历史](https://breezedeus.github.io/2015/01/31/breezedeus-review-for-year-2014-tech.html)
 
@@ -303,8 +322,6 @@ Flink实例！用Flink和GAE做面向大规模数据集的协同推荐，从中�
 ### [推荐系统中所使用的混合技术介绍](http://www.52ml.net/318.html)
 系统架构层面一般使用多段组合混合推荐框架，算法层面则使用加权型混合推荐技术，包括LR、RBM、GBDT系列。此外还介绍分级型混合推荐技术，交叉调和技术，瀑布型混合方法，推荐基础特征混合技术，推荐模型混合技术，整体式混合推荐框架等。
 
-
-
 ### [CIKM Competition数据挖掘竞赛夺冠算法陈运文](http://www.52nlp.cn/cikm-competition-topdata)
 该文讲述的不是推荐算法，而是一个分类问题，不过也有一些对我个人有启发的地方：
 
@@ -327,6 +344,12 @@ Flink实例！用Flink和GAE做面向大规模数据集的协同推荐，从中�
 
 Justin:online match + online learning works very well
 赞processing stack。我们最近在豆瓣fm上也做了online learning，improve10个点左右
+
+### [Google News Personalization: Scalable Online Collaborative Filtering](http://www2007.org/papers/paper570.pdf)
+- 推荐的结果是三个算法的融合，即MinHash, PLSI, covisitation。融合的方式是分数线性加权。
+- 一个主要的思想是“online”的进行更新，所以这个地方一定要减少规模，索引使用了User Clustering的算法，包括Min Hash和PLSI。在新数据来的时候，关键是不要去更新User Cluster，而是直接更新所属的Cluster对于URL的点击数据。对于新用户，使用covisitation的方法进行推荐
+- [Personalized News Recommendation Based on Click Behavior](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.308.3087&rep=rep1&type=pdf)
+- [The YouTube video recommendation system]()
 
 ## 推荐系统总结
 
@@ -391,21 +414,23 @@ Justin:online match + online learning works very well
 	- 索引的查询与合并
 
 
-### 个人总结
+### 总结
 - 技术目标要正确。
+
+	举个例子，搜索广告中的关键词推荐，技术目标是什么？是相关性足够好，还是采用率够高，或者是广告主采用后收益高。这里首先需要确定好，如果优化目标错误了，那接下来的工作都要打折扣。假设关键词推荐的技术目标是：推荐采用率最高且产生推广效果最佳的词。那么在做推荐时，可以用一个模型解决上述目标，也可以用多个模型。一般情况下，将优化目标拆分成多个模型，将减小复杂度。譬如在关键词推荐里，就有三个模型：相关性模型、采用率模型和推广效果模型。
 
 	1. 首先要定义好什么叫”好的推荐“，这是解决任何一个技术问题的前提。
 	2. 在有了明确的定义之后，实际问题一般会蜕变为一个优化问题，用数学工具给出它最好的解答。
 	3. 数学上的解答可能在技术上无法实现，或者说有可能复杂度太高，那么需要一个比较好的近似解。不要小看这一步，大部分问题出在这里。
 	4. 迭代改进。算法实现以后可能实际表现与预想的不同，需要重新定义”好的推荐“。这样一个周期下来，推荐效果应当有肉眼可见的改进。
 
-- 推荐算法选择
+- 推荐算法选择，要根据数据来做选择。
 	- 各取所长，互相补充
 	- 算法无好坏之分，只有是否合适
 
 - [Recommendation Systems: What developments have occurred in recommender systems after the Netflix Prize?](http://www.quora.com/Recommendation-Systems/What-developments-have-occurred-in-recommender-systems-after-the-Netflix-Prize/answer/Xavier-Amatriain?srid=z0Q5&share=1)
 
-	 在 Quora 上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入，评分预测已经不是主流，LTR的应用会更符合推荐的初衷等
+	下面是Xavier Amatriain在Quora上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入。其中他谈到，评分预测已经不是主流，LTR的应用会更符合推荐的初衷。
 
 	- Implicit feedback from usage has proven to be a better and more reliable way to capture user preference.
 	- Rating prediction is not the best formalization of the "recommender problem". Other approaches, and in particular personalized Learning to Rank, are much more aligned with the idea of recommending the best item for a user.
@@ -428,40 +453,5 @@ Justin:online match + online learning works very well
 9. [Recommender System video. MLSS14](http://videolectures.net/kdd2014_amatriain_mobasher_recommender_problem/)
 10. [Context Aware Recommendation. Bamshad Mobasher](http://www.kdd.org/kdd2014/tutorials/KDD-%20The%20RecommenderProblemRevisited-Part2.pdf)
 11. [KDD - The Recommender Problem Revisited](http://www.kdd.org/kdd2014/tutorials/KDD%20-%20The%20Recommender%20Problem%20Revisited.pdf)
-
-### 其他参考文献
-[link](http://blog.sina.com.cn/s/blog_804abfa70101btrv.html)
-
-这个资料分享主要分享的都是非学术的Paper，都来自商业公司，Google, YouTube, Amazon, LinkedIn等等。
-我个人非常喜欢这些文章，基本上，这些文章描述的都是在系统中的实际能工作的东西。
-
-这个是Google的一篇论文http://t.cn/zl0zxPZ这个里面有很多有意思的想法。
-推荐的结果是三个算法的融合，即MinHash, PLSI, covisitation.
-融合的方式是分数线性加权
-一个主要的思想是“online”的进行更新，所以这个地方一定要减少规模，索引使用了User Clustering的算法，包括Min Hash和PLSI。
-在新数据来的时候，关键是不要去更新User Cluster，而是直接更新所属的Cluster对于URL的点击数据
-对于新用户，使用covisitation的方法进行推荐
-
-这个是上一篇Paper的进阶paper。 http://t.cn/zl0zqDO
-这篇Paper在上一篇的基础上增加了一些内容，主要包括Topic部分的内容，Google News是有Topic信息的。
-这篇Paper通过用户喜欢的Topic这个信息以及Topic Trend这个信息一起进行分析。
-热门的topic会被更多的展现给用户，其中用户只会看到他喜欢的Topic
-这个方法和上面的方法相比，可能对于解决热门News的问题，有更大的帮助
-
-这个是Youtube的文章 vdisk.weibo.com/s/fcbuu
-这篇Paper的的方法更直观，它只使用了covisitation的信息，但是对于covisitation的方法做了N次扩展，即找一个Seed的多次邻居。
-在这个的基础上，做了一些后处理的工作，尤其是Diversity的工作
-
- 这个是对于Amazon商品推荐算法的一个Paper的翻译版
-http://blog.sina.com.cn/s/blog_586631940100pduh.html
-  这个Paper比较老了，但是是item-Based推荐的经典文章了。
-这个是IBM的两位同学对于推荐的一个综述，属于入门级的，看看也不错。
-  http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy1/index.html
-这个比较有营养，是高级货，是LinkedIn的兄弟们在KDD2012上发布的，有用！进阶以后值得看看，尤其是搞真系统的。http://t.cn/zl0ZTN1
-这个更是高级货了，Recommendations as a Conversation with the User
-这个的角度更多的是推荐系统的HCI设计，前面是一堆哲学，看不懂可以跳过，后面的例子还是比较给力的。有几个数字很给力：
-Amazon: 35% of sales result from recommendations
-75% of Netflix views result from recommendations
-
-
-
+12. [推荐系统的资料分享](http://blog.sina.com.cn/s/blog_804abfa70101btrv.html)，里面分享的几篇文章值得一看
+13. [精准定向的广告系统 yiwang](http://www.docin.com/p-936085086.html)
