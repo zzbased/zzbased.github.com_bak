@@ -18,6 +18,7 @@
   <body>
 
     <header class="site-header">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
   <div class="wrapper">
 
@@ -62,17 +63,21 @@
   </header>
 
   <article class="post-content">
-    <h2>mac电脑上eclipse设置</h2>
+    <h2 id="maceclipse">mac电脑上eclipse设置</h2>
 
 <ol>
-<li><p>首先是下载最新的jdk. 下载安装后，并设置环境变量：
-export JAVA<em>HOME=&quot;/Library/Java/JavaVirtualMachines/jdk1.7.0</em>51.jdk/Contents/Home/&quot;
-export PATH=&quot;$JAVA<em>HOME/bin:$PATH&quot;
-export CLASSPATH=&quot;.:$JAVA</em>HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar&quot;</p></li>
-<li><p>再下载eclipse，本来以为可以直接启动了。发现还不行，经搜索发现：
+  <li>
+    <p>首先是下载最新的jdk. 下载安装后，并设置环境变量：
+export JAVA_HOME=”/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/”
+export PATH=”$JAVA_HOME/bin:$PATH”
+export CLASSPATH=”.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar”</p>
+  </li>
+  <li>
+    <p>再下载eclipse，本来以为可以直接启动了。发现还不行，经搜索发现：
 <a href="http://blog.csdn.net/qysh123/article/details/16930143">在OS X Mavericks中不能启动Eclipse的解决方法</a> 介绍说还要再下载一个java for osx。
 <a href="http://support.apple.com/kb/DL1572?viewlocale=en_US&amp;locale=en_US">下载地址</a>
-暂时还不清楚这个和oracle官网的有啥不同的地方。</p></li>
+暂时还不清楚这个和oracle官网的有啥不同的地方。</p>
+  </li>
 </ol>
 
   </article>

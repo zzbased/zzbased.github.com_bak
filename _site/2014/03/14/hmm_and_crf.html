@@ -18,6 +18,7 @@
   <body>
 
     <header class="site-header">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
   <div class="wrapper">
 
@@ -64,18 +65,18 @@
   <article class="post-content">
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<h2>HMM与CRF</h2>
+<h2 id="hmmcrf">HMM与CRF</h2>
 
 <p>看到语音识别的时候，觉得是该找个机会把HMM与CRF相关的知识点做一个总结了。
 之前看过很多这方面的文章，但都是零零碎碎的，没有形成知识体系。</p>
 
-<h3>推荐文章</h3>
+<h3 id="section">推荐文章</h3>
 
 <p>首先推荐几篇文章：</p>
 
 <p><a href="http://www.scai.fraunhofer.de/fileadmin/images/bio/data_mining/paper/crf_klinger_tomanek.pdf">classical probabilistic model and conditional random field</a></p>
 
-<p><a href="http://people.cs.umass.edu/%7Emccallum/papers/crf-tutorial.pdf">An Introduction to Conditional Random Fields for Relational Learning</a></p>
+<p><a href="http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf">An Introduction to Conditional Random Fields for Relational Learning</a></p>
 
 <p><a href="http://1.guzili.sinaapp.com/?p=133#comment-151">隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系</a></p>
 
@@ -83,85 +84,131 @@
 
 <p><a href="http://www.isnowfy.com/introduction-to-chinese-segmentation/">浅谈中文分词</a></p>
 
-<h3>模型之间的联系</h3>
-
+<h3 id="section-1">模型之间的联系</h3>
 <p>从下面两张图看各个模型之间的联系：</p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm1.png" alt="crf_hmm1"></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm1.png" alt="crf_hmm1" /></p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm2.png" alt="crf_hmm2"></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm2.png" alt="crf_hmm2" /></p>
 
-<h3>生成模型与判别模型</h3>
+<h3 id="section-2">生成模型与判别模型</h3>
 
-<h4>生成模型，Generative Model</h4>
-
-<ul>
-<li>假设o是观察值，q是模型。如果对P(o|q)建模，就是Generative模型。</li>
-<li>其基本思想是首先建立样本的概率密度模型，再利用模型进行推理预测。一般建立在统计力学和bayes理论的基础之上。</li>
-<li>估计的是联合概率分布（joint probability distribution），p(class, context)=p(class|context)*p(context)。</li>
-<li>代表：Gaussians，Naive Bayes，HMMs，Bayesian networks，Markov random fields</li>
-</ul>
-
-<h4>判别模型，Discriminative Model</h4>
+<h4 id="generative-model">生成模型，Generative Model</h4>
 
 <ul>
-<li>假设o是观察值，q是模型。如果对条件概率(后验概率) P(q|o)建模，就是Discrminative模型。</li>
-<li>基本思想是有限样本条件下建立判别函数，不考虑样本的产生模型，直接研究预测模型。代表性理论为统计学习理论。</li>
-<li>估计的是条件概率分布(conditional distribution)， p(class|context)。利用正负例和分类标签，focus在判别模型的边缘分布。目标函数直接对应于分类准确率。</li>
-<li>代表：logistic regression，SVMs，neural networks，Conditional random fields(CRF)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>假设o是观察值，q是模型。如果对P(o</td>
+          <td>q)建模，就是Generative模型。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>其基本思想是首先建立样本的概率密度模型，再利用模型进行推理预测。一般建立在统计力学和bayes理论的基础之上。</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>估计的是联合概率分布（joint probability distribution），p(class, context)=p(class</td>
+          <td>context)*p(context)。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>代表：Gaussians，Naive Bayes，HMMs，Bayesian networks，Markov random fields</li>
 </ul>
 
-<h3>隐马尔科夫模型</h3>
+<h4 id="discriminative-model">判别模型，Discriminative Model</h4>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>假设o是观察值，q是模型。如果对条件概率(后验概率) P(q</td>
+          <td>o)建模，就是Discrminative模型。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>基本思想是有限样本条件下建立判别函数，不考虑样本的产生模型，直接研究预测模型。代表性理论为统计学习理论。</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>估计的是条件概率分布(conditional distribution)， p(class</td>
+          <td>context)。利用正负例和分类标签，focus在判别模型的边缘分布。目标函数直接对应于分类准确率。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>代表：logistic regression，SVMs，neural networks，Conditional random fields(CRF)</li>
+</ul>
+
+<h3 id="section-3">隐马尔科夫模型</h3>
 
 <p>隐马尔科夫模型是由初始状态概率向量，状态转移概率矩阵，观测概率矩阵决定。</p>
 
 <p>隐马尔科夫模型做了两个基本假设：</p>
 
 <ul>
-<li>齐次马尔科夫性假设：假设隐藏的马尔科夫链在任意时刻t的状态只依赖于其前一个时刻，与其他时刻的状态和观测无关。</li>
-<li>观测独立性假设：假设任意时刻的观测只依赖于该时刻的马尔科夫链的状态，与其他观测及状态无关。</li>
+  <li>齐次马尔科夫性假设：假设隐藏的马尔科夫链在任意时刻t的状态只依赖于其前一个时刻，与其他时刻的状态和观测无关。</li>
+  <li>观测独立性假设：假设任意时刻的观测只依赖于该时刻的马尔科夫链的状态，与其他观测及状态无关。</li>
 </ul>
 
 <p>三个基本问题：</p>
 
 <ul>
-<li>概率计算问题。给定模型和观测系列，计算在模型下观测系列出现的概率。
+  <li>概率计算问题。给定模型和观测系列，计算在模型下观测系列出现的概率。
 前向-后向算法。</li>
-<li>学习问题。已知观测系列，估计模型参数，使得该模型下观测系列概率最大。
+  <li>学习问题。已知观测系列，估计模型参数，使得该模型下观测系列概率最大。
 EM算法，Baum-Welch算法。</li>
-<li>预测问题，也称解码问题。已知模型和观测系列，求对给定观测系列条件概率P(I|O)最大的状态系列。
+  <li>预测问题，也称解码问题。已知模型和观测系列，求对给定观测系列条件概率P(I|O)最大的状态系列。
 Viterbi算法。</li>
 </ul>
 
 <p>为什么是生成模型？
-$$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
+<script type="math/tex">P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)</script>
 从上面公式可以看出，这是生成模型。
 而观测系列的生成，与LDA的生成过程类似。</p>
 
-<h3>条件随机域，CRF</h3>
-
+<h3 id="crf">条件随机域，CRF</h3>
 <ul>
-<li><a href="http://blog.csdn.net/gududanxing/article/details/10827085">CRF++学习</a></li>
-<li><a href="https://jianqiangma.wordpress.com/2011/11/14/%E4%B8%89%E7%A7%8Dcrf%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83/">三种CRF实现在中文分词任务上的表现比较</a></li>
-<li><a href="http://crfpp.googlecode.com/svn/trunk/doc/index.html?source=navbar">CRF++ library</a></li>
+  <li><a href="http://blog.csdn.net/gududanxing/article/details/10827085">CRF++学习</a></li>
+  <li><a href="https://jianqiangma.wordpress.com/2011/11/14/%E4%B8%89%E7%A7%8Dcrf%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83/">三种CRF实现在中文分词任务上的表现比较</a></li>
+  <li><a href="http://crfpp.googlecode.com/svn/trunk/doc/index.html?source=navbar">CRF++ library</a></li>
 </ul>
 
-<h3>对比</h3>
+<h3 id="section-4">对比</h3>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm1.png" alt="hmm1" /></p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm1.png" alt="hmm1"></p>
+<table>
+  <tbody>
+    <tr>
+      <td>上图是HMM的概率图，属生成模型。以P(Y,X)建模，即P(O，q) = P(q)P(O</td>
+      <td>q) 建模。</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>上图是HMM的概率图，属生成模型。以P(Y,X)建模，即P(O，q) = P(q)P(O|q) 建模。</p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf1.png" alt="crf1" /></p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf1.png" alt="crf1"></p>
+<table>
+  <tbody>
+    <tr>
+      <td>上图是CRF的概率图，属判别模型。以P(Y</td>
+      <td>X)建模。</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>上图是CRF的概率图，属判别模型。以P(Y|X)建模。</p>
-
-<h3>参考文献</h3>
-
+<h3 id="section-5">参考文献</h3>
 <ul>
-<li><a href="http://blog.csdn.net/xiahouzuoxin/article/details/26478179">Markdown中插入数学公式的方法</a></li>
-<li><a href="http://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">LaTeX/数学公式</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_5e16f1770100fs38.html">LaTeX数学公式输入初级</a></li>
+  <li><a href="http://blog.csdn.net/xiahouzuoxin/article/details/26478179">Markdown中插入数学公式的方法</a></li>
+  <li><a href="http://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">LaTeX/数学公式</a></li>
+  <li><a href="http://blog.sina.com.cn/s/blog_5e16f1770100fs38.html">LaTeX数学公式输入初级</a></li>
 </ul>
 
   </article>

@@ -37,11 +37,11 @@ tags: []
 
 一般采用拉格朗日方程，kkt，对偶问题求解。[关于拉格朗日乘子法与KKT条件](http://www.moozhi.com/topic/show/54a8a261c555c08b3d59d996)
 
-譬如svm里，最大化几何间隔 max y(wx+b)/||w||
+譬如svm里，最大化几何间隔 max y(wx+b)/\|\|w\|\|
 
 [支持向量机](http://blog.csdn.net/v_july_v/article/details/7624837)
 
-首先写出cost function：min [ 1/2*w^2 + max(0, 1 - y(wx+b) ) ]
+首先写出cost function：min [ 1/2*w^2 + max(0,1-y(wx+b)) ]
 
 可以看出，这是一个有约束的问题，那么就可以用到"拉普拉斯+KKT+对偶"来求解了。
 
@@ -85,6 +85,7 @@ $$\max{L(w)}=\max{\sum_{i=1}^n{-log[1+exp(-y_iw^Tx_i)]}}$$
 加上正则项后则是：
 
 $$\min_w \frac{1}{2}||w||^2+C\sum_{i=1}^{n}log[1+exp(-y_iw^Tx_i)]$$
+
 ### LR的MapReduce并行
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs.png)

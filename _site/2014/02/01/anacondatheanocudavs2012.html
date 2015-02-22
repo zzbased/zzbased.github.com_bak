@@ -18,6 +18,7 @@
   <body>
 
     <header class="site-header">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
   <div class="wrapper">
 
@@ -62,74 +63,69 @@
   </header>
 
   <article class="post-content">
-    <h2>anaconda+theano+cuda+vs2012编程环境搭建</h2>
+    <h2 id="anacondatheanocudavs2012">anaconda+theano+cuda+vs2012编程环境搭建</h2>
 
-<h3>一 基本概念介绍</h3>
+<h3 id="section">一 基本概念介绍</h3>
 
-<h4>1.1. anaconda：</h4>
-
+<h4 id="anaconda">1.1. anaconda：</h4>
 <p>一个python科学计算发行版，具体可以参考下面的网页：
-  <a href="http://blog.csdn.net/rumswell/article/details/8927603">目前比较流行的python科学计算发行包</a>。其中比较了python(x,y),winpython, anaconda, canopy, sage。</p>
-
-<h4>1.2. theana：</h4>
-
-<p>深度学习python包。
+  <a href="http://blog.csdn.net/rumswell/article/details/8927603">目前比较流行的python科学计算发行包</a>。其中比较了python(x,y),winpython, anaconda, canopy, sage。
+#### 1.2. theana：####
+深度学习python包。
   - <a href="https://github.com/Theano/Theano">theano github地址</a>
   - <a href="http://deeplearning.net/software/theano/">theano 官方首页</a>
   - <a href="http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html">theano 学习指南翻译</a></p>
 
-<h4>1.3. cuda:</h4>
+<h4 id="cuda">1.3. cuda:</h4>
 
 <p>nvidia gpu编程库</p>
 
-<h3>二 安装流程</h3>
+<h3 id="section-1">二 安装流程</h3>
+<p>####2.1	我的安装环境
+windows7 64bit. gpu是geforce gtx 660.</p>
 
-<h4>2.1 我的安装环境</h4>
-
-<p>windows7 64bit. gpu是geforce gtx 660.</p>
-
-<h4>2.2 cuda安装</h4>
-
+<h4 id="cuda-1">2.2 cuda安装</h4>
 <p>先安装cuda. 目前cuda的最新版是5.5，直接到官方网站下站即可。
   - <a href="https://developer.nvidia.com/cuda-downloads">cuda 下载地址</a>
   - <a href="http://blog.csdn.net/yeyang911/article/details/17450963">手把手教你cuda5.5与VS2010的编译环境搭建</a></p>
 
-<p>下载完后直接傻瓜安装。在我的机器上，我将其安装到&quot;D:\NVIDIA\CUDA&quot;目录。
+<p>下载完后直接傻瓜安装。在我的机器上，我将其安装到”D:\NVIDIA\CUDA”目录。
 安装完后，还要设置一些环境变量：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">CUDA_PATH   D:\NVIDIA\CUDA\CUDAToolkit
+
+<pre><code>CUDA_PATH   D:\NVIDIA\CUDA\CUDAToolkit
 CUDA_BIN_PATH　　%CUDA_PATH%\bin
 CUDA_LIB_PATH　　%CUDA_PATH%\lib\x64
 CUDA_SDK_PATH　　D:\NVIDIA\CUDA\CUDASamples
 CUDA_SDK_BIN　　%CUDA_SDK_PATH%\Bin\win64
 CUDA_SDK_LIB　　%CUDA_SDK_PATH%\common\lib\x64
 PATH   %CUDA_BIN_PATH%
-</code></pre></div>
+</code></pre>
+
 <p>安装结束后，可以验证一下cuda是否成功
-cd %CUDA<em>SDK</em>PATH%\Bin\win64\Release</p>
+cd %CUDA_SDK_PATH%\Bin\win64\Release</p>
 
 <p>执行deviceQuery.exe 和 bandwithTest.exe</p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ%E6%88%AA%E5%9B%BE20140128135238.png" alt="Image"></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ截图20140128135238.png" alt="Image" /></p>
 
 <p>ok, cuda安装成功</p>
 
-<h4>2.3 cuda+vs</h4>
-
+<h4 id="cudavs">2.3 cuda+vs</h4>
 <p>再接着按照上面教程所说，继续安装vs2010.
 cuda官网上有一篇安装教程：
 <a href="http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-microsoft-windows/">cuda+vs官网安装</a></p>
 
 <p>安装完后，根据下面文章的提示，还要设置一下nvcc.profile.
-<a href="http://stackoverflow.com/questions/2760374/why-cant-nvcc-find-my-visual-c-installation">Why can&#39;t nvcc find my Visual C++ installation?</a></p>
+<a href="http://stackoverflow.com/questions/2760374/why-cant-nvcc-find-my-visual-c-installation">Why can’t nvcc find my Visual C++ installation?</a></p>
 
 <p>Include this line
     compiler-bindir = C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin
 in
-    %CUDA<em>BIN</em>PATH%\nvcc.profile</p>
+    %CUDA_BIN_PATH%\nvcc.profile</p>
 
 <p>一开始，我安装是vs2010 express版本。
 但是在编译cuda sample时，
-例如这个例子： %CUDA<em>SDK</em>PATH%\1_Utilities\bandwidthTest
+例如这个例子： %CUDA_SDK_PATH%\1_Utilities\bandwidthTest
 用win32平台编译没有问题，可以正确执行，但是在clean操作时，会出现下面的错误。
 会出现错误： nvcc : fatal error : nvcc cannot find a supported version of Microsoft Visual Studio. Only the versions 2008, 2010, and 2012 are supported</p>
 
@@ -142,18 +138,16 @@ http://msdn.microsoft.com/en-us/library/vstudio/9yb4317s%28v=vs.110%29.aspx
 <a href="http://www.edencx.com/visualstudio2012.html">vs2012下载地址</a></p>
 
 <p>vs2012安装完成后，打开bandwidthTest，还有一点错误：
-说在这个目录下&quot;C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\BuildCustomizations&quot;找不到CUDA 5.5.props
-经过搜索，发现在D:\NVIDIA\CUDA\CUDAToolkit\extras\visual<em>studio</em>integration\MSBuildExtensions目录下有这个文件，于是把这个目录下的所有文件都拷到VS的BuildCustomizations目录下。</p>
+说在这个目录下”C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\BuildCustomizations”找不到CUDA 5.5.props
+经过搜索，发现在D:\NVIDIA\CUDA\CUDAToolkit\extras\visual_studio_integration\MSBuildExtensions目录下有这个文件，于是把这个目录下的所有文件都拷到VS的BuildCustomizations目录下。</p>
 
 <p>这样总算可以完整编译bandwidthTest工程，x64和win32平台都是ok的。</p>
 
-<h4>2.4 anaconda</h4>
-
+<h4 id="anaconda-1">2.4 anaconda</h4>
 <p>搞好cuda的环境后，再来安装anaconda。
    anaconda的安装相对简单。</p>
 
-<h4>2.5 theana</h4>
-
+<h4 id="theana">2.5 theana</h4>
 <p>安装完anaconda后，再按照下面文章所述安装theano.
   <a href="http://blog.csdn.net/yeyang911/article/details/16357133">64位WIN7上成功安装theano,并运行了g++, GPU</a>
   <a href="http://deeplearning.net/software/theano/install.html#windows-anaconda">官网上利用anaconda安装theano的介绍</a>
@@ -162,7 +156,8 @@ PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路�
 
 <p>在使用theano之前，还需要配置theano。
    在home目录[打开cmd时所显示的目录]下编辑.theanorc.txt。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[blas]
+
+<pre><code>[blas]
 ldflags =
 [gcc]
 cxxflags = -ID:\Anaconda\MinGW
@@ -174,15 +169,15 @@ base_compiledir=path_to_a_directory_without_such_characters
 [global]
 floatX = float32
 device = gpu
-</code></pre></div>
-<h3>三. 使用theano</h3>
+</code></pre>
 
-<h4>3.1 theano using the GPU</h4>
-
-<p><a href="http://deeplearning.net/software/theano/tutorial/using_gpu.html#using-gpu">官方using the gpu文档</a></p>
+<h3 id="theano">三. 使用theano</h3>
+<p>#### 3.1 theano using the GPU ####
+<a href="http://deeplearning.net/software/theano/tutorial/using_gpu.html#using-gpu">官方using the gpu文档</a></p>
 
 <p>下面是一个测试程序：</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">from theano import function, config, shared, sandbox
+
+<pre><code>from theano import function, config, shared, sandbox
 import theano.tensor as T
 import numpy
 import time
@@ -198,17 +193,19 @@ t0 = time.time()
 for i in xrange(iters):
     r = f()
 t1 = time.time()
-print &#39;Looping %d times took&#39; % iters, t1 - t0, &#39;seconds&#39;
-print &#39;Result is&#39;, r
+print 'Looping %d times took' % iters, t1 - t0, 'seconds'
+print 'Result is', r
 if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):
-    print &#39;Used the cpu&#39;
+    print 'Used the cpu'
 else:
-    print &#39;Used the gpu&#39;
-</code></pre></div>
+    print 'Used the gpu'
+</code></pre>
+
 <p>The program just computes the exp() of a bunch of random numbers. Note that we use the shared function to make sure that the input x is stored on the graphics device.</p>
 
 <p>在我的机器上，使用cpu执行是10多s. 而使用gpu则是0.5s左右。快了20多倍。</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">from theano import function, config, shared, sandbox, Out
+
+<pre><code>from theano import function, config, shared, sandbox, Out
 import theano.tensor as T
 import numpy
 import time
@@ -226,18 +223,18 @@ t0 = time.time()
 for i in xrange(iters):
     r = f()
 t1 = time.time()
-print &#39;Looping %d times took&#39; % iters, t1 - t0, &#39;seconds&#39;
-print &#39;Result is&#39;, r
-print &#39;Numpy result is&#39;, numpy.asarray(r)
+print 'Looping %d times took' % iters, t1 - t0, 'seconds'
+print 'Result is', r
+print 'Numpy result is', numpy.asarray(r)
 if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):
-    print &#39;Used the cpu&#39;
+    print 'Used the cpu'
 else:
-    print &#39;Used the gpu&#39;
-</code></pre></div>
+    print 'Used the gpu'
+</code></pre>
+
 <p>用上面这个程序，GPU执行，只需要0.01s。</p>
 
-<h4>3.2 DeepLearningTutorials</h4>
-
+<h4 id="deeplearningtutorials">3.2 DeepLearningTutorials</h4>
 <p>下载DeepLearningTutorials</p>
 
 <p><a href="https://github.com/lisa-lab/DeepLearningTutorials">DeepLearningTutorials</a></p>
@@ -246,7 +243,7 @@ else:
 
 <p>logistic_sgd.py
    执行结果：
-  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ%E6%88%AA%E5%9B%BE20140128152208.png" alt="Image"></p>
+  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ截图20140128152208.png" alt="Image" /></p>
 
   </article>
 

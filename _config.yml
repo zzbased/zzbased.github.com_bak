@@ -9,4 +9,4 @@ twitter_username: zero_based
 github_username:  zzbased
 
 # Build settings
-markdown: redcarpet  #kramdown
+markdown: kramdown  # http://www.eyeshalfclosed.com/blog/2013/07/29/which-markdown/

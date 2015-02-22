@@ -18,6 +18,7 @@
   <body>
 
     <header class="site-header">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
   <div class="wrapper">
 
@@ -64,16 +65,16 @@
   <article class="post-content">
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<h1>最优化方法</h1>
+<h1 id="section">最优化方法</h1>
 
 <p>一般我们接触到的最优化分为两类：</p>
 
 <ul>
-<li>无约束最优化</li>
-<li>有约束最优化</li>
+  <li>无约束最优化</li>
+  <li>有约束最优化</li>
 </ul>
 
-<h2>无约束最优化</h2>
+<h2 id="section-1">无约束最优化</h2>
 
 <p>通常对于无约束最优化，首先要判断是否为凸函数。</p>
 
@@ -81,17 +82,17 @@
 
 <p><a href="http://www.cnblogs.com/daniel-D/p/3377840.html">机器学习中导数最优化方法</a></p>
 
-<p><a href="http://cseweb.ucsd.edu/%7Eelkan/250B/logreg.pdf">最大似然、逻辑回归和随机梯度训练</a></p>
+<p><a href="http://cseweb.ucsd.edu/~elkan/250B/logreg.pdf">最大似然、逻辑回归和随机梯度训练</a></p>
 
-<h3>梯度下降法</h3>
+<h3 id="section-2">梯度下降法</h3>
 
-<h3>牛顿法</h3>
+<h3 id="section-3">牛顿法</h3>
 
-<h3>拟牛顿法</h3>
+<h3 id="section-4">拟牛顿法</h3>
 
-<h3>共轭梯度法</h3>
+<h3 id="section-5">共轭梯度法</h3>
 
-<h2>有约束最优化</h2>
+<h2 id="section-6">有约束最优化</h2>
 
 <p>一般采用拉格朗日方程，kkt，对偶问题求解。<a href="http://www.moozhi.com/topic/show/54a8a261c555c08b3d59d996">关于拉格朗日乘子法与KKT条件</a></p>
 
@@ -99,65 +100,65 @@
 
 <p><a href="http://blog.csdn.net/v_july_v/article/details/7624837">支持向量机</a></p>
 
-<p>首先写出cost function：min [ 1/2*w^2 + max(0, 1 - y(wx+b) ) ]</p>
+<p>首先写出cost function：min [ 1/2*w^2 + max(0,1-y(wx+b)) ]</p>
 
-<p>可以看出，这是一个有约束的问题，那么就可以用到&quot;拉普拉斯+KKT+对偶&quot;来求解了。</p>
+<p>可以看出，这是一个有约束的问题，那么就可以用到”拉普拉斯+KKT+对偶”来求解了。</p>
 
-<h2>最优化算法的并行化</h2>
+<h2 id="section-7">最优化算法的并行化</h2>
 
-<h3>Logistic Regression</h3>
+<h3 id="logistic-regression">Logistic Regression</h3>
 
 <p>这里主要以Logistic regression为例，讲一讲最优化算法的并行化实现。</p>
 
 <p>先看一下Logistic regression的损失函数：</p>
 
 <p>Logistic函数（或称为Sigmoid函数）：
-$$sigmoid(z)=\frac{1}{1+e^{-z}}$$</p>
+<script type="math/tex">sigmoid(z)=\frac{1}{1+e^{-z}}</script></p>
 
 <p>对于线性回归来说，其分类函数为：
-$$h(x)=w<em>0+\sum</em>{i=1}^p{w<em>ix</em>i}=w^Tx$$
+<script type="math/tex">h(x)=w_0+\sum_{i=1}^p{w_ix_i}=w^Tx</script>
 其中p是输入向量x的维度，也就是特征向量维度；w是特征权重向量。</p>
 
 <p>逻辑回归本质上是一个被logistic函数归一化后的线性回归，即在特征到结果的映射中加入了一层sigmoid函数映射。相比于线性回归，模型输出取值范围为[0，1]，</p>
 
 <p>如果y的取值是0或1，定义事件发生的条件概率为：
-$$P(y=1|x)=\pi(x)=\frac{1}{1+exp(-h(x))}$$</p>
+<script type="math/tex">P(y=1|x)=\pi(x)=\frac{1}{1+exp(-h(x))}</script></p>
 
 <p>定义事件不发生的条件概率为：
-$$P(y=0|x)=1-P(y=1|x)=\frac{1}{1+exp(h(x))}$$</p>
+<script type="math/tex">P(y=0|x)=1-P(y=1|x)=\frac{1}{1+exp(h(x))}</script></p>
 
-<p>假设有n个观测样本，分别为：(\(x<em>1\),\(y</em>1\))，(\(x<em>2\),\(y</em>2\)) ... (\(x<em>n\),\(y</em>n\))。</p>
+<p>假设有n个观测样本，分别为：(\(x_1\),\(y_1\))，(\(x_2\),\(y_2\)) … (\(x_n\),\(y_n\))。</p>
 
-<p>得到一个观测值(\(x<em>i\),\(y</em>i\))的概率为：
-$$P(y<em>i)=p</em>i^{y<em>i}(1-p</em>i)^{1-y<em>i}$$  其中\(p</em>i=P(y<em>i=1|x</em>i)=\pi(x_i)\)</p>
+<p>得到一个观测值(\(x_i\),\(y_i\))的概率为：
+<script type="math/tex">P(y_i)=p_i^{y_i}(1-p_i)^{1-y_i}</script>  其中\(p_i=P(y_i=1|x_i)=\pi(x_i)\)</p>
 
 <p>由于各项观测独立，所以它们的联合分布可以表示为各边际分布的乘积：
-$$l(w)=\prod<em>{i=1}^n{p</em>i^{y<em>i}(1-p</em>i)^{1-y_i}}$$</p>
+<script type="math/tex">l(w)=\prod_{i=1}^n{p_i^{y_i}(1-p_i)^{1-y_i}}</script></p>
 
 <p>对上述函数取对数，根据最大似然估计，得到最优化目标为：
-$$\max{L(w)}=\max{log[l(w)]}=\max{\sum<em>{i=1}^n{y</em>i<em>log[\pi(x<em>i)] + (1-y</em>i)</em>log[1-\pi(x_i)]}}$$
+<script type="math/tex">\max{L(w)}=\max{log[l(w)]}=\max{\sum_{i=1}^n{y_i*log[\pi(x_i)] + (1-y_i)*log[1-\pi(x_i)]}}</script>
 而如果y的取值是1或-1，则最优化目标为：</p>
 
-<p>$$\max{L(w)}=\max{\sum<em>{i=1}^n{-log[1+exp(-y</em>iw^Tx_i)]}}$$</p>
+<script type="math/tex; mode=display">\max{L(w)}=\max{\sum_{i=1}^n{-log[1+exp(-y_iw^Tx_i)]}}</script>
 
 <p>加上正则项后则是：</p>
 
-<p>$$\min<em>w \frac{1}{2}||w||^2+C\sum</em>{i=1}^{n}log[1+exp(-y<em>iw^Tx</em>i)]$$</p>
+<script type="math/tex; mode=display">\min_w \frac{1}{2}||w||^2+C\sum_{i=1}^{n}log[1+exp(-y_iw^Tx_i)]</script>
 
-<h3>LR的MapReduce并行</h3>
+<h3 id="lrmapreduce">LR的MapReduce并行</h3>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs.png" alt="" /></p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs_two_loops.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs_two_loops.png" alt="" /></p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs_two_loops_vf.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs_two_loops_vf.png" alt="" /></p>
 
 <ul>
-<li><a href="http://www.csie.ntu.edu.tw/%7Ecjlin/libsvmtools/distributed-liblinear/">Distributed LIBLINEAR</a></li>
-<li><a href="http://nips.cc/Conferences/2014/Program/event.php?ID=4831">Large scale learning spotlights</a></li>
+  <li><a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/">Distributed LIBLINEAR</a></li>
+  <li><a href="http://nips.cc/Conferences/2014/Program/event.php?ID=4831">Large scale learning spotlights</a></li>
 </ul>
 
-<h2>Loss Function</h2>
+<h2 id="loss-function">Loss Function</h2>
 
 <p><a href="http://web.mit.edu/lrosasco/www/publications/loss.pdf">loss.pdf</a></p>
 

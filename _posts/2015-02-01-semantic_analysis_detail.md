@@ -8,8 +8,6 @@ tags: [machine learning, nlp]
 
 author: vincentyao@tencent.com
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 语义分析，本文指运用各种机器学习方法，挖掘与学习文本、图片等的深层次概念。wikipedia上的解释：In machine learning, semantic analysis of a corpus is the task of building structures that approximate concepts from a large set of documents(or images)。
 
 工作这几年，陆陆续续实践过一些项目，有搜索广告，社交广告，微博广告，品牌广告，内容广告等。要使我们广告平台效益最大化，首先需要理解用户，Context(将展示广告的上下文)和广告，才能将最合适的广告展示给用户。而这其中，就离不开对用户，对上下文，对广告的语义分析，由此催生了一些子项目，例如文本语义分析，图片语义理解，语义索引，短串语义关联，用户广告语义匹配等。
@@ -52,13 +50,15 @@ author: vincentyao@tencent.com
 #### 1.2 语言模型
 前面在讲"全切分分词"方法时，提到了语言模型，并且通过语言模型，还可以引出词向量，所以这里把语言模型简单阐述一下。
 
-语言模型是用来计算一个句子产生概率的概率模型，即\\(P(w_1,w_2,w_3...w_m) \\)，m表示词的总个数。根据贝叶斯公式，\\(P(w_1,w_2,w_3 ... w_m) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) ... P(w_m|w_1,w_2 ... w_{m-1})\\)。
+语言模型是用来计算一个句子产生概率的概率模型，即\\(P(w_1,w_2,w_3...w_m)\\)，m表示词的总个数。根据贝叶斯公式：\\(P(w_1,w_2,w_3 ... w_m) = P(w_1)P(w_2\|w_1)P(w_3\|w_1,w_2) ... P(w_m\|w_1,w_2 ... w_{m-1})\\)。
 
-最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生\\(w_m\\)这个词的条件概率只依赖于前n-1个词，则有\\(P(w_m|w_1,w_2...w_{m-1}) = P(w_m|w_{m-n+1},w_{m-n+2} ... w_{m-1})\\)。其中n越大，模型可区别性越强，n越小，模型可靠性越高。
+最简单的语言模型是N-Gram，它利用马尔科夫假设，认为句子中每个单词只与其前n-1个单词有关，即假设产生w_m这个词的条件概率只依赖于前n-1个词，则有 `\(P(w_m \|w_1,w_2...w_{m-1}) = P(w_m \|w_{m-n+1},w_{m-n+2} ... w_{m-1})\)`。
+
+其中n越大，模型可区别性越强，n越小，模型可靠性越高。
 
 N-Gram语言模型简单有效，但是它只考虑了词的位置关系，没有考虑词之间的相似度，词法和词语义，并且还存在数据稀疏的问题，所以后来，又逐渐提出更多的语言模型，例如Class-based ngram model，topic-based ngram model，cache-based ngram model，skipping ngram model，指数语言模型（最大熵模型，条件随机域模型）等。若想了解更多请参考文章[18]。
 
-最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词\\(w_{m-n+1},w_{m-n+2} ... w_{m-1}\\)映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\\(P(w_m)\\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。
+最近，随着深度学习的兴起，神经网络语言模型也变得火热[4]。用神经网络训练语言模型的经典之作，要数Bengio等人发表的《A Neural Probabilistic Language Model》[3]，它也是基于n-gram的，首先将每个单词 \\(w_{m-n+1},w_{m-n+2} ... w_{m-1}\\) 映射到词向量空间，再把各个单词的词向量组合成一个更大的向量作为神经网络输入，输出是\\(P(w_m)\\)。本文将此模型简称为ffnnlm（Feed-forward Neural Net Language Model）。ffnnlm解决了传统n-gram的两个缺陷：(1)词语之间的相似性可以通过词向量来体现；(2)自带平滑功能。文献[3]不仅提出神经网络语言模型，还顺带引出了词向量，关于词向量，后文将再细述。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ffnnlm.png)
 
@@ -154,7 +154,7 @@ LDA的推导这里略过不讲，具体请参考文献[64]。下面我们主要�
 - Step2: 遍历训练语料，按照概率公式(下图所示)重新采样每个词所对应的topic, 更新N(t,d)和N(w,t)的计数。
 - Step3: 重复 step2，直到模型收敛。
 
-对文档d中词w的主题z进行重新采样的公式有非常明确的物理意义，表示为P(w|z)P(z|d)，直观的表示为一个“路径选择”的过程。
+对文档d中词w的主题z进行重新采样的公式有非常明确的物理意义，表示为P(w\|z)P(z\|d)，直观的表示为一个“路径选择”的过程。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lda_sampling.png)
 
@@ -392,10 +392,10 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 
 - 模型训练
 	- 模型选择：通常来说，常用的有监督模型已经足够了，譬如lr, svm, maxent, naive-bayes，决策树等。这些基本模型之间的效果差异不大，选择合适的即可。上一小节讲到cnn时，提到深度神经网络也可以用来做文本分类。深度神经网络相比较于传统方法，特征表示能力更强，还可以自学习特征。
-	- 语言模型也可用于分类，针对不同的label，训练两个不同的语言模型p+(x|y=+1)和p-(x|y=-1)。对于一个testcase x，求解r= p+(x|y=+1)/p-(x|y=-1)*p(y=+1)/p(y=-1)，如果r>1，则x属于label(+1)，否则x属于label(-1)。
+	- 语言模型也可用于分类，针对不同的label，训练两个不同的语言模型p+(x\|y=+1)和p-(x\|y=-1)。对于一个testcase x，求解r= p+(x\|y=+1)/p-(x\|y=-1)*p(y=+1)/p(y=-1)，如果r>1，则x属于label(+1)，否则x属于label(-1)。
 	- 模型的正则化：一般来说，L1正则化有特征筛选的作用，用得相对较多，除此外，L2正则化，ElasticNet regularization(L1和L2的组合)也很常用。
 	- 对于多分类问题，可以选择one-vs-all方法，也可以选择multinomial方法。两种选择各有各的优点，主要考虑有：并行训练multiple class model更复杂；不能重新训练 a subset of topics。
-	- model fine-tuning。借鉴文献[72]的思路(训练深度神经网络时，先无监督逐层训练参数，再有监督调优)，对于文本分类也可以采用类似思路，譬如可以先基于自提取的大规模训练数据训练一个分类模型，再利用少量的有标注训练数据对原模型做调优。下面这个式子是新的loss function，w是新模型参数，\\(w^0\\)是原模型参数，\\(l(w,b|x_i,y_i)\\)是新模型的likelihood，优化目标就是最小化"新模型参数与原模型参数的差 + 新模型的最大似然函数的负数 + 正则化项"。
+	- model fine-tuning。借鉴文献[72]的思路(训练深度神经网络时，先无监督逐层训练参数，再有监督调优)，对于文本分类也可以采用类似思路，譬如可以先基于自提取的大规模训练数据训练一个分类模型，再利用少量的有标注训练数据对原模型做调优。下面这个式子是新的loss function，w是新模型参数，\\(w^0\\)是原模型参数，\\(l(w,b\|x_i,y_i)\\)是新模型的likelihood，优化目标就是最小化"新模型参数与原模型参数的差 + 新模型的最大似然函数的负数 + 正则化项"。
 
 	$$min_{w,b} \frac{\delta}{2}||w-w^0||_2^2 - \frac{1-\delta}{n}\sum_{i=1}^nl(w,b|x_i,y_i) + \lambda(\alpha||w||_1+\frac{1-\alpha}{2}||w||_2^2)$$
 
@@ -476,6 +476,7 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 上面讲述的图片分类对图片语义的理解比较粗粒度，那么我们会想，是否可以将图片直接转化为一堆词语或者一段文本来描述。转化到文本后，我们积累相对深的文本处理技术就都可以被利用起来。
 
 ##### Image2text
+
 首先介绍一种朴素的基于卷积神经网络的image to text方法。
 
 - 首先它利用深度卷积神经网络和深度自动编码器提取图片的多层特征，并据此提取图片的visual word，建立倒排索引，产生一种有效而准确的图片搜索方法。
@@ -492,6 +493,7 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 另一个直观的想法，是否可以通过word embedding建立image与text的联系[26]。例如，可以先利用CNN训练一个图片分类器。每个类目label可以通过word2vec映射到一个embedding表示。对于一个新图片，先进行分类，然后对top-n类目label所对应的embedding按照权重(这里指这个类目所属的概率)相加，得到这个图片的embedding描述，然后再在word embedding空间里寻找与图片embedding最相关的words。
 
 ##### Image detection
+
 接下来再介绍下image detection。下图是一个image detection的示例，相比于图片分类，提取到信息将更加丰富。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/image_detection.png)

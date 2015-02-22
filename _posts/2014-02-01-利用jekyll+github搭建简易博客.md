@@ -44,6 +44,8 @@ tags: [blog, git]
 
 [在Github上搭建Jekyll博客和创建主题](http://yansu.org/2014/02/12/how-to-deploy-a-blog-on-github-by-jekyll.html)
 
+[Jekyll中使用MathJax](http://www.pkuwwt.tk/linux/2013-12-03-jekyll-using-mathjax/)
+
 - 在github上创建username.github.com目录。
 - 安装jekyll，然后jekyll new username.github.com，将这些内容git push到github。
 
