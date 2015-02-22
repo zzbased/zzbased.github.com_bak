@@ -5,6 +5,7 @@ description: ""
 category:
 tags: [machine learning, nlp]
 ---
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 author: vincentyao@tencent.com
 
