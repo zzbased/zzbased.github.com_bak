@@ -13,7 +13,7 @@ tags: [machine learning]
 
 推荐在计算广告上有很多的运用，这里计划把推荐算法总结一下。
 
-![](value_of_recommender.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png)
 
 ## 推荐算法介绍
 
@@ -39,20 +39,20 @@ Estimate a utility function that automatically predicts how a user will like an 
 先找最近邻user，再基于最近邻user预测。
 
 - User之间相似度计算
-	![](user_based_similarity.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_similarity.png)
 
 - Prediction for user i and items j：
-	![](user_based_prediction.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_prediction.png)
 
 #### Item-based
 先计算item similarity，再基于user rated items预测。
 
 - Normalization/Bias，rate bias：\\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\\)，\\(s_k(i,u)\\) is k-nearest neighbors to i that were rated by user u
-	![](cf_formula.png)
-	![](user_item_bias.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_item_bias.png)
 
 - item-based计算流程：
-	![](./item_similarity.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png)
 
 #### Association rules(关联规则)
 - 关联规则分析 (Association Rules，又称 Basket Analysis) 用于从大量数据中挖掘出有价值的数据项之间的相关关系。经典论文[Mining Association Rules between Sets of Items in Large Databases]()。关联规则解决的常见问题如：“如果一个消费者购买了产品A，那么他有多大机会购买产品B?”以及“如果他购买了产品C和D，那么他还将购买什么产品？”
@@ -73,16 +73,16 @@ Estimate a utility function that automatically predicts how a user will like an 
 #### SVD/MF
 - SVD
 	- U是user-factor矩阵，V是item-factor矩阵。
-		![](model_based_svd.png)
+		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/model_based_svd.png)
 
 	- 基于svd的rating过程：
-		![](svd_rating.png)
+		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_rating.png)
 
 	- 先写出loss function，再利用SGD or Alternating least squares求解
-		![](svd_object_function.png)
+		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function.png)
 
 		增加bias后：
-		![](svd_object_function_bias.png)
+		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function_bias.png)
 
 		关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。
 
@@ -104,9 +104,9 @@ Estimate a utility function that automatically predicts how a user will like an 
 
 	[SVDFeature: A Toolkit for Feature-based Collaborative Filtering](http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf)
 
-	![](svdfeature.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature.png)
 
-	![](svdfeature2.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature2.png)
 
 - 开源库，请参考[推荐系统开源软件列表汇总和点评](http://blog.csdn.net/cserchen/article/details/14231153)
 	- [libFM](http://www.libfm.org)，by Steffen Rendle。特点是实现了MCMC（Markov Chain Monte Carlo）优化算法，比常见的SGD（随即梯度下降）优化方法精度要高（当然也会慢一些）。
@@ -130,7 +130,7 @@ Classifiers can be used in CF and CB Recommenders。优点：可以和其他方�
 ### Content-based Recommenders
 item/user profiles, category, tag/keyword
 
-![](content_based.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/content_based.png)
 
 ### New approaches
 
@@ -150,7 +150,7 @@ item/user profiles, category, tag/keyword
 	- RankCosine: similarity between ranking list and ground truth as loss function
 	- Lambda Rank，ListNet，ListMLE，AdaRank，SVMap ...
 
-	![](learning_to_rank_compare.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/learning_to_rank_compare.png)
 
 #### Context-aware Recommendations
 - [论文Context-Aware Recommender Systems](http://ids.csom.umn.edu/faculty/gedas/NSFCareer/CARS-chapter-2010.pdf)
@@ -158,22 +158,22 @@ item/user profiles, category, tag/keyword
 - R: User * Item -> Rating    比较  R: User * Item * Context -> Rating
 
 - 传统推荐过程框图
-	![](general-recommender.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/general-recommender.png)
 
 - 将context纳入推荐系统后
-	![](context-recommender1.png)
-	![](context-recommender2.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender1.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender2.png)
 
 - 两种方法：
 	- Tensor Factorization
-		![](hosvd.png)
+		![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hosvd.png)
 	- Factorization Machines
 
 #### Deep learning: ANN training, Recurrent Networks
 - [Recurrent Neural Networks for Collaborative Filtering](http://erikbern.com/?p=589)，[Collaborative Filtering at Spotify](http://www.slideshare.net/erikbern/collaborative-filtering-at-spotify-16182818?related=1)
 Recurrent neural networks have a simple model that tries to predict the next item given all previous ones。
 
-	![](cf-RNN-1.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf-RNN-1.png)
 
 - [Recommending music on Spotify with deep learning](http://benanne.github.io/2014/08/05/spotify-cnns.html)
 
@@ -185,7 +185,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 
 #### Social Recommendations
 - Social and Trust-based recommenders
-	![](trust_based_recommenders.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/trust_based_recommenders.png)
 
 - 关系链 Friendship Demographic methods
 
@@ -199,7 +199,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 ### Hybrid Approaches
 - Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制
 - [推荐系统中所使用的混合技术介绍](http://www.52ml.net/318.html)
-	![](./hybridization.png)
+	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png)
 
 ### 推荐算法对比
 
