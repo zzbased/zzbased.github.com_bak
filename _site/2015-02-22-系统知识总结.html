@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>gbdt_adaboost_bootstrap</title>
-  <meta name="description" content="gbdt，adaboost，bootstrap">
+  <title>系统知识总结</title>
+  <meta name="description" content="机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/01/15/gbdt_adaboost_bootstrap.html">
+  <link rel="canonical" href="http://yourdomain.com/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">
   <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -61,40 +62,29 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">gbdt_adaboost_bootstrap</h1>
-    <p class="post-meta">Jan 15, 2015</p>
+    <h1 class="post-title">系统知识总结</h1>
+    <p class="post-meta"></p>
   </header>
 
   <article class="post-content">
-    <h2 id="gbdtadaboostbootstrap">gbdt，adaboost，bootstrap</h2>
-
-<h3 id="gbdt">gbdt</h3>
-
-<p>意为 gradient boost decision tree。又叫MART（Multiple Additive Regression Tree)</p>
-
-<h4 id="section">分类树和回归树</h4>
+    <h2 id="section">系统设计</h2>
 
 <ul>
-  <li>分类树：预测分类标签；C4.5；选择划分成两个分支后熵最大的feature；</li>
-  <li>回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；</li>
+  <li>
+    <p>Optimal Space-time Tradeoffs for Inverted Indexes，Github http://t.cn/RZgGiiN 倒排的最新压缩设计，作者是去年创新索引压缩算法Partitioned Elias-Fano的发明人，今年继续给出各种情形下的最佳选择，http://t.cn/RZgGiiC</p>
+  </li>
+  <li>
+    <p><a href="http://fex.baidu.com/blog/2014/04/traffic-hijack/">流量劫持是如何产生的</a> 流量劫持，这种古老的攻击沉寂了一段时间后，最近又开始闹的沸沸扬扬。众多知名品牌的路由器相继爆出存在安全漏洞，引来国内媒体纷纷报道。只要用户没改默认密码，打开一个网页甚至帖子，路由器配置就会被暗中修改。互联网一夜间变得岌岌可危。</p>
+  </li>
 </ul>
 
-<h4 id="shrinkage">Shrinkage</h4>
-
-<p>Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。</p>
-
-<h3 id="boosting">boosting方法比较</h3>
+<h2 id="section-1">编程语言</h2>
 
 <ul>
-  <li>gbdt的核心在于：每一棵树学的是之前所有树的结论和残差。每一步的残差计算其实变相地增大了分错instance的权重，而已经分对的instance则都趋向于0。</li>
-  <li>Adaboost：是另一种boost方法，它按分类对错，分配不同的weight，计算cost function时使用这些weight，从而让“错分的样本权重越来越大，使它们更被重视”。</li>
-  <li>Bootstrap也有类似思想，它在每一步迭代时不改变模型本身，也不计算残差，而是从N个instance训练集中按一定概率重新抽取N个instance出来（单个instance可以被重复sample），对着这N个新的instance再训练一轮。由于数据集变了迭代模型训练结果也不一样，而一个instance被前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。</li>
+  <li><a href="http://www.iteye.com/magazines/130">编程精华资源-ITeye优秀专栏-大汇总</a>
+Java学习，Java框架，Web 前端，编程语言，开源项目研究，编程经验之谈，数据库，设计模式，项目管理，移动开发，云计算与大数据等</li>
 </ul>
 
-<h3 id="section-1">更多学习资料</h3>
-<p><a href="http://suanfazu.com/t/gbdt-die-dai-jue-ce-shu-ru-men-jiao-cheng/135">Gbdt迭代决策树入门教程</a>
-<a href="http://www.schonlau.net/publication/05stata_boosting.pdf">Boosting Decision Tree入门教程</a>
-<a href="http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf">LambdaMART用于搜索排序入门教程</a></p>
 
   </article>
 

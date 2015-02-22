@@ -10,7 +10,7 @@
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/01/15/optimal_method.html">
+  <link rel="canonical" href="http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html">
   <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -33,6 +33,10 @@
       </a>
 
       <div class="trigger">
+        
+          
+          <a class="page-link" href="/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">系统知识总结</a>
+          
         
           
           <a class="page-link" href="/about/">About</a>
@@ -179,7 +183,21 @@
       <li>SVM &amp; Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点</li>
     </ul>
   </li>
+  <li><a href="http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf">Who is afraid of non-convex loss functions?</a></li>
 </ul>
+
+<h2 id="section-8">最优化算法参考资料</h2>
+
+<ul>
+  <li>
+    <p><a href="http://www.erogol.com/comparison-sgd-vs-momentum-vs-rmsprop-vs-momentumrmsprop/">几点改进随机梯度下降(SGD)过程的tricks</a>
+  对梯度本身的探究也是特别有价值的，这里的优化方法，就是让梯度的update更平滑和稳定，记录之前在这个方向上的梯度，做平滑，并防止不同batch带来的突变是有价值的</p>
+  </li>
+  <li>
+    <p><a href="http://stanford.edu/~boyd/cvxbook/">凸优化，convex optimization</a></p>
+  </li>
+</ul>
+
 
   </article>
 

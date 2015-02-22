@@ -6,12 +6,12 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Feb 2015 15:13:29 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 15:13:29 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2015 22:25:24 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2015 22:25:24 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>15年春节文献阅读笔记</title>
+        <title>深度学习相关笔记</title>
         <description>&lt;h3 id=&quot;section&quot;&gt;深度学习&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
@@ -30,7 +30,7 @@
       &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/&quot;&gt;Introduction to Neural Networks and Machine Learning by hinton&lt;/a&gt; &lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml&quot;&gt;Lecture notes&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/8775360&quot;&gt;深度学习-笔记整理系列1-8&lt;/a&gt; &lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/9993371&quot;&gt;link2&lt;/a&gt; 使用自下向上非监督学习（就是从底层开始，一层一层的往顶层训练）；自顶向下的监督学习（就是通过带标签的数据去训练，误差自顶向下传输，对网络进行微调）。还介绍了Autoencoder，SparseCoding，Restricted Boltzmann Machine，Deep BeliefNetworks，CNN等模型。&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/8775360&quot;&gt;深度学习-笔记整理系列1-8&lt;/a&gt;，&lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/9993371&quot;&gt;link2&lt;/a&gt; 使用自下向上非监督学习（就是从底层开始，一层一层的往顶层训练）；自顶向下的监督学习（就是通过带标签的数据去训练，误差自顶向下传输，对网络进行微调）。还介绍了Autoencoder，SparseCoding，Restricted Boltzmann Machine，Deep BeliefNetworks，CNN等模型。&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://weibo.com/p/1001603799166017998138&quot;&gt;谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议&lt;/a&gt; 比较喜欢其中关于tricks的建议：包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。&lt;/li&gt;
       &lt;li&gt;
@@ -44,6 +44,7 @@
       &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://t.cn/RZ8Sqe6&quot;&gt;博文“A Brief Overview of Deep Learning”&lt;/a&gt; 有见解有福利。一些技术总结得不错，例如Practice Advice，有很多干货，谁用谁知道…… 文后还有Bengio的点评及与网友的互动讨论。&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;&quot;&gt;Neural network with numpy&lt;/a&gt; Python下(只)用numpy写神经网络，不错的开始 &lt;a href=&quot;https://github.com/FlorianMuellerklein/Machine-Learning/blob/master/BackPropagationNN.py&quot;&gt;github code&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/&quot;&gt;Google’s Large Scale Deep Neural Networks Project, Greg Corrado&lt;/a&gt; Google的大规模分布式DNN介绍 &lt;a href=&quot;http://pan.baidu.com/s/1kTl76AV&quot;&gt;slide&lt;/a&gt; &lt;a href=&quot;http://pan.baidu.com/s/1qWmJrSo&quot;&gt;视频&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -72,8 +73,10 @@
       &lt;li&gt;&lt;a href=&quot;http://xxx.tau.ac.il/abs/1502.02367&quot;&gt;Gated Feedback Recurrent Neural Networks&lt;/a&gt;  又有人设计新的RNN了，这回Cho和Bengio都在．这回介绍的GF-RNN说是能比以前Deep RNN的都好。明摆着说LSTM嘛。&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://t.cn/Rww4fbV&quot;&gt;论文 Scaling Recurrent Neural Network Language Models》(2015) W Williams, N Prasad, D Mrva&lt;/a&gt; 讨论如何使用GPU训练大型RNN，以及#RNN##语言模型#(RNNLM)在进行扩展时模型大小、训练集规模和运算开销方面的问题；使用维基和新闻语料训练的大规模RNNLM效果明显。&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://t.cn/RZNfoLt&quot;&gt;Passage：用RNN做文本分析的python库&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://t.cn/RZKo42W&quot;&gt;深入讨论RNN&lt;/a&gt; 非常好的讨论递归神经网络的文章，覆盖了RNN的概念、原理、训练及优化等各个方面内容，强烈推荐！本文作者Nikhil Buduma，也是前两天推荐的《Deep Learning in a Nutshell》的作者，赞！&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/&quot;&gt;深入讨论RNN&lt;/a&gt;  &lt;a href=&quot;http://www.csdn.net/article/2015-01-28/2823747&quot;&gt;译文&lt;/a&gt;非常好的讨论递归神经网络的文章，覆盖了RNN的概念、原理、训练及优化等各个方面内容，强烈推荐！本文作者Nikhil Buduma，也是《Deep Learning in a Nutshell》的作者。&lt;/li&gt;
       &lt;li&gt;深度RNN/LSTM用于结构化学习 0)序列标注&lt;a href=&quot;http://t.cn/RZZs9Io&quot;&gt;Connectionist Temporal Classification ICML06&lt;/a&gt; 1)机器翻译&lt;a href=&quot;http://t.cn/RZZs9Jk&quot;&gt;Sequence to Sequence NIPS14&lt;/a&gt; 2)成分句法&lt;a href=&quot;http://t.cn/RZZs9Ia&quot;&gt;GRAMMAR AS FOREIGN LANGUAGE&lt;/a&gt; 再次用到窃取果实distilling&lt;/li&gt;
+      &lt;li&gt;[视频]《General Sequence Learning using Recurrent Neural Networks》http://t.cn/RwiEI9d Alec Radford讲的用RNN做文本序列分析(学习) 云:http://t.cn/RwinOCb Alec Radford的Passage:http://weibo.com/1402400261/BFVLkxtfw&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://people.idsia.ch/~juergen/lstm/index.htm&quot;&gt;幻灯 Long Short-Term Memory: Tutorial on LSTM Recurrent Networks&lt;/a&gt;  J. Schmidhuber的LSTM递归网络教程&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;CNN
@@ -91,290 +94,32 @@
       &lt;li&gt;[问答]《What are some interesting Word2Vec results?》http://t.cn/RZrOfYp Quora上的主题，讨论Word2Vec的有趣应用，Omer Levy提到了他在CoNLL2014最佳论文里的分析结果和新方法（稍后单独推荐），Daniel Hammack给出了找特异词的小应用并提供了(Python)代码http://t.cn/zQgLQ20&lt;/li&gt;
       &lt;li&gt;Ensemble of Generative and Discriminative Techniques for Sentiment Analysis of Movie Reviews。&lt;a href=&quot;https://github.com/mesnilgr/iclr15&quot;&gt;code&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;隐含主题模型LDA的学习过程可为文档每个词分配隐含主题，我组本科生刘扬同学利用LDA为词汇提供的补充信息，提出topical word embeddings，在词汇相似度计算和文本分类上得到一些有趣的结果。&lt;a href=&quot;https://github.com/largelymfs/topical_word_embeddings&quot;&gt;github code&lt;/a&gt;，&lt;a href=&quot;http://nlp.csai.tsinghua.edu.cn/~lzy/publications/aaai2015_twe.pdf&quot;&gt;论文Topical Word Embeddings&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/idio/wiki2vec&quot;&gt;Wiki2Vec: Generating Vectors for DBpedia Entities via Word2Vec and Wikipedia Dumps&lt;/a&gt; 从维基百科Dumps生成Word2Vec向量的工具，包括词向量和主题向量&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://andyljones.tumblr.com/post/111299309808/why-word2vec-works&quot;&gt;Why word2vec works&lt;/a&gt; word2vec的工作原理&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www-personal.umich.edu/~ronxin/pdf/w2vexp.pdf&quot;&gt;word2vec Parameter Learning Explained&lt;/a&gt; word2vec梯度推导详解&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NLP
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/77709/&quot;&gt;深度学习、自然语言处理和表征方法&lt;/a&gt; &lt;a href=&quot;https://github.com/colah/NLP-RNNs-Representations-Post/blob/master/index.md&quot;&gt;English version&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;单隐层神经网络有一个普适性（universality）：给予足够的隐结点，它可以估算任何函数。普适性的真正意义是：一个网络能适应任何你给它的训练数据。这并不代表插入新的数据点的时候它能表现地很理想。&lt;/li&gt;
+      &lt;li&gt;在深度学习工具箱里，把从任务A中学到的好表征方法用在任务B上是一个很主要的技巧。根据细节不同，这个普遍的技巧的名称也不同，如：预训练（pretraining），迁移学习(transfer learning)，多任务学习(multi-task learning)等。这种方法的好处之一是可以从多种不同数据中学习特征表示。&lt;/li&gt;
+      &lt;li&gt;共享嵌入是一个非常让人兴奋的研究领域，它暗示着为何深度学习中这个注重表征方法的角度是如此的引人入胜。它目前被应用在机器翻译，ImageCaptioning。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;rtb&quot;&gt;RTB&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://tutorial.computational-advertising.org/images/WSDM2015.pdf&quot;&gt;Real-Time Bidding&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;在RTB广告出价过程中，两个重点因素是：1. 广告展示的效益(点击率/转化率)；2. 展示花销。以这两项因素为输入，我们的框架能优化出最优的RTB出价策略。论文：http://t.cn/Rvb5K9d，实验基于@品友互动 RTB数据集http://t.cn/RP3pPQO。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;计算广告&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;&quot;&gt;Practical Lessons from Predicting Clicks on Ads at Facebook&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html&quot;&gt;利用GBDT模型构造新特征&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;特征决定了所有算法效果的上限，而不同的算法只是离这个上限的距离不同而已。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;这篇论文的思想：先用已有特征训练GBDT模型，然后利用GBDT模型学习到的树来构造新特征，最后把这些新特征加入原有特征一起训练模型。构造的新特征向量是取值0/1的，向量的每个元素对应于GBDT模型中树的叶子结点。当一个样本点通过某棵树最终落在这棵树的一个叶子结点上，那么在新特征向量中这个叶子结点对应的元素值为1，而这棵树的其他叶子结点对应的元素值为0。新特征向量的长度等于GBDT模型里所有树包含的叶子结点数之和。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;已经有人利用这种方法赢得了Kaggle一个CTR预估比赛的冠军，代码可见https://github.com/guestwalk/kaggle-2014-criteo，里面有这种方法的具体实现。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;特征处理
-    &lt;ul&gt;
-      &lt;li&gt;在logistic regression问题中，最基本的问题就是特征处理。&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/15/breezedeus-feature-processing.html&quot;&gt;特征处理入门 by BreezeDeus&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/&quot;&gt;特征选择 by ubiwang&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html&quot;&gt;特征hash法&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;特征降维方法：聚类，PCA，hashing&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;参考文献：
-        &lt;ul&gt;
-          &lt;li&gt;Kilian Weinberger et al. Feature Hashing for Large Scale Multitask Learning,2010.  or Feature hashing for large scale multitask learning&lt;/li&gt;
-          &lt;li&gt;Joshua Attenberg et al. Collaborative Email-Spam Filtering with the Hashing-Trick, 2009.&lt;/li&gt;
-          &lt;li&gt;Alekh Agarwal, Oliveier Chapelle, Miroslav Dud ́ık, and John Langford. A Reliable Effective Terascale Linear Learning System. Journal of Machine Learning Research, 15:1111–1133, 2014.&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Large-scale L-BFGS using MapReduce&lt;/a&gt; 该论文讲述了运用了hashing技术后，AUC的变化。&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;特征hash法用于 多任务学习(multitask learning)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;特征选择
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/&quot;&gt;Selecting good features&lt;/a&gt; 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CTR预估
-    &lt;ul&gt;
-      &lt;li&gt;竞价搜索广告中的点击率预估法: 特征和模型 1）经典LR[WWW07] http://t.cn/zT8FYsf 及L1正则版[ICML07] http://t.cn/RZOSmEl 2）高质量特征+组合LR和BDT[ADKDD14] http://t.cn/RZOSmET 3）加LDA话题特征[ACM-TIST15] http://t.cn/RZOinjO 4）组合ANN和BDT[ICLR15] http://t.cn/RZOSmEY&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html&quot;&gt;并行逻辑回归&lt;/a&gt;： 逻辑回归（Logistic Regression，简称LR）是机器学习中十分常用的一种分类算法，在互联网领域得到了广泛的应用，无论是在广告系统中进行CTR预估，推荐系统中的预估转换率，反垃…文字版» http://t.cn/8FpoAyz （新浪长微博» http://t.cn/zOXAaic）&lt;/li&gt;
-      &lt;li&gt;发表了博文《CTR预估模型，机器学习初探水》http://t.cn/R7tJ59w损失函数；CRT模型；数据模型切分；结果推荐；链路距离计算；推http://t.cn/R7tJ5LU&lt;/li&gt;
-      &lt;li&gt;NTU关于Criteo CTR Challenge的winning solution出来了：http://t.cn/RhkyR3B，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了Facebook ADKDD2014文章：http://t.cn/RPrqyRQ&lt;/li&gt;
-      &lt;li&gt;Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 http://t.cn/RZYd75X&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://weibo.com/p/1001603803645836675771&quot;&gt;汤兴-爱奇艺大脑—视频进化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;sampling--statistic&quot;&gt;Sampling &amp;amp; Statistic&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/&quot;&gt;Probabilistic Programming &amp;amp; Bayesian Methods for Hackers&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;黑客们的概率编程和贝叶斯方法书，电子版，有代码，介绍为主，减少推导。同时详细介绍了使用PyMC进行MCMC编程的细节。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&amp;amp;mid=203307140&amp;amp;idx=1&amp;amp;sn=83cf3093d9cd0f6bca8981eae0cecb9e#rd&quot;&gt;统计学公开课大盘点&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;很多统计学课程，看来习题可以从这里面获取了。推荐可汗学院的“Probability and Statistics（概率与统计)”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;随机采样方法整理与讲解（MCMC、Gibbs Sampling等） - Bin的专栏 - 博客园 http://t.cn/RZDLdr4&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[可视化]《Markov Chains》http://t.cn/RZBE1ME 马尔可夫链的交互可视化解释，和以前发过超赞的那个特征值特征向量的可视化同一系列&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[图书]《Forecasting, Principles and Practice》http://t.cn/zR4ZGMM 全面介绍预测模型和算法，对证券、电信、交通等时序信号的预测分析都很有用，书中例子为R语言，在线免费阅读&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How To Implement These 5 Powerful Probability Distributions In 用python实现5种常用的概率分布：二项式分布、泊松分布、正态分布、Beta分布和指数分布 http://t.cn/RZWta4n&lt;/li&gt;
-  &lt;li&gt;[文章]《Getting started in data science: My thoughts》http://t.cn/RviewMN 数据科学入门指南——作者从数学、统计学、实验和因果推理、机器学习、软件选择和实践经验积累各方面谈了自己的入门建议。和其他入门指南类文章不同的是，本文没有盲目看好MOOC之类的自学途径，建议都很中肯，推荐阅读&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;nlp&quot;&gt;NLP&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnicas/NLP-in-Python&quot;&gt;NLP-in-Python —— 介绍Python下NLP的系列ipn，内容覆盖Reading in Files、Tokenizing, Stemming, POS、Wordclouds、TF-IDF, Clustering, Pattern、Naive Bayes Classification、Naive Bayes in Scikit-Learn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;最优化算法&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.erogol.com/comparison-sgd-vs-momentum-vs-rmsprop-vs-momentumrmsprop/&quot;&gt;几点改进随机梯度下降(SGD)过程的tricks&lt;/a&gt;
-  对梯度本身的探究也是特别有价值的，这里的优化方法，就是让梯度的update更平滑和稳定，记录之前在这个方向上的梯度，做平滑，并防止不同batch带来的突变是有价值的&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;凸优化，convex optimization&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;关于loss function，记录几点：
-    &lt;ul&gt;
-      &lt;li&gt;SVC &amp;amp; SVR：对于SVC，由于hinge loss: max(0, 1-yw’x)，SVC会特别关注那些难分类的点（classify with least certainty; support vectors, i.e., sv）；对于SVR，由于epsilon loss: max(0, |y-w’x|-e)，SVR类似的会关注那些residual比较大的点（”outlier”; prediction with least certainty too; sv）&lt;/li&gt;
-      &lt;li&gt;SVM和ANN 1) SVM的hinge loss func: max(0, 1 - y’x), 当“激活量” y’x 超过阈值1，那么就不计损失即损失为零 2) Deep Sparse Rectifier的rectifier activation func: max(0, x), 看图它在零点处不可导带来了稀疏性，可大量约简神经网络参数规模 3) loss function + penalty regularization&lt;/li&gt;
-      &lt;li&gt;SVM &amp;amp; Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf&quot;&gt;Who is afraid of non-convex loss functions?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;其他机器学习问题&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/u013854886/article/details/38425499&quot;&gt;Multi-task learning（多任务学习）简介&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;目前多任务学习方法大致可以总结为两类，一是不同任务之间共享相同的参数（common parameter），二是挖掘不同任务之间隐藏的共有数据特征（latent feature）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;迁移学习&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/jwh_bupt/article/details/8901261&quot;&gt;迁移学习与自我学习&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/jwh_bupt/article/details/9276165&quot;&gt;迁移学习的相关概念&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;http://www.zhizhihu.com/html/y2011/2902.html&quot;&gt;阅读笔记：Boosting for Transfer learning&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;当前只有少量新的标记的数据，但是有大量旧的已标记的数据（甚至是其他类别的有效数据），这时通过挑选这些旧数据中的有效的数据，加入到当前的训练数据中，训练新的模型。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;迁移学习的目标是将从一个环境中学到的知识用来帮助新环境中的学习任务。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;例子：当教会了电脑学习区分大象和犀牛的能力后，电脑利用这一本领更快或更准确地来学习如何区分飞机和鸟。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;参考文献：
-        &lt;ul&gt;
-          &lt;li&gt;Boosting for transfer learning&lt;/li&gt;
-          &lt;li&gt;Self-taught learning: transfer learning from unlabeled data&lt;/li&gt;
-          &lt;li&gt;A survey on transfer learning. IEEE TRANSACTIONS ON KNOWLEDGE AND DATA ENGINEERING, VOL. 22, NO. 10, OCTOBER 2010&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;机器学习通用问题
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.valleytalk.org/wp-content/uploads/2012/11/机器学习那些事.pdf&quot;&gt;A few useful things to know about machine learning&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/10/30/breezedeus-things-about-ml.html&quot;&gt;机器学习的12堂课&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/413022836/&quot;&gt;机器学习常见的错误&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;学习=表示(representation)+评价(evaluation)+优化(optimization)；表示即为学习器的假设空间。所选的learner应该具有某种表达形式，通过learner最终获得的模型应该具有给定的这种特征(如分割面为超平面)。选定了这种特性，就相当于为learner选定了一组候选classifier。&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/machine_learning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;泛化很重要。将泛化作为目标给机器学习带来一个有趣的结果。与其他大部分优化问题不同,机器学习无法获得希望优化的那个函数! 我们不得不用训练误差来代替测试误差。&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;过拟合。解决过拟合的思路：交叉验证，正则项，在决定是否增加新的结构时进行诸如卡方测试等统计显著性检验 (statistical significance test), 用来决定类别分布是否会因为增 加这个结构而不同。
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bias_and_variance.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;直觉不适用于高维空间。&lt;/li&gt;
-      &lt;li&gt;要学习很多模型, 而不仅仅是一个。model emsemble。&lt;/li&gt;
-      &lt;li&gt;简单并不意味着准确。应当先选择简单假设,这是因为简单本身就是一个优点,而不是因为所假设的与准确率有什么联系。&lt;/li&gt;
-      &lt;li&gt;相关并不意味着因果。&lt;/li&gt;
-      &lt;li&gt;可表示并不代表可学习。&lt;/li&gt;
-      &lt;li&gt;更多的数据打败更聪明的算法。&lt;/li&gt;
-      &lt;li&gt;特征工程是关键。&lt;/li&gt;
-      &lt;li&gt;理论上的保证不像你所想的那样。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://xilinx.eetrend.com/article/8319&quot;&gt;机器学习综述——机器学习理论基础与发展脉络&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;如果一个系统能够通过执行某个过程改进它的性能，这就是学习。从大量无序的信息到简洁有序的知识
-        &lt;ul&gt;
-          &lt;li&gt;从有限观察概括特定问题世界模型的机器学习&lt;/li&gt;
-          &lt;li&gt;发现观测数据中暗含的各种关系的数据分析&lt;/li&gt;
-          &lt;li&gt;从观测数据挖掘有用知识的数据挖掘&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;模型假设+模型选择+学习算法；常用的损失函数包括0-1损失、平方误差损失、绝对损失、对数损失等等。&lt;/p&gt;
-
-        &lt;p&gt;统计机器学习方法的三个问题都是非常值得研究的，对于模型假设这个问题，如果模型都选择错误，无论后面如何选择模型，也都难以反映数据集的正确分布。因此，首先需要选择对模型做出正确假设，如何选择模型的假设空间是一个学问，除掉交叉验证的方法之外还有不少其他方法。模型选择的关键在于如何设计损失函数，而损失函数通常包括损失项和正则化项，不同的模型选择策略通常选出的模型也非常不同，从而导致模型的预测效果也大大不同。学习算法比较定式，不同的学习算法不仅学习的效率不同，而且学习出来的效果也不一样。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;SVM方法是通过一个非线性映射p，把样本空间映射到一个高维乃至无穷维的特征空间中（Hilber空间），使得在原来的样本空间中非线性可分的问题转化为在特征空间中的线性可分的问题。分类，回归等问题，很可能在低维样本空间无法线性处理的样本集，在高维特征空间中却可以通过一个线性超平面实现线性划分（或回归）。一般的升维都会带来计算的复杂化，SVM方法巧妙地解决了这个难题：应用核函数的展开定理，就不需要知道非线性映射的显式表达式；由于是在高维特征空间中建立线性学习机，所以与线性模型相比，不但几乎不增加计算的复杂性，而且在某种程度上避免了“维数灾难”．这一切要归功于核函数的展开和计算理论。&lt;/p&gt;
-
-        &lt;p&gt;SVM 的最终决策函数只由少数的支持向量所确定,计算的复杂性取决于支持向量的数目,而不是样本空间的维数,这在某种意义上避免了“维数灾难”&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;增强机器学习，无监督学习，有监督学习，半监督学习，自我学习，迁移学习，多任务学习等等。这些学习方法的基本原理都要理解。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://t.cn/Rw4Wz73&quot;&gt;An Introduction to Supervised Machine Learning and Pattern Classification: The Big Picture&lt;/a&gt; 很不错的监督机器学习(重点是模式分类)介绍资料 云:http://t.cn/Rw4WIrh&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://ask.julyedu.com/question/64&quot;&gt;邹博讲EM、GMM&lt;/a&gt; 被称赞为：“最清楚的一次GMM”，“老师讲的太好，太多人想听”等等。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/mrlyk423/relation_extraction&quot;&gt;关系提取 relation_extraction&lt;/a&gt;。ransE通过h + r = t的目标学习知识图谱表示，效果引人关注。最近我组林衍凯同学针对TransE对1-N、N-1类型关系效果不佳的问题，提出TransR将实体映射到不同关系空间中构建优化目标，效果最高比TransE提升近20%。论文 http://t.cn/RZSpha8 ，实现TransE、TransH和TransR全部开源：http://t.cn/RZe9of4&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《Robust Machine Learning》http://t.cn/RZkX55C 针对机器学习算法如何在面对错误样本时更健壮的问题，作者讨论了几种角度的方案：用(相对)阈值过滤；针对性的特征选择；对每个特征建立查处模型，训练、验证、纠偏。联系这两天热议的深度学习对抗样本问题的解决，差不多也是这些角度。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[IPN]《Advice for applying Machine Learning》http://t.cn/RZreqPu 为机器学习的使用提供了一些建议，包括可视化分析方法、机器学习算法的选取、过拟合及欠拟合的处理、大数据集的处理、各种损失函数的比较等，很实用。Andrew Ng的《Advice for applying Machine Learning》http://t.cn/RZdaera&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《All Models of Learning have Flaws》http://t.cn/zlvnrVW 机器学习模型的缺陷(抱怨)，讨论实际使用时各种模型的限制条件，很实用，推荐阅读&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《MACHINE LEARNING WORK-FLOW》机器学习工作流系列文章：1.综述:http://t.cn/R7ZP8C5 2.数据预处理:http://t.cn/RZrS1GN 3.特征抽取:http://t.cn/R7aQPbR 4.完整性检查和数据分割:http://t.cn/R7eAXgy 5.特征预处理:http://t.cn/RzLBuRk 目前就写到Part5，感兴趣可以持续关注该博主&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[课程]《Machine Learning - A introductory course on machine learning》http://t.cn/RZsmDSu USC的Fei Sha和Yan Liu的机器学习课程，讲义组织得不错，知识覆盖也比较全面，可看作机器学习的速成参考，推荐学习 云:http://t.cn/RZsuLXo&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;【机器学习入门教材】Max Welling教授在UCI讲授《机器学习》多年，他认为许多教材堆砌数学公式，缺乏对这些公式的解释。他2011年写了一本入门书，公式不多，但是对许多概念提供了符合直觉的解释。Max Welling的机器学习入门书免费下载：http://t.cn/RZiZ7BH 工业界人士、本科生、非CS专业学生均适合。&lt;/li&gt;
-  &lt;li&gt;[文章]《Machine Learning Overview》机器学习概述系列文章：Part1:http://t.cn/RZ1yEYg Part2.Logistic Regression http://t.cn/RZ1yetX Part3.Decision Trees and Random Forests http://t.cn/RZ1U5Zg Part4还没写，感兴趣可继续关注&lt;/li&gt;
-  &lt;li&gt;[幻灯]《Tutorial Slides by Andrew W. Moore》http://t.cn/RZmOG7c 由Google计算机科学家、曾任CMU教授的Andrew W. Moore整理的系列教程，内容覆盖统计数据挖掘的各个方面，包括概率基础、统计数据分析基础、经典机器学习算法和数据挖掘算法，是很好的学习材料。简短版目录列表:http://t.cn/zHiLcXa&lt;/li&gt;
-  &lt;li&gt;一个非常好的电子书在线阅读及下载网站： http://t.cn/RP2JcJ3 ，已经收集书籍超过200多万，很多专业书籍均能下载到电子版，例如Bishop的PRML，Duda的PR经典教科书，Vapnik的统计学习理论的2本经典著作…&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.52ml.net/15845.html&quot;&gt;Machine Learning Done Wrong&lt;/a&gt; 作者总结了机器学习七种易犯的错误：1.想当然用缺省Loss；2.非线性情况下用线性模型；3.忘记Outlier；4.样本少时用High Viriance模型；5.不做标准化就用L1/L2等正则；6.不考虑线性相关直接用线性模型；7.LR模型中用参数绝对值判断feature重要性。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;机器学习基本算法&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《The Trouble with SVMs》http://t.cn/RwvkOx4 非常棒的强调特征选择对分类器重要性的文章。情感分类中，根据互信息对复杂高维特征降维再使用朴素贝叶斯分类器，取得了比SVM更理想的效果，训练和分类时间也大大降低——更重要的是，不必花大量时间在学习和优化SVM上——特征也一样no free lunch&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;数据挖掘中分类算法小结：(1)决策树；(2) KNN法(K-Nearest Neighbor)；(3) SVM法；(4) VSM法；(5) Bayes法；(6)神经网络。http://t.cn/Rwve07S&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[论文]《Understanding Random Forests: From Theory to Practice》http://t.cn/RZBT6Ap Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf:http://t.cn/RZBTobH 云:http://t.cn/RZBTobT&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;LDA
-    &lt;ul&gt;
-      &lt;li&gt;【LDA入门与Java实现】 这是一篇面向工程师的LDA入门笔记，并且提供一份开箱即用Java实现。本文只记录基本概念与原理，并不涉及公式推导。文中的LDA实现核心部分采用了arbylon的LdaGibbsSampler并力所能及地注解了，在搜狗分类语料库上测试良好，开源在GitHub上。什么… http://t.cn/RZBIEYh&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.7300days.com/index.php/stds/topic/list/id/27/name/Topic%20modeling&quot;&gt;@Copper_PKU 推荐的35篇Topic Model论文&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cs.colorado.edu/~jbg/docs/2014_book_chapter_care_and_feeding.pdf&quot;&gt;Care and Feeding of Topic Models: Problems, Diagnostics, and Improvements&lt;/a&gt;  Dave Blei得意门生Jordan Boyd-Graber（科罗拉多大学助理教授）和博士后David Mimno（康奈尔助理教授）是公认的主题模型(Topic Model)专家。近日他们写了一个简短的主题模型入门介绍，并且讨论了主题模型的问题，评价手段，以及部分改进方法。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CRF
-    &lt;ul&gt;
-      &lt;li&gt;CRF训练，但标注数据很少。感兴趣的朋友可以参考下Semi-supervised Sequence Labeling for Named Entity Extraction based on Tri-Training:Case Study on Chinese Person Name Extraction&lt;/li&gt;
-      &lt;li&gt;[视频]《Log-linear Models and Conditional Random Fields》http://t.cn/SUGYtC Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程 讲义:http://t.cn/RZ1kQ6A&lt;/li&gt;
-      &lt;li&gt;http://t.cn/zO7uh30 推荐这个项目，虽然现在都流行 Deep Learning了， CRF 类方法还是很容易达到一个比较高的 Score， 这个项目 f-score 低了 0.7 % 但是速度 提升了 10倍，隐含的，可以处理更大量的样本数据。&lt;/li&gt;
-      &lt;li&gt;PPT 来了！机器学习班第15次课，邹博讲条件随机场CRF的PPT 下载地址：http://t.cn/RzE4Oy8，第16次课，邹博讲PCA&amp;amp;SVD的PPT 下载地址：http://t.cn/RzE4OyQ，@sumnous_t 讲社区发现算法的PPT 下载地址：http://t.cn/RzE4OyR。顺便说句，sumnous还曾是算法班周六班的学员，一年下来，进步很大。分享！&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;SVM
-    &lt;ul&gt;
-      &lt;li&gt;【分类战车SVM】第五话：核函数（哦，这实在太神奇了！）→ http://t.cn/RZ0JICY&lt;/li&gt;
-      &lt;li&gt;【SVM之菜鸟实现】之前帖子有bug, 担心有朋友受其害，这里给出正确版，用matlab做伪代码: yp=x&lt;em&gt;w; idx=find(yp.&lt;/em&gt;y&amp;lt;1) e=”yp(idx)-y(idx);”   f=”e’&lt;em&gt;e+c&lt;/em&gt;w&lt;em&gt;w.”  df=”2(x(idx,:)’&lt;/em&gt;e+c*w);” fdf=”” lbfgslbfgs=”” svmsgd=”” em=””&amp;gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Boost
-    &lt;ul&gt;
-      &lt;li&gt;陈天奇的xgboost。&lt;a href=&quot;http://weibo.com/p/1001603795687165852957&quot;&gt;有监督代码心得&lt;/a&gt;，&lt;a href=&quot;https://github.com/tqchen/xgboost&quot;&gt;xgboost&lt;/a&gt; ，&lt;a href=&quot;http://weibo.com/p/1001603801281637563132&quot;&gt;分布式机器学习&lt;/a&gt;，&lt;a href=&quot;http://weibo.com/p/1001603795728785912771&quot;&gt;模板和张量库&lt;/a&gt;，&lt;a href=&quot;http://weibo.com/p/1001603795714256832384&quot;&gt;迭代器和流水处理&lt;/a&gt;，&lt;a href=&quot;http://courses.cs.washington.edu/courses/cse546/14au/slides/oct22_recitation_boosted_trees.pdf&quot;&gt;tutorial&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;图像视觉&lt;/h3&gt;
+</description>
+        <pubDate>Mon, 23 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>文献综合阅读</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;图像视觉&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -387,62 +132,35 @@
     &lt;p&gt;&lt;a href=&quot;http://t.cn/RZkbwoz&quot;&gt;图像处理中的全局优化技术&lt;/a&gt; 最近打算好好学习一下几种图像处理和计算机视觉中常用的 global optimization (或 energy minimization) 方法，这里总结一下学习心得。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Retinex算法详解 - 计算机视觉小菜鸟的专栏 - 博客频道 - CSDN.NET http://t.cn/RZFJt0a&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/carson2005/article/details/9502053&quot;&gt;Retinex算法详解&lt;/a&gt; - 计算机视觉小菜鸟的专栏 - 博客频道 - CSDN.NET&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;本团队雕琢多年的人脸检测库现以MIT协议发布 http://t.cn/RwhgTnB ,供商业和非商业无限制使用,包含正面和多视角人脸检测两个算法.优点:速度快(OpenCV haar+adaboost的2-3倍), 准确度高 (FDDB非公开类评测排名第二），能估计人脸角度. 例子看下图. 希望能帮助到有需要的个人和公司。&lt;/p&gt;
+    &lt;p&gt;本团队雕琢多年的人脸检测库现以MIT协议发布 &lt;a href=&quot;https://github.com/ShiqiYu/libfacedetection&quot;&gt;github code&lt;/a&gt; 供商业和非商业无限制使用,包含正面和多视角人脸检测两个算法.优点:速度快(OpenCV haar+adaboost的2-3倍), 准确度高 (FDDB非公开类评测排名第二），能估计人脸角度. 例子看下图. 希望能帮助到有需要的个人和公司。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.guokr.com/article/439945/&quot;&gt;计算机视觉：让冰冷的机器看懂多彩的世界&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-6&quot;&gt;机器学习框架&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://petuum.github.io&quot;&gt;Petuum&lt;/a&gt; Petuum涵盖的模型更多（CNN、DNN、K-Mean、Regression、Sparse Coding、Matrix Factorization，LDA、 RF等。例如基于Petuum训练CNN，用CPU集群能达到比用GPU的Caffe高的效率。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://fastml.com/torch-vs-theano/&quot;&gt;Torch vs Theano&lt;/a&gt;  还可以比较下Caffe。&lt;/li&gt;
-  &lt;li&gt;《Caffe-LSTM》GitHub:http://t.cn/Rw4pf3G 基于Caffe实现的LSTM，应用例子的ipn:http://t.cn/Rw4pCPX&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/srendle/libfm&quot;&gt;开源libFM&lt;/a&gt; —— 开源Factorization Machines(FM)工具 GitHub:http://t.cn/Rh0QKfr FM可对任意实值向量进行预测，可看作自动的特征选择/组合方法。参考文献：中文简介http://t.cn/8DkCnjI 开山之作http://t.cn/Rw4eWfP KDD2012的Toturialhttp://t.cn/Rw4DwFe 最新例子文章http://t.cn/Rw4e5nT&lt;/li&gt;
-  &lt;li&gt;Facebook开源了一组深度学习扩展fbcunn：http://t.cn/RZN9gAM @极客头条 是Torch框架的插件，基于NVidia的GPU，大大提升了原来nn神经网络包的性能，可以用于计算机视觉和自然语言处理等场景&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Caffe自推出以来便成为了被广泛使用深度学习研究工具，借助Caffe可以轻松训练用于识别、检测等不同人物的深度网络。ECCV‘14 Tutorial《DIY Deep Learning for Vision: a Hands-On Tutorial with Caffe》简要介绍了如何使用Caffe实现不同网络训练任务&lt;/p&gt;
-
-    &lt;p&gt;【Caffe 深度学习框架上手教程】http://t.cn/RZTgg3x Caffe是一个清晰而高效的深度学习框架，其作者是博士毕业于UC Berkeley的 贾扬清，目前在谷歌工作。本文详细介绍了它的优势、架构，网络定义、各层定义、安装与配置，解读了它实现的图像分类模型AlexNet，并演示了CIFAR-10在caffe上进行训练与学习&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;[开源] Vowpal Wabbit http://t.cn/h40wlI GitHub:http://t.cn/zlzvCpS MS家的开源#机器学习#系统，特色是高性能在线学习，简介:http://t.cn/RwLq6VF 性能比较可参考FastML的《Vowpal Wabbit, Liblinear/SBM and StreamSVM compared》http://t.cn/R742J6H&lt;/li&gt;
-  &lt;li&gt;【mlpack：可伸缩C++机器学习库】mlpack是一个直观、快速、可伸缩的C++机器学习库，旨在为机器学习研究者提供更广泛的机器学习方法和函数。它的目的是让新用户通过简单、一致的API使用机器学习，同时为专业用户提供C++的高性能和最大灵活性。http://t.cn/RzeNyXi&lt;/li&gt;
-  &lt;li&gt;Minerva V2 Release: http://t.cn/RzubWsd 用NDArray来写machine learning程序，支持多CPU/GPU。目前GPU跑ImageNet 213张/秒，2GPU跑到403张。parameter server下周开始整合。doc还在完善中&lt;/li&gt;
-  &lt;li&gt;cxxnet http://t.cn/Rzuv17w 卷积神经网络的一个C++实现。写了个Guide，用deep conv net在kaggle那个17万的比赛里5分钟得到前十的结果（当然马上就会变成zero benchmark）。http://t.cn/RzuPYIR 欢迎转发 @陈天奇怪 @phunter_lau @我爱机器学习 @好东西传送门&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.librec.net&quot;&gt;LibRec&lt;/a&gt; ——JAVA下的先进推荐算法库，刚刚推出1.2新版本，目前支持的推荐算法包括UserKNN, ItemKNN, RegSVD, PMF, SVD++, BiasedMF, BPMF, SocialMF, TrustMF, SoRec, SoReg, RSTE, TrustSVD等。&lt;/li&gt;
-  &lt;li&gt;Parameter server. &lt;a href=&quot;http://www.cs.cmu.edu/~muli/file/osdi14_talk.pdf&quot;&gt;slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-7&quot;&gt;大数据&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;[幻灯]《Large Scale Machine Learning for Information Retrieval》(2013) Bo Long，Liang Zhang http://t.cn/zRNcu9v 面向信息检索的大规模机器学习，内容包括基于Map-Reduce的分布计算、自动推荐系统、大规模逻辑回归、并行矩阵分解、Bag of Little Bootstraps (BLB)方法等 云:http://t.cn/RZsrmqd&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wenku.baidu.com/view/623ba70902020740be1e9b27.html&quot;&gt;刘小兵的MPI-LR Olympic&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-8&quot;&gt;系统设计&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Optimal Space-time Tradeoffs for Inverted Indexes，Github http://t.cn/RZgGiiN 倒排的最新压缩设计，作者是去年创新索引压缩算法Partitioned Elias-Fano的发明人，今年继续给出各种情形下的最佳选择，http://t.cn/RZgGiiC&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-9&quot;&gt;高频交易&lt;/h3&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;高频交易&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2534976&quot;&gt;文章 Online Algorithms in High-frequency Trading - The challenges faced by competing HFT algorithms》2013&lt;/a&gt; 介绍高频交易(HFT)中的在线学习算法，重点解决流动性估计、波动性估计和线性回归问题，HFT算法简单了解可参考&lt;a href=&quot;http://www.zhihu.com/question/23667442&quot;&gt;知乎主题-高频交易都有哪些著名的算法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-10&quot;&gt;博客推荐&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;博客推荐&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;《Frequently updated Machine Learning blogs》http://t.cn/RwbHZpy 活跃机器学习博客推荐，真有点怀念Google Reader呢&lt;/li&gt;
-  &lt;li&gt;《面试经验分享之机器学习、大数据问题》如今，好多机器学习、数据挖掘的知识都逐渐成为常识，要想在竞争中脱颖而出，就必须做到：保持学习热情，关心热点，深入学习，会用，也要理解，在实战中历练总结等等。http://t.cn/RzMtL3j（来自： Blog of 太极雪 ）&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;《Frequently updated Machine Learning blogs》http://t.cn/RwbHZpy 活跃机器学习博客推荐，真有点怀念Google Reader呢&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;《面试经验分享之机器学习、大数据问题》如今，好多机器学习、数据挖掘的知识都逐渐成为常识，要想在竞争中脱颖而出，就必须做到：保持学习热情，关心热点，深入学习，会用，也要理解，在实战中历练总结等等。http://t.cn/RzMtL3j（来自： Blog of 太极雪 ）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://chuansong.me/n/306480&quot;&gt;FLAGBR 面经+offer&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-11&quot;&gt;其他推荐资料&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;其他推荐资料&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2015/01/31/breezedeus-review-for-year-2014-tech.html&quot;&gt;世纪佳缘用户推荐系统的发展历史&lt;/a&gt;&lt;/p&gt;
@@ -591,11 +309,50 @@
   &lt;/li&gt;
   &lt;li&gt;【推荐系统中所使用的混合技术介绍】http://t.cn/8sKdQFq 系统架构层面一般使用多段组合混合推荐框架，算法层面则使用加权型混合推荐技术，包括LR、RBM、GBDT系列。此外还介绍分级型混合推荐技术，交叉调和技术，瀑布型混合方法，推荐基础特征混合技术，推荐模型混合技术，整体式混合推荐框架等。&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Mon, 23 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/23/15%E5%B9%B4%E6%98%A5%E8%8A%82%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/23/15%E5%B9%B4%E6%98%A5%E8%8A%82%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html</guid>
+        <link>http://yourdomain.com/2015/02/23/%E6%96%87%E7%8C%AE%E7%BB%BC%E5%90%88%E9%98%85%E8%AF%BB.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/23/%E6%96%87%E7%8C%AE%E7%BB%BC%E5%90%88%E9%98%85%E8%AF%BB.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>系统知识总结</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;系统设计&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optimal Space-time Tradeoffs for Inverted Indexes，Github http://t.cn/RZgGiiN 倒排的最新压缩设计，作者是去年创新索引压缩算法Partitioned Elias-Fano的发明人，今年继续给出各种情形下的最佳选择，http://t.cn/RZgGiiC &lt;a href=&quot;http://www.di.unipi.it/~ottavian/files/wsdm15_index.pdf&quot;&gt;论文 Optimal Space-time Tradeoffs for Inverted Indexes&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://fex.baidu.com/blog/2014/04/traffic-hijack/&quot;&gt;流量劫持是如何产生的&lt;/a&gt; 流量劫持，这种古老的攻击沉寂了一段时间后，最近又开始闹的沸沸扬扬。众多知名品牌的路由器相继爆出存在安全漏洞，引来国内媒体纷纷报道。只要用户没改默认密码，打开一个网页甚至帖子，路由器配置就会被暗中修改。互联网一夜间变得岌岌可危。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://network.51cto.com/art/201103/252335.htm&quot;&gt;输入facebook的URL按下回车后究竟发生了什么&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.infoq.com/cn/articles/cache-coherency-primer&quot;&gt;缓存一致性 Cache Coherency&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html&quot;&gt;二叉树的非递归遍历&lt;/a&gt; 利用stack来实现非递归遍历。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;编程语言&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.iteye.com/magazines/130&quot;&gt;编程精华资源-ITeye优秀专栏-大汇总&lt;/a&gt;
+Java学习，Java框架，Web 前端，编程语言，开源项目研究，编程经验之谈，数据库，设计模式，项目管理，移动开发，云计算与大数据等&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://coolshell.cn/articles/9104.html&quot;&gt;sed 简明教程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.vaikan.com/bash-scripting/&quot;&gt;bash脚本15分钟进阶&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 22 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/02/22/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/22/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html</guid>
         
         
       </item>
@@ -645,10 +402,147 @@
       </item>
     
       <item>
-        <title>抽样方法</title>
+        <title>计算广告相关笔记</title>
+        <description>&lt;h3 id=&quot;rtb&quot;&gt;RTB&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://tutorial.computational-advertising.org/images/WSDM2015.pdf&quot;&gt;Real-Time Bidding&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在RTB广告出价过程中，两个重点因素是：1. 广告展示的效益(点击率/转化率)；2. 展示花销。以这两项因素为输入，我们的框架能优化出最优的RTB出价策略。论文：http://t.cn/Rvb5K9d，实验基于@品友互动 RTB数据集http://t.cn/RP3pPQO。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;计算广告&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;&quot;&gt;Practical Lessons from Predicting Clicks on Ads at Facebook&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html&quot;&gt;利用GBDT模型构造新特征&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;特征决定了所有算法效果的上限，而不同的算法只是离这个上限的距离不同而已。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;这篇论文的思想：先用已有特征训练GBDT模型，然后利用GBDT模型学习到的树来构造新特征，最后把这些新特征加入原有特征一起训练模型。构造的新特征向量是取值0/1的，向量的每个元素对应于GBDT模型中树的叶子结点。当一个样本点通过某棵树最终落在这棵树的一个叶子结点上，那么在新特征向量中这个叶子结点对应的元素值为1，而这棵树的其他叶子结点对应的元素值为0。新特征向量的长度等于GBDT模型里所有树包含的叶子结点数之和。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;已经有人利用这种方法赢得了Kaggle一个CTR预估比赛的冠军，代码可见https://github.com/guestwalk/kaggle-2014-criteo，里面有这种方法的具体实现。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;特征处理
+    &lt;ul&gt;
+      &lt;li&gt;在logistic regression问题中，最基本的问题就是特征处理。&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/15/breezedeus-feature-processing.html&quot;&gt;特征处理入门 by BreezeDeus&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/&quot;&gt;特征选择 by ubiwang&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html&quot;&gt;特征hash法&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;特征降维方法：聚类，PCA，hashing&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;参考文献：
+        &lt;ul&gt;
+          &lt;li&gt;Kilian Weinberger et al. Feature Hashing for Large Scale Multitask Learning,2010.  or Feature hashing for large scale multitask learning&lt;/li&gt;
+          &lt;li&gt;Joshua Attenberg et al. Collaborative Email-Spam Filtering with the Hashing-Trick, 2009.&lt;/li&gt;
+          &lt;li&gt;Alekh Agarwal, Oliveier Chapelle, Miroslav Dud ́ık, and John Langford. A Reliable Effective Terascale Linear Learning System. Journal of Machine Learning Research, 15:1111–1133, 2014.&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Large-scale L-BFGS using MapReduce&lt;/a&gt; 该论文讲述了运用了hashing技术后，AUC的变化。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;特征hash法用于 多任务学习(multitask learning)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;特征选择
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/&quot;&gt;Selecting good features&lt;/a&gt; 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CTR预估
+    &lt;ul&gt;
+      &lt;li&gt;竞价搜索广告中的点击率预估法: 特征和模型 1）经典LR[WWW07] http://t.cn/zT8FYsf 及L1正则版[ICML07] http://t.cn/RZOSmEl 2）高质量特征+组合LR和BDT[ADKDD14] http://t.cn/RZOSmET 3）加LDA话题特征[ACM-TIST15] http://t.cn/RZOinjO 4）组合ANN和BDT[ICLR15] http://t.cn/RZOSmEY&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html&quot;&gt;并行逻辑回归&lt;/a&gt;： 逻辑回归（Logistic Regression，简称LR）是机器学习中十分常用的一种分类算法，在互联网领域得到了广泛的应用，无论是在广告系统中进行CTR预估，推荐系统中的预估转换率，反垃…文字版» http://t.cn/8FpoAyz （新浪长微博» http://t.cn/zOXAaic）&lt;/li&gt;
+      &lt;li&gt;发表了博文《CTR预估模型，机器学习初探水》http://t.cn/R7tJ59w损失函数；CRT模型；数据模型切分；结果推荐；链路距离计算；推http://t.cn/R7tJ5LU&lt;/li&gt;
+      &lt;li&gt;NTU关于Criteo CTR Challenge的winning solution出来了：http://t.cn/RhkyR3B，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了Facebook ADKDD2014文章：http://t.cn/RPrqyRQ&lt;/li&gt;
+      &lt;li&gt;Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 http://t.cn/RZYd75X&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.52ml.net/16256.html&quot;&gt;各大公司广泛使用的在线学习算法FTRL详解&lt;/a&gt; 现在做在线学习和CTR常常会用到逻辑回归（ Logistic Regression），而传统的批量（batch）算法无法有效地处理超大规模的数据集和在线数据流，google先后三年时间（2010年-2013年）从理论研究到实际工程化实现的FTRL（Follow-the-regularized-Leader）算法，在处理诸如逻辑回归之类的带非光滑正则化项（例如1范数，做模型复杂度控制和稀疏化）的凸优化问题上性能非常出色。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://weibo.com/p/1001603803645836675771&quot;&gt;汤兴-爱奇艺大脑—视频进化&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data&quot;&gt;广告数据上的大规模机器学习 夏粉&lt;/a&gt;
+以广告点击率预估问题为例，介绍如何利用大规模机器学习技术搭建一个容纳万亿特征数据的、分钟级别模型更新的、自动高效深度学习&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在线实验效果检验&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://facebook.github.io/planout/docs/about-planout.html&quot;&gt;PlanOut facebook实验框架&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 13 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>抽样与统计</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;参考资料&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;抽样&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;蒙特卡洛数值积分&lt;/h3&gt;
+
+&lt;p&gt;求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_a^b{\frac{f(x)}{q(x)}q(x)dx}&lt;/script&gt;
+
+&lt;p&gt;这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。&lt;/p&gt;
+
+&lt;p&gt;随机模拟方法的核心就是如何对一个概率分布得到样本，即抽样(sampling)。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;均匀分布&lt;/h3&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;x_{n+1}=(ax_n+c)\mod m&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;box-muller-&quot;&gt;Box-Muller 变换&lt;/h3&gt;
+&lt;p&gt;如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;则\(Z_0，Z_1\)独立且服从标准正态分布。&lt;/p&gt;
+
+&lt;h3 id=&quot;acceptance-rejection-sampling&quot;&gt;接受-拒绝抽样(Acceptance-Rejection sampling)&lt;/h3&gt;
+
+&lt;h3 id=&quot;importance-sampling&quot;&gt;重要性抽样(Importance sampling)&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;马尔科夫链，马尔科夫稳态&lt;/h3&gt;
+
+&lt;h3 id=&quot;mcmc-gibbs-sampling&quot;&gt;MCMC-Gibbs sampling算法&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;参考资料&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;链接&lt;/h3&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/xbinworld/p/4266146.html&quot;&gt;随机采样方法整理与讲解&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/daniel-D/p/3388724.html&quot;&gt;从随机过程到马尔科夫链蒙特卡洛方法&lt;/a&gt;&lt;/li&gt;
@@ -659,39 +553,42 @@
   &lt;li&gt;&lt;a href=&quot;http://www.bb.ustc.edu.cn/jpkc/xiaoji/jswl/skja/chapter2-3a.pdf&quot;&gt;任意分布的伪随机变量的抽样&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;蒙特卡洛数值积分&lt;/h2&gt;
+&lt;h3 id=&quot;sampling--statistic&quot;&gt;Sampling &amp;amp; Statistic&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/&quot;&gt;Probabilistic Programming &amp;amp; Bayesian Methods for Hackers&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。&lt;/p&gt;
+    &lt;p&gt;黑客们的概率编程和贝叶斯方法书，电子版，有代码，介绍为主，减少推导。同时详细介绍了使用PyMC进行MCMC编程的细节。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&amp;amp;mid=203307140&amp;amp;idx=1&amp;amp;sn=83cf3093d9cd0f6bca8981eae0cecb9e#rd&quot;&gt;统计学公开课大盘点&lt;/a&gt;&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_a^b{\frac{f(x)}{q(x)}q(x)dx}&lt;/script&gt;
-
-&lt;p&gt;这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。&lt;/p&gt;
-
-&lt;p&gt;随机模拟方法的核心就是如何对一个概率分布得到样本，即抽样(sampling)。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;均匀分布&lt;/h2&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;x_{n+1}=(ax_n+c)\mod m&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;box-muller-&quot;&gt;Box-Muller 变换&lt;/h2&gt;
-&lt;p&gt;如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]&lt;/p&gt;
-
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;则\(Z_0，Z_1\)独立且服从标准正态分布。&lt;/p&gt;
-
-&lt;h2 id=&quot;acceptance-rejection-sampling&quot;&gt;接受-拒绝抽样(Acceptance-Rejection sampling)&lt;/h2&gt;
-
-&lt;h2 id=&quot;importance-sampling&quot;&gt;重要性抽样(Importance sampling)&lt;/h2&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;马尔科夫链，马尔科夫稳态&lt;/h2&gt;
-
-&lt;h2 id=&quot;mcmc-gibbs-sampling&quot;&gt;MCMC-Gibbs sampling算法&lt;/h2&gt;
+    &lt;p&gt;很多统计学课程，看来习题可以从这里面获取了。推荐可汗学院的“Probability and Statistics（概率与统计)”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;随机采样方法整理与讲解（MCMC、Gibbs Sampling等） - Bin的专栏 - 博客园 http://t.cn/RZDLdr4&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[可视化]《Markov Chains》http://t.cn/RZBE1ME 马尔可夫链的交互可视化解释，和以前发过超赞的那个特征值特征向量的可视化同一系列&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://t.cn/RwinD8w&quot;&gt;Variational Inference for Machine Learning&lt;/a&gt; Shakir Mohamed讲面向机器学习的变分推断&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[图书]《Forecasting, Principles and Practice》http://t.cn/zR4ZGMM 全面介绍预测模型和算法，对证券、电信、交通等时序信号的预测分析都很有用，书中例子为R语言，在线免费阅读&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How To Implement These 5 Powerful Probability Distributions In 用python实现5种常用的概率分布：二项式分布、泊松分布、正态分布、Beta分布和指数分布 http://t.cn/RZWta4n&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[文章]《Getting started in data science: My thoughts》http://t.cn/RviewMN 数据科学入门指南——作者从数学、统计学、实验和因果推理、机器学习、软件选择和实践经验积累各方面谈了自己的入门建议。和其他入门指南类文章不同的是，本文没有盲目看好MOOC之类的自学途径，建议都很中肯，推荐阅读&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Fri, 06 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/06/sampling.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/06/sampling.html</guid>
+        <link>http://yourdomain.com/2015/02/06/%E6%8A%BD%E6%A0%B7%E4%B8%8E%E7%BB%9F%E8%AE%A1.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/06/%E6%8A%BD%E6%A0%B7%E4%B8%8E%E7%BB%9F%E8%AE%A1.html</guid>
         
         
       </item>
@@ -1693,11 +1590,25 @@
       &lt;li&gt;SVM &amp;amp; Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf&quot;&gt;Who is afraid of non-convex loss functions?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;section-8&quot;&gt;最优化算法参考资料&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.erogol.com/comparison-sgd-vs-momentum-vs-rmsprop-vs-momentumrmsprop/&quot;&gt;几点改进随机梯度下降(SGD)过程的tricks&lt;/a&gt;
+  对梯度本身的探究也是特别有价值的，这里的优化方法，就是让梯度的update更平滑和稳定，记录之前在这个方向上的梯度，做平滑，并防止不同batch带来的突变是有价值的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;凸优化，convex optimization&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/15/optimal_method.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/15/optimal_method.html</guid>
+        <link>http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html</guid>
         
         
       </item>
@@ -1737,798 +1648,6 @@
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/15/gbdt_adaboost_bootstrap.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/01/15/gbdt_adaboost_bootstrap.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>推荐算法总结</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;推荐算法总结&lt;/h1&gt;
-
-&lt;h4 id=&quot;author-vincentyaotencentcom&quot;&gt;author: vincentyao@tencent.com&lt;/h4&gt;
-
-&lt;p&gt;互联网的发展经历了这样几个阶段，首先是信息产生阶段，接着由于信息越来越多，用户需要查询相关信息，就有了搜索引擎，再接着，信息过载更加严重，用户需求不明确时，就需要推荐引擎了。&lt;/p&gt;
-
-&lt;p&gt;推荐在计算广告上有很多的运用，如下图所示，Netflix有2/3的电影观看都是经由推荐的。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这里计划按照自己的理解对推荐算法做一个总结。下面内容主要分为三节，第一节介绍各种推荐算法，包括传统算法(CF)，新算法(Deeplearning)等；第二节精选了业界的一些成熟推荐系统，做一下简要的学习与总结；第三节则是自己对推荐系统的理解与总结。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;推荐算法介绍&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;推荐问题定义&lt;/h3&gt;
-&lt;p&gt;Estimate a utility function that automatically predicts how a user will like an item。&lt;/p&gt;
-
-&lt;h3 id=&quot;memory-based-collaborative-filtering&quot;&gt;Memory-based Collaborative Filtering&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;协同（collaborating）是群体行为，过滤（filtering）则是针对个人的行为。&lt;/li&gt;
-  &lt;li&gt;假设有m个user，n个item。每个用户都有一个关联的item list，并且通过显式或隐式的反馈，对每个item都有一个rating \(v_{i,j}\)。&lt;/li&gt;
-  &lt;li&gt;显式评分指用户使用系统提供的方式进行评分或者评价; 隐式评分则根据使用者的行为模式由系统代替使用者完成评价，行为模式包括用户的浏览行为、购买行为等等。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;基本步骤为：(1)收集用户评分；(2)最近邻搜索；(3)产生推荐结果。第3步中，较常见的推荐算法有Top-N推荐和关联推荐。Top-N推荐比较熟悉，关联推荐是对最近邻使用者的记录进行关联规则(association rules)挖掘。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;长处：
-    &lt;ul&gt;
-      &lt;li&gt;minimal knowledge，content-agnostic，可以在不理解item和user的情况下，做任何类型的推荐。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;短处：
-    &lt;ul&gt;
-      &lt;li&gt;需要大量可信的用户反馈数据&lt;/li&gt;
-      &lt;li&gt;不考虑上下文信息&lt;/li&gt;
-      &lt;li&gt;商品都是标准化的(Users should have bought exactly the same product)&lt;/li&gt;
-      &lt;li&gt;content-agnostic（与内容无关的），容易推荐popular items，即Popularity Bias。&lt;/li&gt;
-      &lt;li&gt;new and unpopular items cannot be recommended，即cold-start problem。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;user-based&quot;&gt;User-based&lt;/h4&gt;
-&lt;p&gt;先找最近邻user，再基于最近邻user预测。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;User之间相似度计算
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Prediction for user i and items j：
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_prediction.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;item-based&quot;&gt;Item-based&lt;/h4&gt;
-&lt;p&gt;先计算item similarity，再基于user rated items预测。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;考虑到不同的用户，对于不同的物品，都有不同的打分偏置；所以需要做归一化与偏置矫正。rate bias：\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\)，\(s_k(i,u)\) is k-nearest neighbors to i that were rated by user u。&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png&quot; alt=&quot;&quot; /&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_item_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;item-based计算流程：&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;association-rules&quot;&gt;Association rules(关联规则)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;关联规则分析 (Association Rules，又称 Basket Analysis) 用于从大量数据中挖掘出有价值的数据项之间的相关关系。经典论文&lt;a href=&quot;&quot;&gt;Mining Association Rules between Sets of Items in Large Databases&lt;/a&gt;。关联规则解决的常见问题如：“如果一个消费者购买了产品A，那么他有多大机会购买产品B?”以及“如果他购买了产品C和D，那么他还将购买什么产品？”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;常见算法有：Apriori算法和FP-growth算法。请参考&lt;a href=&quot;http://zh.wikipedia.org/wiki/先验算法&quot;&gt;wiki&lt;/a&gt;。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;关联规则面向的是transaction，而User-based or Item based面向的是用户偏好（评分），协同过滤在计算相似商品的过程中可以使用关联规则分析。具体请参考&lt;a href=&quot;http://www.zhihu.com/question/22404652&quot;&gt;协同过滤和关联规则分析的区别是什么&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;memory-based-cf&quot;&gt;Memory-based CF总结&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Problem: sparsity，scalability
-    &lt;ul&gt;
-      &lt;li&gt;针对sparsity，可以利用latent models做降维。Methods of dimensionality reduction: Matrix Factorization, Clustering，Projection(PCA) …&lt;/li&gt;
-      &lt;li&gt;scalability瓶颈点：相关性计算。将最近邻产生与预测分为两个步骤，其中相关性计算时间复杂度很高。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;个人总结，一般来讲，item-based方法更好用，因为item之间的similarity是相对静态，但user之间的similarity相对动态。当item base is smaller than user or changes rapidly时，采用user-based方法更合适；相反，当user base is small时，Item-based方法更合适；&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;model-based-collaborative-filtering&quot;&gt;Model-based Collaborative Filtering&lt;/h3&gt;
-
-&lt;h4 id=&quot;svdmf&quot;&gt;SVD/MF&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;SVD
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;U是user-factor矩阵，V是item-factor矩阵。
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/model_based_svd.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;基于svd的rating过程：
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_rating.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;先写出loss function，再利用SGD or Alternating least squares求解
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-        &lt;p&gt;增加bias后的目标优化函数(loss function)：
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-        &lt;p&gt;关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。&lt;/p&gt;
-
-        &lt;p&gt;关于求解算法，Alternating least squares方法的原理是：首先固定item vectors，最优化user vectors，再固定user vectors，最优化item vectors。SGD就是梯度下降法，相对更快。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;算法优点：(1)将用户和物品用隐特征(latentfeature)连接在一起；(2)MatrixFactorization有明确的数学理论基础(singularvalue)和优 化目标,容易逼近最优解；(3)对数据稀疏性(datasparsity)和抗噪音干扰的处理效果较好; (4)延展性(scalability)很好;&lt;/li&gt;
-      &lt;li&gt;算法缺点：(1)可解释性弱；(2)难以实时更新(适用于离线计算)；(3)Overfitting without regularization，特别是fewer reviews than dimensions。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SVD++&lt;/p&gt;
-
-    &lt;p&gt;SVD++ 是SVD模型的加强版，除了打分关系，SVD++还可以对隐含的回馈(implicit feedback) 进行建模。
-  除了在SVD中定义的向量外，每个item对应一个向量yi，来通过user隐含回馈过的item的集合来刻画用户的偏好。&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{r}_{ui} = \mu + b_i + b_u + q_i^T (p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i)&lt;/script&gt;
-
-    &lt;p&gt;其中， R(u) 代表user隐含回馈（打分过的）过的item的集合。
-  可以看到，现在user被建模为\( p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i \)，&lt;/p&gt;
-
-    &lt;p&gt;具体请参考&lt;a href=&quot;http://www.superchun.com/machine-learning/svd1.html&quot;&gt;文章SVD/SVD++&lt;/a&gt;，&lt;a href=&quot;http://research.yahoo.com/files/kdd08koren.pdf&quot;&gt;论文Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SVDfeature&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf&quot;&gt;SVDFeature: A Toolkit for Feature-based Collaborative Filtering&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svdfeature2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;开源库，请参考&lt;a href=&quot;http://blog.csdn.net/cserchen/article/details/14231153&quot;&gt;推荐系统开源软件列表汇总和点评&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.libfm.org&quot;&gt;libFM&lt;/a&gt;，by Steffen Rendle。特点是实现了MCMC（Markov Chain Monte Carlo）优化算法，比常见的SGD（随即梯度下降）优化方法精度要高（当然也会慢一些）。&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://svdfeature.apexlab.org/wiki/Main_Page&quot;&gt;svdfeature&lt;/a&gt;，by 上海交大。&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libmf/&quot;&gt;libMF&lt;/a&gt;，by国立台湾大学。参考论文&lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf_journal.pdf&quot;&gt;Y. Zhuang, W.-S. Chin, Y.-C. Juan, and C.-J. Lin. A Fast Parallel SGD for Matrix Factorization in Shared Memory Systems&lt;/a&gt;。&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/nmf/&quot;&gt;NMF&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;rbm&quot;&gt;RBM&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;论文 Restricted Boltzmann Machines for Collaborative Filtering&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;clustering&quot;&gt;Clustering&lt;/h4&gt;
-
-&lt;p&gt;将用户聚类后，再基于传统CF的方法(此时user不是单独的用户，而是cluster)&lt;/p&gt;
-
-&lt;h4 id=&quot;locality-sensitive-hashing&quot;&gt;Locality-sensitive hashing&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Method for grouping similar items in highly dimensional spaces；&lt;/li&gt;
-  &lt;li&gt;Find a hashing function s.t. similar items are grouped in the same buckets;&lt;/li&gt;
-  &lt;li&gt;可以参考站内文章&lt;a href=&quot;http://zzbased.github.io/2015/01/01/matrix-similarity.html&quot;&gt;矩阵相似度计算&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;classifiers&quot;&gt;Classifiers&lt;/h4&gt;
-&lt;p&gt;Classifiers can be used in CF and CB Recommenders。
-优点：可以和其他方法结合使用。缺点是：需要一份训练集。&lt;/p&gt;
-
-&lt;h3 id=&quot;content-based-recommenders&quot;&gt;Content-based Recommenders&lt;/h3&gt;
-
-&lt;p&gt;这里可以利用众多自然语言处理技术，分别建立用户/Item画像(category, tag/keyword，topic等)，然后基于两者画像做相关性计算。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/content_based.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;new-approaches&quot;&gt;New approaches&lt;/h3&gt;
-
-&lt;h4 id=&quot;learning-to-rank&quot;&gt;Learning to Rank&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;一个机器学习问题，目标是从训练数据里构建一个ranking model。排序学习指在排序生成 (ranking creation) 和排序整合 (ranking aggregation) 中用于构建排序模型的机器学习方法。&lt;a href=&quot;http://www.icst.pku.edu.cn/lcwm/course/WebDataMining/slides2012/8机器学习及排序学习基础.pdf&quot;&gt;slice&lt;/a&gt;，&lt;a href=&quot;http://www.cnblogs.com/kemaswill/archive/2013/06/01/3109497.html&quot;&gt;Learning to Rank简介&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Learning to rank is a key element for personalization&lt;/li&gt;
-  &lt;li&gt;Treat the problem as a standard supervised classification problem&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://people.cs.umass.edu/~vdang/ranklib.html&quot;&gt;Ranklib code&lt;/a&gt;，&lt;a href=&quot;http://svmlight.joachims.org&quot;&gt;svmlight&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pointwise
-    &lt;ul&gt;
-      &lt;li&gt;Ranking score based on regression or classification&lt;/li&gt;
-      &lt;li&gt;LR, SVM, GBDT, McRank …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pairwise
-    &lt;ul&gt;
-      &lt;li&gt;Randing problem是二分类问题，pair-wise的比较，将排序问题转换为分类问题&lt;/li&gt;
-      &lt;li&gt;RankSVM, RankBoost, RankNet, FRank …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Listwise
-    &lt;ul&gt;
-      &lt;li&gt;ListNet: KL-divergence as loss function by define a probability distribution&lt;/li&gt;
-      &lt;li&gt;RankCosine: similarity between ranking list and ground truth as loss function&lt;/li&gt;
-      &lt;li&gt;Lambda Rank，ListNet，ListMLE，AdaRank，SVMap …&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/learning_to_rank_compare.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;context-aware-recommendations&quot;&gt;Context-aware Recommendations&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://ids.csom.umn.edu/faculty/gedas/NSFCareer/CARS-chapter-2010.pdf&quot;&gt;论文Context-Aware Recommender Systems&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;从[R: User * Item -&amp;gt; Rating] 到 [R: User * Item * Context -&amp;gt; Rating]&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;传统推荐过程框图
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/general-recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;将context纳入推荐系统后
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender1.png&quot; alt=&quot;&quot; /&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/context-recommender2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;两种方法：&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Tensor Factorization
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hosvd.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Factorization Machines&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;deep-learning-ann-training-recurrent-networks&quot;&gt;Deep learning: ANN training, Recurrent Networks&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://erikbern.com/?p=589&quot;&gt;Recurrent Neural Networks for Collaborative Filtering&lt;/a&gt;，&lt;a href=&quot;http://www.slideshare.net/erikbern/collaborative-filtering-at-spotify-16182818?related=1&quot;&gt;Collaborative Filtering at Spotify&lt;/a&gt;
-Recurrent neural networks have a simple model that tries to predict the next item given all previous ones。&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf-RNN-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://benanne.github.io/2014/08/05/spotify-cnns.html&quot;&gt;Recommending music on Spotify with deep learning&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;similarity-graph-based-similaritysimrank&quot;&gt;Similarity: graph-based similarity(simrank)&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Graph-based similarities
-    &lt;ul&gt;
-      &lt;li&gt;SimRank: two objects are similar if they are referenced by similar objects&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www-cs-students.stanford.edu/~glenj/simrank.pdf&quot;&gt;论文 SimRank&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.spiral.pro/big_data/simrank-intro.html&quot;&gt;SimRank原理&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;social-recommendations&quot;&gt;Social Recommendations&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Social and Trust-based recommenders
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/trust_based_recommenders.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;关系链 Friendship Demographic methods&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;ranking-and-session-modeling&quot;&gt;Ranking and Session Modeling&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Independent click model&lt;/li&gt;
-  &lt;li&gt;Logistic click model。Exponential family model for click; user looks at all&lt;/li&gt;
-  &lt;li&gt;Sequential click model; User traverses list&lt;/li&gt;
-  &lt;li&gt;Skip click model&lt;/li&gt;
-  &lt;li&gt;Context skip click model&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;hybrid-approaches&quot;&gt;Hybrid Approaches&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.52ml.net/318.html&quot;&gt;推荐系统中所使用的混合技术介绍&lt;/a&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;推荐算法对比&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://dataunion.org/bbs/forum.php?mod=viewthread&amp;amp;tid=835&amp;amp;extra=&quot;&gt;推荐系统的常用算法对比&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/oopsoom/article/details/33740799&quot;&gt;推荐算法总结&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;常用推荐算法点评(by 陈运文)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Item-based collaborative filtering
-    &lt;ul&gt;
-      &lt;li&gt;应用最为广泛的方法&lt;/li&gt;
-      &lt;li&gt;存在各种计算方法的改进;但Similarity计算随意性大&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Content-based algorithm
-    &lt;ul&gt;
-      &lt;li&gt;实现简单、直观,常用于处理冷启动问题&lt;/li&gt;
-      &lt;li&gt;推荐精度低&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Latent Factor Model
-    &lt;ul&gt;
-      &lt;li&gt;单一模型效果最好的方法;但难以实时更新模型&lt;/li&gt;
-      &lt;li&gt;KDD-Cup,Netflix Prize …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Statistics-based
-    &lt;ul&gt;
-      &lt;li&gt;简陋,直观,非个性化,被大量使用&lt;/li&gt;
-      &lt;li&gt;可用于补足策略&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;效果评估&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;MAP/nDCG: top-N推荐&lt;/li&gt;
-  &lt;li&gt;RMSE/MAE: 评分预测问题&lt;/li&gt;
-  &lt;li&gt;A/B Testing: 点击率、转化率&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;case&quot;&gt;推荐系统实战Case&lt;/h2&gt;
-
-&lt;h3 id=&quot;netflix&quot;&gt;Netflix&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;top-2 algorithms：SVD，RBM&lt;/li&gt;
-  &lt;li&gt;具体请参考&lt;a href=&quot;http://buzzard.ups.edu/courses/2014spring/420projects/math420-UPS-spring-2014-gower-netflix-SVD.pdf&quot;&gt;Netflix Prize and SVD&lt;/a&gt;，&lt;a href=&quot;http://www.netflixprize.com/assets/GrandPrize2009_BPC_BellKor.pdf&quot;&gt;The BellKor Solution to the Netflix Grand Prize&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;httpsbreezedeusgithubio20121101breezedeus-yuanquan-etaohtml&quot;&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/11/01/breezedeus-yuanquan-etao.html&quot;&gt;个性化推荐技术#总结-袁全&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;相关性推荐，点击数据更有用；补充性推荐，购买数据更有用；要根据用户行为意图选择不同的推荐方法。&lt;/li&gt;
-  &lt;li&gt;对于不同种类的产品，当用户处在同一购物流程时，其理想的相关性推荐/补充性推荐的概率也差别很大。&lt;/li&gt;
-  &lt;li&gt;Mixture Logistic Regression&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;httpsbreezedeusgithubio20121110breezedeus-jiangshenhtml&quot;&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/11/10/breezedeus-jiangshen.html&quot;&gt;面向广告主的推荐，江申@百度&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;技术目标要正确；譬如对于拍卖词推荐，其数学目标的烟花过程为：推荐最相关的词-&amp;gt;推荐广告主采用率最高的词-&amp;gt;推荐采用率最高且产生推广效果最佳的词。&lt;/li&gt;
-  &lt;li&gt;在拍卖词推荐中主要涉及到三种模型：相关性模型、采用率模型和推广效果模型。&lt;/li&gt;
-  &lt;li&gt;负反馈：按照item已经对user展示的次数指数级降低其权重，避免同一个item多次重复被展示给一个用户。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;httpsbreezedeusgithubio20121112breezedeus-wenguozhuhtml&quot;&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/11/12/breezedeus-wenguozhu.html&quot;&gt;个性化推荐技术#总结 稳国柱@豆瓣&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;电影推荐：首先把电影按照电影标签进行分组（比如分成动作片，剧情片等）；然后在每个组里面使用CF算法产生推荐结果；最后把每组中获得的推荐按照加权组合的方式组合在一块。&lt;/li&gt;
-  &lt;li&gt;图书推荐：图书有一定的阶梯性，在大部分的场合，我们需要的并不是与自己相似的用户的推荐，而是与自己相似的专家的推荐。&lt;/li&gt;
-  &lt;li&gt;电台的音乐推荐：必须使用一个算法系统（其中包含多个算法）来针对不同的用户进行不同的算法调度&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;by-httpwwwdoubancomnote472267231&quot;&gt;&lt;a href=&quot;http://www.douban.com/note/472267231/&quot;&gt;年终总结 &amp;amp; 算法数据的思考 by 飞林沙&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;httpsbreezedeusgithubio20150131breezedeus-review-for-year-2014-techhtml&quot;&gt;&lt;a href=&quot;https://breezedeus.github.io/2015/01/31/breezedeus-review-for-year-2014-tech.html&quot;&gt;世纪佳缘用户推荐系统的发展历史&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“总结、温习，这两点让人成长。而不是你走得有多快！”&lt;/li&gt;
-  &lt;li&gt;天真的算法年：item-based kNN。推荐以前看过的item的相似item。可逆（Reciprocal）推荐算法，是什么东西？&lt;a href=&quot;http://search.aol.com/aol/search?s_it=topsearchbox.search&amp;amp;v_t=opensearch&amp;amp;q=Reciprocal+recommendation&quot;&gt;Reciprocal recommendation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;技术为产品服务，而不是直接面向用户；数据质量是地基，保证好的质量很不容易；如何制定正确的优化指标真的很难；业务理解 &amp;gt; 工程实现；数据 &amp;gt; 系统 &amp;gt; 算法；快速试错；&lt;/li&gt;
-  &lt;li&gt;Dirichlet Process 和 Dirichlet Process Mixture&lt;/li&gt;
-  &lt;li&gt;Alternating Direction Method of Multipliers(ADMM)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html&quot;&gt;利用GBDT模型构造新特征&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html&quot;&gt;特征哈希（Feature Hashing）&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;不平衡数据的抽样方法。参考文献：William Fithian, Trevor Hastie, Local Case-Control Sampling Efficient Subsampling in Imbalanced Data Sets, 2014.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/484853135/&quot;&gt;世纪佳缘推荐系统之我见&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;明确推荐评价指标：对于婚恋推荐系统来说，最核心的指标无外乎付费的转换率	- 我们倒着来推，把问题转换为识别出最愿意付费的那些用户，然后找到这些用户感兴趣的用户，通过产品引导让这些用户发信&lt;/li&gt;
-      &lt;li&gt;能不能从数据跳出来对产品提出一些创意性改进从而产生的产品模式和收费模式的变革。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;new-directions-in-recommender-systemshttpwwwwsdm-conferenceorg2015wp-contentuploads201502wsdm-2015-pe-leskovecpdf&quot;&gt;&lt;a href=&quot;http://www.wsdm-conference.org/2015/wp-content/uploads/2015/02/WSDM-2015-PE-Leskovec.pdf&quot;&gt;New Directions in Recommender Systems&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/484692347/&quot;&gt;飞林沙-读后总结&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;需要理解 可替换 和 可补充，这两种推荐形式。&lt;/li&gt;
-  &lt;li&gt;怎样生成替代品的推荐理由，应该是更好，而不是他们包含同一关键词&lt;/li&gt;
-  &lt;li&gt;推荐一整套装备&lt;/li&gt;
-  &lt;li&gt;Inferring Networks from Opinions阅读总结：
-    &lt;ul&gt;
-      &lt;li&gt;Product Graph：Building networks from product text		- Understand the notions of substitute and complement goods		- Generate explanations of why certain products are preferred
-        &lt;ul&gt;
-          &lt;li&gt;Recommends baskets of related items&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;learn x and y are related?
-        &lt;ul&gt;
-          &lt;li&gt;Attempt 1: Text features；缺点：High-dimensional，Prone to overfitting，Too fine-grained&lt;/li&gt;
-          &lt;li&gt;Attempt 2: Features from Topics。也就是把第一种方法，用topic vector替换，相当于降维了。&lt;/li&gt;
-          &lt;li&gt;Attempt 3: Learn ‘good’ topics。Learn to discover topics that explain the graph structure；
-            &lt;ul&gt;
-              &lt;li&gt;Idea: Learn both simultaneously；we want to learn to project documents (reviews) into topic space such that related products are nearby；&lt;/li&gt;
-              &lt;li&gt;Combining topic models with link prediction；topic和link利用一个目标函数，一起训练。&lt;/li&gt;
-              &lt;li&gt;Issue 1: Relationships we want to learn are not symmetric；Solution: We solve this issue by learning “relatedness” in addition to “directedness”&lt;/li&gt;
-              &lt;li&gt;Issue 3: The model has a too many parameters；Solution: Product hierarchy；Associate each node in the category tree with a small number of topics&lt;/li&gt;
-              &lt;li&gt;整个模型用EM算法来求解，类似于PLSA的EM算法。&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;httptechmeituancommachinelearning-data-feature-processhtml&quot;&gt;&lt;a href=&quot;http://tech.meituan.com/machinelearning-data-feature-process.html&quot;&gt;美团推荐团队-机器学习中的数据清洗与特征处理综述&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;httpwwwcsdnnetarticle2015-01-302823783&quot;&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-01-30/2823783&quot;&gt;美团推荐算法实践：机器学习重排序模型成亮点&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tech.meituan.com/mt-recommend-practice.html&quot;&gt;美团推荐算法实践&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;本文介绍了美团网推荐系统的构建和优化过程中的一些做法，包括数据层、触发层、融合过滤层和排序层五个层次，采用了HBase、Hive、storm、Spark和机器学习等技术。两个优化亮点是将候选集进行融合与引入重排序模型。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;recommending-music-on-spotify-with-deep-learninghttpbenannegithubio20140805spotify-cnnshtml&quot;&gt;&lt;a href=&quot;http://benanne.github.io/2014/08/05/spotify-cnns.html&quot;&gt;文章-Recommending music on Spotify with deep learning&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;基于作者的实习经历讲Spotify的音乐推荐，内容涉及：协同过滤、基于内容的推荐、基于深度学习的品味预测、convnets规模扩展、convnets的学习内容、推荐的具体应用等&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Collaborative filtering：content-agnostic（与内容无关的），容易推荐popular items。另外，new and unpopular songs cannot be recommended，即cold-start problem。&lt;/li&gt;
-  &lt;li&gt;Content-based：tags, artist and album information, lyrics, text mined from the web (reviews, interviews, …), and the audio signal itself（e.g. the mood of the music）。&lt;/li&gt;
-  &lt;li&gt;Predicting listening preferences with deep learning。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;httpwwwaszxqwcomwork20140601tuijian-xitong-de-nadianshihtml&quot;&gt;&lt;a href=&quot;http://www.aszxqw.com/work/2014/06/01/tuijian-xitong-de-nadianshi.html&quot;&gt;推荐系统的那点事&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;分析了推荐系统中使用算法的误区，确实规则带来的好处简单有效。 当一个做推荐系统的部门开始重视【数据清理，数据标柱，效果评测，数据统计，数据分析】这些所谓的脏活累活，这样的推荐系统才会有救。&lt;/p&gt;
-
-&lt;h3 id=&quot;computing-recommendations-at-extreme-scale-with-apache-flink-and-google-compute-enginehttpdata-artisanscomcomputing-recommendations-with-flinkhtml&quot;&gt;&lt;a href=&quot;http://data-artisans.com/computing-recommendations-with-flink.html&quot;&gt;文章 Computing Recommendations at Extreme Scale with Apache Flink and Google Compute Engine&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Flink实例！用Flink和GAE做面向大规模数据集的协同推荐，从中可看出Flink的巨大应用潜力，文中引用的材料值得一读（作者说了，细节文章即将推出敬请期待，感兴趣请持续关注）&lt;/p&gt;
-
-&lt;h3 id=&quot;httpwww52mlnet318html&quot;&gt;&lt;a href=&quot;http://www.52ml.net/318.html&quot;&gt;推荐系统中所使用的混合技术介绍&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;系统架构层面一般使用多段组合混合推荐框架，算法层面则使用加权型混合推荐技术，包括LR、RBM、GBDT系列。此外还介绍分级型混合推荐技术，交叉调和技术，瀑布型混合方法，推荐基础特征混合技术，推荐模型混合技术，整体式混合推荐框架等。&lt;/p&gt;
-
-&lt;h3 id=&quot;cikm-competitionhttpwww52nlpcncikm-competition-topdata&quot;&gt;&lt;a href=&quot;http://www.52nlp.cn/cikm-competition-topdata&quot;&gt;CIKM Competition数据挖掘竞赛夺冠算法陈运文&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;该文讲述的不是推荐算法，而是一个分类问题，不过也有一些对我个人有启发的地方：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;考虑到样本分布不均匀，在计算Macro Precision和Recall时，由于分母是该category的Query number，所以越是稀少的类别，其每个Query的预测精度对最终F1值的影响越大。换句话说冷门类别对结果的影响更大，需要格外关注。&lt;/li&gt;
-  &lt;li&gt;多分类问题的处理方式，没有将跨类的样本进行拆分，而是将多类的训练样本单独作为一个类别，实践验证效果更好。&lt;/li&gt;
-  &lt;li&gt;社交网络中的智能推荐的思想也可以在这里运用。类似推荐系统中的&amp;lt;User, Item&amp;gt;关系对，这里&amp;lt;Query, Title&amp;gt;的关系可以使用协同过滤（Collaborative Filtering）的思想，当两个Query所点击的Title列表相似时，则另外Query的category可以被“推荐”给当前Query。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;在Ensemble框架下，分类器分为两个Level: L1层和L2层。L1层是基础分类器，前面所提到的方法均可以作为L1层分类器来使用；L2层基于L1层，将L1层的分类结果形成特征向量，再组合一些其他的特征后，形成L2层分类器（如SVM）的输入。这里需要特别留意的是用于L2层的训练的样本必须没有在训练L1层时使用过。&lt;/p&gt;
-
-    &lt;p&gt;在设计Ensemble L1层算法的过程中，有很多种设计思路，我们选择了不同的分类算法训练多个分类模型，而另外有队伍则为每一个类别设计了专用的二分分类器，每个分类器关注其中一个category的分类(one-vs-all)；也可以选择同一种分类算法，但是用不同的特征训练出多个L1层分类器；另外设置不同的参数也能形成多个L1层分类器等&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;top-9httpwwwcsdnnetarticle2014-08-272821403-the-top-9-of-ali-bigdata-competition9&quot;&gt;&lt;a href=&quot;http://www.csdn.net/article/2014-08-27/2821403-the-top-9-of-ali-bigdata-competition/9&quot;&gt;学生强则国强，访天猫推荐算法大赛Top 9团队&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;根据用户4个月在天猫的行为日志，预测用户u在将来一个月是否会购买某个品牌b&lt;/p&gt;
-
-&lt;p&gt;模型的训练思想：&lt;/p&gt;
-
-&lt;p&gt;由于这个问题中正负样本比例悬殊，我们使用了级联的思想过滤掉大量的样本来提升训练速度，同时也提升了模型准确率。在第一级选用训练和预测速度都较快的逻辑回归模型，过滤掉&amp;gt;80%的样本。在第二级选用拟合能力更强的GBRT、RF、神经网络等非线性模型。最后选用神经网络将第二级的非线性模型融合起来。&lt;/p&gt;
-
-&lt;h3 id=&quot;large-scale-recommendation-in-e-commerce----qiang-yanhttpwwwslidesharenetscmyyanlarge-scale-recommendation-in-ecommerce-qiang-yan&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/scmyyan/large-scale-recommendation-in-ecommerce-qiang-yan&quot;&gt;Large scale recommendation in e-commerce – qiang yan&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Justin:online match + online learning works very well
-赞processing stack。我们最近在豆瓣fm上也做了online learning，improve10个点左右&lt;/p&gt;
-
-&lt;h3 id=&quot;google-news-personalization-scalable-online-collaborative-filteringhttpwww2007orgpaperspaper570pdf&quot;&gt;&lt;a href=&quot;http://www2007.org/papers/paper570.pdf&quot;&gt;Google News Personalization: Scalable Online Collaborative Filtering&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;推荐的结果是三个算法的融合，即MinHash, PLSI, covisitation。融合的方式是分数线性加权。&lt;/li&gt;
-  &lt;li&gt;一个主要的思想是“online”的进行更新，所以这个地方一定要减少规模，索引使用了User Clustering的算法，包括Min Hash和PLSI。在新数据来的时候，关键是不要去更新User Cluster，而是直接更新所属的Cluster对于URL的点击数据。对于新用户，使用covisitation的方法进行推荐&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.308.3087&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Personalized News Recommendation Based on Click Behavior&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;The YouTube video recommendation system&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;推荐系统总结&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-6&quot;&gt;实践中的关键点&lt;/h3&gt;
-
-&lt;h4 id=&quot;section-7&quot;&gt;数据预处理&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;更多的有效数据，更好的推荐效果&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-8&quot;&gt;隐式反馈的使用&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;显式反馈(explicit feedbacks):
-    &lt;ul&gt;
-      &lt;li&gt;购买、评分、接受推荐、点击喜欢。。。&lt;/li&gt;
-      &lt;li&gt;数量稀疏(用户是最懒的人)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;隐式反馈(implicit Feedbacks):
-    &lt;ul&gt;
-      &lt;li&gt;浏览、收听、点击、下载。。。&lt;/li&gt;
-      &lt;li&gt;User/item相关的profile、keyword、tags&lt;/li&gt;
-      &lt;li&gt;反馈中占大多数(往往被忽略)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;如何利用好隐式反馈?
-    &lt;ul&gt;
-      &lt;li&gt;对提高推荐精度有良好效果(SVD-&amp;gt;SVD++)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;sns&quot;&gt;SNS关系的使用&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;SNS关系包括：
-    &lt;ul&gt;
-      &lt;li&gt;follower/followee，好友，群关系&lt;/li&gt;
-      &lt;li&gt;user-user actions，e.g. “retweet/at/comment…”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;SNS关系的使用
-    &lt;ul&gt;
-      &lt;li&gt;用于user之间的关系计算(graph-based)&lt;/li&gt;
-      &lt;li&gt;作为隐式反馈，用于SVD++&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-9&quot;&gt;时间因素的使用&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;user的行为受时间影响&lt;/li&gt;
-  &lt;li&gt;Item的状态也受时间影响&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-10&quot;&gt;利用地域信息&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;特定的应用场景&lt;/li&gt;
-  &lt;li&gt;基于规则&lt;/li&gt;
-  &lt;li&gt;基于地域信息的关联规则挖掘&lt;/li&gt;
-  &lt;li&gt;Item-based协同过滤，item similarity计算时加入距离属性&lt;/li&gt;
-  &lt;li&gt;Latent factor，user-location作为隐式反馈使用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;user&quot;&gt;User冷启动的处理&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;热门推荐(排行榜)永远都是一个可用的方案
-    &lt;ul&gt;
-      &lt;li&gt;点击总量最多&lt;/li&gt;
-      &lt;li&gt;最近点击最多&lt;/li&gt;
-      &lt;li&gt;评分最高&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;充分利用任何用户信息
-    &lt;ul&gt;
-      &lt;li&gt;性别、年龄&lt;/li&gt;
-      &lt;li&gt;来自其他应用的数据&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;口味测试
-    &lt;ul&gt;
-      &lt;li&gt;有代表性的选项&lt;/li&gt;
-      &lt;li&gt;热门/大部分用户熟知的选项&lt;/li&gt;
-      &lt;li&gt;有区分度的选项&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;item&quot;&gt;Item冷启动的处理&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Content-basedmethods永远都是一个可用方案
-    &lt;ul&gt;
-      &lt;li&gt;Category&lt;/li&gt;
-      &lt;li&gt;Tags&lt;/li&gt;
-      &lt;li&gt;Topic&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;相关技术(NLP、ML)
-    &lt;ul&gt;
-      &lt;li&gt;自动分类&lt;/li&gt;
-      &lt;li&gt;自动标签提取&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;倒排索引的使用
-    &lt;ul&gt;
-      &lt;li&gt;适用于item数量庞大&lt;/li&gt;
-      &lt;li&gt;索引的查询与合并&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-11&quot;&gt;总结&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;技术目标要正确。&lt;/p&gt;
-
-    &lt;p&gt;举个例子，搜索广告中的关键词推荐，技术目标是什么？是相关性足够好，还是采用率够高，或者是广告主采用后收益高。这里首先需要确定好，如果优化目标错误了，那接下来的工作都要打折扣。假设关键词推荐的技术目标是：推荐采用率最高且产生推广效果最佳的词。那么在做推荐时，可以用一个模型解决上述目标，也可以用多个模型。一般情况下，将优化目标拆分成多个模型，将减小复杂度。譬如在关键词推荐里，就有三个模型：相关性模型、采用率模型和推广效果模型。&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;首先要定义好什么叫”好的推荐“，这是解决任何一个技术问题的前提。&lt;/li&gt;
-      &lt;li&gt;在有了明确的定义之后，实际问题一般会蜕变为一个优化问题，用数学工具给出它最好的解答。&lt;/li&gt;
-      &lt;li&gt;数学上的解答可能在技术上无法实现，或者说有可能复杂度太高，那么需要一个比较好的近似解。不要小看这一步，大部分问题出在这里。&lt;/li&gt;
-      &lt;li&gt;迭代改进。算法实现以后可能实际表现与预想的不同，需要重新定义”好的推荐“。这样一个周期下来，推荐效果应当有肉眼可见的改进。&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;推荐算法选择，要根据数据来做选择。
-    &lt;ul&gt;
-      &lt;li&gt;各取所长，互相补充&lt;/li&gt;
-      &lt;li&gt;算法无好坏之分，只有是否合适&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.quora.com/Recommendation-Systems/What-developments-have-occurred-in-recommender-systems-after-the-Netflix-Prize/answer/Xavier-Amatriain?srid=z0Q5&amp;amp;share=1&quot;&gt;Recommendation Systems: What developments have occurred in recommender systems after the Netflix Prize?&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;下面是Xavier Amatriain在Quora上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入。其中他谈到，评分预测已经不是主流，LTR的应用会更符合推荐的初衷。&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Implicit feedback from usage has proven to be a better and more reliable way to capture user preference.&lt;/li&gt;
-      &lt;li&gt;Rating prediction is not the best formalization of the “recommender problem”. Other approaches, and in particular personalized Learning to Rank, are much more aligned with the idea of recommending the best item for a user.&lt;/li&gt;
-      &lt;li&gt;It is important to find ways to balance the trade-off between exploration and exploitation. Approaches such as Multi-Armed Bandit Algorithms offer an informed way to address this issue.&lt;/li&gt;
-      &lt;li&gt;Issues such as diversity, and novelty can be as important as relevance.&lt;/li&gt;
-      &lt;li&gt;It is important to address the presentation bias caused by users only being able to give feedback to those items previously decided where good for them.&lt;/li&gt;
-      &lt;li&gt;The recommendation problem is not only a two dimensional problem of users and items but rather a multi-dimensional problem that includes many contextual dimensions such as time of the day or day of the week. Algorithms such as Tensor Factorization or Factorization Machines come in very handy for this.&lt;/li&gt;
-      &lt;li&gt;Users decide to select items not only based on how good they think they are, but also based on the possible impact on their social network. Therefore, social connections can be a good source of data to add to the recommendation system.&lt;/li&gt;
-      &lt;li&gt;It is not good enough to design algorithms that select the best items for users, these items need to be presented with the right form of explanations for users to be attracted to them.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-12&quot;&gt;参考文献&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wenku.baidu.com/view/0607e780d0d233d4b14e699e.html&quot;&gt;数据挖掘技术在推荐系统的应用，陈运文&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www2007.org/papers/paper570.pdf&quot;&gt;Google News Personalization: Scalable Online Collaborative Filtering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ijcai13.org/files/tutorial_slides/td3.pdf&quot;&gt;Tutorial: Recommender Systems; Dietmar Jannach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ai.stanford.edu/~ronnyk/WEBKDD2000/papers/sarwar.pdf&quot;&gt;Application of Dimensionality Reduction in Recommender System – A Case Study&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://vdisk.weibo.com/s/DaKXoKQC5TSH&quot;&gt;Up Next: Retrieval Methods for Large Scale Related Video Suggestion&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://alex.smola.org/teaching/berkeley2012/slides/8_Recommender.pdf&quot;&gt;Alex-recommendation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/scmyyan/large-scale-recommendation-in-ecommerce-qiang-yan&quot;&gt;Large scale recommendation in e-commerce – qiang yan&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/xamat/recommender-systems-machine-learning-summer-school-2014-cmu&quot;&gt;Recommender System slices. MLSS14&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://videolectures.net/kdd2014_amatriain_mobasher_recommender_problem/&quot;&gt;Recommender System video. MLSS14&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kdd.org/kdd2014/tutorials/KDD-%20The%20RecommenderProblemRevisited-Part2.pdf&quot;&gt;Context Aware Recommendation. Bamshad Mobasher&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kdd.org/kdd2014/tutorials/KDD%20-%20The%20Recommender%20Problem%20Revisited.pdf&quot;&gt;KDD - The Recommender Problem Revisited&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_804abfa70101btrv.html&quot;&gt;推荐系统的资料分享&lt;/a&gt;，里面分享的几篇文章值得一看&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.docin.com/p-936085086.html&quot;&gt;精准定向的广告系统 yiwang&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Sat, 03 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/03/recommendation_algorithms.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/03/recommendation_algorithms.html</guid>
-        
-        <category>machine learning</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>决策树</title>
-        <description>&lt;h2 id=&quot;gbdt&quot;&gt;决策树与GBDT&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://cvchina.net/post/107.html&quot;&gt;决策树模型组合之随机森林与GBDT&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html&quot;&gt;机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://statweb.stanford.edu/~jhf/ftp/trebst.pdf&quot;&gt;经典文章 Greedy function approximation : A Gradient Boosting Machine&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/tqchen/xgboost&quot;&gt;xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library, also support distributed learning&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt&quot;&gt;pGBRT: Parallel Gradient Boosted Regression Trees&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://bigdata.memect.com/?tag=GBDT&quot;&gt;更多GBDT&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 03 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/03/decision_tree.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/03/decision_tree.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>矩阵相似度计算</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;矩阵相似度计算&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;在机器学习任务中，矩阵是一个很重要的表述形式。文档与词，用户与其购买的商品，用户与好友关系等都可以描述成一个矩阵。为了描述方便，下文中矩阵都以U*I代替，U代表user，I代表item，矩阵维数为m*n。
-对这个矩阵，一个最基础的任务就是找到最相似的用户或最相似的文档，也就是&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E6%9C%80%E8%BF%91%E9%84%B0%E5%B1%85%E6%B3%95&quot;&gt;k最近邻问题&lt;/a&gt;(数据挖掘十大经典算法之一)。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-1&quot;&gt;相似度计算方法&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;相似度计算方法：cosine距离，jaccard距离，bm25模型，proximity模型。具体请参考&lt;a href=&quot;http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html&quot;&gt;机器学习中的相似性度量&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-2&quot;&gt;降维方法&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;计算任意两个user之间的相似度，需要O(m*n)的复杂度。当n很大的时候，首先想到的办法是能否降维，将原矩阵变为m*k维(k«n)。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;降维的方法有：svd，nmf，lsa，lda等。将一个大矩阵分解为两个小矩阵(m*n分解为两个矩阵m*k，k*n)，或者分解为三个小矩阵(m*n分解为两个矩阵m*k，k*k，k*n)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;minhashlsh&quot;&gt;minhash+lsh&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;除此之外，还有一种降维+局部敏感hash的算法。
-也就是minhash + lsh。参考&lt;a href=&quot;http://en.wikipedia.org/wiki/MinHash&quot;&gt;MinHash wiki&lt;/a&gt;，&lt;a href=&quot;http://blog.csdn.net/sunlylorn/article/details/7835411&quot;&gt;文本去重之MinHash算法&lt;/a&gt;，&lt;a href=&quot;http://www.cnblogs.com/bourneli/archive/2013/04/04/2999767.html&quot;&gt;利用Minhash和LSH寻找相似的集合&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;我们可以根据MinHash来计算两个集合的相似度了。一般有两种方法：&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;第一种：使用多个hash函数。
-为了计算集合A、B具有最小哈希值的概率，我们可以选择一定数量的hash函数，比如K个。然后用这K个hash函数分别对集合A、B求哈希值，对
-每个集合都得到K个最小值。比如Min(A)k={a1,a2,…,ak}，Min(B)k={b1,b2,…,bk}。
-那么，集合A、B的相似度为|Min(A)k ∩ Min(B)k| / |Min(A)k  ∪  Min(B)k|，及Min(A)k和Min(B)k中相同元素个数与总的元素个数的比例。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;第二种：使用单个hash函数。
-第一种方法有一个很明显的缺陷，那就是计算复杂度高。使用单个hash函数是怎么解决这个问题的呢？请看：
-前面我们定义过 hmin(S)为集合S中具有最小哈希值的一个元素，那么我们也可以定义hmink(S)为集合S中具有最小哈希值的K个元素。这样一来，
-我们就只需要对每个集合求一次哈希，然后取最小的K个元素。计算两个集合A、B的相似度，就是集合A中最小的K个元素与集合B中最小的K个元素
-的交集个数与并集个数的比例。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;对于每个user，利用minhash计算后，则将其从n维降维至K维向量。然后就该LSH出场了。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;LSH:local sensitive hash。将上面K维向量划分到n个桶，每个桶有K/n维。两个user，只要有一个桶的元素是一样的，那么就认为他们是相似候选。这里有一个公式来衡量n的选值。请参考论文&lt;a href=&quot;http://infolab.stanford.edu/~ullman/mmds/ch3.pdf&quot;&gt;find similar items&lt;/a&gt;，&lt;a href=&quot;http://1.guzili.sinaapp.com/?p=190#more-190&quot;&gt;局部敏感哈希LSH科普&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lsh.png&quot; alt=&quot;lsh&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;map-reduce&quot;&gt;直接利用map-reduce&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;另外一种方法是不降维，直接通过map-reduce直接计算user之间的相似性。
-    &lt;ul&gt;
-      &lt;li&gt;假设矩阵U*I，计算两两U之间的相关性，时间复杂度是O(N^3)&lt;/li&gt;
-      &lt;li&gt;但是我们可以换个思路，将矩阵转置，以item为key。第一轮map-reduce过程，将U*I矩阵转置为I*U矩阵，输出每个item下，与该item有关联的所有user list。第二轮map，将同一个item下user两两组合成pair后输出，第二轮reduce，累加相同user pair的weight，得到任意两个user之间的相似度。&lt;/li&gt;
-      &lt;li&gt;具体请参考链接&lt;a href=&quot;http://wbj0110.iteye.com/blog/2043700&quot;&gt;大规模矩阵相似度计算&lt;/a&gt;。解决该问题就由两个Map-Reduce过程完成。第一个MR过程称为倒排索引，对每个文档，对其中的每个词语，以词语为键，文档标号与词语在该文档中的权重为值输出，这样，我们就得到如(F4,[(U1,0.1),(U2,0.9),(U7,0.5)])格式的输出。第二个MR过程计算文本相似度，以上一个MR过程的输出为输入，在Map过程中以文本对为键，以权重值的乘积为输出，比如上面的F4输出，map后变为[((U1,U2),0.09),((U1,U7),0.05),((U2,U7),0.45)]，这样，就得到了在所有的在两个文本中共同出现的词语针对该两个文本的权重乘积；然后在reduce过程中将相同键的值相加，就得到了所有的二元文本对的文本相似度。&lt;/li&gt;
-      &lt;li&gt;文中后面还讲了一些优化手段。&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/matrix_similairity.png&quot; alt=&quot;matrix_similairity&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-3&quot;&gt;矩阵的乘法&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;额外再讲一点内容，矩阵的乘法,一个m*k的矩阵A乘上一个k*n的矩阵B，结果是一个m*n的矩阵C。有两种分解方法：
-    &lt;ul&gt;
-      &lt;li&gt;其一，把A矩阵按行分，把B矩阵按列分的观点来看矩阵乘法。C矩阵的一个子矩阵块可以看做是A对应多行和B对应多列的矩阵相乘得到的结果；&lt;/li&gt;
-      &lt;li&gt;其二，把矩阵A按列分块，矩阵B按行分块，A乘B可以等价于A的分块子矩阵乘上B中对应的分块子矩阵的加和。最特殊的情况是把A按列分为k个列向量，B按行分为k个行向量，然后对应的列向量于行向量相乘，得到k个矩阵，他们的和就是A和B的乘积。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;矩阵乘法的并行方法
-    &lt;ul&gt;
-      &lt;li&gt;第一种方法，按照A行B列的分解，我们将C矩阵分成m*n个子矩阵，每个子矩阵由一个进程来计算。不考虑进程通讯问题，时间减少到单机版本的m*n分之一。&lt;/li&gt;
-      &lt;li&gt;第二种方法，按照A列B行的分解，把C矩阵分解成k个同样大小的矩阵之和，分发到k个进程来计算，时间减少到单机版本的k分之一。&lt;/li&gt;
-      &lt;li&gt;哪一种方法更快，取决于k和m*n哪个更大。不过方法二要通信的数据量要明显大于方法一。&lt;/li&gt;
-      &lt;li&gt;哪一种方法需要存储更少，取决于(k+1)mn和(m+n)k的大小。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;更多矩阵乘法，请参考文章&lt;a href=&quot;http://en.wikipedia.org/wiki/Cannon&#39;s_algorithm&quot;&gt;Cannon算法&lt;/a&gt;，&lt;a href=&quot;http://www.netlib.org/lapack/lawnspdf/lawn96.pdf&quot;&gt;Scalable Universal Matrix Multiplication Algorithm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/01/matrix-similarity.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/01/matrix-similarity.html</guid>
         
         
       </item>

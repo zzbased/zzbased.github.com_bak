@@ -23,3 +23,11 @@ tags: []
 - [pGBRT: Parallel Gradient Boosted Regression Trees](http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt)
 
 - [更多GBDT](http://bigdata.memect.com/?tag=GBDT)
+
+- [决策树 用Python实现了决策树的ID3生成算法和C4.5生成算法](http://www.hankcs.com/ml/decision-tree.html)
+
+- [论文 Understanding Random Forests: From Theory to Practice](http://t.cn/RZBT6Ap)
+Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf:http://t.cn/RZBTobH 云:http://t.cn/RZBTobT
+
+
+

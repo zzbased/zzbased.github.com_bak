@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>抽样方法</title>
+  <title>抽样与统计</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/02/06/sampling.html">
+  <link rel="canonical" href="http://yourdomain.com/2015/02/06/%E6%8A%BD%E6%A0%B7%E4%B8%8E%E7%BB%9F%E8%AE%A1.html">
   <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -35,6 +35,10 @@
       <div class="trigger">
         
           
+          <a class="page-link" href="/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">系统知识总结</a>
+          
+        
+          
           <a class="page-link" href="/about/">About</a>
           
         
@@ -57,14 +61,48 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">抽样方法</h1>
+    <h1 class="post-title">抽样与统计</h1>
     <p class="post-meta">Feb 6, 2015</p>
   </header>
 
   <article class="post-content">
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<h2 id="section">参考资料</h2>
+<h2 id="section">抽样</h2>
+
+<h3 id="section-1">蒙特卡洛数值积分</h3>
+
+<p>求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。</p>
+
+<script type="math/tex; mode=display">\int_a^b{\frac{f(x)}{q(x)}q(x)dx}</script>
+
+<p>这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。</p>
+
+<p>随机模拟方法的核心就是如何对一个概率分布得到样本，即抽样(sampling)。</p>
+
+<h3 id="section-2">均匀分布</h3>
+<p><script type="math/tex">x_{n+1}=(ax_n+c)\mod m</script></p>
+
+<h3 id="box-muller-">Box-Muller 变换</h3>
+<p>如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]</p>
+
+<p><script type="math/tex">Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}</script>
+<script type="math/tex">Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}</script></p>
+
+<p>则\(Z_0，Z_1\)独立且服从标准正态分布。</p>
+
+<h3 id="acceptance-rejection-sampling">接受-拒绝抽样(Acceptance-Rejection sampling)</h3>
+
+<h3 id="importance-sampling">重要性抽样(Importance sampling)</h3>
+
+<h3 id="section-3">马尔科夫链，马尔科夫稳态</h3>
+
+<h3 id="mcmc-gibbs-sampling">MCMC-Gibbs sampling算法</h3>
+
+<h2 id="section-4">参考资料</h2>
+
+<h3 id="section-5">链接</h3>
+
 <ul>
   <li><a href="http://www.cnblogs.com/xbinworld/p/4266146.html">随机采样方法整理与讲解</a></li>
   <li><a href="http://www.cnblogs.com/daniel-D/p/3388724.html">从随机过程到马尔科夫链蒙特卡洛方法</a></li>
@@ -75,34 +113,37 @@
   <li><a href="http://www.bb.ustc.edu.cn/jpkc/xiaoji/jswl/skja/chapter2-3a.pdf">任意分布的伪随机变量的抽样</a></li>
 </ul>
 
-<h2 id="section-1">蒙特卡洛数值积分</h2>
+<h3 id="sampling--statistic">Sampling &amp; Statistic</h3>
+<ul>
+  <li>
+    <p><a href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">Probabilistic Programming &amp; Bayesian Methods for Hackers</a></p>
 
-<p>求f(x)的积分，如\(\int_a^b{f(x)dx}\)。如果f(x)形式比较复杂，则可以通过数值解法来求近似的结果。常用的方法是：蒙特卡洛积分。</p>
+    <p>黑客们的概率编程和贝叶斯方法书，电子版，有代码，介绍为主，减少推导。同时详细介绍了使用PyMC进行MCMC编程的细节。</p>
+  </li>
+  <li>
+    <p><a href="http://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&amp;mid=203307140&amp;idx=1&amp;sn=83cf3093d9cd0f6bca8981eae0cecb9e#rd">统计学公开课大盘点</a></p>
 
-<script type="math/tex; mode=display">\int_a^b{\frac{f(x)}{q(x)}q(x)dx}</script>
-
-<p>这样把q(x)看做是x在区间[a,b]内的概率分布，而把前面的分数部分看做是一个函数，在q(x)下随机抽取n个样本，当n足够大时，可以用均值来近似：\(\frac{1}{n}\sum_{i=1}^n{\frac{f(x_i)}{q(x_i)}}\)。只要q(x)比较容易采样就可以了。</p>
-
-<p>随机模拟方法的核心就是如何对一个概率分布得到样本，即抽样(sampling)。</p>
-
-<h2 id="section-2">均匀分布</h2>
-<p><script type="math/tex">x_{n+1}=(ax_n+c)\mod m</script></p>
-
-<h2 id="box-muller-">Box-Muller 变换</h2>
-<p>如果随机变量\(U_1,U_2\)独立，且U_1,U_2 ~ Uniform[0,1]</p>
-
-<p><script type="math/tex">Z_0=\sqrt{-2lnU_1}\cos{(2\pi U_2)}</script>
-<script type="math/tex">Z_1=\sqrt{-2lnU_1}\sin{(2\pi U_2)}</script></p>
-
-<p>则\(Z_0，Z_1\)独立且服从标准正态分布。</p>
-
-<h2 id="acceptance-rejection-sampling">接受-拒绝抽样(Acceptance-Rejection sampling)</h2>
-
-<h2 id="importance-sampling">重要性抽样(Importance sampling)</h2>
-
-<h2 id="section-3">马尔科夫链，马尔科夫稳态</h2>
-
-<h2 id="mcmc-gibbs-sampling">MCMC-Gibbs sampling算法</h2>
+    <p>很多统计学课程，看来习题可以从这里面获取了。推荐可汗学院的“Probability and Statistics（概率与统计)”</p>
+  </li>
+  <li>
+    <p>随机采样方法整理与讲解（MCMC、Gibbs Sampling等） - Bin的专栏 - 博客园 http://t.cn/RZDLdr4</p>
+  </li>
+  <li>
+    <p>[可视化]《Markov Chains》http://t.cn/RZBE1ME 马尔可夫链的交互可视化解释，和以前发过超赞的那个特征值特征向量的可视化同一系列</p>
+  </li>
+  <li>
+    <p><a href="http://t.cn/RwinD8w">Variational Inference for Machine Learning</a> Shakir Mohamed讲面向机器学习的变分推断</p>
+  </li>
+  <li>
+    <p>[图书]《Forecasting, Principles and Practice》http://t.cn/zR4ZGMM 全面介绍预测模型和算法，对证券、电信、交通等时序信号的预测分析都很有用，书中例子为R语言，在线免费阅读</p>
+  </li>
+  <li>
+    <p>How To Implement These 5 Powerful Probability Distributions In 用python实现5种常用的概率分布：二项式分布、泊松分布、正态分布、Beta分布和指数分布 http://t.cn/RZWta4n</p>
+  </li>
+  <li>
+    <p>[文章]《Getting started in data science: My thoughts》http://t.cn/RviewMN 数据科学入门指南——作者从数学、统计学、实验和因果推理、机器学习、软件选择和实践经验积累各方面谈了自己的入门建议。和其他入门指南类文章不同的是，本文没有盲目看好MOOC之类的自学途径，建议都很中肯，推荐阅读</p>
+  </li>
+</ul>
 
 
   </article>

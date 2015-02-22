@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>计算广告相关笔记</title>
+  <meta name="description" content="RTB  Real-Time Bidding">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/2015-02-22-%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html">系统知识总结</a>
+          
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">计算广告相关笔记</h1>
+    <p class="post-meta">Feb 13, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <h3 id="rtb">RTB</h3>
+<ul>
+  <li>
+    <p><a href="http://tutorial.computational-advertising.org/images/WSDM2015.pdf">Real-Time Bidding</a></p>
+  </li>
+  <li>
+    <p>在RTB广告出价过程中，两个重点因素是：1. 广告展示的效益(点击率/转化率)；2. 展示花销。以这两项因素为输入，我们的框架能优化出最优的RTB出价策略。论文：http://t.cn/Rvb5K9d，实验基于@品友互动 RTB数据集http://t.cn/RP3pPQO。</p>
+  </li>
+</ul>
+
+<h3 id="section">计算广告</h3>
+
+<ul>
+  <li>
+    <p><a href="">Practical Lessons from Predicting Clicks on Ads at Facebook</a></p>
+
+    <ul>
+      <li>
+        <p><a href="https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html">利用GBDT模型构造新特征</a></p>
+      </li>
+      <li>
+        <p>特征决定了所有算法效果的上限，而不同的算法只是离这个上限的距离不同而已。</p>
+      </li>
+      <li>
+        <p>这篇论文的思想：先用已有特征训练GBDT模型，然后利用GBDT模型学习到的树来构造新特征，最后把这些新特征加入原有特征一起训练模型。构造的新特征向量是取值0/1的，向量的每个元素对应于GBDT模型中树的叶子结点。当一个样本点通过某棵树最终落在这棵树的一个叶子结点上，那么在新特征向量中这个叶子结点对应的元素值为1，而这棵树的其他叶子结点对应的元素值为0。新特征向量的长度等于GBDT模型里所有树包含的叶子结点数之和。</p>
+      </li>
+      <li>
+        <p>已经有人利用这种方法赢得了Kaggle一个CTR预估比赛的冠军，代码可见https://github.com/guestwalk/kaggle-2014-criteo，里面有这种方法的具体实现。</p>
+      </li>
+    </ul>
+  </li>
+  <li>特征处理
+    <ul>
+      <li>在logistic regression问题中，最基本的问题就是特征处理。</li>
+      <li><a href="https://breezedeus.github.io/2014/11/15/breezedeus-feature-processing.html">特征处理入门 by BreezeDeus</a></li>
+      <li><a href="http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/">特征选择 by ubiwang</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html">特征hash法</a></p>
+
+    <ul>
+      <li>
+        <p>特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。</p>
+      </li>
+      <li>
+        <p>特征降维方法：聚类，PCA，hashing</p>
+      </li>
+      <li>参考文献：
+        <ul>
+          <li>Kilian Weinberger et al. Feature Hashing for Large Scale Multitask Learning,2010.  or Feature hashing for large scale multitask learning</li>
+          <li>Joshua Attenberg et al. Collaborative Email-Spam Filtering with the Hashing-Trick, 2009.</li>
+          <li>Alekh Agarwal, Oliveier Chapelle, Miroslav Dud ́ık, and John Langford. A Reliable Effective Terascale Linear Learning System. Journal of Machine Learning Research, 15:1111–1133, 2014.</li>
+          <li><a href="">Large-scale L-BFGS using MapReduce</a> 该论文讲述了运用了hashing技术后，AUC的变化。</li>
+        </ul>
+      </li>
+      <li>
+        <p>特征hash法用于 多任务学习(multitask learning)</p>
+      </li>
+      <li>大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。</li>
+    </ul>
+  </li>
+  <li>特征选择
+    <ul>
+      <li><a href="http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/">Selecting good features</a> 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！</li>
+    </ul>
+  </li>
+  <li>CTR预估
+    <ul>
+      <li>竞价搜索广告中的点击率预估法: 特征和模型 1）经典LR[WWW07] http://t.cn/zT8FYsf 及L1正则版[ICML07] http://t.cn/RZOSmEl 2）高质量特征+组合LR和BDT[ADKDD14] http://t.cn/RZOSmET 3）加LDA话题特征[ACM-TIST15] http://t.cn/RZOinjO 4）组合ANN和BDT[ICLR15] http://t.cn/RZOSmEY</li>
+      <li><a href="http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html">并行逻辑回归</a>： 逻辑回归（Logistic Regression，简称LR）是机器学习中十分常用的一种分类算法，在互联网领域得到了广泛的应用，无论是在广告系统中进行CTR预估，推荐系统中的预估转换率，反垃…文字版» http://t.cn/8FpoAyz （新浪长微博» http://t.cn/zOXAaic）</li>
+      <li>发表了博文《CTR预估模型，机器学习初探水》http://t.cn/R7tJ59w损失函数；CRT模型；数据模型切分；结果推荐；链路距离计算；推http://t.cn/R7tJ5LU</li>
+      <li>NTU关于Criteo CTR Challenge的winning solution出来了：http://t.cn/RhkyR3B，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了Facebook ADKDD2014文章：http://t.cn/RPrqyRQ</li>
+      <li>Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 http://t.cn/RZYd75X</li>
+      <li><a href="http://www.52ml.net/16256.html">各大公司广泛使用的在线学习算法FTRL详解</a> 现在做在线学习和CTR常常会用到逻辑回归（ Logistic Regression），而传统的批量（batch）算法无法有效地处理超大规模的数据集和在线数据流，google先后三年时间（2010年-2013年）从理论研究到实际工程化实现的FTRL（Follow-the-regularized-Leader）算法，在处理诸如逻辑回归之类的带非光滑正则化项（例如1范数，做模型复杂度控制和稀疏化）的凸优化问题上性能非常出色。</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://weibo.com/p/1001603803645836675771">汤兴-爱奇艺大脑—视频进化</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data">广告数据上的大规模机器学习 夏粉</a>
+以广告点击率预估问题为例，介绍如何利用大规模机器学习技术搭建一个容纳万亿特征数据的、分钟级别模型更新的、自动高效深度学习</p>
+  </li>
+  <li>
+    <p>在线实验效果检验</p>
+
+    <ul>
+      <li><a href="http://facebook.github.io/planout/docs/about-planout.html">PlanOut facebook实验框架</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
