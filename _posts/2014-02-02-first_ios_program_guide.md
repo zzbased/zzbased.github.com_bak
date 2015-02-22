@@ -49,8 +49,6 @@ Where necessary, a view controller:
 to be continue;
 
 
-
-
 ###reference:###
 [免费的ios7教程](https://leanpub.com/ios7daybyday)
 

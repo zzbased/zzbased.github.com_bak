@@ -6,10 +6,7 @@ category:
 tags: [machine learning, deep learning]
 ---
 
-
 ## deep learning for computer vision, slide learning.
-
-
 
 **deep learning for computer vision,
 nips 2013 tutorial,

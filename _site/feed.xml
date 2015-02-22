@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Feb 2015 11:39:50 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 11:39:50 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2015 13:30:16 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2015 13:30:16 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -927,6 +927,7 @@
 
 &lt;p&gt;转自：&lt;a href=&quot;http://www.zhihu.com/question/27608272/answer/37318565&quot;&gt;知乎问答&lt;/a&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;section&quot;&gt;深度学习的4个研究点&lt;/h3&gt;
 &lt;p&gt;要说深度学习还有什么坑，就要看看目前的深度学习都从哪些方面去研究。个人觉得当前深度学习领域的学术研究可以包含四部分：优化（Optimization），泛化（Generalization），表达（Representation）以及应用（Applications）。除了应用（Applications）之外每个部分又可以分成实践和理论两个方面。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -956,7 +957,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;nlp&quot;&gt;深度学习与NLP&lt;/h3&gt;
 
 &lt;p&gt;从应用角度来看,NLP是一个重要阵地，Nlp目前还没有像别的领域那样被dl席卷。成效明显的有MT和language model。Speech也很明显但那更偏向信号处理而非语言分析。&lt;/p&gt;
 
@@ -1093,13 +1094,7 @@
     
       <item>
         <title>gbdt_adaboost_bootstrap</title>
-        <description>&lt;h2 id=&quot;gbdt--adaboost&quot;&gt;gbdt 与 adaboost&lt;/h2&gt;
-
-&lt;p&gt;这两个算法在一定程度上其实是有些接近的，我们不妨分别来看看。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://suanfazu.com/t/gbdt-die-dai-jue-ce-shu-ru-men-jiao-cheng/135&quot;&gt;文档学习链接&lt;/a&gt;
-&lt;a href=&quot;http://www.schonlau.net/publication/05stata_boosting.pdf&quot;&gt;Boosting Decision Tree入门教程&lt;/a&gt;
-&lt;a href=&quot;http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf&quot;&gt;LambdaMART用于搜索排序入门教程&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;h2 id=&quot;gbdtadaboostbootstrap&quot;&gt;gbdt，adaboost，bootstrap&lt;/h2&gt;
 
 &lt;h3 id=&quot;gbdt&quot;&gt;gbdt&lt;/h3&gt;
 
@@ -1112,7 +1107,11 @@
   &lt;li&gt;回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;boosting&quot;&gt;boosting&lt;/h4&gt;
+&lt;h4 id=&quot;shrinkage&quot;&gt;Shrinkage&lt;/h4&gt;
+
+&lt;p&gt;Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。&lt;/p&gt;
+
+&lt;h3 id=&quot;boosting&quot;&gt;boosting方法比较&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;gbdt的核心在于：每一棵树学的是之前所有树的结论和残差。每一步的残差计算其实变相地增大了分错instance的权重，而已经分对的instance则都趋向于0。&lt;/li&gt;
@@ -1120,10 +1119,10 @@
   &lt;li&gt;Bootstrap也有类似思想，它在每一步迭代时不改变模型本身，也不计算残差，而是从N个instance训练集中按一定概率重新抽取N个instance出来（单个instance可以被重复sample），对着这N个新的instance再训练一轮。由于数据集变了迭代模型训练结果也不一样，而一个instance被前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;shrinkage&quot;&gt;Shrinkage&lt;/h4&gt;
-
-&lt;p&gt;Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。&lt;/p&gt;
-
+&lt;h3 id=&quot;section-1&quot;&gt;更多学习资料&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://suanfazu.com/t/gbdt-die-dai-jue-ce-shu-ru-men-jiao-cheng/135&quot;&gt;Gbdt迭代决策树入门教程&lt;/a&gt;
+&lt;a href=&quot;http://www.schonlau.net/publication/05stata_boosting.pdf&quot;&gt;Boosting Decision Tree入门教程&lt;/a&gt;
+&lt;a href=&quot;http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf&quot;&gt;LambdaMART用于搜索排序入门教程&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/15/gbdt_adaboost_bootstrap.html</link>
@@ -1133,16 +1132,20 @@
       </item>
     
       <item>
-        <title>推荐算法实战</title>
+        <title>推荐算法总结</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
-&lt;h1 id=&quot;section&quot;&gt;推荐算法实战&lt;/h1&gt;
+&lt;h1 id=&quot;section&quot;&gt;推荐算法总结&lt;/h1&gt;
 
 &lt;h4 id=&quot;author-vincentyaotencentcom&quot;&gt;author: vincentyao@tencent.com&lt;/h4&gt;
 
-&lt;p&gt;推荐在计算广告上有很多的运用，这里计划把推荐算法总结一下。&lt;/p&gt;
+&lt;p&gt;互联网的发展经历了这样几个阶段，首先是信息产生阶段，接着由于信息越来越多，用户需要查询相关信息，就有了搜索引擎，再接着，信息过载更加严重，用户需求不明确时，就需要推荐引擎了。&lt;/p&gt;
+
+&lt;p&gt;推荐在计算广告上有很多的运用，如下图所示，Netflix有2/3的电影观看都是经由推荐的。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这里计划按照自己的理解对推荐算法做一个总结。下面内容主要分为三节，第一节介绍各种推荐算法，包括传统算法(CF)，新算法(Deeplearning)等；第二节精选了业界的一些成熟推荐系统，做一下简要的学习与总结；第三节则是自己对推荐系统的理解与总结。&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;推荐算法介绍&lt;/h2&gt;
 
@@ -1192,13 +1195,15 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Normalization/Bias，rate bias：\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\)，\(s_k(i,u)\) is k-nearest neighbors to i that were rated by user u
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png&quot; alt=&quot;&quot; /&gt;
+    &lt;p&gt;考虑到不同的用户，对于不同的物品，都有不同的打分偏置；所以需要做归一化与偏置矫正。rate bias：\(b_{ui} = μ(global) + b_u(user bias) + b_i(item bias)\)，\(s_k(i,u)\) is k-nearest neighbors to i that were rated by user u。&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png&quot; alt=&quot;&quot; /&gt;
   &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_item_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;item-based计算流程：
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;item-based计算流程：&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//item_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1215,12 +1220,12 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-3&quot;&gt;总结&lt;/h4&gt;
+&lt;h4 id=&quot;memory-based-cf&quot;&gt;Memory-based CF总结&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Problem: sparsity，scalability
     &lt;ul&gt;
-      &lt;li&gt;利用latent models做降维。Methods of dimensionality reduction: Matrix Factorization, Clustering，Projection(PCA) …&lt;/li&gt;
-      &lt;li&gt;瓶颈点：相关性计算。将最近邻产生与预测分为两个步骤，其中相关性计算时间复杂度很高。&lt;/li&gt;
+      &lt;li&gt;针对sparsity，可以利用latent models做降维。Methods of dimensionality reduction: Matrix Factorization, Clustering，Projection(PCA) …&lt;/li&gt;
+      &lt;li&gt;scalability瓶颈点：相关性计算。将最近邻产生与预测分为两个步骤，其中相关性计算时间复杂度很高。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;个人总结，一般来讲，item-based方法更好用，因为item之间的similarity是相对静态，但user之间的similarity相对动态。当item base is smaller than user or changes rapidly时，采用user-based方法更合适；相反，当user base is small时，Item-based方法更合适；&lt;/li&gt;
@@ -1244,7 +1249,7 @@
         &lt;p&gt;先写出loss function，再利用SGD or Alternating least squares求解
   &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-        &lt;p&gt;增加bias后：
+        &lt;p&gt;增加bias后的目标优化函数(loss function)：
   &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/svd_object_function_bias.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
         &lt;p&gt;关于user/item biases的作用，补充几点：(1)偏好信息的充分利用；(2)能充分利用用户、物品的profile等属性信息；(3)属性之间能方便的进行各种组合。&lt;/p&gt;
@@ -1261,10 +1266,12 @@
     &lt;p&gt;SVD++ 是SVD模型的加强版，除了打分关系，SVD++还可以对隐含的回馈(implicit feedback) 进行建模。
   除了在SVD中定义的向量外，每个item对应一个向量yi，来通过user隐含回馈过的item的集合来刻画用户的偏好。&lt;/p&gt;
 
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\hat{r}_{ui} = \mu + b_i + b_u + q_i^T (p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i)&lt;/script&gt;
-  其中， R(u) 代表user隐含回馈（打分过的）过的item的集合。
-  可以看到，现在user被建模为\( p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i \)，
-  具体请参考&lt;a href=&quot;http://www.superchun.com/machine-learning/svd1.html&quot;&gt;文章SVD/SVD++&lt;/a&gt;，&lt;a href=&quot;http://research.yahoo.com/files/kdd08koren.pdf&quot;&gt;论文Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model&lt;/a&gt;&lt;/p&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{r}_{ui} = \mu + b_i + b_u + q_i^T (p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i)&lt;/script&gt;
+
+    &lt;p&gt;其中， R(u) 代表user隐含回馈（打分过的）过的item的集合。
+  可以看到，现在user被建模为\( p_u + |R(u)|^{-\frac{1}{2}} \sum_{j\in R(u)} y_i \)，&lt;/p&gt;
+
+    &lt;p&gt;具体请参考&lt;a href=&quot;http://www.superchun.com/machine-learning/svd1.html&quot;&gt;文章SVD/SVD++&lt;/a&gt;，&lt;a href=&quot;http://research.yahoo.com/files/kdd08koren.pdf&quot;&gt;论文Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;SVDfeature&lt;/p&gt;
@@ -1286,22 +1293,28 @@
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;rbm&quot;&gt;RBM&lt;/h4&gt;
+
 &lt;p&gt;&lt;a href=&quot;&quot;&gt;论文 Restricted Boltzmann Machines for Collaborative Filtering&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;clustering&quot;&gt;Clustering&lt;/h4&gt;
+
 &lt;p&gt;将用户聚类后，再基于传统CF的方法(此时user不是单独的用户，而是cluster)&lt;/p&gt;
 
 &lt;h4 id=&quot;locality-sensitive-hashing&quot;&gt;Locality-sensitive hashing&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Method for grouping similar items in highly dimensional spaces；&lt;/li&gt;
   &lt;li&gt;Find a hashing function s.t. similar items are grouped in the same buckets;&lt;/li&gt;
+  &lt;li&gt;可以参考站内文章&lt;a href=&quot;http://zzbased.github.io/2015/01/01/matrix-similarity.html&quot;&gt;矩阵相似度计算&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;classifiers&quot;&gt;Classifiers&lt;/h4&gt;
-&lt;p&gt;Classifiers can be used in CF and CB Recommenders。优点：可以和其他方法结合使用。缺点是：需要一份训练集。&lt;/p&gt;
+&lt;p&gt;Classifiers can be used in CF and CB Recommenders。
+优点：可以和其他方法结合使用。缺点是：需要一份训练集。&lt;/p&gt;
 
 &lt;h3 id=&quot;content-based-recommenders&quot;&gt;Content-based Recommenders&lt;/h3&gt;
-&lt;p&gt;item/user profiles, category, tag/keyword&lt;/p&gt;
+
+&lt;p&gt;这里可以利用众多自然语言处理技术，分别建立用户/Item画像(category, tag/keyword，topic等)，然后基于两者画像做相关性计算。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/content_based.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1312,7 +1325,9 @@
   &lt;li&gt;一个机器学习问题，目标是从训练数据里构建一个ranking model。排序学习指在排序生成 (ranking creation) 和排序整合 (ranking aggregation) 中用于构建排序模型的机器学习方法。&lt;a href=&quot;http://www.icst.pku.edu.cn/lcwm/course/WebDataMining/slides2012/8机器学习及排序学习基础.pdf&quot;&gt;slice&lt;/a&gt;，&lt;a href=&quot;http://www.cnblogs.com/kemaswill/archive/2013/06/01/3109497.html&quot;&gt;Learning to Rank简介&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Learning to rank is a key element for personalization&lt;/li&gt;
   &lt;li&gt;Treat the problem as a standard supervised classification problem&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://people.cs.umass.edu/~vdang/ranklib.html&quot;&gt;Ranklib code&lt;/a&gt;，&lt;a href=&quot;http://svmlight.joachims.org&quot;&gt;svmlight&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://people.cs.umass.edu/~vdang/ranklib.html&quot;&gt;Ranklib code&lt;/a&gt;，&lt;a href=&quot;http://svmlight.joachims.org&quot;&gt;svmlight&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;Pointwise
     &lt;ul&gt;
       &lt;li&gt;Ranking score based on regression or classification&lt;/li&gt;
@@ -1342,7 +1357,7 @@
     &lt;p&gt;&lt;a href=&quot;http://ids.csom.umn.edu/faculty/gedas/NSFCareer/CARS-chapter-2010.pdf&quot;&gt;论文Context-Aware Recommender Systems&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;R: User * Item -&amp;gt; Rating    比较  R: User * Item * Context -&amp;gt; Rating&lt;/p&gt;
+    &lt;p&gt;从[R: User * Item -&amp;gt; Rating] 到 [R: User * Item * Context -&amp;gt; Rating]&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;传统推荐过程框图
@@ -1377,6 +1392,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;similarity-graph-based-similaritysimrank&quot;&gt;Similarity: graph-based similarity(simrank)&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Graph-based similarities
     &lt;ul&gt;
@@ -1414,30 +1430,48 @@ Recurrent neural networks have a simple model that tries to predict the next ite
   &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;推荐算法对比&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;推荐算法对比&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://dataunion.org/bbs/forum.php?mod=viewthread&amp;amp;tid=835&amp;amp;extra=&quot;&gt;推荐系统的常用算法对比&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/oopsoom/article/details/33740799&quot;&gt;推荐算法总结&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;常用推荐算法点评(by 陈运文)
-- Item-based collaborative filtering
-	- 应用最为广泛的方法
-	- 存在各种计算方法的改进;但Similarity计算随意性大
-- Content-based algorithm
-	- 实现简单、直观,常用于处理冷启动问题
-	- 推荐精度低
-- Latent Factor Model
-	- 单一模型效果最好的方法;但难以实时更新模型
-	- KDD-Cup,Netflix Prize …
-- Statistics-based
-	- 简陋,直观,非个性化,被大量使用
-	- 可用于补足策略
-### 效果评估
-- MAP/nDCG: top-N推荐
-- RMSE/MAE: 评分预测问题
-- A/B Testing: 点击率、转化率&lt;/p&gt;
+&lt;p&gt;常用推荐算法点评(by 陈运文)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item-based collaborative filtering
+    &lt;ul&gt;
+      &lt;li&gt;应用最为广泛的方法&lt;/li&gt;
+      &lt;li&gt;存在各种计算方法的改进;但Similarity计算随意性大&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Content-based algorithm
+    &lt;ul&gt;
+      &lt;li&gt;实现简单、直观,常用于处理冷启动问题&lt;/li&gt;
+      &lt;li&gt;推荐精度低&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Latent Factor Model
+    &lt;ul&gt;
+      &lt;li&gt;单一模型效果最好的方法;但难以实时更新模型&lt;/li&gt;
+      &lt;li&gt;KDD-Cup,Netflix Prize …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Statistics-based
+    &lt;ul&gt;
+      &lt;li&gt;简陋,直观,非个性化,被大量使用&lt;/li&gt;
+      &lt;li&gt;可用于补足策略&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;效果评估&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;MAP/nDCG: top-N推荐&lt;/li&gt;
+  &lt;li&gt;RMSE/MAE: 评分预测问题&lt;/li&gt;
+  &lt;li&gt;A/B Testing: 点击率、转化率&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;case&quot;&gt;推荐系统实战Case&lt;/h2&gt;
 
@@ -1574,6 +1608,14 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 &lt;p&gt;Justin:online match + online learning works very well
 赞processing stack。我们最近在豆瓣fm上也做了online learning，improve10个点左右&lt;/p&gt;
 
+&lt;h3 id=&quot;google-news-personalization-scalable-online-collaborative-filteringhttpwww2007orgpaperspaper570pdf&quot;&gt;&lt;a href=&quot;http://www2007.org/papers/paper570.pdf&quot;&gt;Google News Personalization: Scalable Online Collaborative Filtering&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;推荐的结果是三个算法的融合，即MinHash, PLSI, covisitation。融合的方式是分数线性加权。&lt;/li&gt;
+  &lt;li&gt;一个主要的思想是“online”的进行更新，所以这个地方一定要减少规模，索引使用了User Clustering的算法，包括Min Hash和PLSI。在新数据来的时候，关键是不要去更新User Cluster，而是直接更新所属的Cluster对于URL的点击数据。对于新用户，使用covisitation的方法进行推荐&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.308.3087&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Personalized News Recommendation Based on Click Behavior&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;The YouTube video recommendation system&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;section-5&quot;&gt;推荐系统总结&lt;/h2&gt;
 
 &lt;h3 id=&quot;section-6&quot;&gt;实践中的关键点&lt;/h3&gt;
@@ -1683,10 +1725,12 @@ Recurrent neural networks have a simple model that tries to predict the next ite
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-11&quot;&gt;个人总结&lt;/h3&gt;
+&lt;h3 id=&quot;section-11&quot;&gt;总结&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;技术目标要正确。&lt;/p&gt;
+
+    &lt;p&gt;举个例子，搜索广告中的关键词推荐，技术目标是什么？是相关性足够好，还是采用率够高，或者是广告主采用后收益高。这里首先需要确定好，如果优化目标错误了，那接下来的工作都要打折扣。假设关键词推荐的技术目标是：推荐采用率最高且产生推广效果最佳的词。那么在做推荐时，可以用一个模型解决上述目标，也可以用多个模型。一般情况下，将优化目标拆分成多个模型，将减小复杂度。譬如在关键词推荐里，就有三个模型：相关性模型、采用率模型和推广效果模型。&lt;/p&gt;
 
     &lt;ol&gt;
       &lt;li&gt;首先要定义好什么叫”好的推荐“，这是解决任何一个技术问题的前提。&lt;/li&gt;
@@ -1695,7 +1739,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
       &lt;li&gt;迭代改进。算法实现以后可能实际表现与预想的不同，需要重新定义”好的推荐“。这样一个周期下来，推荐效果应当有肉眼可见的改进。&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;推荐算法选择
+  &lt;li&gt;推荐算法选择，要根据数据来做选择。
     &lt;ul&gt;
       &lt;li&gt;各取所长，互相补充&lt;/li&gt;
       &lt;li&gt;算法无好坏之分，只有是否合适&lt;/li&gt;
@@ -1704,7 +1748,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.quora.com/Recommendation-Systems/What-developments-have-occurred-in-recommender-systems-after-the-Netflix-Prize/answer/Xavier-Amatriain?srid=z0Q5&amp;amp;share=1&quot;&gt;Recommendation Systems: What developments have occurred in recommender systems after the Netflix Prize?&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;在 Quora 上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入，评分预测已经不是主流，LTR的应用会更符合推荐的初衷等&lt;/p&gt;
+    &lt;p&gt;下面是Xavier Amatriain在Quora上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入。其中他谈到，评分预测已经不是主流，LTR的应用会更符合推荐的初衷。&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;Implicit feedback from usage has proven to be a better and more reliable way to capture user preference.&lt;/li&gt;
@@ -1732,42 +1776,9 @@ Recurrent neural networks have a simple model that tries to predict the next ite
   &lt;li&gt;&lt;a href=&quot;http://videolectures.net/kdd2014_amatriain_mobasher_recommender_problem/&quot;&gt;Recommender System video. MLSS14&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.kdd.org/kdd2014/tutorials/KDD-%20The%20RecommenderProblemRevisited-Part2.pdf&quot;&gt;Context Aware Recommendation. Bamshad Mobasher&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.kdd.org/kdd2014/tutorials/KDD%20-%20The%20Recommender%20Problem%20Revisited.pdf&quot;&gt;KDD - The Recommender Problem Revisited&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_804abfa70101btrv.html&quot;&gt;推荐系统的资料分享&lt;/a&gt;，里面分享的几篇文章值得一看&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.docin.com/p-936085086.html&quot;&gt;精准定向的广告系统 yiwang&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h3 id=&quot;section-13&quot;&gt;其他参考文献&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_804abfa70101btrv.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;这个资料分享主要分享的都是非学术的Paper，都来自商业公司，Google, YouTube, Amazon, LinkedIn等等。
-我个人非常喜欢这些文章，基本上，这些文章描述的都是在系统中的实际能工作的东西。&lt;/p&gt;
-
-&lt;p&gt;这个是Google的一篇论文http://t.cn/zl0zxPZ这个里面有很多有意思的想法。
-推荐的结果是三个算法的融合，即MinHash, PLSI, covisitation.
-融合的方式是分数线性加权
-一个主要的思想是“online”的进行更新，所以这个地方一定要减少规模，索引使用了User Clustering的算法，包括Min Hash和PLSI。
-在新数据来的时候，关键是不要去更新User Cluster，而是直接更新所属的Cluster对于URL的点击数据
-对于新用户，使用covisitation的方法进行推荐&lt;/p&gt;
-
-&lt;p&gt;这个是上一篇Paper的进阶paper。 http://t.cn/zl0zqDO
-这篇Paper在上一篇的基础上增加了一些内容，主要包括Topic部分的内容，Google News是有Topic信息的。
-这篇Paper通过用户喜欢的Topic这个信息以及Topic Trend这个信息一起进行分析。
-热门的topic会被更多的展现给用户，其中用户只会看到他喜欢的Topic
-这个方法和上面的方法相比，可能对于解决热门News的问题，有更大的帮助&lt;/p&gt;
-
-&lt;p&gt;这个是Youtube的文章 vdisk.weibo.com/s/fcbuu
-这篇Paper的的方法更直观，它只使用了covisitation的信息，但是对于covisitation的方法做了N次扩展，即找一个Seed的多次邻居。
-在这个的基础上，做了一些后处理的工作，尤其是Diversity的工作&lt;/p&gt;
-
-&lt;p&gt;这个是对于Amazon商品推荐算法的一个Paper的翻译版
-http://blog.sina.com.cn/s/blog_586631940100pduh.html
-  这个Paper比较老了，但是是item-Based推荐的经典文章了。
-这个是IBM的两位同学对于推荐的一个综述，属于入门级的，看看也不错。
-  http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy1/index.html
-这个比较有营养，是高级货，是LinkedIn的兄弟们在KDD2012上发布的，有用！进阶以后值得看看，尤其是搞真系统的。http://t.cn/zl0ZTN1
-这个更是高级货了，Recommendations as a Conversation with the User
-这个的角度更多的是推荐系统的HCI设计，前面是一堆哲学，看不懂可以跳过，后面的例子还是比较给力的。有几个数字很给力：
-Amazon: 35% of sales result from recommendations
-75% of Netflix views result from recommendations&lt;/p&gt;
-
 </description>
         <pubDate>Sat, 03 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/03/recommendation_algorithms.html</link>
@@ -1782,108 +1793,33 @@ Amazon: 35% of sales result from recommendations
         <title>决策树</title>
         <description>&lt;h2 id=&quot;gbdt&quot;&gt;决策树与GBDT&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://cvchina.net/post/107.html&quot;&gt;决策树模型组合之随机森林与GBDT&lt;/a&gt;
-格灵深瞳   2014-10-03 11:10
-模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。【决策树模型组合之随机森林与GBDT】http://t.cn/Rh1uZ1Y
-好东西传送门 转发于2014-10-03 12:37
-经典文章 Greedy function approximation : A Gradient Boosting Machine http://t.cn/Rh1dW44 并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac 更多GBDT http://t.cn/Rh1dW4y&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://cvchina.net/post/107.html&quot;&gt;决策树模型组合之随机森林与GBDT&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html&quot;&gt;机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://statweb.stanford.edu/~jhf/ftp/trebst.pdf&quot;&gt;经典文章 Greedy function approximation : A Gradient Boosting Machine&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/tqchen/xgboost&quot;&gt;xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library, also support distributed learning&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt&quot;&gt;pGBRT: Parallel Gradient Boosted Regression Trees&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://bigdata.memect.com/?tag=GBDT&quot;&gt;更多GBDT&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 03 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/03/decision_tree.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/01/03/decision_tree.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>主题模型</title>
-        <description>&lt;h2 id=&quot;topic-model-&quot;&gt;topic model 思考&lt;/h2&gt;
-&lt;p&gt;topic model通常指的是lda, plsa等模型，但从广义上将，类目也是一种topic。本文主要把以前接触到的plsa, lda等知识回顾一下，顺便把类目型的topic model也做一个总结。&lt;/p&gt;
-
-&lt;h3 id=&quot;topic-model&quot;&gt;常见topic model&lt;/h3&gt;
-
-&lt;p&gt;plsa&lt;/p&gt;
-
-&lt;p&gt;LDA:
-采样算法：collapsed gibbs sampler，SparseLDA，&lt;a href=&quot;http://www.sravi.org/pubs/fastlda-kdd2014.pdf&quot;&gt;AliasLDA&lt;/a&gt;，Metropolis-Hastings sampler
-&lt;a href=&quot;www.umiacs.umd.edu/~resnik/pubs/LAMP-TR-153.pdf&quot;&gt;gibbs sampling for the uninitiated&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;data-parallelism(splitting documents over machines) versus model-parallelism (splitting the word-topic distributions over machines).&lt;/p&gt;
-
-&lt;p&gt;data-parallelism:YahooLDA, Scaling distributed machine learning with the parameter server&lt;/p&gt;
-
-&lt;p&gt;model-parallelism:PLDA+, peacock&lt;/p&gt;
-
-&lt;p&gt;lightLDA:LightLDA adopts a different data-and-model-parallel strategy to maximize memory and CPU efficiency: we slice the word-topic distributions (the LDA model) in a structure-aware modelparallel manner [9, 24], and we fix blocks of documents to workers while transferring needed model parameters to them via a bounded-asynchronous data-parallel scheme [8].&lt;/p&gt;
-
-&lt;p&gt;Metropolis-Hastings sampler&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;接下去的重点就是把最新的采样算法和怎么样做并行化好好研究一下，并写成文章&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;topic-model-on-twitter-&quot;&gt;topic model on twitter 阅读笔记&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;这篇论文其实和前段时间做过的广告分类有些相似，区别在于难度要大一些，考虑的点要更丰富一些。文中提到的很多点我以前都或多或少实践过，接触过，不过没有这么系统的总结出来，所以把这篇论文细细研读一遍，对自己的知识回顾与整理也是有帮助的。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;文中说到topic model，为啥没有直接用lda等模型。我自己总结，主要原因是lda模型可控性可解释性相对比较差：对于每个topic，不能用很明确的语义归纳出这个topic在讲什么；重新训练一遍lda模型，每个topic id所对应的语义可能发生了变化；有些topic的准确性比较好，有些比较差，而对于比较差的topic，没有特别好的针对性的方法去优化它；但lda等模型也有好处，无监督训练。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;在我们以往的运用中，lda模型比较适合用于做某些机器学习任务的特征，譬如pctr，relevance等，而不适合作为一种独立的方法去解决某种特定的问题，例如触发，分类。Blei是这样评价lda的：it can easily be used as a module in more complicated models for more complicated goals.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;有监督的topic model中，第一个任务就是确定topic taxonomy。通常情况里，taxonomy都是由人工创建的。人工创建的最大问题是，知识面有限，可能不能覆盖住所有情形。文中有提到一种方法：ODP和Freebase。我的理解是，可以先用某种无监督的聚类方法，将待分类的文本划分到某些clusters，然后人工review这些clusters，切分或者合并cluster，提炼topic name，再然后根据知识体系，建立层级的taxonomy。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section&quot;&gt;文本分类&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;过滤聊天类文本，也就是筛选出un-labeled data。文中有提到一种方法:&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;训练数据获取。这其实是一种常见的方法，记得以前在afs做分类器时，也有一种方法，先对每一个类人工筛选一些特征词，然后根据这些特征词对亿级文本网页分类，再然后对每一个明确属于该类的网页提取更多的特征词，加入原有的特征词词表，再去做分类；中间再辅以一定的人工校验，这种方法做下来，效果还是蛮不错的，更关键的是，如果发现那个类有badcase，可以人工根据badcase调整某个特征词的权重，简单粗暴又有效。还有一个任务，term weighting工作里，我们是利用logistic regression的方法来做的，其中面临的最主要任务就是训练数据的获取，这里我们采用了三种方法。
-twitter利用了三种方法，user-level priors（发布tweet的用户属于的领域），entity-level priors（话题，类似于微博中的#***#），url-level priors（tweet中的url）。通过上述基于规则的方法获取到的训练数据是有较大噪声的，这时可以利用co-learning。
-获取到正例样本后，还需要负例样本，按照常见的方法，从非正例样本里随机抽取作为负例的方法，效果并不是好，文中用到了pu-learning去获取高质量的负例样本。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/training_data_acquisition.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;特征提取。为了考虑实时性，jubjub并没有用到很复杂的特征，主要用到了两种特征：binary hashed byte 4gram，hashed unigram frequency。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;model pretraing。
-在正则化上，文中采用了ElasticNet regularization，也就是L1和L2的组合。模型上，选择了one-be-all LR，而不是Multinomial LR，主要考虑是：并行训练multiple topics model更复杂；不能重新训练 a subset of topics。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;relation regularization。因为是层级分类器，需要考虑label之间的relation。譬如Label expansion。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;model calibration。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;quality evaluation。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;model fine-tuning。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/fine_tuning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/fine_tuning_formula.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/01/topic-model.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/01/topic-model.html</guid>
-        
-        <category>machine learning</category>
-        
-        <category>topic model</category>
         
         
       </item>
@@ -1983,6 +1919,44 @@ twitter利用了三种方法，user-level priors（发布tweet的用户属于的
         <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/01/matrix-similarity.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/01/01/matrix-similarity.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>wand算法介绍</title>
+        <description>&lt;h2 id=&quot;wand&quot;&gt;wand算法&lt;/h2&gt;
+
+&lt;h4 id=&quot;wand-1&quot;&gt;wand的思路&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;对每一个doc,抽取term list；对其中每个term，计算term表征doc的weight。&lt;/li&gt;
+  &lt;li&gt;建立term-doc倒排。doc id递增排序。每个term-doc索引都有一个upper bound value,这个值是该条索引的doc list中最大的term weight。&lt;/li&gt;
+  &lt;li&gt;在检索的时候，对于每个query，可以设置一个准入阈值thres，每次检索分两步：
+    &lt;ul&gt;
+      &lt;li&gt;按照doclist最前面的docid对query terms排序。&lt;/li&gt;
+      &lt;li&gt;迭代terms,并累加UB直至大于thres，则按照下面图示选出一个doc。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/wand_algorithm.jpg&quot; alt=&quot;wand&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;优化的思路&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;每个term-doc倒排的upper bound，并不一定是最大值。设置为最大值，可以保证召回，但是会使检索次数更多(可以想象，up之和大于thres的次数会更多)。譬如我们曾经试过将其设置为平均值，这时要满足up之和大于thres，term的个数将会增多，可以加快检索。&lt;/li&gt;
+  &lt;li&gt;前n个term中挑选一个skip，这个挑选有一定的策略。譬如可以挑选list最短的。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;论文以及其他参考资料&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;论文：Efficient Query Evaluation using a Two-Level Retrieval Process&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yangpengg.github.io/blog/2012/12/29/wand-operator-to-calculate-similarity/&quot;&gt;WAND Operator to Calculate Similarity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 28 Dec 2014 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2014/12/28/wand.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/12/28/wand.html</guid>
         
         
       </item>

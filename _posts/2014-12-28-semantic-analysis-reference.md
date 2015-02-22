@@ -9,7 +9,7 @@ tags: [machine learning]
 # 语义分析方法参考文献
 
 
-### 语义分析的任务
+### 深度学习方法的两个应用
 
 What we’ll do: Summarize 2 ways Deep/Neural ideas can be used
 
@@ -24,36 +24,34 @@ But sometimes NLP-specific modifications are needed, e.g. training objective mis
 Distributed Representation is a simple way to improve robustness of NLP, but it’s not the only way (POS tagging experiment)
 Promising direction: distributed representations beyond words, considering e.g. compositionality [Socher et al., 2013a]
 
----
-
-slides: deep learning for natural language processing and machine translation：
+### slides: deep learning for natural language processing and machine translation
 
 - Language Models (LM) using Neural Nets。见72页。
 - Recurrent Neural Net Language Models [Mikolov et al., 2010]。见75页。
-- P99。参考文献。
-
+- deep learning for natural language processing参考文献。P99。
 	- Sequence labeling
-POS tagging & Name Entity Recognition [Turian et al., 2010, Collobert et al., 2011, Wang and Manning, 2013,  ]
-Qi et al., 2014: A deep learning framework for character-based information extraction. Ma et al., 2014: Tagging the web: Building a robust web tagger with neural network.
-Tsuboi, 2014: Neural networks leverage corpus-wide information for part-of-speech tagging.
-Guo et al., 2014: Revisiting embedding features for simple semi-supervised learning.
+		POS tagging & Name Entity Recognition [Turian et al., 2010, Collobert et al., 2011, Wang and Manning, 2013, ]
+		Qi et al., 2014: A deep learning framework for character-based information extraction. Ma et al., 2014: Tagging the web: Building a robust web tagger with neural network.
+		Tsuboi, 2014: Neural networks leverage corpus-wide information for part-of-speech tagging.
+		Guo et al., 2014: Revisiting embedding features for simple semi-supervised learning.
 
 	- Word Segmentation [Zheng et al., 2013, Pei et al., 2014]
-Max-margin tensor neural network for chinese word segmentation.
-Deep learning for Chinese word segmentation and POS tagging.
+
+		Max-margin tensor neural network for chinese word segmentation.
+		Deep learning for Chinese word segmentation and POS tagging.
 
 	- Semantics
-Word Representations [Tsubaki et al., 2013, Srivastava et al., 2013, Rockt ̈aschel et al., 2014, Baroni et al., 2014, Hashimoto et al., 2014, Pennington et al., 2014, Neelakantan et al., 2014, Chen et al., 2014b, Milajevs et al., 2014]
-Evaluating neural word representations in tensor-based compositional settings.
-A unified model for word sense representation and disambiguation.
-Efficient non-parametric estimation of multiple embeddings per word in vector space.
-Glove: Global vectors for word representation.
-Jointly learning word representations and composition functions using predicate-argument structures.
-Don’t count, predict! a systematic comparison of context-counting vs. context-predicting semantic vectors.
 
----
+		Word Representations [Tsubaki et al., 2013, Srivastava et al., 2013, Rockt ̈aschel et al., 2014, Baroni et al., 2014, Hashimoto et al., 2014, Pennington et al., 2014, Neelakantan et al., 2014, Chen et al., 2014b, Milajevs et al., 2014]
+		Evaluating neural word representations in tensor-based compositional settings.
+		A unified model for word sense representation and disambiguation.
+		Efficient non-parametric estimation of multiple embeddings per word in vector space.
+		Glove: Global vectors for word representation.
+		Jointly learning word representations and composition functions using predicate-argument structures.
+		Don’t count, predict! a systematic comparison of context-counting vs. context-predicting semantic vectors.
 
-自然语言处理的基本任务
+
+### 自然语言处理的基本任务
 自然语言（Natural Language）其实就是人类语言，自然语言处理（NLP）就是对人类语言的处理，当然主要是利用计算机。自然语言处理是关于计算机科学和语言学的交叉学科，常见的研究任务包括：
 
 - 分词（Word Segmentation或Word Breaker，WB）
@@ -84,7 +82,6 @@ Don’t count, predict! a systematic comparison of context-counting vs. context-
 
 - 信息检索（Information Retrieval，IR）
 
-
 ### 传统文本语义分析
 
 【Query意图分析：记一次完整的机器学习过程（scikit learn library学习笔记）】http://t.cn/RvUNAsG 博客园zero_learner的博文。利用Python机器学习包Scikit Learn具体解决Query意图问题，是一个机器学习实践的很好示例。另外作者推荐阅读相关文章“如何选择机器学习分类器”：http://t.cn/RvA6amn
@@ -97,31 +94,23 @@ http://net.pku.edu.cn/~zhaoxin/Topic-model-xin-zhao-wayne.pdf
 转//@徐君_: SMIR 2014的邀请报告云集了IR和NLP的大牛，UMass的Bruce Croft教授、微软研究院的Jianfeng Gao研究员、CMU的Ed Hovy教授、马里兰大学的Doug Oard教授和阿姆斯特丹大学的Maarten de Rijek教授将与大家探讨信息检索和自然语言处理中的语义匹配，敬请期待！
 @徐君_ 语义匹配(Semantic Matching)是信息检索与自然语言处理的核心问题之一，欢迎大家关注与投稿SIGIR 2014 Workshop on Semantic Matching in Information Retrieval (SMIR 2014) http://t.cn/8sVnfFi 。时间：7月11日，地点：澳大利亚黄金海岸，投稿截止日期：5月10日。 @李航博士
 
-
 ### 基于深度学习的文本语义分析
-本小节主要内容：rnnlm，word embeddings，word2vec，sentence-vector。glove。
+本小节主要内容：rnnlm，word embeddings，word2vec，sentence-vector，glove。
 
-word embeddings
+word embeddings：
 
-ML = Representation + Objective + Optimization
-Good Representation is Essential for Good Machine Learning
+	Distributed representation can be used as pre-training of deep learning to build features of machine learning tasks as a unified model to integrate heterogeneous information (text, image, ...)
 
-Semantic Hierarchy Extraction
-Cross-lingual Joint Representation
-Visual-Text Joint Representation
-
+- ML = Representation + Objective + Optimization
+- Good Representation is Essential for Good Machine Learning
+- Semantic Hierarchy Extraction
+- Cross-lingual Joint Representation
+- Visual-Text Joint Representation
 
 - Replicated Softmax: an Undirected Topic Model (NIPS 2010)
 - A Deep Architecture for Matching Short Texts (NIPS 2013)
 - Modeling Documents with a Deep Boltzmann Machine (UAI 2013)
 - A Convolutional Neural Network for Modelling Sentences(ACL 2014)
-
-Distributed representation can be used
-•  as pre-training of deep learning
-•  to build features of machine learning tasks
-•  as a unified model to integrate heterogeneous information (text, image, ...)
-
-
 
 放弃词向量(WordEmbedding)工作，直接在词袋模型(BoW)上用卷积神经网络做文本分类任务(CNN for Text Categorization)，看这篇文章的工作（待评论。。），http://t.cn/RZbN2b6 提出seq-CNN与bow-CNN两种模型直接在BoW上使用卷积层，同state-of-the-art方法相比取得较好结果
 
@@ -140,12 +129,10 @@ Yoav Goldberg写了个测评文档，大致结论就是GloVe和word2vec如果正
 @刘知远THU
 斯坦福Richard Socher在EMNLP2014发表新作：GloVe: Global Vectors for Word Representation 粗看是融合LSA等算法的想法，利用global word co-occurrence信息提升word vector学习效果，很有意思，在word analogy task上准确率比word2vec提升了11%。 http://t.cn/RPohHyc
 
-
 ### 基于深度学习的图片语义分析
 本节主要内容：cnn分类，cnn-sentences。
 
 ImageNet的创始人、大规模图像分类竞赛ILSVRC的组织者、斯坦福CV组的Li Fei-Fei等人写了一篇比较详尽的ImageNet综述文章，总结了2010-2014年的成绩: http://t.cn/RhyGbGi
-
 
 @沈复民 CVPR'13 best paper由google的论文fast detection of 100,000 categories on a single machine取得! 这个结果大家都猜到了！ 我在:http://t.cn/zHDS9R6
 
@@ -163,7 +150,7 @@ Jeff Hinton组把deep CNN(CovNets)在ImageNet上train好的模型放到网上了
 
 斯坦福大学计算机系的大作业，利用深度学习技术（CNN、RNN等）做深度的图像分析，自动描述图片，图片物体识别等等。详细技术报告在这里 http://t.cn/RzLtOfp Project地址：http://t.cn/Rz7F0Fj
 
-### 新方法
+### 其他方法
 
 #### NBSVM
 [Baselines and bigrams: simple, good sentiment and topic classification]()
@@ -209,7 +196,6 @@ http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=3D5F45337EDCE4B9A708771
 动机（摘自wikipedia）
 
 however, when error values are back-propagated from the output, the error becomes trapped in the memory portion of the block. This is referred to as an "error carousel", which continuously feeds error back to each of the gates until they become trained to cut off the value. Thus, regular backpropagation is effective at training an LSTM block to remember values for very long durations.
-
 
 #### sentence vector
 句向量是通过词向量演化出来的。具体请参考论文[Distributed representations of sentences and documents]()
@@ -304,8 +290,10 @@ ensemble的方法有很多，线性ensemble，指数ensemble。
 81. [Hao Fang et. From Captions to Visual Concepts and Back](http://arxiv.org/pdf/1411.4952v2)
 82. [Modeling Documents with a Deep Boltzmann Machine](http://www.cs.toronto.edu/~nitish/uai13.pdf)
 83. [A Deep Dive into Recurrent Neural Nets](http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/)
+84. [Xiang zhang et. Text Understanding from Scratch](http://arxiv.org/abs/1502.01710?utm_source=dlvr.it&utm_medium=tumblr)
 
 word2vec的其他参考文章：
+
 - http://blog.csdn.net/mytestmy/article/details/26961315
 - http://blog.csdn.net/mytestmy/article/details/26969149
 - www.zhihu.com/question/21661274/answer/19331979
@@ -373,7 +361,6 @@ R-CNN:
 
 - [rcnn1](http://blog.csdn.net/chenriwei2/article/details/41725871)
 - [rcnn2](http://blog.csdn.net/chenriwei2/article/details/38110387)
-
 
 Image Understand：
 
