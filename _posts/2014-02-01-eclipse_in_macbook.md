@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "eclipse_in_macbook"
+title: "mac电脑上eclipse的设置"
 description: ""
 category:
 tags: [mac]
@@ -10,9 +10,9 @@ tags: [mac]
 
 1. 首先是下载最新的jdk. 下载安装后，并设置环境变量：
 
-	export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/"
-	export PATH="$JAVA_HOME/bin:$PATH"
-	export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+		export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/"
+		export PATH="$JAVA_HOME/bin:$PATH"
+		export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
 2. 再下载eclipse，本来以为可以直接启动了。发现还不行，经搜索发现：
 [在OS X Mavericks中不能启动Eclipse的解决方法](http://blog.csdn.net/qysh123/article/details/16930143) 介绍说还要再下载一个java for osx。

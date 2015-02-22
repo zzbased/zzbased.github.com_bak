@@ -66,27 +66,36 @@
 
 <h3 id="section">一 基本概念介绍</h3>
 
-<h4 id="anaconda">1.1. anaconda：</h4>
+<h4 id="anaconda">1.1. anaconda</h4>
 <p>一个python科学计算发行版，具体可以参考下面的网页：
-  <a href="http://blog.csdn.net/rumswell/article/details/8927603">目前比较流行的python科学计算发行包</a>。其中比较了python(x,y),winpython, anaconda, canopy, sage。
-#### 1.2. theana：####
-深度学习python包。
-  - <a href="https://github.com/Theano/Theano">theano github地址</a>
-  - <a href="http://deeplearning.net/software/theano/">theano 官方首页</a>
-  - <a href="http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html">theano 学习指南翻译</a></p>
+  <a href="http://blog.csdn.net/rumswell/article/details/8927603">目前比较流行的python科学计算发行包</a>。其中比较了python(x,y),winpython, anaconda, canopy, sage。</p>
 
-<h4 id="cuda">1.3. cuda:</h4>
+<h4 id="theano">1.2. theano</h4>
+
+<p>深度学习python包。</p>
+
+<ul>
+  <li><a href="https://github.com/Theano/Theano">theano github地址</a></li>
+  <li><a href="http://deeplearning.net/software/theano/">theano 官方首页</a></li>
+  <li><a href="http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html">theano 学习指南翻译</a></li>
+</ul>
+
+<h4 id="cuda">1.3. cuda</h4>
 
 <p>nvidia gpu编程库</p>
 
 <h3 id="section-1">二 安装流程</h3>
-<p>####2.1	我的安装环境
-windows7 64bit. gpu是geforce gtx 660.</p>
+
+<h4 id="section-2">2.1 我的安装环境</h4>
+<p>windows7 64bit. gpu是geforce gtx 660.</p>
 
 <h4 id="cuda-1">2.2 cuda安装</h4>
-<p>先安装cuda. 目前cuda的最新版是5.5，直接到官方网站下站即可。
-  - <a href="https://developer.nvidia.com/cuda-downloads">cuda 下载地址</a>
-  - <a href="http://blog.csdn.net/yeyang911/article/details/17450963">手把手教你cuda5.5与VS2010的编译环境搭建</a></p>
+<p>先安装cuda. 目前cuda的最新版是5.5，直接到官方网站下站即可。</p>
+
+<ul>
+  <li><a href="https://developer.nvidia.com/cuda-downloads">cuda 下载地址</a></li>
+  <li><a href="http://blog.csdn.net/yeyang911/article/details/17450963">手把手教你cuda5.5与VS2010的编译环境搭建</a></li>
+</ul>
 
 <p>下载完后直接傻瓜安装。在我的机器上，我将其安装到”D:\NVIDIA\CUDA”目录。
 安装完后，还要设置一些环境变量：</p>
@@ -100,16 +109,17 @@ CUDA_SDK_LIB　　%CUDA_SDK_PATH%\common\lib\x64
 PATH   %CUDA_BIN_PATH%
 </code></pre>
 
-<p>安装结束后，可以验证一下cuda是否成功
+<p>安装结束后，可以验证一下cuda是否成功。
 cd %CUDA_SDK_PATH%\Bin\win64\Release</p>
 
 <p>执行deviceQuery.exe 和 bandwithTest.exe</p>
 
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ截图20140128135238.png" alt="Image" /></p>
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cuda_installed_result.png" alt="Image" /></p>
 
 <p>ok, cuda安装成功</p>
 
 <h4 id="cudavs">2.3 cuda+vs</h4>
+
 <p>再接着按照上面教程所说，继续安装vs2010.
 cuda官网上有一篇安装教程：
 <a href="http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-microsoft-windows/">cuda+vs官网安装</a></p>
@@ -118,9 +128,9 @@ cuda官网上有一篇安装教程：
 <a href="http://stackoverflow.com/questions/2760374/why-cant-nvcc-find-my-visual-c-installation">Why can’t nvcc find my Visual C++ installation?</a></p>
 
 <p>Include this line
-    compiler-bindir = C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin
+  “compiler-bindir = C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin”
 in
-    %CUDA_BIN_PATH%\nvcc.profile</p>
+  “%CUDA_BIN_PATH%\nvcc.profile”</p>
 
 <p>一开始，我安装是vs2010 express版本。
 但是在编译cuda sample时，
@@ -143,18 +153,19 @@ http://msdn.microsoft.com/en-us/library/vstudio/9yb4317s%28v=vs.110%29.aspx
 <p>这样总算可以完整编译bandwidthTest工程，x64和win32平台都是ok的。</p>
 
 <h4 id="anaconda-1">2.4 anaconda</h4>
-<p>搞好cuda的环境后，再来安装anaconda。
-   anaconda的安装相对简单。</p>
+<p>搞好cuda的环境后，再来安装anaconda。anaconda的安装相对简单。</p>
 
 <h4 id="theana">2.5 theana</h4>
-<p>安装完anaconda后，再按照下面文章所述安装theano.
-  <a href="http://blog.csdn.net/yeyang911/article/details/16357133">64位WIN7上成功安装theano,并运行了g++, GPU</a>
-  <a href="http://deeplearning.net/software/theano/install.html#windows-anaconda">官网上利用anaconda安装theano的介绍</a>
-安装完theano后，还要设置环境变量：PYTHONPATH = D:\Anaconda\Lib\site-packages\theano
-PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路径。</p>
+<p>安装完anaconda后，再按照下面文章所述安装theano.</p>
 
-<p>在使用theano之前，还需要配置theano。
-   在home目录[打开cmd时所显示的目录]下编辑.theanorc.txt。</p>
+<ul>
+  <li><a href="http://blog.csdn.net/yeyang911/article/details/16357133">64位WIN7上成功安装theano,并运行了g++, GPU</a></li>
+  <li><a href="http://deeplearning.net/software/theano/install.html#windows-anaconda">官网上利用anaconda安装theano的介绍</a></li>
+</ul>
+
+<p>安装完theano后，还要设置环境变量：PYTHONPATH = D:\Anaconda\Lib\site-packages\theano。PYTHONPATH的含义和sys.path一样，就是python解释器寻找模块的路径。</p>
+
+<p>在使用theano之前，还需要配置theano。在home目录[打开cmd时所显示的目录]下编辑.theanorc.txt。</p>
 
 <pre><code>[blas]
 ldflags =
@@ -170,9 +181,11 @@ floatX = float32
 device = gpu
 </code></pre>
 
-<h3 id="theano">三. 使用theano</h3>
-<p>#### 3.1 theano using the GPU ####
-<a href="http://deeplearning.net/software/theano/tutorial/using_gpu.html#using-gpu">官方using the gpu文档</a></p>
+<h3 id="theano-1">三. 使用theano</h3>
+
+<h4 id="theano-using-the-gpu">3.1 theano using the GPU</h4>
+
+<p><a href="http://deeplearning.net/software/theano/tutorial/using_gpu.html#using-gpu">官方using the gpu文档</a></p>
 
 <p>下面是一个测试程序：</p>
 
@@ -234,15 +247,14 @@ else:
 <p>用上面这个程序，GPU执行，只需要0.01s。</p>
 
 <h4 id="deeplearningtutorials">3.2 DeepLearningTutorials</h4>
-<p>下载DeepLearningTutorials</p>
 
-<p><a href="https://github.com/lisa-lab/DeepLearningTutorials">DeepLearningTutorials</a></p>
+<p>下载<a href="https://github.com/lisa-lab/DeepLearningTutorials">DeepLearningTutorials</a></p>
 
-<p>仔细研读里面的文件，开始学习deep learning！</p>
+<p>仔细研读里面的文件，开始学习deep learning。</p>
 
-<p>logistic_sgd.py
-   执行结果：
-  <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/QQ截图20140128152208.png" alt="Image" /></p>
+<p>logistic_sgd.py 执行结果：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/theano_lr_result.png" alt="Image" /></p>
 
   </article>
 

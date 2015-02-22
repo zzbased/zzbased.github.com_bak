@@ -95,54 +95,18 @@
 <h4 id="generative-model">生成模型，Generative Model</h4>
 
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>假设o是观察值，q是模型。如果对P(o</td>
-          <td>q)建模，就是Generative模型。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>假设o是观察值，q是模型。如果对P(o|q)建模，就是Generative模型。</li>
   <li>其基本思想是首先建立样本的概率密度模型，再利用模型进行推理预测。一般建立在统计力学和bayes理论的基础之上。</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>估计的是联合概率分布（joint probability distribution），p(class, context)=p(class</td>
-          <td>context)*p(context)。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>估计的是联合概率分布（joint probability distribution），p(class, context)=p(class|context)*p(context)。</li>
   <li>代表：Gaussians，Naive Bayes，HMMs，Bayesian networks，Markov random fields</li>
 </ul>
 
 <h4 id="discriminative-model">判别模型，Discriminative Model</h4>
 
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>假设o是观察值，q是模型。如果对条件概率(后验概率) P(q</td>
-          <td>o)建模，就是Discrminative模型。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>假设o是观察值，q是模型。如果对条件概率(后验概率) P(q|o)建模，就是Discrminative模型。</li>
   <li>基本思想是有限样本条件下建立判别函数，不考虑样本的产生模型，直接研究预测模型。代表性理论为统计学习理论。</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>估计的是条件概率分布(conditional distribution)， p(class</td>
-          <td>context)。利用正负例和分类标签，focus在判别模型的边缘分布。目标函数直接对应于分类准确率。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>估计的是条件概率分布(conditional distribution)， p(class|context)。利用正负例和分类标签，focus在判别模型的边缘分布。目标函数直接对应于分类准确率。</li>
   <li>代表：logistic regression，SVMs，neural networks，Conditional random fields(CRF)</li>
 </ul>
 
@@ -168,9 +132,11 @@ EM算法，Baum-Welch算法。</li>
 Viterbi算法。</li>
 </ul>
 
-<p>为什么是生成模型？
-<script type="math/tex">P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)</script>
-从上面公式可以看出，这是生成模型。
+<p>为什么是生成模型？</p>
+
+<script type="math/tex; mode=display">P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)</script>
+
+<p>从上面公式可以看出，这是生成模型。
 而观测系列的生成，与LDA的生成过程类似。</p>
 
 <h3 id="crf">条件随机域，CRF</h3>
@@ -183,25 +149,11 @@ Viterbi算法。</li>
 <h3 id="section-4">对比</h3>
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm1.png" alt="hmm1" /></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>上图是HMM的概率图，属生成模型。以P(Y,X)建模，即P(O，q) = P(q)P(O</td>
-      <td>q) 建模。</td>
-    </tr>
-  </tbody>
-</table>
+<p>上图是HMM的概率图，属生成模型。以P(Y,X)建模，即P(O，q) = P(q)P(O|q) 建模。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf1.png" alt="crf1" /></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>上图是CRF的概率图，属判别模型。以P(Y</td>
-      <td>X)建模。</td>
-    </tr>
-  </tbody>
-</table>
+<p>上图是CRF的概率图，属判别模型。以P(Y|X)建模。</p>
 
 <h3 id="section-5">参考文献</h3>
 <ul>

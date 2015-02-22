@@ -41,7 +41,7 @@ git push -u origin master
 2. 参考[这篇文章](http://guganeshan.com/blog/setting-up-git-and-tortoisegit-with-bitbucket-step-by-step.html)设置ssh key。
 经过mac和windows7两个设置后，我的bitbucket ssh key是这样的：
 
-![bitbucket_ssh.png](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bitbucket_ssh.png)
+	![bitbucket_ssh.png](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bitbucket_ssh.png)
 
 3. 选定一个目录，在该目录下右键打开git bash。直接git clone bitbucket上创建的repository。
 

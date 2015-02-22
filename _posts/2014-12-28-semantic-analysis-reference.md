@@ -97,9 +97,7 @@ http://net.pku.edu.cn/~zhaoxin/Topic-model-xin-zhao-wayne.pdf
 ### 基于深度学习的文本语义分析
 本小节主要内容：rnnlm，word embeddings，word2vec，sentence-vector，glove。
 
-word embeddings：
-
-	Distributed representation can be used as pre-training of deep learning to build features of machine learning tasks as a unified model to integrate heterogeneous information (text, image, ...)
+word embeddings：Distributed representation can be used as pre-training of deep learning to build features of machine learning tasks as a unified model to integrate heterogeneous information (text, image, ...)
 
 - ML = Representation + Objective + Optimization
 - Good Representation is Essential for Good Machine Learning
@@ -170,7 +168,7 @@ cache models (that describe long context information) or class-based models (tha
 
 word2vec也是mikolov的作品，与rnnlm相比目的不太一样，rnnlm主要是想做语言模型；word2vec的本身目的就是训练词向量，速度会更快一些。
 
-rnnlm是怎么用到二分类上去的? 针对不同的label，训练两个不同的语言模型p+(x|y=+1)和p-(x|y=-1)。对于一个testcase x，求解r= p+(x|y=+1)/p-(x|y=-1)*p(y=+1)/p(y=-1)，如果r>1，则x属于label(+1)，否则x属于label(-1)。
+rnnlm是怎么用到二分类上去的? 针对不同的label，训练两个不同的语言模型p+(x\|y=+1)和p-(x\|y=-1)。对于一个testcase x，求解r= p+(x\|y=+1)/p-(x\|y=-1)*p(y=+1)/p(y=-1)，如果r>1，则x属于label(+1)，否则x属于label(-1)。
 
 其预测脚本为：
 
@@ -300,10 +298,12 @@ word2vec的其他参考文章：
 - http://suanfazu.com/t/wen-ben-shen-du-biao-shi-mo-xing-word2vec/258
 - [word2vec在事件挖掘中的运用](http://blog.csdn.net/shuishiman/article/details/20769437#1536434-tsina-1-26292-66a1f5d8f89e9ad52626f6f40fdeadaa)
 
-
 Zero-shot：
+
 - [zero-shot leanring by convex combination of semantic embeddings]()
 - [distributed representations of sentences and documents]()
+
+machine translation:
 
 - [sequence to sequence learning with neural network]()
 - [exploting similarities among language for machine translation]()
@@ -355,7 +355,7 @@ LaTex：
 
 RNN，CNN paper整理：
 
--[Deep Learning方向的paper整理](http://hi.baidu.com/chb_seaok/item/6307c0d0363170e73cc2cb65)
+- [Deep Learning方向的paper整理](http://hi.baidu.com/chb_seaok/item/6307c0d0363170e73cc2cb65)
 
 R-CNN:
 

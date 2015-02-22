@@ -15,10 +15,12 @@ tags: [cuda, deep learning]
   [目前比较流行的python科学计算发行包](http://blog.csdn.net/rumswell/article/details/8927603)。其中比较了python(x,y),winpython, anaconda, canopy, sage。
 
 #### 1.2. theano
+
 深度学习python包。
-  - [theano github地址](https://github.com/Theano/Theano)
-  - [theano 官方首页](http://deeplearning.net/software/theano/)
-  - [theano 学习指南翻译](http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html)
+
+- [theano github地址](https://github.com/Theano/Theano)
+- [theano 官方首页](http://deeplearning.net/software/theano/)
+- [theano 学习指南翻译](http://www.cnblogs.com/xueliangliu/archive/2013/04/03/2997437.html)
 
 #### 1.3. cuda
 
@@ -31,8 +33,9 @@ windows7 64bit. gpu是geforce gtx 660.
 
 #### 2.2 cuda安装 ####
 先安装cuda. 目前cuda的最新版是5.5，直接到官方网站下站即可。
-  - [cuda 下载地址](https://developer.nvidia.com/cuda-downloads)
-  - [手把手教你cuda5.5与VS2010的编译环境搭建](http://blog.csdn.net/yeyang911/article/details/17450963)
+
+- [cuda 下载地址](https://developer.nvidia.com/cuda-downloads)
+- [手把手教你cuda5.5与VS2010的编译环境搭建](http://blog.csdn.net/yeyang911/article/details/17450963)
 
 下载完后直接傻瓜安装。在我的机器上，我将其安装到"D:\NVIDIA\CUDA"目录。
 安装完后，还要设置一些环境变量：

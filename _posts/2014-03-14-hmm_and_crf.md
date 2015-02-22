@@ -41,16 +41,16 @@ tags: [machine learning]
 
 #### 生成模型，Generative Model
 
-- 假设o是观察值，q是模型。如果对P(o|q)建模，就是Generative模型。
+- 假设o是观察值，q是模型。如果对P(o\|q)建模，就是Generative模型。
 - 其基本思想是首先建立样本的概率密度模型，再利用模型进行推理预测。一般建立在统计力学和bayes理论的基础之上。
-- 估计的是联合概率分布（joint probability distribution），p(class, context)=p(class|context)\*p(context)。
+- 估计的是联合概率分布（joint probability distribution），p(class, context)=p(class\|context)\*p(context)。
 - 代表：Gaussians，Naive Bayes，HMMs，Bayesian networks，Markov random fields
 
 #### 判别模型，Discriminative Model
 
-- 假设o是观察值，q是模型。如果对条件概率(后验概率) P(q|o)建模，就是Discrminative模型。
+- 假设o是观察值，q是模型。如果对条件概率(后验概率) P(q\|o)建模，就是Discrminative模型。
 - 基本思想是有限样本条件下建立判别函数，不考虑样本的产生模型，直接研究预测模型。代表性理论为统计学习理论。
-- 估计的是条件概率分布(conditional distribution)， p(class|context)。利用正负例和分类标签，focus在判别模型的边缘分布。目标函数直接对应于分类准确率。
+- 估计的是条件概率分布(conditional distribution)， p(class\|context)。利用正负例和分类标签，focus在判别模型的边缘分布。目标函数直接对应于分类准确率。
 - 代表：logistic regression，SVMs，neural networks，Conditional random fields(CRF)
 
 ### 隐马尔科夫模型
@@ -72,7 +72,9 @@ tags: [machine learning]
   Viterbi算法。
 
 为什么是生成模型？
+
 $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
+
 从上面公式可以看出，这是生成模型。
 而观测系列的生成，与LDA的生成过程类似。
 
@@ -84,11 +86,11 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 ### 对比
 ![hmm1](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm1.png)
 
-上图是HMM的概率图，属生成模型。以P(Y,X)建模，即P(O，q) = P(q)P(O|q) 建模。
+上图是HMM的概率图，属生成模型。以P(Y,X)建模，即P(O，q) = P(q)P(O\|q) 建模。
 
 ![crf1](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf1.png)
 
-上图是CRF的概率图，属判别模型。以P(Y|X)建模。
+上图是CRF的概率图，属判别模型。以P(Y\|X)建模。
 
 ### 参考文献
 - [Markdown中插入数学公式的方法](http://blog.csdn.net/xiahouzuoxin/article/details/26478179)

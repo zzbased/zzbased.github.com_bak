@@ -67,6 +67,7 @@
 <p>bitbuckte 相比于时下最流行的 github, 其最牛之处在于可以免费创建私人项目。这点相当吸引人。我打算把一些杂乱的项目放上去，一方面为个备份，另一方面也为跟踪开发过程。</p>
 
 <h3 id="mac-">Mac 配置</h3>
+
 <p>mac电脑上默认有安装git, 需要做的只是一些简单的配置。</p>
 
 <ol>
@@ -94,17 +95,23 @@ git push -u origin master</p>
 </ol>
 
 <h3 id="windows7-">Windows7 配置</h3>
-<ol>
-  <li>安装<a href="http://code.google.com/p/msysgit/">msysgit</a>。它包括一个git gui和一个git bash。</li>
-  <li>参考<a href="http://guganeshan.com/blog/setting-up-git-and-tortoisegit-with-bitbucket-step-by-step.html">这篇文章</a>设置ssh key。
-经过mac和windows7两个设置后，我的bitbucket ssh key是这样的：</li>
-</ol>
-
-<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bitbucket_ssh.png" alt="bitbucket_ssh.png" /></p>
 
 <ol>
-  <li>选定一个目录，在该目录下右键打开git bash。直接git clone bitbucket上创建的repository。</li>
-  <li>更新代码后，右键git add all files now(or in git bash, execute ‘git add -u .’)。利用git gui commit代码(当然用git bash也可以，用git gui是方便查看diff)。最后在git bash里git push -u origin master代码即可。</li>
+  <li>
+    <p>安装<a href="http://code.google.com/p/msysgit/">msysgit</a>。它包括一个git gui和一个git bash。</p>
+  </li>
+  <li>
+    <p>参考<a href="http://guganeshan.com/blog/setting-up-git-and-tortoisegit-with-bitbucket-step-by-step.html">这篇文章</a>设置ssh key。
+经过mac和windows7两个设置后，我的bitbucket ssh key是这样的：</p>
+
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bitbucket_ssh.png" alt="bitbucket_ssh.png" /></p>
+  </li>
+  <li>
+    <p>选定一个目录，在该目录下右键打开git bash。直接git clone bitbucket上创建的repository。</p>
+  </li>
+  <li>
+    <p>更新代码后，右键git add all files now(or in git bash, execute ‘git add -u .’)。利用git gui commit代码(当然用git bash也可以，用git gui是方便查看diff)。最后在git bash里git push -u origin master代码即可。</p>
+  </li>
 </ol>
 
 <p>OK，以后我的私人工程代码都将用bitbucket来管理。</p>

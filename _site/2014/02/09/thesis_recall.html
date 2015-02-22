@@ -68,12 +68,22 @@
 <p>Types of Machine Learning Algorithms; Taiwo Oladipupo Ayodele</p>
 
 <h3 id="section">最优化</h3>
-<p><a href="http://www.chokkan.org/software/liblbfgs/">lbfgs</a>
-一种拟牛顿法，经常用来做凸优化。任何凸函数优化，将cost fuction和gradient function写好了，输入进去，就可以求得最优值。
-譬如对于svm模型，求svm的squared hinge loss:
- 	yp=x*w; idx=find(yp.*y “&lt;” 1); e=yp(idx)-y(idx); f=e’*e+c*w*w; df=2(x(idx,:)’*e+c*w);
-计算完cost function: f和gradient function: df, 输入到lbfgs即可。
-余凯：说hinge loss, 当年主要卖点是得到稀疏解，也即所谓支撑向量 (SV). 今天看来，这个性质已不重要：1 这是一个特殊凸优化算法的结果，而非统计学习的本质问题； 2 实践中，当年kernel系统得到稀疏解带来计算上的便捷，但现在我们已不用kernel; 3 甚至稀疏性这个结论已被推翻，已证明SV是线性增长。</p>
+<p><a href="http://www.chokkan.org/software/liblbfgs/">lbfgs</a>，一种拟牛顿法，经常用来做凸优化。任何凸函数优化，将cost fuction和gradient function写好了，输入进去，就可以求得最优值。</p>
+
+<p>譬如对于svm模型，求svm的squared hinge loss:</p>
+
+<pre><code>yp=x\*w; idx=find(yp.\*y "&lt;" 1); e=yp(idx)-y(idx); f=e'\*e+c\*w\*w; df=2(x(idx,:)'\*e+c\*w);
+</code></pre>
+
+<p>计算完cost function: f和gradient function: df, 输入到lbfgs即可。</p>
+
+<p>余凯：说hinge loss, 当年主要卖点是得到稀疏解，也即所谓支撑向量(SV). 今天看来，这个性质已不重要：</p>
+
+<ol>
+  <li>这是一个特殊凸优化算法的结果，而非统计学习的本质问题；</li>
+  <li>实践中，当年kernel系统得到稀疏解带来计算上的便捷，但现在我们已不用kernel;</li>
+  <li>甚至稀疏性这个结论已被推翻，已证明SV是线性增长。</li>
+</ol>
 
 <p><a href="http://research.microsoft.com/en-us/downloads/b1eb1016-1738-4bd5-83a9-370c9d498a03/">owl-qn</a>  lbfgs+L1正则化。到目前为止，简单的lr用的还是这个库。</p>
 
@@ -82,7 +92,7 @@
 
 <p><img src="https://raw.github.com/zzbased/zzbased.github.com/master/_posts/images/lr_parallel.png" alt="lr parallel" /></p>
 
-<p>一些有趣的机器学习库 <a href="https://github.com/JohnLangford/vowpal_wabbit/wiki">vowpal_wabbit</a>  <a href="http://blog.sina.com.cn/s/blog_569d6df801014x4x.html#bsh-24-170411859">c++ library</a>  <a href="http://scikit-learn.org/stable/">scikit</a></p>
+<p>一些有趣的机器学习库： <a href="https://github.com/JohnLangford/vowpal_wabbit/wiki">vowpal_wabbit</a>，<a href="http://blog.sina.com.cn/s/blog_569d6df801014x4x.html#bsh-24-170411859">c++ library</a>，<a href="http://scikit-learn.org/stable/">scikit</a></p>
 
 <h3 id="classification">classification</h3>
 <p>Supervised Machine Learning: A Review of Classification Techniques; S. B. Kotsiantis</p>
@@ -115,7 +125,7 @@
 
 <p>The Boosting Approach to Machine Learning An Overview; Robert E. Schapire</p>
 
-<h3 id="sas">sas</h3>
+<h3 id="semantic-analysis-system">Semantic Analysis System</h3>
 <p>A Web-based Kernel Function for Measuring the Similarity
 of Short Text Snippets; Mehran Sahami , Timothy D. Heilman。搜索广告sas的参考文献。</p>
 
@@ -132,8 +142,8 @@ of Short Text Snippets; Mehran Sahami , Timothy D. Heilman。搜索广告sas的�
   
 Hierarchical Convolutional Deep Learning in Computer Vision; Matthew D. Zeiler。zeiler是imagenet 2013 image classification的第一名，这是他的博士论文，挺有阅读价值的。</p>
 
-<h3 id="recommender">recommender</h3>
-<p><a href="http://zzbased.github.io/2015/01/03/recommendation_algorithms/">本站文章</a></p>
+<h3 id="recommender">Recommender</h3>
+<p><a href="http://zzbased.github.io/2015/01/03/recommendation_algorithms.html">本站文章</a></p>
 
 <h3 id="online-learning">Online learning</h3>
 <p>Online Learning and Online Convex Optimization; By Shai Shalev-Shwartz</p>
@@ -146,10 +156,7 @@ Hierarchical Convolutional Deep Learning in Computer Vision; Matthew D. Zeiler�
 <h3 id="ctr">ctr</h3>
 <p>Ad Click Prediction: a View from the Trenches;H. Brendan McMahan</p>
 
-<hr />
-
-<p>add on 20140214</p>
-
+<h3 id="nlp">NLP</h3>
 <p><a href="http://pages.cs.wisc.edu/~jerryzhu/pub/ZhuCCFADL46.pdf">statistical machine learning for nlp; by xiaojin zhu</a></p>
 
 

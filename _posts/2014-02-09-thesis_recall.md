@@ -11,14 +11,20 @@ tags: [machine learning, nlp]
 ### types of machine learning ###
 Types of Machine Learning Algorithms; Taiwo Oladipupo Ayodele
 
-
 ### 最优化 ###
-[lbfgs](http://www.chokkan.org/software/liblbfgs/)
-一种拟牛顿法，经常用来做凸优化。任何凸函数优化，将cost fuction和gradient function写好了，输入进去，就可以求得最优值。
+[lbfgs](http://www.chokkan.org/software/liblbfgs/)，一种拟牛顿法，经常用来做凸优化。任何凸函数优化，将cost fuction和gradient function写好了，输入进去，就可以求得最优值。
+
 譬如对于svm模型，求svm的squared hinge loss:
- 	yp=x\*w; idx=find(yp.\*y "<" 1); e=yp(idx)-y(idx); f=e'\*e+c\*w\*w; df=2(x(idx,:)'\*e+c\*w);
+
+	yp=x\*w; idx=find(yp.\*y "<" 1); e=yp(idx)-y(idx); f=e'\*e+c\*w\*w; df=2(x(idx,:)'\*e+c\*w);
+
 计算完cost function: f和gradient function: df, 输入到lbfgs即可。
-余凯：说hinge loss, 当年主要卖点是得到稀疏解，也即所谓支撑向量 (SV). 今天看来，这个性质已不重要：1 这是一个特殊凸优化算法的结果，而非统计学习的本质问题； 2 实践中，当年kernel系统得到稀疏解带来计算上的便捷，但现在我们已不用kernel; 3 甚至稀疏性这个结论已被推翻，已证明SV是线性增长。
+
+余凯：说hinge loss, 当年主要卖点是得到稀疏解，也即所谓支撑向量(SV). 今天看来，这个性质已不重要：
+
+1. 这是一个特殊凸优化算法的结果，而非统计学习的本质问题；
+2. 实践中，当年kernel系统得到稀疏解带来计算上的便捷，但现在我们已不用kernel;
+3. 甚至稀疏性这个结论已被推翻，已证明SV是线性增长。
 
 [owl-qn](http://research.microsoft.com/en-us/downloads/b1eb1016-1738-4bd5-83a9-370c9d498a03/)  lbfgs+L1正则化。到目前为止，简单的lr用的还是这个库。
 
@@ -27,7 +33,7 @@ Types of Machine Learning Algorithms; Taiwo Oladipupo Ayodele
 
 ![lr parallel](https://raw.github.com/zzbased/zzbased.github.com/master/_posts/images/lr_parallel.png)
 
-一些有趣的机器学习库 [vowpal_wabbit](https://github.com/JohnLangford/vowpal_wabbit/wiki)  [c++ library](http://blog.sina.com.cn/s/blog_569d6df801014x4x.html#bsh-24-170411859)  [scikit](http://scikit-learn.org/stable/)
+一些有趣的机器学习库： [vowpal_wabbit](https://github.com/JohnLangford/vowpal_wabbit/wiki)，[c++ library](http://blog.sina.com.cn/s/blog_569d6df801014x4x.html#bsh-24-170411859)，[scikit](http://scikit-learn.org/stable/)
 
 ### classification ###
 Supervised Machine Learning: A Review of Classification Techniques; S. B. Kotsiantis
@@ -39,7 +45,6 @@ An Introduction to Conditional Random Fields;Charles Sutton。 crf相关的文�
 A Gentle Introduction to Support Vector Machines in Biomedicine;Alexander Statnikov。 这个介绍很全面。
 
 july的这篇文章写得也不错。[支持向量机通俗导论（理解SVM的三层境界）](http://blog.csdn.net/v_july_v/article/details/7624837)
-
 
 ### topic model ###
 Parameter estimation for text analysis; Gregor Heinrich。最佳入门材料。
@@ -61,10 +66,9 @@ A Short Introduction to Boosting; Yoav Freund
 
 The Boosting Approach to Machine Learning An Overview; Robert E. Schapire
 
-### sas ###
+### Semantic Analysis System ###
 A Web-based Kernel Function for Measuring the Similarity
 of Short Text Snippets; Mehran Sahami , Timothy D. Heilman。搜索广告sas的参考文献。
-
 
 ###deep learning###
 [UFLDL](http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B)
@@ -79,12 +83,11 @@ Representation Learning: A Review and New Perspectives; Yoshua Bengio。综述�
   
 Hierarchical Convolutional Deep Learning in Computer Vision; Matthew D. Zeiler。zeiler是imagenet 2013 image classification的第一名，这是他的博士论文，挺有阅读价值的。
 
-### recommender ###
-[本站文章](http://zzbased.github.io/2015/01/03/recommendation_algorithms/)
+### Recommender ###
+[本站文章](http://zzbased.github.io/2015/01/03/recommendation_algorithms.html)
 
 ###Online learning###
 Online Learning and Online Convex Optimization; By Shai Shalev-Shwartz
-
 
 ### DSP ###
 DSP中的算法初探; 江申
@@ -94,10 +97,6 @@ DSP中的算法初探; 江申
 ### ctr ###
 Ad Click Prediction: a View from the Trenches;H. Brendan McMahan
 
-
----
-
-add on 20140214
-
+### NLP
 [statistical machine learning for nlp; by xiaojin zhu](http://pages.cs.wisc.edu/~jerryzhu/pub/ZhuCCFADL46.pdf)
 

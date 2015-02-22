@@ -81,20 +81,22 @@ pod ‘LBBlurredImage’
 pod ‘TSMessages’
 pod ‘ReactiveCocoa’</p>
 
-<p>目的是利用pod来安装 Mantle, LBBlurredImage, TSMessages, ReactiveCocoa这几个库。执行pod install即可安装。安装完成后如下所示：
-<img src="http://d.pr/i/aTyV+" alt="pod install over" /></p>
+<p>目的是利用pod来安装 Mantle, LBBlurredImage, TSMessages, ReactiveCocoa这几个库。执行pod install即可安装。</p>
 
 <h3 id="main-view-controller">main view controller</h3>
-<p>打开SimpleWeather.xcworkspace。新建一个UIViewController的子类。相当于是mvc模型中的控制器。
+
+<p>打开SimpleWeather.xcworkspace。
+新建一个UIViewController的子类。相当于是mvc模型中的控制器。
 <a href="https://developer.apple.com/library/ios/Documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html">UIViewController</a>：A view controller manages a set of views that make up a portion of your app’s user interface.
 As part of the controller layer of your app, a view controller coordinates its efforts with model objects and other controller objects — including other view controllers — so your app presents a single coherent user interface.</p>
 
-<p>Where necessary, a view controller:
-1.resizes and lays out its views
-2.adjusts the contents of the views
-3.acts on behalf of the views when the user interacts with them</p>
+<p>Where necessary, a view controller:</p>
 
-<p><img src="http://d.pr/i/qEs+" alt="mvc模型" /></p>
+<ol>
+  <li>resizes and lays out its views</li>
+  <li>adjusts the contents of the views</li>
+  <li>acts on behalf of the views when the user interacts with them</li>
+</ol>
 
 <p>接下去就按照文章的演示继续往下做。Setting Up Your App’s Views。</p>
 

@@ -65,43 +65,65 @@
     <h2 id="git">git相关操作指南</h2>
 
 <h3 id="git-1">最基础的git操作</h3>
-<ol>
-  <li>
-    <p>创建新仓库。
-&gt; 创建新文件夹，打开，然后执行 git init 以创建新的 git 仓库。</p>
-  </li>
-  <li>
-    <p>检出仓库。
-&gt; 执行如下命令以创建一个本地仓库的克隆版本：
+<ul>
+  <li>创建新仓库。</li>
+</ul>
+
+<blockquote>
+  <p>创建新文件夹，打开，然后执行 git init 以创建新的 git 仓库。</p>
+</blockquote>
+
+<ul>
+  <li>检出仓库。</li>
+</ul>
+
+<blockquote>
+  <p>执行如下命令以创建一个本地仓库的克隆版本：
 git clone /path/to/repository
 如果是远端服务器上的仓库，你的命令会是这个样子：
 git clone username@host:/path/to/repository</p>
-  </li>
-  <li>
-    <p>工作流。
-&gt;你的本地仓库由 git 维护的三棵“树”组成。第一个是你的 工作目录，它持有实际文件；第二个是 缓存区（Index），它像个缓存区域，临时保存你的改动；最后是 HEAD，指向你最近一次提交后的结果。</p>
-  </li>
-  <li>
-    <p>添加与提交。
-&gt;你可以计划改动（把它们添加到缓存区），使用如下命令：
+</blockquote>
+
+<ul>
+  <li>工作流。</li>
+</ul>
+
+<blockquote>
+  <p>你的本地仓库由 git 维护的三棵“树”组成。第一个是你的 工作目录，它持有实际文件；第二个是 缓存区（Index），它像个缓存区域，临时保存你的改动；最后是 HEAD，指向你最近一次提交后的结果。</p>
+</blockquote>
+
+<ul>
+  <li>添加与提交。</li>
+</ul>
+
+<blockquote>
+  <p>你可以计划改动（把它们添加到缓存区），使用如下命令：
 git add <filename>
 git add *
 这是 git 基本工作流程的第一步；使用如下命令以实际提交改动：
 git commit -m "代码提交信息"
 现在，你的改动已经提交到了 HEAD，但是还没到你的远端仓库。</filename></p>
-  </li>
-  <li>
-    <p>推送改动。
-&gt; 你的改动现在已经在本地仓库的 HEAD 中了。执行如下命令以将这些改动提交到远端仓库：
+</blockquote>
+
+<ul>
+  <li>推送改动。</li>
+</ul>
+
+<blockquote>
+  <p>你的改动现在已经在本地仓库的 HEAD 中了。执行如下命令以将这些改动提交到远端仓库：
 git push origin master
 可以把 master 换成你想要推送的任何分支。
 如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：
 git remote add origin <server>
 如此你就能够将你的改动推送到所添加的服务器上去了。</server></p>
-  </li>
-  <li>
-    <p>更新与合并。
-&gt; 要更新你的本地仓库至最新改动，执行：
+</blockquote>
+
+<ul>
+  <li>更新与合并。</li>
+</ul>
+
+<blockquote>
+  <p>要更新你的本地仓库至最新改动，执行：
 git pull
 以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动。
 要合并其他分支到你的当前分支（例如 master），执行：
@@ -110,30 +132,37 @@ git merge <branch>
 git add <filename>
 在合并改动之前，也可以使用如下命令查看：
 git diff <source_branch> <target_branch></target_branch></source_branch></filename></branch></p>
-  </li>
-  <li>
-    <p>替换本地改动。
-&gt; 假如你做错事（自然，这是不可能的），你可以使用如下命令替换掉本地改动：
+</blockquote>
+
+<ul>
+  <li>替换本地改动。</li>
+</ul>
+
+<blockquote>
+  <p>假如你做错事（自然，这是不可能的），你可以使用如下命令替换掉本地改动：
 git checkout – <filename>
 此命令会使用 HEAD 中的最新内容替换掉你的工作目录中的文件。已添加到缓存区的改动，以及新文件，都不受影响。
 假如你想要丢弃你所有的本地改动与提交，可以到服务器上获取最新的版本并将你本地主分支指向到它：
 git fetch origin
 git reset --hard origin/master</filename></p>
-  </li>
-  <li>
-    <p>git与svn命令的区别。
-&gt; git pull – svn up；
-&gt; git add – svn add；
-&gt; git commit – svn ci；
-&gt; git clone – svn cp；
-&gt; git checkout – svn co；
-&gt; git push – 无；
-&gt; git status – svn status；
-&gt; git revert – svn revert；
-&gt; git diff –  svn diff；
-&gt; git merge – svn merge；</p>
-  </li>
-</ol>
+</blockquote>
+
+<ul>
+  <li>git与svn命令的区别。</li>
+</ul>
+
+<blockquote>
+  <p>git pull – svn up；
+git add – svn add；
+git commit – svn ci；
+git clone – svn cp；
+git checkout – svn co；
+git push – 无；
+git status – svn status；
+git revert – svn revert；
+git diff –  svn diff；
+git merge – svn merge；</p>
+</blockquote>
 
 <h3 id="git-">git 客户端</h3>
 <p>常见的git客户端有：<a href="https://msysgit.github.io/">msysgit</a>，<a href="https://code.google.com/p/tortoisegit/">TortoiseGit</a></p>

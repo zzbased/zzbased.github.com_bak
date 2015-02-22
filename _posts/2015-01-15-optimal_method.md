@@ -112,6 +112,6 @@ adaboost，svm，lr三个算法的关系：
 三种算法的分布对应exponential loss（指数损失函数），hinge loss，log loss（对数损失函数），无本质区别。应用凸上界取代0、1损失，即凸松弛技术。从组合优化到凸集优化问题。凸函数，比较容易计算极值点。
 
 - 关于loss function，记录几点：
-	- SVC & SVR：对于SVC，由于hinge loss: max(0, 1-yw'x)，SVC会特别关注那些难分类的点（classify with least certainty; support vectors, i.e., sv）；对于SVR，由于epsilon loss: max(0, |y-w'x|-e)，SVR类似的会关注那些residual比较大的点（"outlier"; prediction with least certainty too; sv）
+	- SVC & SVR：对于SVC，由于hinge loss: max(0, 1-yw'x)，SVC会特别关注那些难分类的点（classify with least certainty; support vectors, i.e., sv）；对于SVR，由于epsilon loss: max(0, \|y-w'x\|-e)，SVR类似的会关注那些residual比较大的点（"outlier"; prediction with least certainty too; sv）
 	- SVM和ANN 1) SVM的hinge loss func: max(0, 1 - y'x), 当“激活量” y'x 超过阈值1，那么就不计损失即损失为零 2) Deep Sparse Rectifier的rectifier activation func: max(0, x), 看图它在零点处不可导带来了稀疏性，可大量约简神经网络参数规模 3) loss function + penalty regularization
 	- SVM & Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点
