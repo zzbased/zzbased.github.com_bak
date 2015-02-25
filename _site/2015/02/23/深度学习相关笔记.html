@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>深度学习相关笔记</title>
-  <meta name="description" content="深度学习综述">
+  <meta name="description" content="神经网络基础">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html">
@@ -62,9 +62,39 @@
   </header>
 
   <article class="post-content">
-    <h2 id="section">深度学习综述</h2>
+    <h2 id="section">神经网络基础</h2>
 
 <ul>
+  <li>
+    <p><a href="http://hahack.com/reading/ann1/">漫谈ANN(1)：M-P模型</a>，<a href="http://hahack.com/reading/ann2/">漫谈ANN(2)：BP神经网络</a></p>
+
+    <p>M-P模型:1943年心理学家W.McCulloch和数学家W.Pitts合作提出了这个模型，所以取了他们两个人的名字（McCulloch-Pitts）</p>
+
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/mp_model.png" alt="" /></p>
+
+    <p>Perceptron: 在1958年,美国心理学家Frank Rosenblatt,基于M-P模型的结构,提出一种具有单层计算单元的神经网络,称为感知器(Perceptron)。</p>
+
+    <p>单层感知器不能解决非线性问题，譬如”异或”。Kolmogorov理论指出：双隐层感知器就足以解决任何复杂的分类问题。</p>
+  </li>
+  <li>
+    <p><a href="http://deeplearning.stanford.edu/wiki/index.php/神经网络">UFLDL-神经网络</a>, <a href="http://deeplearning.stanford.edu/wiki/index.php/反向传导算法">反向传播算法-详解</a></p>
+
+    <p><a href="http://stats.stackexchange.com/questions/106334/cost-function-of-neural-network-is-non-convex">为什么多层神经网络是非凸函数</a> 这里有解释，简单点说，如果交换某一层某两个nodes和weights以及相应连接的nodes，将得到a different set of parameters，但是cost function是一样的，所以是非凸的。</p>
+
+    <p>神经网络参数必须随机初始化，而不是全部置为0。如果所有参数都用相同的值作为初始值，那么所有隐藏层单元最终会得到与输入值有关的、相同的函数。随机初始化的目的是使对称失效。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.sina.com.cn/s/blog_71329a960102v1eo.html">神经网络历史</a></p>
+  </li>
+</ul>
+
+<h2 id="section-1">深度学习综述</h2>
+
+<ul>
+  <li>
+    <p><a href="http://deeplearning.net/tutorial/deeplearning.pdf">Deep Learning Tutorial. LISA lab, University of Montreal</a>  <a href="http://deeplearning.net/software_links/">software</a>
+基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。</p>
+  </li>
   <li>
     <p><a href="http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html">From feature descriptors to deep learning</a></p>
   </li>
@@ -79,10 +109,6 @@
   </li>
   <li>
     <p><a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">deep learning book. by Yoshua Bengio</a></p>
-  </li>
-  <li>
-    <p><a href="http://deeplearning.net/tutorial/deeplearning.pdf">Deep Learning Tutorial. LISA lab, University of Montreal</a>  <a href="http://deeplearning.net/software_links/">software</a>
-基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。</p>
   </li>
   <li>
     <p><a href="http://www.cs.toronto.edu/~tijmen/csc321/">Introduction to Neural Networks and Machine Learning by hinton</a> <a href="http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml">Lecture notes</a></p>
@@ -173,6 +199,12 @@
   </li>
   <li>
     <p><a href="http://people.idsia.ch/~juergen/lstm/index.htm">幻灯 Long Short-Term Memory: Tutorial on LSTM Recurrent Networks</a>  J. Schmidhuber的LSTM递归网络教程</p>
+  </li>
+  <li>
+    <p>[幻灯] 《Theano and LSTM for Sentiment Analysis》http://t.cn/RwofVaF Next.ML 2015上用Theano和LSTM做情感分析的报告幻灯和练习 GitHub:http://t.cn/RwofqDC 云:http://t.cn/Rwofo4i</p>
+  </li>
+  <li>
+    <p>最近很火的两篇文章，Neural Turing Machines和Learning to Execute，都讲到用LSTM RNN做sequence copy，来测试网络保持长时记忆的能力。sequence copy到底怎么定义为一个supervised learning任务呢？和机器翻译一样吗？</p>
   </li>
 </ul>
 

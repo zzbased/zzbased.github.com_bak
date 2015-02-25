@@ -169,6 +169,9 @@ Classifiers can be used in CF and CB Recommenders。
 
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/learning_to_rank_compare.png)
 
+- [关于learning to rank的讨论](http://hao.memect.com/?tag=learningtorank+weibo)，[learning to rank的推荐论文，25篇](http://hao.memect.com/?tag=learningtorank+pdf)
+
+
 #### Context-aware Recommendations
 - [论文Context-Aware Recommender Systems](http://ids.csom.umn.edu/faculty/gedas/NSFCareer/CARS-chapter-2010.pdf)
 
@@ -249,6 +252,12 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 ### Netflix
 - top-2 algorithms：SVD，RBM
 - 具体请参考[Netflix Prize and SVD](http://buzzard.ups.edu/courses/2014spring/420projects/math420-UPS-spring-2014-gower-netflix-SVD.pdf)，[The BellKor Solution to the Netflix Grand Prize](http://www.netflixprize.com/assets/GrandPrize2009_BPC_BellKor.pdf)
+
+### twitter
+[mining twitter]() #好书推荐#此书深入浅出描述如何挖掘Twitter数据， 每章有详细的文字加Python代码
+
+### linkedIn
+@breezedeus : LinkedIn最新的推荐系统文章：http://t.cn/R7mexu3。里面基本没涉及到具体算法，但作者介绍了CF在LinkedIn的很多应用，以及他们在做推荐过程中获得的一些经验。最后一条经验是应该监控log数据的质量，因为推荐的质量很依赖数据的质量！
 
 ### [个性化推荐技术#总结-袁全](https://breezedeus.github.io/2012/11/01/breezedeus-yuanquan-etao.html)
 - 相关性推荐，点击数据更有用；补充性推荐，购买数据更有用；要根据用户行为意图选择不同的推荐方法。
@@ -428,6 +437,17 @@ Justin:online match + online learning works very well
 	- 各取所长，互相补充
 	- 算法无好坏之分，只有是否合适
 
+- 再总结几点：
+	- 推荐不应该是推荐算法，而应该是推荐产品。本文的标题虽为推荐算法总结，但这是无米之炊。
+	- 产品是1，算法是0。没有合适的产品之前，算法对用户几乎不产生什么价值，一旦产品成立，算法能让产品实现质的飞跃。
+	- 这个提升不牵涉到任何的模型改进，但需要算法人员保持对业务的关注和理解，而不是一直躲在后面。
+	- 推荐技术是否能成就一个伟大的产品。不会。基于推荐技术对产品的强烈依附关系，它不会反过来促成一个产品，但它终将成就一种用户习惯。
+	- 不要空谈算法，要根据不同的产品场景。图书更强调个性化，电影更强调热门与根据标签筛选。
+	- 算法效果的度量方式往往决定了你努力的方向，面向不同类型的推荐，其中一个重要措施，就是不要采用同样一套标准去衡量你的工作结果。在实践中永远只看到ctr、precision/recall、rmse那样的衡量指标。那是衡量一个单一算法，而不是一个推荐系统的指标，或者说，不是衡量跟它绑定在一起的推荐产品的指标。
+	- 个性化，是要让所有人都满意，而不是为了统计上80%人的体验而牺牲掉剩下20%人的体验。
+	- 算法人员更应该站出来，主动填补算法与产品之间的空隙。**要做一个能用产品语言说话的算法工程师**。
+	- 目前大部分的优化都集中在算法层面上，而忽略了数据优化。数据优化的增益能极大提升算法优化的上界。
+
 - [Recommendation Systems: What developments have occurred in recommender systems after the Netflix Prize?](http://www.quora.com/Recommendation-Systems/What-developments-have-occurred-in-recommender-systems-after-the-Netflix-Prize/answer/Xavier-Amatriain?srid=z0Q5&share=1)
 
 	下面是Xavier Amatriain在Quora上关于目前推荐系统研究总结，涵盖了推荐系统的多样性，基于上下文环境推荐，社交信息的引入。其中他谈到，评分预测已经不是主流，LTR的应用会更符合推荐的初衷。
@@ -454,4 +474,6 @@ Justin:online match + online learning works very well
 10. [Context Aware Recommendation. Bamshad Mobasher](http://www.kdd.org/kdd2014/tutorials/KDD-%20The%20RecommenderProblemRevisited-Part2.pdf)
 11. [KDD - The Recommender Problem Revisited](http://www.kdd.org/kdd2014/tutorials/KDD%20-%20The%20Recommender%20Problem%20Revisited.pdf)
 12. [推荐系统的资料分享](http://blog.sina.com.cn/s/blog_804abfa70101btrv.html)，里面分享的几篇文章值得一看
-13. [精准定向的广告系统 yiwang](http://www.docin.com/p-936085086.html)
+13. [寻路推荐-理念篇](http://www.wentrue.net/blog/?p=1621)
+14. [精准定向的广告系统 yiwang](http://www.docin.com/p-936085086.html)
+15. [推荐系统读物](http://bigdata.memect.com/?p=11684)

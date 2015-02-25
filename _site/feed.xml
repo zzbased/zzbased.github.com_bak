@@ -6,15 +6,45 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Feb 2015 23:02:26 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 23:02:26 +0800</lastBuildDate>
+    <pubDate>Wed, 25 Feb 2015 17:50:35 +0800</pubDate>
+    <lastBuildDate>Wed, 25 Feb 2015 17:50:35 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>深度学习相关笔记</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;深度学习综述&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;section&quot;&gt;神经网络基础&lt;/h2&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://hahack.com/reading/ann1/&quot;&gt;漫谈ANN(1)：M-P模型&lt;/a&gt;，&lt;a href=&quot;http://hahack.com/reading/ann2/&quot;&gt;漫谈ANN(2)：BP神经网络&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;M-P模型:1943年心理学家W.McCulloch和数学家W.Pitts合作提出了这个模型，所以取了他们两个人的名字（McCulloch-Pitts）&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/mp_model.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;Perceptron: 在1958年,美国心理学家Frank Rosenblatt,基于M-P模型的结构,提出一种具有单层计算单元的神经网络,称为感知器(Perceptron)。&lt;/p&gt;
+
+    &lt;p&gt;单层感知器不能解决非线性问题，譬如”异或”。Kolmogorov理论指出：双隐层感知器就足以解决任何复杂的分类问题。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://deeplearning.stanford.edu/wiki/index.php/神经网络&quot;&gt;UFLDL-神经网络&lt;/a&gt;, &lt;a href=&quot;http://deeplearning.stanford.edu/wiki/index.php/反向传导算法&quot;&gt;反向传播算法-详解&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://stats.stackexchange.com/questions/106334/cost-function-of-neural-network-is-non-convex&quot;&gt;为什么多层神经网络是非凸函数&lt;/a&gt; 这里有解释，简单点说，如果交换某一层某两个nodes和weights以及相应连接的nodes，将得到a different set of parameters，但是cost function是一样的，所以是非凸的。&lt;/p&gt;
+
+    &lt;p&gt;神经网络参数必须随机初始化，而不是全部置为0。如果所有参数都用相同的值作为初始值，那么所有隐藏层单元最终会得到与输入值有关的、相同的函数。随机初始化的目的是使对称失效。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_71329a960102v1eo.html&quot;&gt;神经网络历史&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;深度学习综述&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://deeplearning.net/tutorial/deeplearning.pdf&quot;&gt;Deep Learning Tutorial. LISA lab, University of Montreal&lt;/a&gt;  &lt;a href=&quot;http://deeplearning.net/software_links/&quot;&gt;software&lt;/a&gt;
+基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html&quot;&gt;From feature descriptors to deep learning&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -29,10 +59,6 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.iro.umontreal.ca/~bengioy/dlbook/&quot;&gt;deep learning book. by Yoshua Bengio&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://deeplearning.net/tutorial/deeplearning.pdf&quot;&gt;Deep Learning Tutorial. LISA lab, University of Montreal&lt;/a&gt;  &lt;a href=&quot;http://deeplearning.net/software_links/&quot;&gt;software&lt;/a&gt;
-基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/&quot;&gt;Introduction to Neural Networks and Machine Learning by hinton&lt;/a&gt; &lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml&quot;&gt;Lecture notes&lt;/a&gt;&lt;/p&gt;
@@ -123,6 +149,12 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://people.idsia.ch/~juergen/lstm/index.htm&quot;&gt;幻灯 Long Short-Term Memory: Tutorial on LSTM Recurrent Networks&lt;/a&gt;  J. Schmidhuber的LSTM递归网络教程&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[幻灯] 《Theano and LSTM for Sentiment Analysis》http://t.cn/RwofVaF Next.ML 2015上用Theano和LSTM做情感分析的报告幻灯和练习 GitHub:http://t.cn/RwofqDC 云:http://t.cn/Rwofo4i&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;最近很火的两篇文章，Neural Turing Machines和Learning to Execute，都讲到用LSTM RNN做sequence copy，来测试网络保持长时记忆的能力。sequence copy到底怎么定义为一个supervised learning任务呢？和机器翻译一样吗？&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -417,11 +449,12 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
     
       <item>
         <title>搜索广告的情怀</title>
-        <description>&lt;p&gt;工作这些年，搜索广告是自己第一个接触的工作内容。从搜索广告一路走来，蓦然回首，有好些经历都值得总结。&lt;/p&gt;
+        <description>&lt;p&gt;工作这些年，搜索广告是自己第一个接触的工作项目。从搜索广告一路走来，蓦然回首，有好些经历都值得记录与总结。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;搜索广告历程&lt;/h2&gt;
 
 &lt;h3 id=&quot;soso&quot;&gt;soso&lt;/h3&gt;
+&lt;p&gt;当时paulyan从google空降到soso，成立搜索广告平台部。我在新部门成立不到半年后，入职了，入职后我被分到扩展匹配组。记得那个时候，竞价系统正在进行大重构(要将明拍转换为暗拍)；部门里还只有两个中心(一个商务，一个后台)；扩展匹配组也还没有冠名。。。&lt;/p&gt;
 
 &lt;h3 id=&quot;paipai&quot;&gt;paipai&lt;/h3&gt;
 
@@ -461,84 +494,206 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
     
       <item>
         <title>计算广告相关笔记</title>
-        <description>&lt;h3 id=&quot;rtb&quot;&gt;RTB&lt;/h3&gt;
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;rtb&quot;&gt;RTB&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://tutorial.computational-advertising.org/images/WSDM2015.pdf&quot;&gt;Real-Time Bidding&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;除了有各类DSP竞价算法、SSP底价算法外，还加入了anti-fraud和广告期权交易的内容。另外也罗列了做互联网广告研究的公开数据集和开源工具。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;在RTB广告出价过程中，两个重点因素是：1. 广告展示的效益(点击率/转化率)；2. 展示花销。以这两项因素为输入，我们的框架能优化出最优的RTB出价策略。论文：http://t.cn/Rvb5K9d，实验基于@品友互动 RTB数据集http://t.cn/RP3pPQO。&lt;/p&gt;
+    &lt;p&gt;在RTB广告出价过程中，两个重点因素是：&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;广告展示的效益(点击率/转化率)；&lt;/li&gt;
+      &lt;li&gt;展示花销。
+以这两项因素为输入，我们的框架能优化出最优的RTB出价策略。
+论文&lt;a href=&quot;http://www0.cs.ucl.ac.uk/staff/w.zhang/papers/ortb-kdd.pdf&quot;&gt;Optimal Real-Time Bidding for Display Advertising&lt;/a&gt; 实验基于@品友互动 &lt;a href=&quot;http://t.cn/RP3pPQO&quot;&gt;RTB数据集&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section&quot;&gt;计算广告&lt;/h3&gt;
+&lt;h2 id=&quot;section&quot;&gt;计算广告&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;关于广告的讨论：&lt;/h3&gt;
+
+&lt;p&gt;广告一般是model based的方法，搜索rank一般是rule bases的方法，推荐通常也是广告那种玩法，不过我倾向于面向用户的产品应该rule based思路做。@梁斌penny&lt;/p&gt;
+
+&lt;p&gt;把推荐看成user和item的dyad，用该user过去行为预测ctr来评估推荐系统，可以用广告这一套。但推荐看重的所谓novelty，diversity等等无法体现了，一般而言推荐是一堆策略的合成，广告相对单一一些，是否用广告架构与否不重要，关键要看问题是怎么定义的。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/izenecloud/laser/&quot;&gt;A Scalable Response Prediction Platform For Online Advertising&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;看了Hector Molina在Recsys’14上提的Search/Recomm/Ads三合一观点，挺赞同。这三个问题共同点都是matching a context to a collection of info obj, 核心的模块是filtering/ranking/personalisation, 从理论的cleanness和架构统一性来都很赞，实际中最大难度是各个应用各有自身调优需求，不好协调。&lt;/p&gt;
+
+&lt;p&gt;最终的目标不一样，搜索求准，推荐求新，广告求财…还是很难统一的，当然，底层框架是可以共用的&lt;/p&gt;
+
+&lt;p&gt;三个很不一样，搜索是站在用户角度识别用户想要什么。推荐是站在平台角度看想要引导什么。广告是以局外人看广告主、平台、用户分别想要什么。&lt;/p&gt;
+
+&lt;h2 id=&quot;ctr&quot;&gt;CTR预估&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;特征处理&lt;/h3&gt;
+&lt;p&gt;在pCtr/pCvr/relevance问题中，最基本的问题就是特征处理。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/15/breezedeus-feature-processing.html&quot;&gt;特征处理入门 by BreezeDeus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/&quot;&gt;特征选择 by ubiwang&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tech.meituan.com/machinelearning-data-feature-process.html&quot;&gt;美团推荐团队-机器学习中的数据清洗与特征处理综述&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;特征降维&lt;/h3&gt;
+&lt;p&gt;主要特征降维方法有：聚类，PCA，hashing&lt;/p&gt;
+
+&lt;p&gt;下面看一下&lt;a href=&quot;https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html&quot;&gt;特征hash法&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。&lt;/li&gt;
+  &lt;li&gt;特征hash法可用于 多任务学习(multitask learning)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;参考文献：
+    &lt;ul&gt;
+      &lt;li&gt;Kilian Weinberger et al. Feature Hashing for Large Scale Multitask Learning,2010.  or Feature hashing for large scale multitask learning&lt;/li&gt;
+      &lt;li&gt;Joshua Attenberg et al. Collaborative Email-Spam Filtering with the Hashing-Trick, 2009.&lt;/li&gt;
+      &lt;li&gt;Alekh Agarwal, Oliveier Chapelle, Miroslav Dud ́ık, and John Langford. A Reliable Effective Terascale Linear Learning System. Journal of Machine Learning Research, 15:1111–1133, 2014.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Large-scale L-BFGS using MapReduce&lt;/a&gt; 该论文讲述了运用了hashing技术后，AUC的变化。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;特征选择&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/&quot;&gt;Selecting good features&lt;/a&gt; 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;预估模型&lt;/h3&gt;
+
+&lt;p&gt;竞价搜索广告中的点击率预估法: 特征和模型&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www2007.org/papers/paper784.pdf&quot;&gt;经典LR WWW07&lt;/a&gt;，&lt;a href=&quot;http://t.cn/RZOSmEl&quot;&gt;L1正则版ICML07&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;高质量特征+组合LR和BDT &lt;a href=&quot;http://t.cn/RZOSmET&quot;&gt;ADKDD14&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;加LDA话题特征 &lt;a href=&quot;http://arxiv.org/pdf/1405.4402v3.pdf&quot;&gt;Peacock: Learning Long-Tail Topic Features for Industrial Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;组合ANN和BDT &lt;a href=&quot;http://arxiv.org/pdf/1412.6601v1.pdf&quot;&gt;USING NEURAL NETWORKS FOR CLICK PREDICTION OF SPONSORED SEARCH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://quinonero.net/Publications/predicting-clicks-facebook.pdf&quot;&gt;Practical Lessons from Predicting Clicks on Ads at Facebook&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html&quot;&gt;利用GBDT模型构造新特征&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;特征决定了所有算法效果的上限，而不同的算法只是离这个上限的距离不同而已。&lt;/li&gt;
+  &lt;li&gt;这篇论文的思想：先用已有特征训练GBDT模型，然后利用GBDT模型学习到的树来构造新特征，最后把这些新特征加入原有特征一起训练模型。构造的新特征向量是取值0/1的，向量的每个元素对应于GBDT模型中树的叶子结点。当一个样本点通过某棵树最终落在这棵树的一个叶子结点上，那么在新特征向量中这个叶子结点对应的元素值为1，而这棵树的其他叶子结点对应的元素值为0。新特征向量的长度等于GBDT模型里所有树包含的叶子结点数之和。&lt;/li&gt;
+  &lt;li&gt;已经有人利用这种方法赢得了Kaggle一个CTR预估比赛的冠军，&lt;a href=&quot;https://github.com/guestwalk/kaggle-2014-criteo&quot;&gt;代码&lt;/a&gt;，里面有这种方法的具体实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;在线学习&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.52ml.net/16256.html&quot;&gt;在线学习算法FTRL详解&lt;/a&gt; &lt;a href=&quot;http://www.cnblogs.com/EE-NovRain/p/3810737.html&quot;&gt;link2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;现在做在线学习和CTR常常会用到逻辑回归（ Logistic Regression），而传统的批量（batch）算法无法有效地处理超大规模的数据集和在线数据流，google先后三年时间（2010年-2013年）从理论研究到实际工程化实现的FTRL（Follow-the-regularized-Leader）算法，在处理诸如逻辑回归之类的带非光滑正则化项（例如1范数，做模型复杂度控制和稀疏化）的凸优化问题上性能非常出色。&lt;/p&gt;
+
+&lt;p&gt;损失函数 LogLoss (logistic loss)为：
+&lt;script type=&quot;math/tex&quot;&gt;l_t(w_t) = −y_t\log(p_t) − (1−y_t)log(1−p_t)&lt;/script&gt;
+其中\(x_t\)是instance feature vector at round t。&lt;/p&gt;
+
+&lt;p&gt;其梯度为：
+&lt;script type=&quot;math/tex&quot;&gt;\nabla l_t(w) = (σ(w·x_t) − y_t)x_t = (p_t − y_t)x_t&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;一般而言，求解online问题通常用:OGD(online gradient descent)算法，OGS的梯度更新公式为：&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;w_{t+1} = w_t − η_t.g_t&lt;/script&gt; 其中&lt;script type=&quot;math/tex&quot;&gt;η_t=\frac{1}{\sqrt(t)}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;OGD算法准确性较好，但稀疏性不强。所以为此提出一些改进方法，例如&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FOBOS &lt;a href=&quot;&quot;&gt;J. Duchi and Y. Singer. Efficient learning using forward-backward splitting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;truncated gradient 20 &lt;a href=&quot;&quot;&gt;J. Langford, L. Li, and T. Zhang. Sparse online learning via truncated gradient&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Regularized Dual Averaging (RDA) &lt;a href=&quot;&quot;&gt;L. Xiao. Dual averaging method for regularized stochastic learning and online optimization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;结合OGD的准确性和RDA算法的稀疏性，从而得到”Follow The (Prox-imally) Regularized Leader”算法。&lt;/p&gt;
+
+&lt;p&gt;FTRL的梯度更新公式为：
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ftrl_gradient.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FTRL的完整算法为：
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ftrl_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上面值得一提的是learning rate的设定，利用了per-coordinate方法。意思是对w的每一维分开训练更新的，每一维使用的是不同的学习速率，如下面公式所示：
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ftrl_per_coordinate.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;与w所有特征维度使用统一的学习速率相比，这种方法考虑了训练样本本身在不同特征上分布的不均匀性，如果包含w某个维度特征的训练样本很少，每一个样本都很珍贵，那么该特征维度对应的训练速率可以独自保持比较大的值，每来一个包含该特征的样本，就可以在该样本的梯度上前进一大步，更快的对新样本数据做出响应。而如果包含w某个维度特征的训练样本很多，则训练速率可以下降得比较快。&lt;/p&gt;
+
+&lt;p&gt;除此，论文还提到几种节省存储的方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在线去除训练数据中很少出现的特征，两种方法：(1)以一定概率p接受新特征；(2)利用counting bloom filter，出现次数大约n次的特征才会加入模型。&lt;/li&gt;
+  &lt;li&gt;浮点数利用q2.13编码(只需要16bit)而不是64-bit floating point。&lt;/li&gt;
+  &lt;li&gt;同时训练若干相似model，方便feature和模型评估。&lt;/li&gt;
+  &lt;li&gt;single value struct。&lt;/li&gt;
+  &lt;li&gt;使用正负样本的数目来近似计算梯度的和。&lt;/li&gt;
+  &lt;li&gt;对负样本数据进行抽样，在训练时计算loss和gradient时，再用大于1的权重弥补负样本。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;关于CALIBRATING PREDICTIONS&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;简单方法，矫正公式为: \(\tau(p) = \gamma p^{\kappa}\)，再利用Poisson regression学习参数γ和κ。&lt;/li&gt;
+  &lt;li&gt;piecewise linear or piecewise constant correction function，利用isotonic regression。参考文献:
+&lt;a href=&quot;http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/&quot;&gt;Classifier calibration with Platt’s scaling and isotonic regression&lt;/a&gt;
+&lt;a href=&quot;&quot;&gt;A. Niculescu-Mizil and R. Caruana. Predicting good probabilities with supervised learning&lt;/a&gt;，
+&lt;a href=&quot;&quot;&gt;R. Luss, S. Rosset, and M. Shahar. Efficient regularized isotonic regression with application to gene–gene interaction search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;其他方面&lt;/h3&gt;
+
+&lt;p&gt;** &lt;a href=&quot;http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html&quot;&gt;并行逻辑回归&lt;/a&gt; &lt;a href=&quot;http://www.csdn.net/article/1970-01-01/2818400&quot;&gt;csdn链接&lt;/a&gt;**&lt;/p&gt;
+
+&lt;p&gt;这里的并行实现我已经也做过，赶明儿可以把代码拿出来再看一看。归纳如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- 棋盘式划分，从数据和feature两个维度做划分。
+- 并行LR实际上就是在求解损失函数最优解的过程中，针对寻找损失函数下降方向中的梯度方向计算作了并行化处理，而在利用梯度确定下降方向的过程中也可以采用并行化。
+- 先在各自单元上做计算，然后做行归并，相当于得到点积和，再把点积和分发到同一行的机器上，再各自计算，最后做列归并，得到下降方向。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data&quot;&gt;广告数据上的大规模机器学习 夏粉&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;以广告点击率预估问题为例，介绍如何利用大规模机器学习技术搭建一个容纳万亿特征数据的、分钟级别模型更新的、自动高效深度学习。&lt;/li&gt;
+  &lt;li&gt;主要内容包括：数据采样，对负样本以r(0,1]采样，训练时，给予抽样的负样本权重为1/r；噪音检测，计算点击率随时间变化趋势 –百度首创:SA算法；特征删减，google的做法是新特征按概率p加入 Bloom Filter+次数超过n，百度是Fea-G算法；模型的时效性，从小时减少到分钟，CTR大幅提升；训练算法优化，Shooting算法；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.kaggle.com/c/criteo-display-ad-challenge&quot;&gt;Display Advertising Challenge&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;由&lt;a href=&quot;http://www.criteo.com/cn/&quot;&gt;Criteo&lt;/a&gt;发起的移动展示广告点击率预估的竞赛。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Criteo自家的论文&lt;a href=&quot;http://people.csail.mit.edu/romer/papers/TISTRespPredAds.pdf&quot;&gt;Simple and scalable response prediction for display advertising&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/criteo-display-ad-challenge/forums/t/10322/beat-the-benchmark-with-less-then-200mb-of-memory&quot;&gt;FTRL算法 benchemark实现&lt;/a&gt; 参考Google的论文&lt;a href=&quot;http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41159.pdf&quot;&gt;Ad Click Prediction: a View from the Trenches&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;NTU关于Criteo CTR Challenge的&lt;a href=&quot;https://github.com/guestwalk/kaggle-2014-criteo&quot;&gt;winning solution&lt;/a&gt;，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了&lt;a href=&quot;http://quinonero.net/Publications/predicting-clicks-facebook.pdf&quot;&gt;Facebook ADKDD2014文章&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;NTU他们对预测的CTR进行了一个calibration，使得其与true clicked likelihood/average estimated CTR更接近，如果最后evaluation metric是logloss，这有时会有较大改进。FastML上面介绍这个 &lt;a href=&quot;http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/&quot;&gt;Platt’s Scaling (SVM输出概率的方法) and Isotonic Regression&lt;/a&gt;。@范涛_中科大&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;模型评估&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 &lt;a href=&quot;https://shapeofdata.wordpress.com/2015/01/05/precision-recall-aucs-and-rocs/&quot;&gt;Precision, Recall, AUCs and ROCs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;其他资料&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;&quot;&gt;Practical Lessons from Predicting Clicks on Ads at Facebook&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html&quot;&gt;利用GBDT模型构造新特征&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;特征决定了所有算法效果的上限，而不同的算法只是离这个上限的距离不同而已。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;这篇论文的思想：先用已有特征训练GBDT模型，然后利用GBDT模型学习到的树来构造新特征，最后把这些新特征加入原有特征一起训练模型。构造的新特征向量是取值0/1的，向量的每个元素对应于GBDT模型中树的叶子结点。当一个样本点通过某棵树最终落在这棵树的一个叶子结点上，那么在新特征向量中这个叶子结点对应的元素值为1，而这棵树的其他叶子结点对应的元素值为0。新特征向量的长度等于GBDT模型里所有树包含的叶子结点数之和。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;已经有人利用这种方法赢得了Kaggle一个CTR预估比赛的冠军，代码可见https://github.com/guestwalk/kaggle-2014-criteo，里面有这种方法的具体实现。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;特征处理
-    &lt;ul&gt;
-      &lt;li&gt;在logistic regression问题中，最基本的问题就是特征处理。&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/15/breezedeus-feature-processing.html&quot;&gt;特征处理入门 by BreezeDeus&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/&quot;&gt;特征选择 by ubiwang&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html&quot;&gt;特征hash法&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。&lt;/li&gt;
-      &lt;li&gt;特征降维方法：聚类，PCA，hashing&lt;/li&gt;
-      &lt;li&gt;参考文献：
-        &lt;ul&gt;
-          &lt;li&gt;Kilian Weinberger et al. Feature Hashing for Large Scale Multitask Learning,2010.  or Feature hashing for large scale multitask learning&lt;/li&gt;
-          &lt;li&gt;Joshua Attenberg et al. Collaborative Email-Spam Filtering with the Hashing-Trick, 2009.&lt;/li&gt;
-          &lt;li&gt;Alekh Agarwal, Oliveier Chapelle, Miroslav Dud ́ık, and John Langford. A Reliable Effective Terascale Linear Learning System. Journal of Machine Learning Research, 15:1111–1133, 2014.&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Large-scale L-BFGS using MapReduce&lt;/a&gt; 该论文讲述了运用了hashing技术后，AUC的变化。&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;特征hash法用于 多任务学习(multitask learning)&lt;/li&gt;
-      &lt;li&gt;大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;特征选择
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/&quot;&gt;Selecting good features&lt;/a&gt; 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CTR预估
-    &lt;ul&gt;
-      &lt;li&gt;竞价搜索广告中的点击率预估法: 特征和模型 1）经典LR[WWW07] http://t.cn/zT8FYsf 及L1正则版[ICML07] http://t.cn/RZOSmEl 2）高质量特征+组合LR和BDT[ADKDD14] http://t.cn/RZOSmET 3）加LDA话题特征[ACM-TIST15] http://t.cn/RZOinjO 4）组合ANN和BDT[ICLR15] http://t.cn/RZOSmEY&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html&quot;&gt;并行逻辑回归&lt;/a&gt;： 逻辑回归（Logistic Regression，简称LR）是机器学习中十分常用的一种分类算法，在互联网领域得到了广泛的应用，无论是在广告系统中进行CTR预估，推荐系统中的预估转换率，反垃…文字版» http://t.cn/8FpoAyz （新浪长微博» http://t.cn/zOXAaic）&lt;/li&gt;
-      &lt;li&gt;发表了博文《CTR预估模型，机器学习初探水》http://t.cn/R7tJ59w损失函数；CRT模型；数据模型切分；结果推荐；链路距离计算；推http://t.cn/R7tJ5LU&lt;/li&gt;
-      &lt;li&gt;NTU关于Criteo CTR Challenge的winning solution出来了：http://t.cn/RhkyR3B，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了Facebook ADKDD2014文章：http://t.cn/RPrqyRQ&lt;/li&gt;
-      &lt;li&gt;Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 http://t.cn/RZYd75X&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.52ml.net/16256.html&quot;&gt;各大公司广泛使用的在线学习算法FTRL详解&lt;/a&gt; 现在做在线学习和CTR常常会用到逻辑回归（ Logistic Regression），而传统的批量（batch）算法无法有效地处理超大规模的数据集和在线数据流，google先后三年时间（2010年-2013年）从理论研究到实际工程化实现的FTRL（Follow-the-regularized-Leader）算法，在处理诸如逻辑回归之类的带非光滑正则化项（例如1范数，做模型复杂度控制和稀疏化）的凸优化问题上性能非常出色。&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;p&gt;[Sibyl: 来自Google的大规模机器学习系统] 在上周的IEEE/IFIP可靠系统和网络（DSN）国际会议上，Google软件工程师Tushar Chandra做了一个关于Sibyl系统的主题演讲。 Sibyl是一个监督式机器学习系统，用来解决预测方面的问题，比如YouTube的视频推荐。&lt;a href=&quot;https://users.soe.ucsc.edu/~niejiazhong/slides/chandra.pdf&quot;&gt;PDF&lt;/a&gt;，&lt;a href=&quot;http://www.infoq.com/cn/news/2014/07/google-sibyl&quot;&gt;page&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://weibo.com/p/1001603803645836675771&quot;&gt;汤兴-爱奇艺大脑—视频进化&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data&quot;&gt;广告数据上的大规模机器学习 夏粉&lt;/a&gt;
-以广告点击率预估问题为例，介绍如何利用大规模机器学习技术搭建一个容纳万亿特征数据的、分钟级别模型更新的、自动高效深度学习&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;在线实验效果检验
+    &lt;p&gt;在线实验效果检验&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;http://facebook.github.io/planout/docs/about-planout.html&quot;&gt;PlanOut facebook实验框架&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1571,12 +1726,15 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 
 &lt;p&gt;先看一下Logistic regression的损失函数：&lt;/p&gt;
 
-&lt;p&gt;Logistic函数（或称为Sigmoid函数）：
-&lt;script type=&quot;math/tex&quot;&gt;sigmoid(z)=\frac{1}{1+e^{-z}}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Logistic函数（或称为Sigmoid函数）为：
+&lt;script type=&quot;math/tex&quot;&gt;sigmoid(z)=f(z)=\frac{1}{1+e^{-z}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;sigmoid函数的导数为：
+&lt;script type=&quot;math/tex&quot;&gt;\nabla f(z)=f(z)(1-f(z))&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;对于线性回归来说，其分类函数为：
 &lt;script type=&quot;math/tex&quot;&gt;h(x)=w_0+\sum_{i=1}^p{w_ix_i}=w^Tx&lt;/script&gt;
-其中p是输入向量x的维度，也就是特征向量维度；w是特征权重向量。&lt;/p&gt;
+其中x是特征向量，w是特征权重向量，p是特征向量维度。&lt;/p&gt;
 
 &lt;p&gt;逻辑回归本质上是一个被logistic函数归一化后的线性回归，即在特征到结果的映射中加入了一层sigmoid函数映射。相比于线性回归，模型输出取值范围为[0，1]，&lt;/p&gt;
 
@@ -1595,8 +1753,12 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 &lt;script type=&quot;math/tex&quot;&gt;l(w)=\prod_{i=1}^n{p_i^{y_i}(1-p_i)^{1-y_i}}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;对上述函数取对数，根据最大似然估计，得到最优化目标为：
-&lt;script type=&quot;math/tex&quot;&gt;\max{L(w)}=\max{log[l(w)]}=\max{\sum_{i=1}^n{y_i*log[\pi(x_i)] + (1-y_i)*log[1-\pi(x_i)]}}&lt;/script&gt;
-而如果y的取值是1或-1，则最优化目标为：&lt;/p&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\max{L(w)}=\max{log[l(w)]}=\max{\sum_{i=1}^n{y_i*log[\pi(x_i)] + (1-y_i)*log[1-\pi(x_i)]}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;对L(w)求导得：
+&lt;script type=&quot;math/tex&quot;&gt;\nabla L(w) = \sum_{i=1}^n{(\pi(x_i)-y_i)x_i}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;而如果y的取值是1或-1，则最优化目标为：&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\max{L(w)}=\max{\sum_{i=1}^n{-log[1+exp(-y_iw^Tx_i)]}}&lt;/script&gt;
 
@@ -1639,7 +1801,15 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
       &lt;li&gt;SVM &amp;amp; Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf&quot;&gt;Who is afraid of non-convex loss functions?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf&quot;&gt;Who is afraid of non-convex loss functions?&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Yann LeCun在2007年的讲义。目前大部分loss function都是凸函数，譬如lr，svms，exponential-family graphical models，凸函数一个很优秀的性质，但有些时候却是限制，坚持凸性将增大模型规模或者求解最优化问题方法的复杂程度。&lt;/p&gt;
+
+    &lt;p&gt;Deep architectures势必将带来非凸的loss function。但是(1)采用一个合适的模型架构(即便将带来loss function非凸)比坚持凸性更加重要；(2) 即使是对于浅层模型，例如SVM，使用非凸的loss function实际上可以带来准确率和性能的提升。&lt;/p&gt;
+
+    &lt;p&gt;对于神经网络，conjugate gradient, BFGS, LM-BFGS没有stochastic gradient好用；对于SVM，“batch” quadratic方法没有SMO好用，而SMO又没有on-line methods好用；对于CRF，Iterative scaling没有stochastic gradient好用；虽说stochastic gradient没有很多的理论保证，但经验证明是不错的选择。&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section-8&quot;&gt;最优化算法参考资料&lt;/h2&gt;

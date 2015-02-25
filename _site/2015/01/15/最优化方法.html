@@ -111,12 +111,15 @@
 
 <p>先看一下Logistic regression的损失函数：</p>
 
-<p>Logistic函数（或称为Sigmoid函数）：
-<script type="math/tex">sigmoid(z)=\frac{1}{1+e^{-z}}</script></p>
+<p>Logistic函数（或称为Sigmoid函数）为：
+<script type="math/tex">sigmoid(z)=f(z)=\frac{1}{1+e^{-z}}</script></p>
+
+<p>sigmoid函数的导数为：
+<script type="math/tex">\nabla f(z)=f(z)(1-f(z))</script></p>
 
 <p>对于线性回归来说，其分类函数为：
 <script type="math/tex">h(x)=w_0+\sum_{i=1}^p{w_ix_i}=w^Tx</script>
-其中p是输入向量x的维度，也就是特征向量维度；w是特征权重向量。</p>
+其中x是特征向量，w是特征权重向量，p是特征向量维度。</p>
 
 <p>逻辑回归本质上是一个被logistic函数归一化后的线性回归，即在特征到结果的映射中加入了一层sigmoid函数映射。相比于线性回归，模型输出取值范围为[0，1]，</p>
 
@@ -135,8 +138,12 @@
 <script type="math/tex">l(w)=\prod_{i=1}^n{p_i^{y_i}(1-p_i)^{1-y_i}}</script></p>
 
 <p>对上述函数取对数，根据最大似然估计，得到最优化目标为：
-<script type="math/tex">\max{L(w)}=\max{log[l(w)]}=\max{\sum_{i=1}^n{y_i*log[\pi(x_i)] + (1-y_i)*log[1-\pi(x_i)]}}</script>
-而如果y的取值是1或-1，则最优化目标为：</p>
+<script type="math/tex">\max{L(w)}=\max{log[l(w)]}=\max{\sum_{i=1}^n{y_i*log[\pi(x_i)] + (1-y_i)*log[1-\pi(x_i)]}}</script></p>
+
+<p>对L(w)求导得：
+<script type="math/tex">\nabla L(w) = \sum_{i=1}^n{(\pi(x_i)-y_i)x_i}</script></p>
+
+<p>而如果y的取值是1或-1，则最优化目标为：</p>
 
 <script type="math/tex; mode=display">\max{L(w)}=\max{\sum_{i=1}^n{-log[1+exp(-y_iw^Tx_i)]}}</script>
 
@@ -179,7 +186,15 @@
       <li>SVM &amp; Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点</li>
     </ul>
   </li>
-  <li><a href="http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf">Who is afraid of non-convex loss functions?</a></li>
+  <li>
+    <p><a href="http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf">Who is afraid of non-convex loss functions?</a></p>
+
+    <p>Yann LeCun在2007年的讲义。目前大部分loss function都是凸函数，譬如lr，svms，exponential-family graphical models，凸函数一个很优秀的性质，但有些时候却是限制，坚持凸性将增大模型规模或者求解最优化问题方法的复杂程度。</p>
+
+    <p>Deep architectures势必将带来非凸的loss function。但是(1)采用一个合适的模型架构(即便将带来loss function非凸)比坚持凸性更加重要；(2) 即使是对于浅层模型，例如SVM，使用非凸的loss function实际上可以带来准确率和性能的提升。</p>
+
+    <p>对于神经网络，conjugate gradient, BFGS, LM-BFGS没有stochastic gradient好用；对于SVM，“batch” quadratic方法没有SMO好用，而SMO又没有on-line methods好用；对于CRF，Iterative scaling没有stochastic gradient好用；虽说stochastic gradient没有很多的理论保证，但经验证明是不错的选择。</p>
+  </li>
 </ul>
 
 <h2 id="section-8">最优化算法参考资料</h2>

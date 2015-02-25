@@ -19,4 +19,3 @@ tags: [blog]
 - cudamat [link](https://code.google.com/p/cudamat/) [link2](https://github.com/cudamat/cudamat) Theano [link](http://fastml.com/running-things-on-a-gpu/) gpu的运用，因为我现在有gpu了，抽时间把这两个库用起来。
 - python machine learning library. [link] (http://www.quora.com/What-are-the-best-open-source-machine-learning-libraries-written-in-Python)
 - iOS程序开发。
-
