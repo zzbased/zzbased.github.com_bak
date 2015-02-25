@@ -29,5 +29,4 @@ tags: []
 - [论文 Understanding Random Forests: From Theory to Practice](http://t.cn/RZBT6Ap)
 Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf:http://t.cn/RZBTobH 云:http://t.cn/RZBTobT
 
-
-
+- [Interpreting random forests](http://blog.datadive.net/interpreting-random-forests/)

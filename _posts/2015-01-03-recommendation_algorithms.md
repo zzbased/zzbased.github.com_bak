@@ -220,6 +220,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 ### Hybrid Approaches
 - Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制
 - [推荐系统中所使用的混合技术介绍](http://www.52ml.net/318.html)
+- [Collaborative Filtering Ensemble]()
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png)
 
 ### 推荐算法对比
