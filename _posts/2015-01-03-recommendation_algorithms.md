@@ -260,7 +260,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 [mining twitter]() #好书推荐#此书深入浅出描述如何挖掘Twitter数据， 每章有详细的文字加Python代码
 
 ### linkedIn
-@breezedeus : LinkedIn最新的推荐系统文章：http://t.cn/R7mexu3。里面基本没涉及到具体算法，但作者介绍了CF在LinkedIn的很多应用，以及他们在做推荐过程中获得的一些经验。最后一条经验是应该监控log数据的质量，因为推荐的质量很依赖数据的质量！
+LinkedIn最新的推荐系统文章[The Browsemaps: Collaborative Filtering at LinkedIn](http://ceur-ws.org/Vol-1271/Paper3.pdf)。里面基本没涉及到具体算法，但作者介绍了CF在LinkedIn的很多应用，以及他们在做推荐过程中获得的一些经验。最后一条经验是应该监控log数据的质量，因为推荐的质量很依赖数据的质量！@breezedeus
 
 ### [个性化推荐技术#总结-袁全](https://breezedeus.github.io/2012/11/01/breezedeus-yuanquan-etao.html)
 - 相关性推荐，点击数据更有用；补充性推荐，购买数据更有用；要根据用户行为意图选择不同的推荐方法。
@@ -443,8 +443,8 @@ Justin:online match + online learning works very well
 - 再总结几点：
 	- 推荐不应该是推荐算法，而应该是推荐产品。本文的标题虽为推荐算法总结，但这是无米之炊。
 	- 产品是1，算法是0。没有合适的产品之前，算法对用户几乎不产生什么价值，一旦产品成立，算法能让产品实现质的飞跃。
-	- 这个提升不牵涉到任何的模型改进，但需要算法人员保持对业务的关注和理解，而不是一直躲在后面。
-	- 推荐技术是否能成就一个伟大的产品。不会。基于推荐技术对产品的强烈依附关系，它不会反过来促成一个产品，但它终将成就一种用户习惯。
+	- 有些业务提升不牵涉到任何的模型改进，但需要算法人员保持对业务的关注和理解，而不是一直躲在后面。
+	- 推荐技术是否能成就一个伟大的产品，不会。基于推荐技术对产品的强烈依附关系，它不会反过来促成一个产品，但它终将成就一种用户习惯。
 	- 不要空谈算法，要根据不同的产品场景。图书更强调个性化，电影更强调热门与根据标签筛选。
 	- 算法效果的度量方式往往决定了你努力的方向，面向不同类型的推荐，其中一个重要措施，就是不要采用同样一套标准去衡量你的工作结果。在实践中永远只看到ctr、precision/recall、rmse那样的衡量指标。那是衡量一个单一算法，而不是一个推荐系统的指标，或者说，不是衡量跟它绑定在一起的推荐产品的指标。
 	- 个性化，是要让所有人都满意，而不是为了统计上80%人的体验而牺牲掉剩下20%人的体验。
@@ -463,6 +463,11 @@ Justin:online match + online learning works very well
 	- The recommendation problem is not only a two dimensional problem of users and items but rather a multi-dimensional problem that includes many contextual dimensions such as time of the day or day of the week. Algorithms such as Tensor Factorization or Factorization Machines come in very handy for this.
 	- Users decide to select items not only based on how good they think they are, but also based on the possible impact on their social network. Therefore, social connections can be a good source of data to add to the recommendation system.
 	- It is not good enough to design algorithms that select the best items for users, these items need to be presented with the right form of explanations for users to be attracted to them.
+
+## 其他资料
+- 一个基于Python的Nearest Neighbors Search库 http://t.cn/RvVr8Gb。博文介绍 http://t.cn/RwSZk2l。另外基于这个库的一个推荐系统 http://t.cn/RZ339rQ，将作为一个demo presentation在WWW上出现。作者是剑桥的博士后 @唧唧歪歪de计算机博士
+
+
 
 ## 参考文献
 1. [数据挖掘技术在推荐系统的应用，陈运文](http://wenku.baidu.com/view/0607e780d0d233d4b14e699e.html)
