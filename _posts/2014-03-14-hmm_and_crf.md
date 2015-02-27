@@ -11,10 +11,8 @@ tags: [machine learning]
 
 ##HMM与CRF
 
-
 看到语音识别的时候，觉得是该找个机会把HMM与CRF相关的知识点做一个总结了。
 之前看过很多这方面的文章，但都是零零碎碎的，没有形成知识体系。
-
 
 ### 推荐文章
 
@@ -36,6 +34,11 @@ tags: [machine learning]
 ![crf_hmm1](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm1.png)
 
 ![crf_hmm2](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm2.png)
+
+- Naive bayes和HMM属于生成模型，因为他们估计的是联合分布。
+- MaxEnt和CRF属于判别模型，因为他们估计的是条件概率分布。
+- NB和ME中，输出Y只有一个class。
+- HMM和CRF中，输出Y有多个，是sequence。
 
 ### 生成模型与判别模型
 
@@ -82,6 +85,14 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 - [CRF++学习](http://blog.csdn.net/gududanxing/article/details/10827085)
 - [三种CRF实现在中文分词任务上的表现比较](https://jianqiangma.wordpress.com/2011/11/14/%E4%B8%89%E7%A7%8Dcrf%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83/)
 - [CRF++ library](http://crfpp.googlecode.com/svn/trunk/doc/index.html?source=navbar)
+- CRF训练，但标注数据很少。感兴趣的朋友可以参考下Semi-supervised Sequence Labeling for Named Entity Extraction based on Tri-Training:Case Study on Chinese Person Name Extraction
+- [视频]《Log-linear Models and Conditional Random Fields》http://t.cn/SUGYtC Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程 讲义:http://t.cn/RZ1kQ6A
+- http://t.cn/zO7uh30 推荐这个项目，虽然现在都流行 Deep Learning了， CRF 类方法还是很容易达到一个比较高的 Score， 这个项目 f-score 低了 0.7 % 但是速度 提升了 10倍，隐含的，可以处理更大量的样本数据。
+- PPT 来了！机器学习班第15次课，邹博讲条件随机场CRF的PPT 下载地址：http://t.cn/RzE4Oy8，第16次课，邹博讲PCA&SVD的PPT 下载地址：http://t.cn/RzE4OyQ，@sumnous_t 讲社区发现算法的PPT 下载地址：http://t.cn/RzE4OyR。顺便说句，sumnous还曾是算法班周六班的学员，一年下来，进步很大。分享！
+- [文章]《Introduction to Conditional Random Fields》(2012) http://t.cn/S67yJs 很好的条件随机场(CRF)介绍文章（学习笔记）
+
+  中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。
+
 
 ### 对比
 ![hmm1](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm1.png)
@@ -96,3 +107,6 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 - [Markdown中插入数学公式的方法](http://blog.csdn.net/xiahouzuoxin/article/details/26478179)
 - [LaTeX/数学公式](http://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F)
 - [LaTeX数学公式输入初级](http://blog.sina.com.cn/s/blog_5e16f1770100fs38.html)
+
+
+

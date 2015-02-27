@@ -43,6 +43,8 @@ Estimate a utility function that automatically predicts how a user will like an 
 #### User-based
 先找最近邻user，再基于最近邻user预测。
 
+- KNN：一个基于Python的Nearest Neighbors Search库 http://t.cn/RvVr8Gb。博文介绍 http://t.cn/RwSZk2l。另外基于这个库的一个推荐系统 http://t.cn/RZ339rQ，将作为一个demo presentation在WWW上出现。作者是剑桥的博士后 @唧唧歪歪de计算机博士
+
 - User之间相似度计算
 	![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_similarity.png)
 
@@ -64,7 +66,7 @@ Estimate a utility function that automatically predicts how a user will like an 
 #### Association rules(关联规则)
 - 关联规则分析 (Association Rules，又称 Basket Analysis) 用于从大量数据中挖掘出有价值的数据项之间的相关关系。经典论文[Mining Association Rules between Sets of Items in Large Databases]()。关联规则解决的常见问题如：“如果一个消费者购买了产品A，那么他有多大机会购买产品B?”以及“如果他购买了产品C和D，那么他还将购买什么产品？”
 
-- 常见算法有：Apriori算法和FP-growth算法。请参考[wiki](http://zh.wikipedia.org/wiki/先验算法)。
+- 常见算法有：Apriori算法和FP-growth算法。请参考[wiki](http://zh.wikipedia.org/wiki/先验算法)，[Frequent ItemSets : Apriori Algorithm and Example](http://t.cn/RwCAsfM)，[link2](http://t.cn/RwC2vEY)
 
 - 关联规则面向的是transaction，而User-based or Item based面向的是用户偏好（评分），协同过滤在计算相似商品的过程中可以使用关联规则分析。具体请参考[协同过滤和关联规则分析的区别是什么](http://www.zhihu.com/question/22404652)
 
