@@ -63,7 +63,7 @@ git checkout -- <filename>
 git fetch origin
 git reset --hard origin/master
 
-- git与svn命令的区别。
+- git与svn命令的区别。更多请参考[Subversion 用户眼中的 Git](http://www.uml.org.cn/pzgl/201211265.asp)
 
 > git pull -- svn up；
 > git add -- svn add；
@@ -75,6 +75,7 @@ git reset --hard origin/master
 > git revert -- svn revert；
 > git diff --  svn diff；
 > git merge -- svn merge；
+
 
 ### git 客户端
 常见的git客户端有：[msysgit](https://msysgit.github.io/)，[TortoiseGit](https://code.google.com/p/tortoisegit/)
@@ -89,9 +90,42 @@ git config --global http.proxy https://web-proxyhk.oa.com:8080
 git gui默认不保存用户名和密码，如果需要让它保存，可以设置credential.helper，
 git config --global credential.helper "cache --timeout=3600"。具体请参考[skip-password](http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github)
 
-### 其他参考链接
+
+### git submodule
+
+[Git 工具 - 子模块](http://git-scm.com/book/zh/v1/Git-工具-子模块)
+
+经常有这样的事情，当你在一个项目上工作时，你需要在其中使用另外一个项目。也许它是一个第三方开发的库或者是你独立开发和并在多个父项目中使用的。
+
+Git 通过子模块处理这个问题。子模块允许你将一个 Git 仓库当作另外一个Git仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。
+
+git submodule 就是 svn:externals 翻版
+
+**克隆一个带子模块的项目**，当你接收到这样一个项目，你将得到了包含子项目的目录，但里面没有文件。
+此时应该先调用 git submodule update --init
+
+git submodule其他参考：
+
+- [Git Submodule使用完整教程](http://www.kafeitu.me/git/2012/03/27/git-submodule.html)
+- [Git Submodule的坑](http://blog.devtang.com/blog/2013/05/08/git-submodule-issues/)
+
+### 如何查看repo url
+
+类似于svn info的功能。
+
+If referential integrity has been broken:
+git config --get remote.origin.url
+
+If referential integrity is intact:
+git remote show origin
+
+参考自[How can I determine the url that a local git repo was originally cloned from?](http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
+
+### 其他参考资料
 
 - [完整的git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 - [git使用简易指南](http://www.bootcss.com/p/git-guide/)
+- [git参考手册](http://gitref.org/zh/basic/#status)
 - [Git冲突：commit your changes or stash them before you can merge. 解决办法](http://www.letuknowit.com/post/144.html)
 - [git与github的关联](http://blog.csdn.net/authorzhh/article/details/7533086)
+
