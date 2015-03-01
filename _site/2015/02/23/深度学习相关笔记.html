@@ -137,6 +137,12 @@
   <li>
     <p><a href="http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/">Google’s Large Scale Deep Neural Networks Project, Greg Corrado</a> Google的大规模分布式DNN介绍 <a href="http://pan.baidu.com/s/1kTl76AV">slide</a> <a href="http://pan.baidu.com/s/1qWmJrSo">视频</a></p>
   </li>
+  <li>
+    <p>《Which GPU(s) to Get for Deep Learning: My Experience and Advice for Using GPUs in Deep Learning》http://t.cn/Rw981My 做深度学习选择和使用GPU的一些建议</p>
+  </li>
+  <li>
+    <p>对深度学习历史好奇的朋友, 推荐 “The Believers - The hidden story behind the code that runs our lives” http://t.cn/RwCj0wJ “Retrospectively, it was a just a question of the amount of data and the amount of computations,” Hinton says. http://t.cn/RwNHl6u</p>
+  </li>
 </ul>
 
 <h2 id="deeplearing-in-nlp">Deeplearing in NLP综述</h2>
@@ -174,6 +180,9 @@
 
     <p><a href="http://t.cn/RZdBZEe">Top Microsoft Machine Learning Posts of 2014</a> 微软14年最佳博文：图像自动描述生成的飞速进展、机器学习欢乐多、Azule ML为用户带来变革、机器学习与文本分析、微软机器学习20年、Vowpal Wabbit快速学习、什么是机器学习、NIPS14机器学习趋势、机器学习与机器视觉等</p>
   </li>
+  <li>
+    <p>[视频]《Automated Image Captioning with ConvNets and Recurrent Nets》http://t.cn/RwXX7zY Stanford的Andrej Karpathy两周前在SF ML meetup上的报告，基于ConvNets和Recurrent Nets的图像标题自动生成，推荐 云:http://t.cn/RwXXQ07</p>
+  </li>
 </ul>
 
 <h2 id="rnn-lstm">RNN&amp; LSTM</h2>
@@ -206,6 +215,9 @@
   <li>
     <p>最近很火的两篇文章，Neural Turing Machines和Learning to Execute，都讲到用LSTM RNN做sequence copy，来测试网络保持长时记忆的能力。sequence copy到底怎么定义为一个supervised learning任务呢？和机器翻译一样吗？</p>
   </li>
+  <li>
+    <p>特别喜欢Long-short-term-memory(LSTM) architecture, it explicitly models ‘forgetting’ in sequence processing. LSTM是gated RNNs 的典型代表, 它部分解决了 long-term dependency 的问题, Alex Graves 在 LSTM 上较有研究, 读读他的paper: deep RNN for speech recognition http://t.cn/RZt9knn</p>
+  </li>
 </ul>
 
 <h2 id="cnn">CNN</h2>
@@ -220,7 +232,25 @@
   <li>
     <p><a href="http://arxiv.org/abs/1404.2188">论文 A Convolutional Neural Network for Modelling Sentences. Nal Kalchbrenner等</a> 用动态卷积神经网络(DCNN)对句子进行语义建模，该方法不依赖解析树也不受语种限制，效果也很明显，推荐学习。其项目主页上http://t.cn/RZd9HOE 提供了源码(Matlab) 云:http://t.cn/RZdCx1o</p>
   </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>用CNN网络实现人脸关键点检测 http://t.cn/RwSwAct</td>
+          <td>教你用Theano、Lasagne等工具在python里训练网络检测人脸关键点。跟什么MNIST识别数字相比，这个任务还算是更接近实际问题的复杂程度了。PS：用Lasagne来命名深度网络库还真是吃货本质啊</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://yann.lecun.com/exdb/lenet/index.html">Mnist demos</a></li>
 </ul>
+
+<p>普通神经网络做图像识别的缺点：
+1. 一般要得到较好的训练效果，隐层数目不能太少，当图片大的时候，需要的权值会非常多。
+2. 对平移、尺度变化敏感（比如数字偏左上角，右下角时即识别失败）。
+3. 图片在相邻区域是相关的，而这种网络只是一股脑把所有像素扔进去，没有考虑图片相关性。</p>
+
+<p>而CNN通过local receptive fields（感受野），shared weights（共享权值），sub-sampling（下采样）概念来解决上述三个问题。<a href="">Gradient-Based Learning Applied to Document Recognition </a></p>
 
 <h2 id="word2vec">Word2vec</h2>
 
@@ -243,6 +273,30 @@
   <li>
     <p><a href="http://www-personal.umich.edu/~ronxin/pdf/w2vexp.pdf">word2vec Parameter Learning Explained</a> word2vec梯度推导详解</p>
   </li>
+  <li>
+    <p>[文章]《Movie Review Sentiment Analysis With Word2Vec, DBNs and RNTN》http://t.cn/RwNuyKP Java里用word2vec做电影评论情感分析的例子</p>
+  </li>
+  <li>
+    <p>以word2vec为人所知的前谷歌脑计划研究科学家现在Facebook人工智能实验室的Tomas Mikolov在COLING 2014给的Tutorial 【Using Neural Networks for Modelling and Representing Natural Languages】CBOW，Skip-gram，Negative sampling http://t.cn/RZTjakc Mikolov博士毕业于捷克的布尔诺科技大学</p>
+  </li>
+  <li>
+    <p>我发现word2vec算出来的相似度并没有一个统一的衡量方式，找某个词topN similar是没问题的，但假设有两个pair，并不能因为pair1的word2vec similarity高就说pair1比pair2更相似，因此也没法设一个threshold去取舍这些pairs。
+phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而不是相似度，也就是他们常常一起出现，所以引申出来他们有某种相似性</p>
+  </li>
+</ul>
+
+<h2 id="section-2">加强学习</h2>
+<ul>
+  <li>
+    <p>DeepMind在Nature上发表《Human-level control through deep reinforcement learning》http://t.cn/Rw0ZSW0 基于reinforcement learning让算法学习打游戏，源码:http://t.cn/Rw084MA ，http://t.cn/RwORUqX 对相关文章和工作进行了整理，DeepMind的专访http://t.cn/RwOR5EG 云:http://t.cn/RwORY9h</p>
+
+    <p>论文PDF全文可从这里下：http://t.cn/RwOBdZ7</p>
+  </li>
+</ul>
+
+<h2 id="section-3">生物学</h2>
+<ul>
+  <li>Yoshua Bengio团队（Bengio一作）新作：Towards Biologically Plausible Deep Learning，尝试在Deep Learning与生物学观察（Spike-Timing- Dependent Plasticity）之间建立联系。寻找或探索机器学习的生物学解释，感觉很有意义。http://t.cn/RwCfROu</li>
 </ul>
 
   </article>

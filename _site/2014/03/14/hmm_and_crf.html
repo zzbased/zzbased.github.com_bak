@@ -77,7 +77,7 @@
 
 <p><a href="http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf">An Introduction to Conditional Random Fields for Relational Learning</a></p>
 
-<p><a href="http://1.guzili.sinaapp.com/?p=133#comment-151">隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系</a></p>
+<p><a href="http://1.guzili.sinaapp.com/?p=133#comment-151">隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系</a>  该文章待会好好读下</p>
 
 <p><a href="http://www.52nlp.cn/tag/hmm">52nlp hmm</a></p>
 
@@ -89,6 +89,13 @@
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm1.png" alt="crf_hmm1" /></p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_hmm2.png" alt="crf_hmm2" /></p>
+
+<ul>
+  <li>Naive bayes和HMM属于生成模型，因为他们估计的是联合分布。</li>
+  <li>MaxEnt和CRF属于判别模型，因为他们估计的是条件概率分布。</li>
+  <li>NB和ME中，输出Y只有一个class。</li>
+  <li>HMM和CRF中，输出Y有多个，是sequence。</li>
+</ul>
 
 <h3 id="section-2">生成模型与判别模型</h3>
 
@@ -144,6 +151,20 @@ Viterbi算法。</li>
   <li><a href="http://blog.csdn.net/gududanxing/article/details/10827085">CRF++学习</a></li>
   <li><a href="https://jianqiangma.wordpress.com/2011/11/14/%E4%B8%89%E7%A7%8Dcrf%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83/">三种CRF实现在中文分词任务上的表现比较</a></li>
   <li><a href="http://crfpp.googlecode.com/svn/trunk/doc/index.html?source=navbar">CRF++ library</a></li>
+  <li>CRF训练，但标注数据很少。感兴趣的朋友可以参考下Semi-supervised Sequence Labeling for Named Entity Extraction based on Tri-Training:Case Study on Chinese Person Name Extraction</li>
+  <li>[视频]《Log-linear Models and Conditional Random Fields》http://t.cn/SUGYtC Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程 讲义:http://t.cn/RZ1kQ6A</li>
+  <li>http://t.cn/zO7uh30 推荐这个项目，虽然现在都流行 Deep Learning了， CRF 类方法还是很容易达到一个比较高的 Score， 这个项目 f-score 低了 0.7 % 但是速度 提升了 10倍，隐含的，可以处理更大量的样本数据。</li>
+  <li>PPT 来了！机器学习班第15次课，邹博讲条件随机场CRF的PPT 下载地址：http://t.cn/RzE4Oy8，第16次课，邹博讲PCA&amp;SVD的PPT 下载地址：http://t.cn/RzE4OyQ，@sumnous_t 讲社区发现算法的PPT 下载地址：http://t.cn/RzE4OyR。顺便说句，sumnous还曾是算法班周六班的学员，一年下来，进步很大。分享！</li>
+  <li>
+    <p>[文章]《Introduction to Conditional Random Fields》(2012) http://t.cn/S67yJs 很好的条件随机场(CRF)介绍文章（学习笔记）</p>
+
+    <p>中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/">Introduction to Conditional Random Fields</a></p>
+
+    <p>这篇文章讲得很好，有必要在明天早上把这篇文章再好好完善一下。然后把CRF与HMM整理出一片文章来。</p>
+  </li>
 </ul>
 
 <h3 id="section-4">对比</h3>
@@ -161,6 +182,7 @@ Viterbi算法。</li>
   <li><a href="http://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">LaTeX/数学公式</a></li>
   <li><a href="http://blog.sina.com.cn/s/blog_5e16f1770100fs38.html">LaTeX数学公式输入初级</a></li>
 </ul>
+
 
   </article>
 

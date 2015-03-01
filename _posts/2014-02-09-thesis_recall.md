@@ -16,7 +16,7 @@ Types of Machine Learning Algorithms; Taiwo Oladipupo Ayodele
 
 譬如对于svm模型，求svm的squared hinge loss:
 
-	yp=x\*w; idx=find(yp.\*y "<" 1); e=yp(idx)-y(idx); f=e'\*e+c\*w\*w; df=2(x(idx,:)'\*e+c\*w);
+yp=x\*w; idx=find(yp.\*y "<" 1); e=yp(idx)-y(idx); f=e'\*e+c\*w\*w; df=2(x(idx,:)'\*e+c\*w);
 
 计算完cost function: f和gradient function: df, 输入到lbfgs即可。
 

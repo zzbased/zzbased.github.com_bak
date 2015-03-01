@@ -22,7 +22,7 @@ tags: [machine learning]
 
 [An Introduction to Conditional Random Fields for Relational Learning](http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf)
 
-[隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系](http://1.guzili.sinaapp.com/?p=133#comment-151)
+[隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系](http://1.guzili.sinaapp.com/?p=133#comment-151)  该文章待会好好读下
 
 [52nlp hmm](http://www.52nlp.cn/tag/hmm)
 

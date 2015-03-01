@@ -6,9 +6,91 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Feb 2015 17:50:35 +0800</pubDate>
-    <lastBuildDate>Wed, 25 Feb 2015 17:50:35 +0800</lastBuildDate>
+    <pubDate>Sun, 01 Mar 2015 20:06:40 +0800</pubDate>
+    <lastBuildDate>Sun, 01 Mar 2015 20:06:40 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>语音识别</title>
+        <description>&lt;p&gt;最近，组里新来了一个博士同学。他的博士专业是语音识别。年前曾让他写一篇关于语音识别的通俗性文章。&lt;/p&gt;
+
+&lt;p&gt;老早前，我看过DengLi在微软的文章，结合肖博的文章，正好可以把语音识别相关的东东，在脑子里串起来梳理下，特撰文如下。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;语音识别&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/38131.pdf&quot;&gt;Deep Neural Networks for Acoustic Modeling in Speech Recognition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://msr-waypoint.com/pubs/188864/ICASSP-2013-OverviewMSRDeepLearning.pdf&quot;&gt;RECENT ADVANCES IN DEEP LEARNING FOR SPEECH RESEARCH AT MICROSOFT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://research.microsoft.com/pubs/144412/dbn4lvcsr-transaslp.pdf&quot;&gt;Context-Dependent Pre-Trained Deep Neural Networks for Large-Vocabulary Speech Recognition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://arxiv.org/pdf/1412.5567v2.pdf&quot;&gt;Deep Speech: Scaling up end-to-end speech recognition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/21815490&quot;&gt;为什么 Deep Learning 最先在语音识别和图像处理领域取得突破？&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;DL 适合处理感知, 而非逻辑；
+感知与逻辑的重要区别在于输入数据在输入空间中做连续变化还是离散变化；
+神经生物学上对人脑的逻辑还理解的不够, 对感知理解的好一些所以糙出了DL；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/20398418&quot;&gt;语音识别的技术原理是什么&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;信号处理及特征提取模块。该模块的主要任务是从输入信号中提取特征，供声学模型处理。同时，它一般也包括了一些信号处理技术，以尽可能降低环境噪声、信道、说话人等因素对特征造成的影响。&lt;/p&gt;
+
+        &lt;p&gt;主要有：降噪和分帧。分帧就是把波形切开成一小段一小段，每小段称为一帧。分帧操作通常使用移动窗函数来实现，分帧之前还要做一些预加重等操作，帧与帧之间是有交叠的。&lt;/p&gt;
+
+        &lt;p&gt;分帧后，语音就变成了很多小段。这时需要对这些时域波形做波形变换，常见的一种变换方法是提取MFCC特征，把每一帧波形变成一个12维向量。MFCC的计算首先用FFT将时域信号转化成频域，之后对其对数能量谱用依照Mel刻度分布的三角滤波器组进行卷积，最后对各个滤波器的输出构成的向量进行离散余弦变换DCT，取前N个系数。&lt;/p&gt;
+
+        &lt;p&gt;通常的特征有：线性预测系数LPC，倒谱系数CEP，梅尔频率倒谱系数MFCC，感知线性预测PLP。&lt;/p&gt;
+
+        &lt;p&gt;经过该模块处理后，声音就成了一个12行（假设声学特征是12维）、N列的一个矩阵，称之为观察序列，这里N为总帧数。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;再介绍三个概念&lt;/p&gt;
+
+        &lt;p&gt;单词：英语中就是单词，汉语中是汉字。
+音素：单词的发音由音素构成。对英语，一种常用的音素集是卡内基梅隆大学的一套由39个音素构成的音素集，参见The CMU Pronouncing Dictionary‎。汉语一般直接用全部声母和韵母作为音素集，另外汉语识别还分有调无调。
+状态：比音素更细致的语音单位。通常一个音素由3个状态构成。&lt;/p&gt;
+
+        &lt;p&gt;接下来，语音识别是怎么工作的呢？
+第一步，把帧识别成状态（难点）。
+第二步，把状态组合成音素。
+第三步，把音素组合成单词。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;统计声学模型。典型系统多采用基于一阶隐马尔科夫模型进行建模。&lt;/p&gt;
+
+        &lt;p&gt;如何把帧识别成状态，可以看某帧对应哪个状态的概率最大，那这帧就属于哪个状态，这叫做“最大似然”。
+声学模型，里面存了一大堆参数，通过这些参数，就可以知道帧和状态对应的概率。&lt;/p&gt;
+
+        &lt;p&gt;使用隐马尔可夫模型（Hidden Markov Model，HMM），第一步，构建一个状态网络。第二步，从状态网络中寻找与声音最匹配的路径。
+首先构造单词级网络，然后展开成音素网络，然后展开成状态网络。然后在状态网络中搜索一条最佳路径，这条路径和语音之间的概率（称之为累积概率）最大。搜索的算法是一种动态规划剪枝的算法，称之为Viterbi算法，用于寻找全局最优路径。&lt;/p&gt;
+
+        &lt;p&gt;这里所说的累积概率，由三部分构成，分别是：
+观察概率：每帧和每个状态对应的概率；
+转移概率：每个状态转移到自身或转移到下个状态的概率；
+语言概率：根据语言统计规律得到的概率；
+其中，前两种概率从声学模型中获取，最后一种概率从语言模型中获取。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;发音词典。发音词典包含系统所能处理的词汇集及其发音。发音词典实际提供了声学模型建模单元与语言模型建模单元间的映射。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;语言模型。语言模型对系统所针对的语言进行建模。理论上，包括正则语言，上下文无关文法在内的各种语言模型都可以作为语言模型，但目前各种系统普遍采用的还是基于统计的N元文法及其变体。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;解码器。解码器是语音识别系统的核心之一，其任务是对输入的信号，根据声学、语言模型及词典，寻找能够以最大概率输出该信号的词串。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 27 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/02/27/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/27/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>深度学习相关笔记</title>
@@ -87,6 +169,12 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/&quot;&gt;Google’s Large Scale Deep Neural Networks Project, Greg Corrado&lt;/a&gt; Google的大规模分布式DNN介绍 &lt;a href=&quot;http://pan.baidu.com/s/1kTl76AV&quot;&gt;slide&lt;/a&gt; &lt;a href=&quot;http://pan.baidu.com/s/1qWmJrSo&quot;&gt;视频&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;《Which GPU(s) to Get for Deep Learning: My Experience and Advice for Using GPUs in Deep Learning》http://t.cn/Rw981My 做深度学习选择和使用GPU的一些建议&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;对深度学习历史好奇的朋友, 推荐 “The Believers - The hidden story behind the code that runs our lives” http://t.cn/RwCj0wJ “Retrospectively, it was a just a question of the amount of data and the amount of computations,” Hinton says. http://t.cn/RwNHl6u&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;deeplearing-in-nlp&quot;&gt;Deeplearing in NLP综述&lt;/h2&gt;
@@ -124,6 +212,9 @@
 
     &lt;p&gt;&lt;a href=&quot;http://t.cn/RZdBZEe&quot;&gt;Top Microsoft Machine Learning Posts of 2014&lt;/a&gt; 微软14年最佳博文：图像自动描述生成的飞速进展、机器学习欢乐多、Azule ML为用户带来变革、机器学习与文本分析、微软机器学习20年、Vowpal Wabbit快速学习、什么是机器学习、NIPS14机器学习趋势、机器学习与机器视觉等&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[视频]《Automated Image Captioning with ConvNets and Recurrent Nets》http://t.cn/RwXX7zY Stanford的Andrej Karpathy两周前在SF ML meetup上的报告，基于ConvNets和Recurrent Nets的图像标题自动生成，推荐 云:http://t.cn/RwXXQ07&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;rnn-lstm&quot;&gt;RNN&amp;amp; LSTM&lt;/h2&gt;
@@ -156,6 +247,9 @@
   &lt;li&gt;
     &lt;p&gt;最近很火的两篇文章，Neural Turing Machines和Learning to Execute，都讲到用LSTM RNN做sequence copy，来测试网络保持长时记忆的能力。sequence copy到底怎么定义为一个supervised learning任务呢？和机器翻译一样吗？&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;特别喜欢Long-short-term-memory(LSTM) architecture, it explicitly models ‘forgetting’ in sequence processing. LSTM是gated RNNs 的典型代表, 它部分解决了 long-term dependency 的问题, Alex Graves 在 LSTM 上较有研究, 读读他的paper: deep RNN for speech recognition http://t.cn/RZt9knn&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;cnn&quot;&gt;CNN&lt;/h2&gt;
@@ -170,7 +264,25 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1404.2188&quot;&gt;论文 A Convolutional Neural Network for Modelling Sentences. Nal Kalchbrenner等&lt;/a&gt; 用动态卷积神经网络(DCNN)对句子进行语义建模，该方法不依赖解析树也不受语种限制，效果也很明显，推荐学习。其项目主页上http://t.cn/RZd9HOE 提供了源码(Matlab) 云:http://t.cn/RZdCx1o&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;用CNN网络实现人脸关键点检测 http://t.cn/RwSwAct&lt;/td&gt;
+          &lt;td&gt;教你用Theano、Lasagne等工具在python里训练网络检测人脸关键点。跟什么MNIST识别数字相比，这个任务还算是更接近实际问题的复杂程度了。PS：用Lasagne来命名深度网络库还真是吃货本质啊&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yann.lecun.com/exdb/lenet/index.html&quot;&gt;Mnist demos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;普通神经网络做图像识别的缺点：
+1. 一般要得到较好的训练效果，隐层数目不能太少，当图片大的时候，需要的权值会非常多。
+2. 对平移、尺度变化敏感（比如数字偏左上角，右下角时即识别失败）。
+3. 图片在相邻区域是相关的，而这种网络只是一股脑把所有像素扔进去，没有考虑图片相关性。&lt;/p&gt;
+
+&lt;p&gt;而CNN通过local receptive fields（感受野），shared weights（共享权值），sub-sampling（下采样）概念来解决上述三个问题。&lt;a href=&quot;&quot;&gt;Gradient-Based Learning Applied to Document Recognition &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;word2vec&quot;&gt;Word2vec&lt;/h2&gt;
 
@@ -193,6 +305,30 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www-personal.umich.edu/~ronxin/pdf/w2vexp.pdf&quot;&gt;word2vec Parameter Learning Explained&lt;/a&gt; word2vec梯度推导详解&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[文章]《Movie Review Sentiment Analysis With Word2Vec, DBNs and RNTN》http://t.cn/RwNuyKP Java里用word2vec做电影评论情感分析的例子&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;以word2vec为人所知的前谷歌脑计划研究科学家现在Facebook人工智能实验室的Tomas Mikolov在COLING 2014给的Tutorial 【Using Neural Networks for Modelling and Representing Natural Languages】CBOW，Skip-gram，Negative sampling http://t.cn/RZTjakc Mikolov博士毕业于捷克的布尔诺科技大学&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;我发现word2vec算出来的相似度并没有一个统一的衡量方式，找某个词topN similar是没问题的，但假设有两个pair，并不能因为pair1的word2vec similarity高就说pair1比pair2更相似，因此也没法设一个threshold去取舍这些pairs。
+phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而不是相似度，也就是他们常常一起出现，所以引申出来他们有某种相似性&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;加强学习&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;DeepMind在Nature上发表《Human-level control through deep reinforcement learning》http://t.cn/Rw0ZSW0 基于reinforcement learning让算法学习打游戏，源码:http://t.cn/Rw084MA ，http://t.cn/RwORUqX 对相关文章和工作进行了整理，DeepMind的专访http://t.cn/RwOR5EG 云:http://t.cn/RwORY9h&lt;/p&gt;
+
+    &lt;p&gt;论文PDF全文可从这里下：http://t.cn/RwOBdZ7&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;生物学&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Yoshua Bengio团队（Bengio一作）新作：Towards Biologically Plausible Deep Learning，尝试在Deep Learning与生物学观察（Spike-Timing- Dependent Plasticity）之间建立联系。寻找或探索机器学习的生物学解释，感觉很有意义。http://t.cn/RwCfROu&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 23 Feb 2015 00:00:00 +0800</pubDate>
@@ -227,9 +363,17 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;高频交易&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;互联网金融&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2534976&quot;&gt;文章 Online Algorithms in High-frequency Trading - The challenges faced by competing HFT algorithms》2013&lt;/a&gt; 介绍高频交易(HFT)中的在线学习算法，重点解决流动性估计、波动性估计和线性回归问题，HFT算法简单了解可参考&lt;a href=&quot;http://www.zhihu.com/question/23667442&quot;&gt;知乎主题-高频交易都有哪些著名的算法&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2534976&quot;&gt;文章 Online Algorithms in High-frequency Trading - The challenges faced by competing HFT algorithms》2013&lt;/a&gt; 介绍高频交易(HFT)中的在线学习算法，重点解决流动性估计、波动性估计和线性回归问题，HFT算法简单了解可参考&lt;a href=&quot;http://www.zhihu.com/question/23667442&quot;&gt;知乎主题-高频交易都有哪些著名的算法&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/22221540&quot;&gt;对于 Quant 来说， Financial Modeling 和传统的机器学习方法有什么联系和区别？&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/27420308/answer/38632429&quot;&gt;机器学习（非传统统计方法如回归）到底在量化金融里哪些方面有应用？&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;博客推荐&lt;/h2&gt;
@@ -423,6 +567,12 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html&quot;&gt;二叉树的非递归遍历&lt;/a&gt; 利用stack来实现非递归遍历。&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.grpc.io/&quot;&gt;Google RPC框架&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/google/protobuf/wiki/Third-Party-Add-ons&quot;&gt;RPC Implementations&lt;/a&gt; 这里面有众多RPC框架的实现，有各种语言的版本。
+百度的两个版本：&lt;a href=&quot;https://github.com/Baidu-ecom/Jprotobuf-rpc-socket&quot;&gt;Jprotobuf-rpc-socket&lt;/a&gt;，&lt;a href=&quot;https://github.com/BaiduPS/sofa-pbrpc&quot;&gt;sofa-pbrpc&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;编程语言&lt;/h2&gt;
@@ -438,6 +588,11 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.vaikan.com/bash-scripting/&quot;&gt;bash脚本15分钟进阶&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ios&quot;&gt;IOS&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;@李锦发 整理的《iOS 学习资料整理》为 iOS 初学者所准备, 旨在帮助 iOS 初学者们快速找到适合自己的学习资料, 节省搜索资料的时间, 更好地规划学习路线, 更准确地定位目前所处的位置。Github直达http://t.cn/RZMNgIt [给力] 也欢迎大家订阅《App开发日报》http://t.cn/RwytoqC 及时获得最新资源推送&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 Feb 2015 00:00:00 +0800</pubDate>
@@ -493,7 +648,7 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
       </item>
     
       <item>
-        <title>计算广告相关笔记</title>
+        <title>计算广告的一些事</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
 &lt;h2 id=&quot;rtb&quot;&gt;RTB&lt;/h2&gt;
@@ -523,13 +678,19 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 
 &lt;p&gt;把推荐看成user和item的dyad，用该user过去行为预测ctr来评估推荐系统，可以用广告这一套。但推荐看重的所谓novelty，diversity等等无法体现了，一般而言推荐是一堆策略的合成，广告相对单一一些，是否用广告架构与否不重要，关键要看问题是怎么定义的。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/izenecloud/laser/&quot;&gt;A Scalable Response Prediction Platform For Online Advertising&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;看了Hector Molina在Recsys’14上提的Search/Recomm/Ads三合一观点，挺赞同。这三个问题共同点都是matching a context to a collection of info obj, 核心的模块是filtering/ranking/personalisation, 从理论的cleanness和架构统一性来都很赞，实际中最大难度是各个应用各有自身调优需求，不好协调。&lt;/p&gt;
 
 &lt;p&gt;最终的目标不一样，搜索求准，推荐求新，广告求财…还是很难统一的，当然，底层框架是可以共用的&lt;/p&gt;
 
 &lt;p&gt;三个很不一样，搜索是站在用户角度识别用户想要什么。推荐是站在平台角度看想要引导什么。广告是以局外人看广告主、平台、用户分别想要什么。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/izenecloud/laser/&quot;&gt;code - A Scalable Response Prediction Platform For Online Advertising&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;query&quot;&gt;Query分析&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nowpublishers.com/articles/foundations-and-trends-in-information-retrieval/INR-035&quot;&gt;Semantic Matching in Search&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://weibo.com/p/1001603782125668144212&quot;&gt;面向语义搜索的文本、图像、视频信息的结构化处理&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ctr&quot;&gt;CTR预估&lt;/h2&gt;
 
@@ -550,8 +711,9 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 &lt;ul&gt;
   &lt;li&gt;特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。&lt;/li&gt;
   &lt;li&gt;特征hash法可用于 多任务学习(multitask learning)&lt;/li&gt;
+  &lt;li&gt;大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。&lt;/p&gt;
+    &lt;p&gt;CS 2750 Machine Learning -&lt;a href=&quot;http://people.cs.pitt.edu/~milos/courses/cs2750-Spring04/lectures/class20.pdf&quot;&gt;Dimensionality reduction Feature selection&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;参考文献：
     &lt;ul&gt;
@@ -566,7 +728,7 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 &lt;h3 id=&quot;section-4&quot;&gt;特征选择&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/&quot;&gt;Selecting good features&lt;/a&gt; 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/&quot;&gt;Selecting good features&lt;/a&gt; 特征工程系列文章：Part1. &lt;a href=&quot;http://t.cn/Rw4B2vO&quot;&gt;单变量选取&lt;/a&gt; Part2.&lt;a href=&quot;http://t.cn/Rw4Blqc&quot;&gt;线性模型和正则化&lt;/a&gt; Part3.&lt;a href=&quot;http://t.cn/Rw4BEAQ&quot;&gt;随机森林&lt;/a&gt; Part4.&lt;a href=&quot;http://t.cn/Rw4rndV&quot;&gt;稳定性选择法、递归特征排除法RFE及综合比较&lt;/a&gt; 内容很赞，还有Python代码示例。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;section-5&quot;&gt;预估模型&lt;/h3&gt;
@@ -648,16 +810,41 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 &lt;a href=&quot;&quot;&gt;R. Luss, S. Rosset, and M. Shahar. Efficient regularized isotonic regression with application to gene–gene interaction search&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-7&quot;&gt;其他方面&lt;/h3&gt;
+&lt;h3 id=&quot;section-7&quot;&gt;点击率预测的几个问题&lt;/h3&gt;
 
-&lt;p&gt;** &lt;a href=&quot;http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html&quot;&gt;并行逻辑回归&lt;/a&gt; &lt;a href=&quot;http://www.csdn.net/article/1970-01-01/2818400&quot;&gt;csdn链接&lt;/a&gt;**&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://1.guzili.sinaapp.com/?p=10&quot;&gt;搜索广告点击率预测的几个有趣问题&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何建模广告之间的相互影响，广告和自然搜索结果的相互影响。广告的位置，广告的创意展现形式(静态or动态)，广告与自然搜索结果同时展现，这些都有影响。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何保证新策略能长期有效？训练样本的变化则是我们自身策略无法保 持长期优秀的一个重要因素。新策略上线后，基于受影响后的样本重新训练模型效果就不一定像第一次那么稳定。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何做好个性化？技术方面：个性化feature稀疏，训练模型困难；如何识别个体。产品方面：如何面向广告主解释个性化因素；系统异常排查困难。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何做好相关性和预测点击率在排序中影响？这个点上，有很多经验证明，相关性与点击率没有很正向的关系。怎么做呢？相关性在触发阶段保证，排序阶段只考虑预测点击率，不失为一种方法。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何做到广告系统更新时的平稳过渡？整体上来讲，每次策略变化都不会有突变，但反映到局部广告主上，哪怕是很小的策略更新，都可能对其造成翻天覆地的变化。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;其他方面&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html&quot;&gt;并行逻辑回归&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/1970-01-01/2818400&quot;&gt;csdn链接&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;这里的并行实现我已经也做过，赶明儿可以把代码拿出来再看一看。归纳如下：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;- 棋盘式划分，从数据和feature两个维度做划分。
-- 并行LR实际上就是在求解损失函数最优解的过程中，针对寻找损失函数下降方向中的梯度方向计算作了并行化处理，而在利用梯度确定下降方向的过程中也可以采用并行化。
-- 先在各自单元上做计算，然后做行归并，相当于得到点积和，再把点积和分发到同一行的机器上，再各自计算，最后做列归并，得到下降方向。
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;棋盘式划分，从数据和feature两个维度做划分。&lt;/li&gt;
+  &lt;li&gt;并行LR实际上就是在求解损失函数最优解的过程中，针对寻找损失函数下降方向中的梯度方向计算作了并行化处理，而在利用梯度确定下降方向的过程中也可以采用并行化。&lt;/li&gt;
+  &lt;li&gt;先在各自单元上做计算，然后做行归并，相当于得到点积和，再把点积和分发到同一行的机器上，再各自计算，最后做列归并，得到下降方向。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data&quot;&gt;广告数据上的大规模机器学习 夏粉&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -674,16 +861,41 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
   &lt;li&gt;Criteo自家的论文&lt;a href=&quot;http://people.csail.mit.edu/romer/papers/TISTRespPredAds.pdf&quot;&gt;Simple and scalable response prediction for display advertising&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/criteo-display-ad-challenge/forums/t/10322/beat-the-benchmark-with-less-then-200mb-of-memory&quot;&gt;FTRL算法 benchemark实现&lt;/a&gt; 参考Google的论文&lt;a href=&quot;http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41159.pdf&quot;&gt;Ad Click Prediction: a View from the Trenches&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;NTU关于Criteo CTR Challenge的&lt;a href=&quot;https://github.com/guestwalk/kaggle-2014-criteo&quot;&gt;winning solution&lt;/a&gt;，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了&lt;a href=&quot;http://quinonero.net/Publications/predicting-clicks-facebook.pdf&quot;&gt;Facebook ADKDD2014文章&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;NTU他们对预测的CTR进行了一个calibration，使得其与true clicked likelihood/average estimated CTR更接近，如果最后evaluation metric是logloss，这有时会有较大改进。FastML上面介绍这个 &lt;a href=&quot;http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/&quot;&gt;Platt’s Scaling (SVM输出概率的方法) and Isotonic Regression&lt;/a&gt;。@范涛_中科大&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;NTU他们对预测的CTR进行了一个calibration，使得其与true clicked likelihood/average estimated CTR更接近，如果最后evaluation metric是logloss，这有时会有较大改进。FastML上面介绍这个 &lt;a href=&quot;http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/&quot;&gt;Platt’s Scaling (SVM输出概率的方法) and Isotonic Regression&lt;/a&gt;。@范涛_中科大。logloss参考下facebook的论文。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;NTU他们的方法，总结如下：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;预处理A：从原始数据中获取39类特征。&lt;/li&gt;
+      &lt;li&gt;GBDT：30 trees with depth 7。GBDT处理后，输出特征类为30个，特征空间大小为30*2^7；&lt;/li&gt;
+      &lt;li&gt;预处理B：Hashing Trick，hashed into 1M-dimension&lt;/li&gt;
+      &lt;li&gt;FFM：参考论文&lt;a href=&quot;https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/Opera.pdf&quot;&gt;Ensemble of Collaborative Filtering and Feature Engineered Models for Click Through Rate Prediction&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Calibration：Isotonic Regression&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;关于FM和CTR的其他论文，&lt;a href=&quot;https://www.kaggle.com/about/papers&quot;&gt;papers&lt;/a&gt;。下面这几篇是kdd2012的：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Combining Factorization Model and Additive Forest for Collaborative Followee Recommendation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/Rendle.pdf&quot;&gt;Social Network and Click-through Prediction with Factorization Machines&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Scorecard with Latent Factor Models for User Follow Prediction Problem&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Context-aware Ensemble of Multifaceted Factorization Models for Recommendation Prediction in Social Networks&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/CAS.pdf&quot;&gt;Click-Through Prediction for Sponsored Search Advertising with Hybrid Models&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;A Two-Stage Ensemble of Diverse Models for Advertisement Ranking in KDD Cup 2012&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-8&quot;&gt;模型评估&lt;/h3&gt;
+&lt;h3 id=&quot;section-9&quot;&gt;模型评估&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 &lt;a href=&quot;https://shapeofdata.wordpress.com/2015/01/05/precision-recall-aucs-and-rocs/&quot;&gt;Precision, Recall, AUCs and ROCs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-9&quot;&gt;其他资料&lt;/h2&gt;
+&lt;h2 id=&quot;section-10&quot;&gt;其他资料&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -702,8 +914,8 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 
 </description>
         <pubDate>Fri, 13 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</guid>
+        <link>http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.html</guid>
         
         
       </item>
@@ -892,8 +1104,10 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
 &lt;p&gt;如上图所示，是一个LSTM unit。如果是传统的神经网络unit，output activation bi = activation_function(ai)，但LSTM unit的计算相对就复杂些了，它保存了该神经元上一次计算的结果，通过input gate，output gate，forget gate来计算输出，具体过程请参考文献[53，54]。&lt;/p&gt;
 
 &lt;h4 id=&quot;term-weighting&quot;&gt;1.3 Term Weighting&lt;/h4&gt;
-&lt;p&gt;##### Term重要性
-对文本分词后，接下来需要对分词后的每个term计算一个权重，重要的term应该给与更高的权重。举例来说，”什么产品对减肥帮助最大？”的term weighting结果可能是: “什么 0.1，产品 0.5，对 0.1，减肥 0.8，帮助 0.3，最大 0.2”。Term weighting在文本检索，文本相关性，核心词提取等任务中都有重要作用。&lt;/p&gt;
+
+&lt;h5 id=&quot;term&quot;&gt;Term重要性&lt;/h5&gt;
+
+&lt;p&gt;对文本分词后，接下来需要对分词后的每个term计算一个权重，重要的term应该给与更高的权重。举例来说，”什么产品对减肥帮助最大？”的term weighting结果可能是: “什么 0.1，产品 0.5，对 0.1，减肥 0.8，帮助 0.3，最大 0.2”。Term weighting在文本检索，文本相关性，核心词提取等任务中都有重要作用。&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1822,51 +2036,28 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;凸优化，convex optimization&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;比较全面的优化教材 http://t.cn/Rwx3S6S @黄萱菁 发起的讨论 @Copper_PKU: Optimization for Machine Learning（Wright） @夏睿 Numerical Optimization（Nocedal）@wzxhome 推荐Nesterov @程龚_NJU 推荐Dingzhu Du的 @debiandsc 推荐Bertsekas和Ghaoui的&lt;/p&gt;
 
+    &lt;p&gt;好像除了这本大家谈的比较多的只有Introductory Lectures on Convex Optimization by Yurii Nesterov http://t.cn/Rwyz6Nb 其他的我也没印象。&lt;/p&gt;
+
+    &lt;p&gt;Nocedal 的Numerical Optimization，L-BFGS 算法提出者 http://t.cn/RwUQ40Q&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://enpub.fulton.asu.edu/cseml/Fall2008_ConvOpt/book/Intro-nl.pdf&quot;&gt;Introductory Lectures on Convex Programming&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf&quot;&gt;Numerical_Optimization&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://mitpress.mit.edu/books/optimization-machine-learning&quot;&gt;Optimization for Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf&quot;&gt;Convex Optimization&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://www2.isye.gatech.edu/~nemirovs/Lect_EMCO.pdf&quot;&gt;EFFICIENT METHODS IN CONVEX PROGRAMMING&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>gbdt_adaboost_bootstrap</title>
-        <description>&lt;h2 id=&quot;gbdtadaboostbootstrap&quot;&gt;gbdt，adaboost，bootstrap&lt;/h2&gt;
-
-&lt;h3 id=&quot;gbdt&quot;&gt;gbdt&lt;/h3&gt;
-
-&lt;p&gt;意为 gradient boost decision tree。又叫MART（Multiple Additive Regression Tree)&lt;/p&gt;
-
-&lt;h4 id=&quot;section&quot;&gt;分类树和回归树&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;分类树：预测分类标签；C4.5；选择划分成两个分支后熵最大的feature；&lt;/li&gt;
-  &lt;li&gt;回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;shrinkage&quot;&gt;Shrinkage&lt;/h4&gt;
-
-&lt;p&gt;Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。&lt;/p&gt;
-
-&lt;h3 id=&quot;boosting&quot;&gt;boosting方法比较&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;gbdt的核心在于：每一棵树学的是之前所有树的结论和残差。每一步的残差计算其实变相地增大了分错instance的权重，而已经分对的instance则都趋向于0。&lt;/li&gt;
-  &lt;li&gt;Adaboost：是另一种boost方法，它按分类对错，分配不同的weight，计算cost function时使用这些weight，从而让“错分的样本权重越来越大，使它们更被重视”。&lt;/li&gt;
-  &lt;li&gt;Bootstrap也有类似思想，它在每一步迭代时不改变模型本身，也不计算残差，而是从N个instance训练集中按一定概率重新抽取N个instance出来（单个instance可以被重复sample），对着这N个新的instance再训练一轮。由于数据集变了迭代模型训练结果也不一样，而一个instance被前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;更多学习资料&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://suanfazu.com/t/gbdt-die-dai-jue-ce-shu-ru-men-jiao-cheng/135&quot;&gt;Gbdt迭代决策树入门教程&lt;/a&gt;
-&lt;a href=&quot;http://www.schonlau.net/publication/05stata_boosting.pdf&quot;&gt;Boosting Decision Tree入门教程&lt;/a&gt;
-&lt;a href=&quot;http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf&quot;&gt;LambdaMART用于搜索排序入门教程&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/15/gbdt_adaboost_bootstrap.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/15/gbdt_adaboost_bootstrap.html</guid>
         
         
       </item>

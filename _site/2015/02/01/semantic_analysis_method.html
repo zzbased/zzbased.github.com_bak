@@ -155,8 +155,10 @@
 <p>如上图所示，是一个LSTM unit。如果是传统的神经网络unit，output activation bi = activation_function(ai)，但LSTM unit的计算相对就复杂些了，它保存了该神经元上一次计算的结果，通过input gate，output gate，forget gate来计算输出，具体过程请参考文献[53，54]。</p>
 
 <h4 id="term-weighting">1.3 Term Weighting</h4>
-<p>##### Term重要性
-对文本分词后，接下来需要对分词后的每个term计算一个权重，重要的term应该给与更高的权重。举例来说，”什么产品对减肥帮助最大？”的term weighting结果可能是: “什么 0.1，产品 0.5，对 0.1，减肥 0.8，帮助 0.3，最大 0.2”。Term weighting在文本检索，文本相关性，核心词提取等任务中都有重要作用。</p>
+
+<h5 id="term">Term重要性</h5>
+
+<p>对文本分词后，接下来需要对分词后的每个term计算一个权重，重要的term应该给与更高的权重。举例来说，”什么产品对减肥帮助最大？”的term weighting结果可能是: “什么 0.1，产品 0.5，对 0.1，减肥 0.8，帮助 0.3，最大 0.2”。Term weighting在文本检索，文本相关性，核心词提取等任务中都有重要作用。</p>
 
 <ul>
   <li>

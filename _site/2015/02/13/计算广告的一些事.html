@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>计算广告相关笔记</title>
+  <title>计算广告的一些事</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html">
+  <link rel="canonical" href="http://yourdomain.com/2015/02/13/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.html">
   <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -57,7 +57,7 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">计算广告相关笔记</h1>
+    <h1 class="post-title">计算广告的一些事</h1>
     <p class="post-meta">Feb 13, 2015</p>
   </header>
 
@@ -91,13 +91,19 @@
 
 <p>把推荐看成user和item的dyad，用该user过去行为预测ctr来评估推荐系统，可以用广告这一套。但推荐看重的所谓novelty，diversity等等无法体现了，一般而言推荐是一堆策略的合成，广告相对单一一些，是否用广告架构与否不重要，关键要看问题是怎么定义的。</p>
 
-<p><a href="https://github.com/izenecloud/laser/">A Scalable Response Prediction Platform For Online Advertising</a></p>
-
 <p>看了Hector Molina在Recsys’14上提的Search/Recomm/Ads三合一观点，挺赞同。这三个问题共同点都是matching a context to a collection of info obj, 核心的模块是filtering/ranking/personalisation, 从理论的cleanness和架构统一性来都很赞，实际中最大难度是各个应用各有自身调优需求，不好协调。</p>
 
 <p>最终的目标不一样，搜索求准，推荐求新，广告求财…还是很难统一的，当然，底层框架是可以共用的</p>
 
 <p>三个很不一样，搜索是站在用户角度识别用户想要什么。推荐是站在平台角度看想要引导什么。广告是以局外人看广告主、平台、用户分别想要什么。</p>
+
+<p><a href="https://github.com/izenecloud/laser/">code - A Scalable Response Prediction Platform For Online Advertising</a></p>
+
+<h2 id="query">Query分析</h2>
+
+<p><a href="http://www.nowpublishers.com/articles/foundations-and-trends-in-information-retrieval/INR-035">Semantic Matching in Search</a></p>
+
+<p><a href="http://weibo.com/p/1001603782125668144212">面向语义搜索的文本、图像、视频信息的结构化处理</a></p>
 
 <h2 id="ctr">CTR预估</h2>
 
@@ -118,8 +124,9 @@
 <ul>
   <li>特征哈希法的目标是把原始的高维特征向量压缩成较低维特征向量，且尽量不损失原始特征的表达能力。</li>
   <li>特征hash法可用于 多任务学习(multitask learning)</li>
+  <li>大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。</li>
   <li>
-    <p>大数据机器学习专家John Langford总结了一下关于使用hashing trick来处理大数据的重要文章：http://t.cn/RzbMxm5 值得一看。</p>
+    <p>CS 2750 Machine Learning -<a href="http://people.cs.pitt.edu/~milos/courses/cs2750-Spring04/lectures/class20.pdf">Dimensionality reduction Feature selection</a></p>
   </li>
   <li>参考文献：
     <ul>
@@ -134,7 +141,7 @@
 <h3 id="section-4">特征选择</h3>
 
 <ul>
-  <li><a href="http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/">Selecting good features</a> 《Selecting good features》特征工程系列文章：Part1.单变量选取http://t.cn/Rw4B2vO Part2.线性模型和正则化http://t.cn/Rw4Blqc Part3.随机森林http://t.cn/Rw4BEAQ Part4.稳定性选择法、递归特征排除法(RFE)及综合比较http://t.cn/Rw4rndV 内容很赞，还有Python代码示例，强烈推荐！</li>
+  <li><a href="http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/">Selecting good features</a> 特征工程系列文章：Part1. <a href="http://t.cn/Rw4B2vO">单变量选取</a> Part2.<a href="http://t.cn/Rw4Blqc">线性模型和正则化</a> Part3.<a href="http://t.cn/Rw4BEAQ">随机森林</a> Part4.<a href="http://t.cn/Rw4rndV">稳定性选择法、递归特征排除法RFE及综合比较</a> 内容很赞，还有Python代码示例。</li>
 </ul>
 
 <h3 id="section-5">预估模型</h3>
@@ -216,16 +223,41 @@
 <a href="">R. Luss, S. Rosset, and M. Shahar. Efficient regularized isotonic regression with application to gene–gene interaction search</a></li>
 </ul>
 
-<h3 id="section-7">其他方面</h3>
+<h3 id="section-7">点击率预测的几个问题</h3>
 
-<p>** <a href="http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html">并行逻辑回归</a> <a href="http://www.csdn.net/article/1970-01-01/2818400">csdn链接</a>**</p>
+<p><a href="http://1.guzili.sinaapp.com/?p=10">搜索广告点击率预测的几个有趣问题</a></p>
+
+<ul>
+  <li>
+    <p>如何建模广告之间的相互影响，广告和自然搜索结果的相互影响。广告的位置，广告的创意展现形式(静态or动态)，广告与自然搜索结果同时展现，这些都有影响。</p>
+  </li>
+  <li>
+    <p>如何保证新策略能长期有效？训练样本的变化则是我们自身策略无法保 持长期优秀的一个重要因素。新策略上线后，基于受影响后的样本重新训练模型效果就不一定像第一次那么稳定。</p>
+  </li>
+  <li>
+    <p>如何做好个性化？技术方面：个性化feature稀疏，训练模型困难；如何识别个体。产品方面：如何面向广告主解释个性化因素；系统异常排查困难。</p>
+  </li>
+  <li>
+    <p>如何做好相关性和预测点击率在排序中影响？这个点上，有很多经验证明，相关性与点击率没有很正向的关系。怎么做呢？相关性在触发阶段保证，排序阶段只考虑预测点击率，不失为一种方法。</p>
+  </li>
+  <li>
+    <p>如何做到广告系统更新时的平稳过渡？整体上来讲，每次策略变化都不会有突变，但反映到局部广告主上，哪怕是很小的策略更新，都可能对其造成翻天覆地的变化。</p>
+  </li>
+</ul>
+
+<h3 id="section-8">其他方面</h3>
+
+<p><strong><a href="http://blog.sina.com.cn/s/blog_6cb8e53d0101oetv.html">并行逻辑回归</a></strong></p>
+
+<p><a href="http://www.csdn.net/article/1970-01-01/2818400">csdn链接</a></p>
 
 <p>这里的并行实现我已经也做过，赶明儿可以把代码拿出来再看一看。归纳如下：</p>
 
-<pre><code>- 棋盘式划分，从数据和feature两个维度做划分。
-- 并行LR实际上就是在求解损失函数最优解的过程中，针对寻找损失函数下降方向中的梯度方向计算作了并行化处理，而在利用梯度确定下降方向的过程中也可以采用并行化。
-- 先在各自单元上做计算，然后做行归并，相当于得到点积和，再把点积和分发到同一行的机器上，再各自计算，最后做列归并，得到下降方向。
-</code></pre>
+<ul>
+  <li>棋盘式划分，从数据和feature两个维度做划分。</li>
+  <li>并行LR实际上就是在求解损失函数最优解的过程中，针对寻找损失函数下降方向中的梯度方向计算作了并行化处理，而在利用梯度确定下降方向的过程中也可以采用并行化。</li>
+  <li>先在各自单元上做计算，然后做行归并，相当于得到点积和，再把点积和分发到同一行的机器上，再各自计算，最后做列归并，得到下降方向。</li>
+</ul>
 
 <p><strong><a href="http://www.infoq.com/cn/presentations/large-scale-machine-learning-of-advertisement-data">广告数据上的大规模机器学习 夏粉</a></strong></p>
 
@@ -242,16 +274,41 @@
   <li>Criteo自家的论文<a href="http://people.csail.mit.edu/romer/papers/TISTRespPredAds.pdf">Simple and scalable response prediction for display advertising</a></li>
   <li><a href="https://www.kaggle.com/c/criteo-display-ad-challenge/forums/t/10322/beat-the-benchmark-with-less-then-200mb-of-memory">FTRL算法 benchemark实现</a> 参考Google的论文<a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41159.pdf">Ad Click Prediction: a View from the Trenches</a></li>
   <li>NTU关于Criteo CTR Challenge的<a href="https://github.com/guestwalk/kaggle-2014-criteo">winning solution</a>，有代码有slide。解决方案是用GBDT学intermediate feature，再配合raw feature，用FM训练CTR模型。其中GBDT学特征是参考了<a href="http://quinonero.net/Publications/predicting-clicks-facebook.pdf">Facebook ADKDD2014文章</a></li>
-  <li>NTU他们对预测的CTR进行了一个calibration，使得其与true clicked likelihood/average estimated CTR更接近，如果最后evaluation metric是logloss，这有时会有较大改进。FastML上面介绍这个 <a href="http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/">Platt’s Scaling (SVM输出概率的方法) and Isotonic Regression</a>。@范涛_中科大</li>
+  <li>
+    <p>NTU他们对预测的CTR进行了一个calibration，使得其与true clicked likelihood/average estimated CTR更接近，如果最后evaluation metric是logloss，这有时会有较大改进。FastML上面介绍这个 <a href="http://fastml.com/classifier-calibration-with-platts-scaling-and-isotonic-regression/">Platt’s Scaling (SVM输出概率的方法) and Isotonic Regression</a>。@范涛_中科大。logloss参考下facebook的论文。</p>
+  </li>
+  <li>
+    <p>NTU他们的方法，总结如下：</p>
+
+    <ul>
+      <li>预处理A：从原始数据中获取39类特征。</li>
+      <li>GBDT：30 trees with depth 7。GBDT处理后，输出特征类为30个，特征空间大小为30*2^7；</li>
+      <li>预处理B：Hashing Trick，hashed into 1M-dimension</li>
+      <li>FFM：参考论文<a href="https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/Opera.pdf">Ensemble of Collaborative Filtering and Feature Engineered Models for Click Through Rate Prediction</a></li>
+      <li>Calibration：Isotonic Regression</li>
+    </ul>
+  </li>
+  <li>
+    <p>关于FM和CTR的其他论文，<a href="https://www.kaggle.com/about/papers">papers</a>。下面这几篇是kdd2012的：</p>
+
+    <ul>
+      <li><a href="">Combining Factorization Model and Additive Forest for Collaborative Followee Recommendation</a></li>
+      <li><a href="https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/Rendle.pdf">Social Network and Click-through Prediction with Factorization Machines</a></li>
+      <li><a href="">Scorecard with Latent Factor Models for User Follow Prediction Problem</a></li>
+      <li><a href="">Context-aware Ensemble of Multifaceted Factorization Models for Recommendation Prediction in Social Networks</a></li>
+      <li><a href="https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/CAS.pdf">Click-Through Prediction for Sponsored Search Advertising with Hybrid Models</a></li>
+      <li><a href="">A Two-Stage Ensemble of Diverse Models for Advertisement Ranking in KDD Cup 2012</a></li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="section-8">模型评估</h3>
+<h3 id="section-9">模型评估</h3>
 
 <ul>
   <li>Evaluation。Precision, Recall, AUCs and ROCs 准确率、召回率、AUC(曲线下面积)和ROC(受试者工作特征曲线)，文中就很多Kaggle竞赛分类任务最终多个评判标准间的关系进行了讨论 <a href="https://shapeofdata.wordpress.com/2015/01/05/precision-recall-aucs-and-rocs/">Precision, Recall, AUCs and ROCs</a></li>
 </ul>
 
-<h2 id="section-9">其他资料</h2>
+<h2 id="section-10">其他资料</h2>
 
 <ul>
   <li>

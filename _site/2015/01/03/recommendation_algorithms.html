@@ -110,6 +110,9 @@
 
 <ul>
   <li>
+    <p>KNN：一个基于Python的Nearest Neighbors Search库 http://t.cn/RvVr8Gb。博文介绍 http://t.cn/RwSZk2l。另外基于这个库的一个推荐系统 http://t.cn/RZ339rQ，将作为一个demo presentation在WWW上出现。作者是剑桥的博士后 @唧唧歪歪de计算机博士</p>
+  </li>
+  <li>
     <p>User之间相似度计算
   <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/user_based_similarity.png" alt="" /></p>
   </li>
@@ -142,7 +145,7 @@
     <p>关联规则分析 (Association Rules，又称 Basket Analysis) 用于从大量数据中挖掘出有价值的数据项之间的相关关系。经典论文<a href="">Mining Association Rules between Sets of Items in Large Databases</a>。关联规则解决的常见问题如：“如果一个消费者购买了产品A，那么他有多大机会购买产品B?”以及“如果他购买了产品C和D，那么他还将购买什么产品？”</p>
   </li>
   <li>
-    <p>常见算法有：Apriori算法和FP-growth算法。请参考<a href="http://zh.wikipedia.org/wiki/先验算法">wiki</a>。</p>
+    <p>常见算法有：Apriori算法和FP-growth算法。请参考<a href="http://zh.wikipedia.org/wiki/先验算法">wiki</a>，<a href="http://t.cn/RwCAsfM">Frequent ItemSets : Apriori Algorithm and Example</a>，<a href="http://t.cn/RwC2vEY">link2</a></p>
   </li>
   <li>
     <p>关联规则面向的是transaction，而User-based or Item based面向的是用户偏好（评分），协同过滤在计算相似商品的过程中可以使用关联规则分析。具体请参考<a href="http://www.zhihu.com/question/22404652">协同过滤和关联规则分析的区别是什么</a></p>
@@ -356,7 +359,8 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 <h3 id="hybrid-approaches">Hybrid Approaches</h3>
 <ul>
   <li>Online-Nearline-Offline Recommendation（在线-近线-离线）三层混合机制</li>
-  <li><a href="http://www.52ml.net/318.html">推荐系统中所使用的混合技术介绍</a>
+  <li><a href="http://www.52ml.net/318.html">推荐系统中所使用的混合技术介绍</a></li>
+  <li><a href="">Collaborative Filtering Ensemble</a>
   <img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images//hybridization.png" alt="" /></li>
 </ul>
 
@@ -415,7 +419,7 @@ Recurrent neural networks have a simple model that tries to predict the next ite
 <p><a href="">mining twitter</a> #好书推荐#此书深入浅出描述如何挖掘Twitter数据， 每章有详细的文字加Python代码</p>
 
 <h3 id="linkedin">linkedIn</h3>
-<p>@breezedeus : LinkedIn最新的推荐系统文章：http://t.cn/R7mexu3。里面基本没涉及到具体算法，但作者介绍了CF在LinkedIn的很多应用，以及他们在做推荐过程中获得的一些经验。最后一条经验是应该监控log数据的质量，因为推荐的质量很依赖数据的质量！</p>
+<p>LinkedIn最新的推荐系统文章<a href="http://ceur-ws.org/Vol-1271/Paper3.pdf">The Browsemaps: Collaborative Filtering at LinkedIn</a>。里面基本没涉及到具体算法，但作者介绍了CF在LinkedIn的很多应用，以及他们在做推荐过程中获得的一些经验。最后一条经验是应该监控log数据的质量，因为推荐的质量很依赖数据的质量！@breezedeus</p>
 
 <h3 id="httpsbreezedeusgithubio20121101breezedeus-yuanquan-etaohtml"><a href="https://breezedeus.github.io/2012/11/01/breezedeus-yuanquan-etao.html">个性化推荐技术#总结-袁全</a></h3>
 <ul>
@@ -685,8 +689,8 @@ Recurrent neural networks have a simple model that tries to predict the next ite
     <ul>
       <li>推荐不应该是推荐算法，而应该是推荐产品。本文的标题虽为推荐算法总结，但这是无米之炊。</li>
       <li>产品是1，算法是0。没有合适的产品之前，算法对用户几乎不产生什么价值，一旦产品成立，算法能让产品实现质的飞跃。</li>
-      <li>这个提升不牵涉到任何的模型改进，但需要算法人员保持对业务的关注和理解，而不是一直躲在后面。</li>
-      <li>推荐技术是否能成就一个伟大的产品。不会。基于推荐技术对产品的强烈依附关系，它不会反过来促成一个产品，但它终将成就一种用户习惯。</li>
+      <li>有些业务提升不牵涉到任何的模型改进，但需要算法人员保持对业务的关注和理解，而不是一直躲在后面。</li>
+      <li>推荐技术是否能成就一个伟大的产品，不会。基于推荐技术对产品的强烈依附关系，它不会反过来促成一个产品，但它终将成就一种用户习惯。</li>
       <li>不要空谈算法，要根据不同的产品场景。图书更强调个性化，电影更强调热门与根据标签筛选。</li>
       <li>算法效果的度量方式往往决定了你努力的方向，面向不同类型的推荐，其中一个重要措施，就是不要采用同样一套标准去衡量你的工作结果。在实践中永远只看到ctr、precision/recall、rmse那样的衡量指标。那是衡量一个单一算法，而不是一个推荐系统的指标，或者说，不是衡量跟它绑定在一起的推荐产品的指标。</li>
       <li>个性化，是要让所有人都满意，而不是为了统计上80%人的体验而牺牲掉剩下20%人的体验。</li>
@@ -712,7 +716,12 @@ Recurrent neural networks have a simple model that tries to predict the next ite
   </li>
 </ul>
 
-<h2 id="section-12">参考文献</h2>
+<h2 id="section-12">其他资料</h2>
+<ul>
+  <li>一个基于Python的Nearest Neighbors Search库 http://t.cn/RvVr8Gb。博文介绍 http://t.cn/RwSZk2l。另外基于这个库的一个推荐系统 http://t.cn/RZ339rQ，将作为一个demo presentation在WWW上出现。作者是剑桥的博士后 @唧唧歪歪de计算机博士</li>
+</ul>
+
+<h2 id="section-13">参考文献</h2>
 <ol>
   <li><a href="http://wenku.baidu.com/view/0607e780d0d233d4b14e699e.html">数据挖掘技术在推荐系统的应用，陈运文</a></li>
   <li><a href="http://www2007.org/papers/paper570.pdf">Google News Personalization: Scalable Online Collaborative Filtering</a></li>

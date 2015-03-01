@@ -72,8 +72,7 @@
 
 <p>譬如对于svm模型，求svm的squared hinge loss:</p>
 
-<pre><code>yp=x\*w; idx=find(yp.\*y "&lt;" 1); e=yp(idx)-y(idx); f=e'\*e+c\*w\*w; df=2(x(idx,:)'\*e+c\*w);
-</code></pre>
+<p>yp=x*w; idx=find(yp.*y “&lt;” 1); e=yp(idx)-y(idx); f=e’*e+c*w*w; df=2(x(idx,:)’*e+c*w);</p>
 
 <p>计算完cost function: f和gradient function: df, 输入到lbfgs即可。</p>
 
