@@ -97,6 +97,15 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 
 	这篇文章讲得很好，有必要在明天早上把这篇文章再好好完善一下。然后把CRF与HMM整理出一片文章来。
 
+- Conditional Random Fields as Recurrent Neural Networks link：http://t.cn/Rwbbmq1 就喜欢这种把model串起来的工作方便理解和泛化。paper将mean-field inference每次迭代过程和CNN对应上，整个inference过程对应为一个Recurrent NN 这是这几天arxiv中算有意思的paper@火光摇曳Flickering
+
+- How conditional random fields are ‘powerful’ in machine learning - Techworld http://t.cn/R7D3BbE
+
+- 1)#数据挖掘十大算法#是香港ICDM06年从18个候选中投票产生；候选由KDD创新奖和ICDM研究贡献奖得主各自可提名十个、然后经谷歌学术删除掉引用少于50而得之 http://t.cn/zOIpSia 2)快十年过去了；Netflix搞推荐系统的Amatriain提出自己的Top10：MF GBDT RF ANN LR CRF LDA http://t.cn/RZ8kGW9
+
+- 用MeCab打造一套实用的中文分词系统: MeCab是一套优秀的日文分词和词性标注系统,基于CRF打造,有着诸多优点,代码基于C++实现，基本内嵌CRF++代码，性能优良，并通过SWIG提供多种语言调用接口, 可扩展性和通用性都非常不错。这篇博客尝试基于MeCab训练一套中文分词系统，欢迎观摩 http://t.cn/RZjgtM0
+
+
 ### 对比
 ![hmm1](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm1.png)
 
