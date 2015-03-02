@@ -485,3 +485,4 @@ Justin:online match + online learning works very well
 13. [寻路推荐-理念篇](http://www.wentrue.net/blog/?p=1621)
 14. [精准定向的广告系统 yiwang](http://www.docin.com/p-936085086.html)
 15. [推荐系统读物](http://bigdata.memect.com/?p=11684)
+16. [Moving Beyond CTR: Better Recommendations Through Human Evaluation](http://blog.echen.me/2014/10/07/moving-beyond-ctr-better-recommendations-through-human-evaluation/)

@@ -154,17 +154,29 @@ Viterbi算法。</li>
   <li>CRF训练，但标注数据很少。感兴趣的朋友可以参考下Semi-supervised Sequence Labeling for Named Entity Extraction based on Tri-Training:Case Study on Chinese Person Name Extraction</li>
   <li>[视频]《Log-linear Models and Conditional Random Fields》http://t.cn/SUGYtC Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程 讲义:http://t.cn/RZ1kQ6A</li>
   <li>http://t.cn/zO7uh30 推荐这个项目，虽然现在都流行 Deep Learning了， CRF 类方法还是很容易达到一个比较高的 Score， 这个项目 f-score 低了 0.7 % 但是速度 提升了 10倍，隐含的，可以处理更大量的样本数据。</li>
-  <li>PPT 来了！机器学习班第15次课，邹博讲条件随机场CRF的PPT 下载地址：http://t.cn/RzE4Oy8，第16次课，邹博讲PCA&amp;SVD的PPT 下载地址：http://t.cn/RzE4OyQ，@sumnous_t 讲社区发现算法的PPT 下载地址：http://t.cn/RzE4OyR。顺便说句，sumnous还曾是算法班周六班的学员，一年下来，进步很大。分享！</li>
   <li>
-    <p>[文章]《Introduction to Conditional Random Fields》(2012) http://t.cn/S67yJs 很好的条件随机场(CRF)介绍文章（学习笔记）</p>
-
-    <p>中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。</p>
+    <p>PPT 来了！机器学习班第15次课，邹博讲条件随机场CRF的PPT 下载地址：http://t.cn/RzE4Oy8，第16次课，邹博讲PCA&amp;SVD的PPT 下载地址：http://t.cn/RzE4OyQ，@sumnous_t 讲社区发现算法的PPT 下载地址：http://t.cn/RzE4OyR。顺便说句，sumnous还曾是算法班周六班的学员，一年下来，进步很大。分享！</p>
   </li>
   <li>
     <p><a href="http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/">Introduction to Conditional Random Fields</a></p>
 
-    <p>这篇文章讲得很好，有必要在明天早上把这篇文章再好好完善一下。然后把CRF与HMM整理出一片文章来。</p>
+    <p>这篇文章讲得很好，有必要在明天早上把这篇文章再好好完善一下。然后把CRF与HMM整理出一片文章来。
+中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。</p>
+
+    <p>That’s because CRFs are indeed basically the sequential version of logistic regression: whereas logistic regression is a log-linear model for classification, CRFs are a log-linear model for sequential labels.</p>
+
+    <p>今天没有来得及写了，明天晚上回来写吧。</p>
   </li>
+  <li>
+    <p>Conditional Random Fields as Recurrent Neural Networks link：http://t.cn/Rwbbmq1 就喜欢这种把model串起来的工作方便理解和泛化。paper将mean-field inference每次迭代过程和CNN对应上，整个inference过程对应为一个Recurrent NN 这是这几天arxiv中算有意思的paper@火光摇曳Flickering</p>
+  </li>
+  <li>
+    <p>How conditional random fields are ‘powerful’ in machine learning - Techworld http://t.cn/R7D3BbE</p>
+  </li>
+  <li>
+    <p>1)#数据挖掘十大算法#是香港ICDM06年从18个候选中投票产生；候选由KDD创新奖和ICDM研究贡献奖得主各自可提名十个、然后经谷歌学术删除掉引用少于50而得之 http://t.cn/zOIpSia 2)快十年过去了；Netflix搞推荐系统的Amatriain提出自己的Top10：MF GBDT RF ANN LR CRF LDA http://t.cn/RZ8kGW9</p>
+  </li>
+  <li>用MeCab打造一套实用的中文分词系统: MeCab是一套优秀的日文分词和词性标注系统,基于CRF打造,有着诸多优点,代码基于C++实现，基本内嵌CRF++代码，性能优良，并通过SWIG提供多种语言调用接口, 可扩展性和通用性都非常不错。这篇博客尝试基于MeCab训练一套中文分词系统，欢迎观摩 http://t.cn/RZjgtM0</li>
 </ul>
 
 <h3 id="section-4">对比</h3>

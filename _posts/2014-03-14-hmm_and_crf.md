@@ -89,13 +89,15 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 - [视频]《Log-linear Models and Conditional Random Fields》http://t.cn/SUGYtC Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程 讲义:http://t.cn/RZ1kQ6A
 - http://t.cn/zO7uh30 推荐这个项目，虽然现在都流行 Deep Learning了， CRF 类方法还是很容易达到一个比较高的 Score， 这个项目 f-score 低了 0.7 % 但是速度 提升了 10倍，隐含的，可以处理更大量的样本数据。
 - PPT 来了！机器学习班第15次课，邹博讲条件随机场CRF的PPT 下载地址：http://t.cn/RzE4Oy8，第16次课，邹博讲PCA&SVD的PPT 下载地址：http://t.cn/RzE4OyQ，@sumnous_t 讲社区发现算法的PPT 下载地址：http://t.cn/RzE4OyR。顺便说句，sumnous还曾是算法班周六班的学员，一年下来，进步很大。分享！
-- [文章]《Introduction to Conditional Random Fields》(2012) http://t.cn/S67yJs 很好的条件随机场(CRF)介绍文章（学习笔记）
-
-  中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。
 
 - [Introduction to Conditional Random Fields](http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/)
 
 	这篇文章讲得很好，有必要在明天早上把这篇文章再好好完善一下。然后把CRF与HMM整理出一片文章来。
+  中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。
+
+  That’s because CRFs are indeed basically the sequential version of logistic regression: whereas logistic regression is a log-linear model for classification, CRFs are a log-linear model for sequential labels.
+
+  今天没有来得及写了，明天晚上回来写吧。
 
 - Conditional Random Fields as Recurrent Neural Networks link：http://t.cn/Rwbbmq1 就喜欢这种把model串起来的工作方便理解和泛化。paper将mean-field inference每次迭代过程和CNN对应上，整个inference过程对应为一个Recurrent NN 这是这几天arxiv中算有意思的paper@火光摇曳Flickering
 
