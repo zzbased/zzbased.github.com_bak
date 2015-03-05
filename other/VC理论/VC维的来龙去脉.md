@@ -2,9 +2,16 @@
 
 
 ## Hoeffding不等式
-Hoeffding不等式是关于一组随机变量均值的概率不等式. 设 \\(X_1,X_2,\cdots,X_n\\) 为一组随机变量, a_i\leq X_i\leq b_i, 定义一组随机变量的均值为：
+Hoeffding不等式是关于一组随机变量均值的概率不等式。
+如果\\(X_1,X_2,\cdots,X_n\\)为一组独立同分布的参数为p的伯努利分布随机变量。定义这组随机变量的均值为：
 
-[Hoeffding不等式](http://science.scileaf.com/library/2461)
+$$\bar X=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+对于任意\\(\delta>0\\), Hoeffding不等式可以表示为
+
+$$P(|\bar X - E(\bar X)| \geq \delta) \leq \exp(-2\delta^2n^2)$$
+
+更多请参考:[Hoeffding不等式](http://science.scileaf.com/library/2461)，[集中不等式](http://zh.wikipedia.org/zh-cn/集中不等式)
 
 **case示例**：
 
@@ -12,7 +19,7 @@ Hoeffding不等式是关于一组随机变量均值的概率不等式. 设 \\(X_
 
 ![](bin_sample.png)
 
-直觉上，如果我们有更多的样本(抽出更多的球)，则样本期望应该越来越接近总体期望。
+直觉上，如果我们有更多的样本(抽出更多的球)，则样本期望\\(\nu\\)应该越来越接近总体期望\\(\mu\\)。
 
 ![](bin_sample_hoeffding.png)
 
@@ -43,6 +50,7 @@ H 是假设空间。
 f(x)表示理想目标函数，h(x)是我们预估的目标函数。
 
 Eout(h)，我们可以理解为在理想情况下(已知f)，总体(out-of-sample)的损失(这里是0-1 loss)的期望，称作expected loss。
+
 Ein(h)，可以理解为在训练样本上(in-of-sample)，损失的期望，称作expirical loss。
 
 从上面式子可以看到，当样本量N足够大，且样本是独立同分布的，我们可以通过样本集上的expirical loss Ein(h)推测expected loss Eout(h)。
@@ -54,16 +62,15 @@ Ein(h)，可以理解为在训练样本上(in-of-sample)，损失的期望，称
 如果我们的假设空间H，有M个假设函数。
 
 那么对于这M个假设：
-$$
-P(|Ein(h1)-Eout(h1)| or |Ein(h2)-Eout(h2)| ... |Ein(hm)-Eout(hm)|)
-<= P(|Ein(h1)-Eout(h1)) + P(|Ein(h2)-Eout(h2)|) + ... + P(|Ein(hm)-Eout(hm)|)
-<= 2M\exp(-2e^2N)
-$$
+
+$$P(|E_{in}(h_1)-E_{out}(h_1)|>\epsilon  \cup |E_{in}(h_2)-E_{out}(h_2)| > \epsilon   ... |E_{in}(h_m)-E_{out}(h_m)|>\epsilon)
+\leq P(|E_{in}(h_1)-E_{out}(h_1)|>\epsilon) + P(|E_{in}(h_2)-E_{out}(h_2)|>\epsilon) + ... + P(|E_{in}(h_m)-E_{out}(h_m)|>\epsilon)
+\leq 2M\exp(-2 \epsilon^2 N)$$
 
 
 **什么情况下Learning是可行的**？
 
-1. 如果假设空间|H|=M是有限的，N足够大，那么对假设空间中任意一个g，Eout(g)=Ein(g)
+1. 如果假设空间H的size M是有限的，N足够大，那么对假设空间中任意一个g，Eout(g)=Ein(g)
 2. 利用算法A从假设空间中，挑选出一个g，使得Ein(g)=0，那么probably approximately correct而言，Eout(g)也接近为0
 
 ## 学习可行的两个核心问题
@@ -74,7 +81,7 @@ M取值的trade off
 
 ![](trade_off_on_M.png)
 
-假设空间size H的大小很关键。M太小，第二项不能满足，M太大，第一项不能满足。
+假设空间H的大小M很关键。M太小，第二项不能满足，M太大，第一项不能满足。
 
 ![](finite_quantity.png)
 
@@ -94,11 +101,11 @@ M取值的trade off
 
 ![](effective_number_of_lines.png)
 
-如果有N个样本数据，那么effective(N) = H作用于样本集D"最多"能产生多少不同的dichotomy。
+如果有N个样本数据，那么有效的Hypotheses个数：effective(N) = H作用于样本集D"最多"能产生多少不同的dichotomy。那么就可以用effective(N)来替换M。
 
 ![](finite_effective_n.png)
 
-用effective(N)来替换M。
+下面是Hypotheses与dichotomies的对比：
 
 ![](dichotomies.png)
 
@@ -106,13 +113,17 @@ M取值的trade off
 
 H作用于D"最多"能产生多少种不同的idchotomy？这个数量与H有关，跟数据量N也有关。用数学公式可以表达为：
 
-max|H(x1,x2,...,xN)|
+max_H(x1,x2,...,xN)
 
 这个式子又称为"成长函数"。在H确定的情况下，growth function是一个与N相关的函数。
 
 ![](growth_function.png)
 
+下图举了4个例子，分别计算其growth function：
+
 ![](growth_function_4case.png)
+
+用m_H(N)替换effective(N)，如下所示：
 
 ![](growth_function_replace_m.png)
 
@@ -120,33 +131,51 @@ max|H(x1,x2,...,xN)|
 
 ![](break_point.png)
 
-Shatter的概念：当H作用于N个input的样本集时，产生的dichotomies数量等于这N个点总的组合数2^N是，就称：这N个inputs被H给shatter掉了。
+Shatter的概念：当H作用于N个input的样本集时，产生的dichotomies数量等于这N个点总的组合数\\(2^N\\)是，就称：这N个inputs被H给shatter掉了。
 
-要注意到 shatter 的原意是「打碎」，在此指「N 個点的所有(碎片般的)可能情形都被H产生了」。所以m_H(N)=2N 的情形是「shatter」。
+要注意到 shatter 的原意是"打碎"，在此指"N个点的所有(碎片般的)可能情形都被H产生了"。所以\\( m_H(N)=2^N \\)的情形是"shatter"。
 
-对于给定的成长函数m_H(N)，从N=1出发，N慢慢变大，当增大到k时，出现m_H(N) < 2^k的情形，则我们说k是该成长函数的break point。对于任何N>k个inputs而言，H都没有办法再shatter他们了。
+对于给定的成长函数m_H(N)，从N=1出发，N慢慢变大，当增大到k时，出现\\(m_H(N) < 2^k\\)的情形，则我们说k是该成长函数的break point。对于任何N > k个inputs而言，H都没有办法再shatter他们了。
 
 ## VC Bound
-成长函数的上界B(N,k)都被bound住了，那我们的成长函数同样也可以被这个bound住，因此对于存在break point k的成长函数而言，
+成长函数的上界，设为B(N,k)，意为：maximum possible m_H(N) when break point = k。
 
-m_H ≤ \sum_{i=0}^{k−1}(N i)
+$$m_H(N) \leq \sum_{i=0}^{k−1}{N \choose i}$$
 
 方程的数量看上去是无穷的，但真正有效(effective)的方程的数量却是有限的
+
+![](vc_bound1.png)
 
 ## VC dimension
 
 Vladimir Vapnik与Alexey Chervonenkis [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
 
-一个H的VC dimension即为d_vc(H)，是这个H最多能够shatter掉的点的数量。如果不管多少个点H都能shatter他们，则d_vc(H)=无穷大。
+一个H的VC dimension即为\\(d_{vc}(H)\\)，是这个H最多能够shatter掉的点的数量。如果不管多少个点H都能shatter他们，则\\(d_{vc}(H)\\)=无穷大。
 
-k = d_vc(H) + 1
+$$ k = d_{vc}(H) + 1 $$
 
+regardless of learning algorithm A 
+regardless of input distribution Pregardless of target function f
+
+![](pla_revised.png)
+
+dVC = #free parameters
+![](degree_of_freedom.png)
+
+![](vc_practical_rule.png)
+
+![](m_and_d_vc.png)
+	
+![](vc_power.png)
+
+theory: N = 10, 000d_VC; practice: N = 10d_VC
+![](n_practical_rule.png)
 
 [vc-dimension-two](http://beader.me/mlnotebook/section2/vc-dimension-two.html)
 
 [vc-dimension-three](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
 
-## 深度学习
+## 深度学习的VC维
 以前VC dimension很高，但是样本很少，所以在out of sample的表现不是很好。
 
 但现在为什么强了，因为大数据，训练数据量越来越大，然后随着机器计算水平的提升，所以深度学习得到一个流行。
