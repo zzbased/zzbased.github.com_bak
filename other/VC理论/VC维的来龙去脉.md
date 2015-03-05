@@ -146,6 +146,18 @@ $$m_H(N) \leq \sum_{i=0}^{k−1}{N \choose i}$$
 
 ![](vc_bound1.png)
 
+这个式子显然是多项式的，最高次幂是 k-1。
+
+所以我们得到结论：如果break point存在（有限的正整数），生长函数m(N) 是多项式的。
+
+**可以直接替换吗**
+
+既然得到了m(N) 的多项式上界，我们希望对之前的不等式中M 进行替换。
+
+然而直接替换是存在问题的，具体解释和替换方法这里不多说了，可以去看林老师的课程。主要问题就是Eout(h)，out 的空间是无穷大的，通过将Eout 替换为验证集(verification set) 的Ein' 来解决这个问题。最后我们得到下面的VC bound:
+
+![](vc_bound3.jpg)
+
 ## VC dimension
 
 Vladimir Vapnik与Alexey Chervonenkis [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
@@ -157,15 +169,26 @@ $$ k = d_{vc}(H) + 1 $$
 regardless of learning algorithm A 
 regardless of input distribution Pregardless of target function f
 
+感知器的dvc = d+1
+
 ![](pla_revised.png)
 
+VC维可以反映假设H 的强大程度(powerfulness)，VC 维越大，H也越强，因为它可以打散更多的点。
+
+可以得到规律：VC 维与假设参数w 的自由变量数目大约相等。
 dVC = #free parameters
+
 ![](degree_of_freedom.png)
 
 ![](vc_practical_rule.png)
 
+上面的”模型复杂度“ 的惩罚(penalty)，基本表达了模型越复杂（VC维大），Eout 可能距离Ein 越远。
+
 ![](m_and_d_vc.png)
-	
+
+模型较复杂时(dvc 较大)，需要更多的训练数据。 理论上，数据规模N 约等于 10000*dvc（称为采样复杂性，sample complexity）；然而，实际经验是，只需要 N = 10*dvc.
+造成理论值与实际值之差如此之大的最大原因是，VC Bound 过于宽松了，我们得到的是一个比实际大得多的上界。
+
 ![](vc_power.png)
 
 theory: N = 10, 000d_VC; practice: N = 10d_VC
