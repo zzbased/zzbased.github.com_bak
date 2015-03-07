@@ -1,3 +1,6 @@
+# VC维的来龙去脉
+#### author: vincentyao@tencent.com
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
@@ -27,12 +30,12 @@ $$P(|\bar X - E(\bar X)| \geq \delta) \leq \exp(-2\delta^2n^2)$$
 机器学习中的概念定义：
 f 表示理想的方案，g 表示我们求解的用来预测的假设。
 H 是假设空间。
-通过算法A，在假设空间H 中选择最好的假设作为g。
+通过算法A，在假设空间H中，根据样本集D，选择最好的假设作为g。
 选择标准是 g 近似于 f。
 
 ![](setup_of_the_learning_problem_add_components.png)
 
-拿perceptron来举例
+拿[perceptron](http://zh.wikipedia.org/zh/感知器)来举例。
 
 感知机（perceptron）是一个线性分类器(linear classifiers）。
 线性分类器的几何表示：直线、平面、超平面。
@@ -140,66 +143,102 @@ Shatter的概念：当H作用于N个input的样本集时，产生的dichotomies�
 ## VC Bound
 成长函数的上界，设为B(N,k)，意为：maximum possible m_H(N) when break point = k。
 
+通过一定的推导，我们有：B(N,k) ≤ B(N−1,k)+B(N−1,k−1)，再利用数学归纳法，得到：
+
 $$m_H(N) \leq \sum_{i=0}^{k−1}{N \choose i}$$
-
-方程的数量看上去是无穷的，但真正有效(effective)的方程的数量却是有限的
-
-![](vc_bound1.png)
 
 这个式子显然是多项式的，最高次幂是 k-1。
 
 所以我们得到结论：如果break point存在（有限的正整数），生长函数m(N) 是多项式的。
 
+H作用于数据量为N的样本集D，方程的数量看上去是无穷的，但真正有效(effective)的方程的数量却是有限的。H当中每一个h作用于D都能算出一个Ein来，一共有m_H(N)个不同的Ein。
+
 **可以直接替换吗**
 
-既然得到了m(N) 的多项式上界，我们希望对之前的不等式中M 进行替换。
+既然得到了m(N) 的多项式上界，我们希望对之前的不等式中M 进行替换，用m_H(N)来替换M。
 
-然而直接替换是存在问题的，具体解释和替换方法这里不多说了，可以去看林老师的课程。主要问题就是Eout(h)，out 的空间是无穷大的，通过将Eout 替换为验证集(verification set) 的Ein' 来解决这个问题。最后我们得到下面的VC bound:
+![](replace_vc_bound.png)
 
-![](vc_bound3.jpg)
+然而直接替换是存在问题的，主要问题是：Ein的可能取值是有限个的，但Eout的可能取值是无限的。可以通过将Eout 替换为验证集(verification set) 的Ein' 来解决这个问题。
+下面是推导过程：
+
+![](vc_bound_step1.png)
+
+![](vc_bound_step2.png)
+
+![](vc_bound_step3.png)
+
+最后我们得到下面的VC bound:
+
+![](vc_bound1.png)
 
 ## VC dimension
 
-Vladimir Vapnik与Alexey Chervonenkis [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
+由Vladimir Vapnik与Alexey Chervonenkis提出。 [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
 
 一个H的VC dimension即为\\(d_{vc}(H)\\)，是这个H最多能够shatter掉的点的数量。如果不管多少个点H都能shatter他们，则\\(d_{vc}(H)\\)=无穷大。
 
 $$ k = d_{vc}(H) + 1 $$
 
-regardless of learning algorithm A 
-regardless of input distribution Pregardless of target function f
+VC维的大小：与学习算法A无关，与输入变量X的分布也无关，与我们求解的目标函数f 无关。只与模型和假设空间有关。
 
-感知器的dvc = d+1
+前面我们已经分析了，对于2维的perceptron，它不能shatter 4个样本点，所以它的VC维是3。那这个时候，我们可以看下，2维的perceptron，如果样本集是线性可分的，perceptron learning algorithm可以在假设空间里找到一条直线，使Ein(g)=0；另外由于VC维=3，当N足够大的时候，可以推断出：Eout(g)约等于Ein(g)。所以得到Eout(g)约等于0，这也就证明了2维感知器是可学习的。
 
 ![](pla_revised.png)
 
+可以更进一步推导出，感知器的dvc = d+1，d是X的维度。推导这里不写了。
+
+
+总结回顾一下，要想让机器学到东西，并且学得好，有三个条件：
+
+1. H的d_vc是有限的，这样VC bound才存在。(good H)
+2. N足够大(对于特定的d_vc而言)，这样才能保证vc bound不等式的bound不会太大。(good D)
+3. 算法A有办法再H中顺利的挑选一个使得Ein最小的g。(good A)
+
+
 VC维可以反映假设H 的强大程度(powerfulness)，VC 维越大，H也越强，因为它可以打散更多的点。
 
-可以得到规律：VC 维与假设参数w 的自由变量数目大约相等。
-dVC = #free parameters
+定义模型自由度是，模型当中可以自由变动的参数的个数，即我们的机器需要通过学习来决定模型参数的个数。
 
 ![](degree_of_freedom.png)
 
+一个实践规律：VC 维与假设参数w 的自由变量数目大约相等。dVC = #free parameters。
+
 ![](vc_practical_rule.png)
 
-上面的”模型复杂度“ 的惩罚(penalty)，基本表达了模型越复杂（VC维大），Eout 可能距离Ein 越远。
+回到最开始提出的两个核心问题，尝试用VC维来解释：
 
 ![](m_and_d_vc.png)
 
-模型较复杂时(dvc 较大)，需要更多的训练数据。 理论上，数据规模N 约等于 10000*dvc（称为采样复杂性，sample complexity）；然而，实际经验是，只需要 N = 10*dvc.
+”模型复杂度“ 的惩罚(penalty)，基本表达了模型越复杂（VC维大），Eout 可能距离Ein 越远。
+
+模型较复杂时(d_vc 较大)，需要更多的训练数据。 理论上，数据规模N 约等于 10000*d_vc（称为采样复杂性，sample complexity）；然而，实际经验是，只需要 N = 10*dvc.
 造成理论值与实际值之差如此之大的最大原因是，VC Bound 过于宽松了，我们得到的是一个比实际大得多的上界。
 
 ![](vc_power.png)
 
-theory: N = 10, 000d_VC; practice: N = 10d_VC
+理论上：N = 10, 000d_VC; 实际使用上: N = 10d_VC
+
 ![](n_practical_rule.png)
+
+## 深度学习的VC维
+
+在以前，多层神经网络的VC dimension很高，但是用于训练的样本很少，所以在out of sample的表现不是很好。
+
+一个三层神经网络：输入节点为1000个，隐藏层为1000个，输出为1个。参数个数为：1000*1000+1000 = 100w。那么它的VC维大约等于100w。
+
+但现在为什么强了，因为大数据，训练数据量越来越大，然后随着机器计算水平的提升，所以深度学习得到一个流行。所以RBM，sparse coding等算法也得到了使用。
+
+另外卷积神经网络，为什么使用效果很好，因为它通过局部感受野和权值共享这两个利器，减少了参数个数。譬如2012年的AlexNet，8层网络，参数个数只有60M；而2014年的[GoogLeNet](http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf)，22层网络，参数个数只有7M。
+
+## Next
+
+上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。
+
+下一篇，我们讲述：loss function的问题。
+
+## 参考资料
 
 [vc-dimension-two](http://beader.me/mlnotebook/section2/vc-dimension-two.html)
 
 [vc-dimension-three](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
-
-## 深度学习的VC维
-以前VC dimension很高，但是样本很少，所以在out of sample的表现不是很好。
-
-但现在为什么强了，因为大数据，训练数据量越来越大，然后随着机器计算水平的提升，所以深度学习得到一个流行。
-

@@ -467,6 +467,8 @@ Justin:online match + online learning works very well
 ## 其他资料
 - 一个基于Python的Nearest Neighbors Search库 http://t.cn/RvVr8Gb。博文介绍 http://t.cn/RwSZk2l。另外基于这个库的一个推荐系统 http://t.cn/RZ339rQ，将作为一个demo presentation在WWW上出现。作者是剑桥的博士后 @唧唧歪歪de计算机博士
 
+- 国外在线交友网站eHarmony是如何做用户推荐的：http://t.cn/RwLG7e9，对应视频下载：http://t.cn/RwQR5xJ。里面干活不少，比如介绍了如何从照片中抽取特征。很多地方跟我们的思路其实挺像的：http://t.cn/RwV1BQh。另外，V r Hiring More ...（推荐、机器学习、分布式系统、php）
+- [文章]《Personalized Recommendations at Etsy》http://t.cn/Rz7MdpO 介绍Etsy采用的个性化推荐算法，包括矩阵分解、交替最小二乘、随机SVD和局部敏感哈希等
 
 
 ## 参考文献
