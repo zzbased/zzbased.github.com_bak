@@ -228,7 +228,7 @@ CRF模型的不足：
 主要用于基于字标注的分词。例如 “我喜欢天安门” 就可以变成这样的标注 “我s喜b欢e天b安m门e”。
 通过s（single）b（begin）m（middle）e（end）这样的标注把分词问题转变为标注问题。
 
-[](http://blog.csdn.net/caohao2008/article/details/4242308)
+[我喜欢天安门 detail](http://blog.csdn.net/caohao2008/article/details/4242308)
 
 **HMM**
 
@@ -271,7 +271,7 @@ $$P(y|x,\lambda)=\frac{1}{Z(x)}*exp(\Sigma{\lambda_j*F_j(y,x)})$$
 
 ## 代码级实战
 
-接下来，将以crfsuite为例，结合代码仔细分析CRF的运用。
+接下来，将以[CRF++](http://crfpp.googlecode.com/svn/trunk/doc/index.html?source=navbar)为例，结合代码仔细分析CRF的运用。
 
 
 
