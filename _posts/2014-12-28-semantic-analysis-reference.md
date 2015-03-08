@@ -328,12 +328,6 @@ SVD:
 - [分词原理2](http://blog.sina.com.cn/s/blog_6876a34b0100uq49.html)
 - [分词原理3](http://www.cnblogs.com/flish/archive/2011/08/08/2131031.html)
 
-LaTex：
-
-- [Markdown中插入数学公式的方法](http://blog.csdn.net/xiahouzuoxin/article/details/26478179)
-- [LaTeX/数学公式](http://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F)
-- [LaTeX数学公式输入初级](http://blog.sina.com.cn/s/blog_5e16f1770100fs38.html)
-
 半监督学习：
 
 - [半监督学习1](http://blog.csdn.net/ice110956/article/details/13775071)

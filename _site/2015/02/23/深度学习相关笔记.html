@@ -86,6 +86,9 @@
   <li>
     <p><a href="http://blog.sina.com.cn/s/blog_71329a960102v1eo.html">神经网络历史</a></p>
   </li>
+  <li>
+    <p><a href="http://www.hcii-lab.net/lianwen/Course/Machine%20Learning/">金连文教授-机器学习课程</a>，课程中神经网络相关的章节很好。</p>
+  </li>
 </ul>
 
 <h2 id="section-1">深度学习综述</h2>
@@ -112,6 +115,9 @@
   </li>
   <li>
     <p><a href="http://www.cs.toronto.edu/~tijmen/csc321/">Introduction to Neural Networks and Machine Learning by hinton</a> <a href="http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml">Lecture notes</a></p>
+  </li>
+  <li>
+    <p>[文章]《Why does Deep Learning work?》http://t.cn/RwYyN5J “Multilayer Neural Networks are just Spin Glasses”</p>
   </li>
   <li>
     <p><a href="http://weibo.com/p/1001603799166017998138">谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议</a> 比较喜欢其中关于tricks的建议：包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。</p>
@@ -142,6 +148,9 @@
   </li>
   <li>
     <p>对深度学习历史好奇的朋友, 推荐 “The Believers - The hidden story behind the code that runs our lives” http://t.cn/RwCj0wJ “Retrospectively, it was a just a question of the amount of data and the amount of computations,” Hinton says. http://t.cn/RwNHl6u</p>
+  </li>
+  <li>
+    <p><a href="http://neuralnetworksanddeeplearning.com">Neural Networks and Deep Learning</a></p>
   </li>
 </ul>
 
@@ -183,6 +192,12 @@
   <li>
     <p>[视频]《Automated Image Captioning with ConvNets and Recurrent Nets》http://t.cn/RwXX7zY Stanford的Andrej Karpathy两周前在SF ML meetup上的报告，基于ConvNets和Recurrent Nets的图像标题自动生成，推荐 云:http://t.cn/RwXXQ07</p>
   </li>
+  <li>
+    <p>[视频]《Deep Learning at Flickr》http://t.cn/RwEqZ5U 介绍深度学习在Flickr的应用，主要是图像标签自动提取 云:http://t.cn/RwEqCi7</p>
+  </li>
+  <li>
+    <p>[文章]《One Image Is Worth 1,000 Labels》http://t.cn/RwE0Koi 讨论目前基于深度学习的图片自动标注(类别性描述)在应用方面的局限</p>
+  </li>
 </ul>
 
 <h2 id="rnn-lstm">RNN&amp; LSTM</h2>
@@ -218,6 +233,9 @@
   <li>
     <p>特别喜欢Long-short-term-memory(LSTM) architecture, it explicitly models ‘forgetting’ in sequence processing. LSTM是gated RNNs 的典型代表, 它部分解决了 long-term dependency 的问题, Alex Graves 在 LSTM 上较有研究, 读读他的paper: deep RNN for speech recognition http://t.cn/RZt9knn</p>
   </li>
+  <li>
+    <p>Stanford推出利用parsing的树状LSTM, 在Stanford Sentiment Treebank上表现还凑合，句子相似度计算上不错http://t.cn/RwRLwvx</p>
+  </li>
 </ul>
 
 <h2 id="cnn">CNN</h2>
@@ -252,6 +270,16 @@
 
 <p>而CNN通过local receptive fields（感受野），shared weights（共享权值），sub-sampling（下采样）概念来解决上述三个问题。<a href="">Gradient-Based Learning Applied to Document Recognition </a></p>
 
+<ul>
+  <li>
+    <p><a href="http://blog.csdn.net/stdcoutzyx/article/details/41596663">卷积神经网络入门</a></p>
+
+    <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cnn_param_number.png" alt="" /></p>
+
+    <p>计算卷积神经网络的参数个数，如上图所示，输入是4个通道，输出是2个通道，那么参数个数=2<em>(4</em>2*2 + 1)。需要注意的是，输入四个通道上每个通道对应一个卷积核，如上图W参数所示。</p>
+  </li>
+</ul>
+
 <h2 id="word2vec">Word2vec</h2>
 
 <ul>
@@ -283,6 +311,9 @@
     <p>我发现word2vec算出来的相似度并没有一个统一的衡量方式，找某个词topN similar是没问题的，但假设有两个pair，并不能因为pair1的word2vec similarity高就说pair1比pair2更相似，因此也没法设一个threshold去取舍这些pairs。
 phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而不是相似度，也就是他们常常一起出现，所以引申出来他们有某种相似性</p>
   </li>
+  <li>
+    <p>[论文]《Random Walks on Context Spaces: Towards an Explanation of the Mysteries of Semantic Word Embeddings》(2015) S Arora, Y Li, Y Liang等 http://t.cn/RwHPhwf 用对数线性生成模型为word2vec等word embedding方法寻求合理解释。简化版解释一篇:《Why word2vec works》http://t.cn/Rw6jNo6</p>
+  </li>
 </ul>
 
 <h2 id="section-2">加强学习</h2>
@@ -298,6 +329,12 @@ phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而
 <ul>
   <li>Yoshua Bengio团队（Bengio一作）新作：Towards Biologically Plausible Deep Learning，尝试在Deep Learning与生物学观察（Spike-Timing- Dependent Plasticity）之间建立联系。寻找或探索机器学习的生物学解释，感觉很有意义。http://t.cn/RwCfROu</li>
 </ul>
+
+<h2 id="section-4">语音识别</h2>
+<ul>
+  <li>[文章]《Deep Speech: Accurate Speech Recognition with GPU-Accelerated Deep Learning》http://t.cn/RwHfNKN GPU加速的大规模深度学习，用于语音识别，来自百度硅谷AI实验室</li>
+</ul>
+
 
   </article>
 

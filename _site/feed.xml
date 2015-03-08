@@ -6,9 +6,338 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Mar 2015 22:50:18 +0800</pubDate>
-    <lastBuildDate>Mon, 02 Mar 2015 22:50:18 +0800</lastBuildDate>
+    <pubDate>Sun, 08 Mar 2015 13:09:09 +0800</pubDate>
+    <lastBuildDate>Sun, 08 Mar 2015 13:09:09 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>VC维的来龙去脉</title>
+        <description>&lt;h1 id=&quot;vc&quot;&gt;VC维的来龙去脉&lt;/h1&gt;
+
+&lt;h4 id=&quot;author-vincentyaotencentcom&quot;&gt;author: vincentyao@tencent.com&lt;/h4&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;目录：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;说说历史&lt;/li&gt;
+  &lt;li&gt;Hoeffding不等式&lt;/li&gt;
+  &lt;li&gt;Connection to Learning&lt;/li&gt;
+  &lt;li&gt;学习可行的两个核心条件&lt;/li&gt;
+  &lt;li&gt;Effective Number of Hypotheses&lt;/li&gt;
+  &lt;li&gt;Growth Function&lt;/li&gt;
+  &lt;li&gt;Break Point与Shatter&lt;/li&gt;
+  &lt;li&gt;VC Bound&lt;/li&gt;
+  &lt;li&gt;VC dimension&lt;/li&gt;
+  &lt;li&gt;深度学习与VC维&lt;/li&gt;
+  &lt;li&gt;Next&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;说说历史&lt;/h2&gt;
+
+&lt;p&gt;1943年，模拟神经网络由麦卡洛可（McCulloch）和皮茨（Pitts)提出，他们分析了理想化的人工神经元网络，并且指出了它们进行简单逻辑运算的机制。&lt;/p&gt;
+
+&lt;p&gt;1957年，康奈尔大学的实验心理学家弗兰克·罗森布拉特(Rosenblatt)在一台IBM-704计算机上模拟实现了一种他发明的叫作”感知机”（Perceptron）的神经网络模型。神经网络与支持向量机都源自于感知机（Perceptron）。&lt;/p&gt;
+
+&lt;p&gt;1962年，罗森布拉特著作：《神经动力学原理：感知机和大脑机制的理论》（Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms）。&lt;/p&gt;
+
+&lt;p&gt;1969年，明斯基和麻省理工学院的另一位教授佩普特合作著作：《感知机：计算几何学》（Perceptrons: An Introduction to Computational Geometry)。在书中，明斯基和佩普特证明单层神经网络不能解决XOR（异或）问题。&lt;/p&gt;
+
+&lt;p&gt;1971年，V. Vapnik and A. Chervonenkis在论文”On the uniform convergence of relative frequencies of events to their probabilities”中提出&lt;strong&gt;VC维&lt;/strong&gt;的概念。&lt;/p&gt;
+
+&lt;p&gt;1974年，V. Vapnik提出了结构风险最小化原则。&lt;/p&gt;
+
+&lt;p&gt;1974年，沃波斯（Werbos）的博士论文证明了在神经网络多加一层，并且利用“后向传播”（Back-propagation）学习方法，可以解决XOR问题。那时正是神经网络研究的低谷，文章不合时宜。&lt;/p&gt;
+
+&lt;p&gt;1982年，在加州理工担任生物物理教授的霍普菲尔德，提出了一种新的神经网络，可以解决一大类模式识别问题，还可以给出一类组合优化问题的近似解。这种神经网络模型后被称为霍普菲尔德网络。&lt;/p&gt;
+
+&lt;p&gt;1986年，Rummelhart与McClelland发明了神经网络的学习算法Back Propagation。&lt;/p&gt;
+
+&lt;p&gt;1992年，Vapnik等人提出了支持向量机(support vector machine)。神经网络是多层的非线性模型，支持向量机利用核技巧把非线性问题转换成线性问题。&lt;/p&gt;
+
+&lt;p&gt;1992\~2005年，SVM与Neural network之争，但被互联网风潮掩盖住了。&lt;/p&gt;
+
+&lt;p&gt;2006年，Hinton提出神经网络的Deep Learning算法。Deep Learning假设神经网络是多层的，首先用Restricted Boltzmann Machine（非监督学习）学习网络的结构，然后再通过Back Propagation（监督学习）学习网络的权值。&lt;/p&gt;
+
+&lt;h2 id=&quot;hoeffding&quot;&gt;Hoeffding不等式&lt;/h2&gt;
+
+&lt;p&gt;Hoeffding不等式是关于一组随机变量均值的概率不等式。
+如果\(X_1,X_2,\cdots,X_n\)为一组独立同分布的参数为p的伯努利分布随机变量。定义这组随机变量的均值为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\bar X=\frac{X_1+X_2+\cdots+X_n}{n}&lt;/script&gt;
+
+&lt;p&gt;对于任意\(\delta&amp;gt;0\), Hoeffding不等式可以表示为&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(|\bar X - E(\bar X)| \geq \delta) \leq \exp(-2\delta^2n^2)&lt;/script&gt;
+
+&lt;p&gt;更多请参考:&lt;a href=&quot;http://science.scileaf.com/library/2461&quot;&gt;Hoeffding不等式&lt;/a&gt;，&lt;a href=&quot;http://zh.wikipedia.org/zh-cn/集中不等式&quot;&gt;集中不等式&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;case示例&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;p&gt;在统计推断中，我们可以利用样本的统计量(statistic)来推断总体的参数(parameter)，譬如使用样本均值来估计总体期望。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/bin_sample.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;直觉上，如果我们有更多的样本(抽出更多的球)，则样本期望\(\nu\)应该越来越接近总体期望\(\mu\)。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/bin_sample_hoeffding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;connection-to-learning&quot;&gt;Connection to Learning&lt;/h2&gt;
+&lt;p&gt;机器学习中的概念定义：
+f 表示理想的方案，g 表示我们求解的用来预测的假设。
+H 是假设空间。
+通过算法A，在假设空间H中，根据样本集D，选择最好的假设作为g。
+选择标准是 g 近似于 f。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/setup_of_the_learning_problem_add_components.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;拿&lt;a href=&quot;http://zh.wikipedia.org/zh/感知器&quot;&gt;perceptron&lt;/a&gt;来举例。&lt;/p&gt;
+
+&lt;p&gt;感知机（perceptron）是一个线性分类器(linear classifiers）。
+线性分类器的几何表示：直线、平面、超平面。&lt;/p&gt;
+
+&lt;p&gt;perceptron的假设空间，用公式描述，如下所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/perceptron_formula.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;感知器的优化目标如下式所示，w_g就是我们要求的最好的假设。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/perceptron_optim.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;设定两个变量，如下图所示。(图中 f(x)表示理想目标函数，h(x)是我们预估得到的某一个目标函数)&lt;/p&gt;
+
+&lt;p&gt;Eout(h)，可以理解为在理想情况下(已知f)，总体(out-of-sample)的损失(这里是0-1 loss)的期望，称作expected loss。&lt;/p&gt;
+
+&lt;p&gt;Ein(h)，可以理解为在训练样本上(in-of-sample)，损失的期望，称作expirical loss。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/learning_hoeffding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;当样本量N足够大，且样本是独立同分布的，类比于上面”抽球”的例子，可以通过样本集上的expirical loss Ein(h)推测expected loss Eout(h)。基于hoeffding不等式，我们得到下面式子：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/learning_hoeffding2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根据hoeffding不等式，我们可以推断N足够大时，expected loss和expirical loss将非常接近。&lt;/p&gt;
+
+&lt;p&gt;注意在上面推导中，我们是针对某一个特定的解h(x)。在我们的假设空间H中，往往有很多个假设函数(甚至于无穷多个)，这里我们先假定H中M个假设函数。&lt;/p&gt;
+
+&lt;p&gt;那么对于整个假设空间，也就是这M个假设函数，可以推导出下面不等式：&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P(|E_{in}(h_1)-E_{out}(h_1)|&gt;\epsilon  \cup |E_{in}(h_2)-E_{out}(h_2)| &gt; \epsilon   ... |E_{in}(h_m)-E_{out}(h_m)|&gt;\epsilon)&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\leq P(|E_{in}(h_1)-E_{out}(h_1)|&gt;\epsilon) + P(|E_{in}(h_2)-E_{out}(h_2)|&gt;\epsilon) + ... + P(|E_{in}(h_m)-E_{out}(h_m)|&gt;\epsilon)&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\leq 2M\exp(-2 \epsilon^2 N)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;注意上面不等式的bound值与 “样本数N和假设数M” 密切相关。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;学习可行的两个核心条件&lt;/h2&gt;
+
+&lt;p&gt;在往下继续推导前，先看一下&lt;strong&gt;什么情况下Learning是可行的&lt;/strong&gt;？&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;如果假设空间H的size M是有限的，N足够大，那么对假设空间中任意一个g，Eout(g)约等于Ein(g)；&lt;/li&gt;
+  &lt;li&gt;利用算法A从假设空间中，挑选出一个g，使得Ein(g)=0，那么probably approximately correct而言，Eout(g)也接近为0；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/two_central_questions.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上面这两个核心条件，也正好对应着test和train这两个过程。我们更多在关心，如何基于模型的假设空间，利用最优化算法，找到Ein最小的解g。但容易忽视test这个过程，如果让学习可行，不仅仅是要在训练集表现好，在真实环境里也要表现好。&lt;/p&gt;
+
+&lt;p&gt;从上述推导出来的不等式，我们看到假设数M 在这两个核心条件中有着重要作用。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/trade_off_on_M.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;假设空间H的大小M很关键。M太小，第二项不能满足，M太大，第一项不能满足。&lt;/p&gt;
+
+&lt;p&gt;那么有一个直观的思路，能否找到一个有限的因子m_H来替代不等式bound中的M。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/finite_quantity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;虽说假设空间很大，上述推导里，我们用到了P(h1 or h2 … hm) &amp;lt;= P(h1) + P(h2) + … + P(hm)。但事实上，多个h之间并不是完全独立的，他们是有很大的重叠的。&lt;/p&gt;
+
+&lt;p&gt;譬如说，我们的算法要在平面上(二维空间)挑选一条直线方程作为g，用来划分一个点x1。假设空间H是所有的直线，这个size M是无限多的。但是实际上可以将这些直线分为两类，一类是把x1判断为正例的，另一类是把x1判断为负例的。如下图所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/1point2lines.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;那如果在平面上有两个数据点x1,x2，这样的话，假设空间H中的无数条直线可以分为4类。那依次类推，有3个数据点，H中最多有8类直线，4个数据点，H中最多有14类直线(注意：为什么不是16类直线)。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/4points14lines.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;从上面，我们可以得到一个结论，假设空间size M很大，但在样本集D上，有效的假设函数size是有限的，下面我们将继续推导这个值m_H。&lt;/p&gt;
+
+&lt;h2 id=&quot;effective-number-of-hypotheses&quot;&gt;Effective Number of Hypotheses&lt;/h2&gt;
+
+&lt;p&gt;从H中任意选择一个方程h，让这个h对样本集合进行二元分类，输出一个结果向量。例如对4个点进行预测，输出为{1,1,1,0}，这样一个输出向量我们即为一个dichotomies。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/effective_number_of_lines.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果有N个样本数据，那么有效的Hypotheses个数：effective(N) = H作用于样本集D”最多”能产生多少不同的dichotomy。那么就可以用effective(N)来替换M。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/finite_effective_n.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下面是hypotheses与dichotomies的对比：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/dichotomies.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;growth-function&quot;&gt;Growth Function&lt;/h2&gt;
+
+&lt;p&gt;H作用于D”最多”能产生多少种不同的idchotomy？这个数量与H有关，跟数据量N也有关。用数学公式可以表达为：&lt;/p&gt;
+
+&lt;p&gt;max_H(x1,x2,…,xN)&lt;/p&gt;
+
+&lt;p&gt;这个式子又称为”成长函数”。在H确定的情况下，growth function是一个与N相关的函数。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/growth_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下图举了4个例子，分别计算其growth function：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/growth_function_4case.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;求解出m_H(N)，是不是可以考虑用m_H(N)替换effective(N)? 如下所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/growth_function_replace_m.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;break-pointshatter&quot;&gt;Break Point与Shatter&lt;/h2&gt;
+
+&lt;p&gt;在进一步推导前，再看两个概念：break point，shatter。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/break_point.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Shatter的概念：当H作用于N个input的样本集时，产生的dichotomies数量等于这N个点总的组合数\(2^N\)是，就称：这N个inputs被H给shatter掉了。&lt;/p&gt;
+
+&lt;p&gt;要注意到 shatter 的原意是”打碎”，在此指”N个点的所有(碎片般的)可能情形都被H产生了”。所以\( m_H(N)=2^N \)的情形是”shatter”。&lt;/p&gt;
+
+&lt;p&gt;对于给定的成长函数m_H(N)，从N=1出发，N慢慢变大，当增大到k时，出现\(m_H(N) &amp;lt; 2^k\)的情形，则我们说k是该成长函数的&lt;strong&gt;break point&lt;/strong&gt;。对于任何N &amp;gt; k个inputs而言，H都没有办法再shatter他们了。&lt;/p&gt;
+
+&lt;h2 id=&quot;vc-bound&quot;&gt;VC Bound&lt;/h2&gt;
+&lt;p&gt;成长函数的上界，设为B(N,k)，意为：maximum possible m_H(N) when break point = k。&lt;/p&gt;
+
+&lt;p&gt;通过一定的推导，我们有：B(N,k) ≤ B(N−1,k)+B(N−1,k−1)，再利用数学归纳法，得到：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;m_H(N) \leq \sum_{i=0}^{k−1}{N \choose i}&lt;/script&gt;
+
+&lt;p&gt;这个式子显然是多项式的，最高次幂是 k-1。&lt;/p&gt;
+
+&lt;p&gt;所以我们得到结论：如果break point存在（有限的正整数），生长函数m(N) 是多项式的。&lt;/p&gt;
+
+&lt;p&gt;H作用于数据量为N的样本集D，方程的数量看上去是无穷的，但真正有效(effective)的方程的数量却是有限的。H当中每一个h作用于D都能算出一个Ein来，一共有m_H(N)个不同的Ein。&lt;/p&gt;
+
+&lt;p&gt;OK，到目前为止，关于m_H(N)的推导结束了，回到growth function小节提出的问题，能否用&lt;strong&gt;m_H(N)直接替换M?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;既然得到了m(N) 的多项式上界，我们希望对之前的不等式中M 进行替换，用m_H(N)来替换M。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/replace_vc_bound.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然而直接替换是存在问题的，主要问题是：Ein的可能取值是有限个的，但Eout的可能取值是无限的。可以通过将Eout 替换为验证集(verification set) 的Ein’ 来解决这个问题。
+下面是推导过程：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound_step1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound_step2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound_step3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最后我们得到下面的VC bound:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vc-dimension&quot;&gt;VC dimension&lt;/h2&gt;
+
+&lt;p&gt;由Vladimir Vapnik与Alexey Chervonenkis提出。 &lt;a href=&quot;http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory&quot;&gt;Vapnik–Chervonenkis theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一个H的&lt;strong&gt;VC dimension&lt;/strong&gt;即为\(d&lt;em&gt;{vc}(H)\)，是这个H最多能够shatter掉的点的数量。如果不管多少个点H都能shatter他们，则\(d&lt;/em&gt;{vc}(H)\)=无穷大。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; k = d_{vc}(H) + 1 &lt;/script&gt;
+
+&lt;p&gt;VC维的大小：与学习算法A无关，与输入变量X的分布也无关，与我们求解的目标函数f 无关。只与模型和假设空间有关。&lt;/p&gt;
+
+&lt;p&gt;前面我们已经分析了，对于2维的perceptron，它不能shatter 4个样本点，所以它的VC维是3。那这个时候，我们可以看下，2维的perceptron，如果样本集是线性可分的，perceptron learning algorithm可以在假设空间里找到一条直线，使Ein(g)=0；另外由于VC维=3，当N足够大的时候，可以推断出：Eout(g)约等于Ein(g)。所以得到Eout(g)约等于0，这也就证明了2维感知器是可学习的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/pla_revised.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以更进一步推导出，感知器的dvc = d+1，d是X的维度。推导这里不写了。&lt;/p&gt;
+
+&lt;p&gt;总结回顾一下，要想让机器学到东西，并且学得好，有2个条件：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1.1 H的d_vc是有限的，这样VC bound才存在。(good H)&lt;/li&gt;
+  &lt;li&gt;1.2 N足够大(对于特定的d_vc而言)，这样才能保证vc bound不等式的bound不会太大。(good D)&lt;/li&gt;
+  &lt;li&gt;2 算法A有办法再H中顺利的挑选一个使得Ein最小的g。(good A)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强，因为它可以打散(shatter)更多的点。&lt;/p&gt;
+
+&lt;p&gt;定义模型自由度是，模型当中可以自由变动的参数的个数，即我们的机器需要通过学习来决定模型参数的个数。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/degree_of_freedom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一个实践规律：VC 维与假设参数w 的自由变量数目大约相等。dVC = #free parameters。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_practical_rule.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;回到最开始提出的两个核心问题，尝试用VC维来解释：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/m_and_d_vc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;”模型复杂度“ 的惩罚(penalty)，基本表达了模型越复杂（VC维大），Eout 可能距离Ein 越远。如下图所示，随着d_vc的上升，E_in不断降低，而模型复杂度不断上升。&lt;/p&gt;
+
+&lt;p&gt;他们的上升与下降的速度在每个阶段都是不同的，因此我们能够寻找一个二者兼顾的，比较合适的d_vc，用来决定应该使用多复杂的模型。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_power.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;模型较复杂时(d_vc 较大)，需要更多的训练数据。 理论上，数据规模N 约等于 10000*d_vc（称为采样复杂性，sample complexity）；然而，实际经验是，只需要 N = 10*d_vc。
+造成理论值与实际值之差如此之大的最大原因是，VC Bound 过于宽松了，我们得到的是一个比实际大得多的上界。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/n_practical_rule.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vc-1&quot;&gt;深度学习与VC维&lt;/h2&gt;
+
+&lt;p&gt;在以前，多层神经网络的VC dimension很高，但是用于训练的样本很少，所以在out of sample的表现不是很好。&lt;/p&gt;
+
+&lt;p&gt;一个三层神经网络：输入节点为1000个，隐藏层为1000个，输出为1个。参数个数为：1000*1000+1000 = 100w。那么它的VC维大约等于100w。&lt;/p&gt;
+
+&lt;p&gt;但现在为什么深度学习好用了，因为大数据，训练数据量越来越大，然后随着机器计算水平的提升，所以深度学习得到一个流行。所以RBM，sparse coding等算法也得到了使用。&lt;/p&gt;
+
+&lt;p&gt;另外卷积神经网络，为什么使用效果很好，因为它通过局部感受野和权值共享这两个利器，减少了参数个数。譬如2012年的AlexNet，8层网络，参数个数只有60M；而2014年的&lt;a href=&quot;http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf&quot;&gt;GoogLeNet&lt;/a&gt;，22层网络，参数个数只有7M。&lt;/p&gt;
+
+&lt;p&gt;更多细节请参考下面链接：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://ttic.uchicago.edu/~tewari/lectures/lecture12.pdf&quot;&gt;VC Dimension of Multilayer Neural Networks&lt;/a&gt;，该文章给出了多层神经网络的VC bound的证明。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html&quot;&gt;Lecun: What is the relationship between Deep Learning and Support Vector Machines / Statistical Learning Theory? &lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Vapnik really believes in his bounds. He worried that neural nets didn’t have similarly good ways to do capacity control (although neural nets do have generalization bounds, since they have finite VC dimension).&lt;/p&gt;
+
+    &lt;p&gt;Lecun’s counter argument was that the ability to do capacity control was somewhat secondary to the ability to compute highly complex function with a limited amount of computation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf&quot;&gt;Deep Learning Tutorial &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;next&quot;&gt;Next&lt;/h2&gt;
+
+&lt;p&gt;上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。&lt;/p&gt;
+
+&lt;p&gt;下一篇，我们讲述：loss function的问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.autonlab.org/tutorials/vcdim.html&quot;&gt;VC dimension Tutorial Slides by Andrew Moore&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;PRML&lt;/li&gt;
+  &lt;li&gt;机器学习基石 [](http://beader.me/mlnotebook/section2/vc-dimension-three.html)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.svms.org/vc-dimension/&quot;&gt;vc-dimension in svms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.36dsj.com/archives/21236&quot;&gt;机器学习简史&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 07 Mar 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/03/07/VC%E7%BB%B4%E7%9A%84%E6%9D%A5%E9%BE%99%E5%8E%BB%E8%84%89.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/03/07/VC%E7%BB%B4%E7%9A%84%E6%9D%A5%E9%BE%99%E5%8E%BB%E8%84%89.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>语音识别</title>
@@ -56,6 +385,8 @@
 第一步，把帧识别成状态（难点）。
 第二步，把状态组合成音素。
 第三步，把音素组合成单词。&lt;/p&gt;
+
+        &lt;p&gt;语音识别系统的模型通常由声学模型和语言模型两部分组成，分别对应于语音到音节概率的计算和音节到字概率的计算。&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;统计声学模型。典型系统多采用基于一阶隐马尔科夫模型进行建模。&lt;/p&gt;
@@ -118,6 +449,9 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_71329a960102v1eo.html&quot;&gt;神经网络历史&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.hcii-lab.net/lianwen/Course/Machine%20Learning/&quot;&gt;金连文教授-机器学习课程&lt;/a&gt;，课程中神经网络相关的章节很好。&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;深度学习综述&lt;/h2&gt;
@@ -144,6 +478,9 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/&quot;&gt;Introduction to Neural Networks and Machine Learning by hinton&lt;/a&gt; &lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml&quot;&gt;Lecture notes&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[文章]《Why does Deep Learning work?》http://t.cn/RwYyN5J “Multilayer Neural Networks are just Spin Glasses”&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://weibo.com/p/1001603799166017998138&quot;&gt;谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议&lt;/a&gt; 比较喜欢其中关于tricks的建议：包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。&lt;/p&gt;
@@ -174,6 +511,9 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;对深度学习历史好奇的朋友, 推荐 “The Believers - The hidden story behind the code that runs our lives” http://t.cn/RwCj0wJ “Retrospectively, it was a just a question of the amount of data and the amount of computations,” Hinton says. http://t.cn/RwNHl6u&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://neuralnetworksanddeeplearning.com&quot;&gt;Neural Networks and Deep Learning&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -215,6 +555,12 @@
   &lt;li&gt;
     &lt;p&gt;[视频]《Automated Image Captioning with ConvNets and Recurrent Nets》http://t.cn/RwXX7zY Stanford的Andrej Karpathy两周前在SF ML meetup上的报告，基于ConvNets和Recurrent Nets的图像标题自动生成，推荐 云:http://t.cn/RwXXQ07&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[视频]《Deep Learning at Flickr》http://t.cn/RwEqZ5U 介绍深度学习在Flickr的应用，主要是图像标签自动提取 云:http://t.cn/RwEqCi7&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[文章]《One Image Is Worth 1,000 Labels》http://t.cn/RwE0Koi 讨论目前基于深度学习的图片自动标注(类别性描述)在应用方面的局限&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;rnn-lstm&quot;&gt;RNN&amp;amp; LSTM&lt;/h2&gt;
@@ -250,6 +596,9 @@
   &lt;li&gt;
     &lt;p&gt;特别喜欢Long-short-term-memory(LSTM) architecture, it explicitly models ‘forgetting’ in sequence processing. LSTM是gated RNNs 的典型代表, 它部分解决了 long-term dependency 的问题, Alex Graves 在 LSTM 上较有研究, 读读他的paper: deep RNN for speech recognition http://t.cn/RZt9knn&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Stanford推出利用parsing的树状LSTM, 在Stanford Sentiment Treebank上表现还凑合，句子相似度计算上不错http://t.cn/RwRLwvx&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;cnn&quot;&gt;CNN&lt;/h2&gt;
@@ -284,6 +633,16 @@
 
 &lt;p&gt;而CNN通过local receptive fields（感受野），shared weights（共享权值），sub-sampling（下采样）概念来解决上述三个问题。&lt;a href=&quot;&quot;&gt;Gradient-Based Learning Applied to Document Recognition &lt;/a&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/stdcoutzyx/article/details/41596663&quot;&gt;卷积神经网络入门&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cnn_param_number.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;计算卷积神经网络的参数个数，如上图所示，输入是4个通道，输出是2个通道，那么参数个数=2&lt;em&gt;(4&lt;/em&gt;2*2 + 1)。需要注意的是，输入四个通道上每个通道对应一个卷积核，如上图W参数所示。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;word2vec&quot;&gt;Word2vec&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -315,6 +674,9 @@
     &lt;p&gt;我发现word2vec算出来的相似度并没有一个统一的衡量方式，找某个词topN similar是没问题的，但假设有两个pair，并不能因为pair1的word2vec similarity高就说pair1比pair2更相似，因此也没法设一个threshold去取舍这些pairs。
 phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而不是相似度，也就是他们常常一起出现，所以引申出来他们有某种相似性&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[论文]《Random Walks on Context Spaces: Towards an Explanation of the Mysteries of Semantic Word Embeddings》(2015) S Arora, Y Li, Y Liang等 http://t.cn/RwHPhwf 用对数线性生成模型为word2vec等word embedding方法寻求合理解释。简化版解释一篇:《Why word2vec works》http://t.cn/Rw6jNo6&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;加强学习&lt;/h2&gt;
@@ -330,6 +692,12 @@ phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而
 &lt;ul&gt;
   &lt;li&gt;Yoshua Bengio团队（Bengio一作）新作：Towards Biologically Plausible Deep Learning，尝试在Deep Learning与生物学观察（Spike-Timing- Dependent Plasticity）之间建立联系。寻找或探索机器学习的生物学解释，感觉很有意义。http://t.cn/RwCfROu&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;语音识别&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[文章]《Deep Speech: Accurate Speech Recognition with GPU-Accelerated Deep Learning》http://t.cn/RwHfNKN GPU加速的大规模深度学习，用于语音识别，来自百度硅谷AI实验室&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
         <pubDate>Mon, 23 Feb 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</link>
@@ -376,7 +744,12 @@ phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;博客推荐&lt;/h2&gt;
+&lt;h1 id=&quot;section-2&quot;&gt;搜索&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;信息检索排序模型BM25(Besting Matching)。1）从经典概率模型演变而来 2）捕捉了向量空间模型中三个影响索引项权重的因子：IDF逆文档频率；TF索引项频率；文档长度归一化。3）并且含有集成学习的思想：组合了BM11和BM15两个模型。4）作者是BM25的提出者和Okapi实现者Robertson http://t.cn/RwRxieT&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;博客推荐与面试&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;《Frequently updated Machine Learning blogs》http://t.cn/RwbHZpy 活跃机器学习博客推荐，真有点怀念Google Reader呢&lt;/p&gt;
@@ -387,9 +760,15 @@ phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://chuansong.me/n/306480&quot;&gt;FLAGBR 面经+offer&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;『机器学习&amp;amp;数据挖掘笔记_16（常见面试之机器学习算法思想简单梳理） - tornadomeet - 博客园』http://t.cn/zRoZPzP&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/stdcoutzyx/article/details/42041947&quot;&gt;北美公司面试经验笔记&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;其他推荐资料&lt;/h2&gt;
+&lt;h2 id=&quot;section-4&quot;&gt;其他推荐资料&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1885,179 +2264,6 @@ Java学习，Java框架，Web 前端，编程语言，开源项目研究，编�
         <pubDate>Sat, 31 Jan 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/01/31/deep-learning.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/01/31/deep-learning.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>最优化方法</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;最优化方法&lt;/h1&gt;
-
-&lt;p&gt;一般我们接触到的最优化分为两类：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;无约束最优化&lt;/li&gt;
-  &lt;li&gt;有约束最优化&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;无约束最优化&lt;/h2&gt;
-
-&lt;p&gt;通常对于无约束最优化，首先要判断是否为凸函数。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.52nlp.cn/unconstrained-optimization-one&quot;&gt;无约束最优化&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/daniel-D/p/3377840.html&quot;&gt;机器学习中导数最优化方法&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~elkan/250B/logreg.pdf&quot;&gt;最大似然、逻辑回归和随机梯度训练&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;梯度下降法&lt;/h3&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;牛顿法&lt;/h3&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;拟牛顿法&lt;/h3&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;共轭梯度法&lt;/h3&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;有约束最优化&lt;/h2&gt;
-
-&lt;p&gt;一般采用拉格朗日方程，kkt，对偶问题求解。&lt;a href=&quot;http://www.moozhi.com/topic/show/54a8a261c555c08b3d59d996&quot;&gt;关于拉格朗日乘子法与KKT条件&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;譬如svm里，最大化几何间隔 max y(wx+b)/||w||&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/v_july_v/article/details/7624837&quot;&gt;支持向量机&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;首先写出cost function：min [ 1/2*w^2 + max(0,1-y(wx+b)) ]&lt;/p&gt;
-
-&lt;p&gt;可以看出，这是一个有约束的问题，那么就可以用到”拉普拉斯+KKT+对偶”来求解了。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-7&quot;&gt;最优化算法的并行化&lt;/h2&gt;
-
-&lt;h3 id=&quot;logistic-regression&quot;&gt;Logistic Regression&lt;/h3&gt;
-
-&lt;p&gt;这里主要以Logistic regression为例，讲一讲最优化算法的并行化实现。&lt;/p&gt;
-
-&lt;p&gt;先看一下Logistic regression的损失函数：&lt;/p&gt;
-
-&lt;p&gt;Logistic函数（或称为Sigmoid函数）为：
-&lt;script type=&quot;math/tex&quot;&gt;sigmoid(z)=f(z)=\frac{1}{1+e^{-z}}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;sigmoid函数的导数为：
-&lt;script type=&quot;math/tex&quot;&gt;\nabla f(z)=f(z)(1-f(z))&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;对于线性回归来说，其分类函数为：
-&lt;script type=&quot;math/tex&quot;&gt;h(x)=w_0+\sum_{i=1}^p{w_ix_i}=w^Tx&lt;/script&gt;
-其中x是特征向量，w是特征权重向量，p是特征向量维度。&lt;/p&gt;
-
-&lt;p&gt;逻辑回归本质上是一个被logistic函数归一化后的线性回归，即在特征到结果的映射中加入了一层sigmoid函数映射。相比于线性回归，模型输出取值范围为[0，1]，&lt;/p&gt;
-
-&lt;p&gt;如果y的取值是0或1，定义事件发生的条件概率为：
-&lt;script type=&quot;math/tex&quot;&gt;P(y=1|x)=\pi(x)=\frac{1}{1+exp(-h(x))}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;定义事件不发生的条件概率为：
-&lt;script type=&quot;math/tex&quot;&gt;P(y=0|x)=1-P(y=1|x)=\frac{1}{1+exp(h(x))}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;假设有n个观测样本，分别为：(\(x_1\),\(y_1\))，(\(x_2\),\(y_2\)) … (\(x_n\),\(y_n\))。&lt;/p&gt;
-
-&lt;p&gt;得到一个观测值(\(x_i\),\(y_i\))的概率为：
-&lt;script type=&quot;math/tex&quot;&gt;P(y_i)=p_i^{y_i}(1-p_i)^{1-y_i}&lt;/script&gt;  其中\(p_i=P(y_i=1|x_i)=\pi(x_i)\)&lt;/p&gt;
-
-&lt;p&gt;由于各项观测独立，所以它们的联合分布可以表示为各边际分布的乘积：
-&lt;script type=&quot;math/tex&quot;&gt;l(w)=\prod_{i=1}^n{p_i^{y_i}(1-p_i)^{1-y_i}}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;对上述函数取对数，根据最大似然估计，得到最优化目标为：
-&lt;script type=&quot;math/tex&quot;&gt;\max{L(w)}=\max{log[l(w)]}=\max{\sum_{i=1}^n{y_i*log[\pi(x_i)] + (1-y_i)*log[1-\pi(x_i)]}}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;对L(w)求导得：
-&lt;script type=&quot;math/tex&quot;&gt;\nabla L(w) = \sum_{i=1}^n{(\pi(x_i)-y_i)x_i}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;而如果y的取值是1或-1，则最优化目标为：&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max{L(w)}=\max{\sum_{i=1}^n{-log[1+exp(-y_iw^Tx_i)]}}&lt;/script&gt;
-
-&lt;p&gt;加上正则项后则是：&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_w \frac{1}{2}||w||^2+C\sum_{i=1}^{n}log[1+exp(-y_iw^Tx_i)]&lt;/script&gt;
-
-&lt;h3 id=&quot;lrmapreduce&quot;&gt;LR的MapReduce并行&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs_two_loops.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lbfgs_two_loops_vf.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/&quot;&gt;Distributed LIBLINEAR&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://nips.cc/Conferences/2014/Program/event.php?ID=4831&quot;&gt;Large scale learning spotlights&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;loss-function&quot;&gt;Loss Function&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/lrosasco/www/publications/loss.pdf&quot;&gt;loss.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions&quot;&gt;vowpal_wabbit Loss-functions &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Loss_function&quot;&gt;Loss function wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutorials/concepts/library_design/losses.html&quot;&gt;shark loss function&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;adaboost，svm，lr三个算法的关系：&lt;/p&gt;
-
-&lt;p&gt;三种算法的分布对应exponential loss（指数损失函数），hinge loss，log loss（对数损失函数），无本质区别。应用凸上界取代0、1损失，即凸松弛技术。从组合优化到凸集优化问题。凸函数，比较容易计算极值点。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;关于loss function，记录几点：
-    &lt;ul&gt;
-      &lt;li&gt;SVC &amp;amp; SVR：对于SVC，由于hinge loss: max(0, 1-yw’x)，SVC会特别关注那些难分类的点（classify with least certainty; support vectors, i.e., sv）；对于SVR，由于epsilon loss: max(0, |y-w’x|-e)，SVR类似的会关注那些residual比较大的点（”outlier”; prediction with least certainty too; sv）&lt;/li&gt;
-      &lt;li&gt;SVM和ANN 1) SVM的hinge loss func: max(0, 1 - y’x), 当“激活量” y’x 超过阈值1，那么就不计损失即损失为零 2) Deep Sparse Rectifier的rectifier activation func: max(0, x), 看图它在零点处不可导带来了稀疏性，可大量约简神经网络参数规模 3) loss function + penalty regularization&lt;/li&gt;
-      &lt;li&gt;SVM &amp;amp; Boosting：SVM用loss func来剔除了那些容易的点，实际相当于给样本加了权重0，使得模型更加关注难预测的点；Boosting每次迭代后调整权重：降低容易点的权重，增加难预测点的权重，也使得模型更关注难预测的点&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-20071207-nonconvex.pdf&quot;&gt;Who is afraid of non-convex loss functions?&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;Yann LeCun在2007年的讲义。目前大部分loss function都是凸函数，譬如lr，svms，exponential-family graphical models，凸函数一个很优秀的性质，但有些时候却是限制，坚持凸性将增大模型规模或者求解最优化问题方法的复杂程度。&lt;/p&gt;
-
-    &lt;p&gt;Deep architectures势必将带来非凸的loss function。但是(1)采用一个合适的模型架构(即便将带来loss function非凸)比坚持凸性更加重要；(2) 即使是对于浅层模型，例如SVM，使用非凸的loss function实际上可以带来准确率和性能的提升。&lt;/p&gt;
-
-    &lt;p&gt;对于神经网络，conjugate gradient, BFGS, LM-BFGS没有stochastic gradient好用；对于SVM，“batch” quadratic方法没有SMO好用，而SMO又没有on-line methods好用；对于CRF，Iterative scaling没有stochastic gradient好用；虽说stochastic gradient没有很多的理论保证，但经验证明是不错的选择。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-8&quot;&gt;最优化算法参考资料&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.erogol.com/comparison-sgd-vs-momentum-vs-rmsprop-vs-momentumrmsprop/&quot;&gt;几点改进随机梯度下降(SGD)过程的tricks&lt;/a&gt;
-  对梯度本身的探究也是特别有价值的，这里的优化方法，就是让梯度的update更平滑和稳定，记录之前在这个方向上的梯度，做平滑，并防止不同batch带来的突变是有价值的&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;凸优化，convex optimization&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;比较全面的优化教材 http://t.cn/Rwx3S6S @黄萱菁 发起的讨论 @Copper_PKU: Optimization for Machine Learning（Wright） @夏睿 Numerical Optimization（Nocedal）@wzxhome 推荐Nesterov @程龚_NJU 推荐Dingzhu Du的 @debiandsc 推荐Bertsekas和Ghaoui的&lt;/p&gt;
-
-    &lt;p&gt;好像除了这本大家谈的比较多的只有Introductory Lectures on Convex Optimization by Yurii Nesterov http://t.cn/Rwyz6Nb 其他的我也没印象。&lt;/p&gt;
-
-    &lt;p&gt;Nocedal 的Numerical Optimization，L-BFGS 算法提出者 http://t.cn/RwUQ40Q&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://enpub.fulton.asu.edu/cseml/Fall2008_ConvOpt/book/Intro-nl.pdf&quot;&gt;Introductory Lectures on Convex Programming&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf&quot;&gt;Numerical_Optimization&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://mitpress.mit.edu/books/optimization-machine-learning&quot;&gt;Optimization for Machine Learning&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf&quot;&gt;Convex Optimization&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://www2.isye.gatech.edu/~nemirovs/Lect_EMCO.pdf&quot;&gt;EFFICIENT METHODS IN CONVEX PROGRAMMING&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 15 Jan 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/01/15/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html</guid>
         
         
       </item>
