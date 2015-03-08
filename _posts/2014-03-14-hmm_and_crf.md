@@ -111,7 +111,7 @@ $$score(l|s) = \sum_{j=1}^m \sum_{i=1}^n { \lambda_j f_j(s,i,l_i,l_{i-1})}$$
 
 上式中，第一个sum遍历所有的feature function j，第二个sum遍历该句子所有的位置 i。
 
-Finally, we can transform these scores into probabilities p(l|s) between 0 and 1 by exponentiating and normalizing:
+Finally, we can transform these scores into probabilities p(l\|s) between 0 and 1 by exponentiating and normalizing:
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_ probabilities.png)
 
