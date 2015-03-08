@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "HMM and CRF"
-description: ""
-category:
-tags: [machine learning]
+title: "HMM与CRF"
 ---
+
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
@@ -84,7 +82,6 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 
 Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程。[讲义](http://t.cn/RZ1kQ6A)
 
-
 ### [Introduction to Conditional Random Fields](http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/)
 
 中文分词目前学术上的state of art就是条件随机场搞的，场就是没有方向的，相互之间没有依赖关系，先后关系。而只有场的关系，能量关系。能量最小的“场面”是最趋向合理的。
@@ -110,9 +107,9 @@ Next, assign each feature function fj a weight λj
 
 Given a sentence s, we can now score a labeling l of s by adding up the weighted features over all words in the sentence:
 
-$$score(l\|s) = \sum_{j=1}^m \sum_{i=1}^n {\lamda_j f_j(s,i,l_i,l_{i-1})}$$
+$$score(l|s) = \sum_{j=1}^m \sum_{i=1}^n { \lambda_j f_j(s,i,l_i,l_{i-1})}$$
 
-(The first sum runs over each feature function j, and the inner sum runs over each position i of the sentence.)
+上式中，第一个sum遍历所有的feature function j，第二个sum遍历该句子所有的位置 i。
 
 Finally, we can transform these scores into probabilities p(l|s) between 0 and 1 by exponentiating and normalizing:
 
@@ -134,6 +131,16 @@ p(li\|li−1) are transition probabilities (e.g., the probability that a preposi
 p(wi\|li) are emission probabilities (e.g., the probability that a noun emits the word “dad”).
 
 So how do HMMs compare to CRFs? CRFs are more powerful – they can model everything HMMs can and more. One way of seeing this is as follows.
+
+按照下面方法，可以创建一个与HMM相等的CRF模型：
+
+- For each HMM transition probability p(li=y \| li−1=x), define a set of CRF transition features of the form fx,y(s,i,li,li−1)=1 if li=y and li−1=x. Give each feature a weight of wx,y=log p(li=y \| li−1=x).
+- Similarly, for each HMM emission probability p(wi=z \| li=x), define a set of CRF emission features of the form gx,y(s,i,li,li−1)=1 if wi=z and li=x. Give each feature a weight of wx,z=log p(wi=z \| li=x).
+
+CRFs can model a much richer set of label distributions as well, for two main reasons:
+
+- CRFs can define a much larger set of features
+- CRFs can have arbitrary weights
 
 ## 模型之间的联系
 从下面两张图看各个模型之间的联系：
