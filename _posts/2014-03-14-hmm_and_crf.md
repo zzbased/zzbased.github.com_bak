@@ -154,10 +154,81 @@ CRFs can model a much richer set of label distributions as well, for two main re
 - NB和ME中，输出Y只有一个class。
 - HMM和CRF中，输出Y有多个，是sequence，属于structured prediction。
 
+## 模型的演进
+
+**HMM**
+
+HMM模型将标注任务抽象成马尔可夫链，一阶马尔可夫链式针对相邻标注的关系进行建模，其中每个标记对应一个概率函数。HMM是一种产生式模型，定义了联合概率分布p(x,y) ，其中x和y分别表示观察序列和相对应的标注序列的随机变量。
+
+实际上在大量真实语料中观察序列更多的是以一种多重的交互特征形式表现的，观察元素之间广泛存在长程相关性。例如，在命名实体识别任务中，由于实体本身结构所具有的复杂性，利用简单的特征函数往往无法涵盖所有特性，这时HMM的假设前提使得它无法使用复杂特征(它无法使用多于一个标记的特征）。突破这一瓶颈的方法就是引入最大熵模型。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/hmm_gailvtu.png)
+
+HMM的两个强假设(齐次马尔科夫性假设, 观测独立性假设)，虽简化了模型，但也限制了该模型。
+
+**Maxent**
+
+最大熵模型可以使用任意的复杂相关特征，在性能上也超过了Bayes分类器。
+
+最大熵模型的优点：
+
+- 首先，最大熵统计模型获得的是所有满足约束条件的模型中信息熵极大的模型;
+- 其次，最大熵统计模型可以灵活地设置约束条件，通过约束条件的多少可以调节模型对未知数据的适应度和对已知数据的拟合程度;
+- 再次，它还能自然地解决了统计模型中参数平滑的问题。
+
+最大熵模型的不足：
+
+- 首先，最大熵统计模型中二值化特征只是记录特征的出现是否，而文本分类需要知道特征的强度，因此，它在分类方法中不是最优的; - 其次，由于算法收敛的速度较慢，所以导致最大熵统计模型它的计算代价较大，时空开销大;
+- 再次，数据稀疏问题比较严重。最致命的是，作为一种分类器模型，最大熵对每个词都是单独进行分类的，标记之间的关系无法得到充分利用。然而，具有马尔可夫链的HMM模型可以建立标记之间的马尔可夫关联性，这是最大熵模型所没有的。
+
+**MEMM**
+
+MEMM把HMM模型和maximum-entropy模型的优点集合成一个统一的产生式模型，这个模型允许状态转移概率依赖于序列中彼此之间非独立的特征上，从而将上下文信息引入到模型的学习和识别过程中，达到了提高识别的准召率的效果。有实验证明，MEMM在序列标注任务上表现的比 HMM和无状态的最大熵模型要好得多。然而，如上面所述，MEMM并不完美，它存在明显的标记偏置问题。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/memm_gailvtu.png)
+
+标注偏置问题存在于最大熵马尔可夫模型（MEMM）中，虽然**MEMM解决了HMM输出独立性假设的问题，但是只解决了观察值独立的问题**，**状态之间的假设则是标注偏置问题产生的根源**，CRF则解决了标注偏置问题，是HMM模型的进一步优化。
+
+**标注偏置问题**
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/label_bias_part0.png)
+
+基于上图各边上的转移概率简单进行计算可得每条路径的概率如下：
+
+- 路径1-1-1-1的概率：0.4*0.45*0.5=0.09
+- 路径2-2-2-2的概率:0.2*0.3*0.3=0.018
+- 路径1-2-1-2的概率:0.6*0.2*0.5=0.06
+- 路径1-1-2-2的概率:0.4*0.55*0.3=0.066
+
+由此，可知最优路径为1-1-1-1. 然而，仔细观察可发现上图中stat1 中每个结点都倾向于转移到stat2，这明显是和直觉不相符的。这就是所谓的标注偏置问题。实际上，造成这一问题的根本原因是每个节点分支数不同，由于MEMM的局部归一化特性，使得转出概率的分布不均衡，最终导致状态的转移存在不公平的情况。
+
+**CRF**
+
+由CMU的教授John Lafferty提出。CRF模型具有以下特点：
+
+- CRF在给定了观察序列的情况下，对整个的序列的联合概率有一个统一的指数模型，它具备一个比较吸引人的特性就是其损失函数的凸面性；
+- CRF具有很强的推理能力，并且能够使用复杂、有重叠性和非独立的特征进行训练和推理，能够充分地利用上下文信息作为 特征，还可以任意地添加其他外部特征，使得模型能够获取的信息非常丰富；
+- CRF解决了MEMM中的标记偏置问题，这也正是CRF与MEMM的本质区别所在—-最大熵模型在每个状态都有一个概率模型，在每个状态转移时都要进行归一化。如果某个状态只有一个后续状态，那么该状态到后续状态的跳转概率即为1。这样，不管输入为任何内容，它都向该后续状态跳转。而CRFs是在所有的状态上建立一个统一的概率模型，这 样在进行归一化时，即使某个状态只有一个后续状态，它到该后续状态的跳转概率也不会为1。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_gailvtu.png)
+
+CRF模型的优点：
+
+- 首先，CRF模型在结合多种特征方面的存在优势；
+- 其次，它避免了标记偏置问题；
+- 再次，CRF的性能更好，对特征的融合能力更强。
+
+CRF模型的不足：
+
+- 首先，特征的选择和优化是影响结果的关键因素，特征选择问题的好与坏，直接决定了系统性能的高低；
+- 其次，训练模型的时间比ME更长，且获得的模型很大，在一般的PC机上可能无法运行。
+
 ## 应用之"中文分词"
 
 主要用于基于字标注的分词。例如 “我喜欢天安门” 就可以变成这样的标注 “我s喜b欢e天b安m门e”。
 通过s（single）b（begin）m（middle）e（end）这样的标注把分词问题转变为标注问题。
+
+[](http://blog.csdn.net/caohao2008/article/details/4242308)
 
 **HMM**
 
@@ -198,13 +269,21 @@ $$P(y|x,\lambda)=\frac{1}{Z(x)}*exp(\Sigma{\lambda_j*F_j(y,x)})$$
 
 ## 应用之"命名实体识别"
 
+## 代码级实战
+
+接下来，将以crfsuite为例，结合代码仔细分析CRF的运用。
+
+
+
 ## 参考文献
 - [classical probabilistic model and conditional random field](http://www.scai.fraunhofer.de/fileadmin/images/bio/data_mining/paper/crf_klinger_tomanek.pdf)
 - [An Introduction to Conditional Random Fields for Relational Learning](http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf)
-- [隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系](http://1.guzili.sinaapp.com/?p=133#comment-151)  该文章待会好好读下
+- [隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系](http://1.guzili.sinaapp.com/?p=133#comment-151)  该文章总结得比较全面
 - [52nlp hmm](http://www.52nlp.cn/tag/hmm)
+- [GHMM c library](http://ghmm.org)
 - [浅谈中文分词](http://www.isnowfy.com/introduction-to-chinese-segmentation/)
 - [机器学习“判定模型”和“生成模型”有什么区别？](http://www.zhihu.com/question/20446337)
+- [HMM,MEMM,CRF模型的比较](http://blog.csdn.net/caohao2008/article/details/4242308)
 
 CRF:
 
@@ -216,6 +295,7 @@ CRF:
 - [CRF++学习](http://blog.csdn.net/gududanxing/article/details/10827085)
 - [三种CRF实现在中文分词任务上的表现比较](https://jianqiangma.wordpress.com/2011/11/14/%E4%B8%89%E7%A7%8Dcrf%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83/)
 - [CRF++ library](http://crfpp.googlecode.com/svn/trunk/doc/index.html?source=navbar)
+- [CRFsuite benchmark](http://www.chokkan.org/software/crfsuite/benchmark.html)
 - CRF训练，但标注数据很少。可以参考：Semi-supervised Sequence Labeling for Named Entity Extraction based on Tri-Training:Case Study on Chinese Person Name Extraction
 - 推荐这个[项目](http://leon.bottou.org/projects/sgd)，虽然现在都流行 Deep Learning了，CRF 类方法还是很容易达到一个比较高的 Score，这个项目f-score 低了 0.7%，但是速度提升了10倍，隐含的，可以处理更大量的样本数据。
 - 机器学习班第15次课，邹博讲条件随机场CRF的PPT [下载地址](http://t.cn/RzE4Oy8)，第16次课，邹博讲PCA&SVD的PPT [下载地址](http://t.cn/RzE4OyQ)，@sumnous_t 讲社区发现算法的PPT [下载地址](http://t.cn/RzE4OyR)。
