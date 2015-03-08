@@ -271,7 +271,7 @@ VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强�
 
 注意在前述讨论中，理想的目标函数为f(x)，error measure用的是"0-1 loss"。如果在unknown target上引入噪声(+noise)，或者用不同的error measure方法，VC theory还有效吗？这里只给出结论，VC theory对于绝大部分假设空间(or 加入噪声)和error度量方法，都是有效的。
 
-![](noise_and_error_measure)
+![](noise_and_error_measure.png)
 
 ## 深度学习与VC维
 
