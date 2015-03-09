@@ -269,6 +269,8 @@ $$P(y|x,\lambda)=\frac{1}{Z(x)}*exp(\Sigma{\lambda_j*F_j(y,x)})$$
 
 ## 应用之"命名实体识别"
 
+请参考文章[基于条件随机场CRF的中文命名实体识别](http://www.zhihu.com/question/19994255)
+
 ## 代码级实战
 
 接下来，将以[CRF++](http://crfpp.googlecode.com/svn/trunk/doc/index.html)为例，结合代码仔细分析CRF的运用。
@@ -291,7 +293,7 @@ A combination of the current output token and previous output token (bigram) is 
 
 最后用backoff2005的测试脚本来测一下这次分词的效果：
 
-
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_segment_result.png)
 
 ## 参考文献
 - [classical probabilistic model and conditional random field](http://www.scai.fraunhofer.de/fileadmin/images/bio/data_mining/paper/crf_klinger_tomanek.pdf) 一篇很好的tutorial
