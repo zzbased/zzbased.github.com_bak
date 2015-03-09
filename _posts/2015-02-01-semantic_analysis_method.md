@@ -34,7 +34,7 @@ author: vincentyao@tencent.com
 
 - 由字构词的分词方法。可以理解为字的分类问题，也就是自然语言处理中的sequence labeling问题，通常做法里利用HMM，MAXENT，MEMM，CRF等预测文本串每个字的tag[62]，譬如B，E，I，S，这四个tag分别表示：beginning, ending, inside, single，也就是一个词的开始，结束，中间，以及单个字的词。 例如"南京市长江大桥"的标注结果可能为："南(B)京(I)市(E)长(B)江(E)大(B)桥(E)"
 
-	由于CRF既可以像最大熵模型一样加各种领域feature，又避免了HMM的齐次马尔科夫假设，所以基于CRF的分词目前是效果最好的，具体请参考文献[61,62,63]。
+	由于CRF既可以像最大熵模型一样加各种领域feature，又避免了HMM的齐次马尔科夫假设，所以基于CRF的分词目前是效果最好的，具体请参考文献[85,86,61,62,63]。
 
 	除了HMM，CRF等模型，分词也可以基于深度学习方法来做，如文献[9][10]所介绍，也取得了state-of-the-art的结果。
 
@@ -687,4 +687,6 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 82. [Modeling Documents with a Deep Boltzmann Machine](http://www.cs.toronto.edu/~nitish/uai13.pdf)
 83. [A Deep Dive into Recurrent Neural Nets](http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/)
 84. [Xiang zhang et. Text Understanding from Scratch](http://arxiv.org/abs/1502.01710?utm_source=dlvr.it&utm_medium=tumblr)
+85. [基于字标注的中文分词方法](http://www.52nlp.cn/the-character-based-tagging-method-of-chinese-word-segmentation)
+86. [中文分词入门之字标注法4](http://www.52nlp.cn/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AD%97%E6%A0%87%E6%B3%A8%E6%B3%954)
 
