@@ -48,7 +48,7 @@ title: "HMM与CRF"
 
 ## 隐马尔科夫模型
 
-隐马尔科夫模型是由初始状态概率向量，状态转移概率矩阵，观测概率矩阵决定。
+隐马尔可夫模型(Hidden Markov Models,HMMs)研究始于1966，隐马尔科夫模型是由初始状态概率向量，状态转移概率矩阵，观测概率矩阵决定。
 
 隐马尔科夫模型做了两个基本假设：
 
@@ -77,10 +77,6 @@ $$P(O|\lambda)=\sum_I P(O|I,\lambda)P(I|\lambda)$$
 而观测系列的生成，与PLSA、LDA的生成过程类似。
 
 ## 条件随机域，CRF
-
-### [视频: Log-linear Models and Conditional Random Fields](http://t.cn/SUGYtC)
-
-Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程。[讲义](http://t.cn/RZ1kQ6A)
 
 ### [Introduction to Conditional Random Fields](http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/)
 
@@ -141,6 +137,11 @@ CRFs can model a much richer set of label distributions as well, for two main re
 
 - CRFs can define a much larger set of features
 - CRFs can have arbitrary weights
+
+### [视频: Log-linear Models and Conditional Random Fields](http://t.cn/SUGYtC)
+
+Charles Elkan讲的对数线性模型和条件随机场，非常棒的教程。[讲义](http://t.cn/RZ1kQ6A)
+
 
 ## 模型之间的联系
 从下面两张图看各个模型之间的联系：
@@ -291,9 +292,15 @@ A combination of the current output token and previous output token (bigram) is 
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_feature2.png)
 
-最后用backoff2005的测试脚本来测一下这次分词的效果：
+最后用backoff2005的测试脚本来测一下这次分词的效果，可以看到recalls (R), precisions (P), f-scores (F)都在96以上。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/crf_segment_result.png)
+
+如果继续对feature template进行调优，还可以继续优化crf分词的效果。文献[A Conditional Random Field Word Segmenter for Sighan Bakeoff 2005](http://acl-arc.comp.nus.edu.sg/archives/acl-arc-090501d3/data/pdf/anthology-PDF/I/I05/I05-3027.pdf)提到了一些features，主要包括：character identity n-grams, morphological and character reduplication features。
+
+下面**把CRF++的代码走读一遍**。
+
+TODO
 
 ## 参考文献
 - [classical probabilistic model and conditional random field](http://www.scai.fraunhofer.de/fileadmin/images/bio/data_mining/paper/crf_klinger_tomanek.pdf) 一篇很好的tutorial
@@ -319,3 +326,4 @@ CRF:
 - CRF训练，但标注数据很少。可以参考：Semi-supervised Sequence Labeling for Named Entity Extraction based on Tri-Training:Case Study on Chinese Person Name Extraction
 - 推荐这个[项目](http://leon.bottou.org/projects/sgd)，虽然现在都流行 Deep Learning了，CRF 类方法还是很容易达到一个比较高的 Score，这个项目f-score 低了 0.7%，但是速度提升了10倍，隐含的，可以处理更大量的样本数据。
 - 机器学习班第15次课，邹博讲条件随机场CRF的PPT [下载地址](http://t.cn/RzE4Oy8)，第16次课，邹博讲PCA&SVD的PPT [下载地址](http://t.cn/RzE4OyQ)，@sumnous_t 讲社区发现算法的PPT [下载地址](http://t.cn/RzE4OyR)。
+- [条件随机场理论综述](http://wenku.baidu.com/view/842401c42cc58bd63186bd4b.html)
