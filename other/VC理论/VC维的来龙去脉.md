@@ -301,11 +301,17 @@ VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强�
 
 下一篇，我们讲述：loss function的问题，不同的loss function对应着不同的机器学习算法。
 
-- 0-1 loss: count(y != y')
-- square loss: (y-y')^2
-- exp loss: exp(-y*w^T*x)
-- hingle loss: max(0, 1-y*w^T*x)
-- cross entropy loss: log2(1 + exp(-y*w^T*x))
+- 0-1 loss: count(y != y')  -> Perceptron
+- squared loss: (y-y')^2  -> Linear regression
+- exponential  loss: exp(-y*w^T*x)  -> Adaboost
+- hinge loss: max(0, 1-y*w^T*x)  -> SVM
+- cross entropy loss: log2(1 + exp(-y*w^T*x))  -> Logistic regression
+
+更深入一步，hinge loss，exp loss，cross entropy loss都是0-1 loss的上界。
+
+![](hinge-exp-logistic-bounds.png)
+
+我们可能将关注这样一些问题：为什么线性回归和逻辑回归可以用于做分类？为什么逻辑回归的loss function不取squared loss？SVM的优越之处在哪里？
 
 ## 参考资料
 - [VC dimension Tutorial Slides by Andrew Moore](http://www.autonlab.org/tutorials/vcdim.html)
