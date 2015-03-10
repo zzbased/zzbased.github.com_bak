@@ -303,7 +303,7 @@ VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强�
 
 - 0-1 loss: count(y != y')  -> Perceptron
 - squared loss: (y-y')^2  -> Linear regression
-- exponential  loss: exp(-y*w^T*x)  -> Adaboost
+- exponential loss: exp(-y*w^T*x)  -> Adaboost
 - hinge loss: max(0, 1-y*w^T*x)  -> SVM
 - cross entropy loss: log2(1 + exp(-y*w^T*x))  -> Logistic regression
 
