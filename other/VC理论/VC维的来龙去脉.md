@@ -273,6 +273,8 @@ VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强�
 
 ![](noise_and_error_measure.png)
 
+除此外，我们为了避免overfit，一般都会加正则项。那加了正则项后，新的假设空间会得到一些限制，此时新假设空间的VC维将变小，也就是同样训练数据条件下，Ein更有可能等于Eout，所以泛化能力更强。
+
 ## 深度学习与VC维
 
 在以前，多层神经网络的VC dimension很高，但是用于训练的样本很少，所以在out of sample的表现不是很好。
@@ -299,7 +301,9 @@ VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强�
 
 上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。
 
-下一篇，我们讲述：loss function的问题，不同的loss function对应着不同的机器学习算法。
+下一篇，我们讲述：loss function与regularization问题。
+
+不同的loss function对应着不同的机器学习算法。
 
 - 0-1 loss: count(y != y')  -> Perceptron
 - squared loss: (y-y')^2  -> Linear regression
@@ -311,7 +315,7 @@ VC维反映了假设H 的强大程度(powerfulness)，VC 维越大，H也越强�
 
 ![](hinge-exp-logistic-bounds.png)
 
-我们可能将关注这样一些问题：为什么线性回归和逻辑回归可以用于做分类？为什么逻辑回归的loss function不取squared loss？SVM的优越之处在哪里？
+我们可能将关注这样一些问题：为什么线性回归和逻辑回归可以用于做分类？为什么逻辑回归的loss function不取squared loss？SVM的优越之处在哪里？为什么1范数可以得到稀疏解？为什么2范数能得到最大间隔解？正则化与贝叶斯估计的联系？
 
 ## 参考资料
 - [VC dimension Tutorial Slides by Andrew Moore](http://www.autonlab.org/tutorials/vcdim.html)
