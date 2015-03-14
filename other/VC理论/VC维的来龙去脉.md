@@ -15,13 +15,12 @@
 - VC Bound
 - VC dimension
 - 深度学习与VC维
-- Next
+- 小结
 
 
-VC维在机器学习领域是一个很基础的概念，它给诸多机器学习方法的可学习性提供了坚实的理论基础，但有时候，特别是对我们工程师而言，SVM，LR，深度学习等可能都已经用到线上了，但却不理解VC维。VC维它既不是屠龙刀也不是独孤九剑，因为它没有炫目的招式；它既不是易筋经也不是九阳神功，因为它没有深厚的内功。它只是呼吸吐纳的方式，是打坐坐禅的姿势。
+VC维在机器学习领域是一个很基础的概念，它给诸多机器学习方法的可学习性提供了坚实的理论基础，但有时候，特别是对我们工程师而言，SVM，LR，深度学习等可能都已经用到线上了，但却不理解VC维。
 
-
-这里，在"机器学习基石"课程的基础上，我们简单聊聊"VC维的来龙去脉"，我们将解决以下问题：为什么某机器学习方法是可学习的？为什么会有过拟合？拿什么来衡量机器学习模型的复杂度？深度学习与VC维的关系？
+这里，在台湾大学[机器学习基石](https://www.coursera.org/course/ntumlone)课程的基础上，我们简单聊聊"VC维的来龙去脉"。我们将解决以下问题：为什么某机器学习方法是可学习的？为什么会有过拟合？拿什么来衡量机器学习模型的复杂度？深度学习与VC维的关系？
 
 ## 说说历史
 在讲VC维之前，我们不妨来说说VC维的历史。而说起VC维的历史，又不得不提起神经网络，一方面是因为神经网络与VC维的发明过程是交织在一起的，另一方面是由于神经网络乏善可陈的泛化控制方法，深度学习在理论基础上一直被怀疑，甚至神经网络和VC维的代表SVM还一起争风吃醋过好多年。
@@ -50,7 +49,7 @@ VC维在机器学习领域是一个很基础的概念，它给诸多机器学习
 
 2006年，Hinton提出神经网络的Deep Learning算法。Deep Learning假设神经网络是多层的，首先用Restricted Boltzmann Machine（非监督学习）学习网络的结构，然后再通过Back Propagation（监督学习）学习网络的权值。
 
-现在，deep learning的应用越来越广泛，甚至已经有超越SVM的趋势。一方面以hinton，lecun为首的深度学习派坚信其有效实用性，另一方面Vapnik等统计机器学习理论专家又坚持着理论阵地，诟病deep learning的泛化界。
+现在，deep learning的应用越来越广泛，甚至已经有超越SVM的趋势。一方面以Hinton，Lecun为首的深度学习派坚信其有效实用性，另一方面Vapnik等统计机器学习理论专家又坚持着理论阵地，怀疑deep learning的泛化界。
 
 ## Hoeffding不等式
 
@@ -103,9 +102,9 @@ perceptron的假设空间，用公式描述，如下所示：
 
 设定两个变量，如下图所示，图中 f(x)表示理想目标函数，h(x)是我们预估得到的某一个目标函数，h(x)是假设空间H中的一个假设。
 
-Eout(h)，可以理解为在理想情况下(已知f)，总体(out-of-sample)的损失(这里是0-1 loss)的期望，称作expected loss。
+**Eout(h)**，可以理解为在理想情况下(已知f)，总体(out-of-sample)的损失(这里是0-1 loss)的期望，称作expected loss。
 
-Ein(h)，可以理解为在训练样本上(in-of-sample)，损失的期望，称作expirical loss。
+**Ein(h)**，可以理解为在训练样本上(in-of-sample)，损失的期望，称作expirical loss。
 
 ![](learning_hoeffding.png)
 
@@ -175,8 +174,6 @@ M太小，当N足够大时，Ein和Eout比较接近，但如果候选假设集�
 
 注意到，如果对平面上的4个点来分类，根据前面分析，输出的结果向量只有14种可能，即有14个dichotomies。
 
-![](effective_number_of_lines.png)
-
 如果有N个样本数据，那么有效的假设个数定义为：
 effective(N) = H作用于样本集D"最多"能产生多少不同的dichotomy。
 
@@ -214,7 +211,7 @@ Shatter的概念：当假设空间H作用于N个input的样本集时，产生的
 
 对于给定的成长函数m_H(N)，从N=1出发，N慢慢变大，当增大到k时，出现\\(m_H(N) < 2^k\\)的情形，则我们说k是该成长函数的**break point**。对于任何N > k个inputs而言，H都没有办法再shatter他们了。
 
-举例来说，对于上面的positive ray的例子，因为m_H(N)=N+1，当N=2时，m_H(2)<2^2，所以它的break point就是2。
+举例来说，对于上面的positive ray的例子，因为m_H(N)=N+1，当N=2时，m_H(2)<2^2， 所以它的break point就是2。
 
 ## VC Bound
 
@@ -222,7 +219,16 @@ Shatter的概念：当假设空间H作用于N个input的样本集时，产生的
 
 我们将成长函数的上界，设为B(N,k)，意为：maximum possible m_H(N) when break point = k。
 
-通过一定的推导，我们有：B(N,k) ≤ B(N−1,k)+B(N−1,k−1)，再利用数学归纳法，得到：
+那么我们做一些简单的推导：
+
+- B(2,2)=3。因为break point=2，任意两个点都不能被shatter，m_H(2)肯定小于2^2，所以B(2,2)=3。
+- B(3,2)=4。因为任意两个点都不能被shatter，那么3个点产生的dichotomies不能超过4，所以B(3,2)=4。
+- B(N,1)=1。
+- B(N,k)=2^N for N < k；B(N,k)=2^N-1 for N=k；
+- B(4,3)=？去掉其中的一个数据点x4后，考虑到break point=3，余下数据(x1,x2,x3)的dichotomies数目不能超过B(3,3)。当扩展为(x1,x2,x3,x4)时，(x1,x2,x3)上的dichotomies只有部分被重复复制了，设被复制的dichotomies数量为a，未被复制的数量为b。于是有B(3,3) = a+b;  B(4,3) = 2*a + b。因为a被复制了，表示x4有两个取值，那么(x1,x2,x3)上的a应该小于等于B(3,2)。所以推导出B(4,3) = 2*a + b <= B(3,3) + B(3,2)。
+- 对于任意N>k，类推可以得到，B(N,k) ≤ B(N−1,k)+B(N−1,k−1)
+
+最后利用数学归纳法，可以证明得到下面的bounding function(N>k)：
 
 $$m_H(N) \leq \sum_{i=0}^{k−1}{N \choose i}$$
 
@@ -263,16 +269,21 @@ OK，到目前为止，关于m_H(N)的推导结束。回到growth function小节
 
 根据前面的推导，我们知道VC维的大小：与学习算法A无关，与输入变量X的分布也无关，与我们求解的目标函数f 无关。它只与模型和假设空间有关。
 
-前面我们已经分析了，对于2维的perceptron，它不能shatter 4个样本点，所以它的VC维是3。此时，我们可以分析下2维的perceptron，如果样本集是线性可分的，perceptron learning algorithm可以在假设空间里找到一条直线，使Ein(g)=0；另外由于其VC维=3，当N足够大的时候，可以推断出：Eout(g)约等于Ein(g)。这样学习可行的两个条件都满足了，也就证明了2维感知器是可学习的。
+我们已经分析了，对于2维的perceptron，它不能shatter 4个样本点，所以它的VC维是3。此时，我们可以分析下2维的perceptron，如果样本集是线性可分的，perceptron learning algorithm可以在假设空间里找到一条直线，使Ein(g)=0；另外由于其VC维=3，当N足够大的时候，可以推断出：Eout(g)约等于Ein(g)。这样学习可行的两个条件都满足了，也就证明了2维感知器是可学习的。
 
 ![](pla_revised.png)
-
-可以更进一步推导出，感知器的dvc = d+1，d是X的维度。推导这里不写了。
 
 总结回顾一下，要想让机器学到东西，并且学得好，有2个条件：
 
 - H的d_vc是有限的，这样VC bound才存在。(good H)；N足够大(对于特定的d_vc而言)，这样才能保证vc bound不等式的bound不会太大。(good D)
 - 算法A有办法在H中顺利的挑选一个使得Ein最小的g。(good A)
+
+回到最开始提出的学习可行的两个核心条件，尝试用VC维来解释：
+
+![](m_and_d_vc.png)
+
+从上图可以看出，当VC维很小时，条件1容易满足，但因为假设空间较小，可能不容易找到合适的g 使得Ein(g)约等于0。当VC维很大时，条件2容易满足，但条件1不容易满足，因为VC bound很大。
+
 
 VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也越强，因为它可以打散(shatter)更多的点。
 
@@ -284,19 +295,15 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 
 ![](vc_practical_rule.png)
 
-回到最开始提出的两个核心问题，尝试用VC维来解释：
-
-![](m_and_d_vc.png)
-
-从上图可以看出，当VC维很小时，条件1容易满足，但因为假设空间较小，可能不容易找到合适的g，使得Ein(g)约等于0。当VC维很大时，条件2容易满足，但条件1不容易满足，因为VC bound很大。
-
 我们将原不等式做一个改写，如下图所示：
 
-”模型复杂度“ 的惩罚(penalty)，基本表达了模型越复杂（VC维大），Eout 可能距离Ein 越远。如下图所示，随着d_vc的上升，E_in不断降低，而模型复杂度不断上升。
+![](vc_power1.png)
 
-他们的上升与下降的速度在每个阶段都是不同的，因此我们能够寻找一个二者兼顾的，比较合适的d_vc，用来决定应该使用多复杂的模型。
+上面式子中的第3项表示模型复杂度。模型越复杂，VC维大，Eout 可能距离Ein 越远。如下图所示，随着d_vc的上升，E_in不断降低，而模型复杂度不断上升。
 
-![](vc_power.png)
+它们的上升与下降的速度在每个阶段都是不同的，因此我们能够寻找一个二者兼顾的，比较合适的d_vc，用来决定应该使用多复杂的模型。
+
+![](vc_power2.png)
 
 模型较复杂时(d_vc 较大)，需要更多的训练数据。 理论上，数据规模N 约等于 10000\*d_vc（称为采样复杂性，sample complexity）；然而，实际经验是，只需要 N = 10\*d_vc。
 造成理论值与实际值之差如此之大的最大原因是，VC Bound 过于宽松了，我们得到的是一个比实际大得多的上界。
@@ -307,7 +314,7 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 
 ![](noise_and_error_measure.png)
 
-除此外，我们为了避免overfit，一般都会加正则项。那加了正则项后，新的假设空间会得到一些限制，此时新假设空间的VC维将变小，也就是同样训练数据条件下，Ein更有可能等于Eout，所以泛化能力更强。
+除此外，我们为了避免overfit，一般都会加正则项。那加了正则项后，新的假设空间会得到一些限制，此时新假设空间的VC维将变小，也就是同样训练数据条件下，Ein更有可能等于Eout，所以泛化能力更强。这里从VC维的角度解释了正则项的作用。
 
 ## 深度学习与VC维
 
@@ -329,34 +336,19 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 
 	Lecun's counter argument was that the ability to do capacity control was somewhat secondary to the ability to compute highly complex function with a limited amount of computation.
 
-- [Deep Learning Tutorial ](http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf)
 
-## Next
+## 小结
 
 上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。
+这是一篇读书笔记，如有疏漏，敬请见谅。若希望获得更深理解，请参考下面的参考文献。
 
-下一篇，我们讲述：loss function与regularization问题。
-
-不同的loss function对应着不同的机器学习算法。
-
-- 0-1 loss: count(y != y')  -> Perceptron
-- squared loss: (y-y')^2  -> Linear regression
-- exponential loss: exp(-y*w^T*x)  -> Adaboost
-- hinge loss: max(0, 1-y*w^T*x)  -> SVM
-- cross entropy loss: log2(1 + exp(-y*w^T*x))  -> Logistic regression
-
-更深入一步，hinge loss，exp loss，cross entropy loss都是0-1 loss的上界。
-
-![](hinge-exp-logistic-bounds.png)
-
-我们可能将关注这样一些问题：为什么线性回归和逻辑回归可以用于做分类？为什么逻辑回归的loss function不取squared loss？SVM的优越之处在哪里？为什么1范数可以得到稀疏解？为什么2范数能得到最大间隔解？正则化与贝叶斯估计的联系？
-
-## 参考资料
+## 参考文献
 - [VC dimension Tutorial Slides by Andrew Moore](http://www.autonlab.org/tutorials/vcdim.html)
-- PRML
-- 机器学习基石 [](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
+- [机器学习基石](https://www.coursera.org/course/ntumlone) [笔记](http://www.douban.com/doulist/3381853/)
+[](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
 - [vc-dimension in svms](http://www.svms.org/vc-dimension/)
 - [机器学习简史](http://www.36dsj.com/archives/21236)
-- [](http://1.guzili.sinaapp.com/?p=174)
-- [深度学习的研究领域是否有被过度夸大](http://www.zhihu.com/question/27434103)
 - [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
+- [Deep Learning Tutorial](http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf)
+- [深度学习与统计学习理论](http://1.guzili.sinaapp.com/?p=174)
+- [深度学习的研究领域是否有被过度夸大](http://www.zhihu.com/question/27434103)
