@@ -16,7 +16,7 @@
 - VC dimension
 - 深度学习与VC维
 - 小结
-
+- 参考文献
 
 VC维在机器学习领域是一个很基础的概念，它给诸多机器学习方法的可学习性提供了坚实的理论基础，但有时候，特别是对我们工程师而言，SVM，LR，深度学习等可能都已经用到线上了，但却不理解VC维。
 
@@ -312,19 +312,28 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 
 注意在前述讨论中，理想的目标函数为f(x)，error measure用的是"0-1 loss"。如果在unknown target上引入噪声(+noise)，或者用不同的error measure方法，VC theory还有效吗？这里只给出结论，VC theory对于绝大部分假设空间(or 加入噪声)和error度量方法，都是有效的。
 
-![](noise_and_error_measure.png)
 
 除此外，我们为了避免overfit，一般都会加正则项。那加了正则项后，新的假设空间会得到一些限制，此时新假设空间的VC维将变小，也就是同样训练数据条件下，Ein更有可能等于Eout，所以泛化能力更强。这里从VC维的角度解释了正则项的作用。
 
 ## 深度学习与VC维
 
-在以前，多层神经网络的VC dimension很高，但是用于训练的样本很少，所以在out of sample的表现不是很好。
+对于神经网络，其VC维的公式为：
 
-一个三层神经网络：输入节点为1000个，隐藏层为1000个，输出为1个。参数个数为：1000*1000+1000 = 100w。那么它的VC维大约等于100w。
+dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的个数，也就是神经元之间连接的数目。
 
-但现在为什么深度学习好用了，因为大数据，训练数据量越来越大，然后随着机器计算水平的提升，所以深度学习得到一个流行。所以RBM，sparse coding等算法也得到了使用。
+![](neural_network_vc_dimension.png)
 
-另外卷积神经网络，为什么使用效果很好，因为它通过局部感受野和权值共享这两个利器，减少了参数个数。譬如2012年的AlexNet，8层网络，参数个数只有60M；而2014年的[GoogLeNet](http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf)，22层网络，参数个数只有7M。
+举例来说，一个普通的三层全连接神经网络：input layer是1000维，hidden layer有1000个nodes，output layer为1个node，则它的VC维大约为O(1000\*1000\*1000)。
+
+可以看到，神经网络的VC维相对较高，因而它的表达能力非常强，可以用来处理任何复杂的分类问题。根据上一节的结论，要充分训练该神经网络，所需样本量为10倍的VC维。如此大的训练数据量，是不可能达到的。所以在20世纪，复杂神经网络模型在out of sample的表现不是很好，容易overfit。
+
+但现在为什么深度学习的表现越来越好。原因是多方面的，主要体现在：
+
+- 通过修改神经网络模型的结构，以及提出新的regularization方法，使得神经网络模型的VC维相对减小了。例如卷积神经网络，通过修改模型结构(局部感受野和权值共享)，减少了参数个数，降低了VC维。2012年的AlexNet，8层网络，参数个数只有60M；而2014年的[GoogLeNet](http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf)，22层网络，参数个数只有7M。再例如dropout，drop connect，denosing等regularization方法的提出，也一定程度上增加了神经网络的泛化能力。
+- 训练数据变多了。随着互联网的越来越普及，相比于以前，训练数据的获取容易程度以及量和质都大大提升了。训练数据越多，Ein越容易接近于Eout。而且目前训练神经网络，还会用到很多data augmentation方法，例如在图像上，剪裁，平移，旋转，调亮度，调饱和度，调对比度等都使用上了。
+- 除此外，pre-training方法的提出，GPU的利用，都促进了深度学习。
+
+但即便这样，深度学习的VC维和VC Bound依旧很大，其泛化控制方法依然没有强理论支撑。但是实践又一次次证明，深度学习是好用的。所以VC维对深度学习的指导意义，目前不好表述，有一种思想建议，深度学习应该抛弃对VC维之类概念的迷信，尝试从其他方面来解释其可学习型，例如使用泛函空间（如[Banach Space](http://en.wikipedia.org/wiki/Banach_space)）中的概率论。
 
 更多细节请参考下面链接：
 
@@ -340,7 +349,7 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 ## 小结
 
 上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。
-这是一篇读书笔记，如有疏漏，敬请见谅。若希望获得更深理解，请参考下面的参考文献。
+若希望获得更深理解，请参考下面的参考文献。
 
 ## 参考文献
 - [VC dimension Tutorial Slides by Andrew Moore](http://www.autonlab.org/tutorials/vcdim.html)
@@ -350,5 +359,6 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 - [机器学习简史](http://www.36dsj.com/archives/21236)
 - [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
 - [Deep Learning Tutorial](http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf)
-- [深度学习与统计学习理论](http://1.guzili.sinaapp.com/?p=174)
 - [深度学习的研究领域是否有被过度夸大](http://www.zhihu.com/question/27434103)
+
+[](http://1.guzili.sinaapp.com/?p=174)
