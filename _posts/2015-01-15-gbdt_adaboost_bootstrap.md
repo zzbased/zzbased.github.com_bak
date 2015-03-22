@@ -9,6 +9,14 @@ tags: []
 
 # gbdt，adaboost，bootstrap
 
+## 决策树
+
+Split training set at ”the best value” of ”the best feature”
+
+- Information gain (ratio)
+- Gini index
+- Mean square error
+
 ## boosting方法共性
 
 - Train one base learner at a time.
@@ -18,6 +26,8 @@ tags: []
 ## gbdt
 
 意为 gradient boost decision tree。又叫MART（Multiple Additive Regression Tree)
+
+**好好看一下 kimmy的ppt: Gradient Boosted Decision Tree**
 
 ### 分类树和回归树
 
