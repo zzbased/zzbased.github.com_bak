@@ -43,7 +43,7 @@ VC维在机器学习领域是一个很基础的概念，它给诸多机器学习
 
 1986年，Rummelhart与McClelland发明了神经网络的学习算法Back Propagation。
 
-1992年，Vapnik等人提出了支持向量机(support vector machine)。神经网络是多层的非线性模型，支持向量机利用核技巧把非线性问题转换成线性问题。
+1993年，Corinna Cortes和Vapnik等人提出了支持向量机(support vector machine)。神经网络是多层的非线性模型，支持向量机利用核技巧把非线性问题转换成线性问题。
 
 1992\~2005年，SVM与Neural network之争，但被互联网风潮掩盖住了。
 
@@ -130,7 +130,7 @@ $$\leq 2M\exp(-2 \epsilon^2 N)$$
 在往下继续推导前，先看一下**什么情况下Learning是可行的**？
 
 1. 如果假设空间H的size M是有限的，当N足够大时，那么对假设空间中任意一个g，Eout(g)约等于Ein(g)；
-2. 利用算法A从假设空间H中，挑选出一个g，使得Ein(g)接近于0，那么probably approximately correct而言，Eout(g)也接近为0；
+2. 利用算法A从假设空间H中，挑选出一个g，使得Ein(g)接近于0，那么[probably approximately correct](http://en.wikipedia.org/wiki/Probably_approximately_correct_learning)而言，Eout(g)也接近为0；
 
 ![](two_central_questions.png)
 
@@ -263,7 +263,7 @@ OK，到目前为止，关于m_H(N)的推导结束。回到growth function小节
 
 说了这么多，VC维终于露出庐山真面目了。此概念由Vladimir Vapnik与Alexey Chervonenkis提出。
 
-一个假设空间H的**VC dimension**，是这个H最多能够shatter掉的点的数量，记为\\(d_{vc}(H)\\)。如果不管多少个点H都能shatter它们，则\\(d_{vc}(H)\\)=无穷大。
+一个假设空间H的**VC dimension**，是这个H最多能够shatter掉的点的数量，记为\\(d_{vc}(H)\\)。如果不管多少个点H都能shatter它们，则\\(d_{vc}(H)\\)=无穷大。还可以理解为：vc-dim就是argmax_n {growth function=power(2,n)}。
 
 根据定义，可以得到一个明显的结论：$$ k = d_{vc}(H) + 1 $$
 
@@ -283,7 +283,6 @@ OK，到目前为止，关于m_H(N)的推导结束。回到growth function小节
 ![](m_and_d_vc.png)
 
 从上图可以看出，当VC维很小时，条件1容易满足，但因为假设空间较小，可能不容易找到合适的g 使得Ein(g)约等于0。当VC维很大时，条件2容易满足，但条件1不容易满足，因为VC bound很大。
-
 
 VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也越强，因为它可以打散(shatter)更多的点。
 
@@ -319,7 +318,7 @@ VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也�
 
 对于神经网络，其VC维的公式为：
 
-dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的个数，也就是神经元之间连接的数目。
+dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的个数，也就是神经元之间连接的数目。(注意：此式是一个较粗略的估计，深度神经网络目前没有明确的vc bound)
 
 ![](neural_network_vc_dimension.png)
 
@@ -337,7 +336,7 @@ dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的�
 
 更多细节请参考下面链接：
 
-- [VC Dimension of Multilayer Neural Networks](http://ttic.uchicago.edu/~tewari/lectures/lecture12.pdf)，该文章给出了多层神经网络的VC bound的证明。
+- [VC Dimension of Multilayer Neural Networks](http://ttic.uchicago.edu/~tewari/lectures/lecture12.pdf)，该文章给出了多层神经网络的VC bound的相关证明。
 
 - [Lecun: What is the relationship between Deep Learning and Support Vector Machines / Statistical Learning Theory? ](http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html)
 
@@ -348,12 +347,11 @@ dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的�
 
 ## 小结
 
-上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。
-若希望获得更深理解，请参考下面的参考文献。
+上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。考虑到VC维在机器学习领域虽是基础，却也是大坑，所以难免有理解不深或不当之处，敬请谅解。若希望获得更深理解，请参考下面的参考文献。
 
 ## 参考文献
 - [VC dimension Tutorial Slides by Andrew Moore](http://www.autonlab.org/tutorials/vcdim.html)
-- [机器学习基石](https://www.coursera.org/course/ntumlone) [笔记](http://www.douban.com/doulist/3381853/)
+- [机器学习基石](https://www.coursera.org/course/ntumlone) [笔记](http://www.douban.com/doulist/3381853/) (上文的截图均出自于该课程的讲义)
 [](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
 - [vc-dimension in svms](http://www.svms.org/vc-dimension/)
 - [机器学习简史](http://www.36dsj.com/archives/21236)
