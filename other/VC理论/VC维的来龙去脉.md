@@ -358,5 +358,5 @@ dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的�
 - [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
 - [Deep Learning Tutorial](http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf)
 - [深度学习的研究领域是否有被过度夸大](http://www.zhihu.com/question/27434103)
-
+- [VC Theory: Vapnik–Chervonenkis Dimension](http://freemind.pluskid.org/slt/vc-theory-vapnik-chervonenkis-dimension)
 [](http://1.guzili.sinaapp.com/?p=174)

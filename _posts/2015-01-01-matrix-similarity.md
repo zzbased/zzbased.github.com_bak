@@ -14,7 +14,6 @@ tags: []
 #### 相似度计算方法
 - 相似度计算方法：cosine距离，jaccard距离，bm25模型，proximity模型。具体请参考[机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html)
 
-
 #### 降维方法
 - 计算任意两个user之间的相似度，需要O(m*n)的复杂度。当n很大的时候，首先想到的办法是能否降维，将原矩阵变为m\*k维(k<<n)。
 
@@ -64,3 +63,10 @@ tags: []
 	-  哪一种方法需要存储更少，取决于(k+1)mn和(m+n)k的大小。
 
 - 更多矩阵乘法，请参考文章[Cannon算法](http://en.wikipedia.org/wiki/Cannon's_algorithm)，[Scalable Universal Matrix Multiplication Algorithm](http://www.netlib.org/lapack/lawnspdf/lawn96.pdf)
+
+
+#### 更多资料
+
+- 昨天想用simhash做近似文档检测，感谢 @snowland @_aszxqw_ 等答疑。把这个过程中看的两篇文章和几篇介绍贴收集在这里 http://t.cn/RvlnyLl 这篇文章里 http://t.cn/RvlnyLW 作者论证MinHash更好。不过MinHash的Python实现好像没有simhash成熟。最后还是用了Liang Sun 的实现，自行实现持久化
+
+- [机器学习日报-相似度计算](http://ml.memect.com/search/?q=simhash%20OR%20MinHash%20OR%20相似度)
