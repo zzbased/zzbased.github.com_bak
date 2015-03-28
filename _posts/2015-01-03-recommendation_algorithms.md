@@ -7,14 +7,13 @@ tags: [machine learning]
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-
 # 推荐算法总结
 
 #### author: vincentyao@tencent.com
 
 互联网的发展经历了这样几个阶段，首先是信息产生阶段，接着由于信息越来越多，用户需要查询相关信息，就有了搜索引擎，再接着，信息过载更加严重，用户需求不明确时，就需要推荐引擎了。
 
-推荐在计算广告上有很多的运用，如下图所示，Netflix有2/3的电影观看都是经由推荐的。
+推荐在互联网商业、计算广告上有很多的运用，如下图所示，Netflix有2/3的电影观看都是通过推荐产生的。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/value_of_recommender.png)
 
@@ -470,6 +469,7 @@ Justin:online match + online learning works very well
 - [文章]《Personalized Recommendations at Etsy》http://t.cn/Rz7MdpO 介绍Etsy采用的个性化推荐算法，包括矩阵分解、交替最小二乘、随机SVD和局部敏感哈希等
 - 如何选择推荐模型：http://t.cn/RAAoLin 。转给对推荐算法感兴趣的新同学。
 - 【机器学习在推荐系统中的应用(MLSS'15)讲义】《Machine Learning for Recommender Systems MLSS 2015 Sydney》http://t.cn/RA2aalL Alexandros Karatzoglou在MLSS 2015上的报告，共200多页，包括RBM、RNN、FM、Learning to Rank等在推荐系统中的应用，有一定探索性，值得一读 云:http://t.cn/RA2SAGM
+- [王小科-新浪微博推荐](http://www.wangke.me/?p=181)
 
 ## 参考文献
 1. [数据挖掘技术在推荐系统的应用，陈运文](http://wenku.baidu.com/view/0607e780d0d233d4b14e699e.html)
