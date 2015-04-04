@@ -26,6 +26,7 @@ Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么�
 | non-uniform     | linear      |   AdaBoost，GradientBoost |
 | conditional | stacking(non-linear)     |    Decision Tree |
 
+
 有了多种Aggregation模型后，还可以将Aggregation模型再融合。如果将bagging配上decision tree，则是random forest。如果将AdaBoost配上Decision Tree，则是AdaBoost-DTree。如果将GradientBoost配上Decision Tree，则是大名鼎鼎的GBDT(Gradient Boost Decision Tree)。
 
 OK，对Aggregation模型有了大体的认识后，下文将来讲述比较具有代表性的Aggregation模型。本文大致分为五个部分：第一部分介绍Decision Tree；第二部分介绍Random forest；第三部分介绍AdaBoost；第四部分介绍Gradient Boost Decision Tree；最后对Aggregation模型再做一下对比与总结。
@@ -84,9 +85,11 @@ CART的termination条件是：
 
 ### 小结
 Decision tree优点：
+
 >(1)易于理解和解释；(2)即可以处理数值型数据也可以处理类别型数据；(3)生成的模式简单，对噪声数据有很好的健壮性。
 
 Decision tree缺点：
+
 >(1)启发式的规则(前人的巧思)，缺乏理论基础，并且启发式规则很多，需要selection；(2)容易过拟合；(3)对那些有类别型属性的数据, 信息增益会有一定的偏置；(4)训练一棵最优的决策树是一个完全NP问题。
 
 几种决策树算法的区别：
