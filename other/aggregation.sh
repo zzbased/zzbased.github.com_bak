@@ -1,0 +1,1 @@
+sed  's/!\[\](\(.*\)/![](https:\/\/raw.githubusercontent.com\/zzbased\/zzbased.github.com\/master\/other\/aggregation\/\1/g' zzbased.github.com/other/aggregation/2015-01-15-Aggregation模型.md > zzbased.github.com/_posts/2015-04-03-Aggregation模型.md
