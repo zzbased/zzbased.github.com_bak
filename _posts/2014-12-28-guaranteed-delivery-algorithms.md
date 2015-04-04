@@ -38,7 +38,4 @@ title: "guaranteed delivery algorithms"
 
 ## Shale算法
 
-
-https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/contract_ad_bipartite.jpg
-
-https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/contract_ad_bipartite.jpg
+Shale算法是HMM算法的升级版。这里的算法可以参考一下《devinzheng 在线分配算法综述》
