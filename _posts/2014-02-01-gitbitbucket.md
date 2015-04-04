@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "git & bitbucket"
+title: "Git & Bitbucket"
 description: ""
 category:
 tags: [git]
 ---
-## git + bitbucket 配置 ##
+## Git + Bitbucket 配置 ##
 
 bitbuckte 相比于时下最流行的 github, 其最牛之处在于可以免费创建私人项目。这点相当吸引人。我打算把一些杂乱的项目放上去，一方面为个备份，另一方面也为跟踪开发过程。
 

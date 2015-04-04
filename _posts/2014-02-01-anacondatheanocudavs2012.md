@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "anaconda+theano+cuda+vs2012编程环境搭建"
+title: "Anaconda+Theano+Cuda+Vs2012编程环境搭建"
 description: ""
 category:
 tags: [cuda, deep learning]
 ---
 
-## anaconda+theano+cuda+vs2012编程环境搭建 ##
+## Anaconda+Theano+Cuda+Vs2012编程环境搭建
 
 ### 一 基本概念介绍 ###
 

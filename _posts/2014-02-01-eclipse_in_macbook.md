@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "mac电脑上eclipse的设置"
+title: "Mac电脑上Eclipse的设置"
 description: ""
 category:
 tags: [mac]
 ---
 
-## mac电脑上eclipse设置
+## Mac电脑上Eclipse设置
 
 1. 首先是下载最新的jdk. 下载安装后，并设置环境变量：
 
