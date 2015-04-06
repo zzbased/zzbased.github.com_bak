@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "利用jekyll+github搭建简易博客"
+title: "Mac知识 && 利用jekyll+github搭建简易博客"
 description: ""
 category:
 tags: [blog, git]
@@ -19,6 +19,13 @@ tags: [blog, git]
 
 - mac os：
 	- MacPorts - Formerly known as DarwinPorts：port。
+
+	homebrew vs ports：[What is the difference/usage of homebrew, macports](http://stackoverflow.com/questions/21374366/what-is-the-difference-usage-of-homebrew-macports-or-other-package-installation)，[知乎-Homebrew 和 Fink、MacPort 相比有什么优势](http://www.zhihu.com/question/19862108)
+
+	[Homebrew install](http://brew.sh/index_zh-cn.html)
+
+	xcode-select：the Xcode command line tools
+
 - python：
 	- pip - a package manager for Python and the PyPI programming library
 	- EasyInstall - a package manager for Python and the PyPI programming library which is part of the Setuptools packaging system

@@ -149,13 +149,27 @@ Bagging是data randomness，而为了增强diversity(即得到更多不同的g_t
 
 ### Boosting
 
+Boosting的思想相当的简单，对一份数据，建立M个模型（比如分类），一般这种模型比较简单，称为弱分类器(weak learner)。每次分类都将上一次分错的数据权重提高一点再进行分类，这样最终得到的分类器在测试数据与训练数据上都可以得到比较好的成绩。Boosting也就是开篇所述的linear blending模型。
+
+boosting可以用下面公式来表示：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/boosting_formula1.png)
+
+其中alpha是权重，y_m是弱分类器，整体就是一个linear模型。
+
+不同的损失函数和极小化损失函数方法决定了boosting的最终效果，先说几个常见的boosting：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/boosting_category.png)
+
+上图出自 Machine Learning A Probabilistic Perspective，对于二分类问题来说：其中πi=sigm(2f(xi)) ,y~i∈{-1,+1},yi∈{0,1}。
+
 Boosting方法共性：
 
 - Train one base learner at a time
 - Focus it on the mistakes of its predecessors
 - Weight it based on how 'useful' it is in the ensemble (not on its training error)
 
-更多请参考：[Introduction to Boosting](http://www.cs.man.ac.uk/~stapenr5/boosting.pdf) 
+更多请参考：[Introduction to Boosting](http://www.cs.man.ac.uk/~stapenr5/boosting.pdf)
 
 ### AdaBoost
 AdaBoost(Adaptive Boosting)由Yoav Freund和Robert Schapire提出。AdaBoost方法的自适应在于：前一个分类器分错的样本会被用来训练下一个分类器。AdaBoost方法对于噪声数据和异常数据很敏感。但在一些问题中，AdaBoost方法相对于大多数其它学习算法而言，不会很容易出现过拟合现象。
@@ -217,6 +231,9 @@ Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instanc
 
 ### GradientBoost
 
+Gradient Boosting是一种Boosting的方法。
+与传统的Boost的区别是，每一次的计算是为了减少上一次的残差(residual)，而为了消除残差，我们可以在残差减少的梯度(Gradient)方向上建立一个新的模型。所以说，在Gradient Boost中，每个新的模型的建立是为了使得之前模型的残差往梯度方向减少，与传统Boost对正确、错误的样本进行加权有着很大的区别。
+
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gradient_boost1.png)
 
 GradientBoost: allows extension to different err for regression/soft classification/etc。
@@ -225,7 +242,11 @@ GradientBoost: allows extension to different err for regression/soft classificat
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/residuals_for_gbdt.png)
 
+更多请参考[模型组合(Model Combining)之Boosting与Gradient Boosting](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html)
+
 ### Gradient boost decision tree
+目前GBDT有两个不同的描述版本。[残差版本](http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee)把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。[Gradient版本](http://blog.csdn.net/dark_scope/article/details/24863289)把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。
+
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_algorithm1.png)
 
@@ -237,6 +258,7 @@ GradientBoost: allows extension to different err for regression/soft classificat
 
 Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。
 
+更多请参考：[GBDT迭代决策树](http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml)
 
 ## 总结
 
