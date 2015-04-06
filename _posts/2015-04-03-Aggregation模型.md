@@ -83,7 +83,7 @@ CART的termination条件是：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/CART_regularizer.png)
 
-### 小结
+### Decision tree小结
 Decision tree优点：
 
 >(1)易于理解和解释；(2)即可以处理数值型数据也可以处理类别型数据；(3)生成的模式简单，对噪声数据有很好的健壮性。
@@ -157,11 +157,17 @@ boosting可以用下面公式来表示：
 
 其中alpha是权重，y_m是弱分类器，整体就是一个linear模型。
 
+从Function Space里的Numerical Optimization角度看Boosting。boosting也叫forward stagewise additive modeling，因为在迭代的过程中，我们不能再回退去修改以前的参数，一切只能向前看了。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition1.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition2.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition3.png)
+
 不同的损失函数和极小化损失函数方法决定了boosting的最终效果，先说几个常见的boosting：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/boosting_category.png)
 
-上图出自 Machine Learning A Probabilistic Perspective，对于二分类问题来说：其中πi=sigm(2f(xi)) ,y~i∈{-1,+1},yi∈{0,1}。
+上图出自 Machine Learning A Probabilistic Perspective Table 16.1(P556)。不过其中注释的algorithm和个人理解有些不一致，Absolute error应该是叫Least Absolute Deviation (LAD) Regression。Gradient boosting的常见示例是squared loss。
 
 Boosting方法共性：
 
@@ -247,18 +253,42 @@ GradientBoost: allows extension to different err for regression/soft classificat
 ### Gradient boost decision tree
 目前GBDT有两个不同的描述版本。[残差版本](http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee)把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。[Gradient版本](http://blog.csdn.net/dark_scope/article/details/24863289)把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。
 
-
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_algorithm1.png)
 
 意为gradient boost decision tree。又叫MART（Multiple Additive Regression Tree)
 
-**好好看一下 kimmy的ppt: Gradient Boosted Decision Tree**
+**kimmyzhang的ppt: Gradient Boosted Decision Tree**
 
-### Shrinkage
+Gradient Boosting Machine：
 
-Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gradient_boosting_machine.png)
+
+GB+DT+squared error loss：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_squaredloss.png)
 
 更多请参考：[GBDT迭代决策树](http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml)
+
+### Regularization
+GBDT的常见regularization方法有：控制树的个数(即early stop)，对每一棵树控制其深度、叶子节点个数。
+
+除此外，还可以在每次训练树时，对data和feature做subsampling。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/sampling_shrinkage.png)
+
+另一个常见的正则方法是Shrinkage。Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/shrinkage_algorithm.png)
+
+### GBDT应用
+最近，gbdt模型在搜索排序里得到大量应用。除此外，GBDT还可以用来做特征选择和特征组合。
+
+比较有代表性的是facebook的文章
+[Practical Lessons from Predicting Clicks on Ads at Facebook](http://quinonero.net/Publications/predicting-clicks-facebook.pdf)提到的方法，它利用GBDT+LR做CTR预估，取得不错的效果。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/facebook_gdbt_lr.png)
+
+如果想通过代码学习GBDT，可以参考code：[kaggle-2014-criteo my notes](https://github.com/zzbased/kaggle-2014-criteo)，[陈天奇的xgboost](https://github.com/dmlc/xgboost)。
 
 ## 总结
 
@@ -287,6 +317,8 @@ learning: aggregate as well as getting diverse g_t
 
 ### Boosting方法比较
 
+关于boosting方法的比较，上文中mlapp的图已经表达得比较明确了。下面把一些常见方法的特点再加强阐述下。
+
 - Adaboost：一种boost方法，它按分类对错，分配不同的weight，计算cost function时使用这些weight，从而让“错分的样本权重越来越大，使它们更被重视”。
 
 - GBDT的核心在于：每一棵树学的是之前所有树的结论和残差。每一步的残差计算其实变相地增大了分错instance的权重，而已经分对的instance则都趋向于0。
@@ -295,7 +327,7 @@ learning: aggregate as well as getting diverse g_t
 
 	如果一个instance被前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。这里是决策树给予不同样本不同权重的方法。
 
-[集成学习：机器学习刀光剑影 之 屠龙刀](http://www.52cs.org/?p=383)
+一篇不错的综述性文章：[集成学习：机器学习刀光剑影 之 屠龙刀](http://www.52cs.org/?p=383)
 
 - Bagging和boosting也是当今两大杀器RF（Random Forests）和GBDT（Gradient Boosting Decision Tree）之所以成功的主要秘诀。
 - Bagging主要减小了variance，而Boosting主要减小了bias，而这种差异直接推动结合Bagging和Boosting的MultiBoosting的诞生。参考:Geoffrey I. Webb (2000). MultiBoosting: A Technique for Combining Boosting and Wagging. Machine Learning. Vol.40(No.2)
