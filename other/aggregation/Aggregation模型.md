@@ -292,7 +292,7 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，对�
 
 ## 总结
 
-### 方法总结
+### Aggregation方法总结
 **Blending Models**
 
 blending: aggregate after getting diverse g_t
@@ -317,7 +317,18 @@ learning: aggregate as well as getting diverse g_t
 
 ### Boosting方法比较
 
-关于boosting方法的比较，上文中mlapp的图已经表达得比较明确了。下面把一些常见方法的特点再加强阐述下。
+关于boosting方法的比较，上文中mlapp的图已经表达得比较明确了。这里再在公式上做一下细化。
+
+Square and Absolute Error：
+![](Square-and-Absolute-Error.png)
+
+Logistic Loss and LogitBoost：
+![](Logistic-Loss-and-LogitBoost.png)
+
+Exponential Loss and Adaboost：
+![](Exponential-Loss-and-Adaboost.png)
+
+下面把一些常见方法的特点再加强阐述下。
 
 - Adaboost：一种boost方法，它按分类对错，分配不同的weight，计算cost function时使用这些weight，从而让“错分的样本权重越来越大，使它们更被重视”。
 
@@ -352,4 +363,8 @@ learning: aggregate as well as getting diverse g_t
 Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf: http://t.cn/RZBTobH 云:http://t.cn/RZBTobT
 - [Interpreting random forests](http://blog.datadive.net/interpreting-random-forests/)
 - [计算机视觉：随机森林算法在人体识别中的应用](http://toutiao.com/a4055188882/)
+- J. Friedman(1999). Greedy Function Approximation: A Gradient Boosting Machine.
+- J. Friedman(1999). Stochastic Gradient Boosting.
+- J. Friedman, T. Hastie, R. Tibshirani(2000). Additive Logistic Regression - A Statistical View of Boosting.
+- T. Hastie, R. Tibshirani, J. Friedman(2008). Chapter 10 of The Elements of Statistical Learning(2e).
 
