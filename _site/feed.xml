@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2015 19:17:10 +0800</pubDate>
-    <lastBuildDate>Sun, 12 Apr 2015 19:17:10 +0800</lastBuildDate>
+    <pubDate>Sun, 12 Apr 2015 19:37:05 +0800</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2015 19:37:05 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -589,13 +589,7 @@ a maximization (M) step, where parameters are updated based on the so-called exp
     
       <item>
         <title>机器学习技法学习笔记</title>
-        <description>
-&lt;hr /&gt;
-&lt;p&gt;layout: post
-title: “机器学习技法学习笔记”
-—&lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
 &lt;h1 id=&quot;section&quot;&gt;机器学习技巧 学习笔记&lt;/h1&gt;
 
@@ -919,7 +913,7 @@ CART算法采用一种二分递归分割的技术，与基于信息熵的算法�
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/cart_example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/2chapter9_question1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1115,9 +1109,8 @@ transformation function of score (signal) s：不用linear，因为多层线性=
 
 &lt;p&gt;基于高斯核的SVM如下所示，相当于是support vector上的radial hypotheses的线性组合。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/gaussian_svm2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So，Radial Basis Function (RBF) Network: linear aggregation of radial hypotheses。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/gaussian_svm2.png&quot; alt=&quot;&quot; /&gt;
+So，Radial Basis Function (RBF) Network: linear aggregation of radial hypotheses。&lt;/p&gt;
 
 &lt;p&gt;将RBF network类比于neural network，output layer是一样的，都是线性组合，不一样是隐藏层(在RBF network里，是distance + gaussian)。&lt;/p&gt;
 

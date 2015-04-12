@@ -1,3 +1,6 @@
+title: "VC维的来龙去脉"
+---
+
 # VC维的来龙去脉
 #### author: vincentyao@tencent.com
 
@@ -350,13 +353,13 @@ dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的�
 上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。考虑到VC维在机器学习领域虽是基础，却也是大坑，所以难免有理解不深或不当之处，敬请谅解。若希望获得更深理解，请参考下面的参考文献。
 
 ## 参考文献
+
 - [VC dimension Tutorial Slides by Andrew Moore](http://www.autonlab.org/tutorials/vcdim.html)
-- [机器学习基石](https://www.coursera.org/course/ntumlone) [笔记](http://www.douban.com/doulist/3381853/) (上文的截图均出自于该课程的讲义)
-[](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
+- [机器学习基石](https://www.coursera.org/course/ntumlone) (上文的截图均出自于该课程的讲义) [笔记](http://www.douban.com/doulist/3381853/) [笔记2](http://beader.me/mlnotebook/section2/vc-dimension-three.html)
 - [vc-dimension in svms](http://www.svms.org/vc-dimension/)
 - [机器学习简史](http://www.36dsj.com/archives/21236)
 - [Vapnik–Chervonenkis theory](http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
 - [Deep Learning Tutorial](http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf)
 - [深度学习的研究领域是否有被过度夸大](http://www.zhihu.com/question/27434103)
 - [VC Theory: Vapnik–Chervonenkis Dimension](http://freemind.pluskid.org/slt/vc-theory-vapnik-chervonenkis-dimension)
-[](http://1.guzili.sinaapp.com/?p=174)
+- [深度学习与统计学习理论](http://1.guzili.sinaapp.com/?p=174)
