@@ -1,5 +1,3 @@
----
-layout: post
 title: "Aggregation模型"
 ---
 

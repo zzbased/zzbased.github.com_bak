@@ -35,6 +35,10 @@
       <div class="trigger">
         
           
+          <a class="page-link" href="/other/aggregation/Aggregation%E6%A8%A1%E5%9E%8B.html">Aggregation模型</a>
+          
+        
+          
           <a class="page-link" href="/about/">About</a>
           
         
@@ -114,6 +118,7 @@
   <li><a href="https://breezedeus.github.io/2014/11/15/breezedeus-feature-processing.html">特征处理入门 by BreezeDeus</a></li>
   <li><a href="http://www.flickering.cn/ads/2014/08/转化率预估-4特征选择－简介/">特征选择 by ubiwang</a></li>
   <li><a href="http://tech.meituan.com/machinelearning-data-feature-process.html">美团推荐团队-机器学习中的数据清洗与特征处理综述</a></li>
+  <li><a href="http://t.cn/RPiYmQP">Kaggle高手们的特征工程技巧</a></li>
 </ul>
 
 <h3 id="section-3">特征降维</h3>
@@ -136,12 +141,18 @@
       <li><a href="">Large-scale L-BFGS using MapReduce</a> 该论文讲述了运用了hashing技术后，AUC的变化。</li>
     </ul>
   </li>
+  <li>[幻灯]《Hashing for Machine Learning》http://t.cn/RAZxF7Y 用于机器学习特征工程的哈希</li>
 </ul>
 
 <h3 id="section-4">特征选择</h3>
 
 <ul>
-  <li><a href="http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/">Selecting good features</a> 特征工程系列文章：Part1. <a href="http://t.cn/Rw4B2vO">单变量选取</a> Part2.<a href="http://t.cn/Rw4Blqc">线性模型和正则化</a> Part3.<a href="http://t.cn/Rw4BEAQ">随机森林</a> Part4.<a href="http://t.cn/Rw4rndV">稳定性选择法、递归特征排除法RFE及综合比较</a> 内容很赞，还有Python代码示例。</li>
+  <li>
+    <p><a href="http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/">Selecting good features</a> 特征工程系列文章：Part1. <a href="http://t.cn/Rw4B2vO">单变量选取</a> Part2.<a href="http://t.cn/Rw4Blqc">线性模型和正则化</a> Part3.<a href="http://t.cn/Rw4BEAQ">随机森林</a> Part4.<a href="http://t.cn/Rw4rndV">稳定性选择法、递归特征排除法RFE及综合比较</a> 内容很赞，还有Python代码示例。</p>
+  </li>
+  <li>
+    <p><a href="http://phunters.lofter.com/post/86d56_194e956">关于推荐系统中的特征工程</a></p>
+  </li>
 </ul>
 
 <h3 id="section-5">预估模型</h3>
@@ -225,6 +236,14 @@
 
 <h3 id="section-7">点击率预测的几个问题</h3>
 
+<p><a href="http://jhuangpku.github.io/ee-xiang-shuo-ai-ni-bu-rong-yi.html">新广告问题：explore and exploit EE-想说爱你不容易</a></p>
+
+<p><a href="http://jhuangpku.github.io/aucshang-sheng-ctryi-ding-shang-sheng-yao.html">AUC上升CTR一定上升么</a></p>
+
+<ul>
+  <li>文中归纳了三个原因：环境特征的引入，点击率和relevance的偏差(点击率=true relevance * position_bias)，评估集合和线上集合的数据偏差（即survival-bias）；</li>
+</ul>
+
 <p><a href="http://1.guzili.sinaapp.com/?p=10">搜索广告点击率预测的几个有趣问题</a></p>
 
 <ul>
@@ -243,6 +262,15 @@
   <li>
     <p>如何做到广告系统更新时的平稳过渡？整体上来讲，每次策略变化都不会有突变，但反映到局部广告主上，哪怕是很小的策略更新，都可能对其造成翻天覆地的变化。</p>
   </li>
+</ul>
+
+<h3 id="exploration-and-exploitation">Exploration and Exploitation</h3>
+
+<ul>
+  <li><a href="http://blog.findshine.com/2015/01/03/bandit.html">Bandit:一种简单而强大的在线学习算法</a></li>
+  <li><a href="">新广告选择策略 meteorli,nelsonliao</a></li>
+  <li><a href="https://support.google.com/analytics/answer/2847946?hl=zh-Hans&amp;ref_topic=1745207">Google Analytics 参考书目（多手柄老虎机）</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Thompson_sampling">Thompson sampling</a>，<a href="http://jmlr.org/proceedings/papers/v23/agrawal12/agrawal12.pdf">Analysis of Thompson Sampling for the Multi-armed Band</a></li>
 </ul>
 
 <h3 id="section-8">其他方面</h3>

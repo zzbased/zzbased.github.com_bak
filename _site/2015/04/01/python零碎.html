@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>决策树</title>
-  <meta name="description" content="决策树与GBDT">
+  <title>Python零碎</title>
+  <meta name="description" content="Python零碎">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/01/03/decision_tree.html">
+  <link rel="canonical" href="http://yourdomain.com/2015/04/01/python%E9%9B%B6%E7%A2%8E.html">
   <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -35,6 +35,10 @@
       <div class="trigger">
         
           
+          <a class="page-link" href="/other/aggregation/Aggregation%E6%A8%A1%E5%9E%8B.html">Aggregation模型</a>
+          
+        
+          
           <a class="page-link" href="/about/">About</a>
           
         
@@ -57,46 +61,50 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">决策树</h1>
-    <p class="post-meta">Jan 3, 2015</p>
+    <h1 class="post-title">Python零碎</h1>
+    <p class="post-meta">Apr 1, 2015</p>
   </header>
 
   <article class="post-content">
-    <h2 id="gbdt">决策树与GBDT</h2>
+    <h1 id="python">Python零碎</h1>
 
-<ul>
-  <li>
-    <p><a href="http://cvchina.net/post/107.html">决策树模型组合之随机森林与GBDT</a></p>
+<p><a href="http://www.cnblogs.com/vivilisa/archive/2009/03/19/1417083.html">Enumerate</a></p>
 
-    <p><a href="http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html">机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2</a></p>
+<p>enumerate会将数组或列表组成一个索引序列。使我们再获取索引和索引内容的时候更加方便如下：
+	for index，text in enumerate(list)):
+	   print index ,text</p>
 
-    <p>模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。</p>
-  </li>
-  <li>
-    <p><a href="http://statweb.stanford.edu/~jhf/ftp/trebst.pdf">经典文章 Greedy function approximation : A Gradient Boosting Machine</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/tqchen/xgboost">xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library, also support distributed learning</a></p>
+<p><a href="http://stackoverflow.com/questions/3815860/python-how-to-exit-main-function">Python how to exit main function</a></p>
 
-    <p>并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac</p>
-  </li>
-  <li>
-    <p><a href="http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt">pGBRT: Parallel Gradient Boosted Regression Trees</a></p>
-  </li>
-  <li>
-    <p><a href="http://bigdata.memect.com/?tag=GBDT">更多GBDT</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.hankcs.com/ml/decision-tree.html">决策树 用Python实现了决策树的ID3生成算法和C4.5生成算法</a></p>
-  </li>
-  <li>
-    <p><a href="http://t.cn/RZBT6Ap">论文 Understanding Random Forests: From Theory to Practice</a>
-Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf:http://t.cn/RZBTobH 云:http://t.cn/RZBTobT</p>
-  </li>
-  <li>
-    <p><a href="http://blog.datadive.net/interpreting-random-forests/">Interpreting random forests</a></p>
-  </li>
-</ul>
+<p><a href="http://www.cnblogs.com/65702708/archive/2010/09/14/1826362.html">Python sorted函数</a></p>
+
+<p><a href="http://blog.csdn.net/emaste_r/article/details/8447192">Python各种类型转换-int,str,char,float,ord,hex,oct等</a></p>
+
+<pre><code>int(x [,base ])         将x转换为一个整数
+long(x [,base ])        将x转换为一个长整数
+float(x )               将x转换到一个浮点数
+complex(real [,imag ])  创建一个复数
+str(x )                 将对象 x 转换为字符串
+repr(x )                将对象 x 转换为表达式字符串
+eval(str )              用来计算在字符串中的有效Python表达式,并返回一个对象
+tuple(s )               将序列 s 转换为一个元组
+list(s )                将序列 s 转换为一个列表
+chr(x )                 将一个整数转换为一个字符
+unichr(x )              将一个整数转换为Unicode字符
+ord(x )                 将一个字符转换为它的整数值
+hex(x )                 将一个整数转换为一个十六进制字符串
+oct(x )                 将一个整数转换为一个八进制字符串
+</code></pre>
+
+<p><a href="http://stackoverflow.com/questions/379906/parse-string-to-float-or-int">Parse Float String to Int</a></p>
+
+<pre><code>&gt;&gt;&gt; a = "545.2222"
+&gt;&gt;&gt; float(a)
+545.22220000000004
+&gt;&gt;&gt; int(float(a))
+545
+</code></pre>
+
 
   </article>
 

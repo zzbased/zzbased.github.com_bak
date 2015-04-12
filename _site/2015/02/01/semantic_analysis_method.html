@@ -35,6 +35,10 @@
       <div class="trigger">
         
           
+          <a class="page-link" href="/other/aggregation/Aggregation%E6%A8%A1%E5%9E%8B.html">Aggregation模型</a>
+          
+        
+          
           <a class="page-link" href="/about/">About</a>
           
         
@@ -95,7 +99,7 @@
   <li>
     <p>由字构词的分词方法。可以理解为字的分类问题，也就是自然语言处理中的sequence labeling问题，通常做法里利用HMM，MAXENT，MEMM，CRF等预测文本串每个字的tag[62]，譬如B，E，I，S，这四个tag分别表示：beginning, ending, inside, single，也就是一个词的开始，结束，中间，以及单个字的词。 例如”南京市长江大桥”的标注结果可能为：”南(B)京(I)市(E)长(B)江(E)大(B)桥(E)”</p>
 
-    <p>由于CRF既可以像最大熵模型一样加各种领域feature，又避免了HMM的齐次马尔科夫假设，所以基于CRF的分词目前是效果最好的，具体请参考文献[61,62,63]。</p>
+    <p>由于CRF既可以像最大熵模型一样加各种领域feature，又避免了HMM的齐次马尔科夫假设，所以基于CRF的分词目前是效果最好的，具体请参考文献[85,86,61,62,63]。</p>
 
     <p>除了HMM，CRF等模型，分词也可以基于深度学习方法来做，如文献[9][10]所介绍，也取得了state-of-the-art的结果。</p>
 
@@ -873,6 +877,8 @@
   <li><a href="http://www.cs.toronto.edu/~nitish/uai13.pdf">Modeling Documents with a Deep Boltzmann Machine</a></li>
   <li><a href="http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/">A Deep Dive into Recurrent Neural Nets</a></li>
   <li><a href="http://arxiv.org/abs/1502.01710?utm_source=dlvr.it&amp;utm_medium=tumblr">Xiang zhang et. Text Understanding from Scratch</a></li>
+  <li><a href="http://www.52nlp.cn/the-character-based-tagging-method-of-chinese-word-segmentation">基于字标注的中文分词方法</a></li>
+  <li><a href="http://www.52nlp.cn/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AD%97%E6%A0%87%E6%B3%A8%E6%B3%954">中文分词入门之字标注法4</a></li>
 </ol>
 
 

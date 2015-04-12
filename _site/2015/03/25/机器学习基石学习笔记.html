@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>机器学习基石学习笔记</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2015/03/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/other/aggregation/Aggregation%E6%A8%A1%E5%9E%8B.html">Aggregation模型</a>
+          
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">机器学习基石学习笔记</h1>
+    <p class="post-meta">Mar 25, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="section">机器学习基石 学习笔记</h1>
+
+<h2 id="learning-problem">第一讲 Learning problem</h2>
+
+<p>有用链接：</p>
+
+<ul>
+  <li><a href="https://www.coursera.org/course/ntumlone">机器学习基石</a></li>
+  <li><a href="https://class.coursera.org/ntumltwo-001/lecture">机器学习技法</a></li>
+  <li><a href="http://beader.me/mlnotebook/">beader.me笔记</a></li>
+  <li><a href="http://www.douban.com/doulist/3440234/">听课笔记douban</a></li>
+  <li><a href="http://mooc.guokr.com/course/610/機器學習基石--Machine-Learning-Foundations-/">mooc学院</a></li>
+</ul>
+
+<p>f 表示理想的方案
+g 表示求解的用来预测的假设
+H：假设空间
+X：输入
+Y：输出
+D：训练集合
+A：算法</p>
+
+<p>A takes D and H to get g。通过算法A，利用训练集合D，在假设空间H中选择最好的假设g，选择标准是g近似于f。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Formalize_the_Learning_Problem.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Practical_Definition_of_Machine_Learning.png" alt="" /></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter1_question1.png" alt="" /></p>
+
+<h2 id="perceptron-">第二讲 Perceptron-感知器</h2>
+
+<p>perceptron，感知器。此时h的形式为：h(x) = w*x。感知机（perceptron）是一个线性分类器(linear classifiers），线性分类器的几何表示为：直线，平面，超平面。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/perceptron.png" alt="" /></p>
+
+<p>注意H是infinite size；</p>
+
+<p>PLA(perceptron learning algorithm)，PLA A takes linear separable D and perceptrons H to get hypothesis g。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/perceptron_learning_algorithm.png" alt="" /></p>
+
+<p>上面，PLA算法如果D不是线性可分的，则PLA始终不能收敛。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/pocket_algorithm.png" alt="" /></p>
+
+<p>与简单PLA 的区别：迭代有限次数（提前设定）；随机地寻找分错的数据（而不是循环遍历）；只有当新得到的w 比之前得到的最好的wg 还要好时，才更新wg（这里的好指的是分出来的错误更少）。
+由于计算w 后要和之前的wg 比较错误率来决定是否更新wg， 所以pocket algorithm 比简单的PLA 方法要低效。</p>
+
+<p>更多细节请参考 <a href="http://beader.me/2013/12/21/perceptron-learning-algorithm/">Perceptron Learning Algorithm- PLA</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter2_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter2_question2.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter2_question3.png" alt="" /></p>
+
+<h2 id="section-1">第三讲 机器学习的分类学</h2>
+
+<p>reinforcement learning：广告系统，扑克，棋类游戏。
+unsupervised learning：聚类，density estimate，异常检测。
+semi-supervised learning：人脸识别，医药效果检测；</p>
+
+<p>batch：填鸭式教学；
+online：一条一条的教学；
+active：sequentialliy问问题；</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Active_learning_(machine_learning)">Active learning</a></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/types_of_learning.png" alt="" /></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chater3_question1.png" alt="" /></p>
+
+<h2 id="section-2">第四讲 学习的可行性分析</h2>
+
+<p>机器学习的可行性分析。</p>
+
+<ul>
+  <li>
+    <p>对于xor问题，perceptron是无解的。所以learning is impossible。如何解决上述存在的问题？ 答：做出合理的假设。</p>
+  </li>
+  <li>
+    <p>霍夫丁不等式(Hoeffding’s Inequality)，下式中v是样本概率；u是总体概率。</p>
+  </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/hoeffding_inequality.png" alt="" /></p>
+
+<ul>
+  <li>Connection to Learning</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Connection_to_Learning1.png" alt="" /></p>
+
+<p>面对多个h 做选择时，容易出现问题。比如，某个不好的h 刚好最初的”准确“ 的假象。
+随着h 的增加，出现这种假象的概率会增加。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/bound_of_baddata.png" alt="" /></p>
+
+<p>所以，当假设空间有限时（大小为M）时， 当N 足够大，发生BAD sample 的概率非常小。
+此时学习是有效的。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Statistical_Learning_Flow.png" alt="" /></p>
+
+<p>更多请参考 <a href="http://beader.me/2014/01/15/is-learning-feasible/">机器学习笔记-机器为何能够学习?</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter4_question1.png" alt="" /></p>
+
+<h2 id="section-3">第五讲 学习的可行性</h2>
+
+<p>学习的可能性：</p>
+
+<ol>
+  <li>假设空间H有限（M），且训练数据足够大，则可以保证测试错误率Eout 约等于训练错误率Ein；</li>
+  <li>如果能得到Ein 接近于零，根据（1），Eout 趋向于零。</li>
+</ol>
+
+<p>以上两条保证的学习的可能性。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_1.png" alt="" /></p>
+
+<p>M存在重要的trade-off 思想：
+（1）当M 很小，那么坏数据出现的概率非常小（见第四讲分析），学习是有效的；但是由于假设空间过小，我们不一定能找到一个方案，可以使训练误差接近零；
+（2）反之，若M 很大，因为choices变多，可能找到合适的方案g使E_in(g)=0，但坏数据出现的概率会变大。</p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question2.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question3.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question4.png" alt="" /></p>
+
+<h2 id="vc">第六讲-第七讲 归纳理论，VC维</h2>
+
+<p>关于VC维，请参考独立文章<a href="http://zzbased.github.io/2015/03/07/VC维的来龙去脉.html">VC维的来龙去脉</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter6_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter6_question2.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question2.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question3.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question4.png" alt="" /></p>
+
+<h2 id="section-4">第八讲 噪音与错误</h2>
+
+<p>带权重的分类</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/weighted_classification.png" alt="" /></p>
+
+<p>采用Pocket 方法，然而计算错误时对待两种错误(false reject/false accept) 不再一视同仁，false acceot 比false reject 严重1000倍。通过下面方法解决：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/equivalent_pocket.png" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>在训练开始前，我们将{(x,y)</td>
+      <td>y=-1} 的数据复制1000倍之后再开始学习，后面的步骤与传统的pocket 方法一模一样。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>然而，从效率、计算资源的角度考虑，通常不会真的将y=-1 的数据拷贝1000倍，实际中一般采用”virtual copying”。只要保证：
+randomly check -1 example mistakes with 1000 times more probability.</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/weighted_pocket_algorithm.png" alt="" /></p>
+
+<p>更多请参考 <a href="http://beader.me/2014/03/02/noise-and-error/">机器学习笔记-Noise and Error</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question2.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question3.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question4.png" alt="" /></p>
+
+<h2 id="section-5">第九讲 线性回归</h2>
+
+<p>线性回归假设的思想是：寻找这样的直线/平面/超平面，使得输入数据的残差最小。
+通常采用的error measure 是squared error。</p>
+
+<p>线性回归用矩阵表示如下:</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/linear_regression_matrix_format.png" alt="" /></p>
+
+<p>求导数，使导数为0，即可求得最优解</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/linear_regression_optim_solution.png" alt="" /></p>
+
+<p>Ein和Eout都向σ2(noise level)收敛，并且他们之间的差异被2(d+1)/N给bound住了。有点像VC bound，不过要比VC bound来的更严格一些。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/linear_regression_learning_curve.png" alt="" /></p>
+
+<p>一个直观的想法，能否利用linear regression来做linear classification?</p>
+
+<p>之所以能够通过线程回归的方法来进行二值分类，是由于回归的squared error 是分类的0/1 error 的上界，我们通过优化squared error，一定程度上也能得到不错的分类结果；或者，更好的选择是，将回归方法得到的w 作为二值分类模型的初始w 值。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/0_1_loss_bound.png" alt="" /></p>
+
+<p>更多请参考 <a href="http://beader.me/2014/03/09/linear-regression/">机器学习笔记-Linear Regression</a> <a href="http://www.douban.com/note/323611077/">豆瓣笔记</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter9_question1.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter9_question2.png" alt="" /></p>
+
+<h2 id="section-6">第十讲 逻辑回归</h2>
+
+<p>比较深刻的点有：</p>
+
+<p>似然函数的推导。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/likelihood_lr.png" alt="" />
+推导得到Cross-Entropy Error</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/lr_algorithm.png" alt="" /></p>
+
+<p>之所以说最优的v 是与梯度相反的方向，想象一下：如果一条直线的斜率k&gt;0，说明向右是上升的方向，应该向左走；反之，斜率k&lt;0，向右走。</p>
+
+<p>解决的方向问题，步幅也很重要。步子太小的话，速度太慢；过大的话，容易发生抖动，可能到不了谷底。
+显然，距离谷底较远（位置较高）时，步幅大些比较好；接近谷底时，步幅小些比较好（以免跨过界）。距离谷底的远近可以通过梯度（斜率）的数值大小间接反映，接近谷底时，坡度会减小。
+因此，我们希望步幅与梯度数值大小正相关。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/learningrate_lr.png" alt="" /></p>
+
+<p>更多请参考 <a href="http://beader.me/2014/05/03/logistic-regression/">机器学习笔记-Logistic Regression</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question2.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question3.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question4.png" alt="" /></p>
+
+<h2 id="section-7">第十一讲  线性分类模型</h2>
+
+<p>我们了解到线性回归和逻辑斯蒂回归一定程度上都可以用于线性二值分类，因为它们对应的错误衡量(square error, cross-entropy) 都是“0/1 error” 的上界。</p>
+
+<p>本质上讲，线性分类（感知机）、线性回归、逻辑斯蒂回归都属于线性模型，因为它们的核心都是一个线性score 函数：s=w^T*x</p>
+
+<p>只是三个model 对其做了不同处理：
+线性分类对s 取符号；线性回归直接使用s 的值；逻辑斯蒂回归将s 映射到(0,1) 区间。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/error_function_pla_lr_lr.png" alt="" /></p>
+
+<p><strong>多类别分类</strong></p>
+
+<p>方法有两个：</p>
+
+<p>一种直观的解决方法是将其转化为多轮的二值分类问题：任意选择一个类作为+1，其他类都看做-1，在此条件下对原数据进行训练，得到w；经过多轮训练之后，得到多个w。对于某个x，将其分到可能性最大的那个类。（例如逻辑斯蒂回归对于x 属于某个类会有一个概率估计）
+如果target 是k 个类标签，我们需要k 轮训练，得到k 个w。
+这种方法叫做One-Versus-All (OVA)。</p>
+
+<p>另一种方法叫做One-Versus-One(OVO)，对比上面的OVA 方法。
+基本方法：每轮训练时，任取两个类别，一个作为+1，另一个作为-1，其他类别的数据不考虑，这样，同样用二值分类的方法进行训练；目标类有k个时，需要 k<em>(k-1)/2 轮训练，得到 k</em>(k-1)/2 个分类器。
+预测：对于某个x，用训练得到的 k*(k-1)/2 个分类器分别对其进行预测，哪个类别被预测的次数最多，就把它作为最终结果。即通过“循环赛”的方式来决定哪个“类”是冠军。</p>
+
+<p>OVA 和 OVO 方法的思想都很简单，可以作为以后面对多值分类问题时的备选方案，并且可以为我们提供解决问题的思路。</p>
+
+<p>更多请参考<a href="http://www.douban.com/note/325298034/">线性分类模型 (台大机器学习）</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question2.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question3.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question4.png" alt="" /></p>
+
+<h2 id="section-8">第十二讲 非线性转换</h2>
+
+<p>这里的非线性转换其实也是特征转换(feature transform)，在特征工程里很常见。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/nonlinear_tranform.jpg" alt="" /></p>
+
+<p>x-空间的数据转换到z-空间之后，新的假设中的参数数量也比传统线性假设多了许多。
+经过非线性转换后，VC维将增大。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/nonlinear_transform_model_price.png" alt="" /></p>
+
+<p>高次假设对数据拟合得更充分，Ein 更小；然而，由于付出的模型复杂度代价逐渐增加，Eout 并不是一直随着Ein 减小。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Structured-Hypothesis-Sets.png" alt="" /></p>
+
+<p>更多请参考<a href="http://www.douban.com/note/325308691/">笔记</a></p>
+
+<p><strong>习题</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chaper12_question1.png" alt="" />
+<img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chaper12_question2.png" alt="" /></p>
+
+<h2 id="overfitting">第十三讲 过拟合 - Overfitting</h2>
+
+<p>更多请参考<a href="http://www.douban.com/note/325443925/">笔记</a></p>
+
+<h2 id="regularization">第十四讲 正规化-Regularization</h2>
+
+<p>原来的优化问题是NP-Hard 的。如果对w 进行更soft/smooth 的约束，可以使其更容易优化：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Regression-with-Softer-Constraint.png" alt="" /></p>
+
+<p>利用lagrange multiplier做regularization，得到下面式子：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/augmented_error.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/weight_decay_regularization.png" alt="" /></p>
+
+<p>总之，lambda 越大，对应的常数C 越小，模型越倾向于选择更小的w 向量。
+这种正规化成为 weight-decay regularization，它对于线性模型以及进行了非线性转换的线性假设都是有效的。</p>
+
+<p><strong>正规化与VC 理论</strong></p>
+
+<p>根据VC Bound 理论，Ein 与 Eout 的差距是模型的复杂度。也就是说，假设越复杂（dvc 越大），Eout 与 Ein 相差就越大，违背了我们学习的意愿。
+对于某个复杂的假设空间H，dvc 可能很大；通过正规化，原假设空间变为正规化的假设空间H(C)。与H 相比，H(C) 是受正规化的“约束”的，因此实际上H(C) 没有H 那么大，也就是说H(C) 的VC维比原H 的VC维要小。因此，Eout 与 Ein 的差距变小。:-)</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/l1_l2_compare.png" alt="" /></p>
+
+<p>上图解释了为什么L1有稀疏解。</p>
+
+<p>lambda 当然不是越大越好！选择合适的lambda 也很重要，它受到随机噪音和确定性噪音的影响。</p>
+
+<p>更多请参考<a href="http://www.douban.com/note/325451389/">笔记</a></p>
+
+<h2 id="validation">第十五讲 Validation</h2>
+
+<h2 id="three-learning-principles">第十六讲 Three Learning Principles</h2>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

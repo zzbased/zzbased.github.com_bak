@@ -35,6 +35,10 @@
       <div class="trigger">
         
           
+          <a class="page-link" href="/other/aggregation/Aggregation%E6%A8%A1%E5%9E%8B.html">Aggregation模型</a>
+          
+        
+          
           <a class="page-link" href="/about/">About</a>
           
         
@@ -166,6 +170,22 @@
 
 <h2 id="loss-function">Loss Function</h2>
 
+<p>不同的loss function对应着不同的机器学习算法。</p>
+
+<ul>
+  <li>0-1 loss: count(y != y’)  -&gt; Perceptron</li>
+  <li>squared loss: (y-y’)^2  -&gt; Linear regression</li>
+  <li>exponential loss: exp(-y<em>w^T</em>x)  -&gt; Adaboost</li>
+  <li>hinge loss: max(0, 1-y<em>w^T</em>x)  -&gt; SVM</li>
+  <li>cross entropy loss: log2(1 + exp(-y<em>w^T</em>x))  -&gt; Logistic regression</li>
+</ul>
+
+<p>更深入一步，hinge loss，exp loss，cross entropy loss都是0-1 loss的上界。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/hinge-exp-logistic-bounds.png" alt="" /></p>
+
+<p>我们可能将关注这样一些问题：为什么线性回归和逻辑回归可以用于做分类？为什么逻辑回归的loss function不取squared loss？SVM的优越之处在哪里？为什么1范数可以得到稀疏解？为什么2范数能得到最大间隔解？正则化与贝叶斯估计的联系？</p>
+
 <p><a href="http://web.mit.edu/lrosasco/www/publications/loss.pdf">loss.pdf</a></p>
 
 <p><a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions">vowpal_wabbit Loss-functions </a></p>
@@ -206,6 +226,11 @@
   </li>
   <li>
     <p><a href="http://stanford.edu/~boyd/cvxbook/">凸优化，convex optimization</a></p>
+  </li>
+  <li>
+    <p>@王威廉 加州伯克利大学博士 Aria Haghighi 写了一篇超赞的数值优化博文，从牛顿法到拟牛顿法，再到BFGS以及L-BFGS
+<a href="http://aria42.com/blog/2014/12/understanding-lbfgs/">Numerical Optimization: Understanding L-BFGS</a> 图文并茂，还有伪代码，强烈推荐。
+@陈如山： 他的这篇文章写的比较精简，我之前也写了几篇关于常用优化算法的文章，从 steepest descent 到 newton 再到 quasi-newton (包括 lbfgs)，包含所有公式推导及部分收敛性分析和 python 代码. <a href="http://juscodit.github.io">地址1</a>，<a href="http://blog.csdn.net/itplus/article/details/21896453">地址2</a></p>
   </li>
   <li>
     <p>比较全面的优化教材 http://t.cn/Rwx3S6S @黄萱菁 发起的讨论 @Copper_PKU: Optimization for Machine Learning（Wright） @夏睿 Numerical Optimization（Nocedal）@wzxhome 推荐Nesterov @程龚_NJU 推荐Dingzhu Du的 @debiandsc 推荐Bertsekas和Ghaoui的</p>

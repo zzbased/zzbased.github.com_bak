@@ -35,6 +35,10 @@
       <div class="trigger">
         
           
+          <a class="page-link" href="/other/aggregation/Aggregation%E6%A8%A1%E5%9E%8B.html">Aggregation模型</a>
+          
+        
+          
           <a class="page-link" href="/about/">About</a>
           
         
@@ -201,10 +205,22 @@
   <li>
     <p><a href="http://www.infoq.com/cn/news/2014/12/11-machine-learning-project">机器学习的11个开源项目</a> Scikit-learn，Shogun，Mlib，CUDA-Convnet，ConvNetJs等。</p>
   </li>
-  <li>[文章]《ML Pitfalls: Measuring Performance (Part 1)》http://t.cn/Rw8BTiX 机器学习那些坑之性能评价，浅显易懂的实操型文章，跟着过一遍Scikit-Learn也能熟悉熟悉。机器学习的门槛真是越来越低了，赶快学起来！</li>
+  <li>
+    <p>[文章]《ML Pitfalls: Measuring Performance (Part 1)》http://t.cn/Rw8BTiX 机器学习那些坑之性能评价，浅显易懂的实操型文章，跟着过一遍Scikit-Learn也能熟悉熟悉。机器学习的门槛真是越来越低了，赶快学起来！</p>
+  </li>
+  <li>
+    <p>Alice Zheng的最新教学博客http://t.cn/RA7rdBV介绍了如何做机器学习的模型评估。第一部分介绍了指标选择（RMSE， AUC, Precision-Recall…), 训练测试集生成（hold-out, cross-validation)，以及参数搜索的方法(random， grid)。机器学习入门值得一读！</p>
+  </li>
+  <li>【经典:十张图看机器学习】《Machine learning in 10 pictures》Deniz Yuret http://t.cn/8Fg56AN 很多朋友很早就推荐过，这里还是不厌其烦再推一下，每次阅读都有新体会，确实经典 @伯乐在线官方微博 的译文版《十张图解释机器学习的基本概念》http://t.cn/8s5j2h3 云(网页pdf):http://t.cn/RA5KkLW</li>
 </ul>
 
-<h3 id="section-1">机器学习基本算法</h3>
+<h3 id="section-1">机器学习历史</h3>
+
+<ul>
+  <li>【译文：机器学习ML简史】http://t.cn/RwnEx45 【专稿：大数据简史】http://t.cn/RAZlmG3 【机器学习简史】http://t.cn/RZ9BpU5 【神经网络简史】http://t.cn/RZXn0iX</li>
+</ul>
+
+<h3 id="section-2">机器学习基本算法</h3>
 <ul>
   <li>正则化
     <ul>
@@ -243,6 +259,8 @@
       <li>Labeled LDA：<a href="http://blog.csdn.net/xianlingmao/article/details/7076165">话题模型（topic model）的提出及发展历史</a> Labeled LDA与LDA最大的不同是： LDA是在所有topics上为某一个词进行选择某个topic，而labeled LDA则是只从文档相关的label对应的topic中去选择，其余和LDA都是一样的。</li>
       <li><a href="http://bugra.github.io/work/notes/2015-02-21/topic-modeling-for-the-uninitiated/">Topic Modeling for the Uninitiated</a></li>
       <li>[音频]《Topic models: Past, present, and future》http://t.cn/RwOQXK4 对话David M. Blei，讨论主题模型的过去、现在和未来 云:http://t.cn/RwOQ08t</li>
+      <li>[文章]《Automatic topic-modelling with Latent Dirichlet Allocation》http://t.cn/Rwr8JtB 很好的LDA介绍文章，内容包括LDA主题模型的原理、限制和相关开源工具 云(视频):http://t.cn/RwgPEI2</li>
+      <li><a href="https://www.jaist.ac.jp/~s1060203/codes/fstm/">FSTM(Fully sparse topic models)</a></li>
     </ul>
   </li>
   <li>CRF
@@ -258,6 +276,8 @@
       <li>【分类战车SVM】第五话：核函数（哦，这实在太神奇了！）→ http://t.cn/RZ0JICY</li>
       <li>【SVM之菜鸟实现】之前帖子有bug, 担心有朋友受其害，这里给出正确版，用matlab做伪代码: yp=x<em>w; idx=find(yp.</em>y&lt;1) e=”yp(idx)-y(idx);”   f=”e’<em>e+c</em>w<em>w.”  df=”2(x(idx,:)’</em>e+c*w);” fdf=”” lbfgslbfgs=”” svmsgd=”” em=””&gt;</li>
       <li>[文章]《The Trouble with SVMs》http://t.cn/RwvkOx4 非常棒的强调特征选择对分类器重要性的文章。情感分类中，根据互信息对复杂高维特征降维再使用朴素贝叶斯分类器，取得了比SVM更理想的效果，训练和分类时间也大大降低——更重要的是，不必花大量时间在学习和优化SVM上——特征也一样no free lunch</li>
+      <li>[文章]《Linear SVM Classifier on Twitter User Recognition》http://t.cn/RwuEugE Python下用线性SVM分类器做Twitter作者预测(识别)</li>
+      <li>【SVM 的简要推导过程】SVM 是一块很大的内容，网上有写得非常精彩的博客。这篇博客目的不是详细阐述每一个理论和细节，而在于在不丢失重要推导步骤的条件下从宏观上把握 SVM 的思路。via.daniel-D http://t.cn/RwBWENB</li>
     </ul>
   </li>
   <li>Boost
