@@ -34,6 +34,10 @@ title: "HMM与CRF"
 - 代表：Logistic regression，SVMs，Neural networks，Conditional random fields(CRF)
 - For instance, if y indicates whether an example is a dog (0) or an elephant (1), then p(x\|y = 0) models the distribution of dogs’ features, and p(x\|y = 1) models the distribution of elephants’ features.
 
+更多请参考下面截图：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/discriminative_vs_generative.png)
+
 ### 模型对比
 
 上面提到生成和判别模型，在具体讲述HMM与CRF之前，我们不妨先看一下各自的概率图，有一个形象直观的认识。
