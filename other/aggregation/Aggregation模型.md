@@ -343,12 +343,15 @@ learning: aggregate as well as getting diverse g_t
 关于boosting方法的比较，上文中mlapp的图已经表达得比较明确了。这里再在公式上做一下细化。
 
 Square and Absolute Error：
+
 ![](Square-and-Absolute-Error.png)
 
 Logistic Loss and LogitBoost：
+
 ![](Logistic-Loss-and-LogitBoost.png)
 
 Exponential Loss and Adaboost：
+
 ![](Exponential-Loss-and-Adaboost.png)
 
 下面把一些常见方法的特点再加强阐述下。
