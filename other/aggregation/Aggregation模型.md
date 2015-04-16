@@ -24,10 +24,19 @@ Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么�
 | non-uniform     | linear      |   AdaBoost，GradientBoost |
 | conditional | stacking(non-linear)     |    Decision Tree |
 
+---
 
 有了多种Aggregation模型后，还可以将Aggregation模型再融合。如果将bagging配上decision tree，则是random forest。如果将AdaBoost配上Decision Tree，则是AdaBoost-DTree。如果将GradientBoost配上Decision Tree，则是大名鼎鼎的GBDT(Gradient Boost Decision Tree)。
 
 OK，对Aggregation模型有了大体的认识后，下文将来讲述比较具有代表性的Aggregation模型。本文大致分为五个部分：第一部分介绍Decision Tree；第二部分介绍Random forest；第三部分介绍AdaBoost；第四部分介绍Gradient Boost Decision Tree；最后对Aggregation模型再做一下对比与总结。
+
+## Elements in Supervised Learning
+
+![](model_description.png)
+
+![](loss_regularization.png)
+
+![](ridge_and_lasso.png)
 
 ## Decision Tree(决策树)
 
@@ -51,7 +60,7 @@ g_t表示一个base hypothesis，在决策树里，也就是每条路径的叶�
 根据决策树的输出y的类型，可以将decision tree分为：分类树和回归树。
 
 - 分类树：预测分类标签；例如C4.5，选择划分成两个分支后熵最大的feature；
-- 回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；
+- 回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；regression tree is a function that maps the attributes to the score。
 
 ### CART
 
@@ -82,6 +91,20 @@ CART的termination条件是：
 ![](CART_regularizer.png)
 
 ### Decision tree小结
+
+Regularization方法：
+
+>Number of nodes in the tree, depth
+>L2 norm of the leaf weights
+
+决策树的流程(heuristics)：
+
+>Split by information gain>Prune the tree>Maximum depth>Smooth the leaf values
+
+Most heuristics maps well to objectives, taking the formal (objective) view let us know what we are learning
+
+>Information gain -> training loss>Pruning -> regularization defined by #nodes>Max depth -> constraint on the function space>Smoothing leaf values -> L2 regularization on leaf weights
+
 Decision tree优点：
 
 >(1)易于理解和解释；(2)即可以处理数值型数据也可以处理类别型数据；(3)生成的模式简单，对噪声数据有很好的健壮性。
@@ -156,6 +179,8 @@ boosting可以用下面公式来表示：
 其中alpha是权重，y_m是弱分类器，整体就是一个linear模型。
 
 从Function Space里的Numerical Optimization角度看Boosting。boosting也叫forward stagewise additive modeling，因为在迭代的过程中，我们不能再回退去修改以前的参数，一切只能向前看了。
+
+![](Additive_Training_process.png)
 
 ![](Function-Space-optimizaition1.png)
 ![](Function-Space-optimizaition2.png)
