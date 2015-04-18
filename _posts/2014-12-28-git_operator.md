@@ -119,7 +119,7 @@ git submodule其他参考：
 [Git的撤消操作 - 重置,签出和撤消](http://gitbook.liuhui998.com/4_9.html)
 
 修复未提交文件中的错误: git reset；
-修复已提交文件中的错误: git revert
+修复已提交文件中的错误: git revert，再git push。
 
 [git revert 和reset的区别](http://my.oschina.net/MinGKai/blog/144932)
 
