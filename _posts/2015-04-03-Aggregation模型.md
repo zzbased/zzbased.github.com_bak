@@ -12,7 +12,7 @@ title: "Aggregation模型"
 
 ## 开篇
 
-Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么是Aggregation模型呢？通俗的讲，就是多算法融合。它的思想相当简单直接，以至于用一句俗语就可以完美概括：三个臭皮匠，顶个诸葛亮。实际操作中，Aggregation模型把大大小小的多种算法融合在一起，共同协作来解决一个问题。这些算法可以是不同的算法，也可以是相同的算法。
+Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么是Aggregation模型呢？通俗的讲，就是多算法融合。它的思想相当简单直接，用一句俗语就可以完美概括：三个臭皮匠，顶个诸葛亮。实际操作中，Aggregation模型把大大小小的多种算法融合在一起，共同协作来解决一个问题。这些算法可以是不同的算法，也可以是相同的算法。
 
 根据融合的方式，我们可以将Aggregation模型分为三种：(1)Uniform，将多个模型平均的合并在一起；(2)Linear组合，将多个模型利用linear model融合起来；(3)Conditional，不同的情形使用不同的模型，即将多个模型利用non-linear model融合起来。
 
@@ -26,10 +26,26 @@ Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么�
 | non-uniform     | linear      |   AdaBoost，GradientBoost |
 | conditional | stacking(non-linear)     |    Decision Tree |
 
+---
 
 有了多种Aggregation模型后，还可以将Aggregation模型再融合。如果将bagging配上decision tree，则是random forest。如果将AdaBoost配上Decision Tree，则是AdaBoost-DTree。如果将GradientBoost配上Decision Tree，则是大名鼎鼎的GBDT(Gradient Boost Decision Tree)。
 
 OK，对Aggregation模型有了大体的认识后，下文将来讲述比较具有代表性的Aggregation模型。本文大致分为五个部分：第一部分介绍Decision Tree；第二部分介绍Random forest；第三部分介绍AdaBoost；第四部分介绍Gradient Boost Decision Tree；最后对Aggregation模型再做一下对比与总结。
+
+## Elements in Supervised Learning
+先介绍一些Supervised Learning的基础知识。
+
+首先是模型。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/model_description.png)
+
+其次是loss function和regularization。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/loss_regularization.png)
+
+将loss function和regularization合到一起，就是一些常见的有监督模型：Logistic regression，lasso等。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/ridge_and_lasso.png)
 
 ## Decision Tree(决策树)
 
@@ -41,6 +57,18 @@ g_t表示一个base hypothesis，在决策树里，也就是每条路径的叶�
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/decision_tree_recursive_view.png)
 
+根据决策树的输出y的类型，可以将decision tree分为：分类树和回归树。
+
+- 分类树：预测分类标签；例如C4.5，选择划分成两个分支后熵最大的feature；
+- 回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；regression tree is a function that maps the attributes to the score。
+
+另一种decision tree的表示方法如下所示：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/another_decision_tree.png)
+
+其中，该树有J个叶子节点，Rj 表示x的一个分离区域，1(.) 是indicator function。
+b_j 是base learner的参数，如果是classification tree，则是该叶子节点的类目；如果是regression tree，则有 \\(b_j = ave_{x_i \in R_j} {y_i}\\)。决策树可以简单表述为：if \\(x \in R_j\\)，then \\(h(x)=b_j\\)。
+
 一棵树的训练过程为：根据一个指标，分裂训练集为几个子集。这个过程不断的在产生的子集里重复递归进行，即递归分割。当一个训练子集的类标都相同时递归停止。这种决策树的自顶向下归纳 (TDITD)是贪心算法的一种, 也是目前为止最为常用的一种训练方法，但不是唯一的方法。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/decision_tree_train_algorithm.png)
@@ -49,11 +77,6 @@ g_t表示一个base hypothesis，在决策树里，也就是每条路径的叶�
 
 - Information gain (ratio)：信息增益是用来衡量样本集S下属性A分裂时的信息熵减少量。信息增益是信息熵的有效减少量，值越高，说明失去的不确定性越多，那么它就应该越早作为决策的依据属性。
 - Gini index：基尼不纯度表示一个随机选中的样本在子集中被分错的可能性。基尼不纯度为这个样本被选中的概率乘以它被分错的概率。当一个节点中所有样本都是一个类时，基尼不纯度为零。
-
-根据决策树的输出y的类型，可以将decision tree分为：分类树和回归树。
-
-- 分类树：预测分类标签；例如C4.5，选择划分成两个分支后熵最大的feature；
-- 回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；
 
 ### CART
 
@@ -84,6 +107,19 @@ CART的termination条件是：
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/CART_regularizer.png)
 
 ### Decision tree小结
+
+Regularization方法：
+
+>(1)Number of nodes in the tree, depth；(2)L2 norm of the leaf weights
+
+决策树的流程(From heuristics view)：
+
+>(1)Split by information gain；(2)Prune the tree；(3)Maximum depth；(4)Smooth the leaf values
+
+决策树的流程(From objective optimization view)：
+
+>(1)Information gain -> training loss；(2)Pruning -> regularization defined by #nodes；(3)Max depth -> constraint on the function space；(4)Smoothing leaf values -> L2 regularization on leaf weights
+
 Decision tree优点：
 
 >(1)易于理解和解释；(2)即可以处理数值型数据也可以处理类别型数据；(3)生成的模式简单，对噪声数据有很好的健壮性。
@@ -94,8 +130,7 @@ Decision tree缺点：
 
 几种决策树算法的区别：
 
->ID3算法使用信息增益。C4.5算法是在ID3算法的基础上采用**信息增益率**的方法选择测试属性。
->ID3算法和C4.5算法虽然在对训练样本集的学习中可以尽可能多地挖掘信息，但其生成的决策树分支较大，规模较大。
+>ID3算法使用信息增益。C4.5算法是在ID3算法的基础上采用**信息增益率**的方法选择测试属性。ID3算法和C4.5算法虽然在对训练样本集的学习中可以尽可能多地挖掘信息，但其生成的决策树分支较大，规模较大。
 
 >为了简化决策树的规模，提高生成决策树的效率，又出现了根据GINI系数来选择测试属性的决策树算法CART。
 >CART算法采用一种二分递归分割的技术，与基于信息熵的算法不同，CART算法对每次样本集的划分计算GINI系数，GINI系数，GINI系数越小则划分越合理。CART算法总是将当前样本集分割为两个子样本集，使得生成的决策树的每个非叶结点都只有两个分枝。因此CART算法生成的决策树是结构简洁的二叉树。
@@ -159,6 +194,8 @@ boosting可以用下面公式来表示：
 
 从Function Space里的Numerical Optimization角度看Boosting。boosting也叫forward stagewise additive modeling，因为在迭代的过程中，我们不能再回退去修改以前的参数，一切只能向前看了。
 
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Additive_Training_process.png)
+
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition1.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition2.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition3.png)
@@ -189,8 +226,6 @@ AdaBoost方法是一种迭代算法，在每一轮中加入一个新的弱分类
 通过这样的方式，AdaBoost方法能“聚焦于”那些较难分（更富信息）的样本上。在具体实现上，最初令每个样本的权重都相等，对于第k次迭代操作，我们就根据这些权重来选取样本点，进而训练分类器g_k。然后就根据这个分类器，来提高被它分错的的样本的权重，并降低被正确分类的样本权重。然后，权重更新过的样本集被用于训练下一个分类器g_k。整个训练过程如此迭代地进行下去。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Theoretical-Guarantee-of-AdaBoost.png)
-
-**Boosting view of AdaBoost**
 
 AdaBoost方法中使用的分类器可能很弱（比如出现很大错误率），但只要它的分类效果比随机好一点（比如两类问题分类错误率略小于0.5），就能够改善最终得到的模型。而错误率高于随机分类器的弱分类器也是有用的，因为在最终得到的多个分类器的线性组合中，可以给它们赋予负系数，同样也能提升分类效果。
 
@@ -237,8 +272,36 @@ Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instanc
 
 ### GradientBoost
 
-Gradient Boosting是一种Boosting的方法。
-与传统的Boost的区别是，每一次的计算是为了减少上一次的残差(residual)，而为了消除残差，我们可以在残差减少的梯度(Gradient)方向上建立一个新的模型。所以说，在Gradient Boost中，每个新的模型的建立是为了使得之前模型的残差往梯度方向减少，与传统Boost对正确、错误的样本进行加权有着很大的区别。
+前面已经对boost方法做了一些介绍，这里再针对GradientBoost从公式推导角度再做更细致的介绍。
+
+首先GradientBoost如所有boost方法一样，可以将最终模型表达式写为：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula1.png)
+	
+对于有限的训练样本 \\({[y_i,x_i]}_1^N\\)，下式是我们要优化的目标：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula2.png)
+
+因为boost是一种stagewise additive方法，对于其每一次迭代，m=1,2 ... M，优化目标为：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula3.png)
+
+
+直接求解上面的目标函数会比较复杂。所以，我们换个思路，考虑到通常情况下，梯度下降方向是一个合理的优化方向，那么我们可以先求出m-1时的负梯度方向 -g，然后尽可能把h(x)往 -g 方向上拟合。所以有：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula5.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula6.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula7.png)
+
+那么第m次迭代计算后，得到的模型为：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula4.png)
+
+将上面的计算过程整体串起来，则有：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gradient_boost_process.png)
+
+Gradient Boosting是一种Boosting的方法。与传统的Boost的区别是，每一次的计算是为了减少上一次的残差(residual)，而为了消除残差，我们可以在残差减少的梯度(Gradient)方向上建立一个新的模型。所以说，在Gradient Boost中，每个新的模型的建立是为了使得之前模型的残差往梯度方向减少，与传统Boost对正确、错误的样本进行加权有着很大的区别。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gradient_boost1.png)
 
@@ -248,7 +311,16 @@ GradientBoost: allows extension to different err for regression/soft classificat
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/residuals_for_gbdt.png)
 
-更多请参考[模型组合(Model Combining)之Boosting与Gradient Boosting](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html)
+如果整体loss function取squared error，即L(y,F) = (y - F)^2 / 2。此时，我们得到Least-squares regression。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/ls_boost_algorithm.png)
+
+如果整体loss function取absolute error，即L(y,F) = |y - F|。此时有：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/least_absolute_deviation_1.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/least_absolute_deviation_2.png)
+
+更多请参考[Greedy Function Approximation: A Gradient Boosting Machine](http://docs.salford-systems.com/GreedyFuncApproxSS.pdf)，[模型组合(Model Combining)之Boosting与Gradient Boosting](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html)
 
 ### Gradient boost decision tree
 目前GBDT有两个不同的描述版本。[残差版本](http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee)把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。[Gradient版本](http://blog.csdn.net/dark_scope/article/details/24863289)把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。
@@ -270,13 +342,17 @@ GB+DT+squared error loss：
 更多请参考：[GBDT迭代决策树](http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml)
 
 ### Regularization
-GBDT的常见regularization方法有：控制树的个数(即early stop)，对每一棵树控制其深度、叶子节点个数。
+GBDT的常见regularization方法有：控制树的个数(即early stop)，控制每一棵树的复杂度。
+
+而控制一棵树的复杂度，可以控制树的深度，叶子节点个数，以及叶子节点的weight。如下式所示：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Regularization_formula.png)
 
 除此外，还可以在每次训练树时，对data和feature做subsampling。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/sampling_shrinkage.png)
 
-另一个常见的正则方法是Shrinkage。Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。
+另一个常见的正则方法是Shrinkage。Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。This means we do not do full optimization in each step and reserve chance for future rounds, it helps prevent overfitting。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/shrinkage_algorithm.png)
 
@@ -289,6 +365,22 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，对�
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/facebook_gdbt_lr.png)
 
 如果想通过代码学习GBDT，可以参考code：[kaggle-2014-criteo my notes](https://github.com/zzbased/kaggle-2014-criteo)，[陈天奇的xgboost](https://github.com/dmlc/xgboost)。
+
+在xgboost中，GBDT的编码实现步骤为：
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost1.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost2.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost3.png)
+
+相比于gbdt的常见算法，为什么要推导出上面优化目标，主要原因为Engineering benefit。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost4.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost5.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost6.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost7.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost8.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost9.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost10.png)
 
 ## 总结
 
@@ -320,12 +412,15 @@ learning: aggregate as well as getting diverse g_t
 关于boosting方法的比较，上文中mlapp的图已经表达得比较明确了。这里再在公式上做一下细化。
 
 Square and Absolute Error：
+
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Square-and-Absolute-Error.png)
 
 Logistic Loss and LogitBoost：
+
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Logistic-Loss-and-LogitBoost.png)
 
 Exponential Loss and Adaboost：
+
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Exponential-Loss-and-Adaboost.png)
 
 下面把一些常见方法的特点再加强阐述下。
