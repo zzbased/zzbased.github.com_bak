@@ -377,7 +377,6 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](xgboost6.png)
 ![](xgboost7.png)
 ![](xgboost8.png)
-![](xgboost9.png)
 ![](xgboost10.png)
 
 ## 总结
