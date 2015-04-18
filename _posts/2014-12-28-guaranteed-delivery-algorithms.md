@@ -38,4 +38,8 @@ title: "guaranteed delivery algorithms"
 
 ## Shale算法
 
-Shale算法是HMM算法的升级版。这里的算法可以参考一下《devinzheng 在线分配算法综述》
+Shale算法是HMM算法的升级版。
+
+## 更多参考资料
+
+[devinzheng 在线分配算法综述](https://github.com/zzbased/zzbased.github.com/blob/master/_posts/doc/LR逻辑回归-从入门到精通.pdf)

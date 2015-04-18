@@ -275,7 +275,7 @@ Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instanc
 首先GradientBoost如所有boost方法一样，可以将最终模型表达式写为：
 
 ![](gbdt_formula1.png)
-	
+
 对于有限的训练样本 \\({[y_i,x_i]}_1^N\\)，下式是我们要优化的目标：
 
 ![](gbdt_formula2.png)
@@ -358,13 +358,6 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](shrinkage_algorithm.png)
 
 ### GBDT应用
-最近，gbdt模型在搜索排序里得到大量应用。除此外，GBDT还可以用来做特征选择和特征组合。
-
-比较有代表性的是facebook的文章
-[Practical Lessons from Predicting Clicks on Ads at Facebook](http://quinonero.net/Publications/predicting-clicks-facebook.pdf)提到的方法，它利用GBDT+LR做CTR预估，取得不错的效果。
-
-![](facebook_gdbt_lr.png)
-
 如果想通过代码学习GBDT，可以参考code：[kaggle-2014-criteo my notes](https://github.com/zzbased/kaggle-2014-criteo)，[陈天奇的xgboost](https://github.com/dmlc/xgboost)。
 
 在xgboost中，GBDT的编码实现步骤为：
@@ -381,6 +374,15 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](xgboost7.png)
 ![](xgboost8.png)
 ![](xgboost10.png)
+
+最近，gbdt模型在搜索排序里得到大量应用。除此外，GBDT还可以用来做特征选择和特征组合。
+
+特征选择，参考[Feature Importance Analysis with XGBoost in Tax audit](http://fr.slideshare.net/MichaelBENESTY/feature-importance-analysis-with-xgboost-in-tax-audit)
+
+特征组合里，比较有代表性的是facebook的文章
+[Practical Lessons from Predicting Clicks on Ads at Facebook](http://quinonero.net/Publications/predicting-clicks-facebook.pdf)提到的方法，它利用GBDT+LR做CTR预估，取得不错的效果。
+
+![](facebook_gdbt_lr.png)
 
 ## 总结
 
@@ -449,8 +451,7 @@ Exponential Loss and Adaboost：
 	[机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2](http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html)
 	模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。
 - [经典文章 Greedy function approximation : A Gradient Boosting Machine](http://statweb.stanford.edu/~jhf/ftp/trebst.pdf)
-- [xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library, also support distributed learning](https://github.com/tqchen/xgboost)
-	并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac
+- [xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library](https://github.com/tqchen/xgboost), also support distributed learning。并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac
 - [pGBRT: Parallel Gradient Boosted Regression Trees](http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt)
 - [更多GBDT](http://bigdata.memect.com/?tag=GBDT)
 - [决策树 用Python实现了决策树的ID3生成算法和C4.5生成算法](http://www.hankcs.com/ml/decision-tree.html)
