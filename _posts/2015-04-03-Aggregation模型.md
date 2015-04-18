@@ -379,6 +379,7 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost6.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost7.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost8.png)
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost9.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost10.png)
 
 ## 总结

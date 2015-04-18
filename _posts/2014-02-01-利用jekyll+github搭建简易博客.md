@@ -6,11 +6,7 @@ category:
 tags: [blog, git]
 ---
 
-## Mac知识 && 利用jekyll+github搭建简易博客##
-
-### 基本Mac知识
-
-sips命令：[在Mac OS X上用命令行快速的调整图片大小](http://www.yunweipai.com/archives/2176.html)
+##利用jekyll+github搭建简易博客##
 
 ### 包管理系统（package management system）
 包管理系统就是指某个平台上对第三方包进行统一组织管理的系统。一个包管理系统一般由以下几部分组成：
