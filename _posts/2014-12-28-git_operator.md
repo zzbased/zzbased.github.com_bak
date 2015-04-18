@@ -109,6 +109,20 @@ git submodule其他参考：
 - [Git Submodule使用完整教程](http://www.kafeitu.me/git/2012/03/27/git-submodule.html)
 - [Git Submodule的坑](http://blog.devtang.com/blog/2013/05/08/git-submodule-issues/)
 
+### Git回滚
+
+[git 回退到某版本后,再在此版本上更新,无法push](https://ruby-china.org/topics/11637)
+
+如果仅仅你自己在使用，那么强制push，命令是：git push -f
+如果是与人合作，更漂亮的做法是git revert
+
+[Git的撤消操作 - 重置,签出和撤消](http://gitbook.liuhui998.com/4_9.html)
+
+修复未提交文件中的错误: git reset；
+修复已提交文件中的错误: git revert
+
+[git revert 和reset的区别](http://my.oschina.net/MinGKai/blog/144932)
+
 ### 如何查看repo url
 
 类似于svn info的功能。

@@ -288,7 +288,9 @@ Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instanc
 直接求解上面的目标函数会比较复杂。所以，我们换个思路，考虑到通常情况下，梯度下降方向是一个合理的优化方向，那么我们可以先求出m-1时的负梯度方向 -g，然后尽可能把h(x)往 -g 方向上拟合。所以有：
 
 ![](gbdt_formula5.png)
+
 ![](gbdt_formula6.png)
+
 ![](gbdt_formula7.png)
 
 那么第m次迭代计算后，得到的模型为：
@@ -316,6 +318,7 @@ GradientBoost: allows extension to different err for regression/soft classificat
 如果整体loss function取absolute error，即L(y,F) = |y - F|。此时有：
 
 ![](least_absolute_deviation_1.png)
+
 ![](least_absolute_deviation_2.png)
 
 更多请参考[Greedy Function Approximation: A Gradient Boosting Machine](http://docs.salford-systems.com/GreedyFuncApproxSS.pdf)，[模型组合(Model Combining)之Boosting与Gradient Boosting](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html)
@@ -377,7 +380,6 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](xgboost6.png)
 ![](xgboost7.png)
 ![](xgboost8.png)
-![](xgboost9.png)
 ![](xgboost10.png)
 
 ## 总结
