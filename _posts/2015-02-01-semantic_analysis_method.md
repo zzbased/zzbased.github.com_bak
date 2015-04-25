@@ -5,9 +5,11 @@ description: ""
 category:
 tags: [machine learning, nlp]
 ---
+
+# 语义分析的一些方法
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-author: vincentyao@tencent.com
+#### author: vincentyao@tencent.com ; date:20150201
 
 语义分析，本文指运用各种机器学习方法，挖掘与学习文本、图片等的深层次概念。wikipedia上的解释：In machine learning, semantic analysis of a corpus is the task of building structures that approximate concepts from a large set of documents(or images)。
 
