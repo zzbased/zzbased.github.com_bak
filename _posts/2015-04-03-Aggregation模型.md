@@ -9,10 +9,11 @@ title: "Aggregation模型"
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
+写下这个主题文章，主要受到两个事情的启发：(1)同事kimmyzhang对GBDT的分享；(2)陈天奇的[xgboost](https://github.com/dmlc/xgboost)开始被我们在实际工作中使用。以前对GBDT为代表的aggregation模型或多或少也有一些认识，但知识体系感不强，所以下面的文章主要是从体系角度梳理一下aggregation模型相关的内容。在梳理的过程中，参考了很多现有的资料，譬如kimmyzhang的分享ppt，陈天奇的ppt，林轩田老师的课程等，具体请见文末的参考文献，在此对这些作者表示感谢。
 
 ## 开篇
 
-Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么是Aggregation模型呢？通俗的讲，就是多算法融合。它的思想相当简单直接，用一句俗语就可以完美概括：三个臭皮匠，顶个诸葛亮。实际操作中，Aggregation模型把大大小小的多种算法融合在一起，共同协作来解决一个问题。这些算法可以是不同的算法，也可以是相同的算法。
+Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么是Aggregation模型呢？通俗的讲，就是多算法融合。它的思想用一句俗语概括：三个臭皮匠，顶个诸葛亮。实际操作中，Aggregation模型把大大小小的多种算法融合在一起，共同协作来解决一个问题。这些算法可以是不同的算法，也可以是相同的算法。
 
 根据融合的方式，我们可以将Aggregation模型分为三种：(1)Uniform，将多个模型平均的合并在一起；(2)Linear组合，将多个模型利用linear model融合起来；(3)Conditional，不同的情形使用不同的模型，即将多个模型利用non-linear model融合起来。
 
@@ -30,9 +31,9 @@ Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么�
 
 有了多种Aggregation模型后，还可以将Aggregation模型再融合。如果将bagging配上decision tree，则是random forest。如果将AdaBoost配上Decision Tree，则是AdaBoost-DTree。如果将GradientBoost配上Decision Tree，则是大名鼎鼎的GBDT(Gradient Boost Decision Tree)。
 
-OK，对Aggregation模型有了大体的认识后，下文将来讲述比较具有代表性的Aggregation模型。本文大致分为五个部分：第一部分介绍Decision Tree；第二部分介绍Random forest；第三部分介绍AdaBoost；第四部分介绍Gradient Boost Decision Tree；最后对Aggregation模型再做一下对比与总结。
+OK，对Aggregation模型有了大体的认识后，下文将来讲述一些具有代表性的Aggregation模型。本文大致分为六个部分：第一部分简要介绍有监督学习；第二部分介绍Decision Tree；第三部分介绍Random forest；第四部分介绍AdaBoost；第五部分介绍Gradient Boost Decision Tree；最后对Aggregation模型做一下对比与总结。
 
-## Elements in Supervised Learning
+## Supervised Learning基础
 先介绍一些Supervised Learning的基础知识。
 
 首先是模型。
@@ -59,8 +60,8 @@ g_t表示一个base hypothesis，在决策树里，也就是每条路径的叶�
 
 根据决策树的输出y的类型，可以将decision tree分为：分类树和回归树。
 
-- 分类树：预测分类标签；例如C4.5，选择划分成两个分支后熵最大的feature；
-- 回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；regression tree is a function that maps the attributes to the score。
+- 分类树：预测分类标签；
+- 回归树：预测实数值；回归树的结果是可以累加的；即regression tree is a function that maps the attributes to the score。
 
 另一种decision tree的表示方法如下所示：
 
@@ -69,14 +70,14 @@ g_t表示一个base hypothesis，在决策树里，也就是每条路径的叶�
 其中，该树有J个叶子节点，Rj 表示x的一个分离区域，1(.) 是indicator function。
 b_j 是base learner的参数，如果是classification tree，则是该叶子节点的类目；如果是regression tree，则有 \\(b_j = ave_{x_i \in R_j} {y_i}\\)。决策树可以简单表述为：if \\(x \in R_j\\)，then \\(h(x)=b_j\\)。
 
-一棵树的训练过程为：根据一个指标，分裂训练集为几个子集。这个过程不断的在产生的子集里重复递归进行，即递归分割。当一个训练子集的类标都相同时递归停止。这种决策树的自顶向下归纳 (TDITD)是贪心算法的一种, 也是目前为止最为常用的一种训练方法，但不是唯一的方法。
+一棵树的训练过程为：根据一个指标，分裂训练集为几个子集。这个过程不断的在产生的子集里重复递归进行，即递归分割。当一个训练子集的类标都相同时递归停止。这种决策树的自顶向下归纳(TDITD) 是贪心算法的一种，也是目前为止最为常用的一种训练方法，但不是唯一的方法。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/decision_tree_train_algorithm.png)
 
 从decision tree的训练过程可以看到，训练的关键点是branching(即在每一步选择一个最好的属性来分裂)。那如何branching呢，通常的做法是：Split training set at "the best value" of "the best feature"。"最好"的定义是使得子节点中的训练集尽量的纯，不同的算法使用不同的指标来定义"最好"。
 
-- Information gain (ratio)：信息增益是用来衡量样本集S下属性A分裂时的信息熵减少量。信息增益是信息熵的有效减少量，值越高，说明失去的不确定性越多，那么它就应该越早作为决策的依据属性。
-- Gini index：基尼不纯度表示一个随机选中的样本在子集中被分错的可能性。基尼不纯度为这个样本被选中的概率乘以它被分错的概率。当一个节点中所有样本都是一个类时，基尼不纯度为零。
+- Information gain (ratio)：信息增益是用来衡量样本集S下属性A分裂时的信息熵减少量。信息增益是信息熵的有效减少量，值越高，说明失去的不确定性越多，那么它就应该越早作为决策的依据属性。例如ID3, C4.5 和 C5.0算法。
+- Gini index：基尼不纯度表示一个随机选中的样本在子集中被分错的可能性。基尼不纯度为这个样本被选中的概率乘以它被分错的概率。当一个节点中所有样本都是一个类时，基尼不纯度为零。例如CART算法。
 
 ### CART
 
@@ -132,7 +133,7 @@ Decision tree缺点：
 
 >ID3算法使用信息增益。C4.5算法是在ID3算法的基础上采用**信息增益率**的方法选择测试属性。ID3算法和C4.5算法虽然在对训练样本集的学习中可以尽可能多地挖掘信息，但其生成的决策树分支较大，规模较大。
 
->为了简化决策树的规模，提高生成决策树的效率，又出现了根据GINI系数来选择测试属性的决策树算法CART。
+>为了简化决策树的规模，提高生成决策树的效率，所以有了根据GINI系数来选择测试属性的决策树算法CART。
 >CART算法采用一种二分递归分割的技术，与基于信息熵的算法不同，CART算法对每次样本集的划分计算GINI系数，GINI系数，GINI系数越小则划分越合理。CART算法总是将当前样本集分割为两个子样本集，使得生成的决策树的每个非叶结点都只有两个分枝。因此CART算法生成的决策树是结构简洁的二叉树。
 
 更多参考资料
@@ -166,7 +167,7 @@ Bagging方法通过voting可以减小variance，而decision tree具有良好的b
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Bagging-and-Decision-Tree.png)
 
-random forest (RF) = bagging + fully-grown C&RT decision tree
+random forest(RF)的算法描述如下：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/random_forest_algorithm.png)
 
@@ -240,7 +241,7 @@ AdaBoost方法中使用的分类器可能很弱（比如出现很大错误率）
 
 Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instance训练集中按随机抽取N个instance出来（单个instance可以被重复sample），对着这N个新的instance再训练一轮，由于数据集变了迭代模型训练结果也不一样。
 
-在AdaBoost-DTree模型抽样时，并不是Uniform抽样，而是根据一定概率来抽样。如果一个instance在前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。
+在AdaBoost-DTree模型做样本抽样时，并不是Uniform抽样，而是根据一定概率来抽样。如果一个instance在前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。
 
 ### Optimization视角看AdaBoost
 
@@ -277,7 +278,7 @@ Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instanc
 首先GradientBoost如所有boost方法一样，可以将最终模型表达式写为：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula1.png)
-	
+
 对于有限的训练样本 \\({[y_i,x_i]}_1^N\\)，下式是我们要优化的目标：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula2.png)
@@ -285,7 +286,6 @@ Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instanc
 因为boost是一种stagewise additive方法，对于其每一次迭代，m=1,2 ... M，优化目标为：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula3.png)
-
 
 直接求解上面的目标函数会比较复杂。所以，我们换个思路，考虑到通常情况下，梯度下降方向是一个合理的优化方向，那么我们可以先求出m-1时的负梯度方向 -g，然后尽可能把h(x)往 -g 方向上拟合。所以有：
 
@@ -326,13 +326,9 @@ GradientBoost: allows extension to different err for regression/soft classificat
 更多请参考[Greedy Function Approximation: A Gradient Boosting Machine](http://docs.salford-systems.com/GreedyFuncApproxSS.pdf)，[模型组合(Model Combining)之Boosting与Gradient Boosting](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html)
 
 ### Gradient boost decision tree
-目前GBDT有两个不同的描述版本。[残差版本](http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee)把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。[Gradient版本](http://blog.csdn.net/dark_scope/article/details/24863289)把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。
+GBDT(Gradient boost decision tree)，又叫MART(Multiple Additive Regression Tree)。目前GBDT有两个不同的描述版本。[残差版本](http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee)把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。[Gradient版本](http://blog.csdn.net/dark_scope/article/details/24863289)把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_algorithm1.png)
-
-意为gradient boost decision tree。又叫MART（Multiple Additive Regression Tree)
-
-**kimmyzhang的ppt: Gradient Boosted Decision Tree**
 
 Gradient Boosting Machine：
 
@@ -342,7 +338,7 @@ GB+DT+squared error loss：
 
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_squaredloss.png)
 
-更多请参考：[GBDT迭代决策树](http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml)
+更多请参考：[GBDT迭代决策树](http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml)，[kimmyzhang-GBDT]()。
 
 ### Regularization
 GBDT的常见regularization方法有：控制树的个数(即early stop)，控制每一棵树的复杂度。
@@ -360,13 +356,6 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/shrinkage_algorithm.png)
 
 ### GBDT应用
-最近，gbdt模型在搜索排序里得到大量应用。除此外，GBDT还可以用来做特征选择和特征组合。
-
-比较有代表性的是facebook的文章
-[Practical Lessons from Predicting Clicks on Ads at Facebook](http://quinonero.net/Publications/predicting-clicks-facebook.pdf)提到的方法，它利用GBDT+LR做CTR预估，取得不错的效果。
-
-![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/facebook_gdbt_lr.png)
-
 如果想通过代码学习GBDT，可以参考code：[kaggle-2014-criteo my notes](https://github.com/zzbased/kaggle-2014-criteo)，[陈天奇的xgboost](https://github.com/dmlc/xgboost)。
 
 在xgboost中，GBDT的编码实现步骤为：
@@ -383,6 +372,15 @@ GBDT的常见regularization方法有：控制树的个数(即early stop)，控�
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost7.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost8.png)
 ![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost10.png)
+
+最近，gbdt模型在搜索排序里得到大量应用。除此外，GBDT还可以用来做特征选择和特征组合。
+
+特征选择，参考[Feature Importance Analysis with XGBoost in Tax audit](http://fr.slideshare.net/MichaelBENESTY/feature-importance-analysis-with-xgboost-in-tax-audit)
+
+特征组合里，比较有代表性的是facebook的文章
+[Practical Lessons from Predicting Clicks on Ads at Facebook](http://quinonero.net/Publications/predicting-clicks-facebook.pdf)提到的方法，它利用GBDT+LR做CTR预估，取得不错的效果。
+
+![](https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/facebook_gdbt_lr.png)
 
 ## 总结
 
@@ -435,7 +433,7 @@ Exponential Loss and Adaboost：
 
 	如果一个instance被前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。这里是决策树给予不同样本不同权重的方法。
 
-一篇不错的综述性文章：[集成学习：机器学习刀光剑影 之 屠龙刀](http://www.52cs.org/?p=383)
+### 一篇不错的综述性文章：[集成学习：机器学习刀光剑影 之 屠龙刀](http://www.52cs.org/?p=383)
 
 - Bagging和boosting也是当今两大杀器RF（Random Forests）和GBDT（Gradient Boosting Decision Tree）之所以成功的主要秘诀。
 - Bagging主要减小了variance，而Boosting主要减小了bias，而这种差异直接推动结合Bagging和Boosting的MultiBoosting的诞生。参考:Geoffrey I. Webb (2000). MultiBoosting: A Technique for Combining Boosting and Wagging. Machine Learning. Vol.40(No.2)
@@ -446,22 +444,18 @@ Exponential Loss and Adaboost：
 - [Gbdt迭代决策树入门教程](http://suanfazu.com/t/gbdt-die-dai-jue-ce-shu-ru-men-jiao-cheng/135)
 - [Boosting Decision Tree入门教程](http://www.schonlau.net/publication/05stata_boosting.pdf)
 - [LambdaMART用于搜索排序入门教程](http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf)
-- [文章 Ask a Data Scientist: Ensemble Methods](http://insidebigdata.com/2014/12/18/ask-data-scientist-ensemble-methods/) “Ask a Data Scientist.”系列文章之Ensemble Methods，通俗程度可以和昨天介绍的Quora随机森林解释相媲美，但更为详尽，对常用Ensemble框架及其特点也进行了介绍，很好。
-- [决策树模型组合之随机森林与GBDT](http://cvchina.net/post/107.html)
+- [文章 Ask a Data Scientist: Ensemble Methods](http://insidebigdata.com/2014/12/18/ask-data-scientist-ensemble-methods/) - [决策树模型组合之随机森林与GBDT](http://cvchina.net/post/107.html)
 	[机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2](http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html)
-	模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。
-- [经典文章 Greedy function approximation : A Gradient Boosting Machine](http://statweb.stanford.edu/~jhf/ftp/trebst.pdf)
-- [xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library, also support distributed learning](https://github.com/tqchen/xgboost)
-	并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac
+- [xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library](https://github.com/tqchen/xgboost), also support distributed learning。并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac
 - [pGBRT: Parallel Gradient Boosted Regression Trees](http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt)
 - [更多GBDT](http://bigdata.memect.com/?tag=GBDT)
 - [决策树 用Python实现了决策树的ID3生成算法和C4.5生成算法](http://www.hankcs.com/ml/decision-tree.html)
 - [论文 Understanding Random Forests: From Theory to Practice](http://t.cn/RZBT6Ap)
-Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf: http://t.cn/RZBTobH 云:http://t.cn/RZBTobT
+Louppe, Gilles的博士论文，全面了解随机森林的好材料。[pdf](http://t.cn/RZBTobH)
 - [Interpreting random forests](http://blog.datadive.net/interpreting-random-forests/)
 - [计算机视觉：随机森林算法在人体识别中的应用](http://toutiao.com/a4055188882/)
-- J. Friedman(1999). Greedy Function Approximation: A Gradient Boosting Machine.
+- [机器学习技法课程](https://zh.coursera.org/course/ntumltwo)
+- [J. Friedman(1999). Greedy Function Approximation: A Gradient Boosting Machine](http://statweb.stanford.edu/~jhf/ftp/trebst.pdf)
 - J. Friedman(1999). Stochastic Gradient Boosting.
 - J. Friedman, T. Hastie, R. Tibshirani(2000). Additive Logistic Regression - A Statistical View of Boosting.
 - T. Hastie, R. Tibshirani, J. Friedman(2008). Chapter 10 of The Elements of Statistical Learning(2e).
-

@@ -312,10 +312,11 @@ LinkedIn最新的推荐系统文章[The Browsemaps: Collaborative Filtering at L
 
 ### [美团推荐团队-机器学习中的数据清洗与特征处理综述](http://tech.meituan.com/machinelearning-data-feature-process.html)
 
-### [美团推荐算法实践：机器学习重排序模型成亮点](http://www.csdn.net/article/2015-01-30/2823783)
+[美团推荐算法实践：机器学习重排序模型成亮点](http://www.csdn.net/article/2015-01-30/2823783)
 - [美团推荐算法实践](http://tech.meituan.com/mt-recommend-practice.html)
 - 本文介绍了美团网推荐系统的构建和优化过程中的一些做法，包括数据层、触发层、融合过滤层和排序层五个层次，采用了HBase、Hive、storm、Spark和机器学习等技术。两个优化亮点是将候选集进行融合与引入重排序模型。
 
+### [京东-关于推荐系统中的特征工程](http://dataunion.org/13206.html)
 
 ### [文章-Recommending music on Spotify with deep learning](http://benanne.github.io/2014/08/05/spotify-cnns.html)
 基于作者的实习经历讲Spotify的音乐推荐，内容涉及：协同过滤、基于内容的推荐、基于深度学习的品味预测、convnets规模扩展、convnets的学习内容、推荐的具体应用等
