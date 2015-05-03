@@ -7,7 +7,7 @@ title: "Aggregation模型"
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-写下这个主题文章，主要受到两个事情的启发：(1)同事kimmyzhang对GBDT的分享；(2)陈天奇的[xgboost](https://github.com/dmlc/xgboost)开始被我们在实际工作中使用。以前对GBDT为代表的aggregation模型或多或少也有一些认识，但知识体系感不强，所以下面的文章主要是从体系角度梳理一下aggregation模型相关的内容。在梳理的过程中，参考了很多现有的资料，譬如kimmyzhang的分享ppt，陈天奇的ppt，林轩田老师的课程等，具体请见文末的参考文献，在此对这些作者表示感谢。
+写下这个主题文章，主要受到两个事情的启发：(1)同事kimmyzhang对[GBDT的分享](http://pan.baidu.com/s/1jGjAvhO)；(2)陈天奇的[xgboost](https://github.com/dmlc/xgboost) 开始被我们在实际工作中使用。以前对GBDT为代表的aggregation模型或多或少也有一些认识，但知识体系感不强，所以下面的文章主要是从体系角度梳理一下aggregation模型相关的内容。在梳理的过程中，参考了很多现有的资料，譬如kimmyzhang的分享ppt，陈天奇的ppt，林轩田老师的课程等，具体请见文末的参考文献，在此对这些作者表示感谢。
 
 ## 开篇
 
@@ -431,7 +431,7 @@ Exponential Loss and Adaboost：
 
 	如果一个instance被前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。这里是决策树给予不同样本不同权重的方法。
 
-### 一篇不错的综述性文章：[集成学习：机器学习刀光剑影 之 屠龙刀](http://www.52cs.org/?p=383)
+### 一篇不错的综述性文章：[集成学习：机器学习刀光剑影之屠龙刀](http://www.52cs.org/?p=383)
 
 - Bagging和boosting也是当今两大杀器RF（Random Forests）和GBDT（Gradient Boosting Decision Tree）之所以成功的主要秘诀。
 - Bagging主要减小了variance，而Boosting主要减小了bias，而这种差异直接推动结合Bagging和Boosting的MultiBoosting的诞生。参考:Geoffrey I. Webb (2000). MultiBoosting: A Technique for Combining Boosting and Wagging. Machine Learning. Vol.40(No.2)
@@ -457,3 +457,4 @@ Louppe, Gilles的博士论文，全面了解随机森林的好材料。[pdf](htt
 - J. Friedman(1999). Stochastic Gradient Boosting.
 - J. Friedman, T. Hastie, R. Tibshirani(2000). Additive Logistic Regression - A Statistical View of Boosting.
 - T. Hastie, R. Tibshirani, J. Friedman(2008). Chapter 10 of The Elements of Statistical Learning(2e).
+- [GBDT的分享-by kimmyzhang](http://pan.baidu.com/s/1jGjAvhO)
