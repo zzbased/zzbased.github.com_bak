@@ -458,3 +458,4 @@ Louppe, Gilles的博士论文，全面了解随机森林的好材料。[pdf](htt
 - J. Friedman, T. Hastie, R. Tibshirani(2000). Additive Logistic Regression - A Statistical View of Boosting.
 - T. Hastie, R. Tibshirani, J. Friedman(2008). Chapter 10 of The Elements of Statistical Learning(2e).
 - [GBDT的分享-by kimmyzhang](http://pan.baidu.com/s/1jGjAvhO)
+- [Boosted Tree - by 陈天奇](http://www.52cs.org/?p=429)
