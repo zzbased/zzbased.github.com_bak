@@ -7,7 +7,7 @@ title: "leetcode刷题小结"
 
 ## Array
 
-### median of two sorted array
+### Median of two sorted array
 
 There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 
@@ -85,3 +85,36 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 
 		  }
 		};
+
+
+## Shell
+
+### [Word Frequency](https://leetcode.com/problems/word-frequency/)
+
+解答：
+
+	awk -F" " '{for (i = 1; i <= NF; ++i) {num[$i]++;}}END{for (a in num) print a,num[a]|"sort -k2 -r -n"}' words.txt
+
+注意几个细节：(1)在awk的输出中排序，可以在后面直接接sort命令，不过需要用引号。(2)这里是按照map的value排序，需要指定"-k2"。(3)注意是降序排列，所以有"-r"。(4)再注意默认是ascii排序，这里应该是number排序，所以有"-n"。
+
+### [Transpose File ](https://leetcode.com/problems/transpose-file/)
+
+有一个细节：awk内置的map如此强大。
+
+	# (NF > p) {p = NF} 可以放到{}里面,如果在里面,则要加if.
+	awk -F" " '{
+	    for (i = 1; i <= NF; i++) {
+	        content[NR,i] = $i
+	    }
+
+	}
+	(NF > p) {p = NF}
+	END{
+	    for (i = 1; i <= p; i++) {
+	        str = content[1, i]
+	        for (j = 2; j <= NR; j++) {
+	            str = str" "content[j, i]
+	        }
+	        print str
+	    }
+	}' file.txt
