@@ -99,7 +99,7 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 
 ### [Transpose File ](https://leetcode.com/problems/transpose-file/)
 
-有一个细节：awk内置的map如此强大。
+有一个感触：awk内置的map如此强大。
 
 	# (NF > p) {p = NF} 可以放到{}里面,如果在里面,则要加if.
 	awk -F" " '{
@@ -118,3 +118,20 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 	        print str
 	    }
 	}' file.txt
+
+### [Valid Phone Numbers](https://leetcode.com/problems/valid-phone-numbers/)
+
+这里主要考察正则表达式。具体tool可以使用：grep, egrep, sed, awk。
+
+	#cat file.txt | grep -Eo '^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$'
+	#grep -Eo '^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$' file.txt
+	awk '/^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$/' file.txt
+	sed -n '/^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$/,/^([0-9]{3}-){2}[0-9]{4}$/p' file.txt
+
+更多参考资料：
+
+- [Sed简明教程-左耳朵耗子](http://coolshell.cn/articles/9104.html)
+- [Awk简明教程-左耳朵耗子](http://coolshell.cn/articles/9070.html)
+- [Sed by Example](http://www.funtoo.org/Sed_by_Example,_Part_2)
+- [Regular Expressions](https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html)
+- [Awk regex](http://www.math.utah.edu/docs/info/gawk_5.html#SEC27)
