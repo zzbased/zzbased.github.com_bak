@@ -77,3 +77,8 @@ tags: [blog, git]
 7. 如果不喜欢页面最下面的footer, 可以在“./_includes/themes/twitter/default.html”文件中，把footer屏蔽掉。不过建议还是留着，可以让更多的人接触到这项工具。
 
 8. 在本地执行 jekyll serve,然后就可以在本机浏览器上通过0.0.0.0:4000预览网站。
+
+
+### 编辑器
+- [visual studio code](https://code.visualstudio.com/Download)
+- [sublime text guide](http://www.cnblogs.com/figure9/p/sublime-text-complete-guide.html)
