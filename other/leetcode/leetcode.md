@@ -87,6 +87,72 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 		};
 
 
+### [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/)
+
+Input: [-1,2147483647], 1, 2147483647
+
+下面代码中，在计算gap时，首先gap必须是long类型，其次it_temp->first和last至少也有一个long，不然这个减法会有问题。
+
+long gap = it_temp->first - last
+
+除此外，还有一个容易犯的错误，gap的计算经常会在while循环里被忽视掉了。
+
+主要可以参考 [隐式类型转换&& 负数的补码](http://www.cppblog.com/suiaiguo/archive/2009/07/16/90228.html)
+
+	class Solution {
+	public:
+	    // from little to large
+	    static bool SortFunction(const std::pair<int, int>& x, const std::pair<int, int>& y) {
+	        if (x.first > y.first) {
+	            return false;
+	        } else if (x.first < y.first) {
+	            return true;
+	        } else {
+	            return x.second < y.second;
+	        }
+	    }
+	    bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
+	        if (nums.size() < 2) {
+	            return false;
+	        }
+	        std::vector<std::pair<int, int> > middle;  // num -- index
+	        for (int i = 0; i < nums.size(); ++i) {
+	            middle.push_back(std::make_pair(nums[i], i));
+	        }
+	        std::sort(middle.begin(), middle.end(), SortFunction);
+	        std::vector<std::pair<int, int> >::const_iterator it = middle.begin();
+	        long last = it->first;
+	        int index = it->second;
+	        ++it;
+	        for (; it != middle.end(); ++it) {
+	            std::vector<std::pair<int, int> >::const_iterator it_temp = it;
+	            long gap = it_temp->first - last;
+	            while (it_temp != middle.end() && gap <= (long)t) {
+	                // at most t && most k
+	                if (abs(it_temp->second - index) <= k) {
+	                    return true;
+	                }
+	                ++it_temp;
+	                gap = it_temp->first - last;
+	            }
+	            last = it->first;
+	            index = it->second;
+	        }
+	        return false;
+	    }
+	};
+
+## 动态规划
+
+## [Maximal Square](https://leetcode.com/problems/maximal-square/)
+
+这里主要是利用动态规划来解，其方程为：
+
+         动态规划：dp[x][y] = min(dp[x - 1][y - 1], dp[x][y - 1], dp[x - 1][y]) + 1
+         上式中，dp[x][y]表示以坐标(x, y)为右下角元素的全1正方形矩阵的最大长度（宽度）
+
+更多请参考 [largest-square-block](http://stackoverflow.com/questions/1726632/dynamic-programming-largest-square-block)
+
 ## Shell
 
 ### [Word Frequency](https://leetcode.com/problems/word-frequency/)
