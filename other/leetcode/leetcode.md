@@ -142,9 +142,178 @@ long gap = it_temp->first - last
 	    }
 	};
 
+
+### [Kth Largest Element in an Array](https://leetcode.com/submissions/detail/30747333/)
+
+    // 错误点: sort默认是从小到大排序
+    void InsertArray(vector<int>& array, int insert) {
+        // 二分查找
+        int begin = 0;
+        int end = array.size() - 1;
+        int search_index = 0;
+        while (begin <= end) {
+            int middle = (long(begin) + long(end)) / 2;
+            if (insert > array[middle]) {
+                if (middle - 1 < 0 || insert < array[middle - 1]) {
+                    search_index = middle;
+                    break;
+                }
+                // 前半段
+                end = middle;
+            } else if (insert <= array[middle]) {
+                if (middle + 1 > array.size() - 1 || insert >= array[middle + 1]) {
+                    search_index = middle + 1;
+                    break;
+                }
+                // 后半段
+                begin = middle;
+            }
+        }
+        // 找到index区间
+        for (int i = array.size() - 1; i > search_index; --i) {
+            array[i] = array[i-1];
+        }
+        array[search_index] = insert;
+    }
+    struct myclass {
+        bool operator() (int i, int j) { return (i>j);}
+    } myobject;
+
+    int findKthLargest(vector<int>& nums, int k) {
+        if (nums.size() < k || k < 1) {
+            return 0;
+        }
+        vector<int> array(nums.begin(), nums.begin() + k);
+        std::sort(array.begin(), array.end(), myobject);  // 从大到小排序
+        for (int i = k; i < nums.size(); ++i) {
+            if (nums[i] > array[k-1]) {
+                InsertArray(array, nums[i]);
+            } else {
+                continue;
+            }
+        }
+        return array[k - 1];
+    }
+
+## List
+
+### [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
+
+
+    // 错误点: 未考虑都是val的情况. 也就是在unittest时，还是应该尽可能的考虑周全，要记得必须写unittest。
+    // Input: [1,1], 1
+    // 能否换一个思路,不再考虑删除,而是把不是val的node插入.
+    // 本次错误的点:主要是没有考虑到连续的val存在. 对付这种题,可以先申明一个temp node;另外, 也就是在now->val == val的判断,对last的赋值要有一个else
+
+    ListNode* removeElements(ListNode* head, int val) {
+        if (head == NULL) {
+            return head;
+        }
+        ListNode temp(val+1);
+        temp.next = head;
+
+        ListNode* last = &temp;
+        ListNode* now = head;
+        while (now) {
+            if (now->val == val) {
+                last->next = now->next;
+            } else {
+                last = now;
+            }
+            now = now->next;
+        }
+        return temp.next;
+    }
+
+	
+## String
+
+### [Isomorphic strings](https://leetcode.com/problems/isomorphic-strings/)
+
+很简单的一个题目。但还是考虑不严谨。只是从s->t这个方面做了考虑，而没有考虑t->s这个方面。
+
+    bool isIsomorphic(string s, string t) {
+	    if (s.size() != t.size()) {
+	        return false;
+	    }
+	    map<char, char> container1;
+	    map<char, char> container2;
+	    for (int i = 0; i < s.size(); ++i) {
+	        map<char, char>::const_iterator it1 = container1.find(s[i]);
+	        map<char, char>::const_iterator it2 = container2.find(t[i]);
+	        if (it1 == container1.end()) {
+	            container1[s[i]] = t[i];
+	        } else {
+	            if (it1->second != t[i]) {
+	                return false;
+	            }
+	        }
+	        if (it2 == container2.end()) {
+	            container2[t[i]] = s[i];
+	        } else {
+	            if (it2->second != s[i]) {
+	                return false;
+	            }
+	        }
+	    }
+	    return true;
+    }
+	
+## 数据结构
+
+### [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+
+class Stack {
+public:
+    // Push element x onto stack.
+    void push(int x) {
+        in_.push_back(x);
+        top_ = x;
+    }
+
+    // Removes the element on top of the stack.
+    void pop() {
+        if (in_.empty()) {
+            return;
+        } else if (in_.size() == 1) {
+            in_.pop_front();
+        } else {
+            int in_size = in_.size();
+            int i = 0;
+            while (i < in_size - 1) {
+                out_.push_back(in_.front());
+                in_.pop_front();
+                ++i;
+            }
+            in_.pop_front();
+            while (!out_.empty()) {
+                // in_.push_back(out_.front()); // 这里出错了.top_未赋值
+                push(out_.front());
+                out_.pop_front();
+            }
+        }
+    }
+
+    // Get the top element.
+    int top() {
+        return top_;
+    }
+
+    // Return whether the stack is empty.
+    bool empty() {
+        return in_.empty();
+    }
+private:
+    deque<int> in_;
+    deque<int> out_;
+    int top_;
+};
+
+
+
 ## 动态规划
 
-## [Maximal Square](https://leetcode.com/problems/maximal-square/)
+### [Maximal Square](https://leetcode.com/problems/maximal-square/)
 
 这里主要是利用动态规划来解，其方程为：
 
@@ -152,6 +321,91 @@ long gap = it_temp->first - last
          上式中，dp[x][y]表示以坐标(x, y)为右下角元素的全1正方形矩阵的最大长度（宽度）
 
 更多请参考 [largest-square-block](http://stackoverflow.com/questions/1726632/dynamic-programming-largest-square-block)
+
+## 其他
+
+### [Rectangle Area](https://leetcode.com/problems/rectangle-area/)
+
+    int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
+        int area = (C-A)*(D-B) + (G-E)*(H-F);
+        if (A >= G || B >= H || C <= E || D <= F)
+        {
+            return area;
+        }
+
+        int top = min(D, H);
+        int bottom = max(B, F);
+        int left = max(A, E);
+        int right = min(C, G);
+
+        return area - (top-bottom)*(right-left);
+    }
+
+### [Largest Number](https://leetcode.com/problems/largest-number/)
+该题目的关键就是定义：比较函数。思路是关键。前面绕了很多弯路。
+
+    static bool compare(string &s1, string &s2)
+    {
+        return s1 + s2 > s2 + s1;
+    }
+
+    string largestNumber(vector<int> &num) {
+        vector<string> arr;
+
+        //将num转成string存入数组
+        for(int i : num)
+            arr.push_back(to_string(i));
+
+        //比较排序
+        sort(arr.begin(), arr.end(), compare);
+
+        //连接成字符串
+        string ret;
+        for(string s : arr)
+            ret += s;
+
+        //排除特殊情况
+        if(ret[0] == '0' && ret.size() > 0)
+            return "0";
+
+        return ret;
+    }
+
+	
+### [Count primes](https://leetcode.com/problems/count-primes/)
+
+思路很巧妙，关键还是算法。[Sieve_of_Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+
+    int Label(int* array, int n, int p) {
+        int multipler = 2;
+        while (multipler * p < n) {
+            array[multipler * p] = 1;
+            multipler++;
+        }
+        for (int i = p+1; i < n; ++i) {
+            if (array[i] == 0) {
+                return i;
+            }
+        }
+        return n;
+    }
+    int countPrimes(int n) {
+        int* array = new int[n + 1];
+        memset(array, 0, sizeof(int) * (n+1));
+        int count = 0;
+        for (int i = 2; i < n; ) {
+            i = Label(array, n, i);
+            count++;
+        }
+        /*
+        for (int i = 2; i < n; ++i) {
+            if (array[i] == 0) {
+                count++;
+            }
+        }*/
+        delete[] array;
+        return count;
+    }
 
 ## Shell
 
