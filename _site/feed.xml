@@ -6,9 +6,1485 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2015 19:37:05 +0800</pubDate>
-    <lastBuildDate>Sun, 12 Apr 2015 19:37:05 +0800</lastBuildDate>
+    <pubDate>Sun, 23 Aug 2015 13:22:32 +0800</pubDate>
+    <lastBuildDate>Sun, 23 Aug 2015 13:22:32 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>互联网金融大杂烩</title>
+        <description>&lt;p&gt;当前格局&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当前互联网+金融格局，由传统金融机构和非金融机构组成。传统金融机构主要为传统金融业务的互联网创新以及电商化创新、APP软件等；非金融机构则主要是指利用互联网技术进行金融运作的电商企业、（P2P）模式的网络借贷平台，众筹模式的网络投资平台，挖财类（模式）的手机理财APP(理财宝类)，以及第三方支付平台等。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;众筹&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;众筹大意为大众筹资或群众筹资，是指用团购预购的形式，向网友募集项目资金的模式。众筹的本意是利用互联网和SNS传播的特性，让创业企业、艺术家或个人对公众展示他们的创意及项目，争取大家的关注和支持，进而获得所需要的资金援助。众筹平台的运作模式大同小异——需要资金的个人或团队将项目策划交给众筹平台，经过相关审核后，便可以在平台的网站上建立属于自己的页面，用来向公众介绍项目情况。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;P2P网贷&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;P2P(Peer-to-Peerlending)，即点对点信贷。P2P网贷是指通过第三方互联网平台进行资金借、贷双方的匹配，需要借贷的人群可以通过网站平台寻找到有出借能力并且愿意基于一定条件出借的人群，帮助贷款人通过和其他贷款人一起分担一笔借款额度来分散风险，也帮助借款人在充分比较的信息中选择有吸引力的利率条件，比如贷贷巴等。
+  两种运营模式，第一是纯线上模式，其特点是资金借贷活动都通过线上进行，不结合线下的审核。通常这些企业采取的审核借款人资质的措施有通过视频认证、查看银行流水账单、身份认证等。第二种是线上线下结合的模式，借款人在线上提交借款申请后，平台通过所在城市的代理商采取入户调查的方式审核借款人的资信、还款能力等情况。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第三方支付&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;第三方支付（Third-PartyPayment）狭义上是指具备一定实力和信誉保障的非银行机构，借助通信、计算机和信息安全技术，采用与各大银行签约的方式，在用户与银行支付结算系统间建立连接的电子支付模式。
+  根据央行2010年在《非金融机构支付服务管理办法》中给出的非金融机构支付服务的定义，从广义上讲第三方支付是指非金融机构作为收、付款人的支付中介所提供的网络支付、预付卡、银行卡收单以及中国人民银行确定的其他支付服务。第三方支付已不仅仅局限于最初的互联网支付，而是成为线上线下全面覆盖，应用场景更为丰富的综合支付工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;数字货币&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;除去蓬勃发展的第三方支付、P2P贷款模式、小贷模式、众筹融资、余额宝模式等形式，以比特币为代表的互联网货币也开始露出自己的獠牙。
+  以比特币等数字货币为代表的互联网货币爆发，从某种意义上来说，比其他任何互联网金融形式都更具颠覆性。在2013年8月19日，德国政府正式承认比特币的合法“货币”地位，比特币可用于缴税和其他合法用途，德国也成为全球首个认可比特币的国家。这意味着比特币开始逐渐“洗白”，从极客的玩物，走入大众的视线。也许，它能够催生出真正的互联网金融帝国。
+  比特币炒得火热，也跌得惨烈。无论怎样，这场似乎曾经离我们很遥远的互联网淘金盛宴已经慢慢走进我们的视线，它让人们看到了互联网金融最终极的形态就是互联网货币。所有的互联网金融只是对现有的商业银行、证券公司提出挑战，将来发展到互联网货币的形态就是对央行的挑战。也许比特币会颠覆传统金融成长为首个全球货币，也许它会最终走向崩盘，不管怎样，可以肯定的是，比特币会给人类留下一笔永恒的遗产。[5]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;大数据金融&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;大数据金融是指集合海量非结构化数据，通过对其进行实时分析，可以为互联网金融机构提供客户全方位信息，通过分析和挖掘客户的交易和消费信息掌握客户的消费习惯，并准确预测客户行为，使金融机构和金融服务平台在营销和风险控制方面有的放矢。
+  基于大数据的金融服务平台主要指拥有海量数据的电子商务企业开展的金融服务。大数据的关键是从大量数据中快速获取有用信息的能力，或者是从大数据资产中快速变现利用的能力。因此，大数据的信息处理往往以云计算为基础。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;金融机构&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;所谓信息化金融机构，是指通过采用信息技术，对传统运营流程进行改造或重构，实现经营、管理全面电子化的银行、证券和保险等金融机构。金融信息化是金融业发展趋势之一，而信息化金融机构则是金融创新的产物。
+  从金融整个行业来看，银行的信息化建设一直处于业内领先水平，不仅具有国际领先的金融信息技术平台，建成了由自助银行、电话银行、手机银行和网上银行构成的电子银行立体服务体系，而且以信息化的大手笔——数据集中工程在业内独领风骚，其除了基于互联网的创新金融服务之外，还形成了“门户”“网银、金融产品超市、电商”的一拖三的金融电商创新服务模式。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;金融门户&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;互联网金融门户是指利用互联网进行金融产品的销售以及为金融产品销售提供第三方服务的平台。它的核心就是“搜索比价”的模式，采用金融产品垂直比价的方式，将各家金融机构的产品放在平台上，用户通过对比挑选合适的金融产品。
+  互联网金融门户多元化创新发展，形成了提供高端理财投资服务和理财产品的第三方理财机构，提供保险产品咨询、比价、购买服务的保险门户网站等。这种模式不存在太多政策风险，因为其平台既不负责金融产品的实际销售，也不承担任何不良的风险，同时资金也完全不通过中间平台。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;重要文献&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/22858430&quot;&gt;如何用大数据软件分析金融数据&lt;/a&gt;，&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.36dsj.com/archives/10041&quot;&gt;大数据如何作用于金融领域并创造价值？&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/27561422&quot;&gt;&lt;strong&gt;大数据技术在金融行业有哪些应用前景&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/21094114&quot;&gt;大数据在金融领域是如何应用的？&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/21642875&quot;&gt;当传统金融模式遇到了大数据后会有哪些转变？&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/31259020&quot;&gt;外国的金融经济数据如何查出来？&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/25074959&quot;&gt;目前国内的高频交易业务对研发人员的需求如何？&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhuanlan.zhihu.com/econophysics/19944548&quot;&gt;大数据在金融市场中的应用-利用Twitter用户数据的情绪预测金融市场未来涨跌&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.gu360.com/&quot;&gt;利用文本检测市场情绪的做法-&amp;gt;股票雷达&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.forbes.com/sites/timworstall/2014/08/04/big-data-using-google-searches-to-predict-stock-market-falls/&quot;&gt;Big Data; Using Google Searches To Predict Stock Market Falls&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sanban18.com/baike/4418.html&quot;&gt;干货：十张图看懂新三板&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.eastmoney.com/&quot;&gt;东方财富网&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/23512883&quot;&gt;什么叫期货&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;股票机器人&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zzbased/zzbased.github.com/blob/master/_posts/doc/股票机器人.pdf&quot;&gt;股票机器人&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cs229.stanford.edu/proj2012/ShenJiangZhang-StockMarketForecastingusingMachineLearningAlgorithms.pdf&quot;&gt;Stock Market Forecasting Using Machine Learning Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.vatsals.com/Essays/MachineLearningTechniquesforStockPrediction.pdf&quot;&gt;Machine Learning Techniques for Stock Prediction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://arxiv.org/pdf/1010.3003&amp;amp;&quot;&gt;Twitter mood predicts the stock market&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://arxiv.org/ftp/arxiv/papers/1311/1311.4771.pdf&quot;&gt;Stock Market Trend Analysis Using Hidden Markov Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 02 Aug 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/08/02/%E4%BA%92%E8%81%94%E7%BD%91%E9%87%91%E8%9E%8D%E5%A4%A7%E6%9D%82%E7%83%A9.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/08/02/%E4%BA%92%E8%81%94%E7%BD%91%E9%87%91%E8%9E%8D%E5%A4%A7%E6%9D%82%E7%83%A9.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>图像视觉相关</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;图像视觉相关&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/morewindows/article/details/8225783&quot;&gt;OpenCV入门指南&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html&quot;&gt;From feature descriptors to deep learning: 20 years of computer vision&lt;/a&gt; 从特征描述子到深度学习——机器视觉20年回顾。通俗易懂，回顾了很多特征描述子的内容，也介绍了很多计算机视觉、机器学习特别是深度学习方面的大牛。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://t.cn/RZkbwoz&quot;&gt;图像处理中的全局优化技术&lt;/a&gt; 最近打算好好学习一下几种图像处理和计算机视觉中常用的 global optimization (或 energy minimization) 方法，这里总结一下学习心得。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/carson2005/article/details/9502053&quot;&gt;Retinex算法详解&lt;/a&gt; - 计算机视觉小菜鸟的专栏 - 博客频道 - CSDN.NET&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;本团队雕琢多年的人脸检测库现以MIT协议发布 &lt;a href=&quot;https://github.com/ShiqiYu/libfacedetection&quot;&gt;github code&lt;/a&gt; 供商业和非商业无限制使用,包含正面和多视角人脸检测两个算法.优点:速度快(OpenCV haar+adaboost的2-3倍), 准确度高 (FDDB非公开类评测排名第二），能估计人脸角度. 例子看下图. 希望能帮助到有需要的个人和公司。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.guokr.com/article/439945/&quot;&gt;计算机视觉：让冰冷的机器看懂多彩的世界&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[论文]《FaceNet: A Unified Embedding for Face Recognition and Clustering》http://t.cn/Rwg398R Google对Facebook DeepFace的有力回击—— FaceNet，在LFW(Labeled Faces in the Wild)上达到99.63%准确率(新纪录)，FaceNet embeddings可用于人脸识别、鉴别和聚类&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/sciencefans/p/4394861.html&quot;&gt;人脸识别技术大总结(1)：Face Detection &amp;amp; Alignment&lt;/a&gt; 介绍人脸识别的四大块：Face detection, alignment, verification and identification(recognization)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://python.jobbole.com/81277/&quot;&gt;利用图片指纹检测高相似度图片&lt;/a&gt; 我们也曾做过图片指纹，利用sift计算图片特征，再利用simhash计算图片指纹。
+  &lt;a href=&quot;https://github.com/maccman/dhash&quot;&gt;dhash library&lt;/a&gt; 该库利用了差分哈希判别图片的相似性和sift特征，能判别变形后同源图片。
+  &lt;a href=&quot;http://blog.csdn.net/zmazon/article/details/8618775&quot;&gt;相似图片搜索的三种哈希算法&lt;/a&gt; 平均ahash，感知phash，差分dhash。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/nagadomi/waifu2x&quot;&gt;waifu2x: 用深度卷积神经网络（CNN）对动漫放大降噪处理得超清大图的开源工具&lt;/a&gt; 左链接是GitHub托管地址。&lt;a href=&quot;http://waifu2x.udp.jp&quot;&gt;在线Demo&lt;/a&gt; 据说这款用Lua写的软件在日本引起不少话题，的确令人印象深刻&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 21 May 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/05/21/%E5%9B%BE%E5%83%8F%E8%A7%86%E8%A7%89.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/05/21/%E5%9B%BE%E5%83%8F%E8%A7%86%E8%A7%89.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>leetcode刷题小结</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;leetcode&quot;&gt;Leetcode刷题小结&lt;/h1&gt;
+
+&lt;h2 id=&quot;array&quot;&gt;Array&lt;/h2&gt;
+
+&lt;h3 id=&quot;median-of-two-sorted-array&quot;&gt;Median of two sorted array&lt;/h3&gt;
+
+&lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;
+
+&lt;p&gt;更通用的形式为：给定两个已排序好的数组，找到两者所有元素中第k大的元素。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;解法1：merge两个数组，然后求第k大的元素。O(m+n)复杂度。&lt;/li&gt;
+  &lt;li&gt;解法2：利用一个计数器，记录当前已经找到的第m大的元素，从两个数组的第一个元素开始遍历。O(m+n)复杂度。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;解法3：利用两个数组有序的特性，每次都删除k/2个元素。O(log(m+n))。&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Solution {
+  public:
+    // 寻找第k小的数
+    double find_kth(vector&amp;lt;int&amp;gt;::iterator it1, int n1,
+                    vector&amp;lt;int&amp;gt;::iterator it2, int n2,
+                    int k) {
+      // 确保n1 &amp;gt;= n2
+      if (n1 &amp;lt; n2) {
+        return find_kth(it2, n2, it1, n1, k);
+      }
+      if (n2 == 0) {
+        return *(it1 + k-1);
+      }
+      if (k == 1) {
+        return min(*it1, *it2);
+      }
+      // 注意这个划分,很重要
+      int i2 = min(k/2, n2);
+      int i1 = k - i2;
+      if (*(it1 + i1-1) &amp;gt; *(it2 + i2-1)) {
+        // 删掉数组2的i2个
+        return find_kth(it1, n1, it2 + i2, n2 - i2, i1);
+      } else if (*(it1 + i1-1) &amp;lt; *(it2 + i2-1)) {
+        // 删掉数组1的i1个
+        return find_kth(it1 + i1, n1 - i1, it2, n2, i2);
+      } else {
+        return *(it1 + i1-1);
+      }
+    }
+
+    // 寻找第k小的数, C语言版本
+    double find_kth2(const int* A, int m, const int* B, int n, int k) {
+      if (m &amp;lt; n) {
+        return find_kth2(B, n, A, m, k);
+      }
+      if (n == 0) {
+        return A[k-1];
+      }
+      if (k == 1) {
+        return min(A[0], B[0]);
+      }
+
+      int i2 = min(k/2, n);
+      int i1 = k - i2;
+      if (A[i1-1] &amp;lt; B[i2-1]) {
+        return find_kth2(A+i1, m-i1, B, n, k-i1);
+      } else if (A[i1-1] &amp;gt; B[i2-1]) {
+        return find_kth2(A, m, B+i2, n-i2, k-i2);
+      } else {
+        return A[i1-1];
+      }
+    }
+    // 数组从小到大排序
+    double findMedianSortedArrays(vector&amp;lt;int&amp;gt;&amp;amp; nums1, vector&amp;lt;int&amp;gt;&amp;amp; nums2) {
+      int total = nums1.size() + nums2.size();
+      if (total &amp;amp; 0x1) {
+        // odd
+        // return find_kth(nums1.begin(), nums1.size(), nums2.begin(), nums2.size(), total/2 + 1);
+        return find_kth2(nums1.data(), nums1.size(), nums2.data(), nums2.size(), total/2 + 1);
+      } else {
+        // return ( find_kth(nums1.begin(), nums1.size(), nums2.begin(), nums2.size(), total/2 + 1)
+        //     + find_kth(nums1.begin(), nums1.size(), nums2.begin(), nums2.size(), total/2) )/ 2.0;
+        return ( find_kth2(nums1.data(), nums1.size(), nums2.data(), nums2.size(), total/2 + 1)
+            + find_kth2(nums1.data(), nums1.size(), nums2.data(), nums2.size(), total/2) )/ 2.0;
+      }
+
+    }
+  };
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;contains-duplicate-iiihttpsleetcodecomproblemscontains-duplicate-iii&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/contains-duplicate-iii/&quot;&gt;Contains Duplicate III&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Input: [-1,2147483647], 1, 2147483647&lt;/p&gt;
+
+&lt;p&gt;下面代码中，在计算gap时，首先gap必须是long类型，其次it_temp-&amp;gt;first和last至少也有一个long，不然这个减法会有问题。&lt;/p&gt;
+
+&lt;p&gt;long gap = it_temp-&amp;gt;first - last&lt;/p&gt;
+
+&lt;p&gt;除此外，还有一个容易犯的错误，gap的计算经常会在while循环里被忽视掉了。&lt;/p&gt;
+
+&lt;p&gt;主要可以参考 &lt;a href=&quot;http://www.cppblog.com/suiaiguo/archive/2009/07/16/90228.html&quot;&gt;隐式类型转换&amp;amp;&amp;amp; 负数的补码&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Solution {
+public:
+    // from little to large
+    static bool SortFunction(const std::pair&amp;lt;int, int&amp;gt;&amp;amp; x, const std::pair&amp;lt;int, int&amp;gt;&amp;amp; y) {
+        if (x.first &amp;gt; y.first) {
+            return false;
+        } else if (x.first &amp;lt; y.first) {
+            return true;
+        } else {
+            return x.second &amp;lt; y.second;
+        }
+    }
+    bool containsNearbyAlmostDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k, int t) {
+        if (nums.size() &amp;lt; 2) {
+            return false;
+        }
+        std::vector&amp;lt;std::pair&amp;lt;int, int&amp;gt; &amp;gt; middle;  // num -- index
+        for (int i = 0; i &amp;lt; nums.size(); ++i) {
+            middle.push_back(std::make_pair(nums[i], i));
+        }
+        std::sort(middle.begin(), middle.end(), SortFunction);
+        std::vector&amp;lt;std::pair&amp;lt;int, int&amp;gt; &amp;gt;::const_iterator it = middle.begin();
+        long last = it-&amp;gt;first;
+        int index = it-&amp;gt;second;
+        ++it;
+        for (; it != middle.end(); ++it) {
+            std::vector&amp;lt;std::pair&amp;lt;int, int&amp;gt; &amp;gt;::const_iterator it_temp = it;
+            long gap = it_temp-&amp;gt;first - last;
+            while (it_temp != middle.end() &amp;amp;&amp;amp; gap &amp;lt;= (long)t) {
+                // at most t &amp;amp;&amp;amp; most k
+                if (abs(it_temp-&amp;gt;second - index) &amp;lt;= k) {
+                    return true;
+                }
+                ++it_temp;
+                gap = it_temp-&amp;gt;first - last;
+            }
+            last = it-&amp;gt;first;
+            index = it-&amp;gt;second;
+        }
+        return false;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;kth-largest-element-in-an-arrayhttpsleetcodecomsubmissionsdetail30747333&quot;&gt;&lt;a href=&quot;https://leetcode.com/submissions/detail/30747333/&quot;&gt;Kth Largest Element in an Array&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;// 错误点: sort默认是从小到大排序
+void InsertArray(vector&amp;lt;int&amp;gt;&amp;amp; array, int insert) {
+    // 二分查找
+    int begin = 0;
+    int end = array.size() - 1;
+    int search_index = 0;
+    while (begin &amp;lt;= end) {
+        int middle = (long(begin) + long(end)) / 2;
+        if (insert &amp;gt; array[middle]) {
+            if (middle - 1 &amp;lt; 0 || insert &amp;lt; array[middle - 1]) {
+                search_index = middle;
+                break;
+            }
+            // 前半段
+            end = middle;
+        } else if (insert &amp;lt;= array[middle]) {
+            if (middle + 1 &amp;gt; array.size() - 1 || insert &amp;gt;= array[middle + 1]) {
+                search_index = middle + 1;
+                break;
+            }
+            // 后半段
+            begin = middle;
+        }
+    }
+    // 找到index区间
+    for (int i = array.size() - 1; i &amp;gt; search_index; --i) {
+        array[i] = array[i-1];
+    }
+    array[search_index] = insert;
+}
+struct myclass {
+    bool operator() (int i, int j) { return (i&amp;gt;j);}
+} myobject;
+
+int findKthLargest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) {
+    if (nums.size() &amp;lt; k || k &amp;lt; 1) {
+        return 0;
+    }
+    vector&amp;lt;int&amp;gt; array(nums.begin(), nums.begin() + k);
+    std::sort(array.begin(), array.end(), myobject);  // 从大到小排序
+    for (int i = k; i &amp;lt; nums.size(); ++i) {
+        if (nums[i] &amp;gt; array[k-1]) {
+            InsertArray(array, nums[i]);
+        } else {
+            continue;
+        }
+    }
+    return array[k - 1];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;list&quot;&gt;List&lt;/h2&gt;
+
+&lt;h3 id=&quot;remove-linked-list-elementshttpsleetcodecomproblemsremove-linked-list-elements&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/remove-linked-list-elements/&quot;&gt;Remove Linked List Elements&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;// 错误点: 未考虑都是val的情况. 也就是在unittest时，还是应该尽可能的考虑周全，要记得必须写unittest。
+// Input: [1,1], 1
+// 能否换一个思路,不再考虑删除,而是把不是val的node插入.
+// 本次错误的点:主要是没有考虑到连续的val存在. 对付这种题,可以先申明一个temp node;另外, 也就是在now-&amp;gt;val == val的判断,对last的赋值要有一个else
+
+ListNode* removeElements(ListNode* head, int val) {
+    if (head == NULL) {
+        return head;
+    }
+    ListNode temp(val+1);
+    temp.next = head;
+
+    ListNode* last = &amp;amp;temp;
+    ListNode* now = head;
+    while (now) {
+        if (now-&amp;gt;val == val) {
+            last-&amp;gt;next = now-&amp;gt;next;
+        } else {
+            last = now;
+        }
+        now = now-&amp;gt;next;
+    }
+    return temp.next;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;string&quot;&gt;String&lt;/h2&gt;
+
+&lt;h3 id=&quot;isomorphic-stringshttpsleetcodecomproblemsisomorphic-strings&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/isomorphic-strings/&quot;&gt;Isomorphic strings&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;很简单的一个题目。但还是考虑不严谨。只是从s-&amp;gt;t这个方面做了考虑，而没有考虑t-&amp;gt;s这个方面。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bool isIsomorphic(string s, string t) {
+    if (s.size() != t.size()) {
+        return false;
+    }
+    map&amp;lt;char, char&amp;gt; container1;
+    map&amp;lt;char, char&amp;gt; container2;
+    for (int i = 0; i &amp;lt; s.size(); ++i) {
+        map&amp;lt;char, char&amp;gt;::const_iterator it1 = container1.find(s[i]);
+        map&amp;lt;char, char&amp;gt;::const_iterator it2 = container2.find(t[i]);
+        if (it1 == container1.end()) {
+            container1[s[i]] = t[i];
+        } else {
+            if (it1-&amp;gt;second != t[i]) {
+                return false;
+            }
+        }
+        if (it2 == container2.end()) {
+            container2[t[i]] = s[i];
+        } else {
+            if (it2-&amp;gt;second != s[i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;数据结构&lt;/h2&gt;
+
+&lt;h3 id=&quot;implement-stack-using-queueshttpsleetcodecomproblemsimplement-stack-using-queues&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/implement-stack-using-queues/&quot;&gt;Implement Stack using Queues&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;class Stack {
+public:
+    // Push element x onto stack.
+    void push(int x) {
+        in&lt;em&gt;.push_back(x);
+        top&lt;/em&gt; = x;
+    }&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Removes the element on top of the stack.
+void pop() {
+    if (in_.empty()) {
+        return;
+    } else if (in_.size() == 1) {
+        in_.pop_front();
+    } else {
+        int in_size = in_.size();
+        int i = 0;
+        while (i &amp;lt; in_size - 1) {
+            out_.push_back(in_.front());
+            in_.pop_front();
+            ++i;
+        }
+        in_.pop_front();
+        while (!out_.empty()) {
+            // in_.push_back(out_.front()); // 这里出错了.top_未赋值
+            push(out_.front());
+            out_.pop_front();
+        }
+    }
+}
+
+// Get the top element.
+int top() {
+    return top_;
+}
+
+// Return whether the stack is empty.
+bool empty() {
+    return in_.empty();
+} private:
+deque&amp;lt;int&amp;gt; in_;
+deque&amp;lt;int&amp;gt; out_;
+int top_; };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;动态规划&lt;/h2&gt;
+
+&lt;h3 id=&quot;maximal-squarehttpsleetcodecomproblemsmaximal-square&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/maximal-square/&quot;&gt;Maximal Square&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;这里主要是利用动态规划来解，其方程为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;     动态规划：dp[x][y] = min(dp[x - 1][y - 1], dp[x][y - 1], dp[x - 1][y]) + 1
+     上式中，dp[x][y]表示以坐标(x, y)为右下角元素的全1正方形矩阵的最大长度（宽度）
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;更多请参考 &lt;a href=&quot;http://stackoverflow.com/questions/1726632/dynamic-programming-largest-square-block&quot;&gt;largest-square-block&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;其他&lt;/h2&gt;
+
+&lt;h3 id=&quot;rectangle-areahttpsleetcodecomproblemsrectangle-area&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/rectangle-area/&quot;&gt;Rectangle Area&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
+    int area = (C-A)*(D-B) + (G-E)*(H-F);
+    if (A &amp;gt;= G || B &amp;gt;= H || C &amp;lt;= E || D &amp;lt;= F)
+    {
+        return area;
+    }
+
+    int top = min(D, H);
+    int bottom = max(B, F);
+    int left = max(A, E);
+    int right = min(C, G);
+
+    return area - (top-bottom)*(right-left);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;largest-numberhttpsleetcodecomproblemslargest-number&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/largest-number/&quot;&gt;Largest Number&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;该题目的关键就是定义：比较函数。思路是关键。前面绕了很多弯路。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static bool compare(string &amp;amp;s1, string &amp;amp;s2)
+{
+    return s1 + s2 &amp;gt; s2 + s1;
+}
+
+string largestNumber(vector&amp;lt;int&amp;gt; &amp;amp;num) {
+    vector&amp;lt;string&amp;gt; arr;
+
+    //将num转成string存入数组
+    for(int i : num)
+        arr.push_back(to_string(i));
+
+    //比较排序
+    sort(arr.begin(), arr.end(), compare);
+
+    //连接成字符串
+    string ret;
+    for(string s : arr)
+        ret += s;
+
+    //排除特殊情况
+    if(ret[0] == &#39;0&#39; &amp;amp;&amp;amp; ret.size() &amp;gt; 0)
+        return &quot;0&quot;;
+
+    return ret;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;count-primeshttpsleetcodecomproblemscount-primes&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/count-primes/&quot;&gt;Count primes&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;思路很巧妙，关键还是算法。&lt;a href=&quot;https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes&quot;&gt;Sieve_of_Eratosthenes&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int Label(int* array, int n, int p) {
+    int multipler = 2;
+    while (multipler * p &amp;lt; n) {
+        array[multipler * p] = 1;
+        multipler++;
+    }
+    for (int i = p+1; i &amp;lt; n; ++i) {
+        if (array[i] == 0) {
+            return i;
+        }
+    }
+    return n;
+}
+int countPrimes(int n) {
+    int* array = new int[n + 1];
+    memset(array, 0, sizeof(int) * (n+1));
+    int count = 0;
+    for (int i = 2; i &amp;lt; n; ) {
+        i = Label(array, n, i);
+        count++;
+    }
+    /*
+    for (int i = 2; i &amp;lt; n; ++i) {
+        if (array[i] == 0) {
+            count++;
+        }
+    }*/
+    delete[] array;
+    return count;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;shell&quot;&gt;Shell&lt;/h2&gt;
+
+&lt;h3 id=&quot;word-frequencyhttpsleetcodecomproblemsword-frequency&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/word-frequency/&quot;&gt;Word Frequency&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;解答：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;awk -F&quot; &quot; &#39;{for (i = 1; i &amp;lt;= NF; ++i) {num[$i]++;}}END{for (a in num) print a,num[a]|&quot;sort -k2 -r -n&quot;}&#39; words.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注意几个细节：(1)在awk的输出中排序，可以在后面直接接sort命令，不过需要用引号。(2)这里是按照map的value排序，需要指定”-k2”。(3)注意是降序排列，所以有”-r”。(4)再注意默认是ascii排序，这里应该是number排序，所以有”-n”。&lt;/p&gt;
+
+&lt;h3 id=&quot;transpose-file-httpsleetcodecomproblemstranspose-file&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/transpose-file/&quot;&gt;Transpose File &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;有一个感触：awk内置的map如此强大。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# (NF &amp;gt; p) {p = NF} 可以放到{}里面,如果在里面,则要加if.
+awk -F&quot; &quot; &#39;{
+    for (i = 1; i &amp;lt;= NF; i++) {
+        content[NR,i] = $i
+    }
+
+}
+(NF &amp;gt; p) {p = NF}
+END{
+    for (i = 1; i &amp;lt;= p; i++) {
+        str = content[1, i]
+        for (j = 2; j &amp;lt;= NR; j++) {
+            str = str&quot; &quot;content[j, i]
+        }
+        print str
+    }
+}&#39; file.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;valid-phone-numbershttpsleetcodecomproblemsvalid-phone-numbers&quot;&gt;&lt;a href=&quot;https://leetcode.com/problems/valid-phone-numbers/&quot;&gt;Valid Phone Numbers&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;这里主要考察正则表达式。具体tool可以使用：grep, egrep, sed, awk。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#cat file.txt | grep -Eo &#39;^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$&#39;
+#grep -Eo &#39;^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$&#39; file.txt
+awk &#39;/^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$/&#39; file.txt
+sed -n &#39;/^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$/,/^([0-9]{3}-){2}[0-9]{4}$/p&#39; file.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;更多参考资料：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://coolshell.cn/articles/9104.html&quot;&gt;Sed简明教程-左耳朵耗子&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://coolshell.cn/articles/9070.html&quot;&gt;Awk简明教程-左耳朵耗子&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.funtoo.org/Sed_by_Example,_Part_2&quot;&gt;Sed by Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html&quot;&gt;Regular Expressions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.math.utah.edu/docs/info/gawk_5.html#SEC27&quot;&gt;Awk regex&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 21 May 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/05/21/leetcode%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/05/21/leetcode%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>docker浅析</title>
+        <description>&lt;h1 id=&quot;docker&quot;&gt;docker浅析&lt;/h1&gt;
+
+&lt;p&gt;最近&lt;a href=&quot;https://github.com/docker/docker&quot;&gt;docker&lt;/a&gt;流行起来了。Docker提供了一种在安全、可重复的环境中自动部署软件的方式。&lt;/p&gt;
+
+&lt;p&gt;google 关于borg的论文&lt;/p&gt;
+
+&lt;p&gt;tencent以前soso时代的tborg。&lt;/p&gt;
+
+&lt;p&gt;如今数平又在大力推进的Gaia。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;参考资料&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/cn/articles/tencent-millions-scale-docker-application-practice&quot;&gt;腾讯万台规模的Docker应用实践&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cxwangyi.github.io/story/docker_revolution_1.md.html&quot;&gt;yiwang关于docker的tech notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;【Docker基础技术：Linux Namespace】上篇：http://t.cn/RACqZ2j ，下篇：http://t.cn/RACGQWs 。很多人说Docker是新技术，所以不敢用，其实不是，Docker里用的全是老技术。去年在阿里给同学们做过分享，这里我把分享成文发出来。我会写一系列的文章来阐述Docker的基础技术。&lt;/li&gt;
+  &lt;li&gt;【探秘价值10亿美元的Docker公司总部】就在炙手可热的容器管理创业公司Docker融资9500万美元之际，@AlaudaCloud 战略及市场负责人于历濛造访了这家价值10亿美元的Docker公司总部，带我们感受了这家发展迅猛的公司内部文化氛围。http://t.cn/RACFZfQ&lt;/li&gt;
+  &lt;li&gt;Borg论文出来了，《Large-scale cluster management at Google with Borg》：http://t.cn/RACOAho&lt;/li&gt;
+  &lt;li&gt;【 从闭源的Borg到开源的Mesos】Mesos是Apache下的开源分布式资源管理框架，被称为是分布式系统的内核。数人科技CEO王璞来自Google，对Google内部的Borg平台非常熟悉，从Google离职后，他选择了基于Mesos和Docker的技术创业。本次采访中王璞分享了他的创业历程及对Mesos的理解。http://t.cn/RA8AejI&lt;/li&gt;
+  &lt;li&gt;盆盆的两篇长微博《Windows Docker内部原理猜想》http://t.cn/RAyGI4Q《微软私有云和docker管理平台整合之展望》http://t.cn/RwFnhFx 盆盆在MVP OpenDay上有关云计算和自动化的讲座(抱歉不太清晰)http://t.cn/RAvJT6B&lt;/li&gt;
+  &lt;li&gt;【Docker和LXC有什么不同?】Docker和LXC有什么不同? 这大概是很多初学者的困惑所在，为什么说Docker不是LXC的一个替代方案呢? Docker基于LXC的基础上做了哪些有想象力的工作呢? 本文作者就此分享了自己的一些独特见解。http://t.cn/RADN7O1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;其他资料&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;【zookeeper使用和原理探究（一）】 zookeeper介绍 zookeeper是一个为分布式应用提供一致性服务的软件，它是开源的Hadoop项目中的一个子项目，并且根据google发表的论文来实现的，接下来我们首先来安装使… 详见：http://t.cn/zjl1sUn&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 21 May 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/05/21/dockter%E6%B5%85%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/05/21/dockter%E6%B5%85%E6%9E%90.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>基本数据结构</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;基本数据结构&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;距离度量&lt;/h2&gt;
+&lt;p&gt;闵可夫斯基距离(Minkowski Distance)，闵氏距离不是一种距离，而是一组距离的定义。
+两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/Minkowski_distance.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中p是一个变参数。
+当p=1时，就是曼哈顿距离
+当p=2时，就是欧氏距离
+当p→∞时，就是切比雪夫距离
+根据变参数的不同，闵氏距离可以表示一类的距离。&lt;/p&gt;
+
+&lt;p&gt;参考自&lt;a href=&quot;http://blog.csdn.net/v_july_v/article/details/8203674&quot;&gt;从K近邻算法、距离度量谈到KD树、SIFT+BBF算法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;余弦距离&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://t.cn/R2y1Mzu&quot;&gt;论文:兼顾语义/效率的文本空间夹角余弦(TSCS)《Textual Spatial Cosine Similarity》G Crocetti (2015)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;相似性查询&lt;/h2&gt;
+
+&lt;p&gt;索引结构中相似性查询有两种基本的方式：
+范围查询和K最近邻查询。&lt;/p&gt;
+
+&lt;p&gt;常见应用有：对图片计算一个指纹，查找相似图片；寻找K个距离最近的点；&lt;/p&gt;
+
+&lt;p&gt;其方法为：构建数据索引，因为实际数据一般都会呈现簇状的聚类形态，因此我们想到建立数据索引，然后再进行快速匹配。索引树是一种树结构索引方法，其基本思想是对搜索空间进行层次划分。根据划分的空间是否有混叠可以分为Clipping和Overlapping两种。前者划分空间没有重叠，其代表就是k-d树；后者划分空间相互有交叠，其代表为R树。&lt;/p&gt;
+
+&lt;p&gt;R树请参考&lt;a href=&quot;http://blog.sina.com.cn/s/blog_72e1c7550101dsc3.html&quot;&gt;基于R-Tree的最近邻查询&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;k-d&quot;&gt;K-D树&lt;/h2&gt;
+
+&lt;p&gt;Kd-树是K-dimension tree的缩写，是对数据点在k维空间（如二维(x，y)，三维(x，y，z)，k维(x1，y，z..)）中划分的一种数据结构，主要应用于多维空间关键数据的搜索（如：范围搜索和最近邻搜索）。本质上说，Kd-树就是一种平衡二叉树。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/K-d树&quot;&gt;Wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;最邻近搜索&lt;/h3&gt;
+
+&lt;p&gt;最邻近搜索用来找出在树中与输入点最接近的点。&lt;/p&gt;
+
+&lt;p&gt;k-d树最邻近搜索的过程如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;从根节点开始，递归的往下移。往左还是往右的决定方法与插入元素的方法一样(如果输入点在分区面的左边则进入左子节点，在右边则进入右子节点)。&lt;/li&gt;
+  &lt;li&gt;一旦移动到叶节点，将该节点当作”目前最佳点”。&lt;/li&gt;
+  &lt;li&gt;解开递归，并对每个经过的节点运行下列步骤：
+    &lt;ul&gt;
+      &lt;li&gt;如果目前所在点比目前最佳点更靠近输入点，则将其变为目前最佳点。&lt;/li&gt;
+      &lt;li&gt;检查另一边子树有没有更近的点，如果有则从该节点往下找&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;当根节点搜索完毕后完成最邻近搜索&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;蓄水池抽样&lt;/h2&gt;
+&lt;p&gt;怎样随机从N个元素中选择一个或K个元素，你依次遍历每个元素，但不知道N多大。
+方法有2个：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;先从中选出前K个元素，然后从 i=K+1 开始，以K/i的概率，将该元素替换原来的K个元素中的一个。&lt;/li&gt;
+  &lt;li&gt;对每个元素，赋予一个随机值。维护一个最小堆，取随机值最大的K个，所对应的K个元素。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;更多参考 &lt;a href=&quot;http://blog.csdn.net/hackbuteer1/article/details/7971328&quot;&gt;海量数据随机抽样问题（蓄水池问题）&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;蒙提霍尔问题&lt;/h2&gt;
+&lt;p&gt;即&lt;a href=&quot;http://zh.wikipedia.org/w/index.php?title=蒙提霍爾問題&quot;&gt;三门问题&lt;/a&gt;。当这个问题不便于回答的时候，可以想象一下如果是1000个门的情况。&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 03 May 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/05/03/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/05/03/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>RPC浅析</title>
+        <description>&lt;h1 id=&quot;rpc&quot;&gt;RPC浅析&lt;/h1&gt;
+
+&lt;p&gt;根据该文整理的ppt，请参考&lt;a href=&quot;https://github.com/zzbased/zzbased.github.com/blob/master/_posts/doc/RPC浅析.pdf&quot;&gt;rpc浅析.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;protobuf&quot;&gt;Protobuf简介&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;简单介绍&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/google/protobuf&quot;&gt;protobuf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;优点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用来序列化结构化数据，类似于xml，但是smaller, faster, and simpler，适合网络传输&lt;/li&gt;
+  &lt;li&gt;支持跨平台多语言(e.g. Python, Java, Go, C++, Ruby, JavaNano)&lt;/li&gt;
+  &lt;li&gt;消息格式升级，有较好的兼容性(想想以前用struct定义网络传输协议,解除version的痛楚)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;缺点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可读性差(not human-readable or human-editable)&lt;/li&gt;
+  &lt;li&gt;不具有自描述性(self-describing)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reflection&quot;&gt;Reflection&lt;/h3&gt;
+
+&lt;p&gt;Reflection: 常用于pb与xml,json等其他格式的转换。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/reflection_protobuf.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;更多请参考：
+&lt;a href=&quot;http://blog.csdn.net/solstice/article/details/6300108&quot;&gt;一种自动反射消息类型的 Google Protobuf 网络传输方案&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;自描述消息&lt;/h3&gt;
+
+&lt;p&gt;生产者：产生消息，填充内容，并序列化保存&lt;/p&gt;
+
+&lt;p&gt;消费者：读取数据，反序列化得到消息，使用消息&lt;/p&gt;
+
+&lt;p&gt;目的：解除这种耦合，让消费者能动态的适应消息格式的变换。&lt;/p&gt;
+
+&lt;p&gt;生产者把定义消息格式的.proto文件和消息作为一个完整的消息序列化保存，完整保存的消息我称之为Wrapper message，原来的消息称之为payload message。&lt;/p&gt;
+
+&lt;p&gt;消费者把wrapper message反序列化，先得到payload message的消息类型，然后根据类型信息得到payload message，最后通过反射机制来使用该消息。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;message SelfDescribingMessage {
+	// Set of .proto files which define the type.
+	required FileDescriptorSet proto_files = 1;
+
+	// Name of the message type.  Must be defined by one of the files in
+	// proto_files.
+	required string type_name = 2;
+
+	// The message data.
+	required bytes message_data = 3;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Self-describing Messages 生产者&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用 protoc生成代码时加上参数–descriptor_set_out，输出类型信息(即SelfDescribingMessage的第一个字段内容)到一个文件，这里假设文件名为desc.set，protoc –cpp_out=. –descriptor_set_out=desc.set addressbook.proto&lt;/li&gt;
+  &lt;li&gt;payload message使用方式不需要修改tutorial::AddressBook address_book;PromptForAddress(address_book.add_person());&lt;/li&gt;
+  &lt;li&gt;在保存时使用文件desc.set内容填充SelfDescribingMessage的第一个字段，使用AddressBookAddressBook的full name填充SelfDescribingMessage的第二个字段，AddressBook序列化后的数据填充第三个字段。最后序列化SelfDescribingMessage保存到文件中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Self-describing Messages 消费者&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;消费者编译时需要知道SelfDescribingMessage，不需要知道AddressBook，运行时可以正常操作AddressBook消息。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/self-describing_message_consume.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;动态自描述消息&lt;/h3&gt;
+&lt;p&gt;@TODO&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;工程实践&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一般对日志数据只加不删不改, 所以其字段设计要极慎重。&lt;/li&gt;
+  &lt;li&gt;千万不要随便修改tag number。&lt;/li&gt;
+  &lt;li&gt;不要随便添加或者删除required field。&lt;/li&gt;
+  &lt;li&gt;Clear并不会清除message memory（clear操作适合于清理那些数据量变化不大的数据，对于大小变化较大的数据是不适合的，需要定期（或每次）进行delete操作。建议swap或者delete）&lt;/li&gt;
+  &lt;li&gt;repeated message域，size不要太大。&lt;/li&gt;
+  &lt;li&gt;如果一个数据太大，不要使用protobuf。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/google/protobuf&quot;&gt;Protobuf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.searchtb.com/2012/09/protocol-buffers.html&quot;&gt;玩转Protobuf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/protocol-buffers/docs/techniques?hl=zh-CN#self-description&quot;&gt;Self-describing Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Protobuf memory内存的使用。 &lt;a href=&quot;http://qa.baidu.com/blog/?p=1179&quot;&gt;Protobuf使用不当导致的程序内存上涨问题&lt;/a&gt;
+protobuf的clear操作适合于清理那些数据量变化不大的数据，对于大小变化较大的数据是不适合的，需要定期（或每次）进行delete操作。建议swap或者delete。&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-26922071-id-3723751.html&quot;&gt;protobuf中会严重影响时间和空间损耗的地方 &lt;/a&gt;
+repeated的性能问题。对于普通数据类型，在2^n+1时重新分配内存空间，而对于message数据，在2^n+1是分配对象地址空间，但每次都是new一个对象，这样就很损耗性能了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;rpc-1&quot;&gt;RPC&lt;/h2&gt;
+
+&lt;h3 id=&quot;rpc-2&quot;&gt;业界的RPC&lt;/h3&gt;
+
+&lt;p&gt;基于protobuf的rpc最简单实现 两个优点：简化client-server交互，就像在调用一个本地方法；通过Protobuf实现多种编程语言之间的交互。
+get all the advantages of working with protocol buffers, including efficient serialization, a simple IDL, and easy interface updating.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.codedump.info/?p=169&quot;&gt;使用google protobuf RPC实现echo service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://codemacro.com/2014/08/31/protobuf-rpc/&quot;&gt;基于protobuf的RPC实现&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jeoygin.org/2011/09/rpc-framework-protocol-buffers.html&quot;&gt;RPC框架系列——Protocol Buffers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://djt.qq.com/article/view/327&quot;&gt;Poppy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gdt-rpc&quot;&gt;GDT RPC代码解析&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;公共代码&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;echo_service&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;echo_service.proto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;service EchoService {
+	option (gdt.qzone_protocol_version) = 1;
+	rpc Echo(EchoRequest) returns (EchoResponse) {
+		option (gdt.qzone_protocol_cmd) = 10;
+	}
+	rpc FormTest(FormTestMessage) returns(FormTestMessage);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;protoc编译后：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class EchoService : public ::google::protobuf::Service {
+	protected:
+	// This class should be treated as an abstract interface.
+	inline EchoService() {};
+	public:
+	virtual ~EchoService();
+
+	typedef EchoService_Stub Stub;
+
+	static const ::google::protobuf::ServiceDescriptor* descriptor();
+	// 下面两个是虚函数,需要在子类实现
+	virtual void Echo(::google::protobuf::RpcController* controller,
+						const ::gdt::rpc_examples::EchoRequest* request,
+						::gdt::rpc_examples::EchoResponse* response,
+						::google::protobuf::Closure* done);
+	virtual void FormTest(::google::protobuf::RpcController* controller,
+						const ::gdt::rpc_examples::FormTestMessage* request,
+						::gdt::rpc_examples::FormTestMessage* response,
+						::google::protobuf::Closure* done);
+
+	// implements Service ----------------------------------------------
+
+	const ::google::protobuf::ServiceDescriptor* GetDescriptor();
+	void CallMethod(const ::google::protobuf::MethodDescriptor* method,
+					::google::protobuf::RpcController* controller,
+					const ::google::protobuf::Message* request,
+					::google::protobuf::Message* response,
+					::google::protobuf::Closure* done);
+	const ::google::protobuf::Message&amp;amp; GetRequestPrototype(
+		const ::google::protobuf::MethodDescriptor* method) const;
+	const ::google::protobuf::Message&amp;amp; GetResponsePrototype(
+		const ::google::protobuf::MethodDescriptor* method) const;
+
+	private:
+	GOOGLE_DISALLOW_EVIL_CONSTRUCTORS(EchoService);
+};
+
+class EchoService_Stub : public EchoService {
+	public:
+	EchoService_Stub(::google::protobuf::RpcChannel* channel);
+	EchoService_Stub(::google::protobuf::RpcChannel* channel,
+					::google::protobuf::Service::ChannelOwnership ownership);
+	~EchoService_Stub();
+
+	inline ::google::protobuf::RpcChannel* channel() { return channel_; }
+
+	// implements EchoService ------------------------------------------
+
+	void Echo(::google::protobuf::RpcController* controller,
+						const ::gdt::rpc_examples::EchoRequest* request,
+						::gdt::rpc_examples::EchoResponse* response,
+						::google::protobuf::Closure* done);
+	void FormTest(::google::protobuf::RpcController* controller,
+						const ::gdt::rpc_examples::FormTestMessage* request,
+						::gdt::rpc_examples::FormTestMessage* response,
+						::google::protobuf::Closure* done);
+	private:
+	::google::protobuf::RpcChannel* channel_;
+	bool owns_channel_;
+	GOOGLE_DISALLOW_EVIL_CONSTRUCTORS(EchoService_Stub);
+};
+
+// 客户端实际调用的是RpcChannel的CallMethod
+void EchoService_Stub::Echo(::google::protobuf::RpcController* controller,
+							const ::gdt::rpc_examples::EchoRequest* request,
+							::gdt::rpc_examples::EchoResponse* response,
+							::google::protobuf::Closure* done) {
+	channel_-&amp;gt;CallMethod(descriptor()-&amp;gt;method(0),
+						controller, request, response, done);
+}
+void EchoService_Stub::FormTest(::google::protobuf::RpcController* controller,
+							const ::gdt::rpc_examples::FormTestMessage* request,
+							::gdt::rpc_examples::FormTestMessage* response,
+							::google::protobuf::Closure* done) {
+	channel_-&amp;gt;CallMethod(descriptor()-&amp;gt;method(1),
+						controller, request, response, done);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;system/io_frame/net_options&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;非阻塞IO: O_NONBLOCK&lt;/li&gt;
+  &lt;li&gt;CloseOnExec: FD_CLOEXEC (该句柄在fork子进程后执行exec时就关闭)&lt;/li&gt;
+  &lt;li&gt;SO_SNDBUF&lt;/li&gt;
+  &lt;li&gt;SO_RCVBUF&lt;/li&gt;
+  &lt;li&gt;SO_LINGER 设置套接口关闭后的行为&lt;/li&gt;
+  &lt;li&gt;TCP_NODELAY：禁用Nagle‘s Algorithm(积累数据量到TCP Segment Size后发送)&lt;/li&gt;
+  &lt;li&gt;SO_REUSEADDR：让端口释放后立即可以被再次使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;更多参考资料：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/4257410/what-are-so-sndbuf-and-so-recvbuf&quot;&gt;What are SO_SNDBUF and SO_RECVBUF&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/houlaizhe221/article/details/6580775&quot;&gt;非阻塞IO&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/chrisniu1984/article/details/7050663&quot;&gt;FD_CLOEXEC解析&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-29075379-id-3905006.html&quot;&gt;SO_RCVBUF and SO_SNDBUF&lt;/a&gt;。
+接收缓冲区被TCP和UDP用来缓存网络上来的数据，一直保存到应用进程读走为止。一个发送缓冲区和一个接收缓冲区，TCP的全双工的工作模式以及TCP的滑动窗口便是依赖于这两个独立的buffer以及此buffer的填充状态。&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/factor2000/article/details/3929816&quot;&gt;setsockopt ：SO_LINGER 选项设置&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jerrypeng.me/2013/08/mythical-40ms-delay-and-tcp-nodelay/&quot;&gt;神秘的40毫秒延迟与 TCP_NODELAY&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/mydomain/archive/2011/08/23/2150567.html&quot;&gt;SO_REUSEADDR的意义&lt;/a&gt;。一个端口释放后会等待两分钟之后才能再被使用，SO_REUSEADDR是让端口释放后立即就可以被再次使用。&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://man7.org/linux/man-pages/man7/socket.7.html&quot;&gt;socket option&lt;/a&gt; socketoptions.h/cc里面的实现也看看&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;客户端代码&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RpcClient:
+负责所有RpcChannel对象的管理和对服务器端应答的处理&lt;/li&gt;
+  &lt;li&gt;RpcChannel:
+代表通讯通道，每个服务器地址对应于一个RpcChannel对象，客户端通过它向服务器端发送方法调用请求并接收结果。&lt;/li&gt;
+  &lt;li&gt;RpcController:
+存储一次rpc方法调用的上下文，包括对应的连接标识，方法执行结果等。&lt;/li&gt;
+  &lt;li&gt;RpcServer:
+服务器端的具体业务服务对象的容器，负责监听和接收客户端的请求，分发并调用实际的服务对象方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/client_connection&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;connection列表：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./system/io_frame/base_connection.h 这个是基类
+./net/http/client/connection.h
+./rpc/client_connection.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;客户端connection:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./client_connection.h:95:class ClientConnection : public BaseConnection
+./ckv_client_channel.h:23:class CkvClientConnection : public ClientConnection
+./http_rpc_channel.h:24:class HttpRpcConnection : public ClientConnection
+./qzone_client_channel.h:22:class QzoneClientConnection : public ClientConnection
+./rpc_channel_impl.h:42:  virtual ClientConnection* NewConnection() = 0;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;用来在客户端建立连接，读取数据，发送数据等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/rpc_channel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RpcChannelInterface : public ::google::protobuf::RpcChannel
+
+void CallMethod(
+	const google::protobuf::MethodDescriptor* method,
+	google::protobuf::RpcController* controller,
+	const google::protobuf::Message* request,
+	google::protobuf::Message* response,
+	google::protobuf::Closure* done);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;发送请求的背后,最后调用的其实是RpcChannel的CallMethod函数.所以,要实现RpcChannel类,最关键的就是要实现这个函数,在这个函数中完成发送请求的事务。&lt;/p&gt;
+
+&lt;p&gt;客户端channel这边主要还是基于 BaseConnection这个在做。还是那两个入口函数，read和write。
+ClientConnection里面会调用RpcClientCallContext。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./rpc_channel_impl.h:26:class RpcChannelImpl : public RpcChannelInterface {
+./qzone_client_channel.h:35:class QzoneClientChannel : public RpcChannelImpl {
+./http_rpc_channel.h:42:class HttpRpcChannel : public RpcChannelImpl {
+./ckv_client_channel.h:33:class CkvClientChannel: public RpcChannelImpl {
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/rpc_controller&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;rpc_controller是一个rpc请求过程中的信息。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class RpcController : public google::protobuf::RpcController
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;主要保存下面这些信息：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int error_code_;
+std::string reason_;
+int timeout_;
+SocketAddressStorage remote_address_;
+int64_t timestamp_;
+bool in_use_;
+kDefaultTimeout = 2000ms;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/load_balance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;LoadBalancer是一个单例。实现了4种load_balancer。
+客户端balancer列表，主要来做负载均衡。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./rpc/load_balancer.h 基类
+./rpc/domain_load_balancer.h
+./rpc/l5_load_balancer.h
+./rpc/list_load_balancer.h
+./rpc/single_load_balancer.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/RpcClient&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;RpcClient是客户端的主类。一般情况下，一个客户端只需要有一个RpcClient。在初始化的时候，也可以设置线程个数，此个数等于PollThread的个数(多路器的个数)。&lt;/p&gt;
+
+&lt;p&gt;利用RpcClient::OpenChannel创建RpcChannel。先根据scheme(目前有qzone,ckv,http三种)创建对应的Factory：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RpcChannelFactory* factory = GDT_RPC_GET_CHANNEL_FACTORY(scheme)。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再利用factory创建channel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;shared_ptr&amp;lt;RpcChannelInterface&amp;gt; channel_impl(factory-&amp;gt;CreateChannel(multiplexers_, server, NetOptions()))。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;创建channel时，先调用RpcChannel::Open。&lt;/p&gt;
+
+&lt;p&gt;这里注册了三个Channel以及Factory&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./rpc/ckv_client_channel.cc:22:GDT_RPC_REGISTER_CHANNEL(&quot;ckv&quot;, CkvClientChannel);
+./rpc/http_rpc_channel.cc:209:GDT_RPC_REGISTER_CHANNEL(&quot;http&quot;, HttpRpcChannel);
+./rpc/qzone_client_channel.cc:269:GDT_RPC_REGISTER_CHANNEL(&quot;qzone&quot;, QzoneClientChannel);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Client代码流程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;rpc client里发起请求，内部调用的都是RpcChannel。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Closure* done = ::NewCallback(this, &amp;amp;TestClient::AsyncCallDone, i,
+							  controller, request, response);
+EchoService::Stub stub(channels_[i % channels_.size()].get());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果是http请求，则Stub调用的是 HttpRpcChannel::CallMethod。根据是否有done回调函数，分为同步和异步。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class HttpRpcChannel : public RpcChannelImpl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;CallMethod实际调用的是RpcChannelImpl::Call(context)。Call函数里，先获取到connection。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;shared_ptr&amp;lt;ClientConnection&amp;gt; connection = GetRoute(call_context);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;GetRoute里首先判断是否已有connected_，如果没有新需要新建立连接。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;result.reset(NewConnection())
+(!result-&amp;gt;Open((*multiplexers_)[index].get(), address, options_))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;http_rpc_channel里，实现的是&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class HttpRpcConnection : public ClientConnection。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在ClientConnection::Open函数里，调用了NonblockingConnect。&lt;/p&gt;
+
+&lt;p&gt;OK，这下请求就算发送过去了。&lt;/p&gt;
+
+&lt;p&gt;channel_number 这个设置主要是为什么？多一点有什么好处？channel是socket connect的个数。&lt;/p&gt;
+
+&lt;p&gt;clinet 选取multiplexer的时候，所用的策略。实现在rpc_channel_impl.cc里。
+如果只有一个connection的话，其实一直就用了一个channel。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int index = connect_count_ % multiplexers_-&amp;gt;size();  // Round-robbin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在客户端和服务端设置的threads number是PollThread的个数。channel number可以大于thread number。根据epoll机制，一个thread都可以支撑多个channel。&lt;/p&gt;
+
+&lt;p&gt;一个channel里持有很多连接的map，可以共享连接。持有的是长连接通路。看这个函数就知道了：shared_ptr&lt;clientconnection&gt; RpcChannelImpl::GetRoute。&lt;/clientconnection&gt;&lt;/p&gt;
+
+&lt;p&gt;只要channel没有新建，则连接一直保留，所以这时是长连接。&lt;/p&gt;
+
+&lt;p&gt;创建连接的backtrace：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/client_build_connection.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;client异步调用的backtrace：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/client_async_call.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;服务端代码&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;system/io_frame/Multiplexer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;常见的多路复用有：PPC(Process Per Connection)，TPC(Thread PerConnection)，这些模型的缺陷是： resource usage and context-switching time influence the ability to handle many clients at a time。&lt;/p&gt;
+
+&lt;p&gt;select的缺点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;最大并发数限制。一个进程所打开的FD（文件描述符）是有限制的，由FD_SETSIZE设置。&lt;/li&gt;
+  &lt;li&gt;效率问题，select每次调用都会线性扫描全部的FD集合。O(n)复杂度。&lt;/li&gt;
+  &lt;li&gt;内核/用户空间的内存拷贝问题。通过内存拷贝让内核把FD消息通知给用户空间。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;poll解决了第一个缺点，但第二，三个缺点依然存在。&lt;/p&gt;
+
+&lt;p&gt;epoll是一个相对完美的解决方案。(1)最大FD个数很大(由/proc/sys/fs/file-max给出)；(2)epoll不仅会告诉应用程序有I/0事件到来，还会告诉应用程序相关的信息，不用遍历；(3)内核与用户态传递消息使用共享内存；&lt;/p&gt;
+
+&lt;p&gt;epoll里还有一个level triggered和edge triggered的区分，level triggered vs edge triggered：edge-trigger模式中，epoll_wait仅当状态发生变化的时候才获得通知(即便缓冲区中还有未处理的数据)；而level-triggered模式下，epoll_wait只要有数据，将不断被触发。具体请参考&lt;a href=&quot;http://stackoverflow.com/questions/9162712/what-is-the-purpose-of-epolls-edge-triggered-option&quot;&gt;the purpose of epoll’s edge triggered option&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;分发器/多路器Multiplexer其中主要是通过epoll实现分发。&lt;a href=&quot;http://ssdr.github.io/2015/01/epoll-manual/&quot;&gt;epoll manual&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/sparkliang/article/details/4770655&quot;&gt;Linux Epoll介绍和程序实例&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://banu.com/blog/2/how-to-use-epoll-a-complete-example-in-c/&quot;&gt;How to use epoll? A complete example in C&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Multiplexer类的主要函数有：Create，Poll，AddDescriptor，RemoveDescriptor，ModifyEvent，RegisterTimer等。RegisterTimer可以用来注册一个定时任务，这在某些场景还是蛮有用的。&lt;/p&gt;
+
+&lt;p&gt;调用过AddDescriptor的文件有：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./net/http/client/connection.cc:214:  multiplexer()-&amp;gt;AddDescriptor(this, Multiplexer::kIoEventReadWrite);
+./net/http/server/http_server.cc:246:  if (!multiplexer-&amp;gt;AddDescriptor(connection.get())) {
+./net/http/server/listener.cc:123:  multiplexer-&amp;gt;AddDescriptor(listener.get());
+./rpc/client_connection.cc:208:    multiplexer()-&amp;gt;AddDescriptor(this, events);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Descriptor是FD描述类，其中持有成员变量fd以及close_callback_list，以及两个重要方法：OnWritable，OnReadable。这两个方法在连接时会被回调。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// MultiplexerNotifier is used to wake up epoll_wait
+class MultiplexerNotifier : public Descriptor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Multiplexer持有成员变量MultiplexerNotifier。即便每个multiplexer不监听socket，但都会create一个fd来用notify。&lt;/p&gt;
+
+&lt;p&gt;更多Multiplexer的用法请参考：multiplexer_test。还解释了一个疑问：Poll函数的参数，是epoll_wait的timeout时间，也就是最多等待多久epoll_wait就返回。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;system/io_frame/poll_thread&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;PollThread类是结合Multiplexer一起使用的，即Thread + Multiplexer。也就是每个PollThread，都在loop multiplexer，如果有事件，就处理。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;system/io_frame/base_connection&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;base_connection继承自Descriptor。是connection基类：负责单次网络io。&lt;/p&gt;
+
+&lt;p&gt;rpc server端，两个connection类，主要是用来处理服务端的socket连接。OnReadable, OnWritable。
+RpcServerConnection::OnReadable主要做了对http和qzone协议的区分，然后如果是http协议，则主要调用HttpServerConnection，如果是qzone协议，则主要调用QzoneServiceHandler里的方法。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class RpcServerConnection : public HttpServerConnection
+./net/http/server/connection.h
+./rpc/rpc_server_connection.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;net/http_server&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;uri: 是用来解析url的一个工具类。&lt;/p&gt;
+
+&lt;p&gt;譬如对于url:http://www.baidu.com/s?tn=monline_dg&amp;amp;bs=DVLOG&amp;amp;f=8&amp;amp;wd=glog+DVLOG#fragment，利用Uri类，可以解析出Host,port,Scheme,Fragment,Query等参数。&lt;/p&gt;
+
+&lt;p&gt;对于Query参数：tn=monline_dg&amp;amp;bs=DVLOG&amp;amp;f=8&amp;amp;wd=glog+DVLOG，可以利用QueryParams类快速解析出每个name所对应的value。&lt;/p&gt;
+
+&lt;p&gt;HttpServer常用的方法有：RegisterHttpHandler，RegisterPrefixHandler，Forward，RegisterStaticResource，AddLinkOnIndexPage等函数。&lt;/p&gt;
+
+&lt;p&gt;看一下http_server_test，里面有一些不错的例子，我可以写一个test_server，实际试一下。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/rpc_server&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;class RpcServer : public HttpServer&lt;/p&gt;
+
+&lt;p&gt;在HttpServer的基础上，又新增了几个方法：RegisterService，RegisterJceProtoService(注册jce服务)。这些注册服务无非就是把service插入到成员变量vector中。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;rpc/rpc_service_register&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;其中主要有三个方法，这个会被server端查找对应service的时候被用到。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// 用于qzone协议，qzone+pb
+const QzoneMethodContext* FindQzoneMethodContext(int qzone_version, int qzone_cmd) const;
+// 用于qzone+jce协议
+const JceMethodContext* FindJceMethodContext(int qzone_version, int qzone_cmd) const;
+// 用于protobuf
+bool FindMethodByName(const std::string&amp;amp; full_name,
+	google::protobuf::Service** service,
+	const google::protobuf::MethodDescriptor** method_descriptor,
+	RpcErrorCode* error_code) const;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;service &amp;amp;&amp;amp; protocol&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;service列表：
+这个里面用途不大&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./rpc/ckv_service.h
+./rpc/jce_proto_service.h
+./rpc/jce_service.h
+./rpc/rpc_builtin_service.h
+./rpc/udp_rpc_service.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;protocol列表：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./rpc/http_rpc_protocol.h
+./rpc/rpc_qzone_protocol.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;目前就支持两种协议：qzone，http。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GDT如果用http协议的话，则它的uri.Path类似为：”/rpc/gdt.rpc_examples.EchoService.Echo”。先发一个http包头，再发多个body(poppy的实现)，这里gdt rpc未做。&lt;/li&gt;
+  &lt;li&gt;qzone协议的代码在：base_class_old/include/qzone_protocol.h&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;net/http/http_handler&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;handler列表如下，rpc目录下的两个handler，一个处理qzone协议，一个处理http协议。主要是在server角度，接受数据，解包，调用实际service，封包等操作。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./net/http/server/forward_handler.h
+./net/http/server/gflags_handler.h
+./net/http/server/http_handler.h
+./net/http/server/static_resource_handler.h
+./rpc/qzone_service_handler.h
+./rpc/rpc_http_handler.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里主要看下http_handler。HttpHandlerRegistry里持有两个成员变量：handler_map&lt;em&gt;，prefix_map&lt;/em&gt;。它的功能与rpc_service_register类似。
+常用的方法有：两个Register，一个Find。Find访问的是HttpHandler。&lt;/p&gt;
+
+&lt;p&gt;HttpHandler。它最重要的函数是：HandleRequest。具体实现为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (callback_) {
+	HttpRequest* request_copy = new HttpRequest();
+	request_copy-&amp;gt;Swap(request);
+	HttpResponse* response = new HttpResponse();
+	shared_ptr&amp;lt;HttpServerConnection&amp;gt; shared_connection = connection-&amp;gt;shared();
+	Closure* done = NewCallback(OnResponseDone, shared_connection,
+								request_copy, response, response_modifier);
+	callback_-&amp;gt;Run(connection, request_copy, response, done);
+} else {
+	HttpResponse response;
+	simple_callback_-&amp;gt;Run(request, &amp;amp;response);
+	if (response_modifier)
+		response_modifier-&amp;gt;Run(request, &amp;amp;response);
+	PreprocessResponse(request, &amp;amp;response);
+	connection-&amp;gt;SendResponse(response);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;HttpServerConnection继承自BaseConnection(Descriptor)。初始化的时候必须传入的参数有：fd, multiplexer, handler_registry。&lt;/p&gt;
+
+&lt;p&gt;HttpServerConnection什么时候被初始化呢？在HttpServer的OnAccept函数里，每从listen_socket获取一个fd，则初始化一个connection。handler_registry来自于HttpServer持有的成员变量HttpHandlerRegistry，multiplexer则是根据fd从multiplexers_按规则取出一个。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int index = fd % num_threads_;
+Multiplexer* multiplexer = multiplexers_[index].get();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;执行流程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;生成RpcServer::Options参数，这里可以指定服务端的poll_thread(即multiplexer)的线程数。&lt;/li&gt;
+  &lt;li&gt;new RpcServer，因为RpcServer继承自HttpServer，HttpServer根据指定的threadnum(n)创建了n个multiplexer，并保存在multiplexers_。再接着RegisterDefaultPaths，背后调用的是handler_registry_-&amp;gt;Register。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;给RpcServer注册服务。Register Proto/jce service是RpcServer的独有方法，RegisterHttpHander是HttpServer的方法。这里的注册只是将service存储在类成员变量vector里。&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; server.RegisterService(echo.get());
+ server.RegisterHttpHandler(&quot;/test&quot;, NewPermanentCallback(TestPage));
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;protobuf的相关处理由rpc_http_handler.cc RpcHttpHandler完成。&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; shared_ptr&amp;lt;HttpHandler&amp;gt; handler(
+     new RpcHttpHandler(rpc_service_registry_.get(),
+                     rpc_service_stats_.get()));
+ RegisterPrefixHandler(kHttpRpcPrefix, handler);
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;其他http处理由http_hander完成。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;执行server.Listen(FLAGS_ip, FLAGS_port)。在此之前，先执行RpcServer.BeforeListen()。这里会创建一个RpcServiceRegistry。把builtin服务和上一步注册的服务都写到RpcServiceRegistry。
+接着再调用HttpServerListener::Listen，将HttpServerListener添加到multiplexer[0]，即multiplexer-&amp;gt;AddDescriptor(listener.get())。并且把HttpServer::OnAccept注册为Listen的回调函数accept_callback_。&lt;/p&gt;
+
+    &lt;p&gt;HttpServerListener继承于Descriptor，当multiplexer[0]发现有listen_fs有IoEvent时，会调用HttpServerListener::OnReadable()。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;server.Start()，启动多个PollThread。每个PollThread的Loop函数，multiplexer都执行Poll()。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;最后是while (!server.IsStopped()){}。如果有client请求接入，最先会调用HttpServerListener::OnReadable()函数，这里会先调用accept函数，得到新连接的fd，再调用accept_callback_-&amp;gt;Run(fd)。&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; void HttpServer::OnAccept(int fd) {
+     int index = fd % num_threads_;
+     Multiplexer* multiplexer = multiplexers_[index].get();
+     shared_ptr&amp;lt;Descriptor&amp;gt; connection = MakeConnection(fd, multiplexer);
+     if (!connection) {
+         close(fd);
+         return;
+     }
+     if (!multiplexer-&amp;gt;AddDescriptor(connection.get())) {
+         PLOG(WARNING) &amp;lt;&amp;lt; &quot;Add socket to poll failed, fd=&quot; &amp;lt;&amp;lt; fd;
+         return;
+     }
+     connection_manager_-&amp;gt;Add(connection);
+     connection-&amp;gt;PushCloseCallback(
+         NewCallback(connection_manager_.get(), &amp;amp;ServerConnectionManager::Remove,
+                     connection));
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;上面代码把新连接的fd也加入到multiplexer的监听中。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果有数据可以读入，则将调用RpcServerConnection::OnReadable函数，首先判断是qzone协议，还是http协议。如果是qzone协议(protobuf or jce)，先注册RpcServerConnection::OnRequestDone()为done的回调函数，并创建QzoneServiceHandler。
+再调用HttpServerConnection::OnReadable函数，即BaseConnection::OnReadable()函数。
+在OnReadable()中，再调用BaseConnection::ReadPackets。
+GetNextSendingBuffer,GetPacketSize,OnPacketReceived,OnEofReceived是BaseConnection的纯虚函数。RpcServerConnection对这些纯虚函数进行了重写。&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; int RpcServerConnection::GetPacketSize(const StringPiece&amp;amp; buffer) {
+ return handler_ ? GetQzonePacketSize(buffer) :
+                     HttpServerConnection::GetPacketSize(buffer);
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;譬如上面，如果发现是qzone协议的话，则调用的是GetQzonePacketSize。&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/rpc_method_backtrace.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/rpc_method_write.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/rpc_method_requestdone.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;实际read packet和write packet的逻辑如下：&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; ./system/io_frame/base_connection.cc:147:  int n = read(fd(), buffer, buffer_size);
+ ./system/io_frame/base_connection.cc:108:  int n = send(fd(), buffer, buffer_size, flags);
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/read_packet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/write_packet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;客户端和服务端都是这个脉路。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;把这两个图熟悉一下。一个是http协议请求时，server端的调用逻辑：&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/http_echo_bt.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;另一个是qzone协议请求时，server端的调用逻辑：&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/qzone_echo_bt.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Content-Type设置kContentTypeProtobuf，kContentTypeJson，kContentTypeProtobufText时不同的处理方式。&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;static const char* const kContentTypeJson = &quot;application/json&quot;;
+static const char* const kContentTypeProtobuf = &quot;application/x-protobuf&quot;;
+static const char* const kContentTypeProtobufText = &quot;text/x-protobuf&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;需要在客户端那里设置相应的值，就可以得到处理逻辑。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;jce是怎么处理的&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;首先有jce格式，再定义一个proto格式。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;实现下面三个的代码&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; bool JceStructToPbMessage(const QZAP_NEW::wup_qzap_search_display_req* jce,
+                         MixerRequest* request);
+ bool PbMessageToJceStruct(const MixerResponse* response,
+                         QZAP_NEW::wup_qzap_search_display_rsp* jce);
+
+ GDT_RPC_DEFINE_JCE_PROTO_SERVICE(0, JceMixerService, MixerService,
+ GDT_RPC_JCE_METHOD(0, SearchAd, QZAP_NEW::wup_qzap_search_display_req,
+                     QZAP_NEW::wup_qzap_search_display_rsp)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;也就是说，如果是jce服务，rpc client会先将jce转成proto，再发起rpc调用，最后回报的时候再从proto解析为jce。&lt;/li&gt;
+  &lt;li&gt;如果是qzone服务，其实理论上它也是header+proto，那么在接受包的时候，判断是qzone协议的话，先把包头去掉。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;CKV这里的搞法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;复用了客户端的multiplexer，继承自RpcClientCallContext。
+客户端主要负责写两个函数：EncodeRequest，OnPacketReceived。
+EncodeRequest这个函数是对消息做打包。OnPacketReceived是对消息做解包。&lt;/p&gt;
+
+&lt;p&gt;还要注意，同步调用和异步调用的区别。
+异步调用的话，纯粹就是复用了multiplexer的功能，做回调。
+而同步的话，其实就是调用后，做一个响应的等待，利用的是AutoResetEvent, “./system/concurrency/event.h”。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;poppy&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;除了二进制协议外，Poppy支持还以普通的HTTP协议，传输以JSON/protobuf文本格式定义的消息。很方便用各种脚本语言调用，甚至用 bash，调 wget/curl 都能发起 RPC 调用。
+Poppy的二进制协议与一般的设计不一样的是，它是以HTTP协议头为基础建立起来的，只是建立连接后的最初的采用HTTP协议，后续的消息往来直接用二进制协议，所以效率还是比较高的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;more&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;feeds的rpc服务可以多学习一下。adx的action, state与feeds的action, state以后也可以多学习学习！&lt;/p&gt;
+
+&lt;p&gt;刚才又看了一遍 jeff的rpc，再看起来，感觉非常清晰了。
+还是有帮助的。至少这下搞了，这些rpc的实现我基本都理解了。再也不会觉得玄乎了。&lt;/p&gt;
+
+&lt;p&gt;还有支持json格式。支持默认页面请求。这个到时候分享的时候再讲一下。&lt;/p&gt;
+
+&lt;p&gt;明天再问一下陈老师，看看现在channel是不是线程安全的。现在这个样子感觉不是呢？
+而且默认的echo client，是4个线程，但是1个连接。也就是感觉4个epoll都在监听一个fd。这种感觉有点奇怪啊。&lt;/p&gt;
+
+&lt;p&gt;做一下性能对比：在数据量比较小的时候，用qzone协议比http协议性能要好一倍。主要是包的大小影响比较大。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;参考资料&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/121162/what-does-the-explicit-keyword-in-c-mean&quot;&gt;What does the explicit keyword in C++ mean?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.cppreference.com/w/cpp/language/final&quot;&gt;final specifier - C++ Reference&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;google rpc &lt;a href=&quot;http://www.grpc.io&quot;&gt;grpc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/google/protobuf/wiki/Third-Party-Add-ons&quot;&gt;protobuf addons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/protocol-buffers/docs/reference/cpp-generated&quot;&gt;rpc definition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://djt.qq.com/article/view/327&quot;&gt;poppy的官方资料&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 03 May 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/05/03/RPC%E6%B5%85%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/05/03/RPC%E6%B5%85%E6%9E%90.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Aggregation模型</title>
@@ -18,9 +1494,11 @@
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
+&lt;p&gt;写下这个主题文章，主要受到两个事情的启发：(1)同事kimmyzhang对&lt;a href=&quot;http://pan.baidu.com/s/1jGjAvhO&quot;&gt;GBDT的分享&lt;/a&gt;；(2)陈天奇的&lt;a href=&quot;https://github.com/dmlc/xgboost&quot;&gt;xgboost&lt;/a&gt; 开始被我们在实际工作中使用。以前对GBDT为代表的aggregation模型或多或少也有一些理解，但知识体系感不强，所以下面的文章主要是从体系角度梳理一下aggregation模型相关的内容。在梳理的过程中，参考了很多现有的资料，譬如kimmyzhang的分享ppt，陈天奇的ppt，林轩田老师的课程等，具体请见文末的参考文献，在此对这些作者表示感谢。&lt;/p&gt;
+
 &lt;h2 id=&quot;section&quot;&gt;开篇&lt;/h2&gt;
 
-&lt;p&gt;Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么是Aggregation模型呢？通俗的讲，就是多算法融合。它的思想相当简单直接，以至于用一句俗语就可以完美概括：三个臭皮匠，顶个诸葛亮。实际操作中，Aggregation模型把大大小小的多种算法融合在一起，共同协作来解决一个问题。这些算法可以是不同的算法，也可以是相同的算法。&lt;/p&gt;
+&lt;p&gt;Aggregation模型，即融合式的模型，也叫Ensemble Learning。那什么是Aggregation模型呢？通俗的讲，就是多算法融合。它的思想用一句俗语概括：三个臭皮匠，顶个诸葛亮。实际操作中，Aggregation模型把大大小小的多种算法融合在一起，共同协作来解决一个问题。这些算法可以是不同的算法，也可以是相同的算法。&lt;/p&gt;
 
 &lt;p&gt;根据融合的方式，我们可以将Aggregation模型分为三种：(1)Uniform，将多个模型平均的合并在一起；(2)Linear组合，将多个模型利用linear model融合起来；(3)Conditional，不同的情形使用不同的模型，即将多个模型利用non-linear model融合起来。&lt;/p&gt;
 
@@ -55,9 +1533,26 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;hr /&gt;
+
 &lt;p&gt;有了多种Aggregation模型后，还可以将Aggregation模型再融合。如果将bagging配上decision tree，则是random forest。如果将AdaBoost配上Decision Tree，则是AdaBoost-DTree。如果将GradientBoost配上Decision Tree，则是大名鼎鼎的GBDT(Gradient Boost Decision Tree)。&lt;/p&gt;
 
-&lt;p&gt;OK，对Aggregation模型有了大体的认识后，下文将来讲述比较具有代表性的Aggregation模型。本文大致分为五个部分：第一部分介绍Decision Tree；第二部分介绍Random forest；第三部分介绍AdaBoost；第四部分介绍Gradient Boost Decision Tree；最后对Aggregation模型再做一下对比与总结。&lt;/p&gt;
+&lt;p&gt;OK，对Aggregation模型有了大体的认识后，下文将来讲述一些具有代表性的Aggregation模型。本文大致分为六个部分：第一部分简要介绍有监督学习；第二部分介绍Decision Tree；第三部分介绍Random forest；第四部分介绍AdaBoost；第五部分介绍Gradient Boost Decision Tree；最后对Aggregation模型做一下对比与总结。&lt;/p&gt;
+
+&lt;h2 id=&quot;supervised-learning&quot;&gt;Supervised Learning基础&lt;/h2&gt;
+&lt;p&gt;先介绍一些Supervised Learning的基础知识。&lt;/p&gt;
+
+&lt;p&gt;首先是模型。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/model_description.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其次是loss function和regularization。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/loss_regularization.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;将loss function和regularization合到一起，就是一些常见的有监督模型：Logistic regression，lasso等。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/ridge_and_lasso.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;decision-tree&quot;&gt;Decision Tree(决策树)&lt;/h2&gt;
 
@@ -69,22 +1564,29 @@
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/decision_tree_recursive_view.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;一棵树的训练过程为：根据一个指标，分裂训练集为几个子集。这个过程不断的在产生的子集里重复递归进行，即递归分割。当一个训练子集的类标都相同时递归停止。这种决策树的自顶向下归纳 (TDITD)是贪心算法的一种, 也是目前为止最为常用的一种训练方法，但不是唯一的方法。&lt;/p&gt;
+&lt;p&gt;根据决策树的输出y的类型，可以将decision tree分为：分类树和回归树。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;分类树：预测分类标签；&lt;/li&gt;
+  &lt;li&gt;回归树：预测实数值；回归树的结果是可以累加的；即regression tree is a function that maps the attributes to the score。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;另一种decision tree的表示方法如下所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/another_decision_tree.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中，该树有J个叶子节点，Rj 表示x的一个分离区域，1(.) 是indicator function。
+b_j 是base learner的参数，如果是classification tree，则是该叶子节点的类目；如果是regression tree，则有 \(b_j = ave_{x_i \in R_j} {y_i}\)。决策树可以简单表述为：if \(x \in R_j\)，then \(h(x)=b_j\)。&lt;/p&gt;
+
+&lt;p&gt;一棵树的训练过程为：根据一个指标，分裂训练集为几个子集。这个过程不断的在产生的子集里重复递归进行，即递归分割。当一个训练子集的类标都相同时递归停止。这种决策树的自顶向下归纳(TDITD) 是贪心算法的一种，也是目前为止最为常用的一种训练方法，但不是唯一的方法。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/decision_tree_train_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;从decision tree的训练过程可以看到，训练的关键点是branching(即在每一步选择一个最好的属性来分裂)。那如何branching呢，通常的做法是：Split training set at “the best value” of “the best feature”。”最好”的定义是使得子节点中的训练集尽量的纯，不同的算法使用不同的指标来定义”最好”。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Information gain (ratio)：信息增益是用来衡量样本集S下属性A分裂时的信息熵减少量。信息增益是信息熵的有效减少量，值越高，说明失去的不确定性越多，那么它就应该越早作为决策的依据属性。&lt;/li&gt;
-  &lt;li&gt;Gini index：基尼不纯度表示一个随机选中的样本在子集中被分错的可能性。基尼不纯度为这个样本被选中的概率乘以它被分错的概率。当一个节点中所有样本都是一个类时，基尼不纯度为零。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;根据决策树的输出y的类型，可以将decision tree分为：分类树和回归树。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;分类树：预测分类标签；例如C4.5，选择划分成两个分支后熵最大的feature；&lt;/li&gt;
-  &lt;li&gt;回归树：预测实数值；回归树的结果是可以累加的；最小化均方差；&lt;/li&gt;
+  &lt;li&gt;Information gain (ratio)：信息增益是用来衡量样本集S下属性A分裂时的信息熵减少量。信息增益是信息熵的有效减少量，值越高，说明失去的不确定性越多，那么它就应该越早作为决策的依据属性。例如ID3, C4.5 和 C5.0算法。&lt;/li&gt;
+  &lt;li&gt;Gini index：基尼不纯度表示一个随机选中的样本在子集中被分错的可能性。基尼不纯度为这个样本被选中的概率乘以它被分错的概率。当一个节点中所有样本都是一个类时，基尼不纯度为零。例如CART算法。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;cart&quot;&gt;CART&lt;/h3&gt;
@@ -120,6 +1622,25 @@
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/CART_regularizer.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;decision-tree-1&quot;&gt;Decision tree小结&lt;/h3&gt;
+
+&lt;p&gt;Regularization方法：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(1)Number of nodes in the tree, depth；(2)L2 norm of the leaf weights&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;决策树的流程(From heuristics view)：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(1)Split by information gain；(2)Prune the tree；(3)Maximum depth；(4)Smooth the leaf values&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;决策树的流程(From objective optimization view)：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(1)Information gain -&amp;gt; training loss；(2)Pruning -&amp;gt; regularization defined by #nodes；(3)Max depth -&amp;gt; constraint on the function space；(4)Smoothing leaf values -&amp;gt; L2 regularization on leaf weights&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;Decision tree优点：&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -135,12 +1656,11 @@
 &lt;p&gt;几种决策树算法的区别：&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;ID3算法使用信息增益。C4.5算法是在ID3算法的基础上采用&lt;strong&gt;信息增益率&lt;/strong&gt;的方法选择测试属性。
-ID3算法和C4.5算法虽然在对训练样本集的学习中可以尽可能多地挖掘信息，但其生成的决策树分支较大，规模较大。&lt;/p&gt;
+  &lt;p&gt;ID3算法使用信息增益。C4.5算法是在ID3算法的基础上采用&lt;strong&gt;信息增益率&lt;/strong&gt;的方法选择测试属性。ID3算法和C4.5算法虽然在对训练样本集的学习中可以尽可能多地挖掘信息，但其生成的决策树分支较大，规模较大。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;为了简化决策树的规模，提高生成决策树的效率，又出现了根据GINI系数来选择测试属性的决策树算法CART。
+  &lt;p&gt;为了简化决策树的规模，提高生成决策树的效率，所以有了根据GINI系数来选择测试属性的决策树算法CART。
 CART算法采用一种二分递归分割的技术，与基于信息熵的算法不同，CART算法对每次样本集的划分计算GINI系数，GINI系数，GINI系数越小则划分越合理。CART算法总是将当前样本集分割为两个子样本集，使得生成的决策树的每个非叶结点都只有两个分枝。因此CART算法生成的决策树是结构简洁的二叉树。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -177,7 +1697,7 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Bagging-and-Decision-Tree.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;random forest (RF) = bagging + fully-grown C&amp;amp;RT decision tree&lt;/p&gt;
+&lt;p&gt;random forest(RF)的算法描述如下：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/random_forest_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -204,6 +1724,8 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 &lt;p&gt;其中alpha是权重，y_m是弱分类器，整体就是一个linear模型。&lt;/p&gt;
 
 &lt;p&gt;从Function Space里的Numerical Optimization角度看Boosting。boosting也叫forward stagewise additive modeling，因为在迭代的过程中，我们不能再回退去修改以前的参数，一切只能向前看了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Additive_Training_process.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition1.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Function-Space-optimizaition2.png&quot; alt=&quot;&quot; /&gt;
@@ -238,8 +1760,6 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Theoretical-Guarantee-of-AdaBoost.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Boosting view of AdaBoost&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;AdaBoost方法中使用的分类器可能很弱（比如出现很大错误率），但只要它的分类效果比随机好一点（比如两类问题分类错误率略小于0.5），就能够改善最终得到的模型。而错误率高于随机分类器的弱分类器也是有用的，因为在最终得到的多个分类器的线性组合中，可以给它们赋予负系数，同样也能提升分类效果。&lt;/p&gt;
 
 &lt;h3 id=&quot;adaboost-dtree&quot;&gt;AdaBoost-DTree&lt;/h3&gt;
@@ -253,7 +1773,7 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;p&gt;Bootstrap，它在每一步迭代时不改变模型本身，而是从N个instance训练集中按随机抽取N个instance出来（单个instance可以被重复sample），对着这N个新的instance再训练一轮，由于数据集变了迭代模型训练结果也不一样。&lt;/p&gt;
 
-&lt;p&gt;在AdaBoost-DTree模型抽样时，并不是Uniform抽样，而是根据一定概率来抽样。如果一个instance在前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。&lt;/p&gt;
+&lt;p&gt;在AdaBoost-DTree模型做样本抽样时，并不是Uniform抽样，而是根据一定概率来抽样。如果一个instance在前面分错的越厉害，它的概率就被设的越高，这样就能同样达到逐步关注被分错的instance，逐步完善的效果。&lt;/p&gt;
 
 &lt;h3 id=&quot;optimizationadaboost&quot;&gt;Optimization视角看AdaBoost&lt;/h3&gt;
 
@@ -287,8 +1807,37 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;h3 id=&quot;gradientboost&quot;&gt;GradientBoost&lt;/h3&gt;
 
-&lt;p&gt;Gradient Boosting是一种Boosting的方法。
-与传统的Boost的区别是，每一次的计算是为了减少上一次的残差(residual)，而为了消除残差，我们可以在残差减少的梯度(Gradient)方向上建立一个新的模型。所以说，在Gradient Boost中，每个新的模型的建立是为了使得之前模型的残差往梯度方向减少，与传统Boost对正确、错误的样本进行加权有着很大的区别。&lt;/p&gt;
+&lt;p&gt;前面已经对boost方法做了一些介绍，这里再针对GradientBoost从公式推导角度再做更细致的介绍。&lt;/p&gt;
+
+&lt;p&gt;首先GradientBoost如所有boost方法一样，可以将最终模型表达式写为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;对于有限的训练样本 \({[y_i,x_i]}_1^N\)，下式是我们要优化的目标：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;因为boost是一种stagewise additive方法，对于其每一次迭代，m=1,2 … M，优化目标为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;直接求解上面的目标函数会比较复杂。所以，我们换个思路，考虑到通常情况下，梯度下降方向是一个合理的优化方向，那么我们可以先求出m-1时的负梯度方向 -g，然后尽可能把h(x)往 -g 方向上拟合。所以有：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;那么第m次迭代计算后，得到的模型为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_formula4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;将上面的计算过程整体串起来，则有：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gradient_boost_process.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gradient Boosting是一种Boosting的方法。与传统的Boost的区别是，每一次的计算是为了减少上一次的残差(residual)，而为了消除残差，我们可以在残差减少的梯度(Gradient)方向上建立一个新的模型。所以说，在Gradient Boost中，每个新的模型的建立是为了使得之前模型的残差往梯度方向减少，与传统Boost对正确、错误的样本进行加权有着很大的区别。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gradient_boost1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -298,16 +1847,30 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/residuals_for_gbdt.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;更多请参考&lt;a href=&quot;http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html&quot;&gt;模型组合(Model Combining)之Boosting与Gradient Boosting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果整体loss function取squared error，即L(y,F) = (y - F)^2 / 2。此时，我们得到Least-squares regression。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/ls_boost_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;如果整体loss function取absolute error，即L(y,F) =&lt;/td&gt;
+      &lt;td&gt;y - F&lt;/td&gt;
+      &lt;td&gt;。此时有：&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/least_absolute_deviation_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/least_absolute_deviation_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;更多请参考&lt;a href=&quot;http://docs.salford-systems.com/GreedyFuncApproxSS.pdf&quot;&gt;Greedy Function Approximation: A Gradient Boosting Machine&lt;/a&gt;，&lt;a href=&quot;http://www.cnblogs.com/LeftNotEasy/archive/2011/01/02/machine-learning-boosting-and-gradient-boosting.html&quot;&gt;模型组合(Model Combining)之Boosting与Gradient Boosting&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;gradient-boost-decision-tree&quot;&gt;Gradient boost decision tree&lt;/h3&gt;
-&lt;p&gt;目前GBDT有两个不同的描述版本。&lt;a href=&quot;http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee&quot;&gt;残差版本&lt;/a&gt;把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。&lt;a href=&quot;http://blog.csdn.net/dark_scope/article/details/24863289&quot;&gt;Gradient版本&lt;/a&gt;把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。&lt;/p&gt;
+&lt;p&gt;GBDT(Gradient boost decision tree)，又叫MART(Multiple Additive Regression Tree)。目前GBDT有两个不同的描述版本。&lt;a href=&quot;http://hi.baidu.com/hehehehello/item/96cc42e45c16e7265a2d64ee&quot;&gt;残差版本&lt;/a&gt;把GBDT当做一个残差迭代树，认为每一棵回归树都在学习前N-1棵树的残差。&lt;a href=&quot;http://blog.csdn.net/dark_scope/article/details/24863289&quot;&gt;Gradient版本&lt;/a&gt;把GBDT说成一个梯度迭代树，使用梯度下降法求解，认为每一棵回归树在学习前N-1棵树的梯度下降值。这两种描述版本我认为是一致的，因为损失函数的梯度下降方向，就是残差方向。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_algorithm1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;意为gradient boost decision tree。又叫MART（Multiple Additive Regression Tree)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;kimmyzhang的ppt: Gradient Boosted Decision Tree&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Gradient Boosting Machine：&lt;/p&gt;
 
@@ -317,28 +1880,49 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/gbdt_squaredloss.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;更多请参考：&lt;a href=&quot;http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml&quot;&gt;GBDT迭代决策树&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;更多请参考：&lt;a href=&quot;http://www.360doc.com/content/14/1205/20/11230013_430680346.shtml&quot;&gt;GBDT迭代决策树&lt;/a&gt;，&lt;a href=&quot;&quot;&gt;kimmyzhang-GBDT&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h3 id=&quot;regularization&quot;&gt;Regularization&lt;/h3&gt;
-&lt;p&gt;GBDT的常见regularization方法有：控制树的个数(即early stop)，对每一棵树控制其深度、叶子节点个数。&lt;/p&gt;
+&lt;p&gt;GBDT的常见regularization方法有：控制树的个数(即early stop)，控制每一棵树的复杂度。&lt;/p&gt;
+
+&lt;p&gt;而控制一棵树的复杂度，可以控制树的深度，叶子节点个数，以及叶子节点的weight。如下式所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Regularization_formula.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;除此外，还可以在每次训练树时，对data和feature做subsampling。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/sampling_shrinkage.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;另一个常见的正则方法是Shrinkage。Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。&lt;/p&gt;
+&lt;p&gt;另一个常见的正则方法是Shrinkage。Shrinkage（缩减）的思想认为，每次走一小步逐渐逼近结果的效果，要比每次迈一大步很快逼近结果的方式更容易避免过拟合。即它不完全信任每一个棵残差树，它认为每棵树只学到了真理的一小部分，累加的时候只累加一小部分，通过多学几棵树弥补不足。This means we do not do full optimization in each step and reserve chance for future rounds, it helps prevent overfitting。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/shrinkage_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;gbdt-1&quot;&gt;GBDT应用&lt;/h3&gt;
+&lt;p&gt;如果想通过代码学习GBDT，可以参考code：&lt;a href=&quot;https://github.com/zzbased/kaggle-2014-criteo&quot;&gt;kaggle-2014-criteo my notes&lt;/a&gt;，&lt;a href=&quot;https://github.com/dmlc/xgboost&quot;&gt;陈天奇的xgboost&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;在xgboost中，GBDT的编码实现步骤为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost2.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;相比于gbdt的常见算法，为什么要推导出上面优化目标，主要原因为Engineering benefit。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost4.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost5.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost6.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost7.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost8.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/xgboost10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;最近，gbdt模型在搜索排序里得到大量应用。除此外，GBDT还可以用来做特征选择和特征组合。&lt;/p&gt;
 
-&lt;p&gt;比较有代表性的是facebook的文章
+&lt;p&gt;特征选择，参考&lt;a href=&quot;http://fr.slideshare.net/MichaelBENESTY/feature-importance-analysis-with-xgboost-in-tax-audit&quot;&gt;Feature Importance Analysis with XGBoost in Tax audit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;特征组合里，比较有代表性的是facebook的文章
 &lt;a href=&quot;http://quinonero.net/Publications/predicting-clicks-facebook.pdf&quot;&gt;Practical Lessons from Predicting Clicks on Ads at Facebook&lt;/a&gt;提到的方法，它利用GBDT+LR做CTR预估，取得不错的效果。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/facebook_gdbt_lr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果想通过代码学习GBDT，可以参考code：&lt;a href=&quot;https://github.com/zzbased/kaggle-2014-criteo&quot;&gt;kaggle-2014-criteo my notes&lt;/a&gt;，&lt;a href=&quot;https://github.com/dmlc/xgboost&quot;&gt;陈天奇的xgboost&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;总结&lt;/h2&gt;
 
@@ -369,14 +1953,17 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
 
 &lt;p&gt;关于boosting方法的比较，上文中mlapp的图已经表达得比较明确了。这里再在公式上做一下细化。&lt;/p&gt;
 
-&lt;p&gt;Square and Absolute Error：
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Square-and-Absolute-Error.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Square and Absolute Error：&lt;/p&gt;
 
-&lt;p&gt;Logistic Loss and LogitBoost：
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Logistic-Loss-and-LogitBoost.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Square-and-Absolute-Error.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Exponential Loss and Adaboost：
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Exponential-Loss-and-Adaboost.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Logistic Loss and LogitBoost：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Logistic-Loss-and-LogitBoost.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exponential Loss and Adaboost：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/aggregation/Exponential-Loss-and-Adaboost.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;下面把一些常见方法的特点再加强阐述下。&lt;/p&gt;
 
@@ -394,7 +1981,7 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;一篇不错的综述性文章：&lt;a href=&quot;http://www.52cs.org/?p=383&quot;&gt;集成学习：机器学习刀光剑影 之 屠龙刀&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;httpwww52csorgp383&quot;&gt;一篇不错的综述性文章：&lt;a href=&quot;http://www.52cs.org/?p=383&quot;&gt;集成学习：机器学习刀光剑影之屠龙刀&lt;/a&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Bagging和boosting也是当今两大杀器RF（Random Forests）和GBDT（Gradient Boosting Decision Tree）之所以成功的主要秘诀。&lt;/li&gt;
@@ -408,26 +1995,24 @@ bootstrapping指从给定训练集中有放回的均匀抽样。&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://suanfazu.com/t/gbdt-die-dai-jue-ce-shu-ru-men-jiao-cheng/135&quot;&gt;Gbdt迭代决策树入门教程&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.schonlau.net/publication/05stata_boosting.pdf&quot;&gt;Boosting Decision Tree入门教程&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf&quot;&gt;LambdaMART用于搜索排序入门教程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://insidebigdata.com/2014/12/18/ask-data-scientist-ensemble-methods/&quot;&gt;文章 Ask a Data Scientist: Ensemble Methods&lt;/a&gt; “Ask a Data Scientist.”系列文章之Ensemble Methods，通俗程度可以和昨天介绍的Quora随机森林解释相媲美，但更为详尽，对常用Ensemble框架及其特点也进行了介绍，很好。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://cvchina.net/post/107.html&quot;&gt;决策树模型组合之随机森林与GBDT&lt;/a&gt;
-  &lt;a href=&quot;http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html&quot;&gt;机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2&lt;/a&gt;
-  模型组合与决策树相关的算法比较多，这些算法最终的结果是生成N棵树，这样可以大大的减少单决策树带来的毛病，有点类似于三个臭皮匠等于一个诸葛亮的做法，虽然这几百棵决策树中的每一棵都很简单，但是他们组合起来确是很强大。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://statweb.stanford.edu/~jhf/ftp/trebst.pdf&quot;&gt;经典文章 Greedy function approximation : A Gradient Boosting Machine&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/tqchen/xgboost&quot;&gt;xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library, also support distributed learning&lt;/a&gt;
-  并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://insidebigdata.com/2014/12/18/ask-data-scientist-ensemble-methods/&quot;&gt;文章 Ask a Data Scientist: Ensemble Methods&lt;/a&gt; - &lt;a href=&quot;http://cvchina.net/post/107.html&quot;&gt;决策树模型组合之随机森林与GBDT&lt;/a&gt;
+  &lt;a href=&quot;http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html&quot;&gt;机器学习中的算法(1)-决策树模型组合之随机森林与GBDT link2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tqchen/xgboost&quot;&gt;xgboost - eXtreme Gradient Boosting (GBDT or GBRT) Library&lt;/a&gt;, also support distributed learning。并行实现推荐 @陈天奇怪 的xgboost，实际例子见@phunter_lau 最近的文章 http://t.cn/RhKAWac&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://machinelearning.wustl.edu/pmwiki.php/Main/Pgbrt&quot;&gt;pGBRT: Parallel Gradient Boosted Regression Trees&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://bigdata.memect.com/?tag=GBDT&quot;&gt;更多GBDT&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.hankcs.com/ml/decision-tree.html&quot;&gt;决策树 用Python实现了决策树的ID3生成算法和C4.5生成算法&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://t.cn/RZBT6Ap&quot;&gt;论文 Understanding Random Forests: From Theory to Practice&lt;/a&gt;
-Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！pdf: http://t.cn/RZBTobH 云:http://t.cn/RZBTobT&lt;/li&gt;
+Louppe, Gilles的博士论文，全面了解随机森林的好材料。&lt;a href=&quot;http://t.cn/RZBTobH&quot;&gt;pdf&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.datadive.net/interpreting-random-forests/&quot;&gt;Interpreting random forests&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://toutiao.com/a4055188882/&quot;&gt;计算机视觉：随机森林算法在人体识别中的应用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;J. Friedman(1999). Greedy Function Approximation: A Gradient Boosting Machine.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zh.coursera.org/course/ntumltwo&quot;&gt;机器学习技法课程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://statweb.stanford.edu/~jhf/ftp/trebst.pdf&quot;&gt;J. Friedman(1999). Greedy Function Approximation: A Gradient Boosting Machine&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;J. Friedman(1999). Stochastic Gradient Boosting.&lt;/li&gt;
   &lt;li&gt;J. Friedman, T. Hastie, R. Tibshirani(2000). Additive Logistic Regression - A Statistical View of Boosting.&lt;/li&gt;
   &lt;li&gt;T. Hastie, R. Tibshirani, J. Friedman(2008). Chapter 10 of The Elements of Statistical Learning(2e).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pan.baidu.com/s/1jGjAvhO&quot;&gt;GBDT的分享-by kimmyzhang&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.52cs.org/?p=429&quot;&gt;Boosted Tree - by 陈天奇&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Fri, 03 Apr 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/04/03/Aggregation%E6%A8%A1%E5%9E%8B.html</link>
@@ -439,6 +2024,8 @@ Louppe, Gilles的博士论文，全面了解随机森林的好材料，推荐！
       <item>
         <title>Python零碎</title>
         <description>&lt;h1 id=&quot;python&quot;&gt;Python零碎&lt;/h1&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;基础&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/vivilisa/archive/2009/03/19/1417083.html&quot;&gt;Enumerate&lt;/a&gt;&lt;/p&gt;
 
@@ -477,6 +2064,28 @@ oct(x )                 将一个整数转换为一个八进制字符串
 545
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;一些python积累点：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. from import 与 import的区别。一般推荐用import。
+2. 两个list相加：map(operator.add, stat_result.advertiser_map[advertiser_key], stat_value)
+3. 判断字符串为空：is_null = （len(str.strip()) == 0)
+4. list遍历： for element in list。dict遍历： for (k,v) in dict。
+5. 直接写在类里的是：相当于是静态变量，是类公用的。写在__init__里，才是成员变量。
+6. 读取文件：for line in open(filename)
+7. 字典操作：dict.keys(), dict.values(), dict.items()
+8. 按照dict的value做排序：advertiser_list = sorted(yesterday_result.advertiser_map.items(), key=lambda d: d[1][3], reverse=True)
+9. string format: &quot;%1.3f%%&quot; % (a*100)
+10. [Python中子类怎样调用父类方法](http://blog.csdn.net/caz28/article/details/8270709)。访问父类方法：BaseProcessor.CalcRelativeRatio(self, mapping_dict)，访问父类变量，只需要在子类__init__函数调用：BaseProcessor.__init__(self)。
+11. list输出到string：output += &#39; &#39;.join( str(x) for x in v1 )
+12. 查看帮助。在python命令行交互模式中，执行help(package/class/function)，譬如help(sys)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;常用库&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;@phunter_lau 推荐：多种非常见数据结构以及NB的各种trie的python包 &lt;a href=&quot;http://kmike.ru/python-data-structures/&quot;&gt;link&lt;/a&gt; 作者是datrie，marisa-trie，DAWG Python这些利器的作者。他列举了python中Bloom Filter， 各种列表和链表，图，Aho-Corasick自动机，前缀树Trie，和其他各种树等高级数据结构。使用它们可能大大加速你的程序&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
         <pubDate>Wed, 01 Apr 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/04/01/python%E9%9B%B6%E7%A2%8E.html</link>
@@ -493,7 +2102,7 @@ oct(x )                 将一个整数转换为一个八进制字符串
 
 &lt;h2 id=&quot;em-overview&quot;&gt;EM overview&lt;/h2&gt;
 
-&lt;p&gt;The EM algorithm belongs to a broader class of alternating minimization algorithms.&lt;/p&gt;
+&lt;p&gt;The EM algorithm belongs to a broader class of &lt;strong&gt;alternating minimization algorithms&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;EM is one such hill-climbing algorithm that converges to a local maximum of the likelihood surface.&lt;/p&gt;
 
@@ -501,7 +2110,7 @@ oct(x )                 将一个整数转换为一个八进制字符串
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;x是隐变量。&lt;/p&gt;
+&lt;p&gt;x是隐变量。下面变换中用到了著名的Jensen不等式&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_q_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -517,6 +2126,64 @@ oct(x )                 将一个整数转换为一个八进制字符串
     &lt;p&gt;Shane M. Haas的&lt;a href=&quot;http://www.mit.edu/~6.454/www_fall_2002/shaas/summary.pdf&quot;&gt;The Expectation-Maximization and Alternating Minimization Algorithms&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;em-1&quot;&gt;EM算法细节&lt;/h2&gt;
+
+&lt;h3 id=&quot;jensen&quot;&gt;Jensen不等式&lt;/h3&gt;
+&lt;p&gt;Jensen不等式表述如下：&lt;/p&gt;
+
+&lt;p&gt;如果f是凸函数，X是随机变量，那么：E[f(X)]&amp;gt;=f(E[X])&lt;/p&gt;
+
+&lt;p&gt;特别地，如果f是严格凸函数，当且仅当X是常量时，上式取等号。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/jensen_inequality.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jensen不等式应用于凹函数时，不等号方向反向。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;极大似然&lt;/h3&gt;
+
+&lt;p&gt;给定的训练样本是{x(1),…,x(m)}，样本间独立，我们想找到每个样例隐含的类别z，能使得p(x,z)最大。似然函数为：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_likelihood.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;极大化上面似然函数，需要对函数求导。但里面有”和的对数”，求导后形式会非常复杂（自己可以想象下log(f1(x)+ f2(x)+ f3(x)+…)复合函数的求导）。所以我们要做一个变换，如下图所示，经过这个变换后，”和的对数”变成了”对数的和”，这样计算起来就简单多了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/jensen_transform.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;怎么变换来的呢？其中Q(z)表示隐含变量z的某种分布。由于f(x)=log(x)为凹函数，根据Jensen不等式有：f(E[X]) &amp;gt;= E[f(X)]，即：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/jensen_transform2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OK，通过上面的变换，我们求得了似然函数的下届。我们可以优化这个下届，使其逼近似然函数(incomplete data)。&lt;/p&gt;
+
+&lt;p&gt;按照这个思路，我们要找到等式成立的条件。根据Jensen不等式，要想让等式成立，需要让随机变量变成常数值，这里得到： &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/equality_condition.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/q_condition.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/p_condition.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/q_p_z_relation.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;从而，我们推导出：在固定其他参数后，Q(z)的计算公式就是z的后验概率。这一步也就是所谓的E步，求出Q函数，表示的是完全数据对数似然函数相对于隐变量的期望，而得到这个期望，也就是求出z的后验概率P(z&lt;/td&gt;
+      &lt;td&gt;x，θ)。&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;M步呢，就是极大化Q函数，也就是优化θ的过程。&lt;/p&gt;
+
+&lt;p&gt;归纳下来，EM算法的基本步骤为：E步固定θ，优化Q；M步固定Q，优化θ。交替将极值推向最大。&lt;/p&gt;
+
+&lt;h3 id=&quot;em-2&quot;&gt;为什么EM是有效的?&lt;/h3&gt;
+
+&lt;p&gt;蓝线代表当前参数下的L函数，也就是目标函数的下界，E步的时候计算L函数，M步的时候通过重新计算θ得到L的最大值。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_prove1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;emplsa&quot;&gt;EM于PLSA&lt;/h2&gt;
 
@@ -579,6 +2246,14 @@ a maximization (M) step, where parameters are updated based on the so-called exp
 
 &lt;h2 id=&quot;emhmm&quot;&gt;EM于HMM&lt;/h2&gt;
 
+&lt;p&gt;统计机器学习-HMM那一章节&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;更多参考文献&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zzbased/zzbased.github.com/blob/master/_posts/doc/我所理解的EM算法.docx&quot;&gt;你所不知道的EM - by erikhu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/lansatiankongxxc/article/details/45646677&quot;&gt;EM算法原理详解与高斯混合模型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/8537620&quot;&gt;从最大似然到EM算法浅解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Fri, 27 Mar 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/03/27/EM%E7%AE%97%E6%B3%95%E9%9A%8F%E7%AC%94.html</link>
@@ -1183,12 +2858,12 @@ So，Radial Basis Function (RBF) Network: linear aggregation of radial hypothese
 
 &lt;p&gt;&lt;strong&gt;扩展阅读&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;-【发表在Science的论文：基于密度的快速无监督聚类方法】&lt;a href=&quot;http://t.cn/RAASZ4q&quot;&gt;Clustering by fast search and find of density peaks. A Rodriguez, A Laio (2014) &lt;/a&gt; 很棒，推荐给没看过的朋友，另有相关中文两篇：http://t.cn/RPoKmOi http://t.cn/RPOs6uK 供参考理解 云:http://t.cn/RAACowz&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到更高密度点的最短距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;发表在Science的论文：基于密度的快速无监督聚类方法 &lt;a href=&quot;http://t.cn/RAASZ4q&quot;&gt;Clustering by fast search and find of density peaks. A Rodriguez, A Laio (2014) &lt;/a&gt; 很棒，推荐给没看过的朋友，另有相关中文两篇：http://t.cn/RPoKmOi http://t.cn/RPOs6uK 供参考理解 云:http://t.cn/RAACowz&lt;/p&gt;
+
+    &lt;p&gt;对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到更高密度点的最短距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Canopy 聚类算法的基本原则是：首先应用成本低的近似的距离计算方法高效的将数据分为多个组，这里称为一个Canopy。Canopy 之间可以有重叠的部分。然后采用严格的距离计算方式准确的计算在同一 Canopy 中的点，将他们分配与最合适的簇。Canopy 聚类算法经常用于 K 均值聚类算法的预处理，用来找合适的 k 值和簇中心。&lt;a href=&quot;http://blog.pureisle.net/archives/2045.html&quot;&gt;Clustering Algorithm/聚类算法&lt;/a&gt;，&lt;a href=&quot;http://en.wikipedia.org/wiki/Canopy_clustering_algorithm&quot;&gt;Canopy clustering algorithm&lt;/a&gt;。&lt;/p&gt;
   &lt;/li&gt;
@@ -1287,1427 +2962,6 @@ So，Radial Basis Function (RBF) Network: linear aggregation of radial hypothese
         <pubDate>Thu, 26 Mar 2015 00:00:00 +0800</pubDate>
         <link>http://yourdomain.com/2015/03/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8A%80%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/03/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8A%80%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>机器学习基石学习笔记</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;机器学习基石 学习笔记&lt;/h1&gt;
-
-&lt;h2 id=&quot;learning-problem&quot;&gt;第一讲 Learning problem&lt;/h2&gt;
-
-&lt;p&gt;有用链接：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ntumlone&quot;&gt;机器学习基石&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://class.coursera.org/ntumltwo-001/lecture&quot;&gt;机器学习技法&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://beader.me/mlnotebook/&quot;&gt;beader.me笔记&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.douban.com/doulist/3440234/&quot;&gt;听课笔记douban&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mooc.guokr.com/course/610/機器學習基石--Machine-Learning-Foundations-/&quot;&gt;mooc学院&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;f 表示理想的方案
-g 表示求解的用来预测的假设
-H：假设空间
-X：输入
-Y：输出
-D：训练集合
-A：算法&lt;/p&gt;
-
-&lt;p&gt;A takes D and H to get g。通过算法A，利用训练集合D，在假设空间H中选择最好的假设g，选择标准是g近似于f。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Formalize_the_Learning_Problem.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Practical_Definition_of_Machine_Learning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter1_question1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;perceptron-&quot;&gt;第二讲 Perceptron-感知器&lt;/h2&gt;
-
-&lt;p&gt;perceptron，感知器。此时h的形式为：h(x) = w*x。感知机（perceptron）是一个线性分类器(linear classifiers），线性分类器的几何表示为：直线，平面，超平面。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/perceptron.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;注意H是infinite size；&lt;/p&gt;
-
-&lt;p&gt;PLA(perceptron learning algorithm)，PLA A takes linear separable D and perceptrons H to get hypothesis g。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/perceptron_learning_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上面，PLA算法如果D不是线性可分的，则PLA始终不能收敛。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/pocket_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;与简单PLA 的区别：迭代有限次数（提前设定）；随机地寻找分错的数据（而不是循环遍历）；只有当新得到的w 比之前得到的最好的wg 还要好时，才更新wg（这里的好指的是分出来的错误更少）。
-由于计算w 后要和之前的wg 比较错误率来决定是否更新wg， 所以pocket algorithm 比简单的PLA 方法要低效。&lt;/p&gt;
-
-&lt;p&gt;更多细节请参考 &lt;a href=&quot;http://beader.me/2013/12/21/perceptron-learning-algorithm/&quot;&gt;Perceptron Learning Algorithm- PLA&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter2_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter2_question2.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter2_question3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;第三讲 机器学习的分类学&lt;/h2&gt;
-
-&lt;p&gt;reinforcement learning：广告系统，扑克，棋类游戏。
-unsupervised learning：聚类，density estimate，异常检测。
-semi-supervised learning：人脸识别，医药效果检测；&lt;/p&gt;
-
-&lt;p&gt;batch：填鸭式教学；
-online：一条一条的教学；
-active：sequentialliy问问题；&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Active_learning_(machine_learning)&quot;&gt;Active learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/types_of_learning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chater3_question1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;第四讲 学习的可行性分析&lt;/h2&gt;
-
-&lt;p&gt;机器学习的可行性分析。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;对于xor问题，perceptron是无解的。所以learning is impossible。如何解决上述存在的问题？ 答：做出合理的假设。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;霍夫丁不等式(Hoeffding’s Inequality)，下式中v是样本概率；u是总体概率。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/hoeffding_inequality.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Connection to Learning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Connection_to_Learning1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;面对多个h 做选择时，容易出现问题。比如，某个不好的h 刚好最初的”准确“ 的假象。
-随着h 的增加，出现这种假象的概率会增加。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/bound_of_baddata.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;所以，当假设空间有限时（大小为M）时， 当N 足够大，发生BAD sample 的概率非常小。
-此时学习是有效的。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Statistical_Learning_Flow.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;更多请参考 &lt;a href=&quot;http://beader.me/2014/01/15/is-learning-feasible/&quot;&gt;机器学习笔记-机器为何能够学习?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter4_question1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;第五讲 学习的可行性&lt;/h2&gt;
-
-&lt;p&gt;学习的可能性：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;假设空间H有限（M），且训练数据足够大，则可以保证测试错误率Eout 约等于训练错误率Ein；&lt;/li&gt;
-  &lt;li&gt;如果能得到Ein 接近于零，根据（1），Eout 趋向于零。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;以上两条保证的学习的可能性。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;M存在重要的trade-off 思想：
-（1）当M 很小，那么坏数据出现的概率非常小（见第四讲分析），学习是有效的；但是由于假设空间过小，我们不一定能找到一个方案，可以使训练误差接近零；
-（2）反之，若M 很大，因为choices变多，可能找到合适的方案g使E_in(g)=0，但坏数据出现的概率会变大。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question2.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question3.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter5_question4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;vc&quot;&gt;第六讲-第七讲 归纳理论，VC维&lt;/h2&gt;
-
-&lt;p&gt;关于VC维，请参考独立文章&lt;a href=&quot;http://zzbased.github.io/2015/03/07/VC维的来龙去脉.html&quot;&gt;VC维的来龙去脉&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter6_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter6_question2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question2.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question3.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter7_question4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;第八讲 噪音与错误&lt;/h2&gt;
-
-&lt;p&gt;带权重的分类&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/weighted_classification.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;采用Pocket 方法，然而计算错误时对待两种错误(false reject/false accept) 不再一视同仁，false acceot 比false reject 严重1000倍。通过下面方法解决：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/equivalent_pocket.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;在训练开始前，我们将{(x,y)&lt;/td&gt;
-      &lt;td&gt;y=-1} 的数据复制1000倍之后再开始学习，后面的步骤与传统的pocket 方法一模一样。&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;然而，从效率、计算资源的角度考虑，通常不会真的将y=-1 的数据拷贝1000倍，实际中一般采用”virtual copying”。只要保证：
-randomly check -1 example mistakes with 1000 times more probability.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/weighted_pocket_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;更多请参考 &lt;a href=&quot;http://beader.me/2014/03/02/noise-and-error/&quot;&gt;机器学习笔记-Noise and Error&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question2.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question3.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter8_question4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;第九讲 线性回归&lt;/h2&gt;
-
-&lt;p&gt;线性回归假设的思想是：寻找这样的直线/平面/超平面，使得输入数据的残差最小。
-通常采用的error measure 是squared error。&lt;/p&gt;
-
-&lt;p&gt;线性回归用矩阵表示如下:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/linear_regression_matrix_format.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;求导数，使导数为0，即可求得最优解&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/linear_regression_optim_solution.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ein和Eout都向σ2(noise level)收敛，并且他们之间的差异被2(d+1)/N给bound住了。有点像VC bound，不过要比VC bound来的更严格一些。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/linear_regression_learning_curve.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一个直观的想法，能否利用linear regression来做linear classification?&lt;/p&gt;
-
-&lt;p&gt;之所以能够通过线程回归的方法来进行二值分类，是由于回归的squared error 是分类的0/1 error 的上界，我们通过优化squared error，一定程度上也能得到不错的分类结果；或者，更好的选择是，将回归方法得到的w 作为二值分类模型的初始w 值。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/0_1_loss_bound.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;更多请参考 &lt;a href=&quot;http://beader.me/2014/03/09/linear-regression/&quot;&gt;机器学习笔记-Linear Regression&lt;/a&gt; &lt;a href=&quot;http://www.douban.com/note/323611077/&quot;&gt;豆瓣笔记&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter9_question1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter9_question2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;第十讲 逻辑回归&lt;/h2&gt;
-
-&lt;p&gt;比较深刻的点有：&lt;/p&gt;
-
-&lt;p&gt;似然函数的推导。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/likelihood_lr.png&quot; alt=&quot;&quot; /&gt;
-推导得到Cross-Entropy Error&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/lr_algorithm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;之所以说最优的v 是与梯度相反的方向，想象一下：如果一条直线的斜率k&amp;gt;0，说明向右是上升的方向，应该向左走；反之，斜率k&amp;lt;0，向右走。&lt;/p&gt;
-
-&lt;p&gt;解决的方向问题，步幅也很重要。步子太小的话，速度太慢；过大的话，容易发生抖动，可能到不了谷底。
-显然，距离谷底较远（位置较高）时，步幅大些比较好；接近谷底时，步幅小些比较好（以免跨过界）。距离谷底的远近可以通过梯度（斜率）的数值大小间接反映，接近谷底时，坡度会减小。
-因此，我们希望步幅与梯度数值大小正相关。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/learningrate_lr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;更多请参考 &lt;a href=&quot;http://beader.me/2014/05/03/logistic-regression/&quot;&gt;机器学习笔记-Logistic Regression&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question2.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question3.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter10_question4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-7&quot;&gt;第十一讲  线性分类模型&lt;/h2&gt;
-
-&lt;p&gt;我们了解到线性回归和逻辑斯蒂回归一定程度上都可以用于线性二值分类，因为它们对应的错误衡量(square error, cross-entropy) 都是“0/1 error” 的上界。&lt;/p&gt;
-
-&lt;p&gt;本质上讲，线性分类（感知机）、线性回归、逻辑斯蒂回归都属于线性模型，因为它们的核心都是一个线性score 函数：s=w^T*x&lt;/p&gt;
-
-&lt;p&gt;只是三个model 对其做了不同处理：
-线性分类对s 取符号；线性回归直接使用s 的值；逻辑斯蒂回归将s 映射到(0,1) 区间。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/error_function_pla_lr_lr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;多类别分类&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;方法有两个：&lt;/p&gt;
-
-&lt;p&gt;一种直观的解决方法是将其转化为多轮的二值分类问题：任意选择一个类作为+1，其他类都看做-1，在此条件下对原数据进行训练，得到w；经过多轮训练之后，得到多个w。对于某个x，将其分到可能性最大的那个类。（例如逻辑斯蒂回归对于x 属于某个类会有一个概率估计）
-如果target 是k 个类标签，我们需要k 轮训练，得到k 个w。
-这种方法叫做One-Versus-All (OVA)。&lt;/p&gt;
-
-&lt;p&gt;另一种方法叫做One-Versus-One(OVO)，对比上面的OVA 方法。
-基本方法：每轮训练时，任取两个类别，一个作为+1，另一个作为-1，其他类别的数据不考虑，这样，同样用二值分类的方法进行训练；目标类有k个时，需要 k&lt;em&gt;(k-1)/2 轮训练，得到 k&lt;/em&gt;(k-1)/2 个分类器。
-预测：对于某个x，用训练得到的 k*(k-1)/2 个分类器分别对其进行预测，哪个类别被预测的次数最多，就把它作为最终结果。即通过“循环赛”的方式来决定哪个“类”是冠军。&lt;/p&gt;
-
-&lt;p&gt;OVA 和 OVO 方法的思想都很简单，可以作为以后面对多值分类问题时的备选方案，并且可以为我们提供解决问题的思路。&lt;/p&gt;
-
-&lt;p&gt;更多请参考&lt;a href=&quot;http://www.douban.com/note/325298034/&quot;&gt;线性分类模型 (台大机器学习）&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question2.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question3.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chapter11_question4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-8&quot;&gt;第十二讲 非线性转换&lt;/h2&gt;
-
-&lt;p&gt;这里的非线性转换其实也是特征转换(feature transform)，在特征工程里很常见。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/nonlinear_tranform.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;x-空间的数据转换到z-空间之后，新的假设中的参数数量也比传统线性假设多了许多。
-经过非线性转换后，VC维将增大。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/nonlinear_transform_model_price.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;高次假设对数据拟合得更充分，Ein 更小；然而，由于付出的模型复杂度代价逐渐增加，Eout 并不是一直随着Ein 减小。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Structured-Hypothesis-Sets.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;更多请参考&lt;a href=&quot;http://www.douban.com/note/325308691/&quot;&gt;笔记&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;习题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chaper12_question1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/chaper12_question2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;overfitting&quot;&gt;第十三讲 过拟合 - Overfitting&lt;/h2&gt;
-
-&lt;p&gt;更多请参考&lt;a href=&quot;http://www.douban.com/note/325443925/&quot;&gt;笔记&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;regularization&quot;&gt;第十四讲 正规化-Regularization&lt;/h2&gt;
-
-&lt;p&gt;原来的优化问题是NP-Hard 的。如果对w 进行更soft/smooth 的约束，可以使其更容易优化：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/Regression-with-Softer-Constraint.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;利用lagrange multiplier做regularization，得到下面式子：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/augmented_error.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/weight_decay_regularization.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;总之，lambda 越大，对应的常数C 越小，模型越倾向于选择更小的w 向量。
-这种正规化成为 weight-decay regularization，它对于线性模型以及进行了非线性转换的线性假设都是有效的。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;正规化与VC 理论&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;根据VC Bound 理论，Ein 与 Eout 的差距是模型的复杂度。也就是说，假设越复杂（dvc 越大），Eout 与 Ein 相差就越大，违背了我们学习的意愿。
-对于某个复杂的假设空间H，dvc 可能很大；通过正规化，原假设空间变为正规化的假设空间H(C)。与H 相比，H(C) 是受正规化的“约束”的，因此实际上H(C) 没有H 那么大，也就是说H(C) 的VC维比原H 的VC维要小。因此，Eout 与 Ein 的差距变小。:-)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/mlfoundation_learn/l1_l2_compare.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上图解释了为什么L1有稀疏解。&lt;/p&gt;
-
-&lt;p&gt;lambda 当然不是越大越好！选择合适的lambda 也很重要，它受到随机噪音和确定性噪音的影响。&lt;/p&gt;
-
-&lt;p&gt;更多请参考&lt;a href=&quot;http://www.douban.com/note/325451389/&quot;&gt;笔记&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;validation&quot;&gt;第十五讲 Validation&lt;/h2&gt;
-
-&lt;h2 id=&quot;three-learning-principles&quot;&gt;第十六讲 Three Learning Principles&lt;/h2&gt;
-
-</description>
-        <pubDate>Wed, 25 Mar 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/03/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/03/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>VC维的来龙去脉</title>
-        <description>&lt;h1 id=&quot;vc&quot;&gt;VC维的来龙去脉&lt;/h1&gt;
-
-&lt;h4 id=&quot;author-vincentyaotencentcom&quot;&gt;author: vincentyao@tencent.com&lt;/h4&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;目录：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;说说历史&lt;/li&gt;
-  &lt;li&gt;Hoeffding不等式&lt;/li&gt;
-  &lt;li&gt;Connection to Learning&lt;/li&gt;
-  &lt;li&gt;学习可行的两个核心条件&lt;/li&gt;
-  &lt;li&gt;Effective Number of Hypotheses&lt;/li&gt;
-  &lt;li&gt;Growth Function&lt;/li&gt;
-  &lt;li&gt;Break Point与Shatter&lt;/li&gt;
-  &lt;li&gt;VC Bound&lt;/li&gt;
-  &lt;li&gt;VC dimension&lt;/li&gt;
-  &lt;li&gt;深度学习与VC维&lt;/li&gt;
-  &lt;li&gt;小结&lt;/li&gt;
-  &lt;li&gt;参考文献&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;VC维在机器学习领域是一个很基础的概念，它给诸多机器学习方法的可学习性提供了坚实的理论基础，但有时候，特别是对我们工程师而言，SVM，LR，深度学习等可能都已经用到线上了，但却不理解VC维。&lt;/p&gt;
-
-&lt;p&gt;这里，在台湾大学&lt;a href=&quot;https://www.coursera.org/course/ntumlone&quot;&gt;机器学习基石&lt;/a&gt;课程的基础上，我们简单聊聊”VC维的来龙去脉”。我们将解决以下问题：为什么某机器学习方法是可学习的？为什么会有过拟合？拿什么来衡量机器学习模型的复杂度？深度学习与VC维的关系？&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;说说历史&lt;/h2&gt;
-&lt;p&gt;在讲VC维之前，我们不妨来说说VC维的历史。而说起VC维的历史，又不得不提起神经网络，一方面是因为神经网络与VC维的发明过程是交织在一起的，另一方面是由于神经网络乏善可陈的泛化控制方法，深度学习在理论基础上一直被怀疑，甚至神经网络和VC维的代表SVM还一起争风吃醋过好多年。&lt;/p&gt;
-
-&lt;p&gt;1943年，模拟神经网络由麦卡洛可（McCulloch）和皮茨（Pitts)提出，他们分析了理想化的人工神经元网络，并且指出了它们进行简单逻辑运算的机制。&lt;/p&gt;
-
-&lt;p&gt;1957年，康奈尔大学的实验心理学家弗兰克·罗森布拉特(Rosenblatt)在一台IBM-704计算机上模拟实现了一种他发明的叫作”感知机”（Perceptron）的神经网络模型。神经网络与支持向量机都源自于感知机（Perceptron）。&lt;/p&gt;
-
-&lt;p&gt;1962年，罗森布拉特著作：《神经动力学原理：感知机和大脑机制的理论》（Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms）。&lt;/p&gt;
-
-&lt;p&gt;1969年，明斯基和麻省理工学院的另一位教授佩普特合作著作：《感知机：计算几何学》（Perceptrons: An Introduction to Computational Geometry)。在书中，明斯基和佩普特证明单层神经网络不能解决XOR（异或）问题。&lt;/p&gt;
-
-&lt;p&gt;1971年，V. Vapnik and A. Chervonenkis在论文”On the uniform convergence of relative frequencies of events to their probabilities”中提出&lt;strong&gt;VC维&lt;/strong&gt;的概念。&lt;/p&gt;
-
-&lt;p&gt;1974年，V. Vapnik提出了结构风险最小化原则。&lt;/p&gt;
-
-&lt;p&gt;1974年，沃波斯（Werbos）的博士论文证明了在神经网络多加一层，并且利用“后向传播”（Back-propagation）学习方法，可以解决XOR问题。那时正是神经网络研究的低谷，文章不合时宜。&lt;/p&gt;
-
-&lt;p&gt;1982年，在加州理工担任生物物理教授的霍普菲尔德，提出了一种新的神经网络，可以解决一大类模式识别问题，还可以给出一类组合优化问题的近似解。这种神经网络模型后被称为霍普菲尔德网络。&lt;/p&gt;
-
-&lt;p&gt;1986年，Rummelhart与McClelland发明了神经网络的学习算法Back Propagation。&lt;/p&gt;
-
-&lt;p&gt;1993年，Corinna Cortes和Vapnik等人提出了支持向量机(support vector machine)。神经网络是多层的非线性模型，支持向量机利用核技巧把非线性问题转换成线性问题。&lt;/p&gt;
-
-&lt;p&gt;1992\~2005年，SVM与Neural network之争，但被互联网风潮掩盖住了。&lt;/p&gt;
-
-&lt;p&gt;2006年，Hinton提出神经网络的Deep Learning算法。Deep Learning假设神经网络是多层的，首先用Restricted Boltzmann Machine（非监督学习）学习网络的结构，然后再通过Back Propagation（监督学习）学习网络的权值。&lt;/p&gt;
-
-&lt;p&gt;现在，deep learning的应用越来越广泛，甚至已经有超越SVM的趋势。一方面以Hinton，Lecun为首的深度学习派坚信其有效实用性，另一方面Vapnik等统计机器学习理论专家又坚持着理论阵地，怀疑deep learning的泛化界。&lt;/p&gt;
-
-&lt;h2 id=&quot;hoeffding&quot;&gt;Hoeffding不等式&lt;/h2&gt;
-
-&lt;p&gt;Hoeffding不等式是关于一组随机变量均值的概率不等式。
-如果\(X_1,X_2,\cdots,X_n\)为一组独立同分布的参数为p的伯努利分布随机变量，n为随机变量的个数。定义这组随机变量的均值为：&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\bar X=\frac{X_1+X_2+\cdots+X_n}{n}&lt;/script&gt;
-
-&lt;p&gt;对于任意\(\delta&amp;gt;0\), Hoeffding不等式可以表示为&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(|\bar X - E(\bar X)| \geq \delta) \leq \exp(-2\delta^2n^2)&lt;/script&gt;
-
-&lt;p&gt;更多请参考:&lt;a href=&quot;http://science.scileaf.com/library/2461&quot;&gt;Hoeffding不等式&lt;/a&gt;，&lt;a href=&quot;http://zh.wikipedia.org/zh-cn/集中不等式&quot;&gt;集中不等式&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;case示例&lt;/strong&gt;：&lt;/p&gt;
-
-&lt;p&gt;在统计推断中，我们可以利用样本的统计量(statistic)来推断总体的参数(parameter)，譬如使用样本均值来估计总体期望。如下图所示，我们从罐子里抽球，希望估计罐子里红球和绿球的比例。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/bin_sample.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;直觉上，如果我们有更多的样本(抽出更多的球)，则样本期望\(\nu\)应该越来越接近总体期望\(\mu\)。事实上，这里可以用hoeffding不等式表示如下：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/bin_sample_hoeffding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;从hoeffding不等式可以看出，当n逐渐变大时，不等式的UpperBound越来越接近0，所以样本期望越来越接近总体期望。&lt;/p&gt;
-
-&lt;h2 id=&quot;connection-to-learning&quot;&gt;Connection to Learning&lt;/h2&gt;
-
-&lt;p&gt;接下来，我们希望可以将机器学习关联到上一节讨论的hoeffding不等式。&lt;/p&gt;
-
-&lt;p&gt;一个基本的机器学习过程如下图所示。其中的概念定义为：
-f 表示理想的方案(可以是一个函数，也可以是一个分布)，H 是该机器学习方法的假设空间，g 表示我们求解的用来预测的假设，g属于H。&lt;/p&gt;
-
-&lt;p&gt;机器学习的过程就是：通过算法A，在假设空间H中，根据样本集D，选择最好的假设作为g。选择标准是 g 近似于 f。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/setup_of_the_learning_problem_add_components.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;拿&lt;a href=&quot;http://zh.wikipedia.org/zh/感知器&quot;&gt;perceptron&lt;/a&gt;来举例。&lt;/p&gt;
-
-&lt;p&gt;感知机（perceptron）是一个线性分类器(linear classifiers）。
-线性分类器的几何表示：直线、平面、超平面。&lt;/p&gt;
-
-&lt;p&gt;perceptron的假设空间，用公式描述，如下所示：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/perceptron_formula.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;感知器的优化目标如下式所示，w_g就是我们要求的最好的假设。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/perceptron_optim.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;设定两个变量，如下图所示，图中 f(x)表示理想目标函数，h(x)是我们预估得到的某一个目标函数，h(x)是假设空间H中的一个假设。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Eout(h)&lt;/strong&gt;，可以理解为在理想情况下(已知f)，总体(out-of-sample)的损失(这里是0-1 loss)的期望，称作expected loss。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Ein(h)&lt;/strong&gt;，可以理解为在训练样本上(in-of-sample)，损失的期望，称作expirical loss。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/learning_hoeffding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;当训练样本量N足够大，且样本是独立同分布的，类比于上面”抽球”的例子，可以通过样本集上的expirical loss Ein(h) 推测总体的expected loss Eout(h)。基于hoeffding不等式，我们得到下面式子：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/learning_hoeffding2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;根据上面不等式，我们可以推断，当N足够大时，expected loss和expirical loss将非常接近。&lt;/p&gt;
-
-&lt;p&gt;注意在上面推导中，我们是针对某一个特定的解h(x)。在我们的假设空间H中，往往有很多个假设函数(甚至于无穷多个)，这里我们先假定H中有M个假设函数。&lt;/p&gt;
-
-&lt;p&gt;那么对于整个假设空间，也就是这M个假设函数，可以推导出下面不等式：&lt;/p&gt;
-
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P(|E_{in}(h_1)-E_{out}(h_1)|&gt;\epsilon  \cup |E_{in}(h_2)-E_{out}(h_2)| &gt; \epsilon   ... |E_{in}(h_m)-E_{out}(h_m)|&gt;\epsilon)&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;\leq P(|E_{in}(h_1)-E_{out}(h_1)|&gt;\epsilon) + P(|E_{in}(h_2)-E_{out}(h_2)|&gt;\epsilon) + ... + P(|E_{in}(h_m)-E_{out}(h_m)|&gt;\epsilon)&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;\leq 2M\exp(-2 \epsilon^2 N)&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;上面式子的含义是：在假设空间H中，设定一个较小的\(\epsilon\)值，任意一个假设h，它的Ein(h)与Eout(h)的差由该值\(2M\exp(-2 \epsilon^2 N)\)所约束住。注意这个bound值与 “样本数N和假设数M” 密切相关。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;学习可行的两个核心条件&lt;/h2&gt;
-
-&lt;p&gt;在往下继续推导前，先看一下&lt;strong&gt;什么情况下Learning是可行的&lt;/strong&gt;？&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;如果假设空间H的size M是有限的，当N足够大时，那么对假设空间中任意一个g，Eout(g)约等于Ein(g)；&lt;/li&gt;
-  &lt;li&gt;利用算法A从假设空间H中，挑选出一个g，使得Ein(g)接近于0，那么&lt;a href=&quot;http://en.wikipedia.org/wiki/Probably_approximately_correct_learning&quot;&gt;probably approximately correct&lt;/a&gt;而言，Eout(g)也接近为0；&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/two_central_questions.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上面这两个核心条件，也正好对应着test和train这两个过程。train过程希望损失期望(即Ein(g) )尽可能小；test过程希望在真实环境中的损失期望也尽可能小，即Ein(g)接近于Eout(g)。&lt;/p&gt;
-
-&lt;p&gt;但往往我们更多在关心，如何基于模型的假设空间，利用最优化算法，找到Ein最小的解g。但容易忽视test这个过程，如果让学习可行，不仅仅是要在训练集表现好，在真实环境里也要表现好。&lt;/p&gt;
-
-&lt;p&gt;从上述推导出来的不等式，我们看到假设数M 在这两个核心条件中有着重要作用。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/trade_off_on_M.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;M太小，当N足够大时，Ein和Eout比较接近，但如果候选假设集太小，不容易在其中找到一个g，使得Ein(g)约等于0，第二项不能满足。而如果M太大，这时候选集多了，相对容易在其中找到一个g，使得Ein(g)约等于0，但第一项就不能满足了。所以假设空间H的大小M很关键。&lt;/p&gt;
-
-&lt;p&gt;对于一个假设空间，M可能是无穷大的。要能够继续推导下去，那么有一个直观的思路，能否找到一个有限的因子m_H来替代不等式bound中的M。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/finite_quantity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;虽说假设空间很大，上述推导里，我们用到了P(h1 or h2 … hm) &amp;lt;= P(h1) + P(h2) + … + P(hm)。但事实上，多个h之间并不是完全独立的，他们是有很大的重叠的，也就是在M个假设中，可能有一些假设可以归为同一类。&lt;/p&gt;
-
-&lt;p&gt;下面我们以二维假设空间为例，来解释一下该空间下各假设在确定的训练样本上的重叠性。&lt;/p&gt;
-
-&lt;p&gt;举例来说，如果我们的算法要在平面上(二维空间)挑选一条直线方程作为g，用来划分一个点x1。假设空间H是所有的直线，它的size M是无限多的。但是实际上可以将这些直线分为两类，一类是把x1判断为正例的，另一类是把x1判断为负例的。如下图所示：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/1point2lines.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;那如果在平面上有两个数据点x1,x2，这样的话，假设空间H中的无数条直线可以分为4类。那依次类推，3个数据点情况下，H中最多有8类直线。4个数据点，H中最多有14类直线(注意：为什么不是16类直线)。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/4points14lines.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;从上面在二维假设空间中的分析，我们可以推测到一个结论，假设空间size M是很大，但在样本集D上，有效的假设函数数目是有限的。接下来我们将继续推导这个有效的假设函数值。&lt;/p&gt;
-
-&lt;h2 id=&quot;effective-number-of-hypotheses&quot;&gt;Effective Number of Hypotheses&lt;/h2&gt;
-
-&lt;p&gt;对于这个有效的假设函数值，我们尝试用一个数学定义来说明：&lt;/p&gt;
-
-&lt;p&gt;从H中任意选择一个方程h，让这个h对样本集合D进行二元分类，输出一个结果向量。例如在平面里用一条直线对2个点进行二元分类，输出可能为{1,-1}，{-1,1}，{1,1}，{-1,-1}，这样每个输出向量我们称为一个dichotomy。&lt;/p&gt;
-
-&lt;p&gt;下面是hypotheses与dichotomies的概念对比：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/dichotomies.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;注意到，如果对平面上的4个点来分类，根据前面分析，输出的结果向量只有14种可能，即有14个dichotomies。&lt;/p&gt;
-
-&lt;p&gt;如果有N个样本数据，那么有效的假设个数定义为：
-effective(N) = H作用于样本集D”最多”能产生多少不同的dichotomy。&lt;/p&gt;
-
-&lt;p&gt;所以有一个直观思路，能否用effective(N)来替换hoeffding不等式中的M。接下来我们来分析下effective(N)。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/finite_effective_n.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;growth-function&quot;&gt;Growth Function&lt;/h2&gt;
-
-&lt;p&gt;H作用于D”最多”能产生多少种不同的dichotomies？这个数量与假设空间H有关，跟数据量N也有关。将H作用于D”最多”能产生的dichotomies数量(即effective(N) )表示为数学符号：max_H(x1,x2,…,xN)&lt;/p&gt;
-
-&lt;p&gt;这个式子又称为”成长函数”(growth function)。在H确定的情况下，growth function是一个与N相关的函数。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/growth_function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;下图举4个例子，分别计算其growth function：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/growth_function_4case.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;对于第一个例子，positive ray，相当于是正向的射线。该假设空间，作用于1个样本点，可以产生2种dichotomies：(-1)，(+1)。作用于2个样本点，可以产生3种dichotomies：(-1,+1)，(-1,-1)，(+1,+1)。作用于3个样本点，可以产生4种dichotomies。依次类推，可以推导出其成长函数 m_H(N)=N+1；&lt;/p&gt;
-
-&lt;p&gt;求解出m_H(N)后，那是不是可以考虑用m_H(N)替换M? 如下所示：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/growth_function_replace_m.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;break-pointshatter&quot;&gt;Break Point与Shatter&lt;/h2&gt;
-
-&lt;p&gt;在进一步推导前，再看两个概念：shatter，break point。&lt;/p&gt;
-
-&lt;p&gt;Shatter的概念：当假设空间H作用于N个input的样本集时，产生的dichotomies数量等于这N个点总的组合数\(2^N\)是，就称：这N个inputs被H给shatter掉了。&lt;/p&gt;
-
-&lt;p&gt;要注意到 shatter 的原意是”打碎”，在此指”N个点的所有(碎片般的)可能情形都被H产生了”。所以\( m_H(N)=2^N \)的情形是即为”shatter”。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/break_point.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;对于给定的成长函数m_H(N)，从N=1出发，N慢慢变大，当增大到k时，出现\(m_H(N) &amp;lt; 2^k\)的情形，则我们说k是该成长函数的&lt;strong&gt;break point&lt;/strong&gt;。对于任何N &amp;gt; k个inputs而言，H都没有办法再shatter他们了。&lt;/p&gt;
-
-&lt;p&gt;举例来说，对于上面的positive ray的例子，因为m_H(N)=N+1，当N=2时，m_H(2)&amp;lt;2^2， 所以它的break point就是2。&lt;/p&gt;
-
-&lt;h2 id=&quot;vc-bound&quot;&gt;VC Bound&lt;/h2&gt;
-
-&lt;p&gt;说完break point的概念后，再回到成长函数。&lt;/p&gt;
-
-&lt;p&gt;我们将成长函数的上界，设为B(N,k)，意为：maximum possible m_H(N) when break point = k。&lt;/p&gt;
-
-&lt;p&gt;那么我们做一些简单的推导：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;B(2,2)=3。因为break point=2，任意两个点都不能被shatter，m_H(2)肯定小于2^2，所以B(2,2)=3。&lt;/li&gt;
-  &lt;li&gt;B(3,2)=4。因为任意两个点都不能被shatter，那么3个点产生的dichotomies不能超过4，所以B(3,2)=4。&lt;/li&gt;
-  &lt;li&gt;B(N,1)=1。&lt;/li&gt;
-  &lt;li&gt;B(N,k)=2^N for N &amp;lt; k；B(N,k)=2^N-1 for N=k；&lt;/li&gt;
-  &lt;li&gt;B(4,3)=？去掉其中的一个数据点x4后，考虑到break point=3，余下数据(x1,x2,x3)的dichotomies数目不能超过B(3,3)。当扩展为(x1,x2,x3,x4)时，(x1,x2,x3)上的dichotomies只有部分被重复复制了，设被复制的dichotomies数量为a，未被复制的数量为b。于是有B(3,3) = a+b;  B(4,3) = 2&lt;em&gt;a + b。因为a被复制了，表示x4有两个取值，那么(x1,x2,x3)上的a应该小于等于B(3,2)。所以推导出B(4,3) = 2&lt;/em&gt;a + b &amp;lt;= B(3,3) + B(3,2)。&lt;/li&gt;
-  &lt;li&gt;对于任意N&amp;gt;k，类推可以得到，B(N,k) ≤ B(N−1,k)+B(N−1,k−1)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;最后利用数学归纳法，可以证明得到下面的bounding function(N&amp;gt;k)：&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;m_H(N) \leq \sum_{i=0}^{k−1}{N \choose i}&lt;/script&gt;
-
-&lt;p&gt;这个式子显然是多项式的，多项式的最高幂次项为：N^(k-1)。&lt;/p&gt;
-
-&lt;p&gt;所以我们得到结论：如果break point存在（有限的正整数），生长函数m(N) 是多项式的。&lt;/p&gt;
-
-&lt;p&gt;再重复一遍，H作用于数据量为N的样本集D，方程的数量看上去是无穷的，但真正有效(effective)的方程的数量却是有限的，这个数量为m_H(N)。H中每一个h作用于D都能算出一个Ein来，一共有m_H(N)个不同的Ein。&lt;/p&gt;
-
-&lt;p&gt;OK，到目前为止，关于m_H(N)的推导结束。回到growth function小节提出的问题，能否用&lt;strong&gt;m_H(N)直接替换M?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;既然得到了m(N)的多项式上界，我们希望对之前的不等式中M 进行替换，用m_H(N)来替换M。这样替换后，当break point存在时，N足够大时，该上界是有限的。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/replace_vc_bound.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然而直接替换是存在问题的，主要问题是：Ein的可能取值是有限个的，但Eout的可能取值是无限的。可以通过将Eout 替换为验证集(verification set) 的Ein’ 来解决这个问题。
-下面是推导过程：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound_step1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound_step2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound_step3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最后我们得到下面的VC bound:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_bound1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;关于这个公式的数学推导，我们可以暂且不去深究。我们先看一下这个式子的意义，如果假设空间存在有限的break point，那么m_H(2N)会被最高幂次为k-1的多项式上界给约束住。随着N的逐渐增大，指数式的下降会比多项式的增长更快，所以此时VC Bound是有限的。更深的意义在于，N足够大时，对H中的任意一个假设h，Ein(h)都将接近于Eout(h)，这表示学习可行的第一个条件是有可能成立的。&lt;/p&gt;
-
-&lt;h2 id=&quot;vc-dimension&quot;&gt;VC dimension&lt;/h2&gt;
-
-&lt;p&gt;说了这么多，VC维终于露出庐山真面目了。此概念由Vladimir Vapnik与Alexey Chervonenkis提出。&lt;/p&gt;
-
-&lt;p&gt;一个假设空间H的&lt;strong&gt;VC dimension&lt;/strong&gt;，是这个H最多能够shatter掉的点的数量，记为\(d&lt;em&gt;{vc}(H)\)。如果不管多少个点H都能shatter它们，则\(d&lt;/em&gt;{vc}(H)\)=无穷大。还可以理解为：vc-dim就是argmax_n {growth function=power(2,n)}。&lt;/p&gt;
-
-&lt;p&gt;根据定义，可以得到一个明显的结论：&lt;script type=&quot;math/tex&quot;&gt; k = d_{vc}(H) + 1 &lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;根据前面的推导，我们知道VC维的大小：与学习算法A无关，与输入变量X的分布也无关，与我们求解的目标函数f 无关。它只与模型和假设空间有关。&lt;/p&gt;
-
-&lt;p&gt;我们已经分析了，对于2维的perceptron，它不能shatter 4个样本点，所以它的VC维是3。此时，我们可以分析下2维的perceptron，如果样本集是线性可分的，perceptron learning algorithm可以在假设空间里找到一条直线，使Ein(g)=0；另外由于其VC维=3，当N足够大的时候，可以推断出：Eout(g)约等于Ein(g)。这样学习可行的两个条件都满足了，也就证明了2维感知器是可学习的。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/pla_revised.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;总结回顾一下，要想让机器学到东西，并且学得好，有2个条件：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;H的d_vc是有限的，这样VC bound才存在。(good H)；N足够大(对于特定的d_vc而言)，这样才能保证vc bound不等式的bound不会太大。(good D)&lt;/li&gt;
-  &lt;li&gt;算法A有办法在H中顺利的挑选一个使得Ein最小的g。(good A)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;回到最开始提出的学习可行的两个核心条件，尝试用VC维来解释：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/m_and_d_vc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;从上图可以看出，当VC维很小时，条件1容易满足，但因为假设空间较小，可能不容易找到合适的g 使得Ein(g)约等于0。当VC维很大时，条件2容易满足，但条件1不容易满足，因为VC bound很大。&lt;/p&gt;
-
-&lt;p&gt;VC维反映了假设空间H 的强大程度(powerfulness)，VC 维越大，H也越强，因为它可以打散(shatter)更多的点。&lt;/p&gt;
-
-&lt;p&gt;定义模型自由度是，模型当中可以自由变动的参数的个数，即我们的机器需要通过学习来决定模型参数的个数。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/degree_of_freedom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一个实践规律：VC 维与假设参数w 的自由变量数目大约相等。dVC = #free parameters。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_practical_rule.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我们将原不等式做一个改写，如下图所示：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_power1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上面式子中的第3项表示模型复杂度。模型越复杂，VC维大，Eout 可能距离Ein 越远。如下图所示，随着d_vc的上升，E_in不断降低，而模型复杂度不断上升。&lt;/p&gt;
-
-&lt;p&gt;它们的上升与下降的速度在每个阶段都是不同的，因此我们能够寻找一个二者兼顾的，比较合适的d_vc，用来决定应该使用多复杂的模型。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/vc_power2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;模型较复杂时(d_vc 较大)，需要更多的训练数据。 理论上，数据规模N 约等于 10000*d_vc（称为采样复杂性，sample complexity）；然而，实际经验是，只需要 N = 10*d_vc。
-造成理论值与实际值之差如此之大的最大原因是，VC Bound 过于宽松了，我们得到的是一个比实际大得多的上界。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/n_practical_rule.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;注意在前述讨论中，理想的目标函数为f(x)，error measure用的是”0-1 loss”。如果在unknown target上引入噪声(+noise)，或者用不同的error measure方法，VC theory还有效吗？这里只给出结论，VC theory对于绝大部分假设空间(or 加入噪声)和error度量方法，都是有效的。&lt;/p&gt;
-
-&lt;p&gt;除此外，我们为了避免overfit，一般都会加正则项。那加了正则项后，新的假设空间会得到一些限制，此时新假设空间的VC维将变小，也就是同样训练数据条件下，Ein更有可能等于Eout，所以泛化能力更强。这里从VC维的角度解释了正则项的作用。&lt;/p&gt;
-
-&lt;h2 id=&quot;vc-1&quot;&gt;深度学习与VC维&lt;/h2&gt;
-
-&lt;p&gt;对于神经网络，其VC维的公式为：&lt;/p&gt;
-
-&lt;p&gt;dVC = O(VD)，其中V表示神经网络中神经元的个数，D表示weight的个数，也就是神经元之间连接的数目。(注意：此式是一个较粗略的估计，深度神经网络目前没有明确的vc bound)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/VC理论/neural_network_vc_dimension.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;举例来说，一个普通的三层全连接神经网络：input layer是1000维，hidden layer有1000个nodes，output layer为1个node，则它的VC维大约为O(1000*1000*1000)。&lt;/p&gt;
-
-&lt;p&gt;可以看到，神经网络的VC维相对较高，因而它的表达能力非常强，可以用来处理任何复杂的分类问题。根据上一节的结论，要充分训练该神经网络，所需样本量为10倍的VC维。如此大的训练数据量，是不可能达到的。所以在20世纪，复杂神经网络模型在out of sample的表现不是很好，容易overfit。&lt;/p&gt;
-
-&lt;p&gt;但现在为什么深度学习的表现越来越好。原因是多方面的，主要体现在：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;通过修改神经网络模型的结构，以及提出新的regularization方法，使得神经网络模型的VC维相对减小了。例如卷积神经网络，通过修改模型结构(局部感受野和权值共享)，减少了参数个数，降低了VC维。2012年的AlexNet，8层网络，参数个数只有60M；而2014年的&lt;a href=&quot;http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf&quot;&gt;GoogLeNet&lt;/a&gt;，22层网络，参数个数只有7M。再例如dropout，drop connect，denosing等regularization方法的提出，也一定程度上增加了神经网络的泛化能力。&lt;/li&gt;
-  &lt;li&gt;训练数据变多了。随着互联网的越来越普及，相比于以前，训练数据的获取容易程度以及量和质都大大提升了。训练数据越多，Ein越容易接近于Eout。而且目前训练神经网络，还会用到很多data augmentation方法，例如在图像上，剪裁，平移，旋转，调亮度，调饱和度，调对比度等都使用上了。&lt;/li&gt;
-  &lt;li&gt;除此外，pre-training方法的提出，GPU的利用，都促进了深度学习。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;但即便这样，深度学习的VC维和VC Bound依旧很大，其泛化控制方法依然没有强理论支撑。但是实践又一次次证明，深度学习是好用的。所以VC维对深度学习的指导意义，目前不好表述，有一种思想建议，深度学习应该抛弃对VC维之类概念的迷信，尝试从其他方面来解释其可学习型，例如使用泛函空间（如&lt;a href=&quot;http://en.wikipedia.org/wiki/Banach_space&quot;&gt;Banach Space&lt;/a&gt;）中的概率论。&lt;/p&gt;
-
-&lt;p&gt;更多细节请参考下面链接：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://ttic.uchicago.edu/~tewari/lectures/lecture12.pdf&quot;&gt;VC Dimension of Multilayer Neural Networks&lt;/a&gt;，该文章给出了多层神经网络的VC bound的相关证明。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html&quot;&gt;Lecun: What is the relationship between Deep Learning and Support Vector Machines / Statistical Learning Theory? &lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;Vapnik really believes in his bounds. He worried that neural nets didn’t have similarly good ways to do capacity control (although neural nets do have generalization bounds, since they have finite VC dimension).&lt;/p&gt;
-
-    &lt;p&gt;Lecun’s counter argument was that the ability to do capacity control was somewhat secondary to the ability to compute highly complex function with a limited amount of computation.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;小结&lt;/h2&gt;
-
-&lt;p&gt;上面仔细分析了VC维的来龙去脉，讲述了VC维在机器学习理论中的指导意义。考虑到VC维在机器学习领域虽是基础，却也是大坑，所以难免有理解不深或不当之处，敬请谅解。若希望获得更深理解，请参考下面的参考文献。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;参考文献&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.autonlab.org/tutorials/vcdim.html&quot;&gt;VC dimension Tutorial Slides by Andrew Moore&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ntumlone&quot;&gt;机器学习基石&lt;/a&gt; (上文的截图均出自于该课程的讲义) &lt;a href=&quot;http://www.douban.com/doulist/3381853/&quot;&gt;笔记&lt;/a&gt; &lt;a href=&quot;http://beader.me/mlnotebook/section2/vc-dimension-three.html&quot;&gt;笔记2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.svms.org/vc-dimension/&quot;&gt;vc-dimension in svms&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.36dsj.com/archives/21236&quot;&gt;机器学习简史&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory&quot;&gt;Vapnik–Chervonenkis theory&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf&quot;&gt;Deep Learning Tutorial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/27434103&quot;&gt;深度学习的研究领域是否有被过度夸大&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://freemind.pluskid.org/slt/vc-theory-vapnik-chervonenkis-dimension&quot;&gt;VC Theory: Vapnik–Chervonenkis Dimension&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://1.guzili.sinaapp.com/?p=174&quot;&gt;深度学习与统计学习理论&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 07 Mar 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/03/07/VC%E7%BB%B4%E7%9A%84%E6%9D%A5%E9%BE%99%E5%8E%BB%E8%84%89.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/03/07/VC%E7%BB%B4%E7%9A%84%E6%9D%A5%E9%BE%99%E5%8E%BB%E8%84%89.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>语音识别</title>
-        <description>&lt;p&gt;最近，组里新来了一个博士同学。他的博士专业是语音识别，正好跟我们分享了一下语义识别相关的知识点。老早前，我就看过DengLi在微软的文章，结合肖博的分享，正好可以把语音识别相关的东东，在脑子里串起来梳理下，特撰文如下。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;语音识别&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/38131.pdf&quot;&gt;Deep Neural Networks for Acoustic Modeling in Speech Recognition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://msr-waypoint.com/pubs/188864/ICASSP-2013-OverviewMSRDeepLearning.pdf&quot;&gt;RECENT ADVANCES IN DEEP LEARNING FOR SPEECH RESEARCH AT MICROSOFT&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://research.microsoft.com/pubs/144412/dbn4lvcsr-transaslp.pdf&quot;&gt;Context-Dependent Pre-Trained Deep Neural Networks for Large-Vocabulary Speech Recognition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://arxiv.org/pdf/1412.5567v2.pdf&quot;&gt;Deep Speech: Scaling up end-to-end speech recognition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/21815490&quot;&gt;为什么 Deep Learning 最先在语音识别和图像处理领域取得突破？&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;DL 适合处理感知, 而非逻辑；
-感知与逻辑的重要区别在于输入数据在输入空间中做连续变化还是离散变化；
-神经生物学上对人脑的逻辑还理解的不够, 对感知理解的好一些所以糙出了DL；&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/20398418&quot;&gt;语音识别的技术原理是什么&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;信号处理及特征提取模块。该模块的主要任务是从输入信号中提取特征，供声学模型处理。同时，它一般也包括了一些信号处理技术，以尽可能降低环境噪声、信道、说话人等因素对特征造成的影响。&lt;/p&gt;
-
-        &lt;p&gt;主要有：降噪和分帧。分帧就是把波形切开成一小段一小段，每小段称为一帧。分帧操作通常使用移动窗函数来实现，分帧之前还要做一些预加重等操作，帧与帧之间是有交叠的。&lt;/p&gt;
-
-        &lt;p&gt;分帧后，语音就变成了很多小段。这时需要对这些时域波形做波形变换，常见的一种变换方法是提取MFCC特征，把每一帧波形变成一个12维向量。MFCC的计算首先用FFT将时域信号转化成频域，之后对其对数能量谱用依照Mel刻度分布的三角滤波器组进行卷积，最后对各个滤波器的输出构成的向量进行离散余弦变换DCT，取前N个系数。&lt;/p&gt;
-
-        &lt;p&gt;通常的特征有：线性预测系数LPC，倒谱系数CEP，梅尔频率倒谱系数MFCC，感知线性预测PLP。&lt;/p&gt;
-
-        &lt;p&gt;经过该模块处理后，声音就成了一个12行（假设声学特征是12维）、N列的一个矩阵，称之为观察序列，这里N为总帧数。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;再介绍三个概念&lt;/p&gt;
-
-        &lt;p&gt;单词：英语中就是单词，汉语中是汉字。
-音素：单词的发音由音素构成。对英语，一种常用的音素集是卡内基梅隆大学的一套由39个音素构成的音素集，参见The CMU Pronouncing Dictionary‎。汉语一般直接用全部声母和韵母作为音素集，另外汉语识别还分有调无调。
-状态：比音素更细致的语音单位。通常一个音素由3个状态构成。&lt;/p&gt;
-
-        &lt;p&gt;接下来，语音识别是怎么工作的呢？
-第一步，把帧识别成状态（难点）。
-第二步，把状态组合成音素。
-第三步，把音素组合成单词。&lt;/p&gt;
-
-        &lt;p&gt;语音识别系统的模型通常由声学模型和语言模型两部分组成，分别对应于语音到音节概率的计算和音节到字概率的计算。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;统计声学模型。典型系统多采用基于一阶隐马尔科夫模型进行建模。&lt;/p&gt;
-
-        &lt;p&gt;如何把帧识别成状态，可以看某帧对应哪个状态的概率最大，那这帧就属于哪个状态，这叫做“最大似然”。
-声学模型，里面存了一大堆参数，通过这些参数，就可以知道帧和状态对应的概率。&lt;/p&gt;
-
-        &lt;p&gt;使用隐马尔可夫模型（Hidden Markov Model，HMM），第一步，构建一个状态网络。第二步，从状态网络中寻找与声音最匹配的路径。
-首先构造单词级网络，然后展开成音素网络，然后展开成状态网络。然后在状态网络中搜索一条最佳路径，这条路径和语音之间的概率（称之为累积概率）最大。搜索的算法是一种动态规划剪枝的算法，称之为Viterbi算法，用于寻找全局最优路径。&lt;/p&gt;
-
-        &lt;p&gt;这里所说的累积概率，由三部分构成，分别是：
-观察概率：每帧和每个状态对应的概率；
-转移概率：每个状态转移到自身或转移到下个状态的概率；
-语言概率：根据语言统计规律得到的概率；
-其中，前两种概率从声学模型中获取，最后一种概率从语言模型中获取。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;发音词典。发音词典包含系统所能处理的词汇集及其发音。发音词典实际提供了声学模型建模单元与语言模型建模单元间的映射。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;语言模型。语言模型对系统所针对的语言进行建模。理论上，包括正则语言，上下文无关文法在内的各种语言模型都可以作为语言模型，但目前各种系统普遍采用的还是基于统计的N元文法及其变体。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;解码器。解码器是语音识别系统的核心之一，其任务是对输入的信号，根据声学、语言模型及词典，寻找能够以最大概率输出该信号的词串。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 27 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/27/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/27/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>深度学习相关笔记</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;神经网络基础&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://hahack.com/reading/ann1/&quot;&gt;漫谈ANN(1)：M-P模型&lt;/a&gt;，&lt;a href=&quot;http://hahack.com/reading/ann2/&quot;&gt;漫谈ANN(2)：BP神经网络&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;M-P模型:1943年心理学家W.McCulloch和数学家W.Pitts合作提出了这个模型，所以取了他们两个人的名字（McCulloch-Pitts）&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/mp_model.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;Perceptron: 在1958年,美国心理学家Frank Rosenblatt,基于M-P模型的结构,提出一种具有单层计算单元的神经网络,称为感知器(Perceptron)。&lt;/p&gt;
-
-    &lt;p&gt;单层感知器不能解决非线性问题，譬如”异或”。Kolmogorov理论指出：双隐层感知器就足以解决任何复杂的分类问题。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://deeplearning.stanford.edu/wiki/index.php/神经网络&quot;&gt;UFLDL-神经网络&lt;/a&gt;, &lt;a href=&quot;http://deeplearning.stanford.edu/wiki/index.php/反向传导算法&quot;&gt;反向传播算法-详解&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://stats.stackexchange.com/questions/106334/cost-function-of-neural-network-is-non-convex&quot;&gt;为什么多层神经网络是非凸函数&lt;/a&gt; 这里有解释，简单点说，如果交换某一层某两个nodes和weights以及相应连接的nodes，将得到a different set of parameters，但是cost function是一样的，所以是非凸的。&lt;/p&gt;
-
-    &lt;p&gt;神经网络参数必须随机初始化，而不是全部置为0。如果所有参数都用相同的值作为初始值，那么所有隐藏层单元最终会得到与输入值有关的、相同的函数。随机初始化的目的是使对称失效。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_71329a960102v1eo.html&quot;&gt;神经网络历史&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.hcii-lab.net/lianwen/Course/Machine%20Learning/&quot;&gt;金连文教授-机器学习课程&lt;/a&gt;，课程中神经网络相关的章节很好。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《10 Common Misconceptions about Neural Networks》http://t.cn/RZMtCsP 神经网络十大认识误区，作者是Stuart Gordon Reid，值得一读&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;深度学习综述&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://deeplearning.net/tutorial/deeplearning.pdf&quot;&gt;Deep Learning Tutorial. LISA lab, University of Montreal&lt;/a&gt;  &lt;a href=&quot;http://deeplearning.net/software_links/&quot;&gt;software&lt;/a&gt;
-基于Theano的深度学习教程，内容很新，包括了多层感知器，卷积神经网络，auto encoder，RBM，Deep Belief Networks，Monte-carlo sampling，循环神经网络，LSTM，RNN-RBM，Miscellaneous等，值得学习。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[视频]《Neural networks class - Université de Sherbrooke》http://t.cn/8s4WOeb 超棒的神经网络课程，深入浅出介绍深度学习，由Hugo Larochelle（Yoshua Bengio的博士生，Geoffrey Hinton之前的博士后）主讲，强烈推荐！ 云:http://t.cn/RA78nK5 (92节已全部搬至国内，希望对大家有帮助)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html&quot;&gt;From feature descriptors to deep learning&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://simonwinder.com/2015/01/what-is-deep-learning/&quot;&gt;What is Deep Learning?&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://markus.com/deep-learning-101/&quot;&gt;Deep Learning 101&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.toptal.com/machine-learning/an-introduction-to-deep-learning-from-perceptrons-to-deep-networks&quot;&gt;A Deep Learning Tutorial: From Perceptrons to Deep Networks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.iro.umontreal.ca/~bengioy/dlbook/&quot;&gt;deep learning book. by Yoshua Bengio&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/&quot;&gt;Introduction to Neural Networks and Machine Learning by hinton&lt;/a&gt; &lt;a href=&quot;http://www.cs.toronto.edu/~tijmen/csc321/lecture_notes.shtml&quot;&gt;Lecture notes&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《Why does Deep Learning work?》http://t.cn/RwYyN5J “Multilayer Neural Networks are just Spin Glasses”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://weibo.com/p/1001603799166017998138&quot;&gt;谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议&lt;/a&gt; 比较喜欢其中关于tricks的建议：包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.ee.ucl.ac.uk/sahd2014/resources/LeCun.pdf&quot;&gt;LeCun：The Unreasonable Effectiveness of Deep Learning&lt;/a&gt; LeCun做的300+页的深度学习slides，太棒了！毋需多做介绍，单看标题、作者应该就能作出判断——看看看，必须的！&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://colah.github.io/posts/2015-01-Visualizing-Representations/&quot;&gt;Visualizing Representations: Deep Learning and Human Beings&lt;/a&gt; 利用深度学习和维数约减，可以对整个Wikipedia进行可视化，文中结合Wikipedia训练得出的例子，全面介绍了深度学习、词向量、段落向量、翻译模型以及深度学习可视化方面的知识，理论结合实践，实属不可多得的好文。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/8775360&quot;&gt;深度学习-笔记整理系列1-8&lt;/a&gt;，&lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/9993371&quot;&gt;link2&lt;/a&gt; 使用自下向上非监督学习（就是从底层开始，一层一层的往顶层训练）；自顶向下的监督学习（就是通过带标签的数据去训练，误差自顶向下传输，对网络进行微调）。还介绍了Autoencoder，SparseCoding，Restricted Boltzmann Machine，Deep BeliefNetworks，CNN等模型。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://t.cn/RZ8Sqe6&quot;&gt;博文“A Brief Overview of Deep Learning”&lt;/a&gt; 有见解有福利。一些技术总结得不错，例如Practice Advice，有很多干货，谁用谁知道…… 文后还有Bengio的点评及与网友的互动讨论。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.bammf.org&quot;&gt;Bay Area Multimedia Forum&lt;/a&gt; 邓力，贾扬清，Ronan Collobert, Richard Socher 讲用深度学习处理语音、文本和图像。有slides有视频。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;&quot;&gt;Neural network with numpy&lt;/a&gt; Python下(只)用numpy写神经网络，不错的开始 &lt;a href=&quot;https://github.com/FlorianMuellerklein/Machine-Learning/blob/master/BackPropagationNN.py&quot;&gt;github code&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/&quot;&gt;Google’s Large Scale Deep Neural Networks Project, Greg Corrado&lt;/a&gt; Google的大规模分布式DNN介绍 &lt;a href=&quot;http://pan.baidu.com/s/1kTl76AV&quot;&gt;slide&lt;/a&gt; &lt;a href=&quot;http://pan.baidu.com/s/1qWmJrSo&quot;&gt;视频&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;《Which GPU(s) to Get for Deep Learning: My Experience and Advice for Using GPUs in Deep Learning》http://t.cn/Rw981My 做深度学习选择和使用GPU的一些建议&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;对深度学习历史好奇的朋友, 推荐 “The Believers - The hidden story behind the code that runs our lives” http://t.cn/RwCj0wJ “Retrospectively, it was a just a question of the amount of data and the amount of computations,” Hinton says. http://t.cn/RwNHl6u&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://neuralnetworksanddeeplearning.com&quot;&gt;Neural Networks and Deep Learning&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Why does Deep Learning work? &lt;a href=&quot;http://t.cn/RAieIie&quot;&gt;part 1&lt;/a&gt; &lt;a href=&quot;http://t.cn/RAxtm8o&quot;&gt;part 2&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;deeplearing-in-nlp&quot;&gt;Deeplearing in NLP综述&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/77709/&quot;&gt;深度学习、自然语言处理和表征方法&lt;/a&gt; &lt;a href=&quot;https://github.com/colah/NLP-RNNs-Representations-Post/blob/master/index.md&quot;&gt;English version&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;单隐层神经网络有一个普适性（universality）：给予足够的隐结点，它可以估算任何函数。普适性的真正意义是：一个网络能适应任何你给它的训练数据。这并不代表插入新的数据点的时候它能表现地很理想。&lt;/li&gt;
-      &lt;li&gt;在深度学习工具箱里，把从任务A中学到的好表征方法用在任务B上是一个很主要的技巧。根据细节不同，这个普遍的技巧的名称也不同，如：预训练（pretraining），迁移学习(transfer learning)，多任务学习(multi-task learning)等。这种方法的好处之一是可以从多种不同数据中学习特征表示。&lt;/li&gt;
-      &lt;li&gt;共享嵌入是一个非常让人兴奋的研究领域，它暗示着为何深度学习中这个注重表征方法的角度是如此的引人入胜。它目前被应用在机器翻译，ImageCaptioning。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;imagenet-classification&quot;&gt;ImageNet classification&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://arxiv.org/pdf/1502.03167v1.pdf&quot;&gt;Googles breakthrough paper shows 10*faster neural nets, and beats a human&lt;/a&gt; Google的最新论文，用”batch normalization”在ImageNet上得到4.82%( top-5 error)，训练速度也大大加快。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1502.01852&quot;&gt;Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification&lt;/a&gt; 微软所创建的基于深度卷积神经网络系统首次在ImageNet图像分类上超越人类，实现4.94% top-5 test error。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;image-caption-generation&quot;&gt;Image Caption Generation&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1502.03044&quot;&gt;Show, Attend and Tell: Neural Image Caption Generation with Visual Attention&lt;/a&gt; 基于视觉焦点用LSTM自动生成图像内容描述。
-来自Yoshua Bengio教授团队（22 pages，8页正文+n多附图），文中报道的结果比之前Microsoft、Google的结果更好。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://pdollar.wordpress.com/2015/01/21/image-captioning/&quot;&gt;Image Captioning&lt;/a&gt;  来自于微软的一篇博文，介绍了image caption的最近进展。图像标题生成小综述，文中引用了另一篇进展综述性文章《Rapid Progress in Automatic Image Captioning》http://t.cn/Rzzk2H3 ，列举出最有影响和代表性的进展和成果(论文)，并从数据集、验证(评价)和下一步怎么走三方面进行了讨论，观点很有代表性&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://t.cn/RZdBZEe&quot;&gt;Top Microsoft Machine Learning Posts of 2014&lt;/a&gt; 微软14年最佳博文：图像自动描述生成的飞速进展、机器学习欢乐多、Azule ML为用户带来变革、机器学习与文本分析、微软机器学习20年、Vowpal Wabbit快速学习、什么是机器学习、NIPS14机器学习趋势、机器学习与机器视觉等&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[视频]《Automated Image Captioning with ConvNets and Recurrent Nets》http://t.cn/RwXX7zY Stanford的Andrej Karpathy两周前在SF ML meetup上的报告，基于ConvNets和Recurrent Nets的图像标题自动生成，推荐 云:http://t.cn/RwXXQ07&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[视频]《Deep Learning at Flickr》http://t.cn/RwEqZ5U 介绍深度学习在Flickr的应用，主要是图像标签自动提取 云:http://t.cn/RwEqCi7&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《One Image Is Worth 1,000 Labels》http://t.cn/RwE0Koi 讨论目前基于深度学习的图片自动标注(类别性描述)在应用方面的局限&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;rnn-lstm&quot;&gt;RNN&amp;amp; LSTM&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://xxx.tau.ac.il/abs/1502.02367&quot;&gt;Gated Feedback Recurrent Neural Networks&lt;/a&gt;  又有人设计新的RNN了，这回Cho和Bengio都在．这回介绍的GF-RNN说是能比以前Deep RNN的都好。明摆着说LSTM嘛。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://t.cn/Rww4fbV&quot;&gt;论文 Scaling Recurrent Neural Network Language Models》(2015) W Williams, N Prasad, D Mrva&lt;/a&gt; 讨论如何使用GPU训练大型RNN，以及#RNN##语言模型#(RNNLM)在进行扩展时模型大小、训练集规模和运算开销方面的问题；使用维基和新闻语料训练的大规模RNNLM效果明显。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://t.cn/RZNfoLt&quot;&gt;Passage：用RNN做文本分析的python库&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/&quot;&gt;深入讨论RNN&lt;/a&gt;  &lt;a href=&quot;http://www.csdn.net/article/2015-01-28/2823747&quot;&gt;译文&lt;/a&gt;非常好的讨论递归神经网络的文章，覆盖了RNN的概念、原理、训练及优化等各个方面内容，强烈推荐！本文作者Nikhil Buduma，也是《Deep Learning in a Nutshell》的作者。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;深度RNN/LSTM用于结构化学习 0)序列标注&lt;a href=&quot;http://t.cn/RZZs9Io&quot;&gt;Connectionist Temporal Classification ICML06&lt;/a&gt; 1)机器翻译&lt;a href=&quot;http://t.cn/RZZs9Jk&quot;&gt;Sequence to Sequence NIPS14&lt;/a&gt; 2)成分句法&lt;a href=&quot;http://t.cn/RZZs9Ia&quot;&gt;GRAMMAR AS FOREIGN LANGUAGE&lt;/a&gt; 再次用到窃取果实distilling&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[视频]《General Sequence Learning using Recurrent Neural Networks》http://t.cn/RwiEI9d Alec Radford讲的用RNN做文本序列分析(学习) 云:http://t.cn/RwinOCb Alec Radford的Passage:http://weibo.com/1402400261/BFVLkxtfw&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://people.idsia.ch/~juergen/lstm/index.htm&quot;&gt;幻灯 Long Short-Term Memory: Tutorial on LSTM Recurrent Networks&lt;/a&gt;  J. Schmidhuber的LSTM递归网络教程&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[幻灯] 《Theano and LSTM for Sentiment Analysis》http://t.cn/RwofVaF Next.ML 2015上用Theano和LSTM做情感分析的报告幻灯和练习 GitHub:http://t.cn/RwofqDC 云:http://t.cn/Rwofo4i&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;最近很火的两篇文章，Neural Turing Machines和Learning to Execute，都讲到用LSTM RNN做sequence copy，来测试网络保持长时记忆的能力。sequence copy到底怎么定义为一个supervised learning任务呢？和机器翻译一样吗？&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;特别喜欢Long-short-term-memory(LSTM) architecture, it explicitly models ‘forgetting’ in sequence processing. LSTM是gated RNNs 的典型代表, 它部分解决了 long-term dependency 的问题, Alex Graves 在 LSTM 上较有研究, 读读他的paper: deep RNN for speech recognition http://t.cn/RZt9knn&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Stanford推出利用parsing的树状LSTM, 在Stanford Sentiment Treebank上表现还凑合，句子相似度计算上不错http://t.cn/RwRLwvx&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;cnn&quot;&gt;CNN&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://dataunion.org/?p=5395&quot;&gt;深度学习：CNN的反向求导及练习&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Character-based CNN。&lt;a href=&quot;http://arxiv.org/abs/1502.01710&quot;&gt;论文 Text Understanding from Scratch 2015 Xiang Zhang, Yann LeCun&lt;/a&gt;  深度学习在NLP领域最新进展！使用temporal ConvNets对大规模文本语料进行学习，在本体分类、情感分析、文本分类任务中取得了“astonishing performance”，不依赖任何语言知识，中英文均适用。必读！&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1404.2188&quot;&gt;论文 A Convolutional Neural Network for Modelling Sentences. Nal Kalchbrenner等&lt;/a&gt; 用动态卷积神经网络(DCNN)对句子进行语义建模，该方法不依赖解析树也不受语种限制，效果也很明显，推荐学习。其项目主页上http://t.cn/RZd9HOE 提供了源码(Matlab) 云:http://t.cn/RZdCx1o&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;用CNN网络实现人脸关键点检测 http://t.cn/RwSwAct&lt;/td&gt;
-          &lt;td&gt;教你用Theano、Lasagne等工具在python里训练网络检测人脸关键点。跟什么MNIST识别数字相比，这个任务还算是更接近实际问题的复杂程度了。PS：用Lasagne来命名深度网络库还真是吃货本质啊&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://yann.lecun.com/exdb/lenet/index.html&quot;&gt;Mnist demos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;普通神经网络做图像识别的缺点：
-1. 一般要得到较好的训练效果，隐层数目不能太少，当图片大的时候，需要的权值会非常多。
-2. 对平移、尺度变化敏感（比如数字偏左上角，右下角时即识别失败）。
-3. 图片在相邻区域是相关的，而这种网络只是一股脑把所有像素扔进去，没有考虑图片相关性。&lt;/p&gt;
-
-&lt;p&gt;而CNN通过local receptive fields（感受野），shared weights（共享权值），sub-sampling（下采样）概念来解决上述三个问题。&lt;a href=&quot;&quot;&gt;Gradient-Based Learning Applied to Document Recognition &lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/stdcoutzyx/article/details/41596663&quot;&gt;卷积神经网络入门&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cnn_param_number.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;计算卷积神经网络的参数个数，如上图所示，输入是4个通道，输出是2个通道，那么参数个数=2&lt;em&gt;(4&lt;/em&gt;2*2 + 1)。需要注意的是，输入四个通道上每个通道对应一个卷积核，如上图W参数所示。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[论文]《Learning a Deep Convolutional Network for Image Super-Resolution》C Dong, CC Loy, K He, X Tang (2014) 用CNN做单副图像升超分辨率(SR)，轻量架构，性能高，可支持在线应用 PDF:http://t.cn/RwrNfBB 源码:http://t.cn/RwrNMNa Kaiming 云:http://t.cn/RwrpUKv&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;word2vec&quot;&gt;Word2vec&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;[问答]《What are some interesting Word2Vec results?》http://t.cn/RZrOfYp Quora上的主题，讨论Word2Vec的有趣应用，Omer Levy提到了他在CoNLL2014最佳论文里的分析结果和新方法（稍后单独推荐），Daniel Hammack给出了找特异词的小应用并提供了(Python)代码http://t.cn/zQgLQ20&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Ensemble of Generative and Discriminative Techniques for Sentiment Analysis of Movie Reviews。&lt;a href=&quot;https://github.com/mesnilgr/iclr15&quot;&gt;code，include sentence2vec&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;隐含主题模型LDA的学习过程可为文档每个词分配隐含主题，我组本科生刘扬同学利用LDA为词汇提供的补充信息，提出topical word embeddings，在词汇相似度计算和文本分类上得到一些有趣的结果。&lt;a href=&quot;https://github.com/largelymfs/topical_word_embeddings&quot;&gt;github code&lt;/a&gt;，&lt;a href=&quot;http://nlp.csai.tsinghua.edu.cn/~lzy/publications/aaai2015_twe.pdf&quot;&gt;论文Topical Word Embeddings&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/idio/wiki2vec&quot;&gt;Wiki2Vec: Generating Vectors for DBpedia Entities via Word2Vec and Wikipedia Dumps&lt;/a&gt; 从维基百科Dumps生成Word2Vec向量的工具，包括词向量和主题向量&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://andyljones.tumblr.com/post/111299309808/why-word2vec-works&quot;&gt;Why word2vec works&lt;/a&gt; word2vec的工作原理&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www-personal.umich.edu/~ronxin/pdf/w2vexp.pdf&quot;&gt;word2vec Parameter Learning Explained&lt;/a&gt; word2vec梯度推导详解&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《Movie Review Sentiment Analysis With Word2Vec, DBNs and RNTN》http://t.cn/RwNuyKP Java里用word2vec做电影评论情感分析的例子&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;以word2vec为人所知的前谷歌脑计划研究科学家现在Facebook人工智能实验室的Tomas Mikolov在COLING 2014给的Tutorial 【Using Neural Networks for Modelling and Representing Natural Languages】CBOW，Skip-gram，Negative sampling http://t.cn/RZTjakc Mikolov博士毕业于捷克的布尔诺科技大学&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;我发现word2vec算出来的相似度并没有一个统一的衡量方式，找某个词topN similar是没问题的，但假设有两个pair，并不能因为pair1的word2vec similarity高就说pair1比pair2更相似，因此也没法设一个threshold去取舍这些pairs。
-phunter_lau：word2vec词之间的similarity我的理解是更像是关联度而不是相似度，也就是他们常常一起出现，所以引申出来他们有某种相似性&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[论文]《Random Walks on Context Spaces: Towards an Explanation of the Mysteries of Semantic Word Embeddings》(2015) S Arora, Y Li, Y Liang等 http://t.cn/RwHPhwf 用对数线性生成模型为word2vec等word embedding方法寻求合理解释。简化版解释一篇:《Why word2vec works》http://t.cn/Rw6jNo6&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[IPN]《Document classification by inversion of distributed language representations》http://t.cn/RwBr14V 基于Gensim(word2vec)的(评论)文档分类实例&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;中英文维基百科语料上的Word2Vec实验: 最近利用gensim word2vec模块在中英文维基百科语料上分别测试了一下word2vec，记录一下实验的过程，欢迎观摩 http://t.cn/Rwd87KO&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;加强学习&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;DeepMind在Nature上发表《Human-level control through deep reinforcement learning》http://t.cn/Rw0ZSW0 基于reinforcement learning让算法学习打游戏，源码:http://t.cn/Rw084MA ，http://t.cn/RwORUqX 对相关文章和工作进行了整理，DeepMind的专访http://t.cn/RwOR5EG 云:http://t.cn/RwORY9h&lt;/p&gt;
-
-    &lt;p&gt;论文PDF全文可从这里下：http://t.cn/RwOBdZ7&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;生物学&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Yoshua Bengio团队（Bengio一作）新作：Towards Biologically Plausible Deep Learning，尝试在Deep Learning与生物学观察（Spike-Timing- Dependent Plasticity）之间建立联系。寻找或探索机器学习的生物学解释，感觉很有意义。http://t.cn/RwCfROu&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;语音识别&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;[文章]《Deep Speech: Accurate Speech Recognition with GPU-Accelerated Deep Learning》http://t.cn/RwHfNKN GPU加速的大规模深度学习，用于语音识别，来自百度硅谷AI实验室&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 23 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>文献综合阅读</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;知识总结&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;微博上关于机器学习的相关讨论： 微博收藏（机器学习探讨）（二） - LinJM-机器视觉 - 博客频道 - CSDN.NET 1.0 关于深度学习与工程师的讨论； 2.0 小数据VS大数据 by BAOJIE； 3.0 @陈天奇怪：cxxnet和大规模深度学习； 4.0 Eric Xing(CMU教授)的DNN-discussion …… http://t.cn/RAA8rwc&lt;/li&gt;
-  &lt;li&gt;总结的很棒！强烈推荐。其他两篇 机器学习代码与工具（一）http://t.cn/RA22Jhv 机器学习课程与论文（三）http://t.cn/RA22JPs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;图像视觉&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/morewindows/article/details/8225783&quot;&gt;OpenCV入门指南&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://quantombone.blogspot.com/2015/01/from-feature-descriptors-to-deep.html&quot;&gt;From feature descriptors to deep learning: 20 years of computer vision&lt;/a&gt; 从特征描述子到深度学习——机器视觉20年回顾。通俗易懂，回顾了很多特征描述子的内容，也介绍了很多计算机视觉、机器学习特别是深度学习方面的大牛。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://t.cn/RZkbwoz&quot;&gt;图像处理中的全局优化技术&lt;/a&gt; 最近打算好好学习一下几种图像处理和计算机视觉中常用的 global optimization (或 energy minimization) 方法，这里总结一下学习心得。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/carson2005/article/details/9502053&quot;&gt;Retinex算法详解&lt;/a&gt; - 计算机视觉小菜鸟的专栏 - 博客频道 - CSDN.NET&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;本团队雕琢多年的人脸检测库现以MIT协议发布 &lt;a href=&quot;https://github.com/ShiqiYu/libfacedetection&quot;&gt;github code&lt;/a&gt; 供商业和非商业无限制使用,包含正面和多视角人脸检测两个算法.优点:速度快(OpenCV haar+adaboost的2-3倍), 准确度高 (FDDB非公开类评测排名第二），能估计人脸角度. 例子看下图. 希望能帮助到有需要的个人和公司。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.guokr.com/article/439945/&quot;&gt;计算机视觉：让冰冷的机器看懂多彩的世界&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[论文]《FaceNet: A Unified Embedding for Face Recognition and Clustering》http://t.cn/Rwg398R Google对Facebook DeepFace的有力回击—— FaceNet，在LFW(Labeled Faces in the Wild)上达到99.63%准确率(新纪录)，FaceNet embeddings可用于人脸识别、鉴别和聚类&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/sciencefans/p/4394861.html&quot;&gt;人脸识别技术大总结(1)：Face Detection &amp;amp; Alignment&lt;/a&gt; 介绍人脸识别的四大块：Face detection, alignment, verification and identification(recognization)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;互联网金融&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2534976&quot;&gt;文章 Online Algorithms in High-frequency Trading - The challenges faced by competing HFT algorithms》2013&lt;/a&gt; 介绍高频交易(HFT)中的在线学习算法，重点解决流动性估计、波动性估计和线性回归问题，HFT算法简单了解可参考&lt;a href=&quot;http://www.zhihu.com/question/23667442&quot;&gt;知乎主题-高频交易都有哪些著名的算法&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/22221540&quot;&gt;对于 Quant 来说， Financial Modeling 和传统的机器学习方法有什么联系和区别？&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/27420308/answer/38632429&quot;&gt;机器学习（非传统统计方法如回归）到底在量化金融里哪些方面有应用？&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section-3&quot;&gt;搜索&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;信息检索排序模型BM25(Besting Matching)。1）从经典概率模型演变而来 2）捕捉了向量空间模型中三个影响索引项权重的因子：IDF逆文档频率；TF索引项频率；文档长度归一化。3）并且含有集成学习的思想：组合了BM11和BM15两个模型。4）作者是BM25的提出者和Okapi实现者Robertson http://t.cn/RwRxieT&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;博客推荐与面试&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;《Frequently updated Machine Learning blogs》http://t.cn/RwbHZpy 活跃机器学习博客推荐，真有点怀念Google Reader呢&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;《面试经验分享之机器学习、大数据问题》如今，好多机器学习、数据挖掘的知识都逐渐成为常识，要想在竞争中脱颖而出，就必须做到：保持学习热情，关心热点，深入学习，会用，也要理解，在实战中历练总结等等。http://t.cn/RzMtL3j（来自： Blog of 太极雪 ）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://chuansong.me/n/306480&quot;&gt;FLAGBR 面经+offer&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;『机器学习&amp;amp;数据挖掘笔记_16（常见面试之机器学习算法思想简单梳理） - tornadomeet - 博客园』http://t.cn/zRoZPzP&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/stdcoutzyx/article/details/42041947&quot;&gt;北美公司面试经验笔记&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;其他推荐资料&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://breezedeus.github.io/2015/01/31/breezedeus-review-for-year-2014-tech.html&quot;&gt;世纪佳缘用户推荐系统的发展历史&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;“总结、温习，这两点让人成长。而不是你走得有多快！”&lt;/li&gt;
-      &lt;li&gt;天真的算法年：item-based kNN。推荐以前看过的item的相似item。可逆（Reciprocal）推荐算法，是什么东西？&lt;a href=&quot;http://search.aol.com/aol/search?s_it=topsearchbox.search&amp;amp;v_t=opensearch&amp;amp;q=Reciprocal+recommendation&quot;&gt;Reciprocal recommendation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;技术为产品服务，而不是直接面向用户；数据质量是地基，保证好的质量很不容易；如何制定正确的优化指标真的很难；业务理解 &amp;gt; 工程实现；数据 &amp;gt; 系统 &amp;gt; 算法；快速试错；&lt;/li&gt;
-      &lt;li&gt;Dirichlet Process 和 Dirichlet Process Mixture&lt;/li&gt;
-      &lt;li&gt;Alternating Direction Method of Multipliers(ADMM)&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/19/breezedeus-feature-mining-gbdt.html&quot;&gt;利用GBDT模型构造新特征&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2014/11/20/breezedeus-feature-hashing.html&quot;&gt;特征哈希（Feature Hashing）&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;不平衡数据的抽样方法。参考文献：William Fithian, Trevor Hastie, Local Case-Control Sampling Efficient Subsampling in Imbalanced Data Sets, 2014.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/484853135/&quot;&gt;世纪佳缘推荐系统之我见&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;明确推荐评价指标：对于婚恋推荐系统来说，最核心的指标无外乎付费的转换率&lt;/li&gt;
-          &lt;li&gt;我们倒着来推，把问题转换为识别出最愿意付费的那些用户，然后找到这些用户感兴趣的用户，通过产品引导让这些用户发信&lt;/li&gt;
-          &lt;li&gt;能不能从数据跳出来对产品提出一些创意性改进从而产生的产品模式和收费模式的变革。&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.wsdm-conference.org/2015/wp-content/uploads/2015/02/WSDM-2015-PE-Leskovec.pdf&quot;&gt;New Directions in Recommender Systems&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/484692347/&quot;&gt;飞林沙-读后总结&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;需要理解 可替换 和 可补充，这两种推荐形式。&lt;/li&gt;
-      &lt;li&gt;怎样生成替代品的推荐理由，应该是更好，而不是他们包含同一关键词&lt;/li&gt;
-      &lt;li&gt;推荐一整套装备&lt;/li&gt;
-      &lt;li&gt;Inferring Networks from Opinions阅读总结：
-        &lt;ul&gt;
-          &lt;li&gt;Product Graph：Building networks from product text
-            &lt;ul&gt;
-              &lt;li&gt;Understand the notions of substitute and complement goods&lt;/li&gt;
-              &lt;li&gt;Generate explanations of why certain products are preferred&lt;/li&gt;
-              &lt;li&gt;Recommends baskets of related items&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;learn x and y are related?
-            &lt;ul&gt;
-              &lt;li&gt;Attempt 1: Text features；缺点：High-dimensional，Prone to overfitting，Too fine-grained&lt;/li&gt;
-              &lt;li&gt;Attempt 2: Features from Topics。也就是把第一种方法，用topic vector替换，相当于降维了。&lt;/li&gt;
-              &lt;li&gt;Attempt 3: Learn ‘good’ topics。Learn to discover topics that explain the graph structure；
-                &lt;ul&gt;
-                  &lt;li&gt;Idea: Learn both simultaneously；we want to learn to project documents (reviews) into topic space such that related products are nearby；&lt;/li&gt;
-                  &lt;li&gt;Combining topic models with link prediction；topic和link利用一个目标函数，一起训练。&lt;/li&gt;
-                  &lt;li&gt;Issue 1: Relationships we want to learn are not symmetric；Solution: We solve this issue by learning “relatedness” in addition to “directedness”&lt;/li&gt;
-                  &lt;li&gt;Issue 3: The model has a too many parameters；Solution: Product hierarchy；Associate each node in the category tree with a small number of topics&lt;/li&gt;
-                  &lt;li&gt;整个模型用EM算法来求解，类似于PLSA的EM算法。&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Recommender Systems，Alex Smola 阅读笔记
-    &lt;ul&gt;
-      &lt;li&gt;Neighborhood methods
-        &lt;ul&gt;
-          &lt;li&gt;Collaborative filtering；User-based (item base is smaller than user or changes rapidly)；Item-based (user base is small)；&lt;/li&gt;
-          &lt;li&gt;Normalization/Bias; rate bias-&amp;gt; bui = μ(global) + bu(user bias) + bi(item bias);
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/cf_formula.png&quot; alt=&quot;&quot; /&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/item_similarity.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Matrix Factorization
-        &lt;ul&gt;
-          &lt;li&gt;SVD，常用优化方法：SGD，alternating optimization；问题是Overfitting without regularization，特别是fewer reviews than dimensions&lt;/li&gt;
-          &lt;li&gt;Risk Minimization。利用Alternating least squares，比较适合MR。
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/matrix_factorization_risk.png&quot; alt=&quot;&quot; /&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/matrix_factorization_risk_addbias.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-          &lt;li&gt;优化方法：Add bias，who rated what， temporal effects … P63&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Theoretical Motivation
-        &lt;ul&gt;
-          &lt;li&gt;Rating matrix is (row, column) exchangeable&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Ranking and Session Modeling
-        &lt;ul&gt;
-          &lt;li&gt;Independent click model&lt;/li&gt;
-          &lt;li&gt;Logistic click model。Exponential family model for click; user looks at all&lt;/li&gt;
-          &lt;li&gt;Sequential click model; User traverses list&lt;/li&gt;
-          &lt;li&gt;Skip click model&lt;/li&gt;
-          &lt;li&gt;Context skip click model&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Features
-        &lt;ul&gt;
-          &lt;li&gt;social network = friendship + interests&lt;/li&gt;
-          &lt;li&gt;Latent dense (Bayesian Probabilistic Matrix Factorization)&lt;/li&gt;
-          &lt;li&gt;Latent sparse (Dirichlet process factorization)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Hashing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/11/01/breezedeus-yuanquan-etao.html&quot;&gt;个性化推荐技术#总结-袁全&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;相关性推荐，点击数据更有用；补充性推荐，购买数据更有用；要根据用户行为意图选择不同的推荐方法。&lt;/li&gt;
-      &lt;li&gt;对于不同种类的产品，当用户处在同一购物流程时，其理想的相关性推荐/补充性推荐的概率也差别很大。&lt;/li&gt;
-      &lt;li&gt;Mixture Logistic Regression&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/11/10/breezedeus-jiangshen.html&quot;&gt;面向广告主的推荐，江申@百度&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;技术目标要正确；譬如对于拍卖词推荐，其数学目标的烟花过程为：推荐最相关的词-&amp;gt;推荐广告主采用率最高的词-&amp;gt;推荐采用率最高且产生推广效果最佳的词。&lt;/li&gt;
-      &lt;li&gt;在拍卖词推荐中主要涉及到三种模型：相关性模型、采用率模型和推广效果模型。&lt;/li&gt;
-      &lt;li&gt;负反馈：按照item已经对user展示的次数指数级降低其权重，避免同一个item多次重复被展示给一个用户。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://breezedeus.github.io/2012/11/12/breezedeus-wenguozhu.html&quot;&gt;个性化推荐技术#总结 稳国柱@豆瓣&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;电影推荐：首先把电影按照电影标签进行分组（比如分成动作片，剧情片等）；然后在每个组里面使用CF算法产生推荐结果；最后把每组中获得的推荐按照加权组合的方式组合在一块。&lt;/li&gt;
-      &lt;li&gt;图书推荐：图书有一定的阶梯性，在大部分的场合，我们需要的并不是与自己相似的用户的推荐，而是与自己相似的专家的推荐。&lt;/li&gt;
-      &lt;li&gt;电台的音乐推荐：必须使用一个算法系统（其中包含多个算法）来针对不同的用户进行不同的算法调度&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.douban.com/note/472267231/&quot;&gt;年终总结 &amp;amp; 算法数据的思考 by 飞林沙&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.aszxqw.com/work/2014/06/01/tuijian-xitong-de-nadianshi.html&quot;&gt;推荐系统的那点事&lt;/a&gt; 分析了推荐系统中使用算法的误区，确实规则带来的好处简单有效。 当一个做推荐系统的部门开始重视【数据清理，数据标柱，效果评测，数据统计，数据分析】这些所谓的脏活累活，这样的推荐系统才会有救。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;WSDM2015 上传了Michaol Franklin和Thorsten Joachims的主题报告slides http://t.cn/R7Jyy0g 还有Jure Leskovec和Tushar Chandra的实践与经验报告 slides &lt;a href=&quot;http://www.wsdm-conference.org/2015/practice-and-experience-talks/&quot;&gt;Practice and Experience Talks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[文章]《Computing Recommendations at Extreme Scale with Apache Flink and Google Compute Engine》http://t.cn/RZemQe9 Flink实例！用Flink和GAE做面向大规模数据集的协同推荐，从中可看出Flink的巨大应用潜力，文中引用的材料值得一读（作者说了，细节文章即将推出敬请期待，感兴趣请持续关注）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;[幻灯]《Recommender Systems: Super Overview》http://t.cn/R7WtFwY 来自Netflix的Xavier Amatriain在Summer School 2014 @ CMU上长达4小时的报告，共248页，是对推荐系统发展的一次全面综述，其中还包括Netflix在个性化推荐方面的一些经验介绍，强烈推荐! 云盘:http://t.cn/RZuLoSS&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;【干货丨美团推荐算法实践：机器学习重排序模型成亮点】本文介绍了美团网推荐系统的构建和优化过程中的一些做法，包括数据层、触发层、融合过滤层和排序层五个层次，采用了HBase、Hive、storm、Spark和机器学习等技术。两个优化亮点是将候选集进行融合与引入重排序模型。 http://t.cn/RZrgB5u&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/machinelearning-data-feature-process.html&quot;&gt;美团推荐团队-机器学习中的数据清洗与特征处理综述&lt;/a&gt;。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://benanne.github.io/2014/08/05/spotify-cnns.html&quot;&gt;文章-Recommending music on Spotify with deep learning&lt;/a&gt; 基于作者的实习经历讲Spotify的音乐推荐，内容涉及：协同过滤、基于内容的推荐、基于深度学习的品味预测、convnets规模扩展、convnets的学习内容、推荐的具体应用等
-    &lt;ul&gt;
-      &lt;li&gt;Collaborative filtering：content-agnostic（与内容无关的），容易推荐popular items。另外，new and unpopular songs cannot be recommended，即cold-start problem。&lt;/li&gt;
-      &lt;li&gt;Content-based：tags, artist and album information, lyrics, text mined from the web (reviews, interviews, …), and the audio signal itself（e.g. the mood of the music）。&lt;/li&gt;
-      &lt;li&gt;Predicting listening preferences with deep learning。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;【推荐系统中所使用的混合技术介绍】http://t.cn/8sKdQFq 系统架构层面一般使用多段组合混合推荐框架，算法层面则使用加权型混合推荐技术，包括LR、RBM、GBDT系列。此外还介绍分级型混合推荐技术，交叉调和技术，瀑布型混合方法，推荐基础特征混合技术，推荐模型混合技术，整体式混合推荐框架等。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 23 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/23/%E6%96%87%E7%8C%AE%E7%BB%BC%E5%90%88%E9%98%85%E8%AF%BB.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/23/%E6%96%87%E7%8C%AE%E7%BB%BC%E5%90%88%E9%98%85%E8%AF%BB.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>系统知识总结</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;系统设计&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Optimal Space-time Tradeoffs for Inverted Indexes，Github http://t.cn/RZgGiiN 倒排的最新压缩设计，作者是去年创新索引压缩算法Partitioned Elias-Fano的发明人，今年继续给出各种情形下的最佳选择，http://t.cn/RZgGiiC &lt;a href=&quot;http://www.di.unipi.it/~ottavian/files/wsdm15_index.pdf&quot;&gt;论文 Optimal Space-time Tradeoffs for Inverted Indexes&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://fex.baidu.com/blog/2014/04/traffic-hijack/&quot;&gt;流量劫持是如何产生的&lt;/a&gt; 流量劫持，这种古老的攻击沉寂了一段时间后，最近又开始闹的沸沸扬扬。众多知名品牌的路由器相继爆出存在安全漏洞，引来国内媒体纷纷报道。只要用户没改默认密码，打开一个网页甚至帖子，路由器配置就会被暗中修改。互联网一夜间变得岌岌可危。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://network.51cto.com/art/201103/252335.htm&quot;&gt;输入facebook的URL按下回车后究竟发生了什么&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.infoq.com/cn/articles/cache-coherency-primer&quot;&gt;缓存一致性 Cache Coherency&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html&quot;&gt;二叉树的非递归遍历&lt;/a&gt; 利用stack来实现非递归遍历。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.grpc.io/&quot;&gt;Google RPC框架&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://github.com/google/protobuf/wiki/Third-Party-Add-ons&quot;&gt;RPC Implementations&lt;/a&gt; 这里面有众多RPC框架的实现，有各种语言的版本。
-百度的两个版本：&lt;a href=&quot;https://github.com/Baidu-ecom/Jprotobuf-rpc-socket&quot;&gt;Jprotobuf-rpc-socket&lt;/a&gt;，&lt;a href=&quot;https://github.com/BaiduPS/sofa-pbrpc&quot;&gt;sofa-pbrpc&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;编程语言&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.iteye.com/magazines/130&quot;&gt;编程精华资源-ITeye优秀专栏-大汇总&lt;/a&gt;
-Java学习，Java框架，Web 前端，编程语言，开源项目研究，编程经验之谈，数据库，设计模式，项目管理，移动开发，云计算与大数据等&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://coolshell.cn/articles/9104.html&quot;&gt;sed 简明教程&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.vaikan.com/bash-scripting/&quot;&gt;bash脚本15分钟进阶&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/02/make.html&quot;&gt;Make 命令教程 - 阮一峰的网络日志&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ios&quot;&gt;IOS&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;@李锦发 整理的《iOS 学习资料整理》为 iOS 初学者所准备, 旨在帮助 iOS 初学者们快速找到适合自己的学习资料, 节省搜索资料的时间, 更好地规划学习路线, 更准确地定位目前所处的位置。Github直达http://t.cn/RZMNgIt [给力] 也欢迎大家订阅《App开发日报》http://t.cn/RwytoqC 及时获得最新资源推送&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;控制&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/26944678&quot;&gt;知乎一个控制类算法的讨论&lt;/a&gt; 应用最广泛的两类控制算法——PID （Proportional Integral Derivative）和 MPC（Model Predictive Control)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sed--awk&quot;&gt;Sed &amp;amp; Awk&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://coolshell.cn/articles/9104.html&quot;&gt;sed 简明教程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://coolshell.cn/articles/9070.html&quot;&gt;awk 简明教程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 22 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/02/22/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/02/22/%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html</guid>
         
         
       </item>

@@ -87,6 +87,10 @@
 
 <h3 id="section-2">梯度下降法</h3>
 
+<ul>
+  <li><a href="http://t.cn/8kFIzvk">教程:随机梯度下降(SGD) tricks《Stochastic gradient descent tricks》L Bottou (2012) </a></li>
+</ul>
+
 <h3 id="section-3">牛顿法</h3>
 
 <h3 id="section-4">拟牛顿法</h3>
@@ -95,7 +99,7 @@
 
 <h2 id="section-6">有约束最优化</h2>
 
-<p>一般采用拉格朗日方程，kkt，对偶问题求解。<a href="http://www.moozhi.com/topic/show/54a8a261c555c08b3d59d996">关于拉格朗日乘子法与KKT条件</a></p>
+<p>一般采用拉格朗日方程，kkt，对偶问题求解。</p>
 
 <p>譬如svm里，最大化几何间隔 max y(wx+b)/||w||</p>
 
@@ -104,6 +108,40 @@
 <p>首先写出cost function：min [ 1/2*w^2 + max(0,1-y(wx+b)) ]</p>
 
 <p>可以看出，这是一个有约束的问题，那么就可以用到”拉普拉斯+KKT+对偶”来求解了。</p>
+
+<h3 id="kkthttpwwwmoozhicomtopicshow54a8a261c555c08b3d59d996"><a href="http://www.moozhi.com/topic/show/54a8a261c555c08b3d59d996">关于拉格朗日乘子法与KKT条件</a></h3>
+
+<p><a href="http://zh.wikipedia.org/wiki/最小上界">上确界=最小上界</a></p>
+
+<p>共轭函数描述这个最小上界随着y的变化所变化的情况，使函数值有界的y的取值范围是共轭函数的定义域。不管原函数的凹凸性如何，共轭函数一定是凸函数。</p>
+
+<p>拉格朗日对偶函数g(λ,ν)一定是凹的（不论原始优化问题凹凸性如何）。</p>
+
+<p>原始问题目标函数最优值是p⋆，有如下不等式：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lagrange_ruo_duiou.png" alt="" /></p>
+
+<p>拉格朗日对偶问题的最优值记为d⋆，相对于原始问题的最优值p⋆，d⋆≤p⋆，这个关系被称作弱对偶关系。</p>
+
+<p>如果原始问题和对偶问题的最优值相等，则是强对偶关系。</p>
+
+<p>通常情况下强对偶关系并不成立。但是如果原始问题是凸的，并且Slater条件成立的情况下，强对偶条件一定成立。</p>
+
+<p>KKT条件是一组解成为最优解的必要条件，如果原始问题是凸的，则KKT条件也是充分的。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/kkt_condition.png" alt="" /></p>
+
+<p>上面前两行条件是原始问题的约束，第三行是拉格朗日函数的要求，第四行是互补松弛条件，最后一行是对拉格朗日函数取极值时候带来的一个必要条件。关于这上面的第五个条件，从几何意义上也可以得到比较明确的解释，即目标函数上的梯度下降方向与约束函数的梯度下降方法是平行的。</p>
+
+<p>如果一个凸优化问题有可微的目标函数和约束，并且满足Slater条件，则KKT条件是取得最优的充要条件：Slater条件保证了最优对偶间隙为零并且最优点可以取到；在此基础上x是最优当且仅当(x,λ,ν)满足KKT条件。</p>
+
+<p>KKT条件在优化问题中有重要意义。它可以用于如下方面：</p>
+
+<ul>
+  <li>有时候可以直接从KKT条件里得到最优的解析解。</li>
+  <li>等式约束的优化问题，可以通过KKT条件转化为无约束方程求零点问题。</li>
+  <li>有不等式约束的优化问题，可以使用KKT条件来简化，帮助求解。</li>
+</ul>
 
 <h2 id="section-7">最优化算法的并行化</h2>
 

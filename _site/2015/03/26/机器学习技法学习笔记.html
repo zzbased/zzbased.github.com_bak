@@ -658,12 +658,12 @@ So，Radial Basis Function (RBF) Network: linear aggregation of radial hypothese
 
 <p><strong>扩展阅读</strong></p>
 
-<p>-【发表在Science的论文：基于密度的快速无监督聚类方法】<a href="http://t.cn/RAASZ4q">Clustering by fast search and find of density peaks. A Rodriguez, A Laio (2014) </a> 很棒，推荐给没看过的朋友，另有相关中文两篇：http://t.cn/RPoKmOi http://t.cn/RPOs6uK 供参考理解 云:http://t.cn/RAACowz</p>
-
-<pre><code>对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到更高密度点的最短距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。
-</code></pre>
-
 <ul>
+  <li>
+    <p>发表在Science的论文：基于密度的快速无监督聚类方法 <a href="http://t.cn/RAASZ4q">Clustering by fast search and find of density peaks. A Rodriguez, A Laio (2014) </a> 很棒，推荐给没看过的朋友，另有相关中文两篇：http://t.cn/RPoKmOi http://t.cn/RPOs6uK 供参考理解 云:http://t.cn/RAACowz</p>
+
+    <p>对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到更高密度点的最短距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。</p>
+  </li>
   <li>
     <p>Canopy 聚类算法的基本原则是：首先应用成本低的近似的距离计算方法高效的将数据分为多个组，这里称为一个Canopy。Canopy 之间可以有重叠的部分。然后采用严格的距离计算方式准确的计算在同一 Canopy 中的点，将他们分配与最合适的簇。Canopy 聚类算法经常用于 K 均值聚类算法的预处理，用来找合适的 k 值和簇中心。<a href="http://blog.pureisle.net/archives/2045.html">Clustering Algorithm/聚类算法</a>，<a href="http://en.wikipedia.org/wiki/Canopy_clustering_algorithm">Canopy clustering algorithm</a>。</p>
   </li>

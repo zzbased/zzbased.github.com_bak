@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>语义分析的一些方法</title>
-  <meta name="description" content="">
+  <meta name="description" content="语义分析的一些方法">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/2015/02/01/semantic_analysis_method.html">
@@ -64,9 +64,10 @@
   </header>
 
   <article class="post-content">
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+    <h1 id="section">语义分析的一些方法</h1>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<p>author: vincentyao@tencent.com</p>
+<h4 id="author-vincentyaotencentcom--date20150201">author: vincentyao@tencent.com ; date:20150201</h4>
 
 <p>语义分析，本文指运用各种机器学习方法，挖掘与学习文本、图片等的深层次概念。wikipedia上的解释：In machine learning, semantic analysis of a corpus is the task of building structures that approximate concepts from a large set of documents(or images)。</p>
 
@@ -76,11 +77,11 @@
 
 <p>本文主要由以下四部分组成：文本基本处理，文本语义分析，图片语义分析，语义分析小结。先讲述文本处理的基本方法，这构成了语义分析的基础。接着分文本和图片两节讲述各自语义分析的一些方法，值得注意的是，虽说分为两节，但文本和图片在语义分析方法上有很多共通与关联。最后我们简单介绍下语义分析在广点通”用户广告匹配”上的应用，并展望一下未来的语义分析方法。</p>
 
-<h3 id="section">1 文本基本处理</h3>
+<h3 id="section-1">1 文本基本处理</h3>
 
 <p>在讲文本语义分析之前，我们先说下文本基本处理，因为它构成了语义分析的基础。而文本处理有很多方面，考虑到本文主题，这里只介绍中文分词以及Term Weighting。</p>
 
-<h4 id="section-1">1.1 中文分词</h4>
+<h4 id="section-2">1.1 中文分词</h4>
 <p>拿到一段文本后，通常情况下，首先要做分词。分词的方法一般有如下几种：</p>
 
 <ul>
@@ -113,7 +114,7 @@
 
 <p>一般而言，方法一和方法二在工业界用得比较多，方法三因为采用复杂的模型，虽准确率相对高，但耗时较大。在腾讯内部采用的是方法二。</p>
 
-<h4 id="section-2">1.2 语言模型</h4>
+<h4 id="section-3">1.2 语言模型</h4>
 <p>前面在讲”全切分分词”方法时，提到了语言模型，并且通过语言模型，还可以引出词向量，所以这里把语言模型简单阐述一下。</p>
 
 <p>语言模型是用来计算一个句子产生概率的概率模型，即\(P(w_1,w_2,w_3…w_m)\)，m表示词的总个数。根据贝叶斯公式：\(P(w_1,w_2,w_3 … w_m) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2) … P(w_m|w_1,w_2 … w_{m-1})\)。</p>
@@ -210,7 +211,7 @@
   </li>
 </ul>
 
-<h5 id="section-3">核心词、关键词提取</h5>
+<h5 id="section-4">核心词、关键词提取</h5>
 <ul>
   <li>
     <p>短文本串的核心词提取。对短文本串分词后，利用上面介绍的term weighting方法，获取term weight后，取一定的阈值，就可以提取出短文本串的核心词。</p>
@@ -226,7 +227,7 @@
   </li>
 </ul>
 
-<h3 id="section-4">2 文本语义分析</h3>
+<h3 id="section-5">2 文本语义分析</h3>
 <p>前面讲到一些文本基本处理方法。一个文本串，对其进行分词和重要性打分后（当然还有更多的文本处理任务），就可以开始更高层的语义分析任务。</p>
 
 <h4 id="topic-model">2.1 Topic Model</h4>
@@ -253,7 +254,7 @@
 
 <p>对于LDA模型的更多理论介绍，譬如如何实现正确性验证，请参考文献[68]，而关于LDA模型改进，请参考Newman团队的最新文章《Care and Feeding of Topic Models》[12]。</p>
 
-<h5 id="section-5">主题模型的应用点</h5>
+<h5 id="section-6">主题模型的应用点</h5>
 <ul>
   <li>
     <p>在广点通内部，主题模型已经在很多方面都得到成功应用[65]，譬如文本分类特征，相关性计算，ctr预估，精确广告定向，矩阵分解等。具体来说，基于主题模型，可以计算出文本，用户的topic分布，将其当作pctr，relevance的特征，还可以将其当作一种矩阵分解的方法，用于降维，推荐等。不过在我们以往的成功运用中，topic模型比较适合用做某些机器学习任务的特征，而不适合作为一种独立的方法去解决某种特定的问题，例如触发，分类。Blei是这样评价lda的：it can easily be used as a module in more complicated models for more complicated goals。</p>
@@ -267,7 +268,7 @@
   </li>
 </ul>
 
-<h5 id="section-6">主题模型最新进展</h5>
+<h5 id="section-7">主题模型最新进展</h5>
 <p>首先主题模型自PLSA, LDA后，又提出了很多变体，譬如HDP。LDA的topic number是预先设定的，而HDP的topic number是不固定，而是从训练数据中学习得到的，这在很多场景是有用的，具体参考<a href="http://datascience.stackexchange.com/questions/128/latent-dirichlet-allocation-vs-hierarchical-dirichlet-process">hdp vs lda</a>。想了解更多LDA模型的升级，请参考文献[73,74]。</p>
 
 <p>深度学习方面，Geoff Hinton及其学生用Deep Boltzmann Machine研究出了类似LDA的隐变量文本模型[82]，文章称其抽取的特征在文本检索与文本分类上的结果比LDA好。<a href="http://weibo.com/u/2387864597">heavenfireray</a>在其微博评论道：lda结构是word-hidden topic。类lda结构假设在topic下产生每个word是条件独立而且参数相同。这种假设导致参数更匹配长文而非短文。该文章提出word-hidden topic-hidden word，其实是(word,hidden word)-hidden topic，增加的hidden word平衡了参数对短文的适配，在分类文章数量的度量上更好很自然。</p>
@@ -281,7 +282,7 @@
   <li>Metropolis-Hastings sampler[13]：复杂度降至O(1)。这里不做分析了，具体请参考文献[13]</li>
 </ul>
 
-<h5 id="section-7">主题模型并行化</h5>
+<h5 id="section-8">主题模型并行化</h5>
 <p>在文献[67]中，Newman团队提出了LDA算法的并行化版本Approximate distributed-LDA，如下图所示：</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ad_lda.png" alt="" /></p>
@@ -313,9 +314,9 @@
 
 <p>图12. LightLda并行结构图</p>
 
-<h4 id="section-8">2.2 词向量，句向量</h4>
+<h4 id="section-9">2.2 词向量，句向量</h4>
 
-<h5 id="section-9">词向量是什么</h5>
+<h5 id="section-10">词向量是什么</h5>
 <p>在文本分析的vector space model中，是用向量来描述一个词的，譬如最常见的One-hot representation。One-hot representation方法的一个明显的缺点是，词与词之间没有建立关联。在深度学习中，一般用Distributed Representation来描述一个词，常被称为”Word Representation”或”Word Embedding”，也就是我们俗称的”词向量”。</p>
 
 <p>词向量起源于hinton在1986年的论文[11]，后来在Bengio的ffnnlm论文[3]中，被发扬光大，但它真正被我们所熟知，应该是word2vec[14]的开源。在ffnnlm中，词向量是训练语言模型的一个副产品，不过在word2vec里，是专门来训练词向量，所以word2vec相比于ffnnlm的区别主要体现在：</p>
@@ -333,7 +334,7 @@
 
 <p>关于word2vec，在算法上还有较多可以学习的地方，例如利用huffman编码做层次softmax，negative sampling，工程上也有很多trick，具体请参考文章[16][17]。</p>
 
-<h5 id="section-10">词向量的应用</h5>
+<h5 id="section-11">词向量的应用</h5>
 <p>词向量的应用点：</p>
 
 <ul>
@@ -353,7 +354,7 @@
   <li>假设我们将一个个query session作为doc，将query作为word，我们则可以训练query distributed representation，挖掘相似query。</li>
 </ul>
 
-<h5 id="section-11">句向量</h5>
+<h5 id="section-12">句向量</h5>
 
 <p>分析完word distributed representation，我们也许会问，phrase，sentence是否也有其distributed representation。最直观的思路，对于phrase和sentence，我们将组成它们的所有word对应的词向量加起来，作为短语向量，句向量。在参考文献[34]中，验证了将词向量加起来的确是一个有效的方法，但事实上还有更好的做法。</p>
 
@@ -387,7 +388,7 @@
 
 <p>图16. sentence2vec 结果示例</p>
 
-<h5 id="section-12">词向量的改进</h5>
+<h5 id="section-13">词向量的改进</h5>
 <ul>
   <li>
     <p>学习词向量的方法主要分为：Global matrix factorization和Shallow Window-Based。Global matrix factorization方法主要利用了全局词共现，例如LSA；Shallow Window-Based方法则主要基于local context window，即局部词共现，word2vec是其中的代表；Jeffrey Pennington在word2vec之后提出了<a href="http://nlp.stanford.edu/projects/glove/">GloVe</a>，它声称结合了上述两种方法，提升了词向量的学习效果。它与word2vec的更多对比请点击<a href="http://www.quora.com/How-is-GloVe-different-from-word2vec">GloVe vs word2vec</a>，<a href="http://radimrehurek.com/2014/12/making-sense-of-word2vec/">GloVe &amp; word2vec评测</a>。</p>
@@ -397,9 +398,9 @@
   </li>
 </ul>
 
-<h4 id="section-13">2.3 卷积神经网络</h4>
+<h4 id="section-14">2.3 卷积神经网络</h4>
 
-<h5 id="section-14">卷积</h5>
+<h5 id="section-15">卷积</h5>
 
 <p>介绍卷积神经网络(convolutional neural network，简记cnn)之前，我们先看下卷积。</p>
 
@@ -414,7 +415,7 @@
 
 <p>图17. 卷积操作示例</p>
 
-<h5 id="section-15">什么是卷积神经网络</h5>
+<h5 id="section-16">什么是卷积神经网络</h5>
 <p>卷积神经网络是一种特殊的、简化的深层神经网络模型，它的每个卷积层都是由多个卷积滤波器组成。它最先由lecun在LeNet[40]中提出，网络结构如下图所示。在cnn中，图像的一小部分（局部感受区域）作为层级结构的最低层的输入，信息再依次传输到不同的层，每层通过多个卷积滤波器去获得观测数据的最显著的特征。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/lenet5.png" alt="" /></p>
@@ -429,7 +430,7 @@
 
 <p>它的特殊性体现在两点：(1)局部感受野(receptive field)，cnn的神经元间的连接是非全连接的；(2)同一层中同一个卷积滤波器的权重是共享的（即相同的）。局部感受野和权重共享这两个特点，使cnn网络结构更类似于生物神经网络，降低了网络模型的复杂度，减少了神经网络需要训练的参数的个数。</p>
 
-<h5 id="section-16">卷积神经网络的一些细节</h5>
+<h5 id="section-17">卷积神经网络的一些细节</h5>
 
 <p>接下来结合文献[25]，再讲讲卷积神经网络的一些注意点和问题。</p>
 
@@ -449,7 +450,7 @@
   <li>模型不work，怎么办？结合我自身的经验，learning rate初始值设置得太大，开始设置为0.01，以为很小了，但实际上0.001更合适。</li>
 </ul>
 
-<h5 id="section-17">卷积神经网络在文本上的应用</h5>
+<h5 id="section-18">卷积神经网络在文本上的应用</h5>
 <p>卷积神经网络在image classify和image detect上得到诸多成功的应用，后文将再详细阐述。但除了图片外，它在文本分析上也取得一些成功的应用。</p>
 
 <p>基于CNN，可以用来做文本分类，情感分析，本体分类等[36,41,84]。传统文本分类等任务，一般基于bag of words或者基于word的特征提取，此类方法一般需要领域知识和人工特征。利用CNN做，方法也类似，但一般都是基于raw text，CNN模型的输入可以是word series，可以是word vector，还可以是单纯的字符。比起传统方法，CNN不需要过多的人工特征。</p>
@@ -469,7 +470,7 @@
   </li>
 </ul>
 
-<h4 id="section-18">2.4 文本分类</h4>
+<h4 id="section-19">2.4 文本分类</h4>
 <p>文本分类应该是最常见的文本语义分析任务了。首先它是简单的，几乎每一个接触过nlp的同学都做过文本分类，但它又是复杂的，对一个类目标签达几百个的文本分类任务，90%以上的准确率召回率依旧是一个很困难的事情。这里说的文本分类，指的是泛文本分类，包括query分类，广告分类，page分类，用户分类等，因为即使是用户分类，实际上也是对用户所属的文本标签，用户访问的文本网页做分类。</p>
 
 <p>几乎所有的机器学习方法都可以用来做文本分类，常用的主要有：lr，maxent，svm等，下面介绍一下文本分类的pipeline以及注意点。</p>
@@ -569,12 +570,12 @@
   </li>
 </ul>
 
-<h3 id="section-19">3 图片语义分析</h3>
+<h3 id="section-20">3 图片语义分析</h3>
 
-<h4 id="section-20">3.1 图片分类</h4>
+<h4 id="section-21">3.1 图片分类</h4>
 <p>图片分类是一个最基本的图片语义分析方法。</p>
 
-<h5 id="section-21">基于深度学习的图片分类</h5>
+<h5 id="section-22">基于深度学习的图片分类</h5>
 <p>传统的图片分类如下图所示，首先需要先手工提取图片特征，譬如SIFT, GIST，再经由VQ coding和Spatial pooling，最后送入传统的分类模型(例如SVM等)。</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/tranditional-imageclassify.png" alt="" /></p>
@@ -610,7 +611,7 @@
 
 <p>图27. 图片检索示例图</p>
 
-<h5 id="section-22">图片分类上的最新进展</h5>
+<h5 id="section-23">图片分类上的最新进展</h5>
 
 <p>在ILSVRC 2012中，Krizhevsky基于GPU实现了上述介绍的，这个有60million参数的模型，赢得了第一名。这个工作是开创性的，它引领了接下来ILSVRC的风潮。2013年，Clarifai通过cnn模型可视化技术调整网络架构，赢得了ILSVRC。2014年，google也加入进来，它通过增加模型的层数（总共22层），让深度更深[48]，并且利用multi-scale data training，取得第一名。baidu最近通过更加”粗暴”的模型[44]，在GooLeNet的基础上，又提升了10%，top-5错误率降低至6%以下。具体结果如下图所示。</p>
 
@@ -750,9 +751,9 @@
   <li>Ensembling。训练多个神经网络，最后计算它们的预测值的平均值。</li>
 </ul>
 
-<h3 id="section-23">4 总结</h3>
+<h3 id="section-24">4 总结</h3>
 
-<h4 id="section-24">4.1 语义分析方法在实际业务中的使用</h4>
+<h4 id="section-25">4.1 语义分析方法在实际业务中的使用</h4>
 <p>前面讲述了很多语义分析方法，接下来我们看看如何利用这些方法帮忙我们的实际业务，这里举一个例子，用户广告的语义匹配。</p>
 
 <p>在广点通系统中，用户与广告的关联是通过定向条件来匹配的，譬如某些广告定向到”北京+男性”，那么当”北京+男性”的用户来到时，所有符合定向的广告就将被检索出，再按照”ecpm*quality”排序，将得分最高的展示给用户。但是凭借一些人口属性，用户与广告之间的匹配并不精确，做不到”广告就是想用户所想”，所以用户和广告的语义分析就将派上用场了，可以从这样两方面来说明：</p>
@@ -782,13 +783,13 @@
   <li>Deep Learning + Structured Prediction，用于syntactic representation。</li>
 </ul>
 
-<h4 id="section-25">4.3 总结</h4>
+<h4 id="section-26">4.3 总结</h4>
 
 <p>上文主要从文本、图片这两方面讲述了语义分析的一些方法，并结合个人经验做了一点总结。</p>
 
 <p>原本想写得更全面一些，但写的时候才发现上面所述的只是沧海一粟，后面还有更多语义分析的内容之后再更新。另外为避免看到大篇理论就头痛，文中尽可能不出现复杂的公式和理论推导。如果有兴趣，可以进一步阅读参考文献，获得更深的理解。谢谢。</p>
 
-<h3 id="section-26">5 参考文献</h3>
+<h3 id="section-27">5 参考文献</h3>
 
 <ol>
   <li><a href="http://comminfo.rutgers.edu/~muresan/IR/Docs/Articles/ipmSalton1988.pdf">Term-weighting approaches in automatic text retrieval，Gerard Salton et.</a></li>

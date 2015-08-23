@@ -68,6 +68,70 @@
 
 <p>主要从model parallelism和data parallelism上考虑。</p>
 
+<p>EMERGING SYSTEMS FOR LARGE-SCALE MACHINE LEARNING
+by Joseph E. Gonzalez</p>
+
+<h3 id="data-parallelism">Data parallelism</h3>
+
+<h4 id="distributed-aggregation-map-reduce">Distributed Aggregation: Map-Reduce</h4>
+
+<p><img src="map_reduce_pattern.png" alt="" /></p>
+
+<p>Map-Reduce is not optimized for iteration and multi-stage computation。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/iteration_in_map_reduce.png" alt="" /></p>
+
+<h4 id="iterative-machine-learning-spark">Iterative Machine Learning: Spark</h4>
+<p>In-Memory Data-Flow Systems</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/batch_gradient_logistic_regression.png" alt="" /></p>
+
+<p>MLlib: high quality library for ML algorithms.</p>
+
+<ul>
+  <li>Included in Apache Spark</li>
+</ul>
+
+<p>MLbase: make ML accessible to non-experts</p>
+
+<ul>
+  <li>Automatically pick best algorithm</li>
+  <li>Allow developers to easily add and test new algorithms</li>
+</ul>
+
+<p>同步模型的缺点：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/bulk_synchronous_execution.png" alt="" /></p>
+
+<p>异步模型的优点：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/asynchronous_execution.png" alt="" /></p>
+
+<p>Key-Value API with two basic operations:(1) get(key) -&gt; value; (2) add(key, delta)</p>
+
+<p>Split Model Across Machines</p>
+
+<h3 id="model-parallelism">Model parallelism</h3>
+<p>Large Shared Models: Parameter Server</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/_posts/images/ps_example.png" alt="" /></p>
+
+<h3 id="graph-parallelism">Graph parallelism</h3>
+<p>Graphical Computation: GraphLab to GraphX</p>
+
+<p>Computation depends only on the neighbors</p>
+
+<p>“Think like a Vertex.”</p>
+
+<p><img src="tables_.png" alt="" /></p>
+
+<p><img src="graphs_.png" alt="" /></p>
+
+<h3 id="other">Other</h3>
+<p>Linear Algebra Patterns: BLAS/ScaLAPACK</p>
+
+<p>GPU Accelerated Systems</p>
+
 <h2 id="section-1">大数据与分布式</h2>
 
 <ul>
@@ -96,11 +160,20 @@
   <li>
     <p><a href="http://techjaw.com/2015/02/21/googles-large-scale-deep-neural-networks-project-greg-corrado/">Google’s Large Scale Deep Neural Networks Project, Greg Corrado</a> Google的大规模分布式DNN介绍 <a href="http://pan.baidu.com/s/1kTl76AV">slide</a> <a href="http://pan.baidu.com/s/1qWmJrSo">视频</a></p>
   </li>
+  <li>
+    <p>大牛Joseph在ICML 2014上关于大规模机器学习系统的tutoria很赞。<a href="http://t.cn/RvlzXlE">slides</a></p>
+  </li>
+  <li>
+    <p>dmlc第二弹！借助dmlc的分布式数据读写、启动、和通讯模块，从无到有几天写了一个异步SGD。用5台AWS机器在Criteo CTR数据集（40亿样本，8亿特征）上训练稀疏LR，每秒可以处理一千万样本，整个数据集可以十分钟内训练完。<a href="https://github.com/dmlc/wormhole/blob/master/learn/linear/guide/criteo.md">手把手教程重复实验</a>，<a href="http://t.cn/R22Xi5a">更多文档</a></p>
+  </li>
 </ul>
 
 <h2 id="section-2">机器学习框架</h2>
 
 <ul>
+  <li>
+    <p><a href="http://www.csdn.net/article/2015-05-21/2824742">DMLC深盟分布式深度机器学习开源平台解析</a></p>
+  </li>
   <li>
     <p><a href="http://petuum.github.io">Petuum</a> Petuum涵盖的模型更多（CNN、DNN、K-Mean、Regression、Sparse Coding、Matrix Factorization，LDA、 RF等。例如基于Petuum训练CNN，用CPU集群能达到比用GPU的Caffe高的效率。</p>
   </li>
@@ -166,6 +239,12 @@
   </li>
   <li>
     <p><a href="http://www.chioka.in/kaggle-competition-solutions/">王威廉-Kaggle各种机器学习竞赛的冠军及其他优胜者的源代码汇总</a></p>
+  </li>
+  <li>
+    <p><a href="http://dataunion.org/12410.html">Python语言下的机器学习库</a>  Scikit-Learn, Gensim等。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/dmlc/wormhole">Wormhole</a></p>
   </li>
 </ul>
 

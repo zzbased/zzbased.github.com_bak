@@ -70,7 +70,7 @@
 
 <h2 id="em-overview">EM overview</h2>
 
-<p>The EM algorithm belongs to a broader class of alternating minimization algorithms.</p>
+<p>The EM algorithm belongs to a broader class of <strong>alternating minimization algorithms</strong>.</p>
 
 <p>EM is one such hill-climbing algorithm that converges to a local maximum of the likelihood surface.</p>
 
@@ -78,7 +78,7 @@
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_image1.png" alt="" /></p>
 
-<p>x是隐变量。</p>
+<p>x是隐变量。下面变换中用到了著名的Jensen不等式</p>
 
 <p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_q_function.png" alt="" /></p>
 
@@ -94,6 +94,64 @@
     <p>Shane M. Haas的<a href="http://www.mit.edu/~6.454/www_fall_2002/shaas/summary.pdf">The Expectation-Maximization and Alternating Minimization Algorithms</a></p>
   </li>
 </ul>
+
+<h2 id="em-1">EM算法细节</h2>
+
+<h3 id="jensen">Jensen不等式</h3>
+<p>Jensen不等式表述如下：</p>
+
+<p>如果f是凸函数，X是随机变量，那么：E[f(X)]&gt;=f(E[X])</p>
+
+<p>特别地，如果f是严格凸函数，当且仅当X是常量时，上式取等号。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/jensen_inequality.jpg" alt="" /></p>
+
+<p>Jensen不等式应用于凹函数时，不等号方向反向。</p>
+
+<h3 id="section">极大似然</h3>
+
+<p>给定的训练样本是{x(1),…,x(m)}，样本间独立，我们想找到每个样例隐含的类别z，能使得p(x,z)最大。似然函数为：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_likelihood.png" alt="" /></p>
+
+<p>极大化上面似然函数，需要对函数求导。但里面有”和的对数”，求导后形式会非常复杂（自己可以想象下log(f1(x)+ f2(x)+ f3(x)+…)复合函数的求导）。所以我们要做一个变换，如下图所示，经过这个变换后，”和的对数”变成了”对数的和”，这样计算起来就简单多了。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/jensen_transform.png" alt="" /></p>
+
+<p>怎么变换来的呢？其中Q(z)表示隐含变量z的某种分布。由于f(x)=log(x)为凹函数，根据Jensen不等式有：f(E[X]) &gt;= E[f(X)]，即：</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/jensen_transform2.png" alt="" /></p>
+
+<p>OK，通过上面的变换，我们求得了似然函数的下届。我们可以优化这个下届，使其逼近似然函数(incomplete data)。</p>
+
+<p>按照这个思路，我们要找到等式成立的条件。根据Jensen不等式，要想让等式成立，需要让随机变量变成常数值，这里得到： </p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/equality_condition.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/q_condition.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/p_condition.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/q_p_z_relation.png" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>从而，我们推导出：在固定其他参数后，Q(z)的计算公式就是z的后验概率。这一步也就是所谓的E步，求出Q函数，表示的是完全数据对数似然函数相对于隐变量的期望，而得到这个期望，也就是求出z的后验概率P(z</td>
+      <td>x，θ)。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>M步呢，就是极大化Q函数，也就是优化θ的过程。</p>
+
+<p>归纳下来，EM算法的基本步骤为：E步固定θ，优化Q；M步固定Q，优化θ。交替将极值推向最大。</p>
+
+<h3 id="em-2">为什么EM是有效的?</h3>
+
+<p>蓝线代表当前参数下的L函数，也就是目标函数的下界，E步的时候计算L函数，M步的时候通过重新计算θ得到L的最大值。</p>
+
+<p><img src="https://raw.githubusercontent.com/zzbased/zzbased.github.com/master/other/em/em_prove1.png" alt="" /></p>
 
 <h2 id="emplsa">EM于PLSA</h2>
 
@@ -156,6 +214,14 @@ a maximization (M) step, where parameters are updated based on the so-called exp
 
 <h2 id="emhmm">EM于HMM</h2>
 
+<p>统计机器学习-HMM那一章节</p>
+
+<h2 id="section-1">更多参考文献</h2>
+<ul>
+  <li><a href="https://github.com/zzbased/zzbased.github.com/blob/master/_posts/doc/我所理解的EM算法.docx">你所不知道的EM - by erikhu</a></li>
+  <li><a href="http://blog.csdn.net/lansatiankongxxc/article/details/45646677">EM算法原理详解与高斯混合模型</a></li>
+  <li><a href="http://blog.csdn.net/zouxy09/article/details/8537620">从最大似然到EM算法浅解</a></li>
+</ul>
 
   </article>
 
