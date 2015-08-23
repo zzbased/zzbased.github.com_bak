@@ -267,7 +267,7 @@ LinkedIn最新的推荐系统文章[The Browsemaps: Collaborative Filtering at L
 - Mixture Logistic Regression
 
 ### [面向广告主的推荐，江申@百度](https://breezedeus.github.io/2012/11/10/breezedeus-jiangshen.html)
-- 技术目标要正确；譬如对于拍卖词推荐，其数学目标的烟花过程为：推荐最相关的词->推荐广告主采用率最高的词->推荐采用率最高且产生推广效果最佳的词。
+- 技术目标要正确；譬如对于拍卖词推荐，其数学目标的演化过程为：推荐最相关的词->推荐广告主采用率最高的词->推荐采用率最高且产生推广效果最佳的词。
 - 在拍卖词推荐中主要涉及到三种模型：相关性模型、采用率模型和推广效果模型。
 - 负反馈：按照item已经对user展示的次数指数级降低其权重，避免同一个item多次重复被展示给一个用户。
 

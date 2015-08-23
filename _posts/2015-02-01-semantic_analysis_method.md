@@ -603,6 +603,12 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 
 原本想写得更全面一些，但写的时候才发现上面所述的只是沧海一粟，后面还有更多语义分析的内容之后再更新。另外为避免看到大篇理论就头痛，文中尽可能不出现复杂的公式和理论推导。如果有兴趣，可以进一步阅读参考文献，获得更深的理解。谢谢。
 
+#### 4.4 后续
+语义分析，不断有更新的方法在涌现。后面我还将持续关注这块内容，将最新成果更新到本文里。
+
+- 德国萨尔大学Universität des Saarlandes <计算语义近期发展 Recent Developments in Computational Semantics> [10：分布式语义]( http://t.cn/RLDzCuB) [11：隐变量模型](http://t.cn/RLDzCur) [12：语境化的话题模型](http://t.cn/RLDzCud)。
+
+
 ### 5 参考文献
 
 1. [Term-weighting approaches in automatic text retrieval，Gerard Salton et.](http://comminfo.rutgers.edu/~muresan/IR/Docs/Articles/ipmSalton1988.pdf)
@@ -691,4 +697,6 @@ f(x,y)是图像上点(x,y)的灰度值，w(x,y)则是卷积核，也叫滤波器
 84. [Xiang zhang et. Text Understanding from Scratch](http://arxiv.org/abs/1502.01710?utm_source=dlvr.it&utm_medium=tumblr)
 85. [基于字标注的中文分词方法](http://www.52nlp.cn/the-character-based-tagging-method-of-chinese-word-segmentation)
 86. [中文分词入门之字标注法4](http://www.52nlp.cn/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AD%97%E6%A0%87%E6%B3%A8%E6%B3%954)
+
+
 

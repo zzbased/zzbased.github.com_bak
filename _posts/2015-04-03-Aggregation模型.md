@@ -461,3 +461,4 @@ Louppe, Gilles的博士论文，全面了解随机森林的好材料。[pdf](htt
 - T. Hastie, R. Tibshirani, J. Friedman(2008). Chapter 10 of The Elements of Statistical Learning(2e).
 - [GBDT的分享-by kimmyzhang](http://pan.baidu.com/s/1jGjAvhO)
 - [Boosted Tree - by 陈天奇](http://www.52cs.org/?p=429)
+- [Random Forest 与 GBDT 的异同](http://blog.csdn.net/wh137795233/article/details/47750151)

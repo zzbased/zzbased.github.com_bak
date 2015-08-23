@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>leetcode刷题小结</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2015/05/21/leetcode%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93.html">
+  <link rel="alternate" type="application/rss+xml" title="100的技术博客" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">100的技术博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">leetcode刷题小结</h1>
+    <p class="post-meta">May 21, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="leetcode">Leetcode刷题小结</h1>
+
+<h2 id="array">Array</h2>
+
+<h3 id="median-of-two-sorted-array">Median of two sorted array</h3>
+
+<p>There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
+
+<p>更通用的形式为：给定两个已排序好的数组，找到两者所有元素中第k大的元素。</p>
+
+<ul>
+  <li>解法1：merge两个数组，然后求第k大的元素。O(m+n)复杂度。</li>
+  <li>解法2：利用一个计数器，记录当前已经找到的第m大的元素，从两个数组的第一个元素开始遍历。O(m+n)复杂度。</li>
+  <li>
+    <p>解法3：利用两个数组有序的特性，每次都删除k/2个元素。O(log(m+n))。</p>
+
+    <pre><code>  class Solution {
+  public:
+    // 寻找第k小的数
+    double find_kth(vector&lt;int&gt;::iterator it1, int n1,
+                    vector&lt;int&gt;::iterator it2, int n2,
+                    int k) {
+      // 确保n1 &gt;= n2
+      if (n1 &lt; n2) {
+        return find_kth(it2, n2, it1, n1, k);
+      }
+      if (n2 == 0) {
+        return *(it1 + k-1);
+      }
+      if (k == 1) {
+        return min(*it1, *it2);
+      }
+      // 注意这个划分,很重要
+      int i2 = min(k/2, n2);
+      int i1 = k - i2;
+      if (*(it1 + i1-1) &gt; *(it2 + i2-1)) {
+        // 删掉数组2的i2个
+        return find_kth(it1, n1, it2 + i2, n2 - i2, i1);
+      } else if (*(it1 + i1-1) &lt; *(it2 + i2-1)) {
+        // 删掉数组1的i1个
+        return find_kth(it1 + i1, n1 - i1, it2, n2, i2);
+      } else {
+        return *(it1 + i1-1);
+      }
+    }
+
+    // 寻找第k小的数, C语言版本
+    double find_kth2(const int* A, int m, const int* B, int n, int k) {
+      if (m &lt; n) {
+        return find_kth2(B, n, A, m, k);
+      }
+      if (n == 0) {
+        return A[k-1];
+      }
+      if (k == 1) {
+        return min(A[0], B[0]);
+      }
+
+      int i2 = min(k/2, n);
+      int i1 = k - i2;
+      if (A[i1-1] &lt; B[i2-1]) {
+        return find_kth2(A+i1, m-i1, B, n, k-i1);
+      } else if (A[i1-1] &gt; B[i2-1]) {
+        return find_kth2(A, m, B+i2, n-i2, k-i2);
+      } else {
+        return A[i1-1];
+      }
+    }
+    // 数组从小到大排序
+    double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) {
+      int total = nums1.size() + nums2.size();
+      if (total &amp; 0x1) {
+        // odd
+        // return find_kth(nums1.begin(), nums1.size(), nums2.begin(), nums2.size(), total/2 + 1);
+        return find_kth2(nums1.data(), nums1.size(), nums2.data(), nums2.size(), total/2 + 1);
+      } else {
+        // return ( find_kth(nums1.begin(), nums1.size(), nums2.begin(), nums2.size(), total/2 + 1)
+        //     + find_kth(nums1.begin(), nums1.size(), nums2.begin(), nums2.size(), total/2) )/ 2.0;
+        return ( find_kth2(nums1.data(), nums1.size(), nums2.data(), nums2.size(), total/2 + 1)
+            + find_kth2(nums1.data(), nums1.size(), nums2.data(), nums2.size(), total/2) )/ 2.0;
+      }
+
+    }
+  };
+</code></pre>
+  </li>
+</ul>
+
+<h3 id="contains-duplicate-iiihttpsleetcodecomproblemscontains-duplicate-iii"><a href="https://leetcode.com/problems/contains-duplicate-iii/">Contains Duplicate III</a></h3>
+
+<p>Input: [-1,2147483647], 1, 2147483647</p>
+
+<p>下面代码中，在计算gap时，首先gap必须是long类型，其次it_temp-&gt;first和last至少也有一个long，不然这个减法会有问题。</p>
+
+<p>long gap = it_temp-&gt;first - last</p>
+
+<p>除此外，还有一个容易犯的错误，gap的计算经常会在while循环里被忽视掉了。</p>
+
+<p>主要可以参考 <a href="http://www.cppblog.com/suiaiguo/archive/2009/07/16/90228.html">隐式类型转换&amp;&amp; 负数的补码</a></p>
+
+<pre><code>class Solution {
+public:
+    // from little to large
+    static bool SortFunction(const std::pair&lt;int, int&gt;&amp; x, const std::pair&lt;int, int&gt;&amp; y) {
+        if (x.first &gt; y.first) {
+            return false;
+        } else if (x.first &lt; y.first) {
+            return true;
+        } else {
+            return x.second &lt; y.second;
+        }
+    }
+    bool containsNearbyAlmostDuplicate(vector&lt;int&gt;&amp; nums, int k, int t) {
+        if (nums.size() &lt; 2) {
+            return false;
+        }
+        std::vector&lt;std::pair&lt;int, int&gt; &gt; middle;  // num -- index
+        for (int i = 0; i &lt; nums.size(); ++i) {
+            middle.push_back(std::make_pair(nums[i], i));
+        }
+        std::sort(middle.begin(), middle.end(), SortFunction);
+        std::vector&lt;std::pair&lt;int, int&gt; &gt;::const_iterator it = middle.begin();
+        long last = it-&gt;first;
+        int index = it-&gt;second;
+        ++it;
+        for (; it != middle.end(); ++it) {
+            std::vector&lt;std::pair&lt;int, int&gt; &gt;::const_iterator it_temp = it;
+            long gap = it_temp-&gt;first - last;
+            while (it_temp != middle.end() &amp;&amp; gap &lt;= (long)t) {
+                // at most t &amp;&amp; most k
+                if (abs(it_temp-&gt;second - index) &lt;= k) {
+                    return true;
+                }
+                ++it_temp;
+                gap = it_temp-&gt;first - last;
+            }
+            last = it-&gt;first;
+            index = it-&gt;second;
+        }
+        return false;
+    }
+};
+</code></pre>
+
+<h3 id="kth-largest-element-in-an-arrayhttpsleetcodecomsubmissionsdetail30747333"><a href="https://leetcode.com/submissions/detail/30747333/">Kth Largest Element in an Array</a></h3>
+
+<pre><code>// 错误点: sort默认是从小到大排序
+void InsertArray(vector&lt;int&gt;&amp; array, int insert) {
+    // 二分查找
+    int begin = 0;
+    int end = array.size() - 1;
+    int search_index = 0;
+    while (begin &lt;= end) {
+        int middle = (long(begin) + long(end)) / 2;
+        if (insert &gt; array[middle]) {
+            if (middle - 1 &lt; 0 || insert &lt; array[middle - 1]) {
+                search_index = middle;
+                break;
+            }
+            // 前半段
+            end = middle;
+        } else if (insert &lt;= array[middle]) {
+            if (middle + 1 &gt; array.size() - 1 || insert &gt;= array[middle + 1]) {
+                search_index = middle + 1;
+                break;
+            }
+            // 后半段
+            begin = middle;
+        }
+    }
+    // 找到index区间
+    for (int i = array.size() - 1; i &gt; search_index; --i) {
+        array[i] = array[i-1];
+    }
+    array[search_index] = insert;
+}
+struct myclass {
+    bool operator() (int i, int j) { return (i&gt;j);}
+} myobject;
+
+int findKthLargest(vector&lt;int&gt;&amp; nums, int k) {
+    if (nums.size() &lt; k || k &lt; 1) {
+        return 0;
+    }
+    vector&lt;int&gt; array(nums.begin(), nums.begin() + k);
+    std::sort(array.begin(), array.end(), myobject);  // 从大到小排序
+    for (int i = k; i &lt; nums.size(); ++i) {
+        if (nums[i] &gt; array[k-1]) {
+            InsertArray(array, nums[i]);
+        } else {
+            continue;
+        }
+    }
+    return array[k - 1];
+}
+</code></pre>
+
+<h2 id="list">List</h2>
+
+<h3 id="remove-linked-list-elementshttpsleetcodecomproblemsremove-linked-list-elements"><a href="https://leetcode.com/problems/remove-linked-list-elements/">Remove Linked List Elements</a></h3>
+
+<pre><code>// 错误点: 未考虑都是val的情况. 也就是在unittest时，还是应该尽可能的考虑周全，要记得必须写unittest。
+// Input: [1,1], 1
+// 能否换一个思路,不再考虑删除,而是把不是val的node插入.
+// 本次错误的点:主要是没有考虑到连续的val存在. 对付这种题,可以先申明一个temp node;另外, 也就是在now-&gt;val == val的判断,对last的赋值要有一个else
+
+ListNode* removeElements(ListNode* head, int val) {
+    if (head == NULL) {
+        return head;
+    }
+    ListNode temp(val+1);
+    temp.next = head;
+
+    ListNode* last = &amp;temp;
+    ListNode* now = head;
+    while (now) {
+        if (now-&gt;val == val) {
+            last-&gt;next = now-&gt;next;
+        } else {
+            last = now;
+        }
+        now = now-&gt;next;
+    }
+    return temp.next;
+}
+</code></pre>
+
+<h2 id="string">String</h2>
+
+<h3 id="isomorphic-stringshttpsleetcodecomproblemsisomorphic-strings"><a href="https://leetcode.com/problems/isomorphic-strings/">Isomorphic strings</a></h3>
+
+<p>很简单的一个题目。但还是考虑不严谨。只是从s-&gt;t这个方面做了考虑，而没有考虑t-&gt;s这个方面。</p>
+
+<pre><code>bool isIsomorphic(string s, string t) {
+    if (s.size() != t.size()) {
+        return false;
+    }
+    map&lt;char, char&gt; container1;
+    map&lt;char, char&gt; container2;
+    for (int i = 0; i &lt; s.size(); ++i) {
+        map&lt;char, char&gt;::const_iterator it1 = container1.find(s[i]);
+        map&lt;char, char&gt;::const_iterator it2 = container2.find(t[i]);
+        if (it1 == container1.end()) {
+            container1[s[i]] = t[i];
+        } else {
+            if (it1-&gt;second != t[i]) {
+                return false;
+            }
+        }
+        if (it2 == container2.end()) {
+            container2[t[i]] = s[i];
+        } else {
+            if (it2-&gt;second != s[i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+</code></pre>
+
+<h2 id="section">数据结构</h2>
+
+<h3 id="implement-stack-using-queueshttpsleetcodecomproblemsimplement-stack-using-queues"><a href="https://leetcode.com/problems/implement-stack-using-queues/">Implement Stack using Queues</a></h3>
+
+<p>class Stack {
+public:
+    // Push element x onto stack.
+    void push(int x) {
+        in<em>.push_back(x);
+        top</em> = x;
+    }</p>
+
+<pre><code>// Removes the element on top of the stack.
+void pop() {
+    if (in_.empty()) {
+        return;
+    } else if (in_.size() == 1) {
+        in_.pop_front();
+    } else {
+        int in_size = in_.size();
+        int i = 0;
+        while (i &lt; in_size - 1) {
+            out_.push_back(in_.front());
+            in_.pop_front();
+            ++i;
+        }
+        in_.pop_front();
+        while (!out_.empty()) {
+            // in_.push_back(out_.front()); // 这里出错了.top_未赋值
+            push(out_.front());
+            out_.pop_front();
+        }
+    }
+}
+
+// Get the top element.
+int top() {
+    return top_;
+}
+
+// Return whether the stack is empty.
+bool empty() {
+    return in_.empty();
+} private:
+deque&lt;int&gt; in_;
+deque&lt;int&gt; out_;
+int top_; };
+</code></pre>
+
+<h2 id="section-1">动态规划</h2>
+
+<h3 id="maximal-squarehttpsleetcodecomproblemsmaximal-square"><a href="https://leetcode.com/problems/maximal-square/">Maximal Square</a></h3>
+
+<p>这里主要是利用动态规划来解，其方程为：</p>
+
+<pre><code>     动态规划：dp[x][y] = min(dp[x - 1][y - 1], dp[x][y - 1], dp[x - 1][y]) + 1
+     上式中，dp[x][y]表示以坐标(x, y)为右下角元素的全1正方形矩阵的最大长度（宽度）
+</code></pre>
+
+<p>更多请参考 <a href="http://stackoverflow.com/questions/1726632/dynamic-programming-largest-square-block">largest-square-block</a></p>
+
+<h2 id="section-2">其他</h2>
+
+<h3 id="rectangle-areahttpsleetcodecomproblemsrectangle-area"><a href="https://leetcode.com/problems/rectangle-area/">Rectangle Area</a></h3>
+
+<pre><code>int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
+    int area = (C-A)*(D-B) + (G-E)*(H-F);
+    if (A &gt;= G || B &gt;= H || C &lt;= E || D &lt;= F)
+    {
+        return area;
+    }
+
+    int top = min(D, H);
+    int bottom = max(B, F);
+    int left = max(A, E);
+    int right = min(C, G);
+
+    return area - (top-bottom)*(right-left);
+}
+</code></pre>
+
+<h3 id="largest-numberhttpsleetcodecomproblemslargest-number"><a href="https://leetcode.com/problems/largest-number/">Largest Number</a></h3>
+<p>该题目的关键就是定义：比较函数。思路是关键。前面绕了很多弯路。</p>
+
+<pre><code>static bool compare(string &amp;s1, string &amp;s2)
+{
+    return s1 + s2 &gt; s2 + s1;
+}
+
+string largestNumber(vector&lt;int&gt; &amp;num) {
+    vector&lt;string&gt; arr;
+
+    //将num转成string存入数组
+    for(int i : num)
+        arr.push_back(to_string(i));
+
+    //比较排序
+    sort(arr.begin(), arr.end(), compare);
+
+    //连接成字符串
+    string ret;
+    for(string s : arr)
+        ret += s;
+
+    //排除特殊情况
+    if(ret[0] == '0' &amp;&amp; ret.size() &gt; 0)
+        return "0";
+
+    return ret;
+}
+</code></pre>
+
+<h3 id="count-primeshttpsleetcodecomproblemscount-primes"><a href="https://leetcode.com/problems/count-primes/">Count primes</a></h3>
+
+<p>思路很巧妙，关键还是算法。<a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve_of_Eratosthenes</a></p>
+
+<pre><code>int Label(int* array, int n, int p) {
+    int multipler = 2;
+    while (multipler * p &lt; n) {
+        array[multipler * p] = 1;
+        multipler++;
+    }
+    for (int i = p+1; i &lt; n; ++i) {
+        if (array[i] == 0) {
+            return i;
+        }
+    }
+    return n;
+}
+int countPrimes(int n) {
+    int* array = new int[n + 1];
+    memset(array, 0, sizeof(int) * (n+1));
+    int count = 0;
+    for (int i = 2; i &lt; n; ) {
+        i = Label(array, n, i);
+        count++;
+    }
+    /*
+    for (int i = 2; i &lt; n; ++i) {
+        if (array[i] == 0) {
+            count++;
+        }
+    }*/
+    delete[] array;
+    return count;
+}
+</code></pre>
+
+<h2 id="shell">Shell</h2>
+
+<h3 id="word-frequencyhttpsleetcodecomproblemsword-frequency"><a href="https://leetcode.com/problems/word-frequency/">Word Frequency</a></h3>
+
+<p>解答：</p>
+
+<pre><code>awk -F" " '{for (i = 1; i &lt;= NF; ++i) {num[$i]++;}}END{for (a in num) print a,num[a]|"sort -k2 -r -n"}' words.txt
+</code></pre>
+
+<p>注意几个细节：(1)在awk的输出中排序，可以在后面直接接sort命令，不过需要用引号。(2)这里是按照map的value排序，需要指定”-k2”。(3)注意是降序排列，所以有”-r”。(4)再注意默认是ascii排序，这里应该是number排序，所以有”-n”。</p>
+
+<h3 id="transpose-file-httpsleetcodecomproblemstranspose-file"><a href="https://leetcode.com/problems/transpose-file/">Transpose File </a></h3>
+
+<p>有一个感触：awk内置的map如此强大。</p>
+
+<pre><code># (NF &gt; p) {p = NF} 可以放到{}里面,如果在里面,则要加if.
+awk -F" " '{
+    for (i = 1; i &lt;= NF; i++) {
+        content[NR,i] = $i
+    }
+
+}
+(NF &gt; p) {p = NF}
+END{
+    for (i = 1; i &lt;= p; i++) {
+        str = content[1, i]
+        for (j = 2; j &lt;= NR; j++) {
+            str = str" "content[j, i]
+        }
+        print str
+    }
+}' file.txt
+</code></pre>
+
+<h3 id="valid-phone-numbershttpsleetcodecomproblemsvalid-phone-numbers"><a href="https://leetcode.com/problems/valid-phone-numbers/">Valid Phone Numbers</a></h3>
+
+<p>这里主要考察正则表达式。具体tool可以使用：grep, egrep, sed, awk。</p>
+
+<pre><code>#cat file.txt | grep -Eo '^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$'
+#grep -Eo '^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$' file.txt
+awk '/^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$|^([0-9]{3}-){2}[0-9]{4}$/' file.txt
+sed -n '/^(\([0-9]{3}\) ){1}[0-9]{3}-[0-9]{4}$/,/^([0-9]{3}-){2}[0-9]{4}$/p' file.txt
+</code></pre>
+
+<p>更多参考资料：</p>
+
+<ul>
+  <li><a href="http://coolshell.cn/articles/9104.html">Sed简明教程-左耳朵耗子</a></li>
+  <li><a href="http://coolshell.cn/articles/9070.html">Awk简明教程-左耳朵耗子</a></li>
+  <li><a href="http://www.funtoo.org/Sed_by_Example,_Part_2">Sed by Example</a></li>
+  <li><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">Regular Expressions</a></li>
+  <li><a href="http://www.math.utah.edu/docs/info/gawk_5.html#SEC27">Awk regex</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">100的技术博客</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>100的技术博客</li>
+          <li><a href="mailto:zero_based@foxmail.com">zero_based@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zzbased">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">zzbased</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zero_based">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">zero_based</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">机器学习，自然语言处理，计算广告学，工作与生活，总结与温习
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
