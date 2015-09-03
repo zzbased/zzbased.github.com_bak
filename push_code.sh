@@ -7,7 +7,7 @@ then
 fi
 
 #账号名字：zzbased
-
+git pull
 git add --all .
 git add -u .
 git commit -m "$1"
