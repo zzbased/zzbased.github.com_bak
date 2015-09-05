@@ -86,6 +86,36 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 		  }
 		};
 
+### [H-Index II](https://leetcode.com/problems/h-index-ii/)
+其实这个问题非常简单。写出来的话，主要是有一个需要注意的点，也就是二分查找。
+
+1. right=n-1 => while(left  right=middle-1;
+   right=n   => while(left  right=middle;
+
+2. 注意middle的求法。(begin + end)/2 不对。(begin >> 1) + (end >> 1)也不对。begin + (end - begin) >> 1也不对。应该是begin + ((end - begin) >> 1)，注意这里犯过几次错了。
+更多请参考[运算符优先级](http://baike.baidu.com/link?url=tS2RA_yjy-6sao8BQ1X-GafZJ9dhZaRy7kK1IQAxb1m5pDwXPE_Y_z1yRnVZbPLhD-NVbCTTzr2ZQCuJ2TRqAq)
+
+    int hIndex(vector<int>& citations) {
+        if (citations.empty()) {
+            return 0;
+        }
+        int hindex = 0;
+        int begin = 0;
+        int end = citations.size() - 1;
+        while (begin <= end) {
+            int middle = begin + ((end - begin) >> 1);
+            int lower = citations.size() - middle - 1;  // h of his/her N papers have at least h citations
+            if (lower >= 0 && citations[lower] >= middle + 1) {
+                if (middle + 1 > hindex) {
+                    hindex = middle + 1;
+                }
+                begin = middle + 1;
+            } else {
+                end = middle - 1;
+            }
+        }
+        return hindex;
+    }
 
 ### [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/)
 
@@ -193,6 +223,75 @@ long gap = it_temp->first - last
             }
         }
         return array[k - 1];
+    }
+
+### [堆排序]
+
+[精通八大排序算法系列：二、堆排序算法](http://blog.csdn.net/v_july_v/article/details/6198644)
+
+[堆排序 Wiki](https://zh.wikipedia.org/wiki/堆排序)
+
+通常堆是通过一维数组(二叉树)来实现的。在起始数组为0的情形中：
+
+    父节点i的左子节点在位置(2*i+1);
+    父节点i的右子节点在位置(2*i+2);
+    子节点i的父节点在位置floor((i-1)/2);
+
+如果是最大堆，则父节点大于子节点。
+
+那么在堆排序的时候，先通过调用(n-2)/2次Max_Heapify建立堆。
+再移除位在第一个数据的根节点(这个最大堆的最大值)，并做最大堆(此时堆的size将减1)调整的递归运算。
+
+    /*單一子結點最大堆積樹調整*/
+    void Max_Heapify(int A[], int i, int heap_size)
+    {
+        int l = left(i);
+        int r = right(i);
+        int largest;
+        int temp;
+        if(l < heap_size && A[l] > A[i])
+        {
+            largest = l;
+        }
+        else
+        {
+            largest = i;
+        }
+        if(r < heap_size && A[r] > A[largest])
+        {
+            largest = r;
+        }
+        if(largest != i)
+        {
+            temp = A[i];
+            A[i] = A[largest];
+            A[largest] = temp;
+            Max_Heapify(A, largest, heap_size);
+        }
+    }
+
+    /*建立最大堆積樹*/
+    void Build_Max_Heap(int A[],int heap_size)
+    {
+        for(int i = (heap_size-2)/2; i >= 0; i--)
+        {
+            Max_Heapify(A, i, heap_size);
+        }
+    }
+
+    /*堆積排序程序碼*/
+    void HeapSort(int A[], int heap_size)
+    {
+        Build_Max_Heap(A, heap_size);
+        int temp;
+        for(int i = heap_size - 1; i >= 0; i--)
+        {
+            temp = A[0];
+            A[0] = A[i];
+            A[i] = temp;
+            Max_Heapify(A, 0, i);
+        }
+        print(A, heap_size);
     }
 
 ## List
@@ -312,15 +411,37 @@ private:
 
 
 ## 动态规划
+更多动态规划的算法请参考 [geeksforgeeks DynamicProgramming](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#DynamicProgramming)
 
 ### [Maximal Square](https://leetcode.com/problems/maximal-square/)
 
 这里主要是利用动态规划来解，其方程为：
 
-         动态规划：dp[x][y] = min(dp[x - 1][y - 1], dp[x][y - 1], dp[x - 1][y]) + 1
-         上式中，dp[x][y]表示以坐标(x, y)为右下角元素的全1正方形矩阵的最大长度（宽度）
+    动态规划：dp[x][y] = min(dp[x - 1][y - 1], dp[x][y - 1], dp[x - 1][y]) + 1
+    上式中，dp[x][y]表示以坐标(x, y)为右下角元素的全1正方形矩阵的最大长度（宽度）
 
 更多请参考 [largest-square-block](http://stackoverflow.com/questions/1726632/dynamic-programming-largest-square-block)
+
+This is how the matrix will look like after the traversal. Values in parentheses are the counts, i.e. biggest square that can be made using the cell as top left.
+
+    1(1) 0(0) 1(1) 0(0) 1(1) 0(0)
+    1(1) 0(0) 1(4) 1(3) 1(2) 1(1)
+    0(0) 1(1) 1(3) 1(3) 1(2) 1(1)
+    0(0) 0(0) 1(2) 1(2) 1(2) 1(1)
+    1(1) 1(1) 1(1) 1(1) 1(1) 1(1)
+
+### [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
+
+[ugly-numbers answer](http://www.geeksforgeeks.org/ugly-numbers/)
+
+每一个ugly numver都可以被2, 3, 5整除。
+one way to look at the sequence is to split the sequence to three groups as below:
+
+    (1) 1×2, 2×2, 3×2, 4×2, 5×2, 6*2, 8*2, 9*2 ...
+    (2) 1×3, 2×3, 3×3, 4×3, 5×3, 6*3, 8*3, 9*3 ...
+    (3) 1×5, 2×5, 3×5, 4×5, 5×5, 6*5, 8*5, 9*5 ...
+
+We can find that every subsequence is the ugly-sequence itself (1, 2, 3, 4, 5, …) multiply 2, 3, 5. Then we use similar merge method as merge sort, to get every ugly number from the three subsequence. Every step we choose the smallest one, and move one step after.
 
 ## 其他
 
@@ -340,6 +461,8 @@ private:
 
         return area - (top-bottom)*(right-left);
     }
+
+此题还可以换一种玩法，判断两个矩形是否相交。选择的方法可以是：求出top,bottom,left,right后，根据这四个点，判断是否可以组成一个矩形，也即验证是否有相交。
 
 ### [Largest Number](https://leetcode.com/problems/largest-number/)
 该题目的关键就是定义：比较函数。思路是关键。前面绕了很多弯路。
@@ -420,12 +543,6 @@ private:
             i = Label(array, n, i);
             count++;
         }
-        /*
-        for (int i = 2; i < n; ++i) {
-            if (array[i] == 0) {
-                count++;
-            }
-        }*/
         delete[] array;
         return count;
     }
